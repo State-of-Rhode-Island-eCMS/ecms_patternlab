@@ -1,0 +1,25 @@
+{
+  "name": "rhodeislandecms/ecms_patternlab",
+  "description": "Pattern lab design system for the Rhode Island eCMS.",
+  "type": "pattern-lab",
+  "authors": [
+    {
+      "name": "Oomph, Inc.",
+      "email": "devops@oomphinc.com",
+      "homepage": "https://www.oomphinc.com/"
+    }
+  ],
+  "license": "GPL-2.0-or-later",
+  "extra": {
+    "patches": {},
+    "preserve-paths": [],
+  },
+  "config": {
+    "process-timeout": 0,
+    "sort-packages": true
+  },
+  "scripts": {},
+  "provide": {},
+  "require": {},
+  "require-dev": {}
+}
