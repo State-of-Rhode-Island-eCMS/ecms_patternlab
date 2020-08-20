@@ -11,8 +11,7 @@
   ],
   "license": "GPL-2.0-or-later",
   "extra": {
-    "patches": {},
-    "preserve-paths": [],
+    "patches": {}
   },
   "config": {
     "process-timeout": 0,
