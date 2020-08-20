@@ -33,7 +33,7 @@ the installer path to point to your desired theme:
     "extra": {
         "installer-types": ["pattern-lab"],
         "installer-paths": {
-            "docroot/path/to/my/theme/{$name}": ["pattern-lab/pattern-lab"]
+            "docroot/path/to/my/theme/{$name}": ["type:pattern-lab"]
         },
     }
 ```
