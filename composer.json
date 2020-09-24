@@ -19,6 +19,8 @@
   },
   "scripts": {},
   "provide": {},
-  "require": {},
+  "require": {
+    "pattern-lab/drupal-twig-extensions": "^0.2.0"
+  },
   "require-dev": {}
 }

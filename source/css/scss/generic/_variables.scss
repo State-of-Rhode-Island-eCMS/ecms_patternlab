@@ -1,0 +1,142 @@
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+
+//Colors
+$gray : #808080;
+$gray-light : #f9f9f9;
+$gray-light-2 : #eee;
+$gray-light-3 : #ddd;
+$gray-med : #666;
+$gray-dark : #333;
+$gray-dark-2 : #131313;
+$white : #fff;
+$black : #000;
+$dim : rgba(0,0,0,0.5);
+$error : #f00;
+$valid : #089e00;
+$warning : #fff664;
+$information : #000db5;
+
+
+//Typography
+$font : "Work Sans", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font-secondary : "Roboto Slab", Georgia, Times, "Times New Roman", serif;
+
+$font-size-small : 0.75em;
+$font-size-small-2 : 0.875em;
+$font-size-med : 1em;
+$font-size-med-2: 1.0625em;
+$font-size-large : 1.4375em;
+
+
+//Layout
+$max-width: 72em;
+
+//Defaults
+$space : 1em;
+$space-and-half : $space*1.5;
+$space-double : $space*2;
+$space-quad : $space*4;
+$space-half : $space/2;
+$pad : 1em;
+$pad-and-half : $pad*1.5;
+$pad-double : $pad*2;
+$pad-half : $pad/2;
+$pad-quarter :$pad/4;
+
+//Borders
+$border-med: 3px;
+$border-thick: 7px;
+
+
+//Breakpoints
+$bp-small : 24em;
+$bp-small-2 : 29.75em;
+$bp-small-3 : 39.8em;
+$bp-med : 46.8em;
+$bp-med-2 : 48em;
+$bp-large : 50em;
+$bp-large-2 : 66em;
+$bp-xl : 73em;
+$bp-xxl : 89em;
+$bp-xxxl : 93em;
+
+//
+:root {
+    --p-scaler-value: 1;
+    --h1-scaler-value: 4.5;
+    --h2-scaler-value: 3;
+    --h3-scaler-value: 2;
+    --bq-scaler-value: 2.25;
+    --p-lh-scaler-value: 3;
+    --h1-lh-scaler-value: 3.5;
+    --h2-lh-scaler-value: 3;
+    --h3-lh-scaler-value: 3.75;
+    --bq-lh-scaler-value: 2.5;
+  
+  
+    /* default starting values for scaling formulas */
+    --font-size-min-value: 1;
+    --font-size-max-value: 1.25;
+    --font-size-scaler-value: 1.25;
+  }
+
+  :root {
+    --p-size-s-value: 1;
+    --p-size-m-value: 1.125;
+    --p-size-l-value: 1.25;
+    --h1-size-s-value: 2.25;
+    --h1-size-m-value: 3.5;
+    --h1-size-l-value: 4.5;
+    --h2-size-s-value: 1.5;
+    --h2-size-m-value: 1.875;
+    --h2-size-l-value: 2.25;
+    --h3-size-s-value: 1.25;
+    --h3-size-m-value: 1.375;
+    --h3-size-l-value: 1.5;
+    --bq-size-s-value: 1.25;
+    --bq-size-m-value: 1.375;
+    --bq-size-l-value: 1.5;
+    --p-size-s: 1rem;
+    --p-size-m: 1.125rem;
+    --p-size-l: 1.25rem;
+    --h1-size-s: 2.25rem;
+    --h1-size-m: 3.5rem;
+    --h1-size-l: 4.5rem;
+    --h2-size-s: 1.5rem;
+    --h2-size-m: 1.875rem;
+    --h2-size-l: 2.25rem;
+    --h3-size-s: 1.25rem;
+    --h3-size-m: 1.375rem;
+    --h3-size-l: 1.5rem;
+    --bq-size-s: 1.25rem;
+    --bq-size-m: 1.375rem;
+    --bq-size-l: 1.5rem;
+    --p-lh-s: 1.5;
+    --p-lh-m: 1.525;
+    --p-lh-l: 1.55;
+    --h1-lh-s: 1.05;
+    --h1-lh-m: 1.1;
+    --h1-lh-l: 1.15;
+    --h2-lh-s: 1.1;
+    --h2-lh-m: 1.15;
+    --h2-lh-l: 1.2;
+    --h3-lh-s: 1.1;
+    --h3-lh-m: 1.15;
+    --h3-lh-l: 1.2;
+    /* tie optical size axis to font size */
+    --p-opsz-s: 16;
+    --p-opsz-m: 18;
+    --p-opsz-l: 20;
+    /* Force optical size axis to the highest value for greatest contrast */
+    --h1-opsz-s: 72;
+    --h1-opsz-m: 72;
+    --h1-opsz-l: 72;
+    --h2-opsz-s: 56;
+    --h2-opsz-m: 60;
+    --h2-opsz-l: 64;
+    --h3-opsz-s: 20;
+    --h3-opsz-m: 22;
+    --h3-opsz-l: 24; }
+  

@@ -22,5 +22,12 @@
     "@pattern-lab/core": "^5.12.0",
     "@pattern-lab/engine-twig-php": "^5.12.0",
     "@pattern-lab/uikit-workshop": "^5.12.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass": "^4.14.1"
   }
 }

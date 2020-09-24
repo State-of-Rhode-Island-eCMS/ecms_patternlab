@@ -1,0 +1,20 @@
+{
+  "name": "pattern-lab/drupal-twig-extensions",
+  "description": "Twig Extensions for working with Drupal",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Evan Lovely",
+      "email": "evanlovely@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "PatternLab\\DrupalTwigExtensions\\": "src/"
+    }
+  },
+  "require": {
+    "twig/twig": "^1.0"
+  }
+}
