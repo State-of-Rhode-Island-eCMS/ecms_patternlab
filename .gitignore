@@ -7,3 +7,5 @@ Thumbs.db
 .idea/
 public
 dependencyGraph.json
+dist
+source/css/style.css
