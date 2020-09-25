@@ -14,6 +14,44 @@ const minify = require('gulp-minify');
 const autoprefixer = require('gulp-autoprefixer');
 
 /******************************************************
+ * PATTERN LAB  NODE WRAPPER TASKS with core library
+ ******************************************************/
+const config = require('./patternlab-config.json');
+const patternlab = require('@pattern-lab/core')(config);
+
+gulp.task('patternlab:build', () => {
+  return patternlab
+    .build({
+      watch: argv.watch,
+      cleanPublic: config.cleanPublic,
+    })
+});
+
+gulp.task('patternlab:serve', () => {
+  return patternlab.server
+    .serve({
+      cleanPublic: config.cleanPublic,
+      watch: true,
+    })
+});
+
+// gulp.task('patternlab:version', function() {
+//   console.log(patternlab.version());
+// });
+
+// gulp.task('patternlab:patternsonly', function() {
+//   patternlab.patternsonly(config.cleanPublic);
+// });
+
+// gulp.task('patternlab:liststarterkits', function() {
+//   patternlab.liststarterkits();
+// });
+
+// gulp.task('patternlab:loadstarterkit', function() {
+//   patternlab.loadstarterkit(argv.kit, argv.clean);
+// });
+
+/******************************************************
  * Custom Tasks - CSS / JS Compilation
  ******************************************************/
 
@@ -31,11 +69,6 @@ const patternLabSourcePaths = [
   "source/**/*.twig"
 ];
 
-// Default task.
-gulp.task('default', ['build']);
-
-gulp.task('build', ['build:js', 'build:sass']);
-
 // Build Tasks
 gulp.task('build:js', () => {
   return gulp
@@ -48,80 +81,39 @@ gulp.task('build:js', () => {
 
 gulp.task('build:sass', () => {
   return gulp
-    .src(['source/**/*.js'])
+    .src(scssSourcePaths)
     .pipe(sassGlob())
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
     }))
-    .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest((file) => {
       return file.base;
     }))
-    .pipe(rename('pattern-lab-compiled-min.css'))
+    .pipe(rename('pattern-lab-compiled.css'))
     .pipe(gulp.dest('./dist/css'))
 });
 
-gulp.task('watch', function(){
-  gulp.watch(scssSourcePaths, {cwd: 'source'} ['build:sass']);
-  gulp.watch(['source/**/*.js'],['build:js']);
-  gulp.watch(patternLabSourcePaths, {cwd: 'source'}, ['patternlab:serve']);
+// Build All
+gulp.task('build', gulp.series('build:js', 'build:sass', 'patternlab:build'));
+
+// Build only SASS JS
+gulp.task('build:no-patterns', gulp.parallel('build:js', 'build:sass'));
+
+// Watch tasks
+gulp.task('watch:js', () => {
+  return gulp.watch(javascriptSourcePaths, gulp.series('build:js'));
 });
 
-
-/******************************************************
- * PATTERN LAB  NODE WRAPPER TASKS with core library
- ******************************************************/
-const config = require('./patternlab-config.json');
-const patternlab = require('@pattern-lab/core')(config);
-
-function build() {
-  return patternlab
-    .build({
-      watch: argv.watch,
-      cleanPublic: config.cleanPublic,
-    })
-    .then(() => {
-      // do something else when this promise resolves
-    });
-}
-
-function serve() {
-  return patternlab.server
-    .serve({
-      cleanPublic: config.cleanPublic,
-      watch: true,
-    })
-    .then(() => {
-      // do something else when this promise resolves
-    });
-}
-
-gulp.task('patternlab:version', function() {
-  console.log(patternlab.version());
+gulp.task('watch:sass', () => {
+  return gulp.watch(scssSourcePaths, gulp.series('build:sass'));
 });
 
-gulp.task('patternlab:patternsonly', function() {
-  patternlab.patternsonly(config.cleanPublic);
+gulp.task('watch:twig', () => {
+  return gulp.watch(patternLabSourcePaths, gulp.series('patternlab:serve'));
 });
 
-gulp.task('patternlab:liststarterkits', function() {
-  patternlab.liststarterkits();
-});
+gulp.task('watch', gulp.parallel('watch:js', 'watch:sass', 'watch:twig'));
 
-gulp.task('patternlab:loadstarterkit', function() {
-  patternlab.loadstarterkit(argv.kit, argv.clean);
-});
-
-gulp.task('patternlab:build', function() {
-  build().then(() => {
-    // do something else when this promise resolves
-  });
-});
-
-gulp.task('patternlab:serve', function() {
-  serve().then(() => {
-    // do something else when this promise resolves
-  });
-});
-
-gulp.task('default', ['patternlab:help']);
+// Default task
+gulp.task('default', gulp.series('build', 'watch'));

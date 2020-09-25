@@ -8,7 +8,7 @@
     "@pattern-lab/core": "^5.13.1",
     "@pattern-lab/engine-twig-php": "^5.13.1",
     "@pattern-lab/uikit-workshop": "^5.13.1",
-    "gulp": "3.9.1",
+    "gulp": "4.0.2",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^4.0.2",
