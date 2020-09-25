@@ -9,3 +9,4 @@ public
 dependencyGraph.json
 dist
 source/css/style.css
+source/css/.sass-cache/*
