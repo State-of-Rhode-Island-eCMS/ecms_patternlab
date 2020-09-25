@@ -1,56 +1,53 @@
-![Pattern Lab Logo](https://github.com/pattern-lab/patternlab-node/raw/master/patternlab.png 'Pattern Lab Logo')
 
-![current release](https://img.shields.io/npm/v/@pattern-lab/edition-node-gulp.svg)
-![license](https://img.shields.io/github/license/pattern-lab/patternlab-node.svg) [![Join the chat at Gitter](https://badges.gitter.im/pattern-lab/node.svg)](https://gitter.im/pattern-lab/node)
+# Pattern Lab - RI Gov
+This is the decoupled pattern lab library for RI.gov. The foundation for this respository was built using: Pattern Lab Node - Gulp Edition | The Gulp wrapper around [Pattern Lab Node Core](https://github.com/pattern-lab/patternlab-node/tree/master/packages/core).
 
-# Pattern Lab Node - Gulp Edition
-
-The Gulp wrapper around [Pattern Lab Node Core](https://github.com/pattern-lab/patternlab-node/tree/master/packages/core), the default PatternEngine, and supporting frontend assets.
-
-[Online Demo of Pattern Lab Output](https://demo.patternlab.io/)
-
-## Packaged Components
-
-This Edition comes with the following components:
-
-* `@pattern-lab/core`: [GitHub](https://github.com/pattern-lab/patternlab-node/tree/master/packages/core) | [npm](https://www.npmjs.com/package/@pattern-lab/core)
-* `@pattern-lab/engine-mustache`: [GitHub](https://github.com/pattern-lab/tree/master/packages/engine-mustache) | [npm](https://www.npmjs.com/package/@pattern-lab/engine-mustache)
-* `@pattern-lab/uikit-workshop`: [GitHub](https://github.com/pattern-lab/tree/master/packages/uikit-workshop) | [npm](https://www.npmjs.com/package/@pattern-lab/uikit-workshop)
-
-## Prerequisites
-
-This Edition uses [Node](https://nodejs.org) for core processing, [npm](https://www.npmjs.com/) to manage project dependencies, and [gulp.js](http://gulpjs.com/) to run tasks and interface with the core library. You can follow the directions for [installing Node](https://nodejs.org/en/download/) on the Node website if you haven't done so already. Installation of Node will include npm.
-
-## Installing
-
-Pattern Lab Node can be used different ways. Editions like this one are **example** pairings of Pattern Lab code and do not always have an upgrade path or simple means to run as a dependency within a larger project. Users wishing to be most current and have the greatest flexibility are encouraged to consume `patternlab-node` directly. Users wanting to learn more about Pattern Lab and have a tailored default experience are encouraged to start with an Edition. Both methods still expect to interact with other elements of the [Pattern Lab Ecosystem](https://github.com/pattern-lab/patternlab-node/tree/master/packages/core#ecosystem).
-
-Read the [installation instructions](https://github.com/pattern-lab/patternlab-node/tree/master#installation).
+From there we have made a quite a few modifications:
+* Converted the engine to use Twig rendering engine
+* Pulled in a custom source directory
+* Upgraded the gulp file to use Gulp 4
+* Added custom JS and SASS compiling.
 
 ## Getting Started
 
-This edition comes pre-packaged with a couple simple gulp tasks. Extend them as needed.
+> Notice: This repository is stand-alone in the sense that you may develop the RI Gov Pattern Lab with no other dependencies.
 
-**build** patterns, copy assets, and construct ui
+To get up and running:
 
+### Install Dependencies
 ```bash
-gulp patternlab:build
+npm install
 ```
 
-build patterns, copy assets, and construct ui, watch source files, and **serve** locally
+### Gulp Commands
 
 ```bash
-gulp patternlab:serve
+gulp
 ```
-
-logs Pattern Lab Node usage and **help** content
+The `default` gulp command runs all three build processes: js, sass, and patterns and then calls `gulp watch`.
 
 ```bash
-gulp patternlab:help
+gulp watch
 ```
 
-To interact further with Pattern Lab Node, such as to install plugins or starterkits, check out the rest of the `gulpfile.js`. You could also install the [Pattern Lab Node Command Line Interface](https://github.com/pattern-lab/patternlab-node/tree/master/packages/cli) or learn more about the [core API](https://github.com/pattern-lab/patternlab-node/tree/master/packages/core#usage).
+Running `gulp watch`  which will monitor your `/source` directory for any changes. If it detects a change to either .js, .scss, .twig files it will call the relevant build function.
 
-## Updating Pattern Lab
+```bash
+gulp build
+```
 
-To update Pattern Lab please refer to each component's GitHub repository, and the [master instructions for core](https://github.com/pattern-lab/patternlab-node/wiki/Upgrading). The components are listed at the top of the README.
+Running `gulp build` builds all js, scss, and patterns.
+
+```bash
+gulp build:no-patterns
+```
+
+Running `gulp build:no-patterns` excludes patterns from being built but will compile js and scss.
+
+### Compiled Assets
+
+Assets are compliled to two locations:
+
+`/dist` - folder contains a js and css folder with compiled assets. This is the directory Drupal will use to pull in assets.
+
+`/public/` - Public directory is generated by Pattern Lab. The CSS directory inside of this contains the same assets as `/source/css`. The JS directory is the same as `source/js`.
