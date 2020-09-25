@@ -9,7 +9,17 @@
     "@pattern-lab/engine-twig-php": "^5.13.1",
     "@pattern-lab/uikit-workshop": "^5.13.1",
     "gulp": "3.9.1",
-    "minimist": "1.2.5"
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^4.0.2",
+    "gulp-minify": "3.1.0",
+    "gulp-rename": "^1.2.3",
+    "gulp-sass": "^4.0.1",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-stylelint": "^7.0.0",
+    "minimist": "1.2.5",
+    "node-sass": "^4.14.1",
+    "prettier": "^1.14.2"
   },
   "keywords": [
     "Pattern Lab",
