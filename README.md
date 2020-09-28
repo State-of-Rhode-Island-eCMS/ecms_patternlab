@@ -24,7 +24,7 @@ npm install
 ```bash
 gulp
 ```
-The `default` gulp command runs all three build processes: js, sass, and patterns and then calls `gulp watch`.
+The `default` gulp command builds the js, sass, and serves the pattern lab server. It also calls `gulp watch` which will detect any changes and re-build.
 
 ```bash
 gulp watch

@@ -116,4 +116,4 @@ gulp.task('watch:twig', () => {
 gulp.task('watch', gulp.parallel('watch:js', 'watch:sass', 'watch:twig'));
 
 // Default task
-gulp.task('default', gulp.series('build', 'watch'));
+gulp.task('default', gulp.series('build:no-patterns', 'patternlab:serve', 'watch'));
