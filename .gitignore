@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+patternlab.json
+.sass-cache/*
+/sass-cache
+Thumbs.db
+.idea/
+public
+dependencyGraph.json
+dist
+source/css/style.css
+source/css/.sass-cache/*
