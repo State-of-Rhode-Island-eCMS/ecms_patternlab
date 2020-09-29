@@ -1,0 +1,15 @@
+{
+  "name": "state-of-rhode-island-ecms/ecms_patternlab",
+  "description": "Pattern Lab for the State of Rhode Island's eCMS system",
+  "type": "pattern-lab",
+  "authors": [
+    {
+      "name": "Oomph, Inc.",
+      "email": "devops@oomphinc.com",
+      "homepage": "https://www.oomphinc.com/"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "license": "GPL-2.0-or-later"
+}
