@@ -16,7 +16,7 @@ To get up and running:
 
 ### Install Dependencies
 ```bash
-npm install
+npm ci
 ```
 
 ### Gulp Commands
