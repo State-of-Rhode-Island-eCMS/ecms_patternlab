@@ -109,11 +109,8 @@ gulp.task('watch:sass', () => {
   return gulp.watch(scssSourcePaths, gulp.series('build:sass'));
 });
 
-gulp.task('watch:twig', () => {
-  return gulp.watch(patternLabSourcePaths, gulp.series('patternlab:serve'));
-});
-
-gulp.task('watch', gulp.parallel('watch:js', 'watch:sass', 'watch:twig'));
+gulp.task('watch', gulp.parallel('watch:js', 'watch:sass'));
 
 // Default task
+// Patternlab:serve handles building/watching patterns
 gulp.task('default', gulp.series('build:no-patterns', 'patternlab:serve', 'watch'));

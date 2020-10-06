@@ -26,11 +26,6 @@ gulp
 ```
 The `default` gulp command builds the js, sass, and serves the pattern lab server. It also calls `gulp watch` which will detect any changes and re-build.
 
-```bash
-gulp watch
-```
-
-Running `gulp watch`  which will monitor your `/source` directory for any changes. If it detects a change to either .js, .scss, .twig files it will call the relevant build function.
 
 ```bash
 gulp build
