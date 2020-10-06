@@ -1,0 +1,134 @@
+/*
+                                                ,,            ,,                          ,,
+ .M"""bgd mm                                    db          `7MM        mm         mm   `7MM                                    OO OO OO
+,MI    "Y MM                                                  MM        MM         MM     MM                                    88 88 88
+`MMb.   mmMMmm ,pW"Wq.`7MMpdMAo.     `7Mb,od8 `7MM  .P"Ybmmm  MMpMMMb.mmMMmm     mmMMmm   MMpMMMb.  .gP"Ya `7Mb,od8 .gP"Ya      || || ||
+  `YMMNq. MM  6W'   `Wb MM   `Wb       MM' "'   MM :MI  I8    MM    MM  MM         MM     MM    MM ,M'   Yb  MM' "',M'   Yb     || || ||
+.     `MM MM  8M     M8 MM    M8       MM       MM  WmmmP"    MM    MM  MM         MM     MM    MM 8M""""""  MM    8M""""""     `' `' `'
+Mb     dM MM  YA.   ,A9 MM   ,AP       MM       MM 8M         MM    MM  MM         MM     MM    MM YM.    ,  MM    YM.    ,     ,, ,, ,,
+P"Ybmmd"  `Mbmo`Ybmd9'  MMbmmd'      .JMML.   .JMML.YMMMMMb .JMML  JMML.`Mbmo      `Mbmo.JMML  JMML.`Mbmmd'.JMML.   `Mbmmd'     db db db
+                        MM                         6'     dP
+                      .JMML.                       Ybmmmd'
+
+Pattern Lab doesn't have any CSS requirements, which means you can write your styles however you want. Hooray!
+You can use Sass, Less, vanilla CSS, or some other crazy thing I haven't heard of yet.
+So please don't use these styles. They're just here to put together the demo, and nothing more.
+They're intentionally gray, boring, and crappy because you're supposed to do this stuff yourself.
+
+Atomic design is philosophically complimentary with these CSS approaches:
+
+* SMACSS by Jonathan Snook http://smacss.com/
+* OOCSS by Nicole Sullivan http://oocss.org/
+* BEM CSS Methology : http://bem.info/method/
+* CSS Guidelines by Harry Roberts : https://github.com/csswizardry/CSS-Guidelines
+
+So feel free to use any of these approaches. Or don't. It's totally up to you.
+
+*/
+/*------------------------------------*\
+    $TABLE OF CONTENTS
+    based generally on Harry Roberts excellent CSS Guidelines https://github.com/csswizardry/CSS-Guidelines
+\*------------------------------------*/
+/**
+ * VARIABLES..............................Declarations of Sass variables
+ * .....Colors
+ * .....Typography
+ * .....Layout
+ * .....Defaults
+ * .....Breakpoints
+ * MIXINS.................................Sass mixins
+ * RESET..................................Set reset defaults
+ * GLOBAL CLASSES.........................Set reset defaults
+ * GLOBAL ELEMENTS........................Establish global styles
+ * .....Main
+ * .....Headings
+ * .....Text-related elements (p, blockquote, lists)
+ * .....Defaults
+ * .....Breakpoints
+ * TYPOGRAPHY------------------------------
+ * MEDIA------------------------------
+ * LAYOUT------------------------------
+ * NAVIGATION------------------------------
+ * TOC To Be Continued
+ */
+/*------------------------------------*\
+    $GLOBAL ELEMENTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+/*------------------------------------*\
+    $PAGE STRUCTURE
+\*------------------------------------*/
+/*------------------------------------*\
+    $TEXT Styles
+\*------------------------------------*/
+/*------------------------------------*\
+    $COMPONENTS
+\*------------------------------------*/
+/*------------------------------------*\
+    $PATTERNS
+\*------------------------------------*/
+.qh-layout-section {
+  display: grid;
+  grid-gap: 3rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem; }
+  .qh-layout-section--col-size-25 {
+    display: block;
+    max-width: 25%;
+    margin: 0 auto; }
+  .qh-layout-section--col-size-50 {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto; }
+  .qh-layout-section--col-size-75 {
+    display: block;
+    max-width: 75%;
+    margin: 0 auto; }
+  .qh-layout-section--col-size-100 {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto; }
+  .qh-layout-section--col-size-25-75 {
+    grid-template-areas: "first second second second"; }
+  .qh-layout-section--col-size-33-67 {
+    grid-template-areas: "first second second"; }
+  .qh-layout-section--col-size-50-50 {
+    grid-template-areas: "first second"; }
+  .qh-layout-section--col-size-67-33 {
+    grid-template-areas: "first first second"; }
+  .qh-layout-section--col-size-75-25 {
+    grid-template-areas: "first first first second"; }
+  .qh-layout-section--col-size-33-repeat {
+    grid-template-areas: "first second third"; }
+  .qh-layout-section--col-size-25-repeat {
+    grid-template-areas: "first second third fourth"; }
+  .qh-layout-section__col--first {
+    grid-area: first;
+    max-width: 100%; }
+  .qh-layout-section__col--second {
+    grid-area: second;
+    max-width: 100%; }
+  .qh-layout-section__col--third {
+    grid-area: third;
+    max-width: 100%; }
+  .qh-layout-section__col--fourth {
+    grid-area: fourth;
+    max-width: 100%; }
+  .qh-layout-section--full-width {
+    max-width: 100%; }
+
+.layout-container.layout-builder-page {
+  max-width: 100%; }
+
+.qh-background--rhodyred {
+  background-color: #eb5152; }
+
+.qh-background--calamari {
+  background-color: #eb843b; }
+
+.qh-background--navy {
+  background-color: #283455;
+  color: white; }
