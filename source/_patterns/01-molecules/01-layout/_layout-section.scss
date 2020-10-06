@@ -1,0 +1,120 @@
+// Desktop Only! Needs mobile styling added once the pattern is established for mobile breakpoints
+$grid-gap: 3rem;
+
+.qh-layout-section {
+  display: grid;
+  grid-gap: $grid-gap;
+  max-width: 80rem;
+  margin: 0 auto;
+
+  // Temp gutters and VR
+  padding: 2rem;
+
+  // Column sizing
+  &--col-size {
+
+    // One Column sizing
+    &-25 {
+      display: block;
+      max-width: 25%;
+      margin: 0 auto;
+    }
+
+    &-50 {
+      display: block;
+      max-width: 50%;
+      margin: 0 auto;
+    }
+
+    &-75 {
+      display: block;
+      max-width: 75%;
+      margin: 0 auto;
+    }
+
+    &-100 {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    // Two Column sizing
+    &-25-75 {
+      grid-template-areas: "first second second second";
+    }
+
+    &-33-67 {
+      grid-template-areas: "first second second";
+    }
+
+    &-50-50 {
+      grid-template-areas: "first second";
+    }
+
+    &-67-33 {
+      grid-template-areas: "first first second";
+    }
+
+    &-75-25 {
+      grid-template-areas: "first first first second";
+    }
+
+    // Three and four column grids are repeated with equal columns.
+    &-33-repeat {
+      grid-template-areas: "first second third";
+    }
+
+    &-25-repeat {
+      grid-template-areas: "first second third fourth";
+    }
+  }
+
+  // Column elements
+  &__col {
+    &--first {
+      grid-area: first;
+      max-width: 100%;
+    }
+
+    &--second {
+      grid-area: second;
+      max-width: 100%;
+    }
+
+    &--third {
+      grid-area: third;
+      max-width: 100%;
+    }
+
+    &--fourth {
+      grid-area: fourth;
+      max-width: 100%;
+    }
+  }
+
+  // Full width
+  &--full-width {
+    max-width: 100%;
+  }
+}
+
+// Temp styles
+.layout-container.layout-builder-page {
+  max-width: 100%;
+}
+
+
+.qh-background {
+  &--rhodyred {
+    background-color: #eb5152;
+  }
+
+  &--calamari {
+    background-color: #eb843b;
+  }
+
+  &--navy {
+    background-color: #283455;
+    color: white;
+  }
+}
