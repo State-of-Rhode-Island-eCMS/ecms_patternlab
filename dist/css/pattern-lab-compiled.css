@@ -25,7 +25,6 @@ Atomic design is philosophically complimentary with these CSS approaches:
 So feel free to use any of these approaches. Or don't. It's totally up to you.
 
 */
-
 /*------------------------------------*\
     $TABLE OF CONTENTS
     based generally on Harry Roberts excellent CSS Guidelines https://github.com/csswizardry/CSS-Guidelines
@@ -52,75 +51,84 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
  * NAVIGATION------------------------------
  * TOC To Be Continued
  */
-
-
-
-// @import "scss/generic/variables";
-// @import "scss/generic/mixins";
-// @import "scss/generic/reset";
-// @import "scss/generic/webfonts";
-
-
-
-
-
 /*------------------------------------*\
     $GLOBAL ELEMENTS
 \*------------------------------------*/
-// @import "scss/base/global-classes";
-// @import "scss/base/main";
-// @import "scss/base/links";
-// @import "scss/base/headings";
-// @import "scss/base/text";
-// @import "scss/base/lists";
-// @import "scss/base/media";
-// @import "scss/base/forms";
-// @import "scss/base/tables";
-// @import "scss/base/animation";
-
-
-
-
-
 /*------------------------------------*\
     $LAYOUT
 \*------------------------------------*/
-// @import "scss/objects/layout";
-
-
 /*------------------------------------*\
     $PAGE STRUCTURE
 \*------------------------------------*/
-// @import "scss/objects/header";
-// @import "scss/objects/nav";
-// @import "scss/objects/main";
-// @import "scss/objects/footer";
-
-
-
 /*------------------------------------*\
     $TEXT Styles
 \*------------------------------------*/
-// @import "scss/objects/text";
-
-
 /*------------------------------------*\
     $COMPONENTS
 \*------------------------------------*/
-// @import "scss/objects/icons";
-// @import "scss/objects/buttons";
-// @import "scss/objects/blocks";
-// @import "scss/objects/lists";
-// @import "scss/objects/tooltip";
-// @import "scss/objects/accordion";
-// @import "scss/objects/tabs";
-// @import "scss/objects/sections";
-// @import "scss/objects/article";
-// @import "scss/objects/comments";
-// @import "scss/objects/messaging";
-
-
 /*------------------------------------*\
     $PATTERNS
 \*------------------------------------*/
-@import "../_patterns/**/*.scss";
+.qh-layout-section {
+  display: grid;
+  grid-gap: 3rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem; }
+  .qh-layout-section--col-size-25 {
+    display: block;
+    max-width: 25%;
+    margin: 0 auto; }
+  .qh-layout-section--col-size-50 {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto; }
+  .qh-layout-section--col-size-75 {
+    display: block;
+    max-width: 75%;
+    margin: 0 auto; }
+  .qh-layout-section--col-size-100 {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto; }
+  .qh-layout-section--col-size-25-75 {
+    grid-template-areas: "first second second second"; }
+  .qh-layout-section--col-size-33-67 {
+    grid-template-areas: "first second second"; }
+  .qh-layout-section--col-size-50-50 {
+    grid-template-areas: "first second"; }
+  .qh-layout-section--col-size-67-33 {
+    grid-template-areas: "first first second"; }
+  .qh-layout-section--col-size-75-25 {
+    grid-template-areas: "first first first second"; }
+  .qh-layout-section--col-size-33-repeat {
+    grid-template-areas: "first second third"; }
+  .qh-layout-section--col-size-25-repeat {
+    grid-template-areas: "first second third fourth"; }
+  .qh-layout-section__col--first {
+    grid-area: first;
+    max-width: 100%; }
+  .qh-layout-section__col--second {
+    grid-area: second;
+    max-width: 100%; }
+  .qh-layout-section__col--third {
+    grid-area: third;
+    max-width: 100%; }
+  .qh-layout-section__col--fourth {
+    grid-area: fourth;
+    max-width: 100%; }
+  .qh-layout-section--full-width {
+    max-width: 100%; }
+
+.layout-container.layout-builder-page {
+  max-width: 100%; }
+
+.qh-background--rhodyred {
+  background-color: #eb5152; }
+
+.qh-background--calamari {
+  background-color: #eb843b; }
+
+.qh-background--navy {
+  background-color: #283455;
+  color: white; }
