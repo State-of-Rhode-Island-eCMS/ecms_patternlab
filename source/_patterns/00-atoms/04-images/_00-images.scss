@@ -1,0 +1,15 @@
+figure {
+  padding: 0;
+}
+
+figcaption {
+  font-family: var(--font-sans-vf);
+  font-size: clamp(0.75rem, 2vw, 0.925rem);
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
