@@ -7,16 +7,14 @@
   ]
 %}
 
-{% if content|render %}
-  <div class="{{ background_class }}">
-    <div{{ attributes.addClass(classes) }}>
+<div class="{{ background_class }}">
+  <div{{ attributes.addClass(classes) }}>
 
-      {% if content.first %}
-        <div {{ region_attributes.first.addClass('qh-layout-section__col', 'qh-layout-section__col--first') }}>
-          {{ content.first }}
-        </div>
-      {% endif %}
+    {% if content.first %}
+      <div {{ region_attributes.first.addClass('qh-layout-section__col', 'qh-layout-section__col--first') }}>
+        {{ content.first }}
+      </div>
+    {% endif %}
 
-    </div>
   </div>
-{% endif %}
+</div>
