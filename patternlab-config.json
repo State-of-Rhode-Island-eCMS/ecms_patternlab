@@ -94,6 +94,13 @@
     "color": "light",
     "density": "compact",
     "layout": "horizontal",
+    "logo": {
+      "text": "quahog",
+      "altText": "Quahog Design System",
+      "url": "./",
+      "srcLight": "./images/quahog_illustration_on_light.svg",
+      "srcDark": "./images/quahog_illustration_on_dark.svg"
+    },
     "noViewAll": false
   },
   "uikits": [
