@@ -310,14 +310,52 @@ form {
   margin-top: calc( var(--body-text-spacer) * 1);
   margin-bottom: calc( var(--body-text-spacer) * 1); }
 
-input[type="text"] {
+input[type="text"],
+input[type="url"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"] {
   border-radius: 0.15em;
   border: solid 1px #bfbfbf;
   font-family: var(--font-sans-vf);
   font-size: 1rem;
   font-weight: 400;
   padding: 0.5em 0.5em 0.45em 0.5em; }
-  label + input[type="text"] {
+  label + input[type="text"], label +
+  input[type="url"], label +
+  input[type="email"], label +
+  input[type="number"], label +
+  input[type="search"], label +
+  input[type="date"], label +
+  input[type="datetime"], label +
+  input[type="datetime-local"], label +
+  input[type="month"], label +
+  input[type="week"] {
+    margin-top: 0.1em; }
+
+input[type="password"] {
+  border-radius: 0.15em;
+  border: solid 1px #bfbfbf;
+  font-family: var(--font-sans-fallback);
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.5em 0.5em 0.45em 0.5em; }
+  label + input[type="password"] {
+    margin-top: 0.1em; }
+
+textarea {
+  border-radius: 0.15em;
+  border: solid 1px #bfbfbf;
+  font-family: var(--font-sans-vf);
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.5em 0.5em 0.45em 0.5em; }
+  label + textarea {
     margin-top: 0.1em; }
 
 button {
