@@ -7,7 +7,7 @@ dl {
   font-style: normal;
   hyphens: auto;
   line-height: clamp(1.25em, 2vw, 1.4em);
-  margin: 0 var(--margin-right) 0 var(--margin-left);
+  margin: 0;
   max-width: var(--content-width);
   padding: 0;
   @media screen and (min-width: $bp--medium) {

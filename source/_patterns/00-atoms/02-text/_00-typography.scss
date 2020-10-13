@@ -28,7 +28,7 @@ p {
   font-style: normal;
   hyphens: auto;
   line-height: clamp(1.25em, 2vw, 1.4em);
-  margin: 0 var(--margin-right) 0 var(--margin-left);
+  margin: 0;
   max-width: var(--content-width);
   @media screen and (min-width: $bp--medium) {
     hyphens: none;
@@ -47,8 +47,6 @@ h1 {
   font-style: normal;
   line-height: clamp(1.05em, 6vw, 1.1em);
   margin-top: calc( var(--body-text-spacer) * 2 );
-  margin-left: var(--margin-left);
-  margin-right: calc( var(--margin-right) / 2 );
   margin-bottom: calc( var(--body-text-spacer) * 1 );
 }
 
@@ -60,8 +58,6 @@ h2 {
   font-style: normal;
   line-height: clamp(1.1em, 6vw, 1.15em);
   margin-top: calc( var(--body-text-spacer) * 2 );
-  margin-left: var(--margin-left);
-  margin-right: calc( var(--margin-right) / 2 );
   margin-bottom: calc( var(--body-text-spacer) * 0.5 );
   &.emphasis:after {
     content: " ";
@@ -81,8 +77,6 @@ h3 {
 	font-weight: 675;
   font-style: normal;
   margin-top: calc( var(--body-text-spacer) * 1.5 );
-  margin-left: var(--margin-left);
-  margin-right: var(--margin-right);
   margin-bottom: calc( var(--body-text-spacer) * 0.5 );
 }
 
@@ -92,8 +86,24 @@ h4 {
 	font-weight: 400;
   font-style: normal;
   margin-top: calc( var(--body-text-spacer) * 1.5 );
-  margin-left: var(--margin-left);
-  margin-right: var(--margin-right);
+  margin-bottom: calc( var(--body-text-spacer) * 0.5 );
+}
+
+h5 {
+  font-family: var(--font-serif-vf);
+  font-size: clamp(0.925rem, 1vw, 1.125rem);
+	font-weight: 500;
+  font-style: normal;
+  margin-top: calc( var(--body-text-spacer) * 1.5 );
+  margin-bottom: calc( var(--body-text-spacer) * 0.5 );
+}
+
+h6 {
+  font-family: var(--font-serif-vf);
+  font-size: clamp(0.825rem, 1vw, 1rem);
+	font-weight: 600;
+  font-style: normal;
+  margin-top: calc( var(--body-text-spacer) * 1.5 );
   margin-bottom: calc( var(--body-text-spacer) * 0.5 );
 }
 
@@ -128,8 +138,7 @@ a {
 
 blockquote {
   border-top: solid 0.33rem $color-rhody-red;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
   max-width: var(--content-width);
 
   p {
@@ -139,6 +148,12 @@ blockquote {
     margin-right: auto;
     margin-top: 0.75rem;
   }
+}
+
+address {
+  font-family: var(--font-sans-vf);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+	font-weight: 350;
 }
 
 time {
