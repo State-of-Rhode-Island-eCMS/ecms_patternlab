@@ -1,13 +1,32 @@
-$color-quahog: #404040;
+// Brand colors
 $color-navy-blue: #103052;
+$color-navy-blue-dark: #1c253d;
+
 $color-rhody-red: #eb5152;
 $color-ocean-state: #8fb9e2;
 $color-hope-gold: #ffc709;
 
+$color-coffee-milk: #d1cab1;
+$color-coffee-milk-33: #f0efe5;
+
 $color-ocean-state-tint1: #9fc9f2;
 $color-ocean-state-shade1: #5994cf;
+
+// Theme colors
+$color-forest-light:   hsl(107, 57, 92);
+$color-forest:         hsl(107, 65, 52);
+$color-forest-dark:    hsl(107, 75, 38);
+$color-forest-darkest: hsl(107, 85, 18);
+
+// Grayscales
+$color-quahog: #404040;
+$color-quahog-90: #151515;
+$color-quahog-80: #333035;
+$color-quahog-60: #6f6f6f;
 $color-quahog-tint1: #bfbfbf;
 
+
+// Functional global color names
 $color-link-link: #28428a;
 $color-link-visited: #56329a;
 $color-link-hover: #3377c2;
