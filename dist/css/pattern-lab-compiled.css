@@ -236,6 +236,23 @@ a:focus {
 a:active {
   color: #eb5152; }
 
+blockquote {
+  border-top: solid 0.33rem #eb5152;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: var(--content-width); }
+  blockquote p {
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-weight: 150;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.75rem; }
+
+time {
+  font-family: var(--font-sans-vf);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 350; }
+
 label {
   display: block;
   font-family: var(--font-sans-vf);

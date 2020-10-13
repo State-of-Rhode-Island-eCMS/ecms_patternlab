@@ -61,5 +61,8 @@
   margin-left: auto;
   margin-right: auto; }
 
+.pl-c-pattern button {
+  background-image: none; }
+
 .pl-c-pattern img {
   width: auto; }
