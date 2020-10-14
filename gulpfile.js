@@ -12,6 +12,7 @@ const sassGlob = require('gulp-sass-glob');
 const concat = require('gulp-concat');
 const minify = require('gulp-minify');
 const autoprefixer = require('gulp-autoprefixer');
+var sassImportJson = require('gulp-sass-import-json');
 
 /******************************************************
  * PATTERN LAB  NODE WRAPPER TASKS with core library
@@ -83,6 +84,7 @@ gulp.task('build:sass', () => {
   return gulp
     .src(scssSourcePaths)
     .pipe(sassGlob())
+    .pipe(sassImportJson({isScss: true}))
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 2 versions']
