@@ -42,3 +42,7 @@ $color-text-link-visited: $color-link-visited;
 $color-text-link-hover: $color-link-hover;
 $color-text-link-focus: $color-link-focus;
 $color-text-link-active: $color-link-active;
+
+.test-json-color {
+  color: map-get($rhody-red, hex);
+}

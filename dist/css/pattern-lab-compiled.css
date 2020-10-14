@@ -67,6 +67,9 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
     $COMPONENTS
 \*------------------------------------*/
 /*------------------------------------*\
+    $JSON Variables
+\*------------------------------------*/
+/*------------------------------------*\
     $PATTERNS
 \*------------------------------------*/
 /**
@@ -97,6 +100,9 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
   font-style: italic;
   font-stretch: normal;
   src: url("../fonts/work-sans-vf/WorkSans-Italic-subset.woff2") format("woff2 supports variations"), url("../fonts/work-sans-vf/WorkSans-Italic-subset.woff2") format("woff2-variations"); }
+
+.test-json-color {
+  color: #eb5152; }
 
 html {
   background-color: #ffffff;
