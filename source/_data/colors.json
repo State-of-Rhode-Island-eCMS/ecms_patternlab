@@ -1,0 +1,58 @@
+{
+  "navy-blue": {
+    "name": "Navy Blue",
+    "hex": "#103052",
+    "text": "light-text"
+  },
+  "navy-blue-dark": {
+    "name": "Navy Blue Dark",
+    "hex": "#1c253d",
+    "text": "light-text"
+  },
+  "rhody-red": {
+    "name": "Rhody Red",
+    "hex": "#eb5152",
+    "text": "dark-text"
+  },
+  "ocean-state": {
+    "name": "Ocean State",
+    "hex": "#8fb9e2",
+    "text": "dark-text"
+  },
+  "hope-gold": {
+    "name": "Hope Gold",
+    "hex": "#ffc709",
+    "text": "dark-text"
+  },
+  "calamari": {
+    "name": "Calamari",
+    "hex": "#eb843b",
+    "text": "dark-text"
+  },
+  "high-tide": {
+    "name": "High Tide",
+    "hex": "#7cf3d6",
+    "text": "dark-text"
+  },
+  "coffee-milk": {
+    "name": "Coffee Milk",
+    "hex": "#d1cab1",
+    "text": "light-text"
+  },
+  "coffee-milk-33": {
+    "name": "Coffee Milk (33%)",
+    "hex": "#f0efe5",
+    "text": "dark-text"
+  },
+  "ocean-state-tint1": {
+    "name": "Ocean State (Tint 1)",
+    "hex": "#9fc9f2",
+    "text": "dark-text"
+  }
+  ,
+  "ocean-state-shade1": {
+    "name": "Ocean State (Shade 1)",
+    "hex": "#5994cf",
+    "text": "light-text"
+  }
+}
