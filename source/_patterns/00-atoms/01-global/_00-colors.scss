@@ -43,6 +43,9 @@ $color-text-link-hover: $color-link-hover;
 $color-text-link-focus: $color-link-focus;
 $color-text-link-active: $color-link-active;
 
-.test-json-color {
-  color: map-get($rhody-red, hex);
+// outputs all the colors from colors.json as custom props
+body {
+  @each $key, $value in $colors {
+      --new-color-#{$key}: #{map-get($value, hex)};
+  }
 }

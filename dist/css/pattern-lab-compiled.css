@@ -101,8 +101,18 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
   font-stretch: normal;
   src: url("../fonts/work-sans-vf/WorkSans-Italic-subset.woff2") format("woff2 supports variations"), url("../fonts/work-sans-vf/WorkSans-Italic-subset.woff2") format("woff2-variations"); }
 
-.test-json-color {
-  color: #eb5152; }
+body {
+  --new-color-navy-blue: #103052;
+  --new-color-navy-blue-dark: #1c253d;
+  --new-color-rhody-red: #eb5152;
+  --new-color-ocean-state: #8fb9e2;
+  --new-color-hope-gold: #ffc709;
+  --new-color-calamari: #eb843b;
+  --new-color-high-tide: #7cf3d6;
+  --new-color-coffee-milk: #d1cab1;
+  --new-color-coffee-milk-33: #f0efe5;
+  --new-color-ocean-state-tint1: #9fc9f2;
+  --new-color-ocean-state-shade1: #5994cf; }
 
 html {
   background-color: #ffffff;
