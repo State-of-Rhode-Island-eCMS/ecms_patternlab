@@ -1,0 +1,20 @@
+{
+  "t_scar_bg": "#fff",
+  "t_scar_bg--contrast": "#5994cf",
+  "t_scar_fg": "#5994cf",
+  "t_scar_header": "#5994cf",
+  "t_scar_link--static": "#5994cf",
+  "t_scar_link--hover": "#5994cf",
+  "t_scar_link--visited": "#5994cf",
+  "t_scar_link--active": "#5994cf",
+  "t_scar_link--focus": "#5994cf",
+  "t_beach_bg": "#fff",
+  "t_beach_bg--contrast": "#5994cf",
+  "t_beach_fg": "#5994cf",
+  "t_beach_header": "#5994cf",
+  "t_beach_link--static": "#5994cf",
+  "t_beach_link--hover": "#5994cf",
+  "t_beach_link--visited": "#5994cf",
+  "t_beach_link--active": "#5994cf",
+  "t_beach_link--focus": "#5994cf"
+}
