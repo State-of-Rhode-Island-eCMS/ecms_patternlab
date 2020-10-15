@@ -13,30 +13,36 @@
     "ocean-state-shade1": { "name": "Ocean State (Shade 1)", "hex": "#5994cf", "text": "light-text" },
     "white": { "name": "White", "hex": "#fff", "text": "dark-text" }
   },
-  "palletes": {
-    "scar": [
-      { "property": "bg", "colorName": "white" },
-      { "property": "bg--contrast", "colorName": "ocean-state-shade1" },
-      { "property": "fg", "colorName": "ocean-state-shade1" },
-      { "property": "header", "colorName": "ocean-state-shade1" },
-      { "property": "link--static", "colorName": "ocean-state-shade1" },
-      { "property": "link--hover", "colorName": "ocean-state-shade1" },
-      { "property": "link--hover", "colorName": "ocean-state-shade1" },
-      { "property": "link--visited", "colorName": "ocean-state-shade1" },
-      { "property": "link--active", "colorName": "ocean-state-shade1" },
-      { "property": "link--focus", "colorName": "ocean-state-shade1" }
-    ],
-    "beach": [
-      { "property": "bg", "colorName": "white" },
-      { "property": "bg--contrast", "colorName": "ocean-state-shade1" },
-      { "property": "fg", "colorName": "ocean-state-shade1" },
-      { "property": "header", "colorName": "ocean-state-shade1" },
-      { "property": "link--static", "colorName": "ocean-state-shade1" },
-      { "property": "link--hover", "colorName": "ocean-state-shade1" },
-      { "property": "link--hover", "colorName": "ocean-state-shade1" },
-      { "property": "link--visited", "colorName": "ocean-state-shade1" },
-      { "property": "link--active", "colorName": "ocean-state-shade1" },
-      { "property": "link--focus", "colorName": "ocean-state-shade1" }
-    ]
+  "palettes": {
+    "scar": {
+      "humanName": "Scarborough Beach",
+      "values": [
+        { "fnName": "bg", "colorName": "white" },
+        { "fnName": "bg--contrast", "colorName": "ocean-state-shade1" },
+        { "fnName": "fg", "colorName": "ocean-state-shade1" },
+        { "fnName": "header", "colorName": "ocean-state-shade1" },
+        { "fnName": "link--static", "colorName": "ocean-state-shade1" },
+        { "fnName": "link--hover", "colorName": "ocean-state-shade1" },
+        { "fnName": "link--hover", "colorName": "ocean-state-shade1" },
+        { "fnName": "link--visited", "colorName": "ocean-state-shade1" },
+        { "fnName": "link--active", "colorName": "ocean-state-shade1" },
+        { "fnName": "link--focus", "colorName": "ocean-state-shade1" }
+      ]
+    },
+    "forest": {
+      "humanName": "Wickaboxet Forest Green",
+      "values": [
+        { "fnName": "bg", "colorName": "white" },
+        { "fnName": "bg--contrast", "colorName": "ocean-state-shade1" },
+        { "fnName": "fg", "colorName": "ocean-state-shade1" },
+        { "fnName": "header", "colorName": "ocean-state-shade1" },
+        { "fnName": "link--static", "colorName": "ocean-state-shade1" },
+        { "fnName": "link--hover", "colorName": "ocean-state-shade1" },
+        { "fnName": "link--hover", "colorName": "ocean-state-shade1" },
+        { "fnName": "link--visited", "colorName": "ocean-state-shade1" },
+        { "fnName": "link--active", "colorName": "ocean-state-shade1" },
+        { "fnName": "link--focus", "colorName": "ocean-state-shade1" }
+      ]
+    }
   }
 }
