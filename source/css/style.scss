@@ -122,7 +122,8 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 /*------------------------------------*\
     $JSON Variables
 \*------------------------------------*/
-@import '../_data/colors.json';
+@import '../_data/color-config.json';
+@import '../_data/colors-generated.json';
 
 /*------------------------------------*\
     $PATTERNS
