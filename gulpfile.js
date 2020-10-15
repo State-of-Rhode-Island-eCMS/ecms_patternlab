@@ -75,29 +75,31 @@ const patternLabSourcePaths = [
 // Generate colors file
 gulp.task('generate-colors', function () {
   return gulp
-      .src("source/_data/color-config.json")
-      .pipe(streamify(jeditor(function (json) {
-          const generatedJson = {}
-          const colorArray = [];
+    .src("source/_data/color-config.json")
+    .pipe(streamify(jeditor(function (json) {
+      const generatedJson = {}
+      const colorArray = [];
 
-          for (let [color, value] of Object.entries(json.colors)) {
-            colorArray.push({
-              name: color,
-              hex: value.hex
-            })
-          }
+      for (let [color, value] of Object.entries(json.colors)) {
+        colorArray.push({
+          name: color,
+          hex: value.hex
+        })
+      }
 
-          for (let [pallete, value] of Object.entries(json.palletes)) {
-            value.map((palleteConfig) => {
-              const hexValue = colorArray.find((item) => item.name === palleteConfig.colorName);
-              generatedJson[`t_${pallete}_${palleteConfig.property}`] = hexValue.hex;
-            })
-          }
+      for (let [palette, value] of Object.entries(json.palettes)) {
+        //console.log(value);
+        value.values.map((paletteConfig) => {
+          console.log(palette);
+          const hexValue = colorArray.find((item) => item.name === paletteConfig.colorName);
+          generatedJson[`t__${palette}__${paletteConfig.fnName}`] = hexValue.hex;
+        })
+      }
 
-          return generatedJson;
-      })))
-      .pipe(rename('colors-generated.json'))
-      .pipe(gulp.dest('source/_data/'));
+      return generatedJson;
+    })))
+    .pipe(rename('colors-generated.json'))
+    .pipe(gulp.dest('source/_data/'));
 });
 
 // Build Tasks
