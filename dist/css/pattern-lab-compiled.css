@@ -112,7 +112,8 @@ body {
   --new-color-coffee-milk: #d1cab1;
   --new-color-coffee-milk-33: #f0efe5;
   --new-color-ocean-state-tint1: #9fc9f2;
-  --new-color-ocean-state-shade1: #5994cf; }
+  --new-color-ocean-state-shade1: #5994cf;
+  --new-color-white: #fff; }
 
 html {
   background-color: #ffffff;
