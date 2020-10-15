@@ -12,7 +12,9 @@ const sassGlob = require('gulp-sass-glob');
 const concat = require('gulp-concat');
 const minify = require('gulp-minify');
 const autoprefixer = require('gulp-autoprefixer');
-var sassImportJson = require('gulp-sass-import-json');
+const sassImportJson = require('gulp-sass-import-json');
+const jeditor = require('gulp-json-editor');
+const streamify = require('gulp-streamify');
 
 /******************************************************
  * PATTERN LAB  NODE WRAPPER TASKS with core library
@@ -70,6 +72,34 @@ const patternLabSourcePaths = [
   "source/**/*.twig"
 ];
 
+// Generate colors file
+gulp.task('generate-colors', function () {
+  return gulp
+      .src("source/_data/color-config.json")
+      .pipe(streamify(jeditor(function (json) {
+          const generatedJson = {}
+          const colorArray = [];
+
+          for (let [color, value] of Object.entries(json.colors)) {
+            colorArray.push({
+              name: color,
+              hex: value.hex
+            })
+          }
+
+          for (let [pallete, value] of Object.entries(json.palletes)) {
+            value.map((palleteConfig) => {
+              const hexValue = colorArray.find((item) => item.name === palleteConfig.colorName);
+              generatedJson[`t_${pallete}_${palleteConfig.property}`] = hexValue.hex;
+            })
+          }
+
+          return generatedJson;
+      })))
+      .pipe(rename('colors-generated.json'))
+      .pipe(gulp.dest('source/_data/'));
+});
+
 // Build Tasks
 gulp.task('build:js', () => {
   return gulp
@@ -97,7 +127,7 @@ gulp.task('build:sass', () => {
 });
 
 // Build All
-gulp.task('build', gulp.series('build:js', 'build:sass', 'patternlab:build'));
+gulp.task('build', gulp.series('build:js', 'generate-colors', 'build:sass', 'patternlab:build'));
 
 // Build only SASS JS
 gulp.task('build:no-patterns', gulp.parallel('build:js', 'build:sass'));
@@ -115,4 +145,4 @@ gulp.task('watch', gulp.parallel('watch:js', 'watch:sass'));
 
 // Default task
 // Patternlab:serve handles building/watching patterns
-gulp.task('default', gulp.series('build:no-patterns', 'patternlab:serve', 'watch'));
+gulp.task('default', gulp.series('generate-colors', 'build:no-patterns', 'patternlab:serve', 'watch'));
