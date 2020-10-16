@@ -489,6 +489,17 @@ button {
   background-color: #283455;
   color: white; }
 
+.qh-site-footer {
+  background-color: #404040;
+  color: #fff;
+  font-size: 1rem; }
+  .qh-site-footer a {
+    color: #fff;
+    font-size: 1rem; }
+  .qh-site-footer p {
+    font-size: 1rem;
+    margin-top: 0; }
+
 body {
   --sp__gutter: 1.5rem;
   --sp__vertical: 1rem; }
@@ -676,3 +687,18 @@ body .qh-t--wickaboxet-forest {
     --t__default__fg: #404040;
     --t__default__header: #58d435;
     --t__default__link--static: #38aa18; }
+
+/*------------------------------------*\
+    $Admin
+\*------------------------------------*/
+.toolbar-tray ul {
+  max-width: initial;
+  font-size: initial; }
+
+.toolbar-tray a {
+  color: #565656;
+  font-size: 13px; }
+
+.toolbar-tray button {
+  background-color: transparent;
+  background-image: initial; }
