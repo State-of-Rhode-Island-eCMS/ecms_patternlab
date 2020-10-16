@@ -28,11 +28,12 @@
 <html{{ html_attributes }}>
   <head>
     <head-placeholder token="{{ placeholder_token }}">
-    <title>{{ head_title }}</title>
+    <title>eCMS</title>
+    {# <title>{{ head_title }}</title> This doesnt work #}
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
   </head>
-  <body{{ attributes.addClass(body_classes) }}>
+  <body{{ attributes.addClass(body_classes) }}> #}
     {#
       Keyboard navigation/accessibility link to main content section in
       page.html.twig.
