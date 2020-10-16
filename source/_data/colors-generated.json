@@ -1,0 +1,20 @@
+{
+  "t__scar__bg": "#fff",
+  "t__scar__bg--contrast": "#5994cf",
+  "t__scar__fg": "#5994cf",
+  "t__scar__header": "#5994cf",
+  "t__scar__link--static": "#5994cf",
+  "t__scar__link--hover": "#5994cf",
+  "t__scar__link--visited": "#5994cf",
+  "t__scar__link--active": "#5994cf",
+  "t__scar__link--focus": "#5994cf",
+  "t__forest__bg": "#fff",
+  "t__forest__bg--contrast": "#5994cf",
+  "t__forest__fg": "#5994cf",
+  "t__forest__header": "#5994cf",
+  "t__forest__link--static": "#5994cf",
+  "t__forest__link--hover": "#5994cf",
+  "t__forest__link--visited": "#5994cf",
+  "t__forest__link--active": "#5994cf",
+  "t__forest__link--focus": "#5994cf"
+}

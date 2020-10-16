@@ -67,6 +67,9 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
     $COMPONENTS
 \*------------------------------------*/
 /*------------------------------------*\
+    $JSON Variables
+\*------------------------------------*/
+/*------------------------------------*\
     $PATTERNS
 \*------------------------------------*/
 /**
@@ -97,6 +100,20 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
   font-style: italic;
   font-stretch: normal;
   src: url("../fonts/work-sans-vf/WorkSans-Italic-subset.woff2") format("woff2 supports variations"), url("../fonts/work-sans-vf/WorkSans-Italic-subset.woff2") format("woff2-variations"); }
+
+body {
+  --new-color-navy-blue: #103052;
+  --new-color-navy-blue-dark: #1c253d;
+  --new-color-rhody-red: #eb5152;
+  --new-color-ocean-state: #8fb9e2;
+  --new-color-hope-gold: #ffc709;
+  --new-color-calamari: #eb843b;
+  --new-color-high-tide: #7cf3d6;
+  --new-color-coffee-milk: #d1cab1;
+  --new-color-coffee-milk-33: #f0efe5;
+  --new-color-ocean-state-tint1: #9fc9f2;
+  --new-color-ocean-state-shade1: #5994cf;
+  --new-color-white: #fff; }
 
 html {
   background-color: #ffffff;
@@ -471,3 +488,217 @@ button {
 .qh-background--navy {
   background-color: #283455;
   color: white; }
+
+.qh-site-footer {
+  background-color: #404040;
+  color: #fff;
+  font-size: 1rem; }
+  .qh-site-footer a {
+    color: #fff;
+    font-size: 1rem; }
+  .qh-site-footer p {
+    font-size: 1rem;
+    margin-top: 0; }
+
+body {
+  --sp__gutter: 1.5rem;
+  --sp__vertical: 1rem; }
+
+.qh-u__page__wrapper {
+  background-color: var(--t__default__bg);
+  color: var(--t__default__fg); }
+  .qh-u__page__wrapper h1, .qh-u__page__wrapper .h1, .qh-u__page__wrapper h2, .qh-u__page__wrapper .h2, .qh-u__page__wrapper h3, .qh-u__page__wrapper .h3, .qh-u__page__wrapper h4, .qh-u__page__wrapper .h4, .qh-u__page__wrapper h5, .qh-u__page__wrapper .h5, .qh-u__page__wrapper h6, .qh-u__page__wrapper .h6 {
+    color: var(--t__default__header);
+    margin: 0; }
+  .qh-u__page__wrapper a {
+    color: var(--t__default__link--static); }
+    .qh-u__page__wrapper a:hover, .qh-u__page__wrapper a:focus {
+      color: var(--t__default__link--hover); }
+    .qh-u__page__wrapper a:visited {
+      color: var(--t__default__link--visited); }
+    .qh-u__page__wrapper a:active {
+      color: var(--t__default__link--active); }
+
+.qh-o__official-site, .qh-o__page-header, .qh-o__main-nav {
+  padding: var(--sp__vertical) var(--sp__gutter); }
+
+.qh-o__official-site {
+  background-color: var(--t__official-header__bg);
+  color: var(--t__official-header__fg); }
+  .qh-o__official-site a {
+    color: var(--t__official-header__link--static); }
+    .qh-o__official-site a:hover, .qh-o__official-site a:focus {
+      color: var(--t__official-header__link--hover); }
+  .qh-o__official-site p {
+    max-width: unset; }
+
+.qh-o__page-header {
+  background-color: var(--t__page-header__bg);
+  color: var(--t__page-header__fg); }
+  .qh-o__page-header h1 {
+    color: var(--t__page-header__header); }
+  .qh-o__page-header a {
+    color: var(--t__page-header__link--static); }
+    .qh-o__page-header a:hover, .qh-o__page-header a:focus {
+      color: var(--t__page-header__link--hover); }
+
+.qh-o__main-nav {
+  background-color: var(--t__page-nav__bg); }
+  .qh-o__main-nav a {
+    color: var(--t__page-nav__link--static); }
+    .qh-o__main-nav a:hover, .qh-o__main-nav a:focus {
+      color: var(--t__page-nav__link--hover); }
+
+.qh-c__hero {
+  background-color: var(--t__c__hero__bg);
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  padding: calc(var(--sp__vertical) * 2) calc(var(--sp__gutter) * 2); }
+
+.qh-c__hero__inner {
+  color: var(--t__c__hero__fg);
+  margin-right: 50%;
+  padding: var(--sp__vertical) var(--sp__gutter);
+  position: relative;
+  z-index: 1; }
+  .qh-c__hero__inner::before {
+    background-color: var(--t__c__hero__bg);
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.92;
+    z-index: -1; }
+    @supports (inset: 0) {
+      .qh-c__hero__inner::before {
+        inset: 0; } }
+  .qh-c__hero__inner h2 {
+    color: var(--t__c__hero__header); }
+
+.qh-g__row {
+  background-color: var(--t__default__bg);
+  color: var(--t__default__fg); }
+  .qh-g__row h1, .qh-g__row .h1, .qh-g__row h2, .qh-g__row .h2, .qh-g__row h3, .qh-g__row .h3, .qh-g__row h4, .qh-g__row .h4, .qh-g__row h5, .qh-g__row .h5, .qh-g__row h6, .qh-g__row .h6 {
+    color: var(--t__default__header); }
+  .qh-g__row__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+    max-width: 75rem; }
+
+.qh-g__col {
+  background-color: var(--t__default__bg);
+  color: var(--t__default__fg);
+  padding: var(--sp__vertical) var(--sp__gutter) calc(var(--sp__vertical) * 2); }
+  .qh-g__col h1, .qh-g__col .h1, .qh-g__col h2, .qh-g__col .h2, .qh-g__col h3, .qh-g__col .h3, .qh-g__col h4, .qh-g__col .h4, .qh-g__col h5, .qh-g__col .h5, .qh-g__col h6, .qh-g__col .h6 {
+    color: var(--t__default__header); }
+
+body {
+  --t__default__bg: #fff;
+  --t__default__bg--contrast: #333035;
+  --t__default__fg: #404040;
+  --t__default__header: #6f6f6f;
+  --t__default__link--static: #28428a;
+  --t__default__link--hover: #3377c2;
+  --t__default__link--visited: #56329a;
+  --t__default__link--active: #eb5152;
+  --t__official-header__bg: #1c253d;
+  --t__official-header__fg: #e6e6e6;
+  --t__official-header__link--static: #d1cab1;
+  --t__official-header__link--hover: #fff;
+  --t__page-header__bg: #103052;
+  --t__page-header__fg: #fff;
+  --t__page-header__link--static: #fff;
+  --t__page-header__link--hover: #ffc709;
+  --t__page-header__header: #8fb9e2;
+  --t__page-nav__bg: #8fb9e2;
+  --t__page-nav__link--static: #103052;
+  --t__page-nav__link--hover: #eb5152;
+  --t__c__hero__bg: #103052;
+  --t__c__hero__fg: #fff;
+  --t__c__hero__header: #ffc709; }
+  body .qh-ct__primary {
+    --t__default__bg: #103052;
+    --t__default__fg: #fff;
+    --t__default__header: #8fb9e2;
+    --t__default__link--static: #fff;
+    --t__default__link--hover: #ffc709; }
+  body .qh-ct__primary--light {
+    --t__default__bg: #8fb9e2;
+    --t__default__fg: #103052;
+    --t__default__header: #fff;
+    --t__default__link--static: #1c253d; }
+  body .qh-t__default--dark {
+    --t__default__bg: #333035;
+    --t__default__bg--contrast: #151515;
+    --t__default__fg: #f0efe5;
+    --t__default__header: #d1cab1;
+    --t__default__link--static: #88b8dd;
+    --t__default__link--hover: #fff;
+    --t__default__link--visited: #bea5e9;
+    --t__default__link--active: #ffc709;
+    --t__official-header__bg: #1c191f;
+    --t__page-header__bg: #252228;
+    --t__page-header__fg: #d1cab1;
+    --t__page-header__header: #fff; }
+    body .qh-t__default--dark .qh-ct__primary {
+      --t__default__bg: #1c253d;
+      --t__default__fg: #fff;
+      --t__default__header: #8fb9e2;
+      --t__default__link--static: #fff; }
+    body .qh-t__default--dark .qh-ct__primary--light {
+      --t__default__bg: #103052;
+      --t__default__fg: #fff;
+      --t__default__header: #fff;
+      --t__default__link--static: #fff; }
+
+body .qh-t--wickaboxet-forest {
+  --t__default__header: #38aa18;
+  --t__official-header__bg: #151515;
+  --t__page-header__bg: #38aa18;
+  --t__page-header__fg: #333035;
+  --t__page-header__link--static: #151515;
+  --t__page-header__link--hover: #ffc709;
+  --t__page-header__header: #fff;
+  --t__page-nav__bg: #58d435;
+  --t__c__hero__bg: #185507; }
+  body .qh-t--wickaboxet-forest .qh-ct__primary {
+    --t__default__bg: #38aa18;
+    --t__default__fg: #151515;
+    --t__default__header: #fff;
+    --t__default__link--static: #151515;
+    --t__default__link--hover: #ffc709; }
+  body .qh-t--wickaboxet-forest .qh-ct__primary--light {
+    --t__default__bg: #e4f6df;
+    --t__default__fg: #404040;
+    --t__default__header: #58d435;
+    --t__default__link--static: #38aa18; }
+
+/*------------------------------------*\
+    $Admin
+\*------------------------------------*/
+.toolbar-tray ul {
+  max-width: initial;
+  font-size: initial; }
+
+.toolbar-tray a {
+  color: #565656;
+  font-size: 13px; }
+
+.toolbar-tray button {
+  background-color: transparent;
+  background-image: initial; }

@@ -1,23 +1,8 @@
 <ul class="sg-colors">
-	<li>
-		<span class="sg-swatch" style="background: #EB5152;"></span>
-		<span class="sg-label">Rhody Red: #EB5152</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #8FBAE4;"></span>
-		<span class="sg-label">Ocean State: #8FBAE4</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #283455;"></span>
-		<span class="sg-label">Navy: #283455</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #FFC709;"></span>
-		<span class="sg-label">Hope Gold: #FFC709</span>
-	</li>
-	<li>
-		<span class="sg-swatch" style="background: #404040;"></span>
-		<span class="sg-label">Quahog: #404040</span>
-	</li>
-
+	{% for key, color in colors %}
+		<li>
+			<span class="sg-swatch" style="background: {{ color.hex }};"></span>
+			<span class="sg-label">{{ color.name }}: {{ color.hex }}</span>
+		</li>
+	{% endfor %}
 </ul>

@@ -1,0 +1,17 @@
+// Overide pattern lab styles affecting admin toolbar.
+.toolbar-tray {
+  ul {
+    max-width: initial;
+    font-size: initial;
+  }
+
+  a {
+    color: #565656;
+    font-size: 13px;
+  }
+
+  button {
+    background-color: transparent;
+    background-image: initial;
+  }
+}

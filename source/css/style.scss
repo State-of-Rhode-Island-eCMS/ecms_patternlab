@@ -119,8 +119,19 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 // @import "scss/objects/comments";
 // @import "scss/objects/messaging";
 
+/*------------------------------------*\
+    $JSON Variables
+\*------------------------------------*/
+@import '../_data/color-config.json';
+@import '../_data/colors-generated.json';
 
 /*------------------------------------*\
     $PATTERNS
 \*------------------------------------*/
 @import "../_patterns/**/*.scss";
+
+
+/*------------------------------------*\
+    $Admin
+\*------------------------------------*/
+@import "scss/admin/index";
