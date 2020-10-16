@@ -88,9 +88,7 @@ gulp.task('generate-colors', function () {
       }
 
       for (let [palette, value] of Object.entries(json.palettes)) {
-        //console.log(value);
         value.values.map((paletteConfig) => {
-          console.log(palette);
           const hexValue = colorArray.find((item) => item.name === paletteConfig.colorName);
           generatedJson[`t__${palette}__${paletteConfig.fnName}`] = hexValue.hex;
         })
