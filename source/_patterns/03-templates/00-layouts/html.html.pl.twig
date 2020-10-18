@@ -18,7 +18,7 @@
  *   'page'.
  * - db_offline: A flag indicating if the database is offline.
  * - placeholder_token: The token for generating head, css, js and js-bottom
- *   placeholders.
+ *   placeholders. 
  *
  * @see template_preprocess_html()
  */
@@ -39,7 +39,7 @@
       page.html.twig.
     #}
     <a href="#main-content" class="visually-hidden focusable skip-link">
-      {{ 'Skip to main content' }}
+      {{ skip_link }}
     </a>
     {{ page_top }}
     {{ page }}
