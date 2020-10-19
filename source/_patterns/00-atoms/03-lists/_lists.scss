@@ -28,8 +28,8 @@ li,
 dd {
   margin-left: 1em;
   &::marker {
-    color: $color-rhody-red;
-    font-size: 0.875em;  
+    //color: $color-rhody-red;
+    font-size: 0.875em;
   }
   + li {
     margin-top: calc( var(--body-text-spacer) * 0.5 );
