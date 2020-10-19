@@ -1,47 +1,183 @@
 {
   "colors": {
-    "navy-blue": { "name": "Navy Blue", "hex": "#103052", "text": "light-text" },
-    "navy-blue-dark": { "name": "Navy Blue Dark", "hex": "#1c253d", "text": "light-text" },
-    "rhody-red": { "name": "Rhody Red", "hex": "#eb5152", "text": "dark-text" },
-    "ocean-state": { "name": "Ocean State", "hex": "#8fb9e2", "text": "dark-text" },
-    "hope-gold": { "name": "Hope Gold", "hex": "#ffc709", "text": "dark-text" },
-    "calamari": { "name": "Calamari", "hex": "#eb843b", "text": "dark-text" },
-    "high-tide": { "name": "High Tide", "hex": "#7cf3d6", "text": "dark-text" },
-    "coffee-milk": { "name": "Coffee Milk", "hex": "#d1cab1", "text": "light-text" },
-    "coffee-milk-33": { "name": "Coffee Milk (33%)", "hex": "#f0efe5", "text": "dark-text" },
-    "ocean-state-tint1": { "name": "Ocean State (Tint 1)", "hex": "#9fc9f2", "text": "dark-text" },
-    "ocean-state-shade1": { "name": "Ocean State (Shade 1)", "hex": "#5994cf", "text": "light-text" },
-    "white": { "name": "White", "hex": "#fff", "text": "dark-text" }
+    "white": {
+      "name": "White",
+      "hue": "white",
+      "hsl": "hsl(0, 0%, 100%)",
+      "needs": "dark-text"
+    },
+    "quahog--dark": {
+      "name": "Quahog dark",
+      "hue": "black",
+      "hsl": "hsl(0, 0%, 8%)",
+      "needs": "light-text"
+    },
+    "quahog": {
+      "name": "Quahog",
+      "hue": "black",
+      "hsl": "hsl(0, 0%, 25%)",
+      "needs": "light-text"
+    },
+    "quahog--medium": {
+      "name": "Quahog medium",
+      "hue": "medium gray",
+      "hsl": "hsl(0, 0%, 43%)",
+      "needs": "light-text"
+    },
+    "quahog--light": {
+      "name": "Quahog light",
+      "hue": "light gray",
+      "hsl": "hsl(0, 0%, 83%)",
+      "needs": "dark-text"
+    },
+    "navy--dark": {
+      "name": "Navy dark",
+      "hue": "blue",
+      "hsl": "hsl(224, 37%, 17%)",
+      "needs": "light-text"
+    },
+    "navy": {
+      "name": "Navy",
+      "hue": "blue",
+      "hsl": "hsl(224, 36%, 25%)",
+      "needs": "light-text"
+    },
+    "navy--light": {
+      "name": "Navy light",
+      "hue": "blue light",
+      "hsl": "hsl(224, 54%, 73%)",
+      "needs": "dark-text"
+    },
+    "navy--sat": {
+      "name": "Navy saturated",
+      "hue": "blue",
+      "hsl": "hsl(224, 80%, 40%)",
+      "needs": "light-text"
+    },
+    "navy--sat-lgt": {
+      "name": "Navy saturated light",
+      "hue": "light blue",
+      "hsl": "hsl(224, 60%, 55%)",
+      "needs": "light-text"
+    },
+    "navy--warm": {
+      "name": "Navy warm",
+      "hue": "purple",
+      "hsl": "hsl(244, 45%, 54%)",
+      "needs": "light-text"
+    },
+    "navy--wrm-lgt": {
+      "name": "Navy warm light",
+      "hue": "purple",
+      "hsl": "hsl(254, 62%, 80%)",
+      "needs": "dark-text"
+    },
+    "rhody-red--dark": {
+      "name": "Rhody Red dark",
+      "hue": "maroon",
+      "hsl": "hsl(356, 47%, 38%)",
+      "needs": "light-text"
+    },
+    "rhody-red": {
+      "name": "Rhody Red",
+      "hue": "red",
+      "hsl": "hsl(360, 79%, 62%)",
+      "needs": "dark-text"
+    },
+    "calamari": {
+      "name": "Calamari",
+      "hue": "orange",
+      "hsl": "hsl(23, 100%, 64%)",
+      "needs": "dark-text"
+    },
+    "hope-gold": {
+      "name": "Hope Gold",
+      "hue": "yellow",
+      "hsl": "hsl(46, 95%, 61%)",
+      "needs": "dark-text"
+    },
+    "green-animals": {
+      "name": "Green Animals",
+      "hue": "green",
+      "hsl": "hsl(110, 49%, 51%)",
+      "needs": "dark-text"
+    },
+    "ocean--bright": {
+      "name": "Ocean State bright",
+      "hue": "light blue green",
+      "hsl": "hsl(160, 100%, 74%)",
+      "needs": "dark-text"
+    },
+    "ocean": {
+      "name": "Ocean State",
+      "hue": "medium blue",
+      "hsl": "hsl(208, 54%, 73%)",
+      "needs": "dark-text"
+    },
+    "coffee-milk": {
+      "name": "Coffee Milk",
+      "hue": "light tan",
+      "hsl": "hsl(47, 26%, 76%)",
+      "needs": "dark-text"
+    },
+    "coffee-milk--light": {
+      "name": "Coffee Milk",
+      "hue": "light tan",
+      "hsl": "hsl(47, 27%, 92%)",
+      "needs": "dark-text"
+    },
+    "coffee-milk--trans25": {
+      "name": "Coffee Milk 25% transparent",
+      "hue": "light tan",
+      "hsl": "hsla(47, 26%, 76%, 0.25)",
+      "needs": "dark-text"
+    },
+    "coffee-milk--trans10": {
+      "name": "Coffee Milk 10% transparent",
+      "hue": "light tan",
+      "hsl": "hsla(47, 26%, 76%, 0.1)",
+      "needs": "dark-text"
+    }
   },
   "palettes": {
     "scar": {
-      "humanName": "Scarborough Beach",
+      "humanName": "Scarborough Beach light",
       "values": [
-        { "fnName": "bg", "colorName": "white" },
-        { "fnName": "bg--contrast", "colorName": "ocean-state-shade1" },
-        { "fnName": "fg", "colorName": "ocean-state-shade1" },
-        { "fnName": "header", "colorName": "ocean-state-shade1" },
-        { "fnName": "link--static", "colorName": "ocean-state-shade1" },
-        { "fnName": "link--hover", "colorName": "ocean-state-shade1" },
-        { "fnName": "link--hover", "colorName": "ocean-state-shade1" },
-        { "fnName": "link--visited", "colorName": "ocean-state-shade1" },
-        { "fnName": "link--active", "colorName": "ocean-state-shade1" },
-        { "fnName": "link--focus", "colorName": "ocean-state-shade1" }
+        { "fnName": "body--fg", "colorName": "quahog" },
+        { "fnName": "body--bg", "colorName": "white" },
+        { "fnName": "a--link", "colorName": "navy--sat" },
+        { "fnName": "a--hover", "colorName": "navy--sat-lgt" },
+        { "fnName": "a--focus", "colorName": "navy" },
+        { "fnName": "a--visited", "colorName": "navy--warm" },
+        { "fnName": "a--active", "colorName": "calamari" },
+        { "fnName": "official--fg", "colorName": "quahog--light" },
+        { "fnName": "official--bg", "colorName": "navy--dark" },
+        { "fnName": "official--link", "colorName": "white" },
+        { "fnName": "official--hover", "colorName": "calamari" },
+        { "fnName": "official--focus", "colorName": "calamari" },
+        { "fnName": "official--visited", "colorName": "white" },
+        { "fnName": "header--fg", "colorName": "white" },
+        { "fnName": "header--bg", "colorName": "navy" }
       ]
     },
-    "forest": {
-      "humanName": "Wickaboxet Forest Green",
+    "scar--dark": {
+      "humanName": "Scarborough Beach dark",
       "values": [
-        { "fnName": "bg", "colorName": "white" },
-        { "fnName": "bg--contrast", "colorName": "ocean-state-shade1" },
-        { "fnName": "fg", "colorName": "ocean-state-shade1" },
-        { "fnName": "header", "colorName": "ocean-state-shade1" },
-        { "fnName": "link--static", "colorName": "ocean-state-shade1" },
-        { "fnName": "link--hover", "colorName": "ocean-state-shade1" },
-        { "fnName": "link--hover", "colorName": "ocean-state-shade1" },
-        { "fnName": "link--visited", "colorName": "ocean-state-shade1" },
-        { "fnName": "link--active", "colorName": "ocean-state-shade1" },
-        { "fnName": "link--focus", "colorName": "ocean-state-shade1" }
+        { "fnName": "body--fg", "colorName": "coffee-milk--light" },
+        { "fnName": "body--bg", "colorName": "quahog" },
+        { "fnName": "a--link", "colorName": "navy--light" },
+        { "fnName": "a--hover", "colorName": "hope-gold" },
+        { "fnName": "a--focus", "colorName": "hope-gold" },
+        { "fnName": "a--visited", "colorName": "navy--wrm-lgt" },
+        { "fnName": "a--active", "colorName": "calamari" },
+        { "fnName": "official--fg", "colorName": "quahog--light" },
+        { "fnName": "official--bg", "colorName": "quahog--dark" },
+        { "fnName": "official--link", "colorName": "white" },
+        { "fnName": "official--hover", "colorName": "calamari" },
+        { "fnName": "official--focus", "colorName": "calamari" },
+        { "fnName": "official--visited", "colorName": "white" },
+        { "fnName": "header--fg", "colorName": "white" },
+        { "fnName": "header--bg", "colorName": "navy" }
       ]
     }
   }
