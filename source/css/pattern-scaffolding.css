@@ -25,7 +25,8 @@
   flex-wrap: wrap;
   list-style: none !important;
   padding: 0 !important;
-  margin: 0 !important; }
+  margin: 0 !important;
+  max-width: none; }
 
 .sg-colors li {
   -webkit-box-flex: 1;
