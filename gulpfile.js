@@ -89,8 +89,12 @@ gulp.task('generate-colors', function () {
 
       for (let [palette, value] of Object.entries(json.palettes)) {
         value.values.map((paletteConfig) => {
-          const hexValue = colorArray.find((item) => item.name === paletteConfig.colorName);
-          generatedJson[`t__${palette}__${paletteConfig.fnName}`] = hexValue.hsl;
+          const hslValue = colorArray.find((item) => item.name === paletteConfig.colorName);
+          if(hslValue) {
+            generatedJson[`t__${palette}__${paletteConfig.fnName}`] = hslValue.hsl;
+          } else {
+            console.error(palette + '-' + paletteConfig.fnName + ': does not contain a color name in colors array.');
+          }
         })
       }
 
