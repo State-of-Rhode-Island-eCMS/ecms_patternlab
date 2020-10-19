@@ -5,7 +5,9 @@ html {
   font-size: 100%;
 }
 
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 

@@ -1,71 +1,3 @@
-/*
-                                                ,,            ,,                          ,,
- .M"""bgd mm                                    db          `7MM        mm         mm   `7MM                                    OO OO OO
-,MI    "Y MM                                                  MM        MM         MM     MM                                    88 88 88
-`MMb.   mmMMmm ,pW"Wq.`7MMpdMAo.     `7Mb,od8 `7MM  .P"Ybmmm  MMpMMMb.mmMMmm     mmMMmm   MMpMMMb.  .gP"Ya `7Mb,od8 .gP"Ya      || || ||
-  `YMMNq. MM  6W'   `Wb MM   `Wb       MM' "'   MM :MI  I8    MM    MM  MM         MM     MM    MM ,M'   Yb  MM' "',M'   Yb     || || ||
-.     `MM MM  8M     M8 MM    M8       MM       MM  WmmmP"    MM    MM  MM         MM     MM    MM 8M""""""  MM    8M""""""     `' `' `'
-Mb     dM MM  YA.   ,A9 MM   ,AP       MM       MM 8M         MM    MM  MM         MM     MM    MM YM.    ,  MM    YM.    ,     ,, ,, ,,
-P"Ybmmd"  `Mbmo`Ybmd9'  MMbmmd'      .JMML.   .JMML.YMMMMMb .JMML  JMML.`Mbmo      `Mbmo.JMML  JMML.`Mbmmd'.JMML.   `Mbmmd'     db db db
-                        MM                         6'     dP
-                      .JMML.                       Ybmmmd'
-
-Pattern Lab doesn't have any CSS requirements, which means you can write your styles however you want. Hooray!
-You can use Sass, Less, vanilla CSS, or some other crazy thing I haven't heard of yet.
-So please don't use these styles. They're just here to put together the demo, and nothing more.
-They're intentionally gray, boring, and crappy because you're supposed to do this stuff yourself.
-
-Atomic design is philosophically complimentary with these CSS approaches:
-
-* SMACSS by Jonathan Snook http://smacss.com/
-* OOCSS by Nicole Sullivan http://oocss.org/
-* BEM CSS Methology : http://bem.info/method/
-* CSS Guidelines by Harry Roberts : https://github.com/csswizardry/CSS-Guidelines
-
-So feel free to use any of these approaches. Or don't. It's totally up to you.
-
-*/
-/*------------------------------------*\
-    $TABLE OF CONTENTS
-    based generally on Harry Roberts excellent CSS Guidelines https://github.com/csswizardry/CSS-Guidelines
-\*------------------------------------*/
-/**
- * VARIABLES..............................Declarations of Sass variables
- * .....Colors
- * .....Typography
- * .....Layout
- * .....Defaults
- * .....Breakpoints
- * MIXINS.................................Sass mixins
- * RESET..................................Set reset defaults
- * GLOBAL CLASSES.........................Set reset defaults
- * GLOBAL ELEMENTS........................Establish global styles
- * .....Main
- * .....Headings
- * .....Text-related elements (p, blockquote, lists)
- * .....Defaults
- * .....Breakpoints
- * TYPOGRAPHY------------------------------
- * MEDIA------------------------------
- * LAYOUT------------------------------
- * NAVIGATION------------------------------
- * TOC To Be Continued
- */
-/*------------------------------------*\
-    $GLOBAL ELEMENTS
-\*------------------------------------*/
-/*------------------------------------*\
-    $LAYOUT
-\*------------------------------------*/
-/*------------------------------------*\
-    $PAGE STRUCTURE
-\*------------------------------------*/
-/*------------------------------------*\
-    $TEXT Styles
-\*------------------------------------*/
-/*------------------------------------*\
-    $COMPONENTS
-\*------------------------------------*/
 /*------------------------------------*\
     $JSON Variables
 \*------------------------------------*/
@@ -170,7 +102,9 @@ html {
   color: var(--fc__body--fg);
   font-size: 100%; }
 
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
@@ -195,16 +129,16 @@ body {
 
 :root {
   --content-width: min(93vw, 44rem);
-  --margin-left: calc( (100vw - var(--content-width)) / 2 );
-  --margin-right: calc( (100vw - var(--content-width)) / 2 ); }
+  --margin-left: calc((100vw - var(--content-width)) / 2);
+  --margin-right: calc((100vw - var(--content-width)) / 2); }
 
 :root {
   --font-sans-fallback: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-serif-fallback: Georgia, 'Times New Roman', serif;
-  --font-sans-static: "Work Sans", var(--font-sans-fallback);
-  --font-sans-vf: "Work Sans VF", var(--font-sans-fallback);
-  --font-serif-static: "Roboto Slab", var(--font-serif-fallback);
-  --font-serif-vf: "Roboto Slab VF", var(--font-serif-fallback); }
+  --font-sans-static: 'Work Sans', var(--font-sans-fallback);
+  --font-sans-vf: 'Work Sans VF', var(--font-sans-fallback);
+  --font-serif-static: 'Roboto Slab', var(--font-serif-fallback);
+  --font-serif-vf: 'Roboto Slab VF', var(--font-serif-fallback); }
 
 p {
   font-family: var(--font-sans-vf);
@@ -232,8 +166,8 @@ h1 {
   font-weight: 275;
   font-style: normal;
   line-height: clamp(1.05em, 6vw, 1.1em);
-  margin-top: calc( var(--body-text-spacer) * 2);
-  margin-bottom: calc( var(--body-text-spacer) * 1); }
+  margin-top: calc(var(--body-text-spacer) * 2);
+  margin-bottom: calc(var(--body-text-spacer) * 1); }
 
 h2 {
   font-family: var(--font-serif-vf);
@@ -241,13 +175,13 @@ h2 {
   font-weight: 550;
   font-style: normal;
   line-height: clamp(1.1em, 6vw, 1.15em);
-  margin-top: calc( var(--body-text-spacer) * 2);
-  margin-bottom: calc( var(--body-text-spacer) * 0.5); }
-  h2.emphasis:after {
-    content: " ";
+  margin-top: calc(var(--body-text-spacer) * 2);
+  margin-bottom: calc(var(--body-text-spacer) * 0.5); }
+  h2.emphasis::after {
+    content: ' ';
     display: block;
-    margin-top: calc( var(--body-text-spacer) * 1);
-    margin-bottom: calc( var(--body-text-spacer) * 0.75);
+    margin-top: calc(var(--body-text-spacer) * 1);
+    margin-bottom: calc(var(--body-text-spacer) * 0.75);
     width: 1.125em; }
 
 h3 {
@@ -255,32 +189,32 @@ h3 {
   font-size: clamp(1.25rem, 2.5vw, 2rem);
   font-weight: 675;
   font-style: normal;
-  margin-top: calc( var(--body-text-spacer) * 1.5);
-  margin-bottom: calc( var(--body-text-spacer) * 0.5); }
+  margin-top: calc(var(--body-text-spacer) * 1.5);
+  margin-bottom: calc(var(--body-text-spacer) * 0.5); }
 
 h4 {
   font-family: var(--font-serif-vf);
   font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 400;
   font-style: normal;
-  margin-top: calc( var(--body-text-spacer) * 1.5);
-  margin-bottom: calc( var(--body-text-spacer) * 0.5); }
+  margin-top: calc(var(--body-text-spacer) * 1.5);
+  margin-bottom: calc(var(--body-text-spacer) * 0.5); }
 
 h5 {
   font-family: var(--font-serif-vf);
   font-size: clamp(0.925rem, 1vw, 1.125rem);
   font-weight: 500;
   font-style: normal;
-  margin-top: calc( var(--body-text-spacer) * 1.5);
-  margin-bottom: calc( var(--body-text-spacer) * 0.5); }
+  margin-top: calc(var(--body-text-spacer) * 1.5);
+  margin-bottom: calc(var(--body-text-spacer) * 0.5); }
 
 h6 {
   font-family: var(--font-serif-vf);
   font-size: clamp(0.825rem, 1vw, 1rem);
   font-weight: 600;
   font-style: normal;
-  margin-top: calc( var(--body-text-spacer) * 1.5);
-  margin-bottom: calc( var(--body-text-spacer) * 0.5); }
+  margin-top: calc(var(--body-text-spacer) * 1.5);
+  margin-bottom: calc(var(--body-text-spacer) * 0.5); }
 
 .headline-super {
   font-size: clamp(2.5rem, 6vw, 8rem);
@@ -364,7 +298,7 @@ dd {
     font-size: 0.875em; }
   li + li,
   dd + li {
-    margin-top: calc( var(--body-text-spacer) * 0.5); }
+    margin-top: calc(var(--body-text-spacer) * 0.5); }
 
 figure {
   padding: 0; }
@@ -380,43 +314,43 @@ img {
   width: 100%; }
 
 form {
-  margin-top: calc( var(--body-text-spacer) * 1);
-  margin-bottom: calc( var(--body-text-spacer) * 1); }
+  margin-top: calc(var(--body-text-spacer) * 1);
+  margin-bottom: calc(var(--body-text-spacer) * 1); }
 
-input[type="text"],
-input[type="url"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="week"] {
+input[type='text'],
+input[type='url'],
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='week'] {
   border-radius: 0.15em;
   font-family: var(--font-sans-vf);
   font-size: 1rem;
   font-weight: 400;
-  padding: 0.5em 0.5em 0.45em 0.5em; }
-  label + input[type="text"], label +
-  input[type="url"], label +
-  input[type="email"], label +
-  input[type="number"], label +
-  input[type="search"], label +
-  input[type="date"], label +
-  input[type="datetime"], label +
-  input[type="datetime-local"], label +
-  input[type="month"], label +
-  input[type="week"] {
+  padding: 0.5em 0.5em 0.45em; }
+  label + input[type='text'], label +
+  input[type='url'], label +
+  input[type='email'], label +
+  input[type='number'], label +
+  input[type='search'], label +
+  input[type='date'], label +
+  input[type='datetime'], label +
+  input[type='datetime-local'], label +
+  input[type='month'], label +
+  input[type='week'] {
     margin-top: 0.1em; }
 
-input[type="password"] {
+input[type='password'] {
   border-radius: 0.15em;
   font-family: var(--font-sans-fallback);
   font-size: 1rem;
   font-weight: 400;
-  padding: 0.5em 0.5em 0.45em 0.5em; }
-  label + input[type="password"] {
+  padding: 0.5em 0.5em 0.45em; }
+  label + input[type='password'] {
     margin-top: 0.1em; }
 
 textarea {
@@ -424,7 +358,7 @@ textarea {
   font-family: var(--font-sans-vf);
   font-size: 1rem;
   font-weight: 400;
-  padding: 0.5em 0.5em 0.45em 0.5em; }
+  padding: 0.5em 0.5em 0.45em; }
   label + textarea {
     margin-top: 0.1em; }
 
@@ -441,7 +375,7 @@ button {
   label + button {
     margin-top: 0.1em; }
   button:hover {
-    color: #ffffff; }
+    color: var(--c__white); }
 
 .qh-layout-section {
   display: grid;
@@ -466,19 +400,19 @@ button {
     max-width: 100%;
     margin: 0 auto; }
   .qh-layout-section--col-size-25-75 {
-    grid-template-areas: "first second second second"; }
+    grid-template-areas: 'first second second second'; }
   .qh-layout-section--col-size-33-67 {
-    grid-template-areas: "first second second"; }
+    grid-template-areas: 'first second second'; }
   .qh-layout-section--col-size-50-50 {
-    grid-template-areas: "first second"; }
+    grid-template-areas: 'first second'; }
   .qh-layout-section--col-size-67-33 {
-    grid-template-areas: "first first second"; }
+    grid-template-areas: 'first first second'; }
   .qh-layout-section--col-size-75-25 {
-    grid-template-areas: "first first first second"; }
+    grid-template-areas: 'first first first second'; }
   .qh-layout-section--col-size-33-repeat {
-    grid-template-areas: "first second third"; }
+    grid-template-areas: 'first second third'; }
   .qh-layout-section--col-size-25-repeat {
-    grid-template-areas: "first second third fourth"; }
+    grid-template-areas: 'first second third fourth'; }
   .qh-layout-section__col--first {
     grid-area: first;
     max-width: 100%; }
@@ -498,21 +432,21 @@ button {
   max-width: 100%; }
 
 .qh-background--rhodyred {
-  background-color: #eb5152; }
+  background-color: var(--c__rhody-red); }
 
 .qh-background--calamari {
-  background-color: #eb843b; }
+  background-color: var(--c__calamari); }
 
 .qh-background--navy {
-  background-color: #283455;
-  color: white; }
+  background-color: var(--c__navy);
+  color: var(--c__white); }
 
 .qh-site-footer {
-  background-color: #404040;
-  color: #fff;
+  background-color: var(--c__quahog);
+  color: var(--c__white);
   font-size: 1rem; }
   .qh-site-footer a {
-    color: #fff;
+    color: var(--c__white);
     font-size: 1rem; }
   .qh-site-footer p {
     font-size: 1rem;
@@ -525,7 +459,18 @@ body {
 .qh-u__page__wrapper {
   background-color: var(--t__default__bg);
   color: var(--t__default__fg); }
-  .qh-u__page__wrapper h1, .qh-u__page__wrapper .h1, .qh-u__page__wrapper h2, .qh-u__page__wrapper .h2, .qh-u__page__wrapper h3, .qh-u__page__wrapper .h3, .qh-u__page__wrapper h4, .qh-u__page__wrapper .h4, .qh-u__page__wrapper h5, .qh-u__page__wrapper .h5, .qh-u__page__wrapper h6, .qh-u__page__wrapper .h6 {
+  .qh-u__page__wrapper h1,
+  .qh-u__page__wrapper .h1,
+  .qh-u__page__wrapper h2,
+  .qh-u__page__wrapper .h2,
+  .qh-u__page__wrapper h3,
+  .qh-u__page__wrapper .h3,
+  .qh-u__page__wrapper h4,
+  .qh-u__page__wrapper .h4,
+  .qh-u__page__wrapper h5,
+  .qh-u__page__wrapper .h5,
+  .qh-u__page__wrapper h6,
+  .qh-u__page__wrapper .h6 {
     color: var(--t__default__header);
     margin: 0; }
   .qh-u__page__wrapper a {
@@ -599,7 +544,18 @@ body {
 .qh-g__row {
   background-color: var(--t__default__bg);
   color: var(--t__default__fg); }
-  .qh-g__row h1, .qh-g__row .h1, .qh-g__row h2, .qh-g__row .h2, .qh-g__row h3, .qh-g__row .h3, .qh-g__row h4, .qh-g__row .h4, .qh-g__row h5, .qh-g__row .h5, .qh-g__row h6, .qh-g__row .h6 {
+  .qh-g__row h1,
+  .qh-g__row .h1,
+  .qh-g__row h2,
+  .qh-g__row .h2,
+  .qh-g__row h3,
+  .qh-g__row .h3,
+  .qh-g__row h4,
+  .qh-g__row .h4,
+  .qh-g__row h5,
+  .qh-g__row .h5,
+  .qh-g__row h6,
+  .qh-g__row .h6 {
     color: var(--t__default__header); }
   .qh-g__row__inner {
     display: -webkit-box;
@@ -622,7 +578,18 @@ body {
   background-color: var(--t__default__bg);
   color: var(--t__default__fg);
   padding: var(--sp__vertical) var(--sp__gutter) calc(var(--sp__vertical) * 2); }
-  .qh-g__col h1, .qh-g__col .h1, .qh-g__col h2, .qh-g__col .h2, .qh-g__col h3, .qh-g__col .h3, .qh-g__col h4, .qh-g__col .h4, .qh-g__col h5, .qh-g__col .h5, .qh-g__col h6, .qh-g__col .h6 {
+  .qh-g__col h1,
+  .qh-g__col .h1,
+  .qh-g__col h2,
+  .qh-g__col .h2,
+  .qh-g__col h3,
+  .qh-g__col .h3,
+  .qh-g__col h4,
+  .qh-g__col .h4,
+  .qh-g__col h5,
+  .qh-g__col .h5,
+  .qh-g__col h6,
+  .qh-g__col .h6 {
     color: var(--t__default__header); }
 
 /*------------------------------------*\
@@ -633,7 +600,7 @@ body {
   font-size: initial; }
 
 .toolbar-tray a {
-  color: #565656;
+  color: var(--c__quahog--medium);
   font-size: 13px; }
 
 .toolbar-tray button {

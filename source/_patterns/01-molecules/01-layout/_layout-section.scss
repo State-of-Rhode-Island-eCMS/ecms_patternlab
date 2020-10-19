@@ -40,32 +40,32 @@ $grid-gap: 3rem;
 
     // Two Column sizing
     &-25-75 {
-      grid-template-areas: "first second second second";
+      grid-template-areas: 'first second second second';
     }
 
     &-33-67 {
-      grid-template-areas: "first second second";
+      grid-template-areas: 'first second second';
     }
 
     &-50-50 {
-      grid-template-areas: "first second";
+      grid-template-areas: 'first second';
     }
 
     &-67-33 {
-      grid-template-areas: "first first second";
+      grid-template-areas: 'first first second';
     }
 
     &-75-25 {
-      grid-template-areas: "first first first second";
+      grid-template-areas: 'first first first second';
     }
 
     // Three and four column grids are repeated with equal columns.
     &-33-repeat {
-      grid-template-areas: "first second third";
+      grid-template-areas: 'first second third';
     }
 
     &-25-repeat {
-      grid-template-areas: "first second third fourth";
+      grid-template-areas: 'first second third fourth';
     }
   }
 
@@ -106,15 +106,15 @@ $grid-gap: 3rem;
 
 .qh-background {
   &--rhodyred {
-    background-color: #eb5152;
+    background-color: var(--c__rhody-red);
   }
 
   &--calamari {
-    background-color: #eb843b;
+    background-color: var(--c__calamari);
   }
 
   &--navy {
-    background-color: #283455;
-    color: white;
+    background-color: var(--c__navy);
+    color: var(--c__white);
   }
 }

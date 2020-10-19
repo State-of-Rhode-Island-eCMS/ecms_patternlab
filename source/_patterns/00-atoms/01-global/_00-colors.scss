@@ -1,6 +1,9 @@
+
+// stylelint-disable property-no-unknown
 :root {
   color-scheme: light dark;
 }
+// stylelint-enable property-no-unknown
 
 // Outputs all the colors from colors.json as custom props
 body {
