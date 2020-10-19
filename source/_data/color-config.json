@@ -140,7 +140,7 @@
     }
   },
   "palettes": {
-    "scar": {
+    "scarborough": {
       "humanName": "Scarborough Beach light",
       "values": [
         { "fnName": "body--fg", "colorName": "quahog" },
@@ -160,7 +160,7 @@
         { "fnName": "header--bg", "colorName": "navy" }
       ]
     },
-    "scar--dark": {
+    "scarborough--dark": {
       "humanName": "Scarborough Beach dark",
       "values": [
         { "fnName": "body--fg", "colorName": "coffee-milk--light" },
