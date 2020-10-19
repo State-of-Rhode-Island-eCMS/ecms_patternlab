@@ -40,7 +40,6 @@ p {
 }
 
 h1 {
-  color: $color-quahog;
   font-family: var(--font-serif-vf);
   font-size: clamp(2rem, 5vw, 5.5rem);
 	font-weight: 275;
@@ -51,7 +50,6 @@ h1 {
 }
 
 h2 {
-  color: $color-ocean-state-shade1;
   font-family: var(--font-serif-vf);
   font-size: clamp(1.5rem, 4vw, 3rem);
 	font-weight: 550;
@@ -62,7 +60,7 @@ h2 {
   &.emphasis:after {
     content: " ";
     display: block;
-    border-bottom: solid 0.3rem $color-rhody-red;
+    //border-bottom: solid 0.3rem $color-rhody-red;
     margin-top: calc( var(--body-text-spacer) * 1 );
     margin-bottom: calc( var(--body-text-spacer) * 0.75 );
     width: 1.125em;
@@ -71,7 +69,6 @@ h2 {
 
 
 h3 {
-  color: $color-quahog;
   font-family: var(--font-sans-vf);
   font-size: clamp(1.25rem, 2.5vw, 2rem);
 	font-weight: 675;
@@ -112,32 +109,31 @@ h6 {
 	font-weight: 225;
 }
 
-strong, 
+strong,
 b {
   font-weight: 575;
 }
 
 a {
-  &:link {
-    color: $color-text-link;
-  }
-  &:visited {
-    color: $color-text-link-visited;
-  }
-  &:hover {
-    color: $color-text-link-hover;
-  }
-  &:focus {
-    color: $color-text-link-focus;
-  }
-  &:active {
-    color: $color-text-link-active;
-  }
-
+  //&:link {
+  //  color: $color-text-link;
+  //}
+  //&:visited {
+  //  color: $color-text-link-visited;
+  //}
+  //&:hover {
+  //  color: $color-text-link-hover;
+  //}
+  //&:focus {
+  //  color: $color-text-link-focus;
+  //}
+  //&:active {
+  //  color: $color-text-link-active;
+  //}
 }
 
 blockquote {
-  border-top: solid 0.33rem $color-rhody-red;
+  //border-top: solid 0.33rem $color-rhody-red;
   margin: 0;
   max-width: var(--content-width);
 

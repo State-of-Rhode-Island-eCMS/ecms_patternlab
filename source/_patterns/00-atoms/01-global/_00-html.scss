@@ -1,7 +1,7 @@
 html {
-  background-color: #ffffff;
+  background-color: var(--fc__body--bg);
   box-sizing: border-box;
-  color: $color-text;
+  color: var(--fc__body--fg);
   font-size: 100%;
 }
 
