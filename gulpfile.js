@@ -12,6 +12,7 @@ const sassGlob = require('gulp-sass-glob');
 const concat = require('gulp-concat');
 const minify = require('gulp-minify');
 const autoprefixer = require('gulp-autoprefixer');
+const stylelint = require('gulp-stylelint');
 const sassImportJson = require('gulp-sass-import-json');
 const jeditor = require('gulp-json-editor');
 const streamify = require('gulp-streamify');
@@ -166,3 +167,27 @@ gulp.task('watch', gulp.parallel('watch:js', 'watch:sass'));
 // Default task
 // Patternlab:serve handles building/watching patterns
 gulp.task('default', gulp.series(gulp.parallel('move-fonts', 'move-vendor', 'generate-colors'), 'build:no-patterns', 'patternlab:serve', 'watch'));
+
+// Linting
+gulp.task('validate:sass', () => {
+  return gulp
+    .src(scssSourcePaths)
+    .pipe(stylelint({
+      reporters: [
+        {
+          formatter: 'verbose',
+          console: true,
+        }
+      ],
+      debug: true,
+    }))
+});
+
+gulp.task('fix:sass', () => {
+  return gulp
+    .src(scssSourcePaths)
+    .pipe(stylelint({fix: true}))
+    .pipe(gulp.dest((file) => {
+      return file.base;
+    }));
+});
