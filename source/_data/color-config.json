@@ -141,7 +141,7 @@
   },
   "palettes": {
     "scarborough": {
-      "humanName": "Scarborough Beach light",
+      "humanName": "Scarborough Beach",
       "values": [
         { "fnName": "body__fg", "colorName": "quahog" },
         { "fnName": "body__bg", "colorName": "white" },
@@ -150,7 +150,7 @@
         { "fnName": "a__link--focus", "colorName": "navy" },
         { "fnName": "a__link--visited", "colorName": "navy--warm" },
         { "fnName": "a__link--active", "colorName": "calamari" },
-        { "fnName": "header__fg", "colorName": "quahog--medium" },
+        { "fnName": "hx__fg", "colorName": "quahog--medium" },
         { "fnName": "official__fg", "colorName": "quahog--light" },
         { "fnName": "official__bg", "colorName": "navy--dark" },
         { "fnName": "official__link", "colorName": "white" },
@@ -171,7 +171,7 @@
         { "fnName": "a__link--focus", "colorName": "hope-gold" },
         { "fnName": "a__link--visited", "colorName": "navy--wrm-lgt" },
         { "fnName": "a__link--active", "colorName": "calamari" },
-        { "fnName": "header--fg", "colorName": "quahog--medium" },
+        { "fnName": "hx--fg", "colorName": "quahog--medium" },
         { "fnName": "official__fg", "colorName": "quahog--light" },
         { "fnName": "official__bg", "colorName": "quahog--dark" },
         { "fnName": "official__link--link", "colorName": "white" },
@@ -179,7 +179,28 @@
         { "fnName": "official__link--focus", "colorName": "calamari" },
         { "fnName": "official__link--visited", "colorName": "white" },
         { "fnName": "header__fg", "colorName": "white" },
-        { "fnName": "header__bg", "colorName": "navy" }
+        { "fnName": "header__bg", "colorName": "quahog--dark" }
+      ]
+    },
+    "wickforest": {
+      "humanName": "Wickaboxet Forest",
+      "values": [
+        { "fnName": "body__fg", "colorName": "quahog" },
+        { "fnName": "body__bg", "colorName": "white" },
+        { "fnName": "a__link", "colorName": "navy--sat" },
+        { "fnName": "a__link--hover", "colorName": "navy--sat-lgt" },
+        { "fnName": "a__link--focus", "colorName": "navy" },
+        { "fnName": "a__link--visited", "colorName": "navy--warm" },
+        { "fnName": "a__link--active", "colorName": "calamari" },
+        { "fnName": "hx__fg", "colorName": "quahog--medium" },
+        { "fnName": "official__fg", "colorName": "quahog--light" },
+        { "fnName": "official__bg", "colorName": "navy--dark" },
+        { "fnName": "official__link", "colorName": "white" },
+        { "fnName": "official__link--hover", "colorName": "calamari" },
+        { "fnName": "official__link--focus", "colorName": "calamari" },
+        { "fnName": "official__link--visited", "colorName": "white" },
+        { "fnName": "header__fg", "colorName": "white" },
+        { "fnName": "header__bg", "colorName": "green-animals" }
       ]
     }
   }
