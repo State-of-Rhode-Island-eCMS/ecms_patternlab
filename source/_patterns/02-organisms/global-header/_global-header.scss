@@ -1,0 +1,46 @@
+.global-header {
+  background-color: $t__scarborough__official--bg;
+  color: $t__scarborough__official--fg;
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: $content-max-width;
+    @supports (width: min(10px, 5px)) {
+      max-width: var(--content-max-width);
+    }
+  }
+  a {
+    &:link {
+      color: $t__scarborough__official--link;
+    }
+    &:visited {
+      color: $t__scarborough__official--visited;
+    }
+    &:hover {
+      color: $t__scarborough__official--hover;
+    }
+    &:active {
+      color: $t__scarborough__official--focus;
+    }
+    &:focus {
+      color: $t__scarborough__official--focus;
+    }
+  }
+
+  p {
+    font-size: 0.875rem;
+    font-weight: 375;
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    color: $t__scarborough__official--link;
+    font-family: $font-sans-vf;
+    font-size: 0.875rem;
+    font-weight: 375;
+    text-decoration: underline;
+  }
+}

@@ -101,6 +101,17 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
   font-stretch: normal;
   src: url("../fonts/work-sans-vf/WorkSans-Italic-subset.woff2") format("woff2 supports variations"), url("../fonts/work-sans-vf/WorkSans-Italic-subset.woff2") format("woff2-variations"); }
 
+body {
+  --font-sans-fallback: Helvetica Neue, Helvetica, Arial, sans-serif;
+  --font-serif-fallback: Georgia, Times New Roman, serif;
+  --font-sans-static: Work Sans, var(--font-sans-fallback);
+  --font-sans-vf: Work Sans VF, var(--font-sans-fallback);
+  --font-serif-static: Roboto Slab, var(--font-serif-fallback);
+  --font-serif-vf: Roboto Slab VF, var(--font-serif-fallback); }
+
+body {
+  --content-max-width: min(93vw, 90rem); }
+
 :root {
   color-scheme: light dark; }
 
@@ -197,14 +208,6 @@ body {
   --content-width: min(93vw, 44rem);
   --margin-left: calc( (100vw - var(--content-width)) / 2 );
   --margin-right: calc( (100vw - var(--content-width)) / 2 ); }
-
-:root {
-  --font-sans-fallback: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-serif-fallback: Georgia, 'Times New Roman', serif;
-  --font-sans-static: "Work Sans", var(--font-sans-fallback);
-  --font-sans-vf: "Work Sans VF", var(--font-sans-fallback);
-  --font-serif-static: "Roboto Slab", var(--font-serif-fallback);
-  --font-serif-vf: "Roboto Slab VF", var(--font-serif-fallback); }
 
 p {
   font-family: var(--font-sans-vf);
@@ -517,6 +520,46 @@ button {
   .qh-site-footer p {
     font-size: 1rem;
     margin-top: 0; }
+
+.global-header {
+  background-color: #1b243b;
+  color: #d4d4d4; }
+  .global-header .content-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+    max-width: 93vw; }
+    @supports (width: 5px) {
+      .global-header .content-wrapper {
+        max-width: var(--content-max-width); } }
+  .global-header a:link {
+    color: white; }
+  .global-header a:visited {
+    color: white; }
+  .global-header a:hover {
+    color: #ff8e47; }
+  .global-header a:active {
+    color: #ff8e47; }
+  .global-header a:focus {
+    color: #ff8e47; }
+  .global-header p {
+    font-size: 0.875rem;
+    font-weight: 375; }
+  .global-header button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: "Work Sans VF", var(--font-sans-fallback);
+    font-size: 0.875rem;
+    font-weight: 375;
+    text-decoration: underline; }
 
 body {
   --sp__gutter: 1.5rem;

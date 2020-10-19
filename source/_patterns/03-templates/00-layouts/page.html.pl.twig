@@ -44,9 +44,10 @@
 #}
 <div class="layout-container">
 
-  <header role="banner">
-    {{ page.header }}
-  </header>
+  {% include '@organisms/global-header/global-header.twig' with {
+    header: page.header
+  }
+  %}
 
   {{ page.primary_menu }}
   {{ page.secondary_menu }}

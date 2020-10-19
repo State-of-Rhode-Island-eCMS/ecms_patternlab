@@ -23,3 +23,19 @@
   font-stretch: normal;
   src: url('../fonts/work-sans-vf/WorkSans-Italic-subset.woff2') format('woff2 supports variations'), url('../fonts/work-sans-vf/WorkSans-Italic-subset.woff2') format('woff2-variations');
 }
+
+$font-sans-fallback: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-serif-fallback: Georgia, 'Times New Roman', serif;
+$font-sans-static: "Work Sans", var(--font-sans-fallback);
+$font-sans-vf: "Work Sans VF", var(--font-sans-fallback);
+$font-serif-static: "Roboto Slab", var(--font-serif-fallback);
+$font-serif-vf: "Roboto Slab VF", var(--font-serif-fallback);
+
+body {
+  --font-sans-fallback: #{$font-sans-fallback};
+  --font-serif-fallback: #{$font-serif-fallback};
+  --font-sans-static: #{$font-sans-static};
+  --font-sans-vf: #{$font-sans-vf};
+  --font-serif-static: #{$font-serif-static};
+  --font-serif-vf: #{$font-serif-vf};
+}

@@ -1,0 +1,8 @@
+
+$content-max-width: 93vw;
+@media screen and (min-width: $bp--large) {
+  $content-max-width: 44rem;
+}
+body {
+  --content-max-width: min(93vw, 90rem);
+}
