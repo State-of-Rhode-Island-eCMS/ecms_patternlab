@@ -552,6 +552,46 @@ button {
     font-weight: 375;
     text-decoration: underline; }
 
+.page-header {
+  background-color: var(--fc__header__bg);
+  color: var(--fc__header__fg); }
+  .page-header .content-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto;
+    max-width: 93vw; }
+    @supports (width: 5px) {
+      .page-header .content-wrapper {
+        max-width: var(--content-max-width); } }
+  .page-header a:link {
+    color: var(--fc__header__link); }
+  .page-header a:hover {
+    color: var(--fc__header__link--hover); }
+  .page-header a:focus {
+    color: var(--fc__header__link--focus); }
+  .page-header a:active {
+    color: var(--fc__header__link--active); }
+  .page-header a:visited {
+    color: var(--fc__header__link--visited); }
+  .page-header p {
+    font-size: 0.875rem;
+    font-weight: 375; }
+  .page-header button {
+    background: transparent;
+    border: none;
+    color: var(--fc__header__link);
+    font-family: "Work Sans VF", var(--font-sans-fallback);
+    font-size: 0.875rem;
+    font-weight: 375;
+    text-decoration: underline; }
+
 body {
   --sp__gutter: 1.5rem;
   --sp__vertical: 1rem; }

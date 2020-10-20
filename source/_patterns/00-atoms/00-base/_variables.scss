@@ -1,8 +1,11 @@
+$content-max-small-screen: 93vw;
+$content-max-large-screen: 90rem;
 
-$content-max-width: 93vw;
+
+$content-max-width: $content-max-small-screen;
 @media screen and (min-width: $bp--large) {
-  $content-max-width: 44rem;
+  $content-max-width: $content-max-large-screen;
 }
 body {
-  --content-max-width: min(93vw, 90rem);
+  --content-max-width: min(#{$content-max-small-screen}, #{$content-max-large-screen});
 }
