@@ -3,45 +3,34 @@ body {
   --sp__vertical: 1rem;
 }
 
+a {
+  color: var(--fc__default__link);
+
+  &:hover,
+  &:focus {
+    color: var(--fc__default__link--hover);
+  }
+
+  // Not crazy about setting these globally. If we do, we have to reset all of them when the theme changes
+  &:visited {
+    color: var(--fc__default__link--visited);
+  }
+
+  &:active {
+    color: var(--fc__default__link--active);
+  }
+}
+
 // Utilities?
 .qh-u {
   &__page__wrapper {
     // Set the defaults high up like on this kind of element (preferably the body)
-    background-color: var(--fc__body__bg);
-    color: var(--fc__body__fg);
+    background-color: var(--fc__default__bg);
+    color: var(--fc__default__fg);
 
-    h1,
-    .h1,
-    h2,
-    .h2,
-    h3,
-    .h3,
-    h4,
-    .h4,
-    h5,
-    .h5,
-    h6,
-    .h6 {
-      color: var(--fc__hx__fg);
+    #{$all-headers} {
+      color: var(--fc__default__hx__fg);
       margin: 0;
-    }
-
-    a {
-      color: var(--fc__link);
-
-      &:hover,
-      &:focus {
-        color: var(--fc__link--hover);
-      }
-
-      // NOt crazy about setting these globally. If we do, we have to reset all of them when the theme changes
-      &:visited {
-        color: var(--fc__link--visited);
-      }
-
-      &:active {
-        color: var(--fc__link--active);
-      }
     }
   }
 }
@@ -81,7 +70,7 @@ body {
     }
 
     a {
-      color: var(--fc__header__link--static);
+      color: var(--fc__header__link);
 
       &:hover,
       &:focus {
@@ -153,23 +142,8 @@ body {
 .qh-g {
   &__row {
     // Setting this here will allow us to override it
-    background-color: var(--fc__body__bg);
-    color: var(--fc__body__fg);
-
-    h1,
-    .h1,
-    h2,
-    .h2,
-    h3,
-    .h3,
-    h4,
-    .h4,
-    h5,
-    .h5,
-    h6,
-    .h6 {
-      color: var(--fc__body__hx__fg);
-    }
+    //background-color: var(--fc__body__bg);
+    //color: var(--fc__body__fg);
 
     &__inner {
       display: flex;
@@ -183,23 +157,6 @@ body {
 
   &__col {
     // Setting this here will allow us to override it
-    background-color: var(--fc__body__bg);
-    color: var(--fc__body__fg);
     padding: var(--sp__vertical) var(--sp__gutter) calc(var(--sp__vertical) * 2);
-
-    h1,
-    .h1,
-    h2,
-    .h2,
-    h3,
-    .h3,
-    h4,
-    .h4,
-    h5,
-    .h5,
-    h6,
-    .h6 {
-      color: var(--fc__hx__fg);
-    }
   }
 }
