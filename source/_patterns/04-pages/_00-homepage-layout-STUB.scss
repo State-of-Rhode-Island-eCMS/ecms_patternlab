@@ -5,32 +5,42 @@ body {
 
 // Utilities?
 .qh-u {
-
   &__page__wrapper {
     // Set the defaults high up like on this kind of element (preferably the body)
-    background-color: var(--t__default__bg);
-    color: var(--t__default__fg);
+    background-color: var(--fc__body__bg);
+    color: var(--fc__body__fg);
 
-    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-      color: var(--t__default__header);
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+      color: var(--fc__hx__fg);
       margin: 0;
     }
 
     a {
-      color: var(--t__default__link--static);
+      color: var(--fc__link);
 
       &:hover,
       &:focus {
-        color: var(--t__default__link--hover);
+        color: var(--fc__link--hover);
       }
 
       // NOt crazy about setting these globally. If we do, we have to reset all of them when the theme changes
       &:visited {
-        color: var(--t__default__link--visited);
+        color: var(--fc__link--visited);
       }
 
       &:active {
-        color: var(--t__default__link--active);
+        color: var(--fc__link--active);
       }
     }
   }
@@ -38,7 +48,6 @@ body {
 
 // Page-level objects
 .qh-o {
-
   &__official-site,
   &__page-header,
   &__main-nav {
@@ -46,15 +55,15 @@ body {
   }
 
   &__official-site {
-    background-color: var(--t__official-header__bg);
-    color: var(--t__official-header__fg);
+    background-color: var(--fc__official__bg);
+    color: var(--fc__official__fg);
 
     a {
-      color: var(--t__official-header__link--static);
+      color: var(--fc__official__link);
 
       &:hover,
       &:focus {
-        color: var(--t__official-header__link--hover);
+        color: var(--fc__official__link--hover);
       }
     }
 
@@ -64,32 +73,32 @@ body {
   }
 
   &__page-header {
-    background-color: var(--t__page-header__bg);
-    color: var(--t__page-header__fg);
+    background-color: var(--fc__header__bg);
+    color: var(--fc__header__fg);
 
     h1 {
-      color: var(--t__page-header__header);
+      color: var(--fc__header__hx__fg);
     }
 
     a {
-      color: var(--t__page-header__link--static);
+      color: var(--fc__header__link--static);
 
       &:hover,
       &:focus {
-        color: var(--t__page-header__link--hover);
+        color: var(--fc__header__link--hover);
       }
     }
   }
 
   &__main-nav {
-    background-color: var(--t__page-nav__bg);
+    background-color: var(--fc__page-nav__bg);
 
     a {
-      color: var(--t__page-nav__link--static);
+      color: var(--fc__page-nav__link);
 
       &:hover,
       &:focus {
-        color: var(--t__page-nav__link--hover);
+        color: var(--fc__page-nav__link--hover);
       }
     }
   }
@@ -97,13 +106,8 @@ body {
 
 // Components
 .qh-c {
-
-  &__component-base {
-    // Set the defaults for components here, which may be different from the body-level defaults
-  }
-
   &__hero {
-    background-color: var(--t__c__hero__bg); // when the image does not load
+    background-color: var(--fc__c__hero__bg); // when the image does not load
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -116,7 +120,7 @@ body {
   //  <button>Go to a page</button>
   //</div>
   &__hero__inner {
-    color: var(--t__c__hero__fg);
+    color: var(--fc__c__hero__fg);
     margin-right: 50%;
     padding: var(--sp__vertical) var(--sp__gutter);
     position: relative;
@@ -124,10 +128,13 @@ body {
 
     // Apply the color this way?
     &::before {
-      background-color: var(--t__c__hero__bg);
+      background-color: var(--fc__c__hero__bg);
       content: '';
       position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
       opacity: 0.92;
       z-index: -1;
 
@@ -137,21 +144,31 @@ body {
     }
 
     h2 {
-      color: var(--t__c__hero__header);
+      color: var(--fc__c__hero__hx__fg);
     }
   }
 }
 
 // Grids
 .qh-g {
-
   &__row {
     // Setting this here will allow us to override it
-    background-color: var(--t__default__bg);
-    color: var(--t__default__fg);
+    background-color: var(--fc__body__bg);
+    color: var(--fc__body__fg);
 
-    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-      color: var(--t__default__header);
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+      color: var(--fc__body__hx__fg);
     }
 
     &__inner {
@@ -166,12 +183,23 @@ body {
 
   &__col {
     // Setting this here will allow us to override it
-    background-color: var(--t__default__bg);
-    color: var(--t__default__fg);
+    background-color: var(--fc__body__bg);
+    color: var(--fc__body__fg);
     padding: var(--sp__vertical) var(--sp__gutter) calc(var(--sp__vertical) * 2);
 
-    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-      color: var(--t__default__header);
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3,
+    h4,
+    .h4,
+    h5,
+    .h5,
+    h6,
+    .h6 {
+      color: var(--fc__hx__fg);
     }
   }
 }

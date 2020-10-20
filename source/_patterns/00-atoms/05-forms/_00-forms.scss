@@ -1,47 +1,51 @@
 form {
-  margin-top: calc( var(--body-text-spacer) * 1 );
-  margin-bottom: calc( var(--body-text-spacer) * 1 );
+  margin-top: calc(var(--body-text-spacer) * 1);
+  margin-bottom: calc(var(--body-text-spacer) * 1);
 }
 
-input[type="text"],
-input[type="url"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="week"] {
+input[type='text'],
+input[type='url'],
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='week'] {
   border-radius: 0.15em;
   //border: solid 1px $color-quahog-tint1;
   font-family: var(--font-sans-vf);
   font-size: 1rem;
   font-weight: 400;
-  padding: 0.5em 0.5em 0.45em 0.5em;
+  padding: 0.5em 0.5em 0.45em;
+
   label + & {
     margin-top: 0.1em;
   }
 }
 
-input[type="password"] {
+input[type='password'] {
   border-radius: 0.15em;
   //border: solid 1px $color-quahog-tint1;
   font-family: var(--font-sans-fallback);
   font-size: 1rem;
   font-weight: 400;
-  padding: 0.5em 0.5em 0.45em 0.5em;
+  padding: 0.5em 0.5em 0.45em;
+
   label + & {
     margin-top: 0.1em;
   }
 }
+
 textarea {
   border-radius: 0.15em;
   //border: solid 1px $color-quahog-tint1;
   font-family: var(--font-sans-vf);
   font-size: 1rem;
   font-weight: 400;
-  padding: 0.5em 0.5em 0.45em 0.5em;
+  padding: 0.5em 0.5em 0.45em;
+
   label + & {
     margin-top: 0.1em;
   }
@@ -60,11 +64,13 @@ button {
   font-weight: 500;
   padding: 0.425em 0.65em;
   transition: background-color 0.15s ease-in, color 0.15s ease-in;
+
   label + & {
     margin-top: 0.1em;
   }
+
   &:hover {
     //background-color:darken($color-navy-blue, 10%);
-    color: #ffffff;
+    color: var(--c__white);
   }
 }

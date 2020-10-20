@@ -1,6 +1,9 @@
+
+// stylelint-disable property-no-unknown
 :root {
   color-scheme: light dark;
 }
+// stylelint-enable property-no-unknown
 
 // Outputs all the colors from colors.json as custom props
 body {
@@ -11,14 +14,25 @@ body {
   @each $key, $value in $colors {
     --c__#{$key}: #{map-get($value, hsl)};
   }
-}
 
-@each $key, $palette in $palettes {
-  body .qh__t__#{$key} {
-    $values: map-get($palette, 'values');
-    @each $fn in $values {
-      //@debug #{map-get($fn, 'colorName')};
-      --fc__#{map-get($fn, 'fnName')}: #{map-get(map-get($colors, map-get($fn, 'colorName')), 'hsl')};
+  $num: 1;
+  @each $key, $palette in $palettes {
+    @if $num == 1 {
+      // First palette defined is treated as the default palette
+      // All functional color names are output without a theme class around them
+      $values: map-get($palette, 'values');
+      @each $fn in $values {
+        //@debug #{map-get($fn, 'colorName')};
+        --fc__#{map-get($fn, 'fnName')}: #{map-get(map-get($colors, map-get($fn, 'colorName')), 'hsl')};
+      }
+    } @else {
+      .qh__t__#{$key} {
+        $values: map-get($palette, 'values');
+        @each $fn in $values {
+          --fc__#{map-get($fn, 'fnName')}: #{map-get(map-get($colors, map-get($fn, 'colorName')), 'hsl')};
+        }
+      }
     }
+    $num: $num + 1;
   }
 }
