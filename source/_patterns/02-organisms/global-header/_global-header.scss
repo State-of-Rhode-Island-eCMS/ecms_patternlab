@@ -13,19 +13,19 @@
   }
   a {
     &:link {
-      color: $t__scarborough__official--link;
+      color: $t__scarborough__official__link;
     }
     &:visited {
-      color: $t__scarborough__official--visited;
+      color: $t__scarborough__official__link--visited;
     }
     &:hover {
-      color: $t__scarborough__official--hover;
+      color: $t__scarborough__official__link--hover;
     }
     &:active {
-      color: $t__scarborough__official--focus;
+      color: $t__scarborough__official__link--focus;
     }
     &:focus {
-      color: $t__scarborough__official--focus;
+      color: $t__scarborough__official__link--focus;
     }
   }
 

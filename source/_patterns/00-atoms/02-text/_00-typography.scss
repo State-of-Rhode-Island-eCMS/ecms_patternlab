@@ -5,20 +5,6 @@
   --body-text-spacer: clamp(1rem, 2vw, 1.25rem);
 }
 
-:root {
-  --content-width: min(93vw, 44rem);
-  --margin-left: calc((100vw - var(--content-width)) / 2);
-  --margin-right: calc((100vw - var(--content-width)) / 2);
-}
-
-:root {
-  --font-sans-fallback: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --font-serif-fallback: Georgia, 'Times New Roman', serif;
-  --font-sans-static: 'Work Sans', var(--font-sans-fallback);
-  --font-sans-vf: 'Work Sans VF', var(--font-sans-fallback);
-  --font-serif-static: 'Roboto Slab', var(--font-serif-fallback);
-  --font-serif-vf: 'Roboto Slab VF', var(--font-serif-fallback);
-}
 
 
 p {
