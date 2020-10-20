@@ -1,13 +1,17 @@
 <footer class="qh-site-footer" role="contentinfo">
   <div class="col">
-    {{ column_left|raw }}
+    {{ footer.column_left|raw }}
   </div>
 
   <div class="col">
-    {{ column_center|raw }}
+    {{ footer.center|raw }}
   </div>
 
   <div class="col">
-     {{ column_right|raw }}
+     {{ footer.right|raw }}
   </div>
 </footer>
+
+<pre>
+  {# {{dump(footer)}} #}
+</pre>

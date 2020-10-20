@@ -79,11 +79,9 @@
 
   </main>
 
-  {% if page.footer %}
-    {% include '@ecms/includes/footer.html.twig'  with {
-      footer: page.footer 
-    }
-    %}
-  {% endif %}
+  {% include '@organisms/page-footer/page-footer.twig' with {
+    footer: footer_preprocessed
+  }
+  %}
 
 </div>{# /.layout-container #}

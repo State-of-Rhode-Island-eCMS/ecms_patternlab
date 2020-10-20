@@ -1,10 +1,10 @@
 .qh-site-footer {
-  background-color: var(--c__quahog);
-  color: var(--c__white);
+  background-color: var(--fc__footer__bg);
+  color: var(--fc__footer_fg);
   font-size: 1rem;
 
   a {
-    color: var(--c__white);
+    color: var(--fc__footer__fg);
     font-size: 1rem;
   }
 
@@ -12,5 +12,4 @@
     font-size: 1rem;
     margin-top: 0;
   }
-
 }
