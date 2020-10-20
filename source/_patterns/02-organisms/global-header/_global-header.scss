@@ -1,6 +1,7 @@
 .global-header {
-  background-color: $t__scarborough__official--bg;
-  color: $t__scarborough__official--fg;
+  background-color: var(--fc__official__bg);
+  color: var(--fc__official__fg);
+
   .content-wrapper {
     display: flex;
     justify-content: space-between;
@@ -13,19 +14,19 @@
   }
   a {
     &:link {
-      color: $t__scarborough__official__link;
-    }
-    &:visited {
-      color: $t__scarborough__official__link--visited;
+      color: var(--fc__official__link);
     }
     &:hover {
-      color: $t__scarborough__official__link--hover;
-    }
-    &:active {
-      color: $t__scarborough__official__link--focus;
+      color: var(--fc__official__link--hover);
     }
     &:focus {
-      color: $t__scarborough__official__link--focus;
+      color: var(--fc__official__link--focus);
+    }
+    &:active {
+      color: var(--fc__official__link--active);
+    }
+    &:visited {
+      color: var(--fc__official__link--visited);
     }
   }
 
@@ -37,7 +38,7 @@
   button {
     background: transparent;
     border: none;
-    color: $t__scarborough__official--link;
+    color: var(--fc__official__link);
     font-family: $font-sans-vf;
     font-size: 0.875rem;
     font-weight: 375;
