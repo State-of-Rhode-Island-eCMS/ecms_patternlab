@@ -184,10 +184,9 @@
           { "fnName": "bg", "colorName": "navy" }
         ],
         "footer": [
-          { "fnName": "fg", "colorName": "quahog" },
-          { "fnName": "bg", "colorName": "quahog--light" },
-          { "fnName": "link", "colorName": "rhody-red" },
-          { "fnName": "link--hover", "colorName": "calamari" }
+          { "fnName": "fg", "colorName": "white" },
+          { "fnName": "bg", "colorName": "quahog" },
+          { "fnName": "border-top", "colorName": "ocean" }
         ],
         "primary": [
           { "fnName": "fg", "colorName": "white" },
