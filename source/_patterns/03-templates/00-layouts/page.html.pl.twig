@@ -45,7 +45,8 @@
 <div class="layout-container">
 
   {% include '@organisms/page-header/page-header.twig' with {
-    header: page.header
+    header: page.header,
+    header_preprocess_values: header_preprocess_values
   }
   %}
 
@@ -80,7 +81,7 @@
   </main>
 
   {% include '@organisms/page-footer/page-footer.twig' with {
-    footer: footer_preprocessed
+    footer_preprocess_values: footer_preprocess_values
   }
   %}
 

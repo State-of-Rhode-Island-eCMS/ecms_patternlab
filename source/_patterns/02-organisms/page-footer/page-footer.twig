@@ -1,17 +1,13 @@
 <footer class="qh-site-footer" role="contentinfo">
   <div class="col">
-    {{ footer.column_left|raw }}
+    {{ footer_preprocess_values.sidebar_left|raw }}
   </div>
 
   <div class="col">
-    {{ footer.center|raw }}
+    {{ footer_preprocess_values.sidebar_center|raw }}
   </div>
 
   <div class="col">
-     {{ footer.right|raw }}
+     {{ footer_preprocess_values.sidebar_right|raw }}
   </div>
 </footer>
-
-<pre>
-  {# {{dump(footer)}} #}
-</pre>
