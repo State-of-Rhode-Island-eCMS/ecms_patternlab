@@ -21,15 +21,21 @@ body {
       // First palette defined is treated as the default palette
       // All functional color names are output without a theme class around them
       $values: map-get($palette, 'values');
-      @each $fn in $values {
-        //@debug #{map-get($fn, 'colorName')};
-        --fc__#{map-get($fn, 'fnName')}: #{map-get(map-get($colors, map-get($fn, 'colorName')), 'hsl')};
+      @each $block, $section in $values {
+        @each $element in $section {
+          //@debug #{'block= ' + $block};
+          //@debug #{'element= ' + map-get($element,'fnName')};
+          //@debug #{'colorName= ' + map-get($element, 'colorName')};
+          --fc__#{$block}__#{map-get($element,'fnName')}: #{map-get(map-get($colors, map-get($element, 'colorName')), 'hsl')};
+        }
       }
     } @else {
       .qh__t__#{$key} {
         $values: map-get($palette, 'values');
-        @each $fn in $values {
-          --fc__#{map-get($fn, 'fnName')}: #{map-get(map-get($colors, map-get($fn, 'colorName')), 'hsl')};
+        @each $block, $section in $values {
+          @each $element in $section {
+            --fc__#{$block}__#{map-get($element,'fnName')}: #{map-get(map-get($colors, map-get($element, 'colorName')), 'hsl')};
+          }
         }
       }
     }

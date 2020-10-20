@@ -1,17 +1,17 @@
 
 
 /* text-size proportional spacer */
-:root {
+body {
   --body-text-spacer: clamp(1rem, 2vw, 1.25rem);
 }
 
-:root {
+body {
   --content-width: min(93vw, 44rem);
   --margin-left: calc((100vw - var(--content-width)) / 2);
   --margin-right: calc((100vw - var(--content-width)) / 2);
 }
 
-:root {
+body {
   --font-sans-fallback: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-serif-fallback: Georgia, 'Times New Roman', serif;
   --font-sans-static: 'Work Sans', var(--font-sans-fallback);
