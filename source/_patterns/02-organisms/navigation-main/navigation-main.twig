@@ -1,4 +1,4 @@
-<nav class="qh__navigation" aria-label="Primary">
+{# <nav class="qh__navigation" aria-label="Primary">
   <ul id="js__primary-menu" class="qh__navigation__list" role="list">
 
     <li class="qh__navigation__item">
@@ -67,4 +67,80 @@
       </a>
     </li>
   </ul>
-</nav>
+</nav> #}
+
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0, 0, FALSE) }}
+
+{% macro menu_links(items, attributes, menu_level, generated_id, sub_menu_item) %}
+  {% import _self as menus %}
+  {% if items %}
+
+    {# Main list wrapper only. Add nav wrapper. Add Home Link #}
+    {% if menu_level == 0 %}
+      <nav class="qh__navigation" aria-label="Primary">
+        <ul id="js__primary-menu" class="qh__navigation__list" role="list">
+          <li class="qh__navigation__item">
+            <a href="#" class="qh__navigation__link qh__navigation__link--home" title="Back to Home">
+              <span class="qh__icon">
+                {% include ('@icons/home.svg') %}
+                <span class="visually-hidden">Home</span>
+              </span>
+            </a>
+          </li>
+    {% else %}
+      {# Subnavigation list wrapper #}
+      <ul class="qh__navigation__list qh__navigation__list__sub" aria-labelledby="menu-{{ generated_id }}">
+    {% endif %}
+    {% for item in items %}
+      {% set link_id = random(10000) %}
+      {%
+        set classes = [
+          'qh__navigation__item',
+          sub_menu_item ? 'qh__navigation__item__sub',
+          item.below ? 'qh__navigation__has-children',
+        ]
+      %}
+      {%
+        set link_classes = [
+          'qh__navigation__link',
+          sub_menu_item ? 'qh__navigation__link__sub',
+          item.in_active_trail ? 'qh__navigation__link--current',
+        ]
+      %}
+      {% if (item.is_expanded and item.below) %}
+        <li{{ item.attributes.addClass(classes) }}>
+          <a href="#" class="js-qh-dd-toggle qh__navigation__link" id="menu-{{ link_id }}" role="button" aria-haspopup="true" aria-expanded="false">
+            {{ item.title }}
+            <span class="qh__icon">
+              {% include ('@icons/chevron-down.svg') %}
+              <span class="visually-hidden">Toggle child menu</span>
+            </span>
+          </a>
+          {% if item.below %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1, link_id, TRUE) }}
+          {% endif %}
+        </li>
+      {% else %}
+        <li{{ item.attributes.addClass(classes) }}>
+          {{
+            link(
+              item.title,
+              item.url,
+              item.attributes.removeClass(classes).addClass(link_classes)
+            )
+          }}
+        </li>
+      {% endif %}
+    {% endfor %}
+      </ul>
+    {% if menu_level == 0 %}
+      </nav>
+    {% endif %}
+  {% endif %}
+{% endmacro %}
