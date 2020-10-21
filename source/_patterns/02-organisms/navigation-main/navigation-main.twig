@@ -79,6 +79,7 @@
 
 {% macro menu_links(items, attributes, menu_level, generated_id, sub_menu_item) %}
   {% import _self as menus %}
+
   {% if items %}
 
     {# Main list wrapper only. Add nav wrapper. Add Home Link #}
@@ -97,24 +98,24 @@
       {# Subnavigation list wrapper #}
       <ul class="qh__navigation__list qh__navigation__list__sub" aria-labelledby="menu-{{ generated_id }}">
     {% endif %}
+
     {% for item in items %}
+
+      {# Generate a random number to use as a unique id for link items #}
       {% set link_id = random(10000) %}
-      {%
-        set classes = [
-          'qh__navigation__item',
-          sub_menu_item ? 'qh__navigation__item__sub',
-          item.below ? 'qh__navigation__has-children',
-        ]
-      %}
-      {%
-        set link_classes = [
-          'qh__navigation__link',
-          sub_menu_item ? 'qh__navigation__link__sub',
-          item.in_active_trail ? 'qh__navigation__link--current',
-        ]
-      %}
+
+      {# List item classlist #}
+      {% set list_item_classes = "qh__navigation__item" %}
+      {% if sub_menu_item %}
+        {% set list_item_classes = list_item_classes  ~ " qh__navigation__item__sub" %}
+      {% endif %}
+      {% if item.below %}
+        {% set list_item_classes = list_item_classes  ~ " qh__navigation__has-children" %}
+      {% endif %}
+
+      {# If there is a menu item below this level. Add dropdown icon and call the macro again. #}
       {% if (item.is_expanded and item.below) %}
-        <li{{ item.attributes.addClass(classes) }}>
+        <li class="{{ list_item_classes }}">
           <a href="#" class="js-qh-dd-toggle qh__navigation__link" id="menu-{{ link_id }}" role="button" aria-haspopup="true" aria-expanded="false">
             {{ item.title }}
             <span class="qh__icon">
@@ -127,14 +128,19 @@
           {% endif %}
         </li>
       {% else %}
-        <li{{ item.attributes.addClass(classes) }}>
-          {{
-            link(
-              item.title,
-              item.url,
-              item.attributes.removeClass(classes).addClass(link_classes)
-            )
-          }}
+        {# No child items. Render a standard link #}
+
+        {# Link classlist #}
+        {% set link_classes = "qh__navigation__link" %}
+        {% if sub_menu_item %}
+          {% set link_classes = link_classes  ~ " qh__navigation__link__sub" %}
+        {% endif %}
+        {% if item.in_active_trail %}
+          {% set link_classes = link_classes  ~ " qh__navigation__link--current" %}
+        {% endif %}
+
+        <li class="{{ list_item_classes }}">
+          <a href="{{ item.url }}" class="{{ link_classes }}">{{ item.title }}</a>
         </li>
       {% endif %}
     {% endfor %}

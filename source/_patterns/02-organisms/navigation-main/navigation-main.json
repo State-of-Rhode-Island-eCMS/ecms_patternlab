@@ -4,28 +4,24 @@
       "is_expanded": true,
       "in_active_trail": false,
       "title": "About",
-      "attributes": "",
       "below": [
         {
           "is_expanded": true,
           "in_active_trail": false,
           "title": "Child Item 1",
-          "url": "https://ri.gov",
-          "attributes": ""
+          "url": "#"
         },
         {
           "is_expanded": true,
           "in_active_trail": false,
           "title": "Child Item 2",
-          "url": "https://ri.gov",
-          "attributes": ""
+          "url": "#"
         },
         {
           "is_expanded": true,
           "in_active_trail": false,
           "title": "Child Item 3",
-          "url": "https://ri.gov",
-          "attributes": ""
+          "url": "#"
         }
       ]
     },
@@ -33,28 +29,24 @@
       "is_expanded": true,
       "in_active_trail": false,
       "title": "What does this agency do?",
-      "attributes": "",
       "below": [
         {
           "is_expanded": true,
           "in_active_trail": false,
           "title": "Child Item 1",
-          "url": "https://ri.gov",
-          "attributes": ""
+          "url": "#"
         },
         {
           "is_expanded": true,
           "in_active_trail": false,
           "title": "Child Item 2",
-          "url": "https://ri.gov",
-          "attributes": ""
+          "url": "#"
         },
         {
           "is_expanded": true,
           "in_active_trail": false,
           "title": "Child Item 3",
-          "url": "https://ri.gov",
-          "attributes": ""
+          "url": "#"
         }
       ]
     },
@@ -62,16 +54,13 @@
       "is_expanded": true,
       "in_active_trail": true,
       "title": "Contact",
-      "attributes": "",
       "below": []
     },
     {
       "is_expanded": true,
       "in_active_trail": true,
       "title": "Another Link",
-      "attributes": "",
       "below": []
     }
-  ],
-  "attributes": ""
+  ]
 }
