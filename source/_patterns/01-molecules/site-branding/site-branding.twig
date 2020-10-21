@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Theme override to display the site branding block.
+ *
+ * Available variables:
+ *
+ *
+ * Site name:
+ * - header_preprocess_values: Array of three text lines from the theme settings configuration with three values (only main_line is required)
+ *   - top_line
+ *   - main_line
+ *   - bottom_line
+ *
+ *
+ * @see template_preprocess_page()
+ */
+#}
+    <div class="site-branding">
+      <a href="#" rel="home" class="site-branding__logo"> </a>
+
+      <div class="site-branding__name">
+        <div class="site-branding__name__top-line">{{ header_preprocess_values.top_line }}</div>
+        <div class="site-branding__name__main-line">{{ header_preprocess_values.main_line }}</div>
+        <div class="site-branding__name__bottom-line">{{ header_preprocess_values.bottom_line }}</div>
+      </div>
+
+    </div>
