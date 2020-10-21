@@ -17,6 +17,6 @@ function a11yClick(event){
 
 document.addEventListener("DOMContentLoaded", function() {
   // If JS is loaded, change the no-js class
-  document.html.classList.remove("no-js");
-  document.html.classList.add("js");
+  document.documentElement.classList.remove("no-js");
+  document.documentElement.classList.add("js");
 });

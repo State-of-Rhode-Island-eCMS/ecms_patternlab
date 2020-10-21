@@ -83,6 +83,9 @@
       }
       &__arrow {
         fill: var(--fc__navigation__icon__fg);
+        transition: $transition-base;
+        transform: rotate(0deg);
+        transform-origin: center;
       }
     }
 
@@ -90,12 +93,20 @@
     &:focus {
       // See lines below that group the LI:hover with the A:hover
     }
+
+    // In the case where the current link looks disabled, but it is still a trigger to a drop down
+    &--current,
+    &--current:hover,
+    &--current:focus {
+      cursor: pointer;
+    }
   }
 
   // Drop down menu support
   // Ideally CSS hovers are only present when JS does not load
   .no-js &__link:hover + &__list__sub,
   .no-js &__link:focus + &__list__sub,
+  &__link[aria-expanded="true"] + &__list__sub,
   .no-js &__item:hover > &__list__sub,
   .no-js &__item:focus-within > &__list__sub {
     opacity: 1;
@@ -104,12 +115,14 @@
   }
 
   // Hover styles grouped
-  &__link:hover,
-  &__link:focus,
-  &__item:not(&__item__sub):hover > &__link,
-  &__item:not(&__item__sub):focus-within > &__link {
+  &__link:not(&__link--current):hover,
+  &__link:not(&__link--current):focus,
+  &__item:not(&__item__sub):hover > &__link:not(&__link--current),
+  &__item:not(&__item__sub):focus-within > &__link:not(&__link--current),
+  &__link[aria-expanded="true"] {
     background-color: var(--fc__navigation__link--hover__bg);
     color: var(--fc__navigation__link--hover);
+    padding: em(16) em(16) em(12);
 
     .qh__icon__chevron-down {
       &__circle {
@@ -121,12 +134,28 @@
     }
   }
 
+  // Rotation of icon
+  .no-js &__link:hover,
+  .no-js &__link:focus,
+  .no-js &__item:not(&__item__sub):hover > &__link,
+  &__link[aria-expanded="true"] {
+
+    .qh__icon__chevron-down {
+      &__arrow {
+        transform: rotate(-0.5turn);
+      }
+    }
+  }
+
   // A
   &__link {
     padding: em(12) em(16) em(16);
 
     &,
-    &:visited {
+    &:visited,
+    &--current,
+    &--current:hover,
+    &--current:focus {
       background-color: transparent;
       border-top: em(4) solid var(--fc__navigation__bg);
       color: var(--fc__navigation__link);
@@ -138,8 +167,12 @@
       // See lines above that group the LI:hover with the A:hover
     }
 
-    &--current {
+    // Treat a current link as disabled. It should not have a visual state change
+    &--current,
+    &--current:hover,
+    &--current:focus {
       border-top-color: var(--fc__navigation__link--hover__bg);
+      cursor: default;
     }
 
     &__sub {
