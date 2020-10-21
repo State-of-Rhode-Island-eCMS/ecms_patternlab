@@ -1,0 +1,12 @@
+{
+	"pid" : 1,
+	"content" : {
+    "field_item_flexible_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis eget felis vitae molestie. Nullam viverra a enim et sollicitudin. Vestibulum enim nibh, malesuada ac enim vitae, lacinia ornare sapien. Morbi maximus mauris imperdiet neque elementum scelerisque. Phasellus tempor nunc augue, placerat consectetur ex laoreet quis. Aenean in elit feugiat, posuere leo vel, sagittis velit. Nunc nec arcu placerat, fermentum erat a, placerat erat.</p>"
+  },
+  "paragraph": {
+    "field_item_text": {
+      "value": "An accordion title"
+    }
+  }
+}
+
