@@ -3,15 +3,12 @@
   color: var(--fc__official__fg);
 
   .content-wrapper {
+    @include qh-content-maxwidth();
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
-    max-width: $content-max-width;
-    @supports (width: min(10px, 5px)) {
-      max-width: var(--content-max-width);
-    }
   }
+
   a {
     &:link {
       color: var(--fc__official__link);

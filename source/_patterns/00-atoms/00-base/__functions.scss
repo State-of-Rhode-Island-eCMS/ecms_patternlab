@@ -1,0 +1,78 @@
+// Remove (strip) Units
+// @author Bourbon / Thoughbot
+// @parameter {Value} $value -Value, assumed number with unit
+// @example  scss - Usage
+//   line-height: strip-unit(1.5em);
+// @example css - Output
+//   line-height: 1.5;
+@function strip-unit($value) {
+  @return ($value / ($value * 0 + 1));
+}
+
+
+// em()
+// Change a (assumed) pixel value to an em
+// @author Bourbon / Thoughbot
+// @require strip-unit()
+// @param {float} $value - Numeric value assumed to be pixels
+// @param {float} $base - (optional) Numeric value for the pixel multiplier
+// @example scss - Usage
+//   font-size: em(24);
+//   width: em(48, 24);
+// @example css - Output
+//   font-size: 1.5em;
+//   width: 2em;
+@function em($value, $base: 16px) {
+  @if not unitless($value) {
+    $value: strip-unit($value);
+  }
+  @if not unitless($base) {
+    $base: strip-unit($base);
+  }
+  @return ($value / $base) * 1em;
+}
+
+
+// rem()
+// Change a (assumed) pixel value to an rem
+// @author Bourbon / Thoughbot
+// @require strip-unit()
+// @param {float} $value - Numeric value assumed to be pixels
+// @param {float} $base - (very optional) Numeric value for the pixel multiplier
+// @example scss - Usage
+//   width: rem(48);
+// @example css - Output
+//   width: 3rem;
+@function rem($value, $base: 16px) {
+  @if not unitless($value) {
+    $value: strip-unit($value);
+  }
+  @if not unitless($base) {
+    $base: strip-unit($base);
+  }
+  @return ($value / $base) * 1rem;
+}
+
+
+// clearfix()
+// Clearfix still useful, though less and less
+// @author Bourbon / Thoughbot
+// @require {None}
+// @param {None}
+// @example scss - Usage
+//   .element {
+//     @include clearfix;
+//   }
+// @example css - Output
+//   .element::after {
+//     clear: both;
+//     content: "";
+//     display: block;
+//   }
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}

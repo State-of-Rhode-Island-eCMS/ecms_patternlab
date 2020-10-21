@@ -12,6 +12,18 @@
       "hsl": "hsl(0, 0%, 8%)",
       "needs": "light-text"
     },
+    "quahog--dark--trans33": {
+      "name": "Quahog dark 33% transparent",
+      "hue": "black",
+      "hsl": "hsla(0, 0%, 8%, 0.33)",
+      "needs": "dark-text"
+    },
+    "quahog--dark--trans15": {
+      "name": "Quahog dark 15% transparent",
+      "hue": "black",
+      "hsl": "hsla(0, 0%, 8%, 0.15)",
+      "needs": "dark-text"
+    },
     "quahog": {
       "name": "Quahog",
       "hue": "black",
@@ -182,6 +194,21 @@
         "header": [
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "navy" }
+        ],
+        "navigation": [
+          { "fnName": "fg", "colorName": "quahog--dark" },
+          { "fnName": "bg", "colorName": "ocean" },
+          { "fnName": "link", "colorName": "quahog--dark" },
+          { "fnName": "link--hover", "colorName": "navy" },
+          { "fnName": "link--hover__bg", "colorName": "white" },
+          { "fnName": "link--focus", "colorName": "calamari" },
+          { "fnName": "link--active", "colorName": "calamari" },
+          { "fnName": "link--current__border", "colorName": "white" },
+          { "fnName": "link__sub--hover__bg", "colorName": "ocean--trans25" },
+          { "fnName": "icon__bg", "colorName": "white" },
+          { "fnName": "icon__fg", "colorName": "quahog--dark" },
+          { "fnName": "icon__bg--hover", "colorName": "ocean" },
+          { "fnName": "icon__fg--hover", "colorName": "navy" }
         ],
         "footer": [
           { "fnName": "fg", "colorName": "white" },
