@@ -158,6 +158,13 @@
           "paths": [
             "source/_macros"
           ]
+        },
+        {
+          "id": "icons",
+          "recursive": true,
+          "paths": [
+            "source/images/icons"
+          ]
         }
       ],
       "alterTwigEnv": [
