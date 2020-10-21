@@ -1,0 +1,155 @@
+//"navigation": [
+//  { "fnName": "fg", "colorName": "quahog--dark" },
+//  { "fnName": "bg", "colorName": "ocean" },
+//  { "fnName": "link", "colorName": "quahog--dark" },
+//  { "fnName": "link--hover", "colorName": "navy" },
+//  { "fnName": "link--hover__bg", "colorName": "white" },
+//  { "fnName": "link--focus", "colorName": "navy" },
+//  { "fnName": "link--active", "colorName": "calamari" },
+//  { "fnName": "link--current__border", "colorName": "white" }
+//],
+.qh__navigation {
+  background-color: var(--fc__navigation__bg);
+  color: var(--fc__navigation__fg);
+
+  a {
+    display: block;
+    transition: $transition-base;
+
+    &:focus {
+      outline-color: var(--fc__navigation__link--focus);
+      outline-offset: -2px;
+    }
+
+    &:active {
+      color: var(--fc__navigation__link--active);
+    }
+  }
+
+  .qh__icon__chevron-down {
+    display: block;
+    margin: -0.75em -0.75em -0.75em 0;
+    height: em(44);
+    width: em(44);
+  }
+
+  // UL
+  & > &__list {
+    @include qh-content-maxwidth();
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__list {
+
+    &__sub {
+      background-color: var(--fc__navigation__link--hover__bg);
+      box-shadow: $box-shadow-base;
+      min-width: 100%;
+      opacity: 0;
+      position: absolute;
+        top: 100%;
+        left: 0;
+      transition: 500ms opacity ease 0s, 0s visibility linear 500ms;
+      visibility: hidden;
+    }
+  }
+
+  // LI
+  &__item {
+    position: relative;
+    overflow: visible;
+
+    &__sub + &__sub::before {
+      border-top: em(2) solid var(--fc__navigation__bg);
+      content: '';
+      display: block;
+      height: 0;
+      margin: 0 em(8);
+    }
+  }
+
+  &__has-children &__link {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    .qh__icon__chevron-down {
+      &__circle {
+        fill: var(--fc__navigation__icon__bg);
+      }
+      &__arrow {
+        fill: var(--fc__navigation__icon__fg);
+      }
+    }
+
+    &:hover,
+    &:focus {
+      // See lines below that group the LI:hover with the A:hover
+    }
+  }
+
+  // Drop down menu support
+  // Ideally CSS hovers are only present when JS does not load
+  &__link:hover + &__list__sub,
+  &__link:focus + &__list__sub,
+  &__item:hover > &__list__sub,
+  &__item:focus-within > &__list__sub {
+    opacity: 1;
+    transition: 500ms opacity ease 0s, 0s visibility linear 0s;
+    visibility: visible;
+  }
+
+  // Hover styles grouped
+  &__link:hover,
+  &__link:focus,
+  &__item:not(&__item__sub):hover > &__link,
+  &__item:not(&__item__sub):focus-within > &__link {
+    background-color: var(--fc__navigation__link--hover__bg);
+    color: var(--fc__navigation__link--hover);
+
+    .qh__icon__chevron-down {
+      &__circle {
+        fill: var(--fc__navigation__icon__bg--hover);
+      }
+      &__arrow {
+        fill: var(--fc__navigation__icon__fg--hover);
+      }
+    }
+  }
+
+  // A
+  &__link {
+    padding: em(12) em(16) em(16);
+
+    &,
+    &:visited {
+      background-color: transparent;
+      border-top: em(4) solid var(--fc__navigation__bg);
+      color: var(--fc__navigation__link);
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      // See lines above that group the LI:hover with the A:hover
+    }
+
+    &--current {
+      border-top-color: var(--fc__navigation__link--hover__bg);
+    }
+
+    &__sub {
+      border: 0;
+      padding: em(10) em(16);
+
+      &:hover,
+      &:focus {
+        background-color: var(--fc__navigation__link__sub--hover__bg);
+      }
+    }
+  }
+}
