@@ -38,6 +38,17 @@ function addCustomExtension(\Twig_Environment &$env, $config) {
     return $theArray;
   }));
 
+  // Add drupal functions.
+  // link()
+  $env->addFunction(new \Twig_SimpleFunction('link', function ($title, $url, $attributes) {
+    if (isset($attributes) && isset($attributes['class'])) {
+      $classes = join(' ', $attributes['class']);
+      return '<a href="' . $url . '" class="' . $classes . '">' . $title . '</a>';
+    } else {
+      return '<a href="' . $url . '">' . $title . '</a>';
+    }
+  }));
+
   // Enable debug.
   $env->addExtension(new \Twig_Extension_Debug());
 
