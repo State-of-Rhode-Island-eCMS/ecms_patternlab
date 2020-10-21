@@ -1,6 +1,10 @@
+// All headers
+$all-headers: 'h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6';
+
+
+// Content max-width
 $content-max-small-screen: 93vw;
 $content-max-large-screen: 90rem;
-
 
 $content-max-width: $content-max-small-screen;
 @media screen and (min-width: $bp--large) {
@@ -9,3 +13,9 @@ $content-max-width: $content-max-small-screen;
 body {
   --content-max-width: min(#{$content-max-small-screen}, #{$content-max-large-screen});
 }
+
+// Box Shadows
+$box-shadow-base: 0 0.125em 0.5em var(--c__quahog--dark--trans33);
+
+// Transitions
+$transition-base: all 250ms ease;
