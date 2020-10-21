@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
         // Open the one that was pressed
         if (expanded == 'false') {
-          btn.setAttribute('aria-expanded', 'true');
+          toggle.setAttribute('aria-expanded', 'true');
         }
       }
     });
