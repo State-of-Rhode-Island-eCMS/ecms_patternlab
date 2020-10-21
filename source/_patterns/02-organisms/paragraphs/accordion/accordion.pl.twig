@@ -1,0 +1,10 @@
+<div class="qh-accordion">
+  <h3>
+    <button data-id="1" id="accordion-button-{{pid}}" aria-controls="accordion-panel-{{pid}}" aria-expanded="false">
+      {{ paragraph.field_item_text.value }}
+    </button>
+  </h3>
+  <div class="qh-accordion__panel" id="accordion-panel-{{pid}}" tabindex="-1" aria-labelledby="accordion-button-{{pid}}">
+    {{ content.field_item_flexible_text }}
+  </div>
+</div>
