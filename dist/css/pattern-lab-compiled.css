@@ -90,10 +90,9 @@ html {
   --fc__official__link--visited: white;
   --fc__header__fg: white;
   --fc__header__bg: #293557;
-  --fc__footer__fg: #404040;
-  --fc__footer__bg: #d4d4d4;
-  --fc__footer__link: #eb5252;
-  --fc__footer__link--hover: #ff8e47;
+  --fc__footer__fg: white;
+  --fc__footer__bg: #404040;
+  --fc__footer__border-top: #95bddf;
   --fc__primary__fg: white;
   --fc__primary__bg: #293557;
   --fc__primary__fg--dark: white;
@@ -501,17 +500,6 @@ button {
   background-color: var(--c__navy);
   color: var(--c__white); }
 
-.qh-site-footer {
-  background-color: var(--c__quahog);
-  color: var(--c__white);
-  font-size: 1rem; }
-  .qh-site-footer a {
-    color: var(--c__white);
-    font-size: 1rem; }
-  .qh-site-footer p {
-    font-size: 1rem;
-    margin-top: 0; }
-
 .global-header {
   background-color: var(--fc__official__bg);
   color: var(--fc__official__fg); }
@@ -551,6 +539,17 @@ button {
     font-size: 0.875rem;
     font-weight: 375;
     text-decoration: underline; }
+
+.qh-site-footer {
+  background-color: var(--fc__footer__bg);
+  color: var(--fc__footer__fg);
+  font-size: 1rem; }
+  .qh-site-footer a {
+    color: var(--fc__footer__fg);
+    font-size: 1rem; }
+  .qh-site-footer p {
+    font-size: 1rem;
+    margin-top: 0; }
 
 .page-header {
   background-color: var(--fc__header__bg);

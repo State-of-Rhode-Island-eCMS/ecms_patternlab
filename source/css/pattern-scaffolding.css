@@ -44,9 +44,16 @@
   height: 4em;
   margin-bottom: 0.3em;
   border-radius: 5px; }
+  .sg-swatch.sg-palette {
+    height: 8em; }
 
 .sg-label {
+  display: block;
   font-size: 90%;
+  line-height: 1; }
+
+.sg-code {
+  font-size: 75%;
   line-height: 1; }
 
 .pl-c-pattern-info .h1,
