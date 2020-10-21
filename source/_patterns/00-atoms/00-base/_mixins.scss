@@ -1,0 +1,8 @@
+// Content max-width
+@mixin qh-content-maxwidth() {
+  margin: 0 auto;
+  max-width: $content-max-width;
+  @supports (width: min(10px, 5px)) {
+    max-width: var(--content-max-width);
+  }
+}
