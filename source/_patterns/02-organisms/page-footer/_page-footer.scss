@@ -2,14 +2,51 @@
   background-color: var(--fc__footer__bg);
   color: var(--fc__footer__fg);
   font-size: 1rem;
+  border-top: 21px solid var(--fc__footer__border-top);
+  padding: 2rem; //vertical spacer.
+
+  .content-wrapper {
+    margin: 0 auto;
+    max-width: $content-max-width;
+    display: flex;
+    @supports (width: min(10px, 5px)) {
+      max-width: var(--content-max-width);
+    }
+  }
 
   a {
     color: var(--fc__footer__fg);
     font-size: 1rem;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: var(--fc__footer__fg);
+    }
+
+    &:visited {
+      color: var(--fc__footer__fg);
+    }
   }
 
   p {
     font-size: 1rem;
     margin-top: 0;
+  }
+
+  &__content-left {
+    display: flex;
+    flex-grow: 1;
+
+    > div {
+      width: 33%;
+    };
+  }
+
+  &__content-right {
+    width: 20%;
+    border-left: 1px solid var(--fc__footer__fg);
+    padding-left: 1.5rem;
+    margin-left: 1.5rem;
   }
 }

@@ -1,13 +1,22 @@
 <footer class="qh-site-footer" role="contentinfo">
-  <div class="col">
-    {{ footer_preprocess_values.sidebar_left|raw }}
-  </div>
+  <div class="content-wrapper">
+    <div class="qh-site-footer__content-left">
+      <div>
+        {{ footer_preprocess_values.footer_left|raw }}
+      </div>
 
-  <div class="col">
-    {{ footer_preprocess_values.sidebar_center|raw }}
-  </div>
+      <div>
+        {{ footer_preprocess_values.footer_center|raw }}
+      </div>
 
-  <div class="col">
-     {{ footer_preprocess_values.sidebar_right|raw }}
+      <div>
+        {{ footer_preprocess_values.footer_right|raw }}
+      </div>
+    </div>
+    <div class="qh-site-footer__content-right">
+      <div>
+        {{ footer_preprocess_values.state_info|raw }}
+      </div>
+    </div>
   </div>
 </footer>
