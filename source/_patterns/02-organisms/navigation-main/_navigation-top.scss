@@ -94,10 +94,10 @@
 
   // Drop down menu support
   // Ideally CSS hovers are only present when JS does not load
-  &__link:hover + &__list__sub,
-  &__link:focus + &__list__sub,
-  &__item:hover > &__list__sub,
-  &__item:focus-within > &__list__sub {
+  .no-js &__link:hover + &__list__sub,
+  .no-js &__link:focus + &__list__sub,
+  .no-js &__item:hover > &__list__sub,
+  .no-js &__item:focus-within > &__list__sub {
     opacity: 1;
     transition: 500ms opacity ease 0s, 0s visibility linear 0s;
     visibility: visible;
