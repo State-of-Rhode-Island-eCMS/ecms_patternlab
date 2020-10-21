@@ -1,0 +1,28 @@
+<ul class="sg-colors sg-palettes">
+	{% for slug, palette in palettes %}
+	  <li>
+      <div class="sg-swatch sg-palette"
+			  style="background-image: linear-gradient(to bottom
+{% set num = palette.values | length %}
+    {# One a magic number to account for the removed primary sections and to prevent the last section from hitting 100% #}
+    {% set num = num - 1 %}
+    {% set percent = 100 / num %}
+    {% set counter = 0 %}
+    {%- for section, definitions in palette.values -%}
+      {%- if 'primary' not in section -%}
+        {%- for count, row in definitions -%}
+          {%- if 'bg' == row.fnName -%}
+, var(--c__{{ row.colorName }}) {{ percent * counter }}%
+{% set counter = counter + 1 %}
+, var(--c__{{ row.colorName }}) {{ percent * counter }}%
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endfor -%}); background-size: cover;">
+      </div>
+			<span class="sg-label"><b>{{ palette.humanName }}:</b></span>
+			<span class="sg-code"><code>.qh__t__{{ slug }}</code></span>
+    </li>
+	{% endfor %}
+</ul>
+

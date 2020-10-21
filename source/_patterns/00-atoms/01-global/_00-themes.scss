@@ -1,0 +1,42 @@
+// Mini-themes: Author selected row/column color overrides
+.qh__ct__coffee-milk {
+  background-color: var(--c__coffee-milk--trans25);
+  color: var(--c__quahog--dark);
+
+  #{$all-headers} {
+    color: var(--c__coffee-milk);
+  }
+
+  @media (prefers-color-theme: dark) {
+    background-color: var(--c__coffee-milk--trans25);
+    color: var(--c__coffee-milk--light);
+  }
+}
+
+.qh__ct__primary {
+  background-color: var(--fc__primary__bg);
+  color: var(--fc__primary__fg);
+
+  #{$all-headers} {
+    color: var(--fc__primary__hx__fg);
+  }
+
+  @media (prefers-color-theme: dark) {
+    background-color: var(--fc__primary__bg--dark);
+    color: var(--fc__primary__fg--dark);
+  }
+}
+
+.qh__ct__primary--light {
+  background-color: var(--fc__primary--light__bg);
+  color: var(--fc__primary--light__fg);
+
+  #{$all-headers} {
+    color: var(--fc__primary--light__hx__fg);
+  }
+
+  @media (prefers-color-theme: dark) {
+    background-color: var(--fc__primary--light__bg--dark);
+    color: var(--fc__primary--light__fg--dark);
+  }
+}

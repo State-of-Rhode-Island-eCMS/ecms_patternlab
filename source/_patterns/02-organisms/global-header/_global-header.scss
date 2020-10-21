@@ -1,0 +1,47 @@
+.global-header {
+  background-color: var(--fc__official__bg);
+  color: var(--fc__official__fg);
+
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: $content-max-width;
+    @supports (width: min(10px, 5px)) {
+      max-width: var(--content-max-width);
+    }
+  }
+  a {
+    &:link {
+      color: var(--fc__official__link);
+    }
+    &:hover {
+      color: var(--fc__official__link--hover);
+    }
+    &:focus {
+      color: var(--fc__official__link--focus);
+    }
+    &:active {
+      color: var(--fc__official__link--active);
+    }
+    &:visited {
+      color: var(--fc__official__link--visited);
+    }
+  }
+
+  p {
+    font-size: 0.875rem;
+    font-weight: 375;
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    color: var(--fc__official__link);
+    font-family: $font-sans-vf;
+    font-size: 0.875rem;
+    font-weight: 375;
+    text-decoration: underline;
+  }
+}

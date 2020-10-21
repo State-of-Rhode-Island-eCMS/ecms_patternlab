@@ -12,6 +12,7 @@ const sassGlob = require('gulp-sass-glob');
 const concat = require('gulp-concat');
 const minify = require('gulp-minify');
 const autoprefixer = require('gulp-autoprefixer');
+const stylelint = require('gulp-stylelint');
 const sassImportJson = require('gulp-sass-import-json');
 const jeditor = require('gulp-json-editor');
 const streamify = require('gulp-streamify');
@@ -83,15 +84,21 @@ gulp.task('generate-colors', function () {
       for (let [color, value] of Object.entries(json.colors)) {
         colorArray.push({
           name: color,
-          hex: value.hex
+          hsl: value.hsl
         })
       }
 
       for (let [palette, value] of Object.entries(json.palettes)) {
-        value.values.map((paletteConfig) => {
-          const hexValue = colorArray.find((item) => item.name === paletteConfig.colorName);
-          generatedJson[`t__${palette}__${paletteConfig.fnName}`] = hexValue.hex;
-        })
+        for (let [block, blockValue] of Object.entries(value.values)) {
+          blockValue.map((modifier) => {
+            const hslValue = colorArray.find((item) => item.name === modifier.colorName);
+            if(hslValue) {
+              generatedJson[`t__${palette}__${block}__${modifier.fnName}`] = hslValue.hsl;
+            } else {
+              console.error(palette + '-' + modifier.fnName + ': does not contain a color name in colors array.');
+            }
+          })
+        };
       }
 
       return generatedJson;
@@ -162,3 +169,27 @@ gulp.task('watch', gulp.parallel('watch:js', 'watch:sass'));
 // Default task
 // Patternlab:serve handles building/watching patterns
 gulp.task('default', gulp.series(gulp.parallel('move-fonts', 'move-vendor', 'generate-colors'), 'build:no-patterns', 'patternlab:serve', 'watch'));
+
+// Linting
+gulp.task('validate:sass', () => {
+  return gulp
+    .src(scssSourcePaths)
+    .pipe(stylelint({
+      reporters: [
+        {
+          formatter: 'verbose',
+          console: true,
+        }
+      ],
+      debug: true,
+    }))
+});
+
+gulp.task('fix:sass', () => {
+  return gulp
+    .src(scssSourcePaths)
+    .pipe(stylelint({fix: true}))
+    .pipe(gulp.dest((file) => {
+      return file.base;
+    }));
+});
