@@ -26,11 +26,24 @@
     }
   }
 
+  // Icons used in the nav
+  .qh__icon__home,
   .qh__icon__chevron-down {
     display: block;
-    margin: -0.75em -0.75em -0.75em 0;
     height: em(44);
     width: em(44);
+  }
+
+  .qh__icon__chevron-down {
+    margin: -0.75em -0.75em -0.75em 0;
+  }
+
+  .qh__icon__home {
+    margin: 0;
+
+    &__shape {
+      fill: var(--fc__navigation__icon__fg);
+    }
   }
 
   // UL
@@ -71,6 +84,7 @@
     }
   }
 
+  // An item with children in a drop down
   &__has-children &__link {
     display: flex;
     flex-flow: row nowrap;
@@ -117,8 +131,8 @@
   // Hover styles grouped
   &__link:not(&__link--current):hover,
   &__link:not(&__link--current):focus,
-  &__item:not(&__item__sub):hover > &__link:not(&__link--current),
-  &__item:not(&__item__sub):focus-within > &__link:not(&__link--current),
+  &__item:not(&__item__sub):hover > &__link:not(&__link--current):not(&__link--home),
+  &__item:not(&__item__sub):focus-within > &__link:not(&__link--current):not(&__link--home),
   &__link[aria-expanded="true"] {
     background-color: var(--fc__navigation__link--hover__bg);
     color: var(--fc__navigation__link--hover);
@@ -182,6 +196,18 @@
       &:hover,
       &:focus {
         background-color: var(--fc__navigation__link__sub--hover__bg);
+      }
+    }
+
+    // Exception
+    &--home,
+    &--home:visited {
+      border-top: 0;
+      padding: em(1);
+
+      &:hover,
+      &:focus {
+        padding: em(1) !important;
       }
     }
   }

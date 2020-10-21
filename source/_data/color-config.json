@@ -206,7 +206,7 @@
           { "fnName": "link--current__border", "colorName": "white" },
           { "fnName": "link__sub--hover__bg", "colorName": "ocean--trans25" },
           { "fnName": "icon__bg", "colorName": "white" },
-          { "fnName": "icon__fg", "colorName": "quahog--dark" },
+          { "fnName": "icon__fg", "colorName": "navy" },
           { "fnName": "icon__bg--hover", "colorName": "ocean" },
           { "fnName": "icon__fg--hover", "colorName": "navy" }
         ],
