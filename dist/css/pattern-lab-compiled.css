@@ -543,13 +543,43 @@ button {
 .qh-site-footer {
   background-color: var(--fc__footer__bg);
   color: var(--fc__footer__fg);
-  font-size: 1rem; }
+  font-size: 1rem;
+  border-top: 21px solid var(--fc__footer__border-top);
+  padding: 2rem; }
+  .qh-site-footer .content-wrapper {
+    margin: 0 auto;
+    max-width: 93vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @supports (width: 5px) {
+      .qh-site-footer .content-wrapper {
+        max-width: var(--content-max-width); } }
   .qh-site-footer a {
     color: var(--fc__footer__fg);
     font-size: 1rem; }
+    .qh-site-footer a:hover, .qh-site-footer a:focus {
+      text-decoration: none;
+      color: var(--fc__footer__fg); }
+    .qh-site-footer a:visited {
+      color: var(--fc__footer__fg); }
   .qh-site-footer p {
     font-size: 1rem;
     margin-top: 0; }
+  .qh-site-footer__content-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+    .qh-site-footer__content-left > div {
+      width: 33%; }
+  .qh-site-footer__content-right {
+    width: 20%;
+    border-left: 1px solid var(--fc__footer__fg);
+    padding-left: 1.5rem;
+    margin-left: 1.5rem; }
 
 .page-header {
   background-color: var(--fc__header__bg);
