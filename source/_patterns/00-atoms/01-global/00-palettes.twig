@@ -4,8 +4,8 @@
       <div class="sg-swatch sg-palette"
 			  style="background-image: linear-gradient(to bottom
 {% set num = palette.values | length %}
-    {# One a magic number to account for the removed primary sections and to prevent the last section from hitting 100% #}
-    {% set num = num - 1 %}
+    {# Two is a magic number to account for the removed primary sections and to prevent the last section from hitting 100% #}
+    {% set num = num - 2 %}
     {% set percent = 100 / num %}
     {% set counter = 0 %}
     {%- for section, definitions in palette.values -%}

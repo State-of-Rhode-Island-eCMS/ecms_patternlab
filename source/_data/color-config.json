@@ -6,6 +6,12 @@
       "hsl": "hsl(0, 0%, 100%)",
       "needs": "dark-text"
     },
+    "white--trans33": {
+      "name": "White",
+      "hue": "white",
+      "hsl": "hsla(0, 0%, 100%, 0.33)",
+      "needs": "dark-text"
+    },
     "quahog--dark": {
       "name": "Quahog dark",
       "hue": "black",
@@ -173,17 +179,6 @@
     "scarborough": {
       "humanName": "Scarborough Beach",
       "values": {
-        "default": [
-          { "fnName": "fg", "colorName": "quahog" },
-          { "fnName": "bg", "colorName": "white" },
-          { "fnName": "link", "colorName": "navy--sat" },
-          { "fnName": "link--hover", "colorName": "navy--sat-lgt" },
-          { "fnName": "link--focus", "colorName": "navy" },
-          { "fnName": "link--visited", "colorName": "navy--warm" },
-          { "fnName": "link--active", "colorName": "calamari" },
-          { "fnName": "hx__fg", "colorName": "quahog--medium" },
-          { "fnName": "violator", "colorName": "calamari" }
-        ],
         "official": [
           { "fnName": "fg", "colorName": "quahog--light" },
           { "fnName": "bg", "colorName": "navy--dark" },
@@ -196,7 +191,7 @@
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "navy" }
         ],
-        "navigation": [
+        "nav-main": [
           { "fnName": "fg", "colorName": "quahog--dark" },
           { "fnName": "bg", "colorName": "ocean" },
           { "fnName": "link", "colorName": "quahog--dark" },
@@ -210,6 +205,27 @@
           { "fnName": "icon__fg", "colorName": "navy" },
           { "fnName": "icon__bg--hover", "colorName": "ocean" },
           { "fnName": "icon__fg--hover", "colorName": "navy" }
+        ],
+        "default": [
+          { "fnName": "fg", "colorName": "quahog" },
+          { "fnName": "bg", "colorName": "white" },
+          { "fnName": "link", "colorName": "navy--sat" },
+          { "fnName": "link--hover", "colorName": "navy--sat-lgt" },
+          { "fnName": "link--focus", "colorName": "navy" },
+          { "fnName": "link--visited", "colorName": "navy--warm" },
+          { "fnName": "link--active", "colorName": "calamari" },
+          { "fnName": "hx__fg", "colorName": "quahog--medium" },
+          { "fnName": "violator", "colorName": "calamari" }
+        ],
+        "nav-minor": [
+          { "fnName": "border", "colorName": "ocean" },
+          { "fnName": "fg", "colorName": "quahog--dark" },
+          { "fnName": "bg", "colorName": "ocean--trans25" },
+          { "fnName": "link", "colorName": "navy" },
+          { "fnName": "link--hover", "colorName": "navy--dark" },
+          { "fnName": "link--hover__bg", "colorName": "ocean--trans25" },
+          { "fnName": "link--focus", "colorName": "calamari" },
+          { "fnName": "link--active", "colorName": "calamari" }
         ],
         "footer": [
           { "fnName": "fg", "colorName": "white" },
@@ -235,16 +251,6 @@
     "scarborough--dark": {
       "humanName": "Scarborough Beach dark",
       "values": {
-        "default": [
-          { "fnName": "fg", "colorName": "coffee-milk--light" },
-          { "fnName": "bg", "colorName": "quahog" },
-          { "fnName": "link", "colorName": "navy--light" },
-          { "fnName": "link--hover", "colorName": "hope-gold" },
-          { "fnName": "link--focus", "colorName": "hope-gold" },
-          { "fnName": "link--visited", "colorName": "navy--wrm-lgt" },
-          { "fnName": "link--active", "colorName": "calamari" },
-          { "fnName": "hx__fg", "colorName": "coffee-milk" }
-        ],
         "official": [
           { "fnName": "fg", "colorName": "quahog--light" },
           { "fnName": "bg", "colorName": "quahog" },
@@ -256,6 +262,16 @@
         "header": [
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "quahog--dark" }
+        ],
+        "default": [
+          { "fnName": "fg", "colorName": "coffee-milk--light" },
+          { "fnName": "bg", "colorName": "quahog" },
+          { "fnName": "link", "colorName": "navy--light" },
+          { "fnName": "link--hover", "colorName": "hope-gold" },
+          { "fnName": "link--focus", "colorName": "hope-gold" },
+          { "fnName": "link--visited", "colorName": "navy--wrm-lgt" },
+          { "fnName": "link--active", "colorName": "calamari" },
+          { "fnName": "hx__fg", "colorName": "coffee-milk" }
         ],
         "primary": [
           { "fnName": "fg", "colorName": "white" },
