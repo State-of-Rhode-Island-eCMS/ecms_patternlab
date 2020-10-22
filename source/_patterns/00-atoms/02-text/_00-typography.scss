@@ -13,7 +13,7 @@ p {
   hyphens: auto;
   line-height: clamp(1.25em, 2vw, 1.4em);
   margin: 0;
-  max-width: var(--content-width);
+  max-width: 40em;
   @media screen and (min-width: $bp--medium) {
     hyphens: none;
   }
