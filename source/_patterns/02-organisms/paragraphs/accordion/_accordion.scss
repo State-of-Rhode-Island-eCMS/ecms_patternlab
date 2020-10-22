@@ -1,0 +1,121 @@
+/*
+ * Styling and functional best practices from:
+ * https://www.w3.org/TR/wai-aria-practices-1.1/examples/accordion/accordion.html
+ *
+ * Not all functional requirements can be met, as in arrow up/down, home, or end
+ * keys navigating from one accordion header to another because we are not able
+ * to put a single wrapper around all accordion elements on a page
+ */
+
+.qh__accordion {
+  $element-v-spacing: 1rem;
+  $element-h-spacing: 1.5rem;
+
+  border: 1px solid var(--c__coffee-milk);
+  margin-bottom: $element-v-spacing;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    border-color: var(--fc__default__link--hover);
+    transition: $transition-base;
+  }
+
+  .qh__icon {
+    @include icon-size();
+    pointer-events: none;
+  }
+
+  &__title {}
+
+  &__button {
+    @include button-reset;
+    background: var(--c__coffee-milk--trans25);
+    color: var(--fc__default__fg);
+    cursor: pointer;
+    display: block;
+    font-family: $font-sans-vf;
+    font-size: 1.25rem; // clean up with proper font-size prop
+    outline: none;
+    padding: $element-v-spacing $element-h-spacing;
+    text-align: left;
+    transition: $transition-base;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+      background: var(--fc__default__bg);
+      color: var(--fc__default__fg);
+    }
+
+    // Accordion titles are required to look focused
+    &:focus {
+      .qh__accordion__button__summary {
+        outline: 2px solid var(--fc__default__link--hover);
+        outline-offset: 2px;
+      }
+    }
+
+    &__summary {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      pointer-events: none;
+    }
+
+    .qh__icon {
+      margin: -0.5em -0.5em -0.5em $element-h-spacing;
+      min-width: $icon-dimension;
+
+      &__plusminus {
+        &__circle {
+          fill: var(--fc__default__violator);
+        }
+        &__vert,
+        &__horiz {
+          fill: var(--fc__default__fg);
+        }
+        &__vert {
+          transition: $transition-medium;
+          transform: rotate(90deg); // in the SVG this shape is already transformed
+          transform-origin: center;
+        }
+      }
+    }
+
+    &[aria-expanded="true"] {
+      background: var(--fc__default__bg);
+
+      .qh__icon__plusminus__vert {
+        transform: rotate(-360deg);
+      }
+    }
+  }
+
+  &__content {
+
+    // TODO: Transitions not firing as we want them to
+    .js & {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0s linear 1s;
+
+      > div {
+        opacity: 0;
+        transition: $transition-base 0ms;
+      }
+    }
+
+    .js [aria-expanded="true"] + & {
+      max-height: unset;
+      padding: $element-v-spacing $element-h-spacing;
+      transition: max-height 0s linear 500s;
+
+      > div {
+        opacity: 1;
+        transition: $transition-base 125ms;
+      }
+    }
+  }
+}

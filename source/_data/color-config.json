@@ -181,7 +181,8 @@
           { "fnName": "link--focus", "colorName": "navy" },
           { "fnName": "link--visited", "colorName": "navy--warm" },
           { "fnName": "link--active", "colorName": "calamari" },
-          { "fnName": "hx__fg", "colorName": "quahog--medium" }
+          { "fnName": "hx__fg", "colorName": "quahog--medium" },
+          { "fnName": "violator", "colorName": "calamari" }
         ],
         "official": [
           { "fnName": "fg", "colorName": "quahog--light" },

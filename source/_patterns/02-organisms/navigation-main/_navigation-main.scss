@@ -29,9 +29,7 @@
   // Icons used in the nav
   .qh__icon__home,
   .qh__icon__chevron-down {
-    display: block;
-    height: em(44);
-    width: em(44);
+    @include icon-size();
   }
 
   .qh__icon__chevron-down {
