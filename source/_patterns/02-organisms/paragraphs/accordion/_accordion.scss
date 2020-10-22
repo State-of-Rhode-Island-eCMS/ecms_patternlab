@@ -96,7 +96,8 @@
     .js & {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0s linear 1s;
+      transition: max-height 0s linear 1s, visibility 0s linear 0s;
+      visibility: hidden;
 
       > div {
         opacity: 0;
@@ -107,7 +108,8 @@
     .js [aria-expanded="true"] + & {
       max-height: unset;
       padding: $nav-a-v-spacing $nav-a-h-spacing;
-      transition: max-height 0s linear 500s;
+      transition: max-height 0s linear 500s, visibility 0s linear 0ms;
+      visibility: visible;
 
       > div {
         opacity: 1;
