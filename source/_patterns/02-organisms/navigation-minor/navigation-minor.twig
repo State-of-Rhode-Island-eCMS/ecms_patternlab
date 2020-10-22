@@ -1,0 +1,107 @@
+<nav class="qh__nav-minor" aria-label="Secondary">
+  <ul class="qh__nav-minor__list qh__accordion js-qh-accordion" role="list">
+
+    <li class="qh__nav-minor__item">
+      <a href="#" class="qh__nav-minor__link">
+        Link with no children
+      </a>
+    </li>
+
+    <li class="qh__nav-minor__item qh__nav-minor__has-children">
+      <button
+        aria-expanded="false"
+        class=" qh__nav-minor__link qh__accordion__button js-qh-accordion-trigger"
+        aria-controls="details-unique1"
+        data-id="unique1"
+        id="summary-unique1"
+        >
+        <span class="qh__accordion__button__summary">
+          Link with children
+          <span class="qh__icon">
+            {% include ('@icons/plus-minus.svg') %}
+          </span>
+        </span>
+      </button>
+      <div
+        id="details-unique1"
+        role="region"
+        aria-labelledby="summary-unique1"
+        class="qh__accordion__content js-qh-accordion-panel"
+        >
+        <div>
+
+          {# Submenu #}
+          <ul class="qh__nav-minor__list qh__nav-minor__list__sub">
+            <li class="qh__nav-minor__item  qh__nav-minor__item__sub">
+              <a href="#" class="qh__nav-minor__link  qh__nav-minor__link__sub">Child item 1</a>
+            </li>
+            <li class="qh__nav-minor__item  qh__nav-minor__item__sub">
+              <a href="#" class="qh__nav-minor__link  qh__nav-minor__link__sub">Child item 2</a>
+            </li>
+            <li class="qh__nav-minor__item  qh__nav-minor__item__sub">
+              <a href="#" class="qh__nav-minor__link  qh__nav-minor__link__sub">Child item 3</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </li>
+
+    {# Repeat of the above but open on page load #}
+    <li class="qh__nav-minor__item qh__nav-minor__has-children">
+      <button
+
+        {# To be open on page load, simply set this to true #}
+        aria-expanded="true"
+
+        class="qh__nav-minor__link qh__nav-minor__link--current qh__accordion__button js-qh-accordion-trigger"
+        aria-controls="details-unique2"
+        data-id="unique2"
+        id="summary-unique2"
+        >
+        <span class="qh__accordion__button__summary">
+          Link with children again
+          <span class="qh__icon">
+            {% include ('@icons/plus-minus.svg') %}
+          </span>
+        </span>
+      </button>
+      <div
+        id="details-unique1"
+        role="region"
+        aria-labelledby="summary-unique2"
+        class="qh__accordion__content js-qh-accordion-panel"
+        >
+        <div>
+
+          {# Submenu #}
+          <ul class="qh__nav-minor__list qh__nav-minor__list__sub">
+            <li class="qh__nav-minor__item  qh__nav-minor__item__sub">
+              <a href="#" class="qh__nav-minor__link  qh__nav-minor__link__sub">Child item 1</a>
+            </li>
+            <li class="qh__nav-minor__item  qh__nav-minor__item__sub">
+              <a href="#" class="qh__nav-minor__link  qh__nav-minor__link__sub">Child item 2</a>
+            </li>
+            <li class="qh__nav-minor__item  qh__nav-minor__item__sub">
+              <a href="#" class="qh__nav-minor__link  qh__nav-minor__link__sub">Child item 3</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </li>
+
+    <li class="qh__nav-minor__item">
+      <a href="#" class="qh__nav-minor__link">
+        No children, no cry
+      </a>
+    </li>
+
+    <li class="qh__nav-minor__item">
+      <a href="#" class="qh__nav-minor__link qh__nav-minor__link--current">
+        Current page link
+      </a>
+    </li>
+
+  </ul>
+</nav>

@@ -1,0 +1,131 @@
+.qh__nav-minor {
+  border-top: $border-lg solid var(--fc__nav-minor__border);
+  background-color: var(--fc__nav-minor__bg);
+
+  // PL only
+  .pl-js-pattern-example & {
+    margin: 0 auto;
+    max-width: em(320);
+  }
+
+  a {
+    display: block;
+    transition: $transition-base;
+  }
+
+  // UL
+  &__list {
+
+    &.qh__accordion {
+      border: $border-xs solid transparent;
+    }
+
+    &__sub {
+      background-color: var(--c__white--trans33);
+      // Negate some spacing coming from .qh__accordion__content
+      margin: #{- $nav-a-v-spacing} #{- $nav-a-h-spacing} #{- $nav-a-v-spacing} #{- ($nav-a-v-spacing/2)};
+    }
+  }
+
+  // LI
+  &__item {
+    position: relative;
+    overflow: visible;
+
+    &__has-children {}
+
+    &__sub {}
+
+    &:not(&__sub) + &:not(&__sub)::before {
+      border-top: $border-sm solid var(--fc__default__bg);
+      content: '';
+      display: block;
+      height: 0;
+      margin: 0 em(8);
+    }
+  }
+
+  // Restyling accordion elements classes
+  .qh__accordion__button {
+
+    &[aria-expanded="true"] {
+      background-color: var(--fc__nav-minor__link--hover__bg);
+    }
+
+    .qh__icon__plusminus {
+      &__circle {
+        fill: var(--fc__nav-minor__link--hover__bg);
+      }
+      &__vert,
+      &__horiz {
+        fill: var(--fc__nav-minor__link);
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &[aria-expanded="true"] {
+      .qh__icon__plusminus {
+        &__circle {
+          fill: var(--fc__default__bg);
+        }
+        &__vert,
+        &__horiz {
+          fill: var(--fc__nav-minor__link--hover);
+        }
+      }
+    }
+  }
+
+  // A & Buttons
+  .qh__accordion__button,
+  &__link {
+    font-weight: normal; // TODO: Reset with the proper weight
+    padding: $nav-a-v-spacing $nav-a-h-spacing--sm;
+
+    &,
+    &:visited {
+      background-color: transparent;
+      color: var(--fc__nav-minor__link);
+      text-decoration: none;
+    }
+
+    &:not(&--current):hover,
+    &:not(&--current):focus {
+      background-color: var(--fc__nav-minor__link--hover__bg);
+      color: var(--fc__nav-minor__link--hover);
+    }
+
+    &:focus {
+      outline-color: var(--fc__nav-main__link--focus);
+      outline-offset: -2px;
+    }
+
+    &:active {
+      color: var(--fc__nav-main__link--active);
+    }
+
+    &--current,
+    &--current:hover,
+    &--current:focus {
+      background-color: var(--fc__nav-minor__bg);
+      color: var(--fc__nav-minor__fg);
+      font-weight: 500; // TODO: Reset with the proper weight
+      text-decoration: none;
+    }
+  }
+
+  &__link {
+
+    &__sub {
+      font-size: 0.875em; // TODO: Reset with the proper size
+    }
+
+    // Treat a current link as disabled. It should not have a visual state change
+    &--current,
+    &--current:hover,
+    &--current:focus {
+      cursor: default;
+    }
+  }
+}
