@@ -72,6 +72,7 @@
   &__item {
     position: relative;
     overflow: visible;
+    z-index: 10000;
 
     &__sub + &__sub::before {
       border-top: em(2) solid var(--fc__navigation__bg);
