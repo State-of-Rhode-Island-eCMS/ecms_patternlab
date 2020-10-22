@@ -1,0 +1,33 @@
+.site-branding {
+  display: flex;
+  align-items: center;
+  margin: 1rem 1rem 1rem 0;
+  &__logo {
+    margin-right: 1rem;
+    display: block; 
+    width: 3rem;
+    min-height: 4.5rem;
+  }
+  &__name {
+    &__top-line {
+      font-family: $font-sans-vf;
+      font-size: 0.875rem;
+      font-weight: 450;
+      letter-spacing: 0.035em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+    &__main-line {
+      font-family: $font-serif-vf;
+      font-size: 3rem;
+      font-weight: 300;
+      line-height: 1.1;
+    }
+    &__bottom-line {
+      font-family: $font-sans-vf;
+      font-size: 1rem;
+      font-weight: 350;
+      line-height: 1.5;
+    }
+  }
+}

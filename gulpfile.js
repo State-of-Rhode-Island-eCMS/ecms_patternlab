@@ -66,7 +66,8 @@ const scssSourcePaths = [
 ];
 
 const javascriptSourcePaths = [
-  "source/**/*.js"
+  "source/**/*.js",
+  "!source/vendor/*.js"
 ];
 
 const patternLabSourcePaths = [

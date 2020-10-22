@@ -58,7 +58,8 @@
       "js": "./source/js",
       "images": "./source/images",
       "fonts": "./source/fonts",
-      "css": "./source/css"
+      "css": "./source/css",
+      "vendor": "./source/vendor"
     },
     "public": {
       "root": "public/",
@@ -69,7 +70,8 @@
       "js": "public/js",
       "images": "public/images",
       "fonts": "public/fonts",
-      "css": "public/css"
+      "css": "public/css",
+      "vendor": "public/vendor"
     }
   },
   "patternExtension": "twig",
@@ -155,6 +157,13 @@
           "recursive": true,
           "paths": [
             "source/_macros"
+          ]
+        },
+        {
+          "id": "icons",
+          "recursive": true,
+          "paths": [
+            "source/images/icons"
           ]
         }
       ],

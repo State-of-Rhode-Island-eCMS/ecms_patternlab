@@ -18,17 +18,38 @@ function addCustomExtension(\Twig_Environment &$env, $config) {
    * @param string $theString
    * @example `<p>{{ reverse('abc') }}</p>` => `<p>cba</p>`
    */
-//  $env->addFunction(new \Twig_SimpleFunction('reverse', function ($theString) {
-//    return strrev($theString);
-//  }));
-
+  // $env->addFunction(new \Twig_SimpleFunction('reverse', function ($theString) {
+  //   return strrev($theString);
+  // }));
 
 //  $env->addExtension(new \My\CustomExtension());
 
 //  `{{ foo }}` => `bar`
 //  $env->addGlobal('foo', 'bar');
 
-  // example of enabling the Twig debug mode extension (ex. {{ dump(my_variable) }} to check out the template's available data) -- comment out to disable
+  // Add drupal filters
+  // |t
+  $env->addFilter(new \Twig_SimpleFilter('t', function ($theString) {
+    return $theString;
+  }));
+
+  // |render
+  $env->addFilter(new \Twig_SimpleFilter('render', function ($theArray) {
+    return $theArray;
+  }));
+
+  // Add drupal functions.
+  // link()
+  $env->addFunction(new \Twig_SimpleFunction('link', function ($title, $url, $attributes) {
+    if (isset($attributes) && isset($attributes['class'])) {
+      $classes = join(' ', $attributes['class']);
+      return '<a href="' . $url . '" class="' . $classes . '">' . $title . '</a>';
+    } else {
+      return '<a href="' . $url . '">' . $title . '</a>';
+    }
+  }));
+
+  // Enable debug.
   $env->addExtension(new \Twig_Extension_Debug());
 
 }

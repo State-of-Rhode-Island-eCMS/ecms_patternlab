@@ -1,6 +1,29 @@
+{#
+/**
+ * @file
+ * Theme override to display the page header.
+ *
+ * Available variables:
+ *
+ *
+ * Site name:
+ * - header_preprocess_values: Array of three text lines from the theme settings configuration with three values (only main_line is required)
+ *   - top_line
+ *   - main_line
+ *   - bottom_line
+ *
+ *
+ * @see template_preprocess_page()
+ */
+#}
 <header role="banner" class="page-header">
   {% include '@organisms/global-header/global-header.twig' %}
 
-logo stuff goes here
+  <div class="content-wrapper">
+    {% include '@molecules/site-branding/site-branding.twig' with {
+      header_preprocess_values: header_preprocess_values
+    }
+    %}
+  </div>
 
 </header>

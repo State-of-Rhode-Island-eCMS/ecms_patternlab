@@ -1,0 +1,28 @@
+// Used to remove browser styles from button elements
+@mixin button-reset {
+  border: 0;
+  margin: 0;
+  -webkit-appearance: none;
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+// Icon sizing
+$icon-dimension: rem(44);
+
+@mixin icon-size() {
+  display: block;
+  height: $icon-dimension;
+  width: $icon-dimension;
+}
+
+// Content max-width
+@mixin qh-content-maxwidth() {
+  margin: 0 auto;
+  max-width: $content-max-width;
+  @supports (width: min(10px, 5px)) {
+    max-width: var(--content-max-width);
+  }
+}
