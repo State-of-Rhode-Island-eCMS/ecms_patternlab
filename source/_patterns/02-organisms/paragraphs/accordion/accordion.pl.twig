@@ -1,10 +1,27 @@
-<div class="qh-accordion">
-  <h3>
-    <button data-id="1" id="accordion-button-{{pid}}" aria-controls="accordion-panel-{{pid}}" aria-expanded="false">
-      {{ paragraph.field_item_text.value }}
-    </button>
-  </h3>
-  <div class="qh-accordion__panel" id="accordion-panel-{{pid}}" tabindex="-1" aria-labelledby="accordion-button-{{pid}}">
-    {{ content.field_item_flexible_text }}
+<div class="qh__accordion js-qh-accordion" data-allow-toggle>
+  <button
+    aria-expanded="false"
+    class="qh__accordion__button js-qh-accordion-trigger"
+    aria-controls="details-{{pid}}"
+    data-id="{{pid}}"
+    id="summary-{{pid}}"
+    >
+    <span class="qh__accordion__button__summary">
+      <strong>{{ paragraph.field_item_text.value }}</strong>
+      <span class="qh__icon">
+        <?xml version="1.0" encoding="utf-8"?><svg class="qh__icon__plusminus" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 44 44" style="enable-background:new 0 0 44 44;" xml:space="preserve"><circle class="qh__icon__plusminus__circle" cx="22" cy="22" r="12"/><rect class="qh__icon__plusminus__horiz" x="14.5" y="20.5" width="15" height="3"/><rect class="qh__icon__plusminus__vert" x="15" y="20.5" transform="matrix(7.691720e-11 -1 1 7.691720e-11 -1.691951e-09 44)" width="14" height="3"/>
+</svg>
+      </span>
+    </span>
+  </button>
+  <div
+    id="details-{{pid}}"
+    role="region"
+    aria-labelledby="summary-{{pid}}"
+    class="qh__accordion__content js-qh-accordion-panel"
+    >
+    <div>
+      {{ content.field_item_flexible_text }}
+    </div>
   </div>
 </div>

@@ -1,11 +1,12 @@
 {
 	"pid" : 1,
 	"content" : {
-    "field_item_flexible_text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis eget felis vitae molestie. Nullam viverra a enim et sollicitudin. Vestibulum enim nibh, malesuada ac enim vitae, lacinia ornare sapien. Morbi maximus mauris imperdiet neque elementum scelerisque. Phasellus tempor nunc augue, placerat consectetur ex laoreet quis. Aenean in elit feugiat, posuere leo vel, sagittis velit. Nunc nec arcu placerat, fermentum erat a, placerat erat.</p>"
+    "field_item_flexible_text": "<p>In fish markets, there are specialist names for different sizes of this species of clam. The smallest legally harvestable clams are called countnecks or peanuts, next size up are littlenecks, then topnecks. Above that are the cherrystones, and the largest are called quahogs or chowder clams.</p>
+    <p>Rhode Island is situated right in the middle of “quahog country” and has supplied a quarter of the U.S.’s total annual commercial quahog catch. The quahog is the official shellfish of the U.S. state of Rhode Island.</p>"
   },
   "paragraph": {
     "field_item_text": {
-      "value": "An accordion title"
+      "value": "What is a Quahog? And what happens when there is a lot of text in the summary field?"
     }
   }
 }
