@@ -77,7 +77,7 @@
 #}
 {{ menus.menu_links(items, attributes, 0, 0, FALSE) }}
 
-{% macro menu_links(items, attributes, menu_level, generated_id, sub_menu_item) %}
+{% macro menu_links(items, attributes, menu_level, generated_id, sub_menu_item, dropdown_item) %}
   {% import _self as menus %}
 
   {% if items %}
@@ -97,6 +97,11 @@
     {% else %}
       {# Subnavigation list wrapper #}
       <ul class="qh__navigation__list qh__navigation__list__sub" aria-labelledby="menu-{{ generated_id }}">
+
+        {# Append an overview link to top of dropdown list. #}
+        <li class="qh__navigation__item qh__navigation__item__sub">
+          <a href="{{ dropdown_item.url }}" class="qh__navigation__link__sub {{ item.in_active_trail ? qh__navigation__link--current }}">{{ "Overview"|t }}</a>
+        </li>
     {% endif %}
 
     {% for item in items %}
@@ -124,7 +129,7 @@
             </span>
           </a>
           {% if item.below %}
-            {{ menus.menu_links(item.below, attributes, menu_level + 1, link_id, TRUE) }}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1, link_id, TRUE, item)  }}
           {% endif %}
         </li>
       {% else %}
