@@ -17,7 +17,9 @@
  */
 #}
     <div class="site-branding">
-      <a href="#" rel="home" class="site-branding__logo"> </a>
+      <a href="#" rel="home" class="site-branding__logo">
+        {% include ('@icons/default-logo.svg') %}
+      </a>
 
       <div class="site-branding__name">
         <div class="site-branding__name__top-line">{{ header_preprocess_values.top_line }}</div>
