@@ -1,5 +1,10 @@
+// Z-index map-get helper
+@function z($key) {
+  @return map-get($zindex, $key);
+}
+
 // Used to remove browser styles from button elements
-@mixin button-reset {
+@mixin qh-button-reset {
   border: 0;
   margin: 0;
   -webkit-appearance: none;
@@ -9,10 +14,7 @@
   }
 }
 
-// Icon sizing
-$icon-dimension: rem(44);
-
-@mixin icon-size() {
+@mixin qh-icon-size() {
   display: block;
   height: $icon-dimension;
   width: $icon-dimension;

@@ -1,6 +1,15 @@
 // All headers
 $all-headers: 'h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6';
 
+// Borders
+$border-xs: rem(1);
+$border-sm: rem(2);
+$border-md: rem(6); // Not used yet, feel free to change
+$border-lg: rem(14);
+$border-xl: rem(21);
+
+// Box Shadows
+$box-shadow-base: 0 0.125em 0.5em var(--c__quahog--dark--trans33);
 
 // Content max-width
 $content-max-small-screen: 93vw;
@@ -14,9 +23,23 @@ body {
   --content-max-width: min(#{$content-max-small-screen}, #{$content-max-large-screen});
 }
 
-// Box Shadows
-$box-shadow-base: 0 0.125em 0.5em var(--c__quahog--dark--trans33);
+// Icon sizing
+$icon-dimension: rem(44);
 
 // Transitions
 $transition-base: all 250ms ease;
 $transition-medium: all 500ms ease;
+
+// Spacing on similar components
+
+// Navigation: Main, secondary (side), and accordions
+$nav-a-v-spacing: 1rem;
+$nav-a-v-spacing--sm: rem(10);
+$nav-a-h-spacing: 1.5rem;
+$nav-a-h-spacing--sm: 1rem;
+
+// Z-indices
+$zindex: (
+  base: 1,
+  drop-down-menu: 10000
+);

@@ -8,11 +8,8 @@
  */
 
 .qh__accordion {
-  $element-v-spacing: 1rem;
-  $element-h-spacing: 1.5rem;
-
-  border: 1px solid var(--c__coffee-milk);
-  margin-bottom: $element-v-spacing;
+  border: $border-xs solid var(--c__coffee-milk);
+  margin-bottom: $nav-a-v-spacing;
 
   &:hover,
   &:focus,
@@ -22,29 +19,29 @@
   }
 
   .qh__icon {
-    @include icon-size();
+    @include qh-icon-size();
     pointer-events: none;
   }
 
   &__title {}
 
   &__button {
-    @include button-reset;
-    background: var(--c__coffee-milk--trans25);
+    @include qh-button-reset;
+    background-color: var(--c__coffee-milk--trans25);
     color: var(--fc__default__fg);
     cursor: pointer;
     display: block;
     font-family: $font-sans-vf;
-    font-size: 1.25rem; // clean up with proper font-size prop
+    font-size: 1.25rem; // TODO: Reset with the proper
     outline: none;
-    padding: $element-v-spacing $element-h-spacing;
+    padding: $nav-a-v-spacing $nav-a-h-spacing;
     text-align: left;
     transition: $transition-base;
     width: 100%;
 
     &:hover,
     &:focus {
-      background: var(--fc__default__bg);
+      background-color: var(--fc__default__bg);
       color: var(--fc__default__fg);
     }
 
@@ -65,7 +62,7 @@
     }
 
     .qh__icon {
-      margin: -0.5em -0.5em -0.5em $element-h-spacing;
+      margin: -0.5em -0.5em -0.5em $nav-a-h-spacing;
       min-width: $icon-dimension;
 
       &__plusminus {
@@ -85,7 +82,7 @@
     }
 
     &[aria-expanded="true"] {
-      background: var(--fc__default__bg);
+      background-color: var(--fc__default__bg);
 
       .qh__icon__plusminus__vert {
         transform: rotate(-360deg);
@@ -109,7 +106,7 @@
 
     .js [aria-expanded="true"] + & {
       max-height: unset;
-      padding: $element-v-spacing $element-h-spacing;
+      padding: $nav-a-v-spacing $nav-a-h-spacing;
       transition: max-height 0s linear 500s;
 
       > div {
