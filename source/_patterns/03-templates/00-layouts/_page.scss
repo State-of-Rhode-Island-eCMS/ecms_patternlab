@@ -1,0 +1,8 @@
+// Temp styles that need reworked.
+.layout-container {
+  .layout-content:not(.landing-page) {
+    @include qh-content-maxwidth();
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
