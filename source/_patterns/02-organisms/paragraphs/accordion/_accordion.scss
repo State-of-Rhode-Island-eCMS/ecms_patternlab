@@ -91,6 +91,8 @@
   }
 
   &__content {
+    // In case any content inside is floated, which might be possible
+    @include clearfix();
 
     // TODO: Transitions not firing as we want them to
     .js & {
