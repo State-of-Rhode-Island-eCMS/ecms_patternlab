@@ -21,7 +21,7 @@
     }
 
     &__sub {
-      background-color: var(--c__white--trans33);
+      background-color: var(--fc__nav-minor__sub__bg);
       // Negate some spacing coming from .qh__accordion__content
       margin: #{- $nav-a-v-spacing} #{- $nav-a-h-spacing} #{- $nav-a-v-spacing} #{- ($nav-a-v-spacing/2)};
     }
@@ -85,7 +85,7 @@
 
     &,
     &:visited {
-      background-color: transparent;
+      background-color: var(--fc__nav-minor__link__bg);
       color: var(--fc__nav-minor__link);
       text-decoration: none;
     }
@@ -104,15 +104,15 @@
     &:active {
       color: var(--fc__nav-main__link--active);
     }
+  }
 
-    &--current,
-    &--current:hover,
-    &--current:focus {
-      background-color: var(--fc__nav-minor__bg);
-      color: var(--fc__nav-minor__fg);
-      font-weight: 500; // TODO: Reset with the proper weight
-      text-decoration: none;
-    }
+  .qh__accordion__button.qh__nav-minor__link--current[aria-expanded="true"],
+  .qh__accordion__button.qh__nav-minor__link--current[aria-expanded="true"]:hover,
+  .qh__accordion__button.qh__nav-minor__link--current[aria-expanded="true"]:focus {
+    background-color: var(--fc__nav-minor__bg);
+    color: var(--fc__nav-minor__fg);
+    font-weight: 500; // TODO: Reset with the proper weight
+    text-decoration: none;
   }
 
   &__link {
@@ -126,6 +126,15 @@
     &--current:hover,
     &--current:focus {
       cursor: default;
+    }
+
+    &--current,
+    &--current:hover,
+    &--current:focus {
+      background-color: var(--fc__nav-minor__bg);
+      color: var(--fc__nav-minor__fg);
+      font-weight: 500; // TODO: Reset with the proper weight
+      text-decoration: none;
     }
   }
 }

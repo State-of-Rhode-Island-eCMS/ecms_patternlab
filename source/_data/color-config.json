@@ -12,6 +12,18 @@
       "hsl": "hsla(0, 0%, 100%, 0.33)",
       "needs": "dark-text"
     },
+    "white--trans25": {
+      "name": "White",
+      "hue": "white",
+      "hsl": "hsla(0, 0%, 100%, 0.25)",
+      "needs": "dark-text"
+    },
+    "transparent": {
+      "name": "white 100% transparent",
+      "hue": "white",
+      "hsl": "hsla(0, 0, 100%, 0)",
+      "needs": "dark-text"
+    },
     "quahog--dark": {
       "name": "Quahog dark",
       "hue": "black",
@@ -222,10 +234,12 @@
           { "fnName": "fg", "colorName": "quahog--dark" },
           { "fnName": "bg", "colorName": "ocean--trans25" },
           { "fnName": "link", "colorName": "navy" },
+          { "fnName": "link__bg", "colorName": "transparent" },
           { "fnName": "link--hover", "colorName": "navy--dark" },
           { "fnName": "link--hover__bg", "colorName": "ocean--trans25" },
           { "fnName": "link--focus", "colorName": "calamari" },
-          { "fnName": "link--active", "colorName": "calamari" }
+          { "fnName": "link--active", "colorName": "calamari" },
+          { "fnName": "sub__bg", "colorName": "white--trans25" }
         ],
         "footer": [
           { "fnName": "fg", "colorName": "white" },
@@ -273,7 +287,24 @@
           { "fnName": "link--active", "colorName": "calamari" },
           { "fnName": "hx__fg", "colorName": "coffee-milk" }
         ],
+        "nav-minor": [
+          { "fnName": "border", "colorName": "ocean" },
+          { "fnName": "fg", "colorName": "quahog--light" },
+          { "fnName": "bg", "colorName": "ocean--trans25" },
+          { "fnName": "link", "colorName": "quahog--light" },
+          { "fnName": "link__bg", "colorName": "transparent" },
+          { "fnName": "link--hover", "colorName": "white" },
+          { "fnName": "link--hover__bg", "colorName": "quahog--dark--trans15" },
+          { "fnName": "link--focus", "colorName": "calamari" },
+          { "fnName": "link--active", "colorName": "calamari" },
+          { "fnName": "sub__bg", "colorName": "quahog--dark--trans15" }
+        ],
         "primary": [
+          { "fnName": "fg", "colorName": "white" },
+          { "fnName": "bg", "colorName": "quahog--dark" },
+          { "fnName": "hx__fg", "colorName": "ocean" }
+        ],
+        "primary--light": [
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "quahog" },
           { "fnName": "hx__fg", "colorName": "ocean" }
