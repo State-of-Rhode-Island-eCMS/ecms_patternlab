@@ -221,6 +221,7 @@
         "default": [
           { "fnName": "fg", "colorName": "quahog" },
           { "fnName": "bg", "colorName": "white" },
+          { "fnName": "border", "colorName": "quahog--dark--trans15" },
           { "fnName": "link", "colorName": "navy--sat" },
           { "fnName": "link--hover", "colorName": "navy--sat-lgt" },
           { "fnName": "link--focus", "colorName": "navy" },
@@ -228,6 +229,13 @@
           { "fnName": "link--active", "colorName": "calamari" },
           { "fnName": "hx__fg", "colorName": "quahog--medium" },
           { "fnName": "violator", "colorName": "calamari" }
+        ],
+        "icon": [
+          { "fnName": "pdf", "colorName": "rhody-red" },
+          { "fnName": "word", "colorName": "navy" },
+          { "fnName": "excel", "colorName": "green-animals" },
+          { "fnName": "generic", "colorName": "ocean" },
+          { "fnName": "download", "colorName": "quahog--medium" }
         ],
         "nav-minor": [
           { "fnName": "border", "colorName": "ocean" },
