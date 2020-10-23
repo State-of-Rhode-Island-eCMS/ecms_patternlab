@@ -5,6 +5,18 @@
 }
 // stylelint-enable property-no-unknown
 
+
+// Keep things DRY
+@mixin qh-output-color-var($block, $section) {
+  @each $element in $section {
+    //@debug #{'block= ' + $block};
+    //@debug #{'element= ' + map-get($element,'fnName')};
+    //@debug #{'colorName= ' + map-get($element, 'colorName')};
+    --fc__#{$block}__#{map-get($element,'fnName')}: #{map-get(map-get($colors, map-get($element, 'colorName')), 'hsl')};
+  }
+}
+
+
 // Outputs all the colors from colors.json as custom props
 html {
   //@debug #{$colors};
@@ -22,23 +34,40 @@ html {
       // All functional color names are output without a theme class around them
       $values: map-get($palette, 'values');
       @each $block, $section in $values {
-        @each $element in $section {
-          //@debug #{'block= ' + $block};
-          //@debug #{'element= ' + map-get($element,'fnName')};
-          //@debug #{'colorName= ' + map-get($element, 'colorName')};
-          --fc__#{$block}__#{map-get($element,'fnName')}: #{map-get(map-get($colors, map-get($element, 'colorName')), 'hsl')};
-        }
+        @include qh-output-color-var($block, $section);
       }
     } @else {
       .qh__t__#{$key} {
         $values: map-get($palette, 'values');
         @each $block, $section in $values {
-          @each $element in $section {
-            --fc__#{$block}__#{map-get($element,'fnName')}: #{map-get(map-get($colors, map-get($element, 'colorName')), 'hsl')};
-          }
+          @include qh-output-color-var($block, $section);
         }
       }
     }
     $num: $num + 1;
+  }
+
+  // Loop again on Dark palettes only. Repetitive, but it works
+  @media (prefers-color-mode: dark) {
+    $num: 1;
+    @each $key, $palette in $palettes {
+      $values: map-get($palette, 'values');
+      //@debug #{'key= ' + $key};
+      @if str-index($key, "--dark") {
+        @if $num == 1 {
+          @each $block, $section in $values {
+            @include qh-output-color-var($block, $section);
+          }
+        } @else {
+          .qh__t__#{$key} {
+            $values: map-get($palette, 'values');
+            @each $block, $section in $values {
+              @include qh-output-color-var($block, $section);
+            }
+          }
+        }
+        $num: $num + 1;
+      }
+    }
   }
 }
