@@ -20,6 +20,19 @@
   width: $icon-dimension;
 }
 
+@mixin qh-lest-reset() {
+  list-style: none;
+  margin: 0;
+
+  li {
+    margin-left: 0;
+
+    + li {
+      margin-top: 0;
+    }
+  }
+}
+
 // Content max-width
 @mixin qh-content-maxwidth() {
   margin: 0 auto;

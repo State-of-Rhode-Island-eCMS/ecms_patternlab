@@ -23,6 +23,10 @@ body {
   --content-max-width: min(#{$content-max-small-screen}, #{$content-max-large-screen});
 }
 
+// Generic page gutter, column spacing, vertical spacing
+$general-v-spacing: 1rem;
+$general-h-spacing: 1.5rem;
+
 // Icon sizing
 $icon-dimension: rem(44);
 
