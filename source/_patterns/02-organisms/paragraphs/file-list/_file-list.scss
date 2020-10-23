@@ -1,0 +1,110 @@
+.qh__file-list {
+
+  // Icon colors
+  .qh__icon__file-pdf__path {
+    fill: var(--fc__icon__pdf);
+  }
+
+  .qh__icon__file-word__path {
+    fill: var(--fc__icon__word);
+  }
+
+  .qh__icon__file-excel__path {
+    fill: var(--fc__icon__excel);
+  }
+
+  .qh__icon__file-generic {
+    fill: var(--fc__icon__generic);
+  }
+
+  .qh__icon__download {
+    fill: var(--fc__icon__download);
+  }
+
+  &__inner {
+    padding: $general-v-spacing $general-h-spacing;
+  }
+
+  // UL
+  &__list {}
+
+  // LI
+  &__item {
+
+    & + & {
+      border-top: $border-xs solid var(--fc__default__border);
+    }
+
+    &__icon,
+    &__download {
+      @include qh-icon-size();
+      flex: 0 0 ($icon-dimension + ($general-h-spacing/2));
+    }
+
+    &__icon {
+      padding-right: ($general-h-spacing/2);
+    }
+
+    &__filename {
+      padding: $general-v-spacing 0;
+    }
+
+    // span
+    &__label {
+      display: block;
+    }
+
+    // span
+    &__filesize {
+      color: var(--fc__default__fg);
+      display: block;
+      font-size: 87.5%;
+    }
+
+    &__download {
+      margin-left: auto;
+      padding-left: ($general-h-spacing/2);
+    }
+  }
+
+  // A
+  &__link {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 ($general-h-spacing/2);
+    text-decoration: none;
+    transition: $transition-base;
+
+    &,
+    &:visited {
+      background-color: transparent;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--c__coffee-milk--trans25);
+    }
+  }
+
+  // Hover on elements
+  &__link &__item__label,
+  &__link &__item__download  {
+    transition: $transition-base;
+  }
+
+  &__link:hover &__item__label,
+  &__link:focus &__item__label {
+    text-decoration: underline;
+  }
+
+  &__link:hover &__item__download,
+  &__link:focus &__item__download {
+    transform: translateY(3px);
+
+    .qh__icon__download {
+      fill: var(--fc__default__link--hover);
+    }
+  }
+}
