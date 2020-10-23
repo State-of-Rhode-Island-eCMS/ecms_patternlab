@@ -106,15 +106,6 @@
     }
   }
 
-  .qh__accordion__button.qh__nav-minor__link--current[aria-expanded="true"],
-  .qh__accordion__button.qh__nav-minor__link--current[aria-expanded="true"]:hover,
-  .qh__accordion__button.qh__nav-minor__link--current[aria-expanded="true"]:focus {
-    background-color: var(--fc__nav-minor__bg);
-    color: var(--fc__nav-minor__fg);
-    font-weight: 500; // TODO: Reset with the proper weight
-    text-decoration: none;
-  }
-
   &__link {
 
     &__sub {
@@ -130,7 +121,10 @@
 
     &--current,
     &--current:hover,
-    &--current:focus {
+    &--current:focus,
+    &--current.qh__accordion__button[aria-expanded="true"],
+    &--current.qh__accordion__button[aria-expanded="true"]:hover,
+    &--current.qh__accordion__button[aria-expanded="true"]:focus {
       background-color: var(--fc__nav-minor__bg);
       color: var(--fc__nav-minor__fg);
       font-weight: 500; // TODO: Reset with the proper weight
