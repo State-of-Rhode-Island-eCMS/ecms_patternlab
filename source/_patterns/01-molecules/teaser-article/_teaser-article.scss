@@ -1,0 +1,54 @@
+.qh__teaser-article {
+  position: relative;
+  z-index: 1;
+
+  // <header>
+  &__header {
+    padding-bottom: $general-v-spacing;
+  }
+
+  &__title {
+    margin: 0;
+
+    a,
+    a:visited {
+      text-decoration: none;
+    }
+  }
+
+  &__published {
+    margin-top: ($general-v-spacing/2);
+
+    time {
+      font-size: 87.5%; // about 16px
+    }
+  }
+
+  // <div> wrapper
+  &__content {
+    padding-bottom: $general-v-spacing;
+  }
+
+  // <p>
+  &__excerpt {}
+
+  // <p>
+  &__cta {
+    padding-top: ($general-v-spacing/2);
+  }
+
+  // <a>
+  &__link {
+
+    // Do we want this effect? The whole article card is now clickable
+    // and sighted keyboard users still can target the two links within
+    // From https://inclusive-components.design/cards/
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      @include qh-inset-supports(0);
+      overflow: visible;
+    }
+  }
+}
