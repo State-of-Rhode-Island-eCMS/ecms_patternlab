@@ -1,6 +1,7 @@
 .qh__nav-minor {
   border-top: $border-lg solid var(--fc__nav-minor__border);
   background-color: var(--fc__nav-minor__bg);
+  min-width: 20rem;
 
   a {
     display: block;
