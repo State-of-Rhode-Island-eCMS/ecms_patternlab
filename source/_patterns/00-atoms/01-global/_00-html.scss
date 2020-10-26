@@ -1,7 +1,7 @@
 html {
-  background-color: var(--fc__body--bg);
+  background-color: var(--fc__default__bg);
   box-sizing: border-box;
-  color: var(--fc__body--fg);
+  color: var(--fc__default__fg);
   font-size: 100%;
 }
 
@@ -20,6 +20,11 @@ body {
 a:focus {
   outline: 2px solid var(--fc__default__link--focus);
   outline-offset: 2px;
+}
+
+::selection {
+  background-color: var(--fc__primary__bg);
+  color: var(--fc__primary__fg);
 }
 
 nav ul,
