@@ -14,13 +14,30 @@
   }
 }
 
+// Icons
 @mixin qh-icon-size() {
   display: block;
   height: $icon-dimension;
   width: $icon-dimension;
 }
 
-@mixin qh-lest-reset() {
+// Inset
+// One value must be declared
+@mixin qh-inset-supports($value) {
+  $split-value: str-split($value, ' ');
+
+  inset: $value;
+
+  @supports not (inset: $value) {
+    top: $value;
+    right: $value;
+    bottom: $value;
+    left: $value;
+  }
+}
+
+// Lists
+@mixin qh-list-reset() {
   list-style: none;
   margin: 0;
 

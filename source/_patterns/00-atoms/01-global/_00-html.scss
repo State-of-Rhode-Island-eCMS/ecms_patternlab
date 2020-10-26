@@ -24,7 +24,7 @@ a:focus {
 
 nav ul,
 nav ol {
-  @include qh-lest-reset;
+  @include qh-list-reset;
 }
 
 // Remove visible focus for mouse users only
