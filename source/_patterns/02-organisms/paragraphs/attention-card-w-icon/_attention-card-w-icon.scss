@@ -1,0 +1,101 @@
+.qh__icon-card {
+  $card-header-min-height--sm: rem(72); // approx 3 lines of an h3
+  $card-header-min-height--lg: rem(70); // approx 2 lines of an h3
+  $card-leftbar-width: rem(48);
+
+  background-color: var(--fc__default__bg);
+  color: var(--fc__default__fg);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  // Light colored background
+  &::before {
+    background-color: var(--fc__primary--light__bg);
+    content: '';
+    opacity: 0.25;
+    position: absolute;
+    @include qh-inset-supports(0);
+    z-index: -2;
+  }
+
+  // Dark colored bar
+  &::after {
+    background-color: var(--fc__primary--light__bg);
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: $card-leftbar-width;
+    z-index: -1;
+  }
+
+  &__icon {
+    color: var(--fc__primary--light__fg);
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: $general-v-spacing;
+    margin-left: ($general-h-spacing/2);
+    min-height: $card-header-min-height--sm;
+    width: ($card-leftbar-width + $general-h-spacing);
+
+    path {
+      fill: currentColor;
+    }
+
+    // Assuming this will be the actual icon
+    > span {
+      position: relative;
+      overflow: visible;
+      z-index: 1;
+
+      &::before {
+        background-color: var(--fc__primary--light__bg);
+        border-radius: 50%;
+        content: '';
+        display: block;
+        height: ($icon-dimension * 1.5);
+        width: ($icon-dimension * 1.5);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+    }
+
+    @media (min-width: $bp--large) {
+      min-height: $card-header-min-height--lg;
+    }
+  }
+
+  &__content {
+    color: var(--fc__primary--light__fg);
+    padding: $general-v-spacing $general-h-spacing;
+  }
+
+  &__title {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: $card-header-min-height--sm;
+    margin-bottom: ($general-v-spacing/2);
+
+    #{$all-headers} {
+      color: var(--fc__primary--light__fg);
+      margin: 0;
+    }
+
+    @media (min-width: $bp--large) {
+      min-height: $card-header-min-height--lg;
+    }
+  }
+}

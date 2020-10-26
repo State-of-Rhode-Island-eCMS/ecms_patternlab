@@ -8,18 +8,11 @@
   }
 
   // Icons used in the nav
-  .qh__icon__home,
-  .qh__icon__chevron-down {
-    @include qh-icon-size();
-  }
-
-  .qh__icon__chevron-down {
+  .qh__icon {
     margin: -0.75em -0.75em -0.75em 0;
   }
 
   .qh__icon__home {
-    margin: 0;
-
     &__shape {
       fill: var(--fc__nav-main__icon__fg);
     }
@@ -189,6 +182,10 @@
     }
 
     // Exception
+    &--home .qh__icon {
+      margin: 0;
+    }
+
     &--home,
     &--home:visited {
       border-top: 0;

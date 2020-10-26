@@ -37,7 +37,6 @@
 
     &__icon,
     &__download {
-      @include qh-icon-size();
       flex: 0 0 ($icon-dimension + ($general-h-spacing/2));
     }
 
