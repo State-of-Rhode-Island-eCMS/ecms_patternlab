@@ -309,13 +309,13 @@
         ],
         "primary": [
           { "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "quahog--dark" },
+          { "fnName": "bg", "colorName": "navy--trans50" },
           { "fnName": "hx__fg", "colorName": "ocean" }
         ],
         "primary--light": [
           { "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "quahog" },
-          { "fnName": "hx__fg", "colorName": "ocean" }
+          { "fnName": "bg", "colorName": "ocean--trans25" },
+          { "fnName": "hx__fg", "colorName": "white" }
         ]
       }
     },
