@@ -14,7 +14,7 @@
     {# Main list wrapper only. Add nav wrapper. Add Home Link #}
     {% if menu_level == 0 %}
       <nav class="qh__nav-minor" aria-label="Secondary">
-        <ul class="qh__nav-minor__list qh__accordion js-qh-accordion" role="list">
+        <ul class="qh__nav-minor__list qh__accordion js-qh-accordion" role="list" data-allow-multiple>
 
     {% else %}
       {# Subnavigation wrapper #}
@@ -26,10 +26,6 @@
       >
         <div>
           <ul class="qh__nav-minor__list qh__nav-minor__list__sub">
-          {# Append an overview link to top of dropdown list. #}
-            <li class="qh__nav-minor__item qh__nav-minor__item__sub">
-              <a href="{{ dropdown_item.url }}" class="qh__nav-minor__link qh__nav-minor__link__sub">{{ "Overview"|t }}</a>
-            </li>
     {% endif %}
 
     {% for item in items %}
@@ -54,20 +50,16 @@
       {# If there is a menu item below this level. Add accordion and call the macro again. #}
       {% if (item.is_expanded and item.below) %}
         <li class="{{ list_item_classes }}">
-          <a href="{{ item.url }}" class="qh__nav-minor__link">{{ item.title }}{# THIS IS THE ANCHOR TO UPDATE #}</a>
-
+          <a href="{{ item.url }}" class="qh__nav-minor__link">{{ item.title }}</a>
           <button
             aria-expanded="{{ aria_expanded_status }}"
-            class=" qh__nav-minor__link qh__accordion__button js-qh-accordion-trigger"
+            class="qh__accordion__button js-qh-accordion-trigger"
             aria-controls="details-unique-{{ link_id }}"
             data-id="unique-{{ link_id }}"
             id="summary-unique-{{ link_id }}"
             >
-            <span class="qh__accordion__button__summary">
-              {{ item.title }}
-              <span class="qh__icon" aria-hidden="true">
-                {% include ('@icons/plus-minus.svg') %}
-              </span>
+            <span class="qh__icon" aria-hidden="true">
+              {% include ('@icons/plus-minus.svg') %}
             </span>
           </button>
 
