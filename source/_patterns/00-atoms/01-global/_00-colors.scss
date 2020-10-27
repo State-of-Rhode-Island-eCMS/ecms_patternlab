@@ -5,6 +5,18 @@
 }
 // stylelint-enable property-no-unknown
 
+
+// Keep things DRY
+@mixin qh-output-color-var($block, $section) {
+  @each $element in $section {
+    //@debug #{'block= ' + $block};
+    //@debug #{'element= ' + map-get($element,'fnName')};
+    //@debug #{'colorName= ' + map-get($element, 'colorName')};
+    --fc__#{$block}__#{map-get($element,'fnName')}: #{map-get(map-get($colors, map-get($element, 'colorName')), 'hsl')};
+  }
+}
+
+
 // Outputs all the colors from colors.json as custom props
 html {
   //@debug #{$colors};
@@ -22,23 +34,130 @@ html {
       // All functional color names are output without a theme class around them
       $values: map-get($palette, 'values');
       @each $block, $section in $values {
-        @each $element in $section {
-          //@debug #{'block= ' + $block};
-          //@debug #{'element= ' + map-get($element,'fnName')};
-          //@debug #{'colorName= ' + map-get($element, 'colorName')};
-          --fc__#{$block}__#{map-get($element,'fnName')}: #{map-get(map-get($colors, map-get($element, 'colorName')), 'hsl')};
-        }
+        @include qh-output-color-var($block, $section);
       }
     } @else {
       .qh__t__#{$key} {
         $values: map-get($palette, 'values');
         @each $block, $section in $values {
-          @each $element in $section {
-            --fc__#{$block}__#{map-get($element,'fnName')}: #{map-get(map-get($colors, map-get($element, 'colorName')), 'hsl')};
-          }
+          @include qh-output-color-var($block, $section);
         }
       }
     }
     $num: $num + 1;
+  }
+
+  // Loop again on Dark palettes only. Repetitive, but it works
+  @media (prefers-color-mode: dark) {
+    $num: 1;
+    @each $key, $palette in $palettes {
+      $values: map-get($palette, 'values');
+      //@debug #{'key= ' + $key};
+      @if str-index($key, "--dark") {
+        @if $num == 1 {
+          @each $block, $section in $values {
+            @include qh-output-color-var($block, $section);
+          }
+        } @else {
+          .qh__t__#{$key} {
+            $values: map-get($palette, 'values');
+            @each $block, $section in $values {
+              @include qh-output-color-var($block, $section);
+            }
+          }
+        }
+        $num: $num + 1;
+      }
+    }
+  }
+
+  // Sub themes for primary and coffee milk
+  .qh__t__primary {
+    background-color: var(--fc__primary__bg);
+    color: var(--fc__primary__fg);
+
+    #{$all-headers} {
+      color: var(--fc__primary__hx__fg);
+    }
+
+    a {
+      &,
+      &:visited {
+        color: var(--fc__primary__link);
+      }
+      &:hover,
+      &:focus {
+        color: var(--fc__primary__link--hover);
+      }
+      &:focus {
+        outline-color: var(--fc__primary__link--focus);
+      }
+      &:active {
+        color: var(--fc__primary__link--active);
+      }
+    }
+  }
+
+  .qh__t__primary--light {
+    background-color: var(--fc__primary--light__bg);
+    color: var(--fc__primary--light__fg);
+
+    #{$all-headers} {
+      color: var(--fc__primary--light__hx__fg);
+    }
+
+    a {
+      &,
+      &:visited {
+        color: var(--fc__primary--light__link);
+      }
+      &:hover,
+      &:focus {
+        color: var(--fc__primary--light__link--hover);
+      }
+      &:focus {
+        outline-color: var(--fc__primary--light__link--focus);
+      }
+      &:active {
+        color: var(--fc__primary--light__link--active);
+      }
+    }
+  }
+
+  .qh__t__coffee-milk {
+    background-color: var(--c__coffee-milk--trans25);
+    color: var(--c__quahog--dark);
+
+    #{$all-headers} {
+      color: var(--c__quahog);
+    }
+
+    a {
+      &,
+      &:visited {
+        color: var(--c__navy--sat);
+      }
+      &:hover,
+      &:focus {
+        color: var(--c__navy--sat--lgt);
+      }
+      &:focus {
+        outline-color: var(--c__navy);
+      }
+      &:active {
+        color: var(--c__calamari);
+      }
+    }
+
+    .qh__t__scarborough--dark & {
+      color: var(--c__quahog--light);
+    }
+  }
+
+  // For testing in PatternLab
+  div.qh__t__scarborough,
+  div.qh__t__scarborough--dark {
+    background-color: var(--fc__default__bg);
+    color: var(--fc__default__fg);
   }
 }

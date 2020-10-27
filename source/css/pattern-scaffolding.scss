@@ -79,11 +79,17 @@
 }
 
 .pl-c-pattern {
-  button {
-    background-image: none;
-  }
-
   img {
     width: auto;
+  }
+
+  figure img {
+    width: 100%;
+  }
+}
+
+.pl-c-pattern__header {
+  button {
+    background-image: none;
   }
 }

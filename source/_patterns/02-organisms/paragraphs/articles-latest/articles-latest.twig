@@ -1,0 +1,20 @@
+<nav class="qh__articles-latest" aria-label="Articles">
+  <h2 class="qh__articles-latest__title">{{ articles_latest.title }}</h2>
+  <ul class="qh__articles-latest__list">
+    <li class="qh__articles-latest__item">
+      {% include '@molecules/teaser-article/teaser-article.twig' with {
+        article: articles_latest.1
+      } %}
+    </li>
+    <li class="qh__articles-latest__item">
+      {% include '@molecules/teaser-article/teaser-article.twig' with {
+        article: articles_latest.2
+      } %}
+    </li>
+    <li class="qh__articles-latest__item">
+      {% include '@molecules/teaser-article/teaser-article.twig' with {
+        article: articles_latest.3
+      } %}
+    </li>
+  </ul>
+</nav>

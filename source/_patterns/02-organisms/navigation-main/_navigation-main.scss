@@ -1,46 +1,20 @@
-//"navigation": [
-//  { "fnName": "fg", "colorName": "quahog--dark" },
-//  { "fnName": "bg", "colorName": "ocean" },
-//  { "fnName": "link", "colorName": "quahog--dark" },
-//  { "fnName": "link--hover", "colorName": "navy" },
-//  { "fnName": "link--hover__bg", "colorName": "white" },
-//  { "fnName": "link--focus", "colorName": "navy" },
-//  { "fnName": "link--active", "colorName": "calamari" },
-//  { "fnName": "link--current__border", "colorName": "white" }
-//],
-.qh__navigation {
-  background-color: var(--fc__navigation__bg);
-  color: var(--fc__navigation__fg);
+.qh__nav-main {
+  background-color: var(--fc__nav-main__bg);
+  color: var(--fc__nav-main__fg);
 
   a {
     display: block;
     transition: $transition-base;
-
-    &:focus {
-      outline-color: var(--fc__navigation__link--focus);
-      outline-offset: -2px;
-    }
-
-    &:active {
-      color: var(--fc__navigation__link--active);
-    }
   }
 
   // Icons used in the nav
-  .qh__icon__home,
-  .qh__icon__chevron-down {
-    @include icon-size();
-  }
-
-  .qh__icon__chevron-down {
+  .qh__icon {
     margin: -0.75em -0.75em -0.75em 0;
   }
 
   .qh__icon__home {
-    margin: 0;
-
     &__shape {
-      fill: var(--fc__navigation__icon__fg);
+      fill: var(--fc__nav-main__icon__fg);
     }
   }
 
@@ -56,14 +30,14 @@
   &__list {
 
     &__sub {
-      background-color: var(--fc__navigation__link--hover__bg);
+      background-color: var(--fc__nav-main__link--hover__bg);
       box-shadow: $box-shadow-base;
       min-width: 100%;
       opacity: 0;
       position: absolute;
         top: 100%;
         left: 0;
-      transition: 500ms opacity ease 0s, 0s visibility linear 500ms;
+      transition: $transition-duration-medium opacity ease 0s, 0s visibility linear $transition-duration-medium;
       visibility: hidden;
     }
   }
@@ -72,10 +46,10 @@
   &__item {
     position: relative;
     overflow: visible;
-    z-index: 10000;
+    z-index: z(drop-down-menu);
 
     &__sub + &__sub::before {
-      border-top: em(2) solid var(--fc__navigation__bg);
+      border-top: $border-sm solid var(--fc__nav-main__bg);
       content: '';
       display: block;
       height: 0;
@@ -92,10 +66,10 @@
 
     .qh__icon__chevron-down {
       &__circle {
-        fill: var(--fc__navigation__icon__bg);
+        fill: var(--fc__nav-main__icon__bg);
       }
       &__arrow {
-        fill: var(--fc__navigation__icon__fg);
+        fill: var(--fc__nav-main__icon__fg);
         transition: $transition-base;
         transform: rotate(0deg);
         transform-origin: center;
@@ -112,6 +86,7 @@
     &--current:hover,
     &--current:focus {
       cursor: pointer;
+      pointer-events: auto;
     }
   }
 
@@ -123,26 +98,26 @@
   .no-js &__item:hover > &__list__sub,
   .no-js &__item:focus-within > &__list__sub {
     opacity: 1;
-    transition: 500ms opacity ease 0s, 0s visibility linear 0s;
+    transition: $transition-duration-medium opacity ease 0s, 0s visibility linear 0s;
     visibility: visible;
   }
 
   // Hover styles grouped
-  &__link:not(&__link--current):hover,
-  &__link:not(&__link--current):focus,
+  &__item:not(&__item__sub) > &__link:hover,
+  &__item:not(&__item__sub) > &__link:focus,
   &__item:not(&__item__sub):hover > &__link:not(&__link--current):not(&__link--home),
   &__item:not(&__item__sub):focus-within > &__link:not(&__link--current):not(&__link--home),
   &__link[aria-expanded="true"] {
-    background-color: var(--fc__navigation__link--hover__bg);
-    color: var(--fc__navigation__link--hover);
-    padding: em(16) em(16) em(12);
+    background-color: var(--fc__nav-main__link--hover__bg);
+    color: var(--fc__nav-main__link--hover);
+    padding: $nav-a-v-spacing $nav-a-h-spacing--sm ($nav-a-v-spacing * 0.75);
 
     .qh__icon__chevron-down {
       &__circle {
-        fill: var(--fc__navigation__icon__bg--hover);
+        fill: var(--fc__nav-main__icon__bg--hover);
       }
       &__arrow {
-        fill: var(--fc__navigation__icon__fg--hover);
+        fill: var(--fc__nav-main__icon__fg--hover);
       }
     }
   }
@@ -162,16 +137,13 @@
 
   // A
   &__link {
-    padding: em(12) em(16) em(16);
+    padding: ($nav-a-v-spacing * 0.75) $nav-a-h-spacing--sm $nav-a-v-spacing;
 
     &,
-    &:visited,
-    &--current,
-    &--current:hover,
-    &--current:focus {
+    &:visited {
       background-color: transparent;
-      border-top: em(4) solid var(--fc__navigation__bg);
-      color: var(--fc__navigation__link);
+      border-top: ($nav-a-v-spacing * 0.25) solid var(--fc__nav-main__bg);
+      color: var(--fc__nav-main__link);
       text-decoration: none;
     }
 
@@ -180,25 +152,47 @@
       // See lines above that group the LI:hover with the A:hover
     }
 
+    &:focus {
+      outline-color: var(--fc__nav-main__link--focus);
+      outline-offset: -2px;
+    }
+
+    &:active {
+      color: var(--fc__nav-main__link--active);
+    }
+
     // Treat a current link as disabled. It should not have a visual state change
-    &--current,
-    &--current:hover,
-    &--current:focus {
-      border-top-color: var(--fc__navigation__link--hover__bg);
+    &#{&}--current {
+      border-top-color: var(--fc__nav-main__link--hover__bg);
+      color: var(--fc__nav-main__fg);
       cursor: default;
+      font-weight: 550; // TODO: replace this with the proper font weight
+      padding: $nav-a-v-spacing $nav-a-h-spacing--sm ($nav-a-v-spacing * 0.75);
+      pointer-events: none;
     }
 
     &__sub {
       border: 0;
-      padding: em(10) em(16);
+      padding: $nav-a-v-spacing--sm $nav-a-h-spacing--sm;
 
       &:hover,
       &:focus {
-        background-color: var(--fc__navigation__link__sub--hover__bg);
+        background-color: var(--fc__nav-main__link__sub--hover__bg);
       }
     }
 
+    &__sub#{&}--current {
+      background-color: var(--fc__nav-main__link__sub--hover__bg);
+      cursor: default;
+      padding: $nav-a-v-spacing--sm $nav-a-h-spacing--sm;
+      pointer-events: none;
+    }
+
     // Exception
+    &--home .qh__icon {
+      margin: 0;
+    }
+
     &--home,
     &--home:visited {
       border-top: 0;

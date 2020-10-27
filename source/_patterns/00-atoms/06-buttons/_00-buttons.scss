@@ -1,0 +1,102 @@
+// Only applied via a class right now, no direct element assignment
+button,
+.qh__btn {
+  border: 0;
+  border-radius: $button-border-radius;
+  display: inline-block;
+  font-family: var(--font-serif-vf);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: $kerning-base;
+  line-height: 1;
+  overflow: hidden;
+  padding: $button-v-spacing $button-h-spacing;
+  transition: $transition-base;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  // A light to dark mask over the variable background color
+  // Twice the height, then we animate it on hover
+  &::before {
+    background-image: linear-gradient(
+      rgba(#fff, 0.125) 0%,
+      rgba(#fff, 0) 40%,
+      rgba(#000, 0) 60%,
+      rgba(#000, 0.25) 100%,
+    );
+    //content: '';
+    position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+    height: 200%;
+    transition: transform $transition-duration-medium $transition-timing-base;
+    transform: translateY(0);
+    z-index: -1;
+  }
+
+  // Primary color theme (highlight, more colorful)
+  &,
+  &:visited {
+    background-color: var(--fc__default__button__bg);
+    background-image: linear-gradient(
+      rgba(#fff, 0.125) 10%,
+      rgba(#fff, 0) 50%,
+      rgba(#000, 0) 80%,
+      rgba(#000, 0.125) 100%
+    );
+    color: var(--fc__default__button__fg);
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--fc__default__button--hover__bg);
+    color: var(--fc__default__button--hover__fg);
+  }
+
+  // More subdued color theme based on primary--light
+  &--secondary {
+
+    &,
+    &:visited {
+      background-color: var(--fc__primary--light__bg);
+      color: var(--fc__primary--light__fg);
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--fc__default__fg);
+      color: var(--fc__default__bg);
+    }
+  }
+
+  &:disabled,
+  &--disabled {
+    background-color: transparent;
+    background: repeating-linear-gradient(
+      -45deg,
+      var(--fc__default__button__bg),
+      var(--fc__default__button__bg) 0.5em,
+      var(--fc__default__fg) 0.5em,
+      var(--fc__default__fg) 1em
+    );
+    cursor: default;
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  // Opinionated: add "hand" cursor to non-disabled .btn elements
+  &:not(:disabled):not(&--disabled) {
+    cursor: pointer;
+  }
+
+  // Reset other button elements
+  button#{&},
+  &[type="button"],
+  &[type="reset"],
+  &[type="submit"] {
+    @include qh-button-reset();
+  }
+}

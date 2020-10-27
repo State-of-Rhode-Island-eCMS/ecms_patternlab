@@ -1,7 +1,7 @@
 html {
-  background-color: var(--fc__body--bg);
+  background-color: var(--fc__default__bg);
   box-sizing: border-box;
-  color: var(--fc__body--fg);
+  color: var(--fc__default__fg);
   font-size: 100%;
 }
 
@@ -22,18 +22,20 @@ a:focus {
   outline-offset: 2px;
 }
 
+::selection {
+  background-color: var(--fc__primary__bg);
+  color: var(--fc__primary__fg);
+}
+
 nav ul,
 nav ol {
-  list-style: none;
-  margin: 0;
+  @include qh-list-reset;
+}
 
-  li {
-    margin-left: 0;
-
-    + li {
-      margin-top: 0;
-    }
-  }
+// Remove visible focus for mouse users only
+:focus:not(:focus-visible) {
+  border: 0;
+  outline: none;
 }
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.

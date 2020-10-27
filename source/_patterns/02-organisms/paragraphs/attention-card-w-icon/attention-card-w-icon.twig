@@ -1,0 +1,14 @@
+<article class="qh__icon-card">
+  <div class="qh__icon-card__icon">
+    <span class="qh__icon" aria-hidden="true">
+      {{ content.field_icon }}
+    </span>
+  </div>
+  <div class="qh__icon-card__content">
+    <div class="qh__icon-card__title">
+      {# Can we be sure that a H3 here will always be appropriate? #}
+      <h3>{{ paragraph.field_list_title.value }}</h3>
+    </div>
+    {{ content.field_text }}
+  </div>
+</article>

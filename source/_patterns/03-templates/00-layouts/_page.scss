@@ -1,8 +1,45 @@
-// Temp styles that need reworked.
-.layout-container {
-  .layout-content:not(.landing-page) {
+$sidebar-min: rem(200);
+$sidebar-max: rem(380);
+$sidebar-column-gap: rem(75);
+$sidebar-row-gap: rem(36);
+
+.qh-layout {
+  &__grid {
     @include qh-content-maxwidth();
-    margin-top: 100px;
-    margin-bottom: 100px;
+    display: grid;
+    grid-template-areas:
+    'sidebar-top content'
+    'sidebar-middle content'
+    'sidebar-bottom content';
+    grid-template-columns: minmax($sidebar-min, max-content) minmax(0, 1fr);
+
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  &__content {
+    grid-area: content;
+    max-width: 100%;
+  }
+
+  &__sidebar-top {
+    grid-area: sidebar-top;
+    max-width: $sidebar-max;
+    margin-right: $sidebar-column-gap;
+    margin-bottom: $sidebar-row-gap;
+  }
+
+  &__sidebar-middle {
+    grid-area: sidebar-middle;
+    max-width: $sidebar-max;
+    margin-right: $sidebar-column-gap;
+    margin-bottom: $sidebar-row-gap;
+  }
+
+  &__sidebar-bottom {
+    grid-area: sidebar-bottom;
+    max-width: $sidebar-max;
+    margin-right: $sidebar-column-gap;
+    margin-bottom: $sidebar-row-gap;
   }
 }

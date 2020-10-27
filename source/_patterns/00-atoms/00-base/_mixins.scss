@@ -1,5 +1,10 @@
+// Z-index map-get helper
+@function z($key) {
+  @return map-get($zindex, $key);
+}
+
 // Used to remove browser styles from button elements
-@mixin button-reset {
+@mixin qh-button-reset {
   border: 0;
   margin: 0;
   -webkit-appearance: none;
@@ -9,13 +14,40 @@
   }
 }
 
-// Icon sizing
-$icon-dimension: rem(44);
-
-@mixin icon-size() {
+// Icons
+@mixin qh-icon-size() {
   display: block;
   height: $icon-dimension;
   width: $icon-dimension;
+}
+
+// Inset
+// One value must be declared
+@mixin qh-inset-supports($value) {
+  $split-value: str-split($value, ' ');
+
+  inset: $value;
+
+  @supports not (inset: $value) {
+    top: $value;
+    right: $value;
+    bottom: $value;
+    left: $value;
+  }
+}
+
+// Lists
+@mixin qh-list-reset() {
+  list-style: none;
+  margin: 0;
+
+  li {
+    margin-left: 0;
+
+    + li {
+      margin-top: 0;
+    }
+  }
 }
 
 // Content max-width

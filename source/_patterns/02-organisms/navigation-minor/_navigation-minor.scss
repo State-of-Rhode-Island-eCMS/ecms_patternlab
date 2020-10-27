@@ -1,0 +1,153 @@
+.qh__nav-minor {
+  border-top: $border-lg solid var(--fc__nav-minor__border);
+  background-color: var(--fc__nav-minor__bg);
+  min-width: 20rem;
+
+  a {
+    display: block;
+    transition: $transition-base;
+  }
+
+  // <ul>
+  &__list {
+
+    &.qh__accordion {
+      border: $border-xs solid transparent;
+    }
+
+    &__sub {
+      background-color: var(--fc__nav-minor__sub__bg);
+      // Negate some spacing coming from .qh__accordion__content
+      margin: #{- $nav-a-v-spacing} #{- $nav-a-h-spacing} #{- $nav-a-v-spacing} #{- ($nav-a-v-spacing/2)};
+    }
+  }
+
+  // <li>
+  &__item {
+    position: relative;
+    overflow: visible;
+
+    &__sub {}
+
+    &:not(&__sub) + &:not(&__sub)::before {
+      border-top: $border-sm solid var(--fc__default__bg);
+      content: '';
+      display: block;
+      height: 0;
+      margin: 0 em(8);
+      flex-basis: 100%;
+    }
+  }
+
+  // <li>
+  &__has-children {
+    // Set up a split button design
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: space-between;
+
+    .qh__nav-minor__link {
+      flex: 1 0 auto;
+      margin-left: auto;
+    }
+
+    .qh__accordion__button {
+      display: block;
+      flex: 0 0 $icon-dimension;
+      margin-right: auto;
+      padding: 0;
+
+      .qh__icon {
+        margin: 0;
+      }
+    }
+
+    .qh__accordion__content {
+      flex-basis: 100%;
+    }
+  }
+
+  // Restyling accordion elements classes
+  .qh__accordion__button {
+
+    &[aria-expanded="true"] {
+      background-color: var(--fc__nav-minor__link--hover__bg);
+    }
+
+    .qh__icon__plusminus {
+      &__circle {
+        fill: var(--fc__nav-minor__link--hover__bg);
+      }
+      &__vert,
+      &__horiz {
+        fill: var(--fc__nav-minor__link);
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &[aria-expanded="true"] {
+      .qh__icon__plusminus {
+        &__circle {
+          fill: var(--fc__default__bg);
+        }
+        &__vert,
+        &__horiz {
+          fill: var(--fc__nav-minor__link--hover);
+        }
+      }
+    }
+  }
+
+  // <a> & <button> colors
+  .qh__accordion__button,
+  &__link {
+
+    &,
+    &:visited {
+      background-color: var(--fc__nav-minor__link__bg);
+      color: var(--fc__nav-minor__link);
+      text-decoration: none;
+    }
+
+    &:not(&--current):hover,
+    &:not(&--current):focus {
+      background-color: var(--fc__nav-minor__link--hover__bg);
+      color: var(--fc__nav-minor__link--hover);
+    }
+
+    &:focus {
+      outline-color: var(--fc__nav-main__link--focus);
+      outline-offset: -2px;
+    }
+
+    &:active {
+      color: var(--fc__nav-main__link--active);
+    }
+  }
+
+  // <a>
+  &__link {
+    font-weight: normal; // TODO: Reset with the proper weight
+    padding: $nav-a-v-spacing $nav-a-h-spacing--sm;
+
+    &__sub {
+      font-size: 0.875em; // TODO: Reset with the proper size
+    }
+
+    // Treat a current link as disabled. It should not have a visual state change
+    &--current {
+      cursor: default;
+      pointer-events: none;
+    }
+
+    &--current,
+    &--current.qh__accordion__button[aria-expanded="true"] {
+      background-color: var(--fc__nav-minor__bg);
+      color: var(--fc__nav-minor__fg);
+      font-weight: 550; // TODO: Reset with the proper weight
+      text-decoration: none;
+    }
+  }
+}

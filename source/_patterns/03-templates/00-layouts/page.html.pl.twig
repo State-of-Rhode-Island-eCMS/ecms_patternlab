@@ -42,7 +42,7 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
+<div class="qh-layout qh-layout--sidebar">
 
   {% include '@organisms/page-header/page-header.twig' with {
       header_preprocess_values: header_preprocess_values
@@ -58,32 +58,39 @@
 
   {{ page.help }}
 
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+  {{ page.header }}
 
-    {{ page.header }}
 
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
+  <main id="main-content" tabindex="-1">
+    <article class="qh-layout__grid">
+      <div class="qh-layout__content">
+        {{ page.content }}
+      </div>
 
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
+      {% if page.sidebar_top %}
+        <div class="qh-layout__sidebar-top" role="complementary">
+          {{ page.sidebar_top }}
+        </div>
+      {% endif %}
 
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
+      {% if page.sidebar_middle %}
+        <aside class="qh-layout__sidebar-middle" role="complementary">
+          {{ page.sidebar_middle }}
+        </aside>
+      {% endif %}
+
+      {% if page.sidebar_bottom %}
+        <aside class="qh-layout__sidebar-bottom" role="complementary">
+          {{ page.sidebar_bottom }}
+        </aside>
+      {% endif %}
+    </article>
 
   </main>
 
   {% include '@organisms/page-footer/page-footer.twig' with {
-    footer_preprocess_values: footer_preprocess_values
-  }
+      footer_preprocess_values: footer_preprocess_values
+    }
   %}
 
-</div>{# /.layout-container #}
+</div>{# /.qh-layout #}

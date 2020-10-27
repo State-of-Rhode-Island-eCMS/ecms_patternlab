@@ -2,16 +2,12 @@
   background-color: var(--fc__footer__bg);
   color: var(--fc__footer__fg);
   font-size: 1rem;
-  border-top: 21px solid var(--fc__footer__border-top);
+  border-top: $border-xl solid var(--fc__footer__border-top);
   padding: 2rem; //vertical spacer.
 
   .content-wrapper {
-    margin: 0 auto;
-    max-width: $content-max-width;
+    @include qh-content-maxwidth();
     display: flex;
-    @supports (width: min(10px, 5px)) {
-      max-width: var(--content-max-width);
-    }
   }
 
   a {
