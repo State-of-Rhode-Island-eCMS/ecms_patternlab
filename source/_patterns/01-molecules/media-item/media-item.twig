@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Theme override to display the page header.
+ *
+ * Available variables:
+ *
+ *
+ * - type: img | video
+ * - size: small | medium | large
+ * - align: left | right | [none]
+ * - alt: [string] or [none]
+ * - caption: [string] or [none]
+ * - url: [full url of image]
+ * - source: [full iframe embed of video]
+ *
+ *
+ * @see template_preprocess_page()
+ */
+#}
+
+{# Set up classes #}
+{% set classes = "" %}
+{% set classes = classes ~ "media-" ~ type %}
+{% set classes = classes ~ " " ~ size %}
+{% set classes = classes ~ " " ~ align %}
+
+<figure class="media-item {{ classes }}">
+  {% if type == 'img' %}
+    <img src="{{ url }}" alt="{{ alt }}" />
+  {% elseif type == 'video' %}
+    <div class="media-item__video">{{ source }}</div>
+  {% endif %}
+  {% if caption %}
+    <figcaption>{{ caption }}</figcaption>
+  {% endif %}
+</figure>

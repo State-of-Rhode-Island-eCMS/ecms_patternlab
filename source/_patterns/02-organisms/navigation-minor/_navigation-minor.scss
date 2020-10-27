@@ -137,21 +137,16 @@
     }
 
     // Treat a current link as disabled. It should not have a visual state change
-    &--current,
-    &--current:hover,
-    &--current:focus {
+    &--current {
       cursor: default;
+      pointer-events: none;
     }
 
     &--current,
-    &--current:hover,
-    &--current:focus,
-    &--current.qh__accordion__button[aria-expanded="true"],
-    &--current.qh__accordion__button[aria-expanded="true"]:hover,
-    &--current.qh__accordion__button[aria-expanded="true"]:focus {
+    &--current.qh__accordion__button[aria-expanded="true"] {
       background-color: var(--fc__nav-minor__bg);
       color: var(--fc__nav-minor__fg);
-      font-weight: 500; // TODO: Reset with the proper weight
+      font-weight: 550; // TODO: Reset with the proper weight
       text-decoration: none;
     }
   }

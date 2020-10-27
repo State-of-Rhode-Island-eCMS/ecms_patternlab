@@ -74,3 +74,6 @@
 
 .pl-c-pattern img {
   width: auto; }
+
+.pl-c-pattern figure img {
+  width: 100%; }
