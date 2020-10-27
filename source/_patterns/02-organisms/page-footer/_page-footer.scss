@@ -1,9 +1,8 @@
-.qh-site-footer {
+.qh__site-footer {
   background-color: var(--fc__footer__bg);
   color: var(--fc__footer__fg);
   font-size: 1rem;
   border-top: $border-xl solid var(--fc__footer__border-top);
-  padding: 2rem; //vertical spacer.
 
   .content-wrapper {
     @include qh-content-maxwidth();
@@ -33,16 +32,46 @@
   &__content-left {
     display: flex;
     flex-grow: 1;
+    padding: $general-v-spacing $general-h-spacing;
 
     > div {
+      min-height: 2rem; // mostly for Pattern Lab
       width: 33%;
-    };
+    }
   }
 
   &__content-right {
+    margin-left: $general-h-spacing;
+    padding: $general-v-spacing $general-h-spacing;
     width: 20%;
-    border-left: 1px solid var(--fc__footer__fg);
-    padding-left: 1.5rem;
-    margin-left: 1.5rem;
+
+    > div {
+      border-left: $border-sm solid var(--fc__footer__fg);
+      min-height: 2rem; // mostly for Pattern Lab
+    }
+  }
+
+  &__copyright {
+    background-color: var(--fc__footer__copyright__bg);
+    color: var(--fc__footer__fg);
+    padding: $general-v-spacing $general-h-spacing;
+
+    &__content {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: flex-start;
+
+      p {
+        font-size: 87.5%;
+        max-width: unset;
+      }
+    }
+
+    // more specific because of .pl-c-pattern img
+    img#{&}__brand {
+      width: rem(60);
+      margin: -0.5rem 1rem -0.5rem 0;
+    }
   }
 }

@@ -255,9 +255,10 @@
           { "fnName": "sub__bg", "colorName": "white--trans25" }
         ],
         "footer": [
+          { "fnName": "border-top", "colorName": "ocean" },
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "quahog" },
-          { "fnName": "border-top", "colorName": "ocean" }
+          { "fnName": "copyright__bg", "colorName": "quahog--dark" }
         ],
         "primary": [
           { "fnName": "fg", "colorName": "white" },
