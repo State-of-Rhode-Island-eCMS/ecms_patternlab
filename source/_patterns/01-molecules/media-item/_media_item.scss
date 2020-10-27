@@ -1,10 +1,10 @@
 .media-item {
-  border-left: solid 1rem var(--fc__primary--light__bg);
+  border-left: solid 1rem var(--fc__default__accent);
 
   // align 
   &.left {
     border-left: none;
-    border-right: solid 1rem var(--fc__primary--light__bg);
+    border-right: solid 1rem var(--fc__default__accent);
     clear: left;
     float: left;
     margin-right: 2rem;

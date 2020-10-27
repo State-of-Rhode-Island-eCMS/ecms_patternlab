@@ -110,6 +110,7 @@ html {
   --fc__default__link--active: #ff8e47;
   --fc__default__hx__fg: #6e6e6e;
   --fc__default__violator: #ff8e47;
+  --fc__default__accent: #face3d;
   --fc__icon__pdf: #eb5252;
   --fc__icon__word: #293557;
   --fc__icon__excel: #59bf45;
@@ -750,10 +751,10 @@ button {
   color: var(--c__white); }
 
 .media-item {
-  border-left: solid 1rem var(--fc__primary--light__bg); }
+  border-left: solid 1rem var(--fc__default__accent); }
   .media-item.left {
     border-left: none;
-    border-right: solid 1rem var(--fc__primary--light__bg);
+    border-right: solid 1rem var(--fc__default__accent);
     clear: left;
     float: left;
     margin-right: 2rem; }

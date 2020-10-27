@@ -228,7 +228,8 @@
           { "fnName": "link--visited", "colorName": "navy--warm" },
           { "fnName": "link--active", "colorName": "calamari" },
           { "fnName": "hx__fg", "colorName": "quahog--medium" },
-          { "fnName": "violator", "colorName": "calamari" }
+          { "fnName": "violator", "colorName": "calamari" },
+          { "fnName": "accent", "colorName": "hope-gold" }
         ],
         "icon": [
           { "fnName": "pdf", "colorName": "rhody-red" },
