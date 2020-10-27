@@ -29,7 +29,7 @@
   {% if type == 'img' %}
     <img src="{{ url }}" alt="{{ alt }}" />
   {% elseif type == 'video' %}
-    <div class="media-item__video">{{ source }}</div>
+    <div class="media-item__video">{{ content.field_media_item }}</div>
   {% endif %}
   {% if caption %}
     <figcaption>{{ caption }}</figcaption>
