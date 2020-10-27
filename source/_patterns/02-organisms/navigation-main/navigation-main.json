@@ -44,8 +44,8 @@
         },
         {
           "is_expanded": true,
-          "in_active_trail": false,
-          "title": "Child Item 3",
+          "in_active_trail": true,
+          "title": "In Active Trail",
           "url": "#"
         }
       ]
@@ -53,12 +53,12 @@
     {
       "is_expanded": true,
       "in_active_trail": true,
-      "title": "Contact",
+      "title": "In Active Trail",
       "below": []
     },
     {
       "is_expanded": true,
-      "in_active_trail": true,
+      "in_active_trail": false,
       "title": "Another Link",
       "below": []
     }

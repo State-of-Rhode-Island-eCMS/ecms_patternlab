@@ -11,6 +11,11 @@ $border-xl: rem(21);
 // Box Shadows
 $box-shadow-base: 0 0.125em 0.5em var(--c__quahog--dark--trans33);
 
+// Buttons
+$button-border-radius: em(3);
+$button-v-spacing: 1em;
+$button-h-spacing: 1.5em;
+
 // Content max-width
 $content-max-small-screen: 93vw;
 $content-max-large-screen: 90rem;
@@ -30,9 +35,22 @@ $general-h-spacing: 1rem;
 // Icon sizing
 $icon-dimension: rem(44);
 
+// Input
+$input-border-radius: $button-border-radius;
+$input-v-spacing: 0.75em;
+$input-h-spacing: 1em;
+
+// Kerning
+//$kerning-loose: 0.0625em; not used yet
+$kerning-base: 0.03125em;
+//$kerning-tight: -0.03125em; not used yet
+
 // Transitions
-$transition-base: all 250ms ease;
-$transition-medium: all 500ms ease;
+$transition-duration-base: 250ms;
+$transition-duration-medium: 500ms;
+$transition-timing-base: ease;
+$transition-base: all $transition-duration-base $transition-timing-base;
+$transition-medium: all $transition-duration-medium $transition-timing-base;
 
 // Spacing on similar components
 

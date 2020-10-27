@@ -37,7 +37,7 @@
       position: absolute;
         top: 100%;
         left: 0;
-      transition: 500ms opacity ease 0s, 0s visibility linear 500ms;
+      transition: $transition-duration-medium opacity ease 0s, 0s visibility linear $transition-duration-medium;
       visibility: hidden;
     }
   }
@@ -86,6 +86,7 @@
     &--current:hover,
     &--current:focus {
       cursor: pointer;
+      pointer-events: auto;
     }
   }
 
@@ -97,7 +98,7 @@
   .no-js &__item:hover > &__list__sub,
   .no-js &__item:focus-within > &__list__sub {
     opacity: 1;
-    transition: 500ms opacity ease 0s, 0s visibility linear 0s;
+    transition: $transition-duration-medium opacity ease 0s, 0s visibility linear 0s;
     visibility: visible;
   }
 
@@ -139,10 +140,7 @@
     padding: ($nav-a-v-spacing * 0.75) $nav-a-h-spacing--sm $nav-a-v-spacing;
 
     &,
-    &:visited,
-    &--current,
-    &--current:hover,
-    &--current:focus {
+    &:visited {
       background-color: transparent;
       border-top: ($nav-a-v-spacing * 0.25) solid var(--fc__nav-main__bg);
       color: var(--fc__nav-main__link);
@@ -164,11 +162,13 @@
     }
 
     // Treat a current link as disabled. It should not have a visual state change
-    &--current,
-    &--current:hover,
-    &--current:focus {
+    &#{&}--current {
       border-top-color: var(--fc__nav-main__link--hover__bg);
+      color: var(--fc__nav-main__fg);
       cursor: default;
+      font-weight: 550; // TODO: replace this with the proper font weight
+      padding: $nav-a-v-spacing $nav-a-h-spacing--sm ($nav-a-v-spacing * 0.75);
+      pointer-events: none;
     }
 
     &__sub {
@@ -179,6 +179,13 @@
       &:focus {
         background-color: var(--fc__nav-main__link__sub--hover__bg);
       }
+    }
+
+    &__sub#{&}--current {
+      background-color: var(--fc__nav-main__link__sub--hover__bg);
+      cursor: default;
+      padding: $nav-a-v-spacing--sm $nav-a-h-spacing--sm;
+      pointer-events: none;
     }
 
     // Exception

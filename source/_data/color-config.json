@@ -204,7 +204,7 @@
           { "fnName": "bg", "colorName": "navy" }
         ],
         "nav-main": [
-          { "fnName": "fg", "colorName": "quahog--dark" },
+          { "fnName": "fg", "colorName": "quahog" },
           { "fnName": "bg", "colorName": "ocean" },
           { "fnName": "link", "colorName": "quahog--dark" },
           { "fnName": "link--hover", "colorName": "navy" },
@@ -229,7 +229,11 @@
           { "fnName": "link--active", "colorName": "calamari" },
           { "fnName": "hx__fg", "colorName": "quahog--medium" },
           { "fnName": "violator", "colorName": "calamari" },
-          { "fnName": "accent", "colorName": "hope-gold" }
+          { "fnName": "accent", "colorName": "hope-gold" },
+          { "fnName": "button__bg", "colorName": "navy" },
+          { "fnName": "button__fg", "colorName": "hope-gold" },
+          { "fnName": "button--hover__bg", "colorName": "navy--dark" },
+          { "fnName": "button--hover__fg", "colorName": "ocean" }
         ],
         "icon": [
           { "fnName": "pdf", "colorName": "rhody-red" },
