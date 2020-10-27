@@ -68,10 +68,9 @@
       }
     }
 
-    // more specific because of .pl-c-pattern img
-    img#{&}__brand {
-      width: rem(60);
-      margin: -0.5rem 1rem -0.5rem 0;
+    svg:first-of-type {
+      width: rem(50);
+      margin: -0.75rem 1rem -0.75rem 0;
     }
   }
 }

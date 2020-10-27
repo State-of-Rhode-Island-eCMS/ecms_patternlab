@@ -1273,9 +1273,9 @@ button,
       .qh__site-footer__copyright__content p {
         font-size: 87.5%;
         max-width: unset; }
-    .qh__site-footer__copyright img.qh__site-footer__copyright__brand {
-      width: 3.75rem;
-      margin: -0.5rem 1rem -0.5rem 0; }
+    .qh__site-footer__copyright svg:first-of-type {
+      width: 3.125rem;
+      margin: -0.75rem 1rem -0.75rem 0; }
 
 .page-header {
   background-color: var(--fc__header__bg);

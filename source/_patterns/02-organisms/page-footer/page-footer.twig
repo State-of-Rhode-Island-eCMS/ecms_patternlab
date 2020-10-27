@@ -22,7 +22,7 @@
   <div class="qh__site-footer__copyright">
     <div class="content-wrapper">
       <div class="qh__site-footer__copyright__content">
-        <img class="qh__site-footer__copyright__brand" src="{{ img.stateSeal.src }}" alt="{{ img.stateSeal.alt }}" />
+        {% include ('@icons/ri-state-seal.svg') %}
         <p>
           © {{ "now"|date("Y") }}
           {{ title }}.
