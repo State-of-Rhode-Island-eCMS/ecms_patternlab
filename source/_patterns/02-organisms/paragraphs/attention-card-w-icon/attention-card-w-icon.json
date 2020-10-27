@@ -1,4 +1,11 @@
 {
-  "card-title": "Traveling to/from RI",
-  "card-text": '<p><a href="#">Everything you need to know</a> when coming to Rhode Island, plus travel planning tips and current travel restrictions within the US and abroad</p>'
+	"content" : {
+    "field_text": "<p><a href='#'>Everything you need to know</a> when coming to Rhode Island, plus travel planning tips and current travel restrictions within the US and abroad</p>",
+    "field_icon": "<?xml version='1.0' encoding='utf-8'?><svg class='qh__icon__maple-leaf' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'><path class='qh__icon__maple-leaf__path' d='M34.6 17.4l-1.9-1.1.5-4.5c.1-.6-.4-1-1-1l-4.5.5-1.1-1.9c-.3-.6-1.1-.6-1.5 0l-4.5 7.1.8-3.3c.1-.6-.4-1.2-1.1-1l-1.3.7-2.3-2.6c-.4-.4-1-.4-1.4 0L13 12.9l-1.3-.7c-.6-.2-1.2.4-1.1 1l1.7 8.1-1.9.8c-.7.3-.7 1.3 0 1.6l5.2 2.2-6.2 6.2c-.6.6-.6 1.7 0 2.3.3.3.7.5 1.1.5s.8-.2 1.1-.5l10.3-10.3-3.4 5.9 1.5 3.5c.3.7 1.3.7 1.6 0l.8-1.9 8.1 1.7c.6.1 1.2-.4 1-1.1l-.4-1.2 2.6-2.3c.4-.4.4-1 0-1.4L31.1 25l.7-1.3c.2-.6-.4-1.2-1-1.1l-3.3.8 7.1-4.5c.5-.3.5-1.1 0-1.5z'/></svg>"
+  },
+  "paragraph": {
+    "field_list_title": {
+      "value": "About COVID-19"
+    }
+  }
 }
