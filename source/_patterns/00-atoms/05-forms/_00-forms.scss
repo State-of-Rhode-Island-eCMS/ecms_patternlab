@@ -22,7 +22,7 @@ form {
     flex-basis: auto;
     width: 100%;
   }
-  h2, 
+  h2,
   h3 {
     flex-basis: auto;
     width: 100%;
@@ -40,7 +40,7 @@ fieldset {
       font-family: var(--font-sans-vf);
       font-size: 1rem;
       font-weight: 575;
-      text-transform: uppercase;    
+      text-transform: uppercase;
   }
   + fieldset {
     margin-top: calc(var(--body-text-spacer) * 1.5);
@@ -73,13 +73,21 @@ input[type='datetime-local'],
 input[type='month'],
 input[type='tel'],
 input[type='week'] {
-  border-radius: 0.15em;
-  //border: solid 1px $color-quahog-tint1;
   font-family: var(--font-sans-vf);
   font-size: 1rem;
-  font-weight: 400;
-  padding: 0.5em 0.5em 0.45em;
+  font-weight: 500;
   width: 100%;
+
+
+  // This are new styles… I'm not sure about the rest
+  background-color: var(--fc__default__bg);
+  border: $border-sm solid var(--fc__default__border);
+  border-radius: $input-border-radius;
+  color: var(--fc__default__fg);
+  display: inline-block;
+  line-height: 1.25;
+  padding: $input-v-spacing $input-h-spacing;
+
 
   label + & {
     margin-top: 0.1em;
@@ -127,26 +135,5 @@ select {
   }
 }
 
-button {
-  //--background-top: #{rgba(lighten($color-navy-blue, 10%), 0.5)};
-  //--background-bottom: #{rgba(darken($color-navy-blue, 15%), 0.5)};
-  //background-color: $color-navy-blue;
-  background-image: linear-gradient(to bottom, var(--background-top), var(--background-bottom));
-  border-radius: 0.15em;
-  //border: solid 1px $color-navy-blue;
-  //color: $color-ocean-state-tint1;
-  font-family: var(--font-serif-vf);
-  font-size: 1rem;
-  font-weight: 500;
-  padding: 0.425em 0.65em;
-  transition: background-color 0.15s ease-in, color 0.15s ease-in;
-
-  label + & {
-    margin-top: 0.1em;
-  }
-
-  &:hover {
-    //background-color:darken($color-navy-blue, 10%);
-    color: var(--c__white);
-  }
-}
+// Styles are in 00-atoms/06-buttons
+//button {}
