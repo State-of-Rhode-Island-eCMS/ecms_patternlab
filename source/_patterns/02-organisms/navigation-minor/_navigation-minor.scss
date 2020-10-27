@@ -8,7 +8,7 @@
     transition: $transition-base;
   }
 
-  // UL
+  // <ul>
   &__list {
 
     &.qh__accordion {
@@ -22,12 +22,10 @@
     }
   }
 
-  // LI
+  // <li>
   &__item {
     position: relative;
     overflow: visible;
-
-    &__has-children {}
 
     &__sub {}
 
@@ -37,6 +35,36 @@
       display: block;
       height: 0;
       margin: 0 em(8);
+      flex-basis: 100%;
+    }
+  }
+
+  // <li>
+  &__has-children {
+    // Set up a split button design
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: space-between;
+
+    .qh__nav-minor__link {
+      flex: 1 0 auto;
+      margin-left: auto;
+    }
+
+    .qh__accordion__button {
+      display: block;
+      flex: 0 0 $icon-dimension;
+      margin-right: auto;
+      padding: 0;
+
+      .qh__icon {
+        margin: 0;
+      }
+    }
+
+    .qh__accordion__content {
+      flex-basis: 100%;
     }
   }
 
@@ -72,11 +100,9 @@
     }
   }
 
-  // A & Buttons
+  // <a> & <button> colors
   .qh__accordion__button,
   &__link {
-    font-weight: normal; // TODO: Reset with the proper weight
-    padding: $nav-a-v-spacing $nav-a-h-spacing--sm;
 
     &,
     &:visited {
@@ -101,7 +127,10 @@
     }
   }
 
+  // <a>
   &__link {
+    font-weight: normal; // TODO: Reset with the proper weight
+    padding: $nav-a-v-spacing $nav-a-h-spacing--sm;
 
     &__sub {
       font-size: 0.875em; // TODO: Reset with the proper size

@@ -10,7 +10,7 @@
     {
       "is_expanded": true,
       "in_active_trail": false,
-      "title": "Clams?",
+      "title": "Clams",
       "url": "#",
       "below": [
         {
@@ -30,14 +30,28 @@
     {
       "is_expanded": true,
       "in_active_trail": true,
-      "title": "Contact",
+      "title": "Open on page load",
+      "url": "#",
+      "below": [
+        {
+          "is_expanded": true,
+          "in_active_trail": true,
+          "title": "Active trail sub item",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "is_expanded": true,
+      "in_active_trail": true,
+      "title": "Also in active trail",
       "url": "#",
       "below": []
     },
     {
       "is_expanded": true,
-      "in_active_trail": true,
-      "title": "Another Link",
+      "in_active_trail": false,
+      "title": "Contact",
       "url": "#",
       "below": []
     }
