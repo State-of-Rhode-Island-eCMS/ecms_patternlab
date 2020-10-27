@@ -19,7 +19,8 @@ p {
   }
 
   + p,
-  + ul {
+  + ul,
+  figure + & {
     margin-top: var(--body-text-spacer);
   }
 }
@@ -98,24 +99,6 @@ h6 {
 strong,
 b {
   font-weight: 575;
-}
-
-a {
-  //&:link {
-  //  color: $color-text-link;
-  //}
-  //&:visited {
-  //  color: $color-text-link-visited;
-  //}
-  //&:hover {
-  //  color: $color-text-link-hover;
-  //}
-  //&:focus {
-  //  color: $color-text-link-focus;
-  //}
-  //&:active {
-  //  color: $color-text-link-active;
-  //}
 }
 
 blockquote {
