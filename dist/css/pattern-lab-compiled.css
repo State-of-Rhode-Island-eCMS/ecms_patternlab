@@ -385,7 +385,8 @@ p {
           -ms-hyphens: none;
               hyphens: none; } }
   p + p,
-  p + ul {
+  p + ul,
+  figure + p {
     margin-top: var(--body-text-spacer); }
 
 h1 {
@@ -536,7 +537,10 @@ dd {
       margin-top: 0; }
 
 figure {
+  margin: 0;
   padding: 0; }
+  p + figure {
+    margin-top: var(--body-text-spacer); }
 
 figcaption {
   font-family: var(--font-sans-vf);

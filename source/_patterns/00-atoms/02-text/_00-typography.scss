@@ -19,7 +19,8 @@ p {
   }
 
   + p,
-  + ul {
+  + ul,
+  figure + & {
     margin-top: var(--body-text-spacer);
   }
 }
