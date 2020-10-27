@@ -22,10 +22,6 @@
     "rectangle": {
       "src": "http://placeimg.com/400/300/tech",
       "alt": "Rectangle"
-    },
-    "stateSeal": {
-      "src": "../../images/ri-state-seal.svg",
-      "alt": "RI State Seal"
     }
   },
   "headline" : {
