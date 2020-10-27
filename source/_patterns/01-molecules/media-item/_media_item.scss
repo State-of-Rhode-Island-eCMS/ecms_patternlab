@@ -1,0 +1,34 @@
+.media-item {
+  border-left: solid 1rem var(--fc__primary--light__bg);
+
+  // align 
+  &.left {
+    border-left: none;
+    border-right: solid 1rem var(--fc__primary--light__bg);
+    clear: left;
+    float: left;
+    margin-right: 2rem;
+  }
+  &.right {
+    clear: right;
+    float: right;
+    margin-left: 2rem;
+  }
+  // size 
+  &.small {
+    width: 32%;
+    width: calc( (100% / 3) - 1rem );
+  }
+  &.medium {
+    width: 49%;
+    width: calc( (100% / 2) - 1rem );
+  }
+  &.large {
+    float: none;
+    width: 100%;
+  }
+  figcaption {
+    background-color: var(--fc__primary--light__bg--dark);
+    padding: 0.5rem 0.75rem;
+  }
+}
