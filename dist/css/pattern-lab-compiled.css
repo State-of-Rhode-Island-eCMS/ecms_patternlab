@@ -771,6 +771,15 @@ button {
   .media-item.large {
     float: none;
     width: 100%; }
+  .media-item__video {
+    padding-top: 56.2061%;
+    position: relative; }
+    .media-item__video > iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
   .media-item figcaption {
     background-color: var(--fc__primary--light__bg--dark);
     padding: 0.5rem 0.75rem; }

@@ -6,6 +6,8 @@
 <figure class="media-item {{ classes }}">
   {% if type == 'img' %}
     <img src="{{ url }}" alt="{{ alt }}" />
+  {% elseif type == 'video' %}
+    <div class="media-item__video">{{ source }}</div>
   {% endif %}
   {% if caption %}
     <figcaption>{{ caption }}</figcaption>
