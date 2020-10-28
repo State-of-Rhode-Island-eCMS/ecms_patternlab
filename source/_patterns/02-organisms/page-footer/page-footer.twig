@@ -1,6 +1,6 @@
-<footer class="qh-site-footer" role="contentinfo">
+<footer class="qh__site-footer" role="contentinfo">
   <div class="content-wrapper">
-    <div class="qh-site-footer__content-left">
+    <div class="qh__site-footer__content-left">
       <div>
         {{ footer_preprocess_values.footer_left|raw }}
       </div>
@@ -13,9 +13,21 @@
         {{ footer_preprocess_values.footer_right|raw }}
       </div>
     </div>
-    <div class="qh-site-footer__content-right">
+    <div class="qh__site-footer__content-right">
       <div>
         {{ footer_preprocess_values.state_info|raw }}
+      </div>
+    </div>
+  </div>
+  <div class="qh__site-footer__copyright">
+    <div class="content-wrapper">
+      <div class="qh__site-footer__copyright__content">
+        {% include ('@icons/ri-state-seal.svg') %}
+        <p>
+          © {{ "now"|date("Y") }}
+          {{ title }}.
+          {{ copyright }}
+        </p>
       </div>
     </div>
   </div>

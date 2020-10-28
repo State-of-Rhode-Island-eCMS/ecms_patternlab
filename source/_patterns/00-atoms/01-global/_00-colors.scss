@@ -7,12 +7,23 @@
 
 
 // Keep things DRY
-@mixin qh-output-color-var($block, $section) {
-  @each $element in $section {
-    //@debug #{'block= ' + $block};
-    //@debug #{'element= ' + map-get($element,'fnName')};
-    //@debug #{'colorName= ' + map-get($element, 'colorName')};
-    --fc__#{$block}__#{map-get($element,'fnName')}: #{map-get(map-get($colors, map-get($element, 'colorName')), 'hsl')};
+@mixin qh-output-color-var($block, $section, $palette) {
+  // If $section is a map then that means there is only one element inside the section. Do not loop over it.
+  @if is-map($section) {
+    @if map-has-key($colors, map-get($section, 'colorName')) == false {
+      @error "Key `#{map-get($section, 'colorName')}` is not a valid color name from $colors. From #{map-get($palette, humanName)} > #{$block}";
+    }
+    --fc__#{$block}__#{map-get($section,'fnName')}: #{map-get(map-get($colors, map-get($section, 'colorName')), 'hsl')};
+  } @else {
+    // Section is a list, so this needs to loop over it. In each list are a set of maps.
+    @each $element in $section {
+      @if map-has-key($colors, map-get($element, 'colorName')) == false {
+        @error "Key `#{map-get($element, 'colorName')}` is not a valid color name from $colors. From #{map-get($palette, humanName)} > #{$block}";
+      }
+      @if type-of($element) != 'list' and map-has-key($colors, map-get($element, 'colorName')) {
+        --fc__#{$block}__#{map-get($element,'fnName')}: #{map-get(map-get($colors, map-get($element, 'colorName')), 'hsl')};
+      }
+    }
   }
 }
 
@@ -34,13 +45,13 @@ html {
       // All functional color names are output without a theme class around them
       $values: map-get($palette, 'values');
       @each $block, $section in $values {
-        @include qh-output-color-var($block, $section);
+        @include qh-output-color-var($block, $section, $palette);
       }
     } @else {
       .qh__t__#{$key} {
         $values: map-get($palette, 'values');
         @each $block, $section in $values {
-          @include qh-output-color-var($block, $section);
+          @include qh-output-color-var($block, $section, $palette);
         }
       }
     }
@@ -56,13 +67,13 @@ html {
       @if str-index($key, "--dark") {
         @if $num == 1 {
           @each $block, $section in $values {
-            @include qh-output-color-var($block, $section);
+            @include qh-output-color-var($block, $section, $palette);
           }
         } @else {
           .qh__t__#{$key} {
             $values: map-get($palette, 'values');
             @each $block, $section in $values {
-              @include qh-output-color-var($block, $section);
+              @include qh-output-color-var($block, $section, $palette);
             }
           }
         }

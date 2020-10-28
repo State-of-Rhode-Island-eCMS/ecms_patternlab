@@ -16,12 +16,6 @@ body {
   padding: 0;
 }
 
-// Global anchor focus style
-a:focus {
-  outline: 2px solid var(--fc__default__link--focus);
-  outline-offset: 2px;
-}
-
 ::selection {
   background-color: var(--fc__primary__bg);
   color: var(--fc__primary__fg);

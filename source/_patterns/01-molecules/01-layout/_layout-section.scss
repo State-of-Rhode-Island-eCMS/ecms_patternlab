@@ -1,5 +1,5 @@
 // Desktop Only! Needs mobile styling added once the pattern is established for mobile breakpoints
-$grid-gap: 3rem;
+$grid-gap: 2rem;
 
 .qh-layout-section {
   display: grid;
@@ -8,7 +8,7 @@ $grid-gap: 3rem;
   margin: 0 auto;
 
   // Temp gutters and VR
-  padding: 2rem;
+  padding: 2rem 0;
 
   // Column sizing
   &--col-size {
@@ -71,6 +71,16 @@ $grid-gap: 3rem;
 
   // Column elements
   &__col {
+ 
+    .block:first-child:last-child {
+      height: 100%;
+    }
+
+    // spacing between blocks within columns
+    > * + * {
+      margin-top: $general-v-spacing;
+    }
+
     &--first {
       grid-area: first;
       max-width: 100%;

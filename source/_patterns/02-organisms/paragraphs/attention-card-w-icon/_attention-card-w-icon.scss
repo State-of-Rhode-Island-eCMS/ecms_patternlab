@@ -13,9 +13,15 @@
   position: relative;
   z-index: 1;
 
+  .qh-layout-section__col & {
+    &:first-child {
+      height: 100%;
+    }
+  }
+  
   // Light colored background
   &::before {
-    background-color: var(--fc__primary--light__bg);
+    background-color: var(--fc__attention-card__bar);
     content: '';
     opacity: 0.25;
     position: absolute;
@@ -25,7 +31,7 @@
 
   // Dark colored bar
   &::after {
-    background-color: var(--fc__primary--light__bg);
+    background-color: var(--fc__attention-card__bar);
     content: '';
     position: absolute;
     top: 0;
@@ -36,7 +42,7 @@
   }
 
   &__icon {
-    color: var(--fc__primary--light__fg);
+    color: var(--fc__attention-card__icon);
     display: flex;
     flex-flow: column;
     align-items: flex-start;
@@ -46,18 +52,23 @@
     min-height: $card-header-min-height--sm;
     width: ($card-leftbar-width + $general-h-spacing);
 
+    svg {
+      height: (($card-leftbar-width + $general-h-spacing) * .75);
+    }
+
     path {
       fill: currentColor;
     }
 
     // Assuming this will be the actual icon
+    // Same background color as the dark bar
     > span {
       position: relative;
       overflow: visible;
       z-index: 1;
 
       &::before {
-        background-color: var(--fc__primary--light__bg);
+        background-color: var(--fc__attention-card__bar);
         border-radius: 50%;
         content: '';
         display: block;
@@ -77,20 +88,28 @@
   }
 
   &__content {
-    color: var(--fc__primary--light__fg);
+    color: var(--fc__attention-card__fg);
     padding: $general-v-spacing $general-h-spacing;
+
+    p,
+    ul {
+      font-size: 1rem; // TEMPORARY
+
+    }
   }
 
   &__title {
     display: flex;
     flex-flow: column;
+    font-size: 1.25rem; // TEMPORARY
     align-items: flex-start;
     justify-content: center;
     min-height: $card-header-min-height--sm;
+    margin-top: 0;
     margin-bottom: ($general-v-spacing/2);
 
     #{$all-headers} {
-      color: var(--fc__primary--light__fg);
+      color: var(--fc__attention-card__fg);
       margin: 0;
     }
 

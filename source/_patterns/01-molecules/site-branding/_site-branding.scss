@@ -9,7 +9,13 @@
     min-height: 4.5rem;
   }
   &__name {
+    display: block;
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
     &__top-line {
+      display: block;
       font-family: $font-sans-vf;
       font-size: 0.875rem;
       font-weight: 450;
@@ -18,12 +24,14 @@
       text-transform: uppercase;
     }
     &__main-line {
+      display: block;
       font-family: $font-serif-vf;
       font-size: 3rem;
       font-weight: 300;
       line-height: 1.1;
     }
     &__bottom-line {
+      display: block;
       font-family: $font-sans-vf;
       font-size: 1rem;
       font-weight: 350;
