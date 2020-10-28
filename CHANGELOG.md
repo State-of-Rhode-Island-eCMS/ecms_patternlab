@@ -21,6 +21,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.1.3] - 2020-10-28
+### Changed
+- RIG-130 - Continued building components.
+
 ## [0.1.2] - 2020-10-27
 ### Changed
 - RIG-37 - Continued theming/configuring patterms.
@@ -33,7 +37,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.2...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.3...HEAD
+[0.1.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.2...0.1.3
 [0.1.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.0...0.1.1
 [0.1.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/releases/tag/0.1.0
