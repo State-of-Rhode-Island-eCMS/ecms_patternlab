@@ -98,7 +98,8 @@
     }
   }
 
-  &__title {
+  h3#{&}__title {
+    color: var(--fc__attention-card__fg);
     display: flex;
     flex-flow: column;
     font-size: 1.25rem; // TEMPORARY
@@ -107,11 +108,6 @@
     min-height: $card-header-min-height--sm;
     margin-top: 0;
     margin-bottom: ($general-v-spacing/2);
-
-    #{$all-headers} {
-      color: var(--fc__attention-card__fg);
-      margin: 0;
-    }
 
     @media (min-width: $bp--large) {
       min-height: $card-header-min-height--lg;
