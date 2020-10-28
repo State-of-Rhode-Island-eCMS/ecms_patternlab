@@ -944,23 +944,30 @@ button,
     display: block;
     width: 3rem;
     min-height: 4.5rem; }
-  .site-branding__name__top-line {
-    font-family: "Work Sans VF", var(--font-sans-fallback);
-    font-size: 0.875rem;
-    font-weight: 450;
-    letter-spacing: 0.035em;
-    line-height: 1;
-    text-transform: uppercase; }
-  .site-branding__name__main-line {
-    font-family: "Roboto Slab VF", var(--font-serif-fallback);
-    font-size: 3rem;
-    font-weight: 300;
-    line-height: 1.1; }
-  .site-branding__name__bottom-line {
-    font-family: "Work Sans VF", var(--font-sans-fallback);
-    font-size: 1rem;
-    font-weight: 350;
-    line-height: 1.5; }
+  .site-branding__name {
+    display: block; }
+    .site-branding__name:link, .site-branding__name:visited {
+      text-decoration: none; }
+    .site-branding__name__top-line {
+      display: block;
+      font-family: "Work Sans VF", var(--font-sans-fallback);
+      font-size: 0.875rem;
+      font-weight: 450;
+      letter-spacing: 0.035em;
+      line-height: 1;
+      text-transform: uppercase; }
+    .site-branding__name__main-line {
+      display: block;
+      font-family: "Roboto Slab VF", var(--font-serif-fallback);
+      font-size: 3rem;
+      font-weight: 300;
+      line-height: 1.1; }
+    .site-branding__name__bottom-line {
+      display: block;
+      font-family: "Work Sans VF", var(--font-sans-fallback);
+      font-size: 1rem;
+      font-weight: 350;
+      line-height: 1.5; }
 
 .qh__teaser-article {
   position: relative;
