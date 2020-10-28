@@ -1,3 +1,9 @@
+// List/map manipulation
+@function is-map($var){
+  @return type-of($var) == 'map';
+}
+
+
 // Remove (strip) Units
 // @author Bourbon / Thoughbot
 // @parameter {Value} $value -Value, assumed number with unit
