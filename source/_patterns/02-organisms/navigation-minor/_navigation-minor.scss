@@ -3,6 +3,11 @@
   background-color: var(--fc__nav-minor__bg);
   min-width: 20rem;
 
+  // Interaction styles come from .qh__accordion
+  &:hover,
+  &:focus,
+  &:focus-within {}
+
   a {
     display: block;
     transition: $transition-base;
@@ -17,8 +22,7 @@
 
     &__sub {
       background-color: var(--fc__nav-minor__sub__bg);
-      // Negate some spacing coming from .qh__accordion__content
-      margin: #{- $nav-a-v-spacing} #{- $nav-a-h-spacing} #{- $nav-a-v-spacing} #{- ($nav-a-v-spacing/2)};
+      border-left: 0.5rem solid var(--fc__nav-minor__link--hover__bg);
     }
   }
 
@@ -64,7 +68,10 @@
     }
 
     .qh__accordion__content {
+      background-color: transparent;
       flex-basis: 100%;
+      padding: 0 !important; // sigh
+      // Needed to override the specificity of .js [aria-expanded="true"] + .qh__accordion__content
     }
   }
 
@@ -87,7 +94,7 @@
 
     &:hover,
     &:focus,
-    &[aria-expanded="true"] {
+    .js &[aria-expanded="true"] {
       .qh__icon__plusminus {
         &__circle {
           fill: var(--fc__default__bg);
@@ -143,7 +150,7 @@
     }
 
     &--current,
-    &--current.qh__accordion__button[aria-expanded="true"] {
+    .js &--current.qh__accordion__button[aria-expanded="true"] {
       background-color: var(--fc__nav-minor__bg);
       color: var(--fc__nav-minor__fg);
       font-weight: 550; // TODO: Reset with the proper weight

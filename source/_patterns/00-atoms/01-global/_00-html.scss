@@ -1,7 +1,5 @@
 html {
-  background-color: var(--fc__default__bg);
   box-sizing: border-box;
-  color: var(--fc__default__fg);
   font-size: 100%;
 }
 
@@ -12,6 +10,8 @@ html {
 }
 
 body {
+  background-color: var(--fc__default__bg);
+  color: var(--fc__default__fg);
   margin: 0;
   padding: 0;
 }
