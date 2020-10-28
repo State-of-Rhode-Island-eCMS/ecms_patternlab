@@ -12,6 +12,7 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^4.0.2",
+    "gulp-hjson": "2.4.3",
     "gulp-json-editor": "2.5.4",
     "gulp-minify": "3.1.0",
     "gulp-rename": "^1.2.3",
@@ -20,12 +21,12 @@
     "gulp-sass-import-json": "1.0.2",
     "gulp-streamify": "1.0.2",
     "gulp-stylelint": "^8.0.0",
-    "stylelint": "^9.10.1",
-    "stylelint-config-sass-guidelines": "^5.4.0",
-    "stylelint-scss": "^3.6.0",
     "minimist": "1.2.5",
     "node-sass": "^4.14.1",
-    "prettier": "^1.14.2"
+    "prettier": "^1.14.2",
+    "stylelint": "^9.10.1",
+    "stylelint-config-sass-guidelines": "^5.4.0",
+    "stylelint-scss": "^3.6.0"
   },
   "keywords": [
     "Pattern Lab",

@@ -16,6 +16,7 @@ const stylelint = require('gulp-stylelint');
 const sassImportJson = require('gulp-sass-import-json');
 const jeditor = require('gulp-json-editor');
 const streamify = require('gulp-streamify');
+const Hjson = require('gulp-hjson');
 
 /******************************************************
  * PATTERN LAB  NODE WRAPPER TASKS with core library
@@ -75,6 +76,13 @@ const patternLabSourcePaths = [
 ];
 
 // Generate colors file
+gulp.task('convert-hjson', function () {
+  return gulp
+    .src("source/_data/color-config.hjson")
+    .pipe(Hjson({ to: 'json' }))
+    .pipe(gulp.dest('source/_data/'));
+});
+
 gulp.task('generate-colors', function () {
   return gulp
     .src("source/_data/color-config.json")
@@ -151,7 +159,7 @@ gulp.task('build:sass', () => {
 });
 
 // Build All
-gulp.task('build', gulp.series('build:js', gulp.parallel('move-fonts', 'move-vendor', 'generate-colors'), 'build:sass', 'patternlab:build'));
+gulp.task('build', gulp.series('build:js', gulp.parallel('move-fonts', 'move-vendor', 'convert-hjson'), 'generate-colors', 'build:sass', 'patternlab:build'));
 
 // Build only SASS JS
 gulp.task('build:no-patterns', gulp.parallel('build:js', 'build:sass'));
@@ -169,7 +177,7 @@ gulp.task('watch', gulp.parallel('watch:js', 'watch:sass'));
 
 // Default task
 // Patternlab:serve handles building/watching patterns
-gulp.task('default', gulp.series(gulp.parallel('move-fonts', 'move-vendor', 'generate-colors'), 'build:no-patterns', 'patternlab:serve', 'watch'));
+gulp.task('default', gulp.series(gulp.parallel('move-fonts', 'move-vendor', 'convert-hjson'), 'generate-colors', 'build:no-patterns', 'patternlab:serve', 'watch'));
 
 // Linting
 gulp.task('validate:sass', () => {
