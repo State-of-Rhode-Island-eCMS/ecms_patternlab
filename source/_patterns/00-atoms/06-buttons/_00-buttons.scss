@@ -1,4 +1,18 @@
 // Only applied via a class right now, no direct element assignment
+@mixin button-disabled-style {
+  background-color: transparent;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--fc__default__button__bg),
+    var(--fc__default__button__bg) 0.5em,
+    var(--fc__default__button--hover__bg) 0.5em,
+    var(--fc__default__button--hover__bg) 1em
+  );
+  cursor: default;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 button,
 .qh__btn {
   border: 0;
@@ -56,6 +70,23 @@ button,
     color: var(--fc__default__button--hover__fg);
   }
 
+  &:focus {
+    outline: $border-sm solid var(--fc__default__link--focus);
+    outline-offset: $border-sm;
+  }
+
+  &:disabled {
+    @include button-disabled-style;
+  }
+
+  // Opinionated: add "hand" cursor to non-disabled .btn elements
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+.qh__btn {
+
   // More subdued color theme based on primary--light
   &--secondary {
 
@@ -74,21 +105,11 @@ button,
 
   &:disabled,
   &--disabled {
-    background-color: transparent;
-    background: repeating-linear-gradient(
-      -45deg,
-      var(--fc__default__button__bg),
-      var(--fc__default__button__bg) 0.5em,
-      var(--fc__default__fg) 0.5em,
-      var(--fc__default__fg) 1em
-    );
-    cursor: default;
-    opacity: 0.6;
-    pointer-events: none;
+    @include button-disabled-style;
   }
 
   // Opinionated: add "hand" cursor to non-disabled .btn elements
-  &:not(:disabled):not(&--disabled) {
+  &:not(&--disabled) {
     cursor: pointer;
   }
 
