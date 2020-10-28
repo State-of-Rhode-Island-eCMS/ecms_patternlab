@@ -59,7 +59,7 @@ html {
   }
 
   // Loop again on Dark palettes only. Repetitive, but it works
-  @media (prefers-color-mode: dark) {
+  @media (prefers-color-scheme: dark) {
     $num: 1;
     @each $key, $palette in $palettes {
       $values: map-get($palette, 'values');
