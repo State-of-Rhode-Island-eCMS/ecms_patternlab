@@ -13,6 +13,12 @@
   position: relative;
   z-index: 1;
 
+  .qh-layout-section__col & {
+    &:first-child {
+      height: 100%;
+    }
+  }
+  
   // Light colored background
   &::before {
     background-color: var(--fc__primary--light__bg);
@@ -45,6 +51,10 @@
     margin-left: ($general-h-spacing/2);
     min-height: $card-header-min-height--sm;
     width: ($card-leftbar-width + $general-h-spacing);
+
+    svg {
+      height: (($card-leftbar-width + $general-h-spacing) * .75);
+    }
 
     path {
       fill: currentColor;
@@ -79,14 +89,22 @@
   &__content {
     color: var(--fc__primary--light__fg);
     padding: $general-v-spacing $general-h-spacing;
+
+    p,
+    ul {
+      font-size: 1rem; // TEMPORARY
+
+    }
   }
 
   &__title {
     display: flex;
     flex-flow: column;
+    font-size: 1.25rem; // TEMPORARY
     align-items: flex-start;
     justify-content: center;
     min-height: $card-header-min-height--sm;
+    margin-top: 0;
     margin-bottom: ($general-v-spacing/2);
 
     #{$all-headers} {

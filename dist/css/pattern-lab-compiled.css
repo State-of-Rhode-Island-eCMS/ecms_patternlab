@@ -771,10 +771,10 @@ button,
 
 .qh-layout-section {
   display: grid;
-  grid-gap: 3rem;
+  grid-gap: 2rem;
   max-width: 80rem;
   margin: 0 auto;
-  padding: 2rem; }
+  padding: 2rem 0; }
   .qh-layout-section--col-size-25 {
     display: block;
     max-width: 25%;
@@ -805,6 +805,10 @@ button,
     grid-template-areas: 'first second third'; }
   .qh-layout-section--col-size-25-repeat {
     grid-template-areas: 'first second third fourth'; }
+  .qh-layout-section__col .block:first-child:last-child {
+    height: 100%; }
+  .qh-layout-section__col > * + * {
+    margin-top: 1.5rem; }
   .qh-layout-section__col--first {
     grid-area: first;
     max-width: 100%; }
@@ -1487,6 +1491,8 @@ button,
   overflow: hidden;
   position: relative;
   z-index: 1; }
+  .qh-layout-section__col .qh__icon-card:first-child {
+    height: 100%; }
   .qh__icon-card::before {
     background-color: var(--fc__primary--light__bg);
     content: '';
@@ -1528,6 +1534,8 @@ button,
     margin-left: 0.5rem;
     min-height: 4.5rem;
     width: 4rem; }
+    .qh__icon-card__icon svg {
+      height: 3rem; }
     .qh__icon-card__icon path {
       fill: currentColor; }
     .qh__icon-card__icon > span {
@@ -1553,6 +1561,9 @@ button,
   .qh__icon-card__content {
     color: var(--fc__primary--light__fg);
     padding: 1.5rem 1rem; }
+    .qh__icon-card__content p,
+    .qh__icon-card__content ul {
+      font-size: 1rem; }
   .qh__icon-card__title {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1561,6 +1572,7 @@ button,
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
+    font-size: 1.25rem;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -1568,6 +1580,7 @@ button,
         -ms-flex-pack: center;
             justify-content: center;
     min-height: 4.5rem;
+    margin-top: 0;
     margin-bottom: 0.75rem; }
     .qh__icon-card__title h1, .qh__icon-card__title .h1, .qh__icon-card__title h2, .qh__icon-card__title .h2, .qh__icon-card__title h3, .qh__icon-card__title .h3, .qh__icon-card__title h4, .qh__icon-card__title .h4, .qh__icon-card__title h5, .qh__icon-card__title .h5, .qh__icon-card__title h6, .qh__icon-card__title .h6 {
       color: var(--fc__primary--light__fg);
