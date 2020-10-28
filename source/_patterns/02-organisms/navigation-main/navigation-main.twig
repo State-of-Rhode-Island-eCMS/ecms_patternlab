@@ -1,12 +1,11 @@
 {% import _self as menus %}
-
 {#
   We call a macro which calls itself to render the full tree.
   @see https://twig.symfony.com/doc/1.x/tags/macro.html
 #}
-{{ menus.menu_links(items, attributes, 0, 0, FALSE) }}
+{{ menus.menu_links(items, attributes, 0, front_page, 0, FALSE) }}
 
-{% macro menu_links(items, attributes, menu_level, generated_id, sub_menu_item, dropdown_item) %}
+{% macro menu_links(items, attributes, menu_level, front_page, generated_id, sub_menu_item, dropdown_item) %}
   {% import _self as menus %}
 
   {% if items %}
@@ -59,7 +58,7 @@
           </a>
           {% if item.below %}
             {# TODO: Add a placeholder "Overview" link to receive the URL destination of the parent via JS #}
-            {{ menus.menu_links(item.below, attributes, menu_level + 1, link_id, TRUE, item)  }}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1, front_page, link_id, TRUE, item)  }}
           {% endif %}
         </li>
       {% else %}
