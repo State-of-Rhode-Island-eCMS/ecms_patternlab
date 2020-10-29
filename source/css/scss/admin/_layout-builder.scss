@@ -1,14 +1,134 @@
-.ui-dialog-content {
-  .media-library-wrapper,
-  .js-media-library-add-form {
-    img {
-      width: inherit;
+
+// Allow Dark mode to take effect on LB editing pages
+.layout-builder {
+  background-color: inherit;
+}
+
+.layout-builder-block {
+  background-color: inherit;
+}
+
+// Clean up default top section of LB
+.node-layout-builder-form {
+  margin: 2rem;
+
+  .vertical-tabs {
+    margin-left: 20rem;
+
+    &__menu {
+      margin-left: -20rem;
+
+      &-item {
+        background-color: inherit;
+        background-color: var(--fc__default__bg);
+        color: var(--fc__default__fg);
+
+        a {
+          color:var(--fc__default__link);
+        }
+
+        &.is-selected {
+          background-color: var(--fc__primary__bg);
+          color: var(--fc__primary__fg);
+
+          a {
+            color:var(--fc__primary__link);
+          }
+        };
+
+        &-title {
+          color: inherit !important;
+        }
+      }
+    }
+  }
+
+  select {
+    width: inherit;
+    background-color: var(--fc__default__bg);
+    color: var(--fc__default__fg);
+  }
+}
+
+.media-library-widget-modal{
+  img {
+    width: inherit;
+  }
+}
+
+html #layout-builder-modal {
+  color: var(--fc__default__fg);
+  background: var(--fc__default__bg);
+
+  #{$all-headers} {
+    color: var(--fc__default__fg);
+  }
+
+  // Draggable table styles
+  thead {
+    th {
+      color: var(--fc__header__fg);
+      background: var(--fc__header__bg);
+
+      #{$all-headers} {
+        color: var(--fc__header__fg);
+      }
+    }
+  }
+
+  tbody {
+    tr:hover,
+    tr:focus {
+      background: var(--fc__default__bg);
+      border: 1px solid var(--fc__default__fg);
+    }
+  }
+
+  .form-item {
+    .description {
+      color: var(--fc__default__fg);
+    }
+  }
+
+  // Dropbutton
+  .dropbutton-multiple .dropbutton {
+    border-right: 0;
+  }
+
+  .dropbutton {
+    font-size: inherit;
+    font-weight: inherit;
+
+    &__item {
+      margin-left: 0;
+      margin-right: 10px;
     }
 
-    input {
-      background-color: var(--c__white);
-      color: var(--c__quahog);
-      border: 1px solid var(--c__quahog);
+    &-toggle {
+      margin-top: 0;
+      border: 1px solid var(--fc__default__fg);
+      width: 2rem;
+
+      button {
+        background: var(--fc__default__bg);
+      }
     }
+
+    &-widget {
+      color: var(--fc__default__fg);
+      background-color: var(--fc__default__bg);
+      border: 0;
+      margin-top: .5rem;
+      padding-right: 2rem;
+    }
+  }
+
+  // Misc bg colors
+  fieldset:not(.fieldgroup) {
+    background-color: var(--fc__default__bg);
+  }
+
+  .media-library-item--grid {
+    background-color: var(--fc__default__bg);
   }
 }
