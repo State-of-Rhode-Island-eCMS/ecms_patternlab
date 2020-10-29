@@ -78,6 +78,11 @@
   }
 }
 
+h2.pl-c-category__title::after {
+  border: none;
+  margin: 0;
+}
+
 .pl-c-pattern {
   img {
     width: auto;
