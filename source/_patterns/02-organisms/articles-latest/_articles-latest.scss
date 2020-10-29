@@ -1,5 +1,5 @@
 .qh__articles-latest {
-  padding: $general-v-spacing $general-h-spacing;
+  padding: $general-v-spacing 0;
 
   &__title {
     margin: 0;
@@ -27,11 +27,10 @@
     }
 
     @media (min-width: $bp--medium) {
-      flex: 1 0 33.33%;
+      flex: 1 1 0;
 
         display: flex;
         flex-flow: column;
-        height: 100%; // fill parent item
 
         .qh__teaser-article__content {
           display: flex;
