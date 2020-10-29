@@ -16,26 +16,26 @@ $grid-gap: 2rem;
     // One Column sizing
     &-25 {
       display: block;
-      max-width: 25%;
       margin: 0 auto;
+      width: 25%;
     }
 
     &-50 {
       display: block;
-      max-width: 50%;
       margin: 0 auto;
+      width: 50%;
     }
 
     &-75 {
       display: block;
-      max-width: 75%;
       margin: 0 auto;
+      width: 75%;
     }
 
     &-100 {
       display: block;
-      max-width: 100%;
       margin: 0 auto;
+      width: 100%;
     }
 
     // Two Column sizing
