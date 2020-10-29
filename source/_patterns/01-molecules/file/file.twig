@@ -6,7 +6,6 @@
  * Available variables:
  * - name: Name of the media.
  * - content: Media content.
- * - file_title: title of file
  * - file_type_icon: name of icon
  * - file_type_readable: readable file type name
  * - file_url: absolute link of file location
@@ -28,7 +27,7 @@
       </span>
     </div>
     <div class="qh__file-list__item__filename">
-      <span class="qh__file-list__item__label">{{ file_title }}</span>
+      <span class="qh__file-list__item__label">{{ name }}</span>
       {# Intent for file size: If it is less than 1mb, simplify the text to "less than 1mb" #}
       <span class="qh__file-list__item__filesize">{{ file_type_readable }}, {{ file_size.amount }}<span aria-hidden="true">{{ file_size.short_format }}</span><span class="visually-hidden">{{ file_size.long_format }}</span></span>
     </div>
