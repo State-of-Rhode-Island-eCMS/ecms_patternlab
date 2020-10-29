@@ -87,6 +87,9 @@
       </div>
     </footer>
   {% endif %}
+  {% if publish_date %}
+    <p><em>{{ publish_date }}</em></p>
+  {% endif %}
 
   {{ content }}
 

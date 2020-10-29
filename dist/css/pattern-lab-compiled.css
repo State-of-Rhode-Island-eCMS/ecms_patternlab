@@ -237,6 +237,7 @@ html {
     --fc__default__hx__fg: #6e6e6e;
     --fc__default__violator: #95bddf;
     --fc__default__accent: #face3d;
+    --fc__default__text__accent: #6e6e6e;
     --fc__default__button__bg: #eb5252;
     --fc__default__button__fg: #2e2e2e;
     --fc__default__button--hover__bg: #8e3339;
@@ -299,6 +300,7 @@ html {
     --fc__default__link--visited: #bbacec;
     --fc__default__link--active: #ff8e47;
     --fc__default__hx__fg: #d2cbb2;
+    --fc__default__text__accent: #d4d4d4;
     --fc__icon__word: #95bddf;
     --fc__icon__generic: #d2cbb2;
     --fc__icon__download: #d4d4d4;
@@ -409,6 +411,7 @@ html {
         --fc__default__link--visited: #bbacec;
         --fc__default__link--active: #ff8e47;
         --fc__default__hx__fg: #d2cbb2;
+        --fc__default__text__accent: #d4d4d4;
         --fc__icon__word: #95bddf;
         --fc__icon__generic: #d2cbb2;
         --fc__icon__download: #d4d4d4;
