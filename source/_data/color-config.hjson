@@ -135,7 +135,7 @@
     "rhody-red--trans15": {
       "name": "Rhody Red 15% transparent",
       "hue": "red transparent",
-      "hsl": "hsla(360, 79%, 62%, 0.5)",
+      "hsl": "hsla(360, 79%, 62%, 0.15)",
       "needs": "dark-text"
     },
     "calamari": {
@@ -248,7 +248,6 @@
           { "fnName": "hx__fg", "colorName": "quahog--medium" },
           { "fnName": "violator", "colorName": "calamari" },
           { "fnName": "accent", "colorName": "hope-gold" },
-          { "fnName": "text__accent", "colorName": "quahog--medium" },
           { "fnName": "button__bg", "colorName": "navy" },
           { "fnName": "button__fg", "colorName": "hope-gold" },
           { "fnName": "button--hover__bg", "colorName": "navy--dark" },
@@ -292,15 +291,13 @@
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "navy" },
           { "fnName": "fg--dark", "colorName": "white" },
-          { "fnName": "bg--dark", "colorName": "navy--trans50" },
-          { "fnName": "hx__fg", "colorName": "coffee-milk--light" }
+          { "fnName": "bg--dark", "colorName": "navy--trans50" }
         ],
         "primary--light": [
           { "fnName": "fg", "colorName": "navy--dark" },
           { "fnName": "bg", "colorName": "ocean" },
           { "fnName": "fg--dark", "colorName": "white" },
-          { "fnName": "bg--dark", "colorName": "ocean--trans25" },
-          { "fnName": "hx__fg", "colorName": "white" }
+          { "fnName": "bg--dark", "colorName": "ocean--trans25" }
         ]
       }
     },
@@ -346,7 +343,6 @@
           { "fnName": "hx__fg", "colorName": "coffee-milk" },
           { "fnName": "violator--not-used", "colorName": "calamari" },
           { "fnName": "accent--not-used", "colorName": "hope-gold" },
-          { "fnName": "text__accent", "colorName": "quahog--light" },
           { "fnName": "button__bg--not-used", "colorName": "navy" },
           { "fnName": "button__fg--not-used", "colorName": "hope-gold" },
           { "fnName": "button--hover__bg--not-used", "colorName": "navy--dark" },
@@ -385,20 +381,6 @@
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "quahog" },
           { "fnName": "copyright__bg", "colorName": "quahog--darker" }
-        ],
-        "primary": [
-          { "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "navy" },
-          { "fnName": "fg--dark", "colorName": "white" },
-          { "fnName": "bg--dark", "colorName": "navy--trans50" },
-          { "fnName": "hx__fg", "colorName": "coffee-milk--light" }
-        ],
-        "primary--light": [
-          { "fnName": "fg", "colorName": "navy--dark" },
-          { "fnName": "bg", "colorName": "ocean" },
-          { "fnName": "fg--dark", "colorName": "white" },
-          { "fnName": "bg--dark", "colorName": "ocean--trans25" },
-          { "fnName": "hx__fg", "colorName": "white" }
         ]
       }
     },
@@ -442,13 +424,12 @@
           { "fnName": "link--visited", "colorName": "navy--warm" },
           { "fnName": "link--active", "colorName": "calamari" },
           { "fnName": "hx__fg", "colorName": "quahog--medium" },
-          { "fnName": "violator", "colorName": "rhody-red" },
+          { "fnName": "violator", "colorName": "ocean" },
           { "fnName": "accent", "colorName": "hope-gold" },
-          { "fnName": "text__accent", "colorName": "quahog--medium" },
-          { "fnName": "button__bg", "colorName": "navy" },
-          { "fnName": "button__fg", "colorName": "hope-gold" },
-          { "fnName": "button--hover__bg", "colorName": "navy--dark" },
-          { "fnName": "button--hover__fg", "colorName": "ocean" }
+          { "fnName": "button__bg", "colorName": "rhody-red" },
+          { "fnName": "button__fg", "colorName": "quahog--dark" },
+          { "fnName": "button--hover__bg", "colorName": "rhody-red--dark" },
+          { "fnName": "button--hover__fg", "colorName": "hope-gold" }
         ],
         "icon": [
           { "fnName": "pdf", "colorName": "rhody-red" },
@@ -480,17 +461,106 @@
         ],
         "primary": [
           { "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "rhody-red" },
+          { "fnName": "bg", "colorName": "rhody-red--dark" },
           { "fnName": "fg--dark", "colorName": "white" },
-          { "fnName": "bg--dark", "colorName": "navy--trans50" },
-          { "fnName": "hx__fg", "colorName": "white" }
+          { "fnName": "bg--dark", "colorName": "rhody-red--trans15" }
         ],
         "primary--light": [
           { "fnName": "fg", "colorName": "quahog--darker" },
-          { "fnName": "bg", "colorName": "rhody-red--trans15" },
+          { "fnName": "bg", "colorName": "rhody-red" },
           { "fnName": "fg--dark", "colorName": "white" },
-          { "fnName": "bg--dark", "colorName": "ocean--trans25" },
-          { "fnName": "hx__fg", "colorName": "quahog" }
+          { "fnName": "bg--dark", "colorName": "rhody-red--trans50" }
+        ]
+      }
+    },
+    "federal-hill--dark": {
+      "humanName": "Federal Hill dark",
+      "values": {
+        "official": [
+          { "fnName": "fg", "colorName": "quahog--light" },
+          { "fnName": "bg", "colorName": "quahog--darker" },
+          { "fnName": "link", "colorName": "white" },
+          { "fnName": "link--hover", "colorName": "rhody-red" },
+          { "fnName": "link--focus", "colorName": "rhody-red" },
+          { "fnName": "link--visited", "colorName": "white" }
+        ],
+        "header": [
+          { "fnName": "fg", "colorName": "white" },
+          { "fnName": "bg", "colorName": "quahog--dark" }
+        ],
+        "nav-main": [
+          { "fnName": "fg", "colorName": "quahog--light" },
+          { "fnName": "bg", "colorName": "rhody-red--dark" },
+          { "fnName": "link", "colorName": "quahog--light" },
+          { "fnName": "link--hover", "colorName": "white" },
+          { "fnName": "link--hover__bg", "colorName": "quahog" },
+          { "fnName": "link--focus", "colorName": "hope-gold" },
+          { "fnName": "link--active", "colorName": "hope-gold" },
+          { "fnName": "link--current__border", "colorName": "quahog--dark" },
+          { "fnName": "link__sub--hover__bg", "colorName": "quahog--dark--trans15" },
+          { "fnName": "icon__bg", "colorName": "rhody-red" },
+          { "fnName": "icon__fg--not-used", "colorName": "quahog--dark" },
+          { "fnName": "icon__bg--hover", "colorName": "hope-gold" },
+          { "fnName": "icon__fg--hover", "colorName": "quahog--dark" }
+        ],
+        "default": [
+          { "fnName": "fg", "colorName": "coffee-milk--light" },
+          { "fnName": "bg", "colorName": "quahog--dark" },
+          { "fnName": "border", "colorName": "white--trans25" },
+          { "fnName": "link", "colorName": "ocean" },
+          { "fnName": "link--hover", "colorName": "hope-gold" },
+          { "fnName": "link--focus", "colorName": "ocean" },
+          { "fnName": "link--visited", "colorName": "navy--wrm-lgt" },
+          { "fnName": "link--active", "colorName": "calamari" },
+          { "fnName": "hx__fg", "colorName": "coffee-milk" },
+          { "fnName": "violator--not-used", "colorName": "ocean" },
+          { "fnName": "accent--not-used", "colorName": "hope-gold" },
+          { "fnName": "button__bg--not-used", "colorName": "rhody-red" },
+          { "fnName": "button__fg--not-used", "colorName": "quahog--dark" },
+          { "fnName": "button--hover__bg--not-used", "colorName": "rhody-red--dark" },
+          { "fnName": "button--hover__fg--not-used", "colorName": "hope-gold" }
+        ],
+        "icon": [
+          { "fnName": "pdf--not-used", "colorName": "rhody-red" },
+          { "fnName": "word", "colorName": "ocean" },
+          { "fnName": "excel--not-used", "colorName": "green-animals" },
+          { "fnName": "generic", "colorName": "coffee-milk" },
+          { "fnName": "download", "colorName": "quahog--light" }
+        ],
+        "nav-minor": [
+          { "fnName": "border", "colorName": "rhody-red" },
+          { "fnName": "fg", "colorName": "quahog--light" },
+          { "fnName": "bg", "colorName": "rhody-red--trans15" },
+          { "fnName": "link", "colorName": "coffee-milk--light" },
+          { "fnName": "link__bg", "colorName": "transparent" },
+          { "fnName": "link--hover", "colorName": "white" },
+          { "fnName": "link--hover__bg", "colorName": "rhody-red--trans15" },
+          { "fnName": "link--focus", "colorName": "ocean" },
+          { "fnName": "link--active", "colorName": "hope-gold" },
+          { "fnName": "sub__bg", "colorName": "quahog--dark--trans15" }
+        ],
+        "accordion": [
+          { "fnName": "icon__fg", "colorName": "quahog--darker" },
+          { "fnName": "icon__bg", "colorName": "calamari" }
+        ],
+        "attention-card": [
+          { "fnName": "fg", "colorName": "coffee-milk--light" },
+          { "fnName": "bar", "colorName": "rhody-red--dark" },
+          { "fnName": "icon", "colorName": "coffee-milk--light" }
+        ],
+        "footer": [
+          { "fnName": "border-top", "colorName": "rhody-red" },
+          { "fnName": "fg", "colorName": "white" },
+          { "fnName": "bg", "colorName": "quahog--dark" },
+          { "fnName": "copyright__bg", "colorName": "quahog--darker" }
+        ],
+        "primary": [
+          { "fnName": "fg--dark", "colorName": "white" },
+          { "fnName": "bg--dark", "colorName": "rhody-red--trans15" }
+        ],
+        "primary--light": [
+          { "fnName": "fg--dark", "colorName": "white" },
+          { "fnName": "bg--dark", "colorName": "rhody-red--trans50" }
         ]
       }
     }
