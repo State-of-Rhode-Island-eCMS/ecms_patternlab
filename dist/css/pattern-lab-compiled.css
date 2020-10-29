@@ -2090,3 +2090,6 @@ html #layout-builder-modal {
 .toolbar-tray button {
   background-color: transparent;
   background-image: initial; }
+
+nav.tabs .tabs {
+  max-width: none; }

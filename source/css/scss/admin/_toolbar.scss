@@ -15,3 +15,10 @@
     background-image: initial;
   }
 }
+
+// Overide pattern lab styles affecting admin tabs.
+nav.tabs {
+  .tabs {
+    max-width: none;
+  }
+}
