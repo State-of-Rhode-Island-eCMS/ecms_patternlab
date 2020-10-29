@@ -403,7 +403,7 @@ html {
       --fc__footer__fg: white;
       --fc__footer__bg: #404040;
       --fc__footer__copyright__bg: #141414; }
-      html .qh__t__federal-hill {
+      html .qh__t__federal-hill--dark {
         --fc__official__fg: #d4d4d4;
         --fc__official__bg: #141414;
         --fc__official__link: white;
