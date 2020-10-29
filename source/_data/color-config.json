@@ -528,16 +528,16 @@
           { "fnName": "download", "colorName": "quahog--light" }
         ],
         "nav-minor": [
-          { "fnName": "border", "colorName": "navy" },
+          { "fnName": "border", "colorName": "rhody-red" },
           { "fnName": "fg", "colorName": "quahog--light" },
-          { "fnName": "bg", "colorName": "navy--trans50" },
+          { "fnName": "bg", "colorName": "rhody-red--trans15" },
           { "fnName": "link", "colorName": "coffee-milk--light" },
           { "fnName": "link__bg", "colorName": "transparent" },
           { "fnName": "link--hover", "colorName": "white" },
-          { "fnName": "link--hover__bg", "colorName": "quahog--dark" },
-          { "fnName": "link--focus", "colorName": "hope-gold" },
+          { "fnName": "link--hover__bg", "colorName": "rhody-red--trans15" },
+          { "fnName": "link--focus", "colorName": "ocean" },
           { "fnName": "link--active", "colorName": "hope-gold" },
-          { "fnName": "sub__bg", "colorName": "quahog--dark--trans33" }
+          { "fnName": "sub__bg", "colorName": "quahog--dark--trans15" }
         ],
         "accordion": [
           { "fnName": "icon__fg", "colorName": "quahog--darker" },

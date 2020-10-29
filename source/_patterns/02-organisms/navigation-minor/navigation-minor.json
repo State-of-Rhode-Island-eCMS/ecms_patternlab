@@ -35,7 +35,7 @@
       "below": [
         {
           "is_expanded": true,
-          "in_active_trail": true,
+          "in_active_trail": false,
           "title": "Active trail sub item",
           "url": "#"
         }
