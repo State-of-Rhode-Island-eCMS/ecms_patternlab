@@ -708,7 +708,7 @@ dl {
           hyphens: auto;
   line-height: clamp(1.25em, 2vw, 1.4em);
   margin: 0;
-  max-width: var(--content-width);
+  max-width: 40em;
   padding: 0; }
   @media screen and (min-width: 47.5em) {
     ul,
@@ -718,11 +718,14 @@ dl {
           -ms-hyphens: none;
               hyphens: none; } }
   p + ul,
-  ul + ul, p +
+  ul + ul,
+  ul + p, p +
   ol,
-  ol + ul, p +
+  ol + ul,
+  ol + p, p +
   dl,
-  dl + ul {
+  dl + ul,
+  dl + p {
     margin-top: var(--body-text-spacer); }
   ul ul,
   ul ol,
