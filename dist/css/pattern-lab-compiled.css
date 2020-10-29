@@ -114,6 +114,7 @@ html {
   --fc__default__hx__fg: #6e6e6e;
   --fc__default__violator: #ff8e47;
   --fc__default__accent: #face3d;
+  --fc__default__text__accent: #6e6e6e;
   --fc__default__button__bg: #293557;
   --fc__default__button__fg: #face3d;
   --fc__default__button--hover__bg: #1b243b;
@@ -150,7 +151,7 @@ html {
   --fc__primary--light__bg: #95bddf;
   --fc__primary--light__fg--dark: white;
   --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.25); }
-  html .qh__t__scarborough--dark {
+  html .qh__t__scarborough.dark {
     --fc__official__fg: #d4d4d4;
     --fc__official__bg: #141414;
     --fc__official__link: #95bddf;
@@ -169,7 +170,6 @@ html {
     --fc__nav-main__link--current__border: #1b243b;
     --fc__nav-main__link__sub--hover__bg: rgba(20, 20, 20, 0.15);
     --fc__nav-main__icon__bg: #95bddf;
-    --fc__nav-main__icon__fg--not-used: #293557;
     --fc__nav-main__icon__bg--hover: #face3d;
     --fc__nav-main__icon__fg--hover: #1b243b;
     --fc__default__fg: #f0eee5;
@@ -181,15 +181,8 @@ html {
     --fc__default__link--visited: #bbacec;
     --fc__default__link--active: #ff8e47;
     --fc__default__hx__fg: #d2cbb2;
-    --fc__default__violator--not-used: #ff8e47;
-    --fc__default__accent--not-used: #face3d;
-    --fc__default__button__bg--not-used: #293557;
-    --fc__default__button__fg--not-used: #face3d;
-    --fc__default__button--hover__bg--not-used: #1b243b;
-    --fc__default__button--hover__fg--not-used: #95bddf;
-    --fc__icon__pdf--not-used: #eb5252;
+    --fc__default__text__accent: #d4d4d4;
     --fc__icon__word: #95bddf;
-    --fc__icon__excel--not-used: #59bf45;
     --fc__icon__generic: #d2cbb2;
     --fc__icon__download: #d4d4d4;
     --fc__nav-minor__border: #293557;
@@ -276,7 +269,7 @@ html {
     --fc__primary--light__bg: #eb5252;
     --fc__primary--light__fg--dark: white;
     --fc__primary--light__bg--dark: rgba(235, 82, 82, 0.5); }
-  html .qh__t__federal-hill--dark {
+  html .qh__t__federal-hill.dark {
     --fc__official__fg: #d4d4d4;
     --fc__official__bg: #141414;
     --fc__official__link: white;
@@ -295,7 +288,6 @@ html {
     --fc__nav-main__link--current__border: #2e2e2e;
     --fc__nav-main__link__sub--hover__bg: rgba(20, 20, 20, 0.15);
     --fc__nav-main__icon__bg: #eb5252;
-    --fc__nav-main__icon__fg--not-used: #2e2e2e;
     --fc__nav-main__icon__bg--hover: #face3d;
     --fc__nav-main__icon__fg--hover: #2e2e2e;
     --fc__default__fg: #f0eee5;
@@ -307,15 +299,7 @@ html {
     --fc__default__link--visited: #bbacec;
     --fc__default__link--active: #ff8e47;
     --fc__default__hx__fg: #d2cbb2;
-    --fc__default__violator--not-used: #95bddf;
-    --fc__default__accent--not-used: #face3d;
-    --fc__default__button__bg--not-used: #eb5252;
-    --fc__default__button__fg--not-used: #2e2e2e;
-    --fc__default__button--hover__bg--not-used: #8e3339;
-    --fc__default__button--hover__fg--not-used: #face3d;
-    --fc__icon__pdf--not-used: #eb5252;
     --fc__icon__word: #95bddf;
-    --fc__icon__excel--not-used: #59bf45;
     --fc__icon__generic: #d2cbb2;
     --fc__icon__download: #d4d4d4;
     --fc__nav-minor__border: #eb5252;
@@ -361,7 +345,6 @@ html {
       --fc__nav-main__link--current__border: #1b243b;
       --fc__nav-main__link__sub--hover__bg: rgba(20, 20, 20, 0.15);
       --fc__nav-main__icon__bg: #95bddf;
-      --fc__nav-main__icon__fg--not-used: #293557;
       --fc__nav-main__icon__bg--hover: #face3d;
       --fc__nav-main__icon__fg--hover: #1b243b;
       --fc__default__fg: #f0eee5;
@@ -373,15 +356,8 @@ html {
       --fc__default__link--visited: #bbacec;
       --fc__default__link--active: #ff8e47;
       --fc__default__hx__fg: #d2cbb2;
-      --fc__default__violator--not-used: #ff8e47;
-      --fc__default__accent--not-used: #face3d;
-      --fc__default__button__bg--not-used: #293557;
-      --fc__default__button__fg--not-used: #face3d;
-      --fc__default__button--hover__bg--not-used: #1b243b;
-      --fc__default__button--hover__fg--not-used: #95bddf;
-      --fc__icon__pdf--not-used: #eb5252;
+      --fc__default__text__accent: #d4d4d4;
       --fc__icon__word: #95bddf;
-      --fc__icon__excel--not-used: #59bf45;
       --fc__icon__generic: #d2cbb2;
       --fc__icon__download: #d4d4d4;
       --fc__nav-minor__border: #293557;
@@ -403,7 +379,7 @@ html {
       --fc__footer__fg: white;
       --fc__footer__bg: #404040;
       --fc__footer__copyright__bg: #141414; }
-      html .qh__t__federal-hill--dark {
+      html .qh__t__federal-hill {
         --fc__official__fg: #d4d4d4;
         --fc__official__bg: #141414;
         --fc__official__link: white;
@@ -422,7 +398,6 @@ html {
         --fc__nav-main__link--current__border: #2e2e2e;
         --fc__nav-main__link__sub--hover__bg: rgba(20, 20, 20, 0.15);
         --fc__nav-main__icon__bg: #eb5252;
-        --fc__nav-main__icon__fg--not-used: #2e2e2e;
         --fc__nav-main__icon__bg--hover: #face3d;
         --fc__nav-main__icon__fg--hover: #2e2e2e;
         --fc__default__fg: #f0eee5;
@@ -434,15 +409,7 @@ html {
         --fc__default__link--visited: #bbacec;
         --fc__default__link--active: #ff8e47;
         --fc__default__hx__fg: #d2cbb2;
-        --fc__default__violator--not-used: #95bddf;
-        --fc__default__accent--not-used: #face3d;
-        --fc__default__button__bg--not-used: #eb5252;
-        --fc__default__button__fg--not-used: #2e2e2e;
-        --fc__default__button--hover__bg--not-used: #8e3339;
-        --fc__default__button--hover__fg--not-used: #face3d;
-        --fc__icon__pdf--not-used: #eb5252;
         --fc__icon__word: #95bddf;
-        --fc__icon__excel--not-used: #59bf45;
         --fc__icon__generic: #d2cbb2;
         --fc__icon__download: #d4d4d4;
         --fc__nav-minor__border: #eb5252;
@@ -1418,16 +1385,17 @@ button,
             justify-content: space-between; }
     .qh__nav-minor__has-children .qh__nav-minor__link {
       -webkit-box-flex: 1;
-          -ms-flex: 1 0 auto;
-              flex: 1 0 auto;
-      margin-left: auto; }
+          -ms-flex: 1 0 calc(100% - 2.75em);
+              flex: 1 0 calc(100% - 2.75em);
+      margin-left: auto;
+      min-width: calc(100% - 2.75em); }
     .qh__nav-minor__has-children .qh__accordion__button {
       display: block;
       -webkit-box-flex: 0;
           -ms-flex: 0 0 2.75rem;
               flex: 0 0 2.75rem;
-      margin-right: auto;
-      padding: 0; }
+      margin: 0 0 0 auto;
+      padding: 0.25rem 0; }
       .qh__nav-minor__has-children .qh__accordion__button .qh__icon {
         margin: 0; }
     .qh__nav-minor__has-children .qh__accordion__content {
@@ -1592,10 +1560,10 @@ button,
  * to put a single wrapper around all accordion elements on a page
  */
 .qh__accordion {
-  border: 0.0625rem solid var(--transparent);
-  margin-bottom: 1rem; }
-  .qh__accordion:hover, .qh__accordion:focus, .qh__accordion:focus-within {
-    border-color: var(--fc__default__link--hover);
+  border: 0.0625rem solid transparent;
+  margin-top: 0.75rem; }
+  .qh__accordion:hover, .qh__accordion:focus-within {
+    border-color: var(--fc__default__link--focus);
     -webkit-transition: all 250ms ease;
     transition: all 250ms ease; }
   .qh__accordion__button {
@@ -1616,11 +1584,11 @@ button,
     white-space: normal;
     width: 100%; }
     .qh__accordion__button:hover, .qh__accordion__button:focus {
-      background-color: var(--fc__default__bg);
+      background-color: var(--c__coffee-milk--trans10);
       color: var(--fc__default__fg); }
     .qh__accordion__button:focus .qh__accordion__button__summary {
-      outline: 2px solid var(--fc__default__link--hover);
-      outline-offset: 2px; }
+      outline: 0.125rem solid var(--fc__default__link--focus);
+      outline-offset: 3px; }
     .qh__accordion__button__summary {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1651,7 +1619,7 @@ button,
         -webkit-transform-origin: center;
                 transform-origin: center; }
     .qh__accordion__button[aria-expanded="true"] {
-      background-color: var(--fc__default__bg); }
+      background-color: var(--c__coffee-milk--trans25); }
       .qh__accordion__button[aria-expanded="true"] .qh__icon__plusminus__vert {
         -webkit-transform: rotate(-360deg);
                 transform: rotate(-360deg); }
