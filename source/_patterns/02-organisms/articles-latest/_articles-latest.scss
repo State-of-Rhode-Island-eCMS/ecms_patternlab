@@ -8,7 +8,6 @@
 
   &__list {
     margin: 0 #{- $general-h-spacing};
-    max-width: none;
 
     @media (min-width: $bp--medium) {
       display: flex;
@@ -18,7 +17,7 @@
     }
   }
 
-  &__item {
+  &__list > * {
     padding: 0 $general-h-spacing;
 
     @media (max-width: ($bp--medium - em(1))) {
@@ -30,7 +29,6 @@
     @media (min-width: $bp--medium) {
       flex: 1 0 33.33%;
 
-      > article {
         display: flex;
         flex-flow: column;
         height: 100%; // fill parent item
@@ -44,7 +42,6 @@
         .qh__teaser-article__cta {
           margin-top: auto;
         }
-      }
     }
   }
 }
