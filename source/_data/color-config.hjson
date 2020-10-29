@@ -1,3 +1,20 @@
+#
+# Welcome to Megalord
+# ===================
+#
+# This is the one color and palette defintion file to rule them all!
+#
+# Using HJSON to allow comments in a JSON file
+#
+# Definitions for all colors
+#
+# color-slug  -> The machine name of the color, i.e. "white"
+# "name"      -> Human readable name
+# "hue"       -> Where on the color wheel does this color sit? Useful for named colors like "Calamari"
+# "hsl"       -> The programmatic color value using the HSL colorspace
+# "needs"     -> Accessibility-wise, what color text would this background color support?
+#             -> Not perfect, but a decent startng place for accessibility
+#
 {
   "colors": {
     "white": {
@@ -206,6 +223,17 @@
     }
   },
   "palettes": {
+    #
+    # NOTE: The first color palette is defined as the DEFAULT color palette
+    #
+    # Structure:
+    # "scarborough" -> This is the Theme slug
+    # "humanName"   -> Used by PHP/Twig to build the drop down menu in the admin
+    # "values"      -> Collection of blocks of functional color definitions
+    # block-name    -> Like "official": This is the component slug
+    # "fnName"      -> The "functional name" of a color slug, like "fg" for foreground
+    # "colorName"   -> A color name key that MUST match a color defined above
+    #
     "scarborough": {
       "humanName": "Scarborough Beach",
       "values": {
@@ -301,6 +329,12 @@
         ]
       }
     },
+    #
+    # A Dark theme is defined here with the "--dark" keyword appended to the original slug
+    #
+    # If a functional color pair is commented out, it is not being used, and therefore,
+    # in CSS, the value will come from the default color palette
+    #
     "scarborough--dark": {
       "humanName": "Scarborough Beach dark",
       "values": {
@@ -327,7 +361,7 @@
           { "fnName": "link--current__border", "colorName": "navy--dark" },
           { "fnName": "link__sub--hover__bg", "colorName": "quahog--dark--trans15" },
           { "fnName": "icon__bg", "colorName": "ocean" },
-          { "fnName": "icon__fg--not-used", "colorName": "navy" },
+          #{ "fnName": "icon__fg", "colorName": "navy" },
           { "fnName": "icon__bg--hover", "colorName": "hope-gold" },
           { "fnName": "icon__fg--hover", "colorName": "navy--dark" }
         ],
@@ -341,17 +375,17 @@
           { "fnName": "link--visited", "colorName": "navy--wrm-lgt" },
           { "fnName": "link--active", "colorName": "calamari" },
           { "fnName": "hx__fg", "colorName": "coffee-milk" },
-          { "fnName": "violator--not-used", "colorName": "calamari" },
-          { "fnName": "accent--not-used", "colorName": "hope-gold" },
-          { "fnName": "button__bg--not-used", "colorName": "navy" },
-          { "fnName": "button__fg--not-used", "colorName": "hope-gold" },
-          { "fnName": "button--hover__bg--not-used", "colorName": "navy--dark" },
-          { "fnName": "button--hover__fg--not-used", "colorName": "ocean" }
+          #{ "fnName": "violator", "colorName": "calamari" },
+          #{ "fnName": "accent", "colorName": "hope-gold" },
+          #{ "fnName": "button__bg", "colorName": "navy" },
+          #{ "fnName": "button__fg", "colorName": "hope-gold" },
+          #{ "fnName": "button--hover__bg", "colorName": "navy--dark" },
+          #{ "fnName": "button--hover__fg", "colorName": "ocean" }
         ],
         "icon": [
-          { "fnName": "pdf--not-used", "colorName": "rhody-red" },
+          #{ "fnName": "pdf", "colorName": "rhody-red" },
           { "fnName": "word", "colorName": "ocean" },
-          { "fnName": "excel--not-used", "colorName": "green-animals" },
+          #{ "fnName": "excel", "colorName": "green-animals" },
           { "fnName": "generic", "colorName": "coffee-milk" },
           { "fnName": "download", "colorName": "quahog--light" }
         ],
@@ -499,7 +533,7 @@
           { "fnName": "link--current__border", "colorName": "quahog--dark" },
           { "fnName": "link__sub--hover__bg", "colorName": "quahog--dark--trans15" },
           { "fnName": "icon__bg", "colorName": "rhody-red" },
-          { "fnName": "icon__fg--not-used", "colorName": "quahog--dark" },
+          #{ "fnName": "icon__fg", "colorName": "quahog--dark" },
           { "fnName": "icon__bg--hover", "colorName": "hope-gold" },
           { "fnName": "icon__fg--hover", "colorName": "quahog--dark" }
         ],
@@ -513,17 +547,17 @@
           { "fnName": "link--visited", "colorName": "navy--wrm-lgt" },
           { "fnName": "link--active", "colorName": "calamari" },
           { "fnName": "hx__fg", "colorName": "coffee-milk" },
-          { "fnName": "violator--not-used", "colorName": "ocean" },
-          { "fnName": "accent--not-used", "colorName": "hope-gold" },
-          { "fnName": "button__bg--not-used", "colorName": "rhody-red" },
-          { "fnName": "button__fg--not-used", "colorName": "quahog--dark" },
-          { "fnName": "button--hover__bg--not-used", "colorName": "rhody-red--dark" },
-          { "fnName": "button--hover__fg--not-used", "colorName": "hope-gold" }
+          #{ "fnName": "violator", "colorName": "ocean" },
+          #{ "fnName": "accent", "colorName": "hope-gold" },
+          #{ "fnName": "button__bg", "colorName": "rhody-red" },
+          #{ "fnName": "button__fg", "colorName": "quahog--dark" },
+          #{ "fnName": "button--hover__bg", "colorName": "rhody-red--dark" },
+          #{ "fnName": "button--hover__fg", "colorName": "hope-gold" }
         ],
         "icon": [
-          { "fnName": "pdf--not-used", "colorName": "rhody-red" },
+          #{ "fnName": "pdf", "colorName": "rhody-red" },
           { "fnName": "word", "colorName": "ocean" },
-          { "fnName": "excel--not-used", "colorName": "green-animals" },
+          #{ "fnName": "excel", "colorName": "green-animals" },
           { "fnName": "generic", "colorName": "coffee-milk" },
           { "fnName": "download", "colorName": "quahog--light" }
         ],

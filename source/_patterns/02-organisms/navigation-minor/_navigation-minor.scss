@@ -46,21 +46,24 @@
   // <li>
   &__has-children {
     // Set up a split button design
+    $button-width: em(44);
+
     display: flex;
     flex-flow: row wrap;
     align-items: stretch;
     justify-content: space-between;
 
     .qh__nav-minor__link {
-      flex: 1 0 auto;
+      flex: 1 0 calc(100% - #{$button-width});
       margin-left: auto;
+      min-width: calc(100% - #{$button-width});
     }
 
     .qh__accordion__button {
       display: block;
       flex: 0 0 $icon-dimension;
-      margin-right: auto;
-      padding: 0;
+      margin: 0 0 0 auto;
+      padding: 0.25rem 0;
 
       .qh__icon {
         margin: 0;
