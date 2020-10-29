@@ -1946,6 +1946,16 @@ button,
 /*------------------------------------*\
     $Admin
 \*------------------------------------*/
+.ui-dialog-content .media-library-wrapper img,
+.ui-dialog-content .js-media-library-add-form img {
+  width: inherit; }
+
+.ui-dialog-content .media-library-wrapper input,
+.ui-dialog-content .js-media-library-add-form input {
+  background-color: var(--c__white);
+  color: var(--c__quahog);
+  border: 1px solid var(--c__quahog); }
+
 .toolbar-tray ul {
   max-width: initial;
   font-size: initial; }
