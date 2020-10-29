@@ -1,0 +1,14 @@
+.ui-dialog-content {
+  .media-library-wrapper,
+  .js-media-library-add-form {
+    img {
+      width: inherit;
+    }
+
+    input {
+      background-color: var(--c__white);
+      color: var(--c__quahog);
+      border: 1px solid var(--c__quahog);
+    }
+  }
+}
