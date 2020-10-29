@@ -20,9 +20,14 @@ p {
 
   + p,
   + ul,
+  + ol,
   figure + & {
     margin-top: var(--body-text-spacer);
   }
+}
+
+#{$all-headers} {
+  color: var(--fc__default__hx__fg);
 }
 
 h1 {
@@ -136,4 +141,3 @@ label {
   font-size: 0.875rem;
   font-weight: 475;
 }
-

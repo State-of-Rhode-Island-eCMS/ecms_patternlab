@@ -1,10 +1,12 @@
 // Mini-themes: Author selected row/column color overrides
+
+// Primary
 .qh__t__primary {
   background-color: var(--fc__primary__bg);
   color: var(--fc__primary__fg);
 
   #{$all-headers} {
-    color: var(--fc__primary__hx__fg);
+    color: currentColor;
   }
 
   .qh__t__scarborough--dark &,
@@ -19,12 +21,13 @@
   }
 }
 
+// Primary Light
 .qh__t__primary--light {
   background-color: var(--fc__primary--light__bg);
   color: var(--fc__primary--light__fg);
 
   #{$all-headers} {
-    color: var(--fc__primary--light__hx__fg);
+    color: currentColor;
   }
 
   .qh__t__scarborough--dark &,
@@ -39,12 +42,13 @@
   }
 }
 
+// Coffee Milk
 .qh__t__coffee-milk {
   background-color: var(--c__coffee-milk--trans25);
   color: var(--c__quahog--dark);
 
   #{$all-headers} {
-    color: var(--c__coffee-milk);
+    color: currentColor;
   }
 
   .qh__t__scarborough--dark &,
