@@ -18,7 +18,7 @@
  *   'page'.
  * - db_offline: A flag indicating if the database is offline.
  * - placeholder_token: The token for generating head, css, js and js-bottom
- *   placeholders. 
+ *   placeholders.
  *
  * @see template_preprocess_html()
  */
@@ -28,7 +28,7 @@
 <html{{ html_attributes }}>
   <head>
     <head-placeholder token="{{ placeholder_token }}">
-    <title>eCMS</title>
+    <title>{{ head_title }}</title>
     {# <title>{{ head_title }}</title> This doesnt work #}
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
