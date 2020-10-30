@@ -1,9 +1,17 @@
-
 // stylelint-disable property-no-unknown
 :root {
   color-scheme: light dark;
 }
 // stylelint-enable property-no-unknown
+
+
+// Mixin getter for Colors
+@function qh-get-color($colorName) {
+  @if map-has-key($colors, $colorName) == false {
+    @error "Key `#{$colorName}` is not a valid color name from $colors.";
+  }
+  @return map-get(map-get($colors, $colorName), 'hsl');
+}
 
 
 // Keep things DRY
