@@ -16,11 +16,14 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Deprecated
 
 ### Removed
-- RIG-130 - Removed t function from file twig.
 
 ### Fixed
 
 ### Security
+
+## [0.1.5] - 2020-10-30
+### Removed
+- RIG-130 - Removed t function from file twig.
 
 ## [0.1.4] - 2020-10-30
 ### Changed
@@ -45,8 +48,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.4...HEAD
-[0.1.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.3...0.1.4
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.5...HEAD
+[0.1.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.4...0.1.5
 [0.1.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.2...0.1.3
 [0.1.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.0...0.1.1
