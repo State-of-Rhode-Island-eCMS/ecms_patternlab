@@ -51,12 +51,15 @@
     // span
     &__label {
       display: block;
+      font-family: var(--font-sans-vf);
+      font-weight: 525;
     }
 
     // span
     &__filesize {
       color: var(--fc__default__fg);
       display: block;
+      font-family: var(--font-sans-vf);
       font-size: 87.5%;
     }
 
