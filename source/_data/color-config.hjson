@@ -24,19 +24,25 @@
       "needs": "dark-text"
     },
     "white--trans33": {
-      "name": "White",
+      "name": "White 33% transparent",
       "hue": "white",
       "hsl": "hsla(0, 0%, 100%, 0.33)",
       "needs": "dark-text"
     },
     "white--trans25": {
-      "name": "White",
+      "name": "White 25% transparent",
       "hue": "white",
       "hsl": "hsla(0, 0%, 100%, 0.25)",
       "needs": "dark-text"
     },
+    "white--trans15": {
+      "name": "White 15% transparent",
+      "hue": "white",
+      "hsl": "hsla(0, 0%, 100%, 0.15)",
+      "needs": "dark-text"
+    },
     "transparent": {
-      "name": "white 100% transparent",
+      "name": "White 100% transparent",
       "hue": "transparent",
       "hsl": "hsla(0, 0, 100%, 0)",
       "needs": "dark-text"
@@ -51,6 +57,12 @@
       "name": "Quahog dark 33% transparent",
       "hue": "black transparent",
       "hsl": "hsla(0, 0%, 8%, 0.33)",
+      "needs": "dark-text"
+    },
+    "quahog--dark--trans25": {
+      "name": "Quahog dark 25% transparent",
+      "hue": "black transparent",
+      "hsl": "hsla(0, 0%, 8%, 0.25)",
       "needs": "dark-text"
     },
     "quahog--dark--trans15": {
@@ -282,6 +294,10 @@
           { "fnName": "button--hover__bg", "colorName": "navy--dark" },
           { "fnName": "button--hover__fg", "colorName": "ocean" }
         ],
+        #
+        # System icons used throughout
+        # but right now only in the File List component
+        #
         "icon": [
           { "fnName": "pdf", "colorName": "rhody-red" },
           { "fnName": "word", "colorName": "navy" },
@@ -289,6 +305,9 @@
           { "fnName": "generic", "colorName": "ocean" },
           { "fnName": "download", "colorName": "quahog--medium" }
         ],
+        #
+        # Left sidebar navigation component
+        #
         "nav-minor": [
           { "fnName": "border", "colorName": "ocean" },
           { "fnName": "fg", "colorName": "quahog--darker" },
@@ -301,21 +320,38 @@
           { "fnName": "link--active", "colorName": "calamari" },
           { "fnName": "sub__bg", "colorName": "white--trans25" }
         ],
+        #
+        # Only the icon foreground and background is colorable
+        # Other colors are consistently coffee-milk
+        #
         "accordion": [
           { "fnName": "icon__fg", "colorName": "navy--dark" },
           { "fnName": "icon__bg", "colorName": "calamari" }
         ],
+        #
+        # Do not use transparent colors for "bar" and "fg"
+        # "bar" is applied to the background shape behind the icon as well,
+        # and we will see transparent colors multiply over eachother
+        #
         "attention-card": [
           { "fnName": "fg", "colorName": "navy--dark" },
           { "fnName": "bar", "colorName": "ocean" },
           { "fnName": "icon", "colorName": "navy--dark" }
         ],
+        #
+        # Consistent from theme to theme.
+        # Always grays with a pop of color only in the "border-top"
+        #
         "footer": [
           { "fnName": "border-top", "colorName": "ocean" },
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "quahog" },
           { "fnName": "copyright__bg", "colorName": "quahog--darker" }
         ],
+        #
+        # These sub-themes need to provide the light and dark variations
+        # In dark theme definitions, they need only contain the dark theme colors
+        #
         "primary": [
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "navy" },
