@@ -2116,6 +2116,9 @@ table {
   max-width: 23.75rem;
   margin-right: 4.6875rem;
   margin-bottom: 2.25rem; }
+  [dir="rtl"] .qh-layout__sidebar-top {
+    margin-left: 4.6875rem;
+    margin-right: 0; }
 
 .qh-layout__sidebar-middle {
   grid-area: sidebar-middle;
