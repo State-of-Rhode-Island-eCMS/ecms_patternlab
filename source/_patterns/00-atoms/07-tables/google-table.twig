@@ -1,0 +1,44 @@
+<script type="text/javascript" src="//www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.load("visualization", "1", {packages:["corechart", "table"]});
+google.setOnLoadCallback(drawTableUp);
+function drawTableUp() {
+var opts = {sendMethod: 'auto'};
+var query2 = new google.visualization.Query('https://docs.google.com/spreadsheet/tq?key=1ARn3Ol3PKnXqEbf1FHTx8aegancLZpPMZGt5ChuaWFs&transpose=0&headers=1&gid=0', opts);
+  query2.setQuery("select A, B, D, E, K where G = 'YES*' order by A");
+  query2.send(handleQueryResponseTableUp);
+}
+function handleQueryResponseTableUp(response) {
+  if (response.isError()) {
+    alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+    return;
+  }
+var data2 = response.getDataTable();
+rowsFlu = data2.getNumberOfRows();
+if (rowsFlu > 0 )
+	{
+var table2 = new google.visualization.Table(document.getElementById('table_Up'));
+table2.draw(data2, {allowHtml: true,  showRowNumber: false, width: '100%', height: '100%', sort:'disable'});
+	google.visualization.events.addListener(table2, 'onload', enhancedTbl());
+	}
+    };
+function enhancedTbl(){
+	$('th.google-visualization-table-th').attr('titulo', 'Click header to Sort column');
+	$("td.google-visualization-table-td").html(function() {
+		var self = $(this);
+		var str = self.text();
+		var patt1 = /^(http|\/\/)/;
+		var result = str.match(patt1);
+		if (result) {
+			return $('<a>',{
+				href: str,
+				target: '_blank',
+				text: str,
+				title: 'Click for more information'
+			});
+		}
+	});
+	} //end function
+</script>
+<div id="table_Up"></div>
+<p><a target="_blank" href='//docs.google.com/spreadsheets/d/e/2PACX-1vT84oTjrC6S8FYeVgp0kmt9PQ9lGGVWoXyoqeWXvalRF8AKmxpCQYUY7N9qri3OeblJQxXgMwXI2B0k/pubhtml'>Testing Sites for Out-of-State Travelers who don’t have COVID-19 Symptoms</a>.</p>
