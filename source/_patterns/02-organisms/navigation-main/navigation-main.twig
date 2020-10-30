@@ -28,7 +28,7 @@
 
         {# Append an overview link to top of dropdown list. #}
         <li class="qh__nav-main__item qh__nav-main__item__sub">
-          <a href="{{ dropdown_item.url }}" class="qh__nav-main__link__sub {{ item.in_active_trail ? qh__nav-main__link--current }}">{{ "Overview"|t }}</a>
+          <a href="{{ dropdown_item.url }}" class="qh__nav-main__link qh__nav-main__link__sub {{ item.in_active_trail ? qh__nav-main__link--current }}">{{ "Overview"|t }}</a>
         </li>
     {% endif %}
 

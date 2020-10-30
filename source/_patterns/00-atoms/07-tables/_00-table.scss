@@ -1,0 +1,73 @@
+$table-cell-v-padding: 0.5rem;
+$table-cell-h-padding: 0.75rem;
+
+body {
+  --fc__table__color-bright: #{qh-get-color('quahog--dark')};
+  --fc__table__border__h: #{qh-get-color('quahog--dark--trans25')};
+  --fc__table__border__v: #{qh-get-color('quahog--dark--trans15')};
+
+  @media (prefers-color-scheme: dark) {
+    // TODO: 'white' does not come back as valid map. Need to investigate further.
+    --fc__table__color-bright: #{qh-get-color(white)};
+    --fc__table__border__h: #{qh-get-color('white--trans25')};
+    --fc__table__border__v: #{qh-get-color('white--trans15')};
+  }
+}
+
+table {
+  font-family: var(--font-sans-vf);
+  background-color: transparent;
+  border-spacing: 0;
+  margin-bottom: $general-v-spacing;
+  width: 100%;
+
+  thead th {
+    border-bottom: $border-sm solid var(--fc__table__border__h);
+    color: var(--fc__table__color-bright);
+    vertical-align: bottom;
+  }
+
+  tbody td {
+    vertical-align: top;
+  }
+
+  tfoot th {
+    border-top: $border-xs solid var(--fc__table__border__h);
+    color: var(--fc__table__color-bright);
+    vertical-align: top;
+  }
+
+  thead,
+  tbody,
+  tfoot {
+    text-align: left;
+  }
+
+  // Row highlighting
+  tr:hover td {
+    background-color: var(--c__coffee-milk--trans10);
+    color: var(--fc__table__color-bright);
+  }
+
+  th,
+  td {
+    padding: $table-cell-v-padding $table-cell-h-padding;
+  }
+
+  th {
+    font-weight: 550;
+
+    & + th {
+      border-left: $border-xs solid var(--fc__table__border__v);
+    }
+  }
+
+  td {
+    border-bottom: $border-xs solid var(--fc__table__border__h);
+    font-weight: 400;
+
+    & + td {
+      border-left: $border-xs solid var(--fc__table__border__v);
+    }
+  }
+}

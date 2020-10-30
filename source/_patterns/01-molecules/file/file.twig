@@ -1,0 +1,40 @@
+{#
+/**
+ * @file
+ * Theme override to display a media item.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ * - file_type_icon: name of icon
+ * - file_type_readable: readable file type name
+ * - file_url: absolute link of file location
+ * - file_size: array of file size information
+ *   - amount: string of file size without unit.
+ *   - short_format: short format of unit.
+ *   - long_format: long format of unit.
+ * - view_mode: View mode; for example, "preview" or "full".
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+<article class="qh__file-list__item">
+  <a href="{{ file_url }}" class="qh__file-list__link" download>
+    <div class="qh__file-list__item__icon">
+      <span class="qh__icon" aria-hidden="true">
+        {% include ('@icons/file-' ~ file_type_icon ~ '.svg') %}
+      </span>
+    </div>
+    <div class="qh__file-list__item__filename">
+      <span class="qh__file-list__item__label">{{ name }}</span>
+      {# Intent for file size: If it is less than 1mb, simplify the text to "less than 1mb" #}
+      <span class="qh__file-list__item__filesize">{{ file_type_readable|t }}, {{ file_size.amount|t }}<span aria-hidden="true">{{ file_size.short_format }}</span><span class="visually-hidden">{{ file_size.long_format }}</span></span>
+    </div>
+    <div class="qh__file-list__item__download">
+      <span class="qh__icon">
+        {% include ('@icons/download.svg') %}
+      </span>
+    </div>
+  </a>
+</article>

@@ -20,9 +20,14 @@ p {
 
   + p,
   + ul,
+  + ol,
   figure + & {
     margin-top: var(--body-text-spacer);
   }
+}
+
+#{$all-headers} {
+  color: var(--fc__default__hx__fg);
 }
 
 h1 {
@@ -31,34 +36,36 @@ h1 {
   font-weight: 275;
   font-style: normal;
   line-height: clamp(1.05em, 6vw, 1.1em);
-  margin-top: calc(var(--body-text-spacer) * 2);
+  margin-top: 0;
   margin-bottom: calc(var(--body-text-spacer) * 1);
 }
 
 h2 {
   font-family: var(--font-serif-vf);
   font-size: clamp(1.5rem, 4vw, 3rem);
-  font-weight: 550;
+  font-weight: 475;
   font-style: normal;
   line-height: clamp(1.1em, 6vw, 1.15em);
   margin-top: calc(var(--body-text-spacer) * 2);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
 
-  &.emphasis::after {
-    content: ' ';
-    display: block;
-    //border-bottom: solid 0.3rem $color-rhody-red;
-    margin-top: calc(var(--body-text-spacer) * 1);
-    margin-bottom: calc(var(--body-text-spacer) * 0.75);
-    width: 1.125em;
+  &:first-of-type,
+  &.emphasis {
+    &::after {
+      content: ' ';
+      display: block;
+      border-bottom: solid 0.4rem var(--c__rhody-red);
+      margin-top: calc(var(--body-text-spacer) * 0.85);
+      margin-bottom: calc(var(--body-text-spacer) * 0.85);
+      width: 1.125em;
+    }
   }
 }
-
 
 h3 {
   font-family: var(--font-sans-vf);
   font-size: clamp(1.25rem, 2.5vw, 2rem);
-  font-weight: 675;
+  font-weight: 575;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
@@ -133,4 +140,3 @@ label {
   font-size: 0.875rem;
   font-weight: 475;
 }
-

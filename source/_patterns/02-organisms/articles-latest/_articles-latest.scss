@@ -1,5 +1,5 @@
 .qh__articles-latest {
-  padding: $general-v-spacing $general-h-spacing;
+  padding: $general-v-spacing 0;
 
   &__title {
     margin: 0;
@@ -17,7 +17,7 @@
     }
   }
 
-  &__item {
+  &__list > * {
     padding: 0 $general-h-spacing;
 
     @media (max-width: ($bp--medium - em(1))) {
@@ -27,12 +27,10 @@
     }
 
     @media (min-width: $bp--medium) {
-      flex: 1 0 33.33%;
+      flex: 1 1 0;
 
-      > article {
         display: flex;
         flex-flow: column;
-        height: 100%; // fill parent item
 
         .qh__teaser-article__content {
           display: flex;
@@ -43,7 +41,6 @@
         .qh__teaser-article__cta {
           margin-top: auto;
         }
-      }
     }
   }
 }

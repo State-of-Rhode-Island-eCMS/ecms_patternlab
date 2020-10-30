@@ -14,7 +14,7 @@
 
   .qh__icon__home {
     &__shape {
-      fill: var(--fc__nav-main__icon__fg);
+      fill: var(--fc__nav-main__fg);
     }
   }
 
@@ -32,7 +32,7 @@
     &__sub {
       background-color: var(--fc__nav-main__link--hover__bg);
       box-shadow: $box-shadow-base;
-      min-width: 100%;
+      min-width: 15rem;
       opacity: 0;
       position: absolute;
         top: 100%;
@@ -144,6 +144,8 @@
       background-color: transparent;
       border-top: ($nav-a-v-spacing * 0.25) solid var(--fc__nav-main__bg);
       color: var(--fc__nav-main__link);
+      font-size: clamp(0.925rem, 1.5vw, 1rem);
+      font-weight: 450;
       text-decoration: none;
     }
 

@@ -30,12 +30,12 @@
     {
       "is_expanded": true,
       "in_active_trail": true,
-      "title": "Open on page load",
+      "title": "Open on page load and with a really long link label",
       "url": "#",
       "below": [
         {
           "is_expanded": true,
-          "in_active_trail": true,
+          "in_active_trail": false,
           "title": "Active trail sub item",
           "url": "#"
         }

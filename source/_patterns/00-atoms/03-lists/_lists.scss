@@ -8,14 +8,15 @@ dl {
   hyphens: auto;
   line-height: clamp(1.25em, 2vw, 1.4em);
   margin: 0;
-  max-width: var(--content-width);
+  max-width: 40em;
   padding: 0;
   @media screen and (min-width: $bp--medium) {
     hyphens: none;
   }
 
   p + &,
-  + ul {
+  + ul,
+  + p {
     margin-top: var(--body-text-spacer);
   }
 
@@ -31,7 +32,7 @@ dd {
   margin-left: 1em;
 
   &::marker {
-    //color: $color-rhody-red;
+    color: var(--fc__default__text__accent);
     font-size: 0.875em;
   }
 

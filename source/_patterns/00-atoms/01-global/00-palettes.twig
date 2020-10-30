@@ -1,28 +1,28 @@
 <ul class="sg-colors sg-palettes">
 	{% for slug, palette in palettes %}
-	  <style>
-      .qh__t__{{ slug }} {
-	      background-color: var(--fc__default__bg);
-	      color: var(--fc__default__fg);
-      }
-      .qh__t__{{ slug }} .sg-palette {
-        border: 0.5px solid hsla(0, 0%, 8%, 0.33);
-      }
-	  </style>
-	  <li class="qh__t__{{ slug }}">
+	  <li>
       <div class="sg-swatch sg-palette"
-			  style="background-image: linear-gradient(to bottom
-{% set num = palette.values | length %}
-    {# Two is a magic number to account for the removed primary sections and to prevent the last section from hitting 100% #}
-    {% set num = num - 2 %}
-    {% set percent = 100 / num %}
-    {% set counter = 0 %}
+			  style="background-image: linear-gradient(to right
+    {%- set num = 0 -%}
+    {# Loop through once just to get our total number #}
+    {%- for section, definitions in palette.values -%}
+      {%- if 'primary' not in section -%}
+        {%- for count, row in definitions -%}
+          {%- if 'bg' == row.fnName -%}
+            {%- set num = num + 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {# Loop through again with the correct percentage math #}
+    {%- set percent = 100 / num -%}
+    {%- set counter = 0 -%}
     {%- for section, definitions in palette.values -%}
       {%- if 'primary' not in section -%}
         {%- for count, row in definitions -%}
           {%- if 'bg' == row.fnName -%}
 , var(--c__{{ row.colorName }}) {{ percent * counter }}%
-{% set counter = counter + 1 %}
+{%- set counter = counter + 1 -%}
 , var(--c__{{ row.colorName }}) {{ percent * counter }}%
           {%- endif -%}
         {%- endfor -%}

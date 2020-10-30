@@ -8,13 +8,12 @@
  */
 
 .qh__accordion {
-  border: $border-xs solid var(--transparent);
-  margin-bottom: $nav-a-v-spacing;
+  border: $border-xs solid transparent;
+  margin-top: ($general-v-spacing/2);
 
   &:hover,
-  &:focus,
   &:focus-within {
-    border-color: var(--fc__default__link--hover);
+    border-color: var(--fc__default__link--focus);
     transition: $transition-base;
   }
 
@@ -38,15 +37,15 @@
 
     &:hover,
     &:focus {
-      background-color: var(--fc__default__bg);
+      background-color: var(--c__coffee-milk--trans10);
       color: var(--fc__default__fg);
     }
 
     // Accordion titles are required to look focused
     &:focus {
       .qh__accordion__button__summary {
-        outline: 2px solid var(--fc__default__link--hover);
-        outline-offset: 2px;
+        outline: $border-sm solid var(--fc__default__link--focus);
+        outline-offset: 3px;
       }
     }
 
@@ -79,13 +78,13 @@
     }
 
     &[aria-expanded="true"] {
-      background-color: var(--fc__default__bg);
+      background-color: var(--c__coffee-milk--trans25);
 
       .qh__icon__plusminus__vert {
         transform: rotate(-360deg);
       }
     }
-  }
+  } // end &__button
 
   &__content {
     // In case any content inside is floated, which might be possible

@@ -1,0 +1,11 @@
+{
+  "name": "Sample file name",
+  "file_type_icon": "pdf",
+  "file_type_readable": "PDF file",
+  "file_url": "#",
+  "file_size": {
+    "amount": "less than 1",
+    "short_format": "mb",
+    "long_format": "megabytes"
+  }
+}

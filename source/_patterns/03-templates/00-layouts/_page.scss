@@ -27,6 +27,10 @@ $sidebar-row-gap: rem(36);
     max-width: $sidebar-max;
     margin-right: $sidebar-column-gap;
     margin-bottom: $sidebar-row-gap;
+    [dir="rtl"] & {
+      margin-left: $sidebar-column-gap;
+      margin-right: 0;
+    }
   }
 
   &__sidebar-middle {
