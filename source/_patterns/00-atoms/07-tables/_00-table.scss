@@ -7,9 +7,8 @@ body {
   --fc__table__border__v: #{qh-get-color('quahog--dark--trans15')};
 
   @media (prefers-color-scheme: dark) {
-    // TODO: White does not come back as valid map. Need to investigate further.
-    //--fc__table__color-bright: #{qh-get-color('white')};
-    --fc__table__color-bright: $fff;
+    // TODO: 'white' does not come back as valid map. Need to investigate further.
+    --fc__table__color-bright: #{qh-get-color(white)};
     --fc__table__border__h: #{qh-get-color('white--trans25')};
     --fc__table__border__v: #{qh-get-color('white--trans15')};
   }

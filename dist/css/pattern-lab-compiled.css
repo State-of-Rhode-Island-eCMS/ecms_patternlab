@@ -1008,6 +1008,7 @@ body {
   --fc__table__border__v: rgba(20, 20, 20, 0.15); }
   @media (prefers-color-scheme: dark) {
     body {
+      --fc__table__color-bright: white;
       --fc__table__border__h: rgba(255, 255, 255, 0.25);
       --fc__table__border__v: rgba(255, 255, 255, 0.15); } }
 
