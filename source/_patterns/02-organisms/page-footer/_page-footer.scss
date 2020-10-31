@@ -41,13 +41,15 @@
   }
 
   &__content-right {
-    margin-left: $general-h-spacing;
-    padding: $general-v-spacing $general-h-spacing;
+    display: flex;
+    margin-left: 0;
+    padding: $general-v-spacing $general-h-spacing $general-v-spacing 0;
     width: 20%;
 
     > div {
       border-left: $border-xs solid var(--fc__footer__fg);
       min-height: 2rem; // mostly for Pattern Lab
+      padding-left: ($general-h-spacing * 2);
     }
   }
 

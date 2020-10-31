@@ -1671,12 +1671,16 @@ table {
       min-height: 2rem;
       width: 33%; }
   .qh__site-footer__content-right {
-    margin-left: 1rem;
-    padding: 1.5rem 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 0;
+    padding: 1.5rem 1rem 1.5rem 0;
     width: 20%; }
     .qh__site-footer__content-right > div {
       border-left: 0.0625rem solid var(--fc__footer__fg);
-      min-height: 2rem; }
+      min-height: 2rem;
+      padding-left: 2rem; }
   .qh__site-footer__copyright {
     background-color: var(--fc__footer__copyright__bg);
     color: var(--fc__footer__fg);
