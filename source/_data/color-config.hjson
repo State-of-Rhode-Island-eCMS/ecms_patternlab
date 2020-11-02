@@ -254,8 +254,7 @@
           { "fnName": "bg", "colorName": "navy--dark" },
           { "fnName": "link", "colorName": "white" },
           { "fnName": "link--hover", "colorName": "calamari" },
-          { "fnName": "link--focus", "colorName": "calamari" },
-          { "fnName": "link--visited", "colorName": "white" }
+          { "fnName": "link--focus", "colorName": "calamari" }
         ],
         "header": [
           { "fnName": "fg", "colorName": "white" },
@@ -380,8 +379,7 @@
           { "fnName": "bg", "colorName": "quahog--darker" },
           { "fnName": "link", "colorName": "ocean" },
           { "fnName": "link--hover", "colorName": "hope-gold" },
-          { "fnName": "link--focus", "colorName": "hope-gold" },
-          { "fnName": "link--visited", "colorName": "ocean" }
+          { "fnName": "link--focus", "colorName": "hope-gold" }
         ],
         "header": [
           { "fnName": "fg", "colorName": "white" },
@@ -456,6 +454,9 @@
         ]
       }
     },
+    #
+    # Federal Hill theme: red and dark maroon with light blue highlights
+    #
     "federal-hill": {
       "humanName": "Federal Hill",
       "values": {
@@ -464,8 +465,7 @@
           { "fnName": "bg", "colorName": "quahog--darker" },
           { "fnName": "link", "colorName": "white" },
           { "fnName": "link--hover", "colorName": "rhody-red" },
-          { "fnName": "link--focus", "colorName": "rhody-red" },
-          { "fnName": "link--visited", "colorName": "white" }
+          { "fnName": "link--focus", "colorName": "rhody-red" }
         ],
         "header": [
           { "fnName": "fg", "colorName": "white" },
@@ -546,6 +546,9 @@
         ]
       }
     },
+    #
+    # Federal Hill Dark theme: red and dark maroon with light blue highlights
+    #
     "federal-hill--dark": {
       "humanName": "Federal Hill dark",
       "values": {
@@ -554,8 +557,7 @@
           { "fnName": "bg", "colorName": "quahog--darker" },
           { "fnName": "link", "colorName": "white" },
           { "fnName": "link--hover", "colorName": "rhody-red" },
-          { "fnName": "link--focus", "colorName": "rhody-red" },
-          { "fnName": "link--visited", "colorName": "white" }
+          { "fnName": "link--focus", "colorName": "rhody-red" }
         ],
         "header": [
           { "fnName": "fg", "colorName": "white" },
