@@ -1,11 +1,12 @@
-node_modules/
 .DS_Store
-patternlab.json
+.idea/
+.nova
 .sass-cache/*
 /sass-cache
-Thumbs.db
-.idea/
-public
 dependencyGraph.json
+node_modules/
+patternlab.json
+public
+Thumbs.db
 source/css/style.css
 source/css/.sass-cache/*

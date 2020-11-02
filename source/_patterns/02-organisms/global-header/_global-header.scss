@@ -1,44 +1,49 @@
-.global-header {
+.qh__global-header {
   background-color: var(--fc__official__bg);
   color: var(--fc__official__fg);
 
-  .content-wrapper {
+  &__wrapper {
     @include qh-content-maxwidth();
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: ($general-v-spacing/2) $general-h-spacing;
   }
 
   a {
-    &:link {
+
+    &,
+    &:visited {
       color: var(--fc__official__link);
     }
-    &:hover {
+
+    &:hover,
+    &:focus {
       color: var(--fc__official__link--hover);
     }
+
     &:focus {
-      color: var(--fc__official__link--focus);
+      outline-color: var(--fc__official__link--focus);
     }
+
     &:active {
       color: var(--fc__official__link--active);
-    }
-    &:visited {
-      color: var(--fc__official__link--visited);
     }
   }
 
   p {
     font-size: 0.875rem;
     font-weight: 375;
+
+    // Remove later once there are vertical rhythm rules in place for content containers only
+    & + p {
+      margin-top: 0;
+    }
   }
 
-  button {
-    background: transparent;
-    border: none;
-    color: var(--fc__official__link);
-    font-family: $font-sans-vf;
-    font-size: 0.875rem;
-    font-weight: 375;
-    text-decoration: underline;
-  }
+  // <p>
+  &__tagline {}
+
+  // <p><a role="button'>
+  &__settings {}
 }
