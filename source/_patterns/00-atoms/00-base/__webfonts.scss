@@ -1,3 +1,52 @@
+/* Static Fonts */
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/roboto-slab/RobotoSlab-Regular-subset.woff2') format('woff2'), url('../fonts/roboto-slab/RobotoSlab-Regular-subset.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-weight: bold;
+  font-style: normal;
+  src: url('../fonts/roboto-slab/RobotoSlab-Bold-subset.woff2') format('woff2'), url('../fonts/roboto-slab/RobotoSlab-Bold-subset.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-weight: normal;
+  font-style: normal;
+  src: url('../fonts/work-sans/WorkSans-Regular-subset.woff2') format('woff2'), url('../fonts/work-sans/WorkSans-Regular-subset.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-weight: normal;
+  font-style: italic;
+  src: url('../fonts/work-sans-vf/WorkSans-Italic-subset.woff2') format('woff2 supports variations'), url('../fonts/work-sans-vf/WorkSans-Italic-subset.woff2') format('woff2-variations');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-weight: bold;
+  font-style: normal;
+  src: url('../fonts/work-sans/WorkSans-Bold-subset.woff2') format('woff2'), url('../fonts/work-sans/WorkSans-Bold-subset.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-weight: bold
+  font-style: italic;
+  src: url('../fonts/work-sans/WorkSans-BoldItalic-subset.woff2') format('woff2'), url('../fonts/work-sans/WorkSans-BoldItalic-subset.woff') format('woff');
+  font-display: swap;
+}
+
 
 /* Variable Font  */
 @font-face {
@@ -5,7 +54,7 @@
   font-weight: 100 900; /* default: 400 */
   font-style: normal;
   font-stretch: normal;
-  src: url('../fonts/work-sans-vf/WorkSans-Roman-subset.woff2') format('woff2 supports variations'), url('../fonts/roboto-slab-vf/RobotoSlab.woff2') format('woff2-variations');
+  src: url('../fonts/work-sans-vf/RobotoSlab-subset.woff2') format('woff2 supports variations'), url('../fonts/roboto-slab-vf/RobotoSlab-subset.woff2') format('woff2-variations');
 }
 
 @font-face {

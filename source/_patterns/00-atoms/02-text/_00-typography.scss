@@ -6,9 +6,13 @@ body {
 }
 
 p {
-  font-family: var(--font-sans-vf);
+  font-family: var(--font-sans);
+  font-weight: normal;
+  @supports (font-variation-settings: normal) {
+    font-family: var(--font-sans-vf);
+    font-weight: 350;
+  }
   font-size: clamp(1rem, 2vw, 1.25rem);
-  font-weight: 350;
   font-style: normal;
   hyphens: auto;
   line-height: clamp(1.25em, 2vw, 1.4em);
@@ -31,9 +35,13 @@ p {
 }
 
 h1 {
-  font-family: var(--font-serif-vf);
+  font-family: var(--font-serif);
+  font-weight: normal;
+  @supports (font-variation-settings: normal) {
+    font-family: var(--font-serif-vf);
+    font-weight: 275;
+  }
   font-size: clamp(2rem, 5vw, 5.5rem);
-  font-weight: 275;
   font-style: normal;
   line-height: clamp(1.05em, 6vw, 1.1em);
   margin-top: 0;
@@ -41,9 +49,13 @@ h1 {
 }
 
 h2 {
-  font-family: var(--font-serif-vf);
+  font-family: var(--font-serif);
+  font-weight: normal;
+  @supports (font-variation-settings: normal) {
+    font-family: var(--font-serif-vf);
+    font-weight: 475;
+  }
   font-size: clamp(1.5rem, 4vw, 3rem);
-  font-weight: 475;
   font-style: normal;
   line-height: clamp(1.1em, 6vw, 1.15em);
   margin-top: calc(var(--body-text-spacer) * 2);
@@ -63,36 +75,52 @@ h2 {
 }
 
 h3 {
-  font-family: var(--font-sans-vf);
+  font-family: var(--font-sans);
+  font-weight: bold;
+  @supports (font-variation-settings: normal) {
+    font-family: var(--font-sans-vf);
+    font-weight: 575;
+  }
   font-size: clamp(1.25rem, 2.5vw, 2rem);
-  font-weight: 575;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
 }
 
 h4 {
-  font-family: var(--font-serif-vf);
+  font-family: var(--font-serif);
+  font-weight: normal;
+  @supports (font-variation-settings: normal) {
+    font-family: var(--font-serif-vf);
+    font-weight: 400;
+  }
   font-size: clamp(1rem, 2vw, 1.25rem);
-  font-weight: 400;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
 }
 
 h5 {
-  font-family: var(--font-serif-vf);
+  font-family: var(--font-serif);
+  font-weight: bold;
+  @supports (font-variation-settings: normal) {
+    font-family: var(--font-serif-vf);
+    font-weight: 500;
+  }
   font-size: clamp(0.925rem, 1vw, 1.125rem);
-  font-weight: 500;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
 }
 
 h6 {
-  font-family: var(--font-serif-vf);
+  font-family: var(--font-serif);
+  font-weight: bold;
+  @supports (font-variation-settings: normal) {
+    font-family: var(--font-serif-vf);
+    font-weight: 600;
+  }
   font-size: clamp(0.825rem, 1vw, 1rem);
-  font-weight: 600;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
@@ -123,20 +151,32 @@ blockquote {
 }
 
 address {
-  font-family: var(--font-sans-vf);
+  font-family: var(--font-sans);
+  font-weight: normal;
+  @supports (font-variation-settings: normal) {
+    font-family: var(--font-sans-vf);
+    font-weight: 350;
+  }
   font-size: clamp(1rem, 2vw, 1.25rem);
-  font-weight: 350;
 }
 
 time {
-  font-family: var(--font-sans-vf);
+  font-family: var(--font-sans);
+  font-weight: normal;
+  @supports (font-variation-settings: normal) {
+    font-family: var(--font-sans-vf);
+    font-weight: 350;
+  }
   font-size: clamp(1rem, 2vw, 1.25rem);
-  font-weight: 350;
 }
 
 label {
+  font-family: var(--font-sans);
+  font-weight: normal;
+  @supports (font-variation-settings: normal) {
+    font-family: var(--font-sans-vf);
+    font-weight: 475;
+  }
   display: block;
-  font-family: var(--font-sans-vf);
   font-size: 0.875rem;
-  font-weight: 475;
 }
