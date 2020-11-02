@@ -1,8 +1,8 @@
-.page-header {
+.qh__page-header {
   background-color: var(--fc__header__bg);
   color: var(--fc__header__fg);
 
-  .content-wrapper {
+  &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,36 +12,24 @@
       max-width: var(--content-max-width);
     }
   }
+
   a {
-    &:link {
+    &,
+    &:visited {
       color: var(--fc__header__link);
     }
-    &:hover {
+
+    &:hover,
+    &:focus {
       color: var(--fc__header__link--hover);
     }
+
     &:focus {
-      color: var(--fc__header__link--focus);
+      outline-color: var(--fc__header__link--focus);
     }
+
     &:active {
       color: var(--fc__header__link--active);
     }
-    &:visited {
-      color: var(--fc__header__link--visited);
-    }
-  }
-
-  p {
-    font-size: 0.875rem;
-    font-weight: 375;
-  }
-
-  button {
-    background: transparent;
-    border: none;
-    color: var(--fc__header__link);
-    font-family: $font-sans-vf;
-    font-size: 0.875rem;
-    font-weight: 375;
-    text-decoration: underline;
   }
 }
