@@ -1,12 +1,16 @@
 .qh__site-search {
 
   // <from>
-  &__form {}
+  &__form {
+    margin: 0;
+  }
 
   &__container {}
 
   // <input>
-  &__query {}
+  &__query {
+    max-width: 12rem;
+  }
 
   // <button>
   &__submit {

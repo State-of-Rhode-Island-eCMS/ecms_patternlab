@@ -86,7 +86,7 @@ input[type='week'] {
   color: var(--fc__default__fg);
   display: inline-block;
   line-height: 1.25;
-  padding: $input-v-spacing $input-h-spacing;
+  padding: $input-v-spacing;
   transition: $transition-base;
 
   &:hover {

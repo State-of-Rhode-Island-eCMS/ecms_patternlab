@@ -1,7 +1,7 @@
 .qh__site-branding {
   display: flex;
   align-items: center;
-  margin: 1rem 1rem 1rem 0;
+  margin: $general-v-spacing $general-h-spacing $general-v-spacing 0;
 
   &__logo {
     margin-right: 1rem;
@@ -23,7 +23,7 @@
       font-family: $font-sans-vf;
       font-size: 0.875rem;
       font-weight: 450;
-      letter-spacing: 0.035em;
+      letter-spacing: $kerning-base;
       line-height: 1;
       text-transform: uppercase;
     }

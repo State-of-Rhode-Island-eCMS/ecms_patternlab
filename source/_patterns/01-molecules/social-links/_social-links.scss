@@ -5,10 +5,6 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-start;
-
-    // Icons are a 44x44px canvas, but typically only use 24px of space
-    // To align properly, we need to remove some space from the UL
-    margin-left: - rem(10);
   }
 
   &__item {}
