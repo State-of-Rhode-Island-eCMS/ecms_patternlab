@@ -98,6 +98,11 @@
 
     &__label {}
 
+    // Hidden for desktop
+    @include breakpoint-up($bp__show__desktop-nav) {
+      display: none;
+    }
+
     // Menu icon general styles
     .qh__icon__menu {
       @include qh-icon-size;
@@ -394,7 +399,6 @@
     &,
     &:visited {
       background-color: transparent;
-      //border-left: ($nav-a-v-spacing * 0.5) solid var(--fc__nav-main__bg);
       color: var(--fc__nav-main__link);
       font-size: clamp(0.925rem, 1.5vw, 1rem);
       font-weight: 450;
@@ -421,15 +425,18 @@
 
     // Treat a current link as disabled. It should not have a visual state change
     &#{&}--current {
-      border-left: ($nav-a-v-spacing * 0.5) solid var(--fc__nav-main__link--hover__bg);
       color: var(--fc__nav-main__fg);
       cursor: default;
       font-weight: 550; // TODO: replace this with the proper font weight
       padding: $nav-a-v-spacing $nav-a-h-spacing--sm ($nav-a-v-spacing * 0.75);
       pointer-events: none;
 
+      @include breakpoint-down($bp__show__desktop-nav) {
+        border-left: ($nav-a-v-spacing * 0.5) solid var(--fc__nav-main__link--hover__bg);
+      }
+
       @include breakpoint-up($bp__show__desktop-nav) {
-        border-top-color: var(--fc__nav-main__link--hover__bg);
+        border-top: ($nav-a-v-spacing * 0.25) solid var(--fc__nav-main__link--hover__bg);
       }
     }
 
@@ -451,8 +458,19 @@
     }
 
     // Exceptions
+
+    // Home button in navbar
+    .qh__nav-main__wrapper > &--home {
+      // Hide for desktop
+      @include breakpoint-up($bp__show__desktop-nav) {
+        display: none;
+        visibility: hidden;
+      }
+    }
+
+    // Home button in drop down navigation
     .qh__nav-main__list__outermost &--home {
-      // When inside the mobile nav, we hide it (there is a duplicate)
+      // Hide for mobile
       @include breakpoint-down($bp__show__desktop-nav) {
         display: none;
         visibility: hidden;
