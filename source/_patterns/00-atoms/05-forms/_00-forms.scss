@@ -87,6 +87,16 @@ input[type='week'] {
   display: inline-block;
   line-height: 1.25;
   padding: $input-v-spacing $input-h-spacing;
+  transition: $transition-base;
+
+  &:hover {
+    border-color: var(--fc__default__link--hover);
+  }
+
+  &:focus {
+    border-color: var(--fc__default__violator);
+    outline: 0;
+  }
 
 
   label + & {
@@ -137,3 +147,20 @@ select {
 
 // Styles are in 00-atoms/06-buttons
 //button {}
+
+// Form elements with classes
+.qh__form {
+
+  // Sets a button and input next to each other
+  &__nowrap {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+
+    > input {
+      // Oddly, a size larger than any button width does not make the input too small
+      flex: 1 0 calc(100% - 12rem);
+    }
+  }
+}

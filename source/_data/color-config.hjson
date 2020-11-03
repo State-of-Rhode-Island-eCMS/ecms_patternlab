@@ -47,6 +47,9 @@
       "hsl": "hsla(0, 0, 100%, 0)",
       "needs": "dark-text"
     },
+    #
+    # Quahog
+    #
     "quahog--darker": {
       "name": "Quahog dark",
       "hue": "black",
@@ -95,6 +98,9 @@
       "hsl": "hsl(0, 0%, 83%)",
       "needs": "dark-text"
     },
+    #
+    # Navy
+    #
     "navy--dark": {
       "name": "Navy dark",
       "hue": "blue",
@@ -143,6 +149,9 @@
       "hsl": "hsl(254, 62%, 80%)",
       "needs": "dark-text"
     },
+    #
+    # Rhody Red
+    #
     "rhody-red--dark": {
       "name": "Rhody Red dark",
       "hue": "maroon",
@@ -167,6 +176,9 @@
       "hsl": "hsla(360, 79%, 62%, 0.15)",
       "needs": "dark-text"
     },
+    #
+    # Accents
+    #
     "calamari": {
       "name": "Calamari",
       "hue": "orange",
@@ -191,6 +203,9 @@
       "hsl": "hsla(110, 49%, 51%, 0.15)",
       "needs": "dark-text"
     },
+    #
+    # Ocean
+    #
     "ocean--bright": {
       "name": "Ocean State bright",
       "hue": "light blue green",
@@ -209,6 +224,9 @@
       "hsl": "hsla(208, 54%, 73%, 0.25)",
       "needs": "dark-text"
     },
+    #
+    # Cawfee Milk
+    #
     "coffee-milk": {
       "name": "Coffee Milk",
       "hue": "light tan",
@@ -286,7 +304,10 @@
           { "fnName": "link--active", "colorName": "calamari" },
           { "fnName": "hx__fg", "colorName": "quahog--medium" },
           { "fnName": "violator", "colorName": "calamari" },
+          # Accent pair, bg and fg
           { "fnName": "accent", "colorName": "hope-gold" },
+          { "fnName": "accent__fg", "colorName": "quahog--dark" },
+          # text__accent currently used for bullet mark color
           { "fnName": "text__accent", "colorName": "quahog--medium" },
           { "fnName": "button__bg", "colorName": "navy" },
           { "fnName": "button__fg", "colorName": "hope-gold" },

@@ -1,0 +1,19 @@
+.qh__site-search {
+
+  // <from>
+  &__form {}
+
+  &__container {}
+
+  // <input>
+  &__query {}
+
+  // <button>
+  &__submit {
+    background-color: var(--fc__default__accent);
+    color: var(--fc__default__accent__fg);
+    padding: 0.1875rem;
+
+    .qh__icon {}
+  }
+}
