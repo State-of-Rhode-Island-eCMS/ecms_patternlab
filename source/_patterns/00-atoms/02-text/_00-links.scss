@@ -1,5 +1,10 @@
 a {
   color: var(--fc__default__link);
+  text-decoration: underline;
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: .075em;
+  text-decoration-skip-ink: auto;
+  transition: all .2s ease; 
 
   &:hover,
   &:focus {
