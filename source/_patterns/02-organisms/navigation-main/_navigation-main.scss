@@ -18,13 +18,156 @@
     }
   }
 
-  // UL
-  & > &__list {
+  // <div>
+  &__wrapper {
     @include qh-content-maxwidth();
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: flex-start;
+  }
+
+  // mobile button
+  &__toggle {
+
+    &,
+    &:visited {
+      color: var(--fc__nav-main--link);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--fc__nav-main--link--hover);
+    }
+
+    &:active {
+      color: var(--fc__nav-main--link--active);
+    }
+
+    &__label {}
+
+    // Menu icon general styles
+    .qh__icon__menu {
+      @include qh-icon-size;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      // Draw three bars with CSS
+      &::before,
+      &::after,
+      > span {
+        display: block;
+        background-color: currentColor;
+        height: rem(2);
+        position: absolute;
+        width: rem(20);
+      }
+
+      // Top bar
+      &::before {
+        content: '';
+        top: rem(12);
+        left: rem(12);
+      }
+
+      // Mid bar
+      > span {
+        top: rem(21);
+        left: rem(12);
+      }
+
+      // Bottom bar
+      &::after {
+        content: '';
+        top: rem(30);
+        left: rem(12);
+      }
+    }
+
+    // Slight animation of the icon on hover
+    &:hover .qh__icon__menu::before,
+    &:focus .qh__icon__menu::before,
+    &:hover .qh__icon__menu::after,
+    &:focus .qh__icon__menu::after {
+      left: rem(10);
+    }
+
+    &:hover .qh__icon__menu > span,
+    &:focus .qh__icon__menu > span {
+      left: rem(14);
+    }
+
+    // Icon animation on aria-expanded change
+    &[aria-expanded="false"] {
+
+      .qh__icon__menu::before,
+      .qh__icon__menu::after,
+      .qh__icon__menu > span {
+        transform: rotate(0deg);
+      }
+
+      .qh__icon__menu::before,
+      .qh__icon__menu::after {
+        transition:
+          transform $transition-duration-base ease,
+          top $transition-duration-base ease,
+          left $transition-duration-base ease,
+          width $transition-duration-base ease;
+      }
+
+      .qh__icon__menu > span {
+        opacity: 1;
+        // Transition as it comes back into view from the "true" state
+        transition:
+          opacity $transition-duration-base ease ($transition-duration-base/4),
+          left $transition-duration-base ease 0ms;
+      }
+    }
+
+    &[aria-expanded="true"] {
+
+      .qh__icon__menu::before,
+      .qh__icon__menu::after {
+        transition:
+          transform $transition-duration-base ease,
+          top $transition-duration-base ease,
+          left $transition-duration-base ease,
+          width $transition-duration-base ease;
+      }
+
+      // Top bar — spin and drop down
+      .qh__icon__menu::before {
+        top: rem(21);
+        left: rem(10);
+        transform: rotate(135deg);
+        width: rem(24);
+      }
+
+      // Mid bar — fly away left
+      .qh__icon__menu > span {
+        left: - rem(20);
+        opacity: 0;
+        transition:
+          opacity $transition-duration-base ease 0ms,
+          left $transition-duration-base ease ($transition-duration-base/4);
+      }
+
+      // Botton bar – spin and lift up
+      .qh__icon__menu::after {
+        top: rem(21);
+        left: rem(10);
+        transform: rotate(-135deg);
+        width: rem(24);
+      }
+    }
+  }
+
+  // <ul>
+  &__list {
+
+    &__outermost {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: flex-start;
+    }
   }
 
   &__list {
@@ -42,7 +185,7 @@
     }
   }
 
-  // LI
+  // <li>
   &__item {
     position: relative;
     overflow: visible;
@@ -135,7 +278,7 @@
     }
   }
 
-  // A
+  // <a>
   &__link {
     padding: ($nav-a-v-spacing * 0.75) $nav-a-h-spacing--sm $nav-a-v-spacing;
 

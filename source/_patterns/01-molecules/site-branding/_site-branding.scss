@@ -1,19 +1,23 @@
-.site-branding {
+.qh__site-branding {
   display: flex;
   align-items: center;
   margin: 1rem 1rem 1rem 0;
+
   &__logo {
     margin-right: 1rem;
-    display: block; 
+    display: block;
     width: 3rem;
     min-height: 4.5rem;
   }
+
   &__name {
     display: block;
-    &:link,
+
+    &,
     &:visited {
       text-decoration: none;
     }
+
     &__top-line {
       display: block;
       font-family: $font-sans-vf;
@@ -23,6 +27,7 @@
       line-height: 1;
       text-transform: uppercase;
     }
+
     &__main-line {
       display: block;
       font-family: $font-serif-vf;
@@ -30,6 +35,7 @@
       font-weight: 300;
       line-height: 1.1;
     }
+
     &__bottom-line {
       display: block;
       font-family: $font-sans-vf;
