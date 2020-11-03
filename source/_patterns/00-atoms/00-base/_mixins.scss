@@ -1,7 +1,10 @@
-// Z-index map-get helper
-@function z($key) {
-  @return map-get($zindex, $key);
-}
+// NOTE
+// This is not all the mixins or functions for the project
+// Some files have mixins of their own
+//
+// Examples:
+// _00-colors.scss: functions for getting color from the master color map
+
 
 // Used to remove browser styles from button elements
 @mixin qh-button-reset {
@@ -11,6 +14,15 @@
 
   &::-moz-focus-inner {
     border: 0;
+  }
+}
+
+// Content max-width
+@mixin qh-content-maxwidth() {
+  margin: 0 auto;
+  max-width: $content-max-width;
+  @supports (width: min(10px, 5px)) {
+    max-width: var(--content-max-width);
   }
 }
 
@@ -50,11 +62,7 @@
   }
 }
 
-// Content max-width
-@mixin qh-content-maxwidth() {
-  margin: 0 auto;
-  max-width: $content-max-width;
-  @supports (width: min(10px, 5px)) {
-    max-width: var(--content-max-width);
-  }
+// Z-index map-get helper
+@function z($key) {
+  @return map-get($zindex, $key);
 }

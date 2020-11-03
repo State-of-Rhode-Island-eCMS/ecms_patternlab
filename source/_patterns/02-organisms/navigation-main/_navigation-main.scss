@@ -1,3 +1,9 @@
+// We need a wrapper that can hide the off-canvas nav panel for mobile
+.dialog-off-canvas-main-canvas {
+  position: relative;
+  overflow: hidden;
+}
+
 .qh__nav-main {
   background-color: var(--fc__nav-main__bg);
   color: var(--fc__nav-main__fg);
@@ -12,19 +18,65 @@
     margin: -0.75em -0.75em -0.75em 0;
   }
 
-  .qh__icon__home {
-    &__shape {
-      fill: var(--fc__nav-main__fg);
-    }
-  }
+  // There is one of this in the UL and one outside for mobile
+  .qh__icon__home {}
 
   // <div>
   &__wrapper {
     @include qh-content-maxwidth();
+    position: relative;
+    overflow: visible;
+    z-index: z(mobile-nav-bar);
+
+    // For mobile we need to flex
+    @include breakpoint-down($bp__show__desktop-nav) {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  // <body>
+  // Blur the background behind the active navigation drawer
+  &__overlay {
+    &::after {
+      backdrop-filter: blur(4px);
+      background-color: rgba(#000, 0.25);
+      content: '';
+      opacity: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      pointer-events: none;
+      transition:
+        opacity $transition-duration-medium $transition-timing-base 0ms,
+        z-index 0ms linear $transition-duration-medium;
+      z-index: -1;
+    }
+
+    &--visible {
+      &::after {
+        opacity: 1;
+        pointer-events: auto;
+        transition:
+          opacity $transition-duration-medium $transition-timing-base 0ms,
+          z-index 0ms linear 0ms;
+        z-index: z(mobile-body-overlay);
+      }
+    }
   }
 
   // mobile button
   &__toggle {
+    background-image: none;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $nav-a-h-spacing 0 ($nav-a-h-spacing/2);
 
     &,
     &:visited {
@@ -41,6 +93,11 @@
     }
 
     &__label {}
+
+    // Hidden for desktop
+    @include breakpoint-up($bp__show__desktop-nav) {
+      display: none;
+    }
 
     // Menu icon general styles
     .qh__icon__menu {
@@ -79,19 +136,19 @@
         top: rem(30);
         left: rem(12);
       }
-    }
+    } // end .qh__icon__menu
 
-    // Slight animation of the icon on hover
-    &:hover .qh__icon__menu::before,
-    &:focus .qh__icon__menu::before,
-    &:hover .qh__icon__menu::after,
-    &:focus .qh__icon__menu::after {
-      left: rem(10);
-    }
-
-    &:hover .qh__icon__menu > span,
-    &:focus .qh__icon__menu > span {
-      left: rem(14);
+    // Slight animation of the icon on hover, focus, and active (for tap)
+    &:hover,
+    &:focus,
+    &:active {
+      .qh__icon__menu::before,
+      .qh__icon__menu::after {
+        left: rem(10);
+      }
+      .qh__icon__menu > span {
+        left: rem(14);
+      }
     }
 
     // Icon animation on aria-expanded change
@@ -157,16 +214,38 @@
         width: rem(24);
       }
     }
-  }
+  } // end &__toggle
 
   // <ul>
   &__list {
 
     &__outermost {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      justify-content: flex-start;
+      // For mobile, make this an off canvas right drawer
+      @include breakpoint-down($bp__show__desktop-nav) {
+        background-color: var(--fc__nav-main__bg);
+        color: var(--fc__nav-main__fg);
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        transform: translateX(100vw);
+        transition: $transition-medium;
+        width: 86vw;
+
+        [aria-expanded="true"] + & {
+          opacity: 1;
+          transform: translateX(0);
+          transition: $transition-medium;
+        }
+      }
+
+      // For desktop the design is a horizontal row
+      @include breakpoint-up($bp__show__desktop-nav) {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-start;
+      }
     }
   }
 
@@ -174,14 +253,41 @@
 
     &__sub {
       background-color: var(--fc__nav-main__link--hover__bg);
-      box-shadow: $box-shadow-base;
       min-width: 15rem;
-      opacity: 0;
-      position: absolute;
-        top: 100%;
-        left: 0;
-      transition: $transition-duration-medium opacity ease 0s, 0s visibility linear $transition-duration-medium;
-      visibility: hidden;
+
+      @include breakpoint-down($bp__show__desktop-nav) {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0s linear 1s, visibility 0s linear 0s;
+        visibility: hidden;
+
+        > li {
+          border-left: ($nav-a-v-spacing * 0.5) solid var(--fc__nav-main__bg);
+          opacity: 0;
+          transition: $transition-base 0ms;
+        }
+
+        .js [aria-expanded="true"] + & {
+          max-height: unset;
+          transition: max-height 0s linear 500s, visibility 0s linear 0ms;
+          visibility: visible;
+
+          > li {
+            opacity: 1;
+            transition: $transition-base ($transition-duration-base/2);
+          }
+        }
+      }
+
+      @include breakpoint-up($bp__show__desktop-nav) {
+        box-shadow: $box-shadow-base;
+        opacity: 0;
+        position: absolute;
+          top: 100%;
+          left: 0;
+        transition: $transition-duration-medium opacity ease 0s, 0s visibility linear $transition-duration-medium;
+        visibility: hidden;
+      }
     }
   }
 
@@ -206,6 +312,10 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-start;
+
+    @include breakpoint-down($bp__show__desktop-nav) {
+      justify-content: space-between;
+    }
 
     .qh__icon__chevron-down {
       &__circle {
@@ -285,11 +395,14 @@
     &,
     &:visited {
       background-color: transparent;
-      border-top: ($nav-a-v-spacing * 0.25) solid var(--fc__nav-main__bg);
       color: var(--fc__nav-main__link);
       font-size: clamp(0.925rem, 1.5vw, 1rem);
       font-weight: 450;
       text-decoration: none;
+
+      @include breakpoint-up($bp__show__desktop-nav) {
+        border-top: ($nav-a-v-spacing * 0.25) solid var(--fc__nav-main__bg);
+      }
     }
 
     &:hover,
@@ -308,12 +421,19 @@
 
     // Treat a current link as disabled. It should not have a visual state change
     &#{&}--current {
-      border-top-color: var(--fc__nav-main__link--hover__bg);
       color: var(--fc__nav-main__fg);
       cursor: default;
       font-weight: 550; // TODO: replace this with the proper font weight
       padding: $nav-a-v-spacing $nav-a-h-spacing--sm ($nav-a-v-spacing * 0.75);
       pointer-events: none;
+
+      @include breakpoint-down($bp__show__desktop-nav) {
+        border-left: ($nav-a-v-spacing * 0.5) solid var(--fc__nav-main__link--hover__bg);
+      }
+
+      @include breakpoint-up($bp__show__desktop-nav) {
+        border-top: ($nav-a-v-spacing * 0.25) solid var(--fc__nav-main__link--hover__bg);
+      }
     }
 
     &__sub {
@@ -333,7 +453,26 @@
       pointer-events: none;
     }
 
-    // Exception
+    // Exceptions
+
+    // Home button in navbar
+    .qh__nav-main__wrapper > &--home {
+      // Hide for desktop
+      @include breakpoint-up($bp__show__desktop-nav) {
+        display: none;
+        visibility: hidden;
+      }
+    }
+
+    // Home button in drop down navigation
+    .qh__nav-main__list__outermost &--home {
+      // Hide for mobile
+      @include breakpoint-down($bp__show__desktop-nav) {
+        display: none;
+        visibility: hidden;
+      }
+    }
+
     &--home .qh__icon {
       margin: 0;
     }
