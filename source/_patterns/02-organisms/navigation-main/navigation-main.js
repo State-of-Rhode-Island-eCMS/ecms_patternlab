@@ -22,10 +22,12 @@ document.addEventListener("DOMContentLoaded", function() {
   // x y coordinates of the click and checking to see if it is inside the menu or not
 
 
-  // Listen to mouse press, spacebar key press, and enter key press
+  // Listen to mouse press, spacebar key press, and enter key press on Drop Down menu parents
   var qh_dd_btns = document.querySelectorAll('.js-qh-dd-toggle');
   qh_dd_btns.forEach(function(toggle) {
     toggle.addEventListener('click', function(event) {
+      // Remove the contents of the href from this parent button
+      toggle.setAttribute('href', '#');
       // a11yClick function restricts keypress to spacebar or enter
       if (a11yClick(event) === true) {
         var expanded = toggle.getAttribute('aria-expanded');
@@ -41,6 +43,4 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // TODO: Add JS that duplicates the top-level anchor and inserts its destination
-  // URL into an "Overview" link
 });
