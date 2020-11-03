@@ -1,4 +1,13 @@
 .qh__icon {
   @include qh-icon-size();
   pointer-events: none; // allows clicks via JS detection to bubble through to the element containing
+
+  //Generic classes should be available to every icon
+  // Wrapper <svg>
+  &__svg {}
+
+  // Any path
+  &__path {
+    fill: currentColor;
+  }
 }
