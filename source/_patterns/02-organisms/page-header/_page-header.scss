@@ -3,13 +3,18 @@
   color: var(--fc__header__fg);
 
   &__wrapper {
+    @include qh-content-maxwidth();
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
-    max-width: $content-max-width;
-    @supports (width: min(10px, 5px)) {
-      max-width: var(--content-max-width);
+
+    .qh__site-branding {
+      flex: 1 0 66%;
+    }
+
+    .qh__site-search {
+      flex: 1 0 34%;
     }
   }
 
