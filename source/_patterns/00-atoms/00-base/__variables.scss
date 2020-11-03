@@ -65,3 +65,26 @@ $zindex: (
   base: 1,
   drop-down-menu: 500
 );
+
+/* Light mode */
+:root {
+  --osLightMode: light;
+  @media (prefers-color-scheme:dark) {
+    --osLightMode: dark;
+  }
+}
+
+/* Font size modifier */
+:root {
+  --fontSizeModifier: 1;
+}
+
+/* Line-height modifier */
+:root {
+  --lineHeightModifier: 1;
+}
+
+/* word space modifier */
+:root {
+  --wordSpaceModifier: 0;
+}
