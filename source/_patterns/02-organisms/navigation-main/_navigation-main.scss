@@ -19,11 +19,7 @@
   }
 
   // There is one of this in the UL and one outside for mobile
-  .qh__icon__home {
-    &__shape {
-      fill: var(--fc__nav-main__fg);
-    }
-  }
+  .qh__icon__home {}
 
   // <div>
   &__wrapper {
