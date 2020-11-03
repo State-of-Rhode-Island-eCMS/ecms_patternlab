@@ -12,23 +12,78 @@ body {
   --content-max-width: min(93vw, 90rem); }
 
 /* Light mode */
-:root {
+body {
   --osLightMode: light; }
   @media (prefers-color-scheme: dark) {
-    :root {
+    body {
       --osLightMode: dark; } }
 
 /* Font size modifier */
-:root {
+body {
   --fontSizeModifier: 1; }
 
 /* Line-height modifier */
-:root {
+body {
   --lineHeightModifier: 1; }
 
 /* word space modifier */
-:root {
+body {
   --wordSpaceModifier: 0; }
+
+/* Typography variables */
+/* Preprocessed for fallbacks */
+/* Set base text size for all calcs */
+/* Change px values here for all font sizing */
+/* Font size REMs */
+/* Line-height (needs to be in EMs) */
+/* Custom props for modern browsers */
+body {
+  --p-size-s: 1rem;
+  --p-size-m: 1.125rem;
+  --p-size-l: 1.25rem;
+  --h1-size-s: 2rem;
+  --h1-size-m: 3.75rem;
+  --h1-size-l: 5.5rem;
+  --p-lh-s: 1.5em;
+  --p-lh-m: 1.525em;
+  --p-lh-l: 1.55em;
+  --h1-lh-s: 1.05em;
+  --h1-lh-m: 1.075em;
+  --h1-lh-l: 1.1em; }
+
+/* Scaling accessible typography setup */
+/* Set scaling values */
+body {
+  --p-scaler-value: 1.25;
+  --p-lh-scaler-value: 3;
+  --h1-scaler-value: 6;
+  --h1-lh-scaler-value: 6;
+  --h2-scaler-value: 3;
+  --h2-lh-scaler-value: 3;
+  --h3-scaler-value: 2;
+  --h3-lh-scaler-value: 3.75;
+  --bq-scaler-value: 2.25;
+  --bq-lh-scaler-value: 2.5; }
+
+* {
+  /* default starting values for scaling formulas */
+  --font-size-min-value: 1rem;
+  --font-size-max-value: 1.25rem;
+  --font-size-scaler-value: var(--p-scaler-value);
+  --font-lh-min-value: 1.5em;
+  --font-lh-max-value: 1.55em;
+  --font-lh-scaler-value: var(--p-lh-scaler-value);
+  /* facter in fontSizeModifier preference */
+  --font-size-min: calc(var(--font-size-min-value) * var(--fontSizeModifier) * 1rem);
+  --font-size-max: calc(var(--font-size-max-value) * var(--fontSizeModifier)  * 1rem);
+  /* reusable font-size var for each text element */
+  --font-size: clamp(var(--font-size-min), calc(0.5rem + (var(--font-size-scaler-value) * 1vw)), var(--font-size-max));
+  /* facter in lineHeightModifier preference */
+  --font-lh-min: calc(var(--font-lh-min-value) * var(--lineHeightModifier) * 1em);
+  --font-lh-max: calc(var(--font-lh-max-value) * var(--lineHeightModifier) * 1em);
+  /* reusable line-height var for each text element */
+  --line-height: clamp(var(--font-lh-min), calc(var(--font-lh-scaler-value) * 1vw), var(--font-lh-max));
+  --word-spacing: calc( 1em * var(--wordSpaceModifier) ); }
 
 /* Static Fonts */
 @font-face {
@@ -644,47 +699,98 @@ a {
 body {
   --body-text-spacer: clamp(1rem, 2vw, 1.25rem); }
 
+/* following element spacing selector, just inside node content */
+.node * + * {
+  margin-top: var(--body-text-spacer); }
+
 p {
-  font-family: var(--font-sans);
+  font-family: "Work Sans", var(--font-sans-fallback);
   font-weight: normal;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: 1rem;
+  line-height: 1.5em;
   font-style: normal;
+  margin: 0;
+  max-width: 40em;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
-          hyphens: auto;
-  line-height: clamp(1.25em, 2vw, 1.4em);
-  margin: 0;
-  max-width: 40em; }
+          hyphens: auto; }
+  .wf-inactive p {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.04em; }
   @supports (font-variation-settings: normal) {
-    p {
+    html:not(.novf) p {
       font-family: var(--font-sans-vf);
-      font-weight: 350; } }
+      font-weight: 350; }
+    html:not(.novf).wf-inactive p {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      letter-spacing: 0.035em; } }
+  @media screen and (min-width: 47.5em) {
+    p {
+      font-size: 1.125rem;
+      line-height: 1.525em; } }
+  @media screen and (min-width: 62em) {
+    p {
+      font-size: 1.25rem;
+      line-height: 1.55em; } }
+  @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    p {
+      --font-size-min: 1rem;
+      --font-size-max: 1.25rem;
+      --font-size-scaler-value: var(--p-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min: 1.5em;
+      --font-lh-max: 1.55em;
+      --font-lh-scaler-value: var(--p-lh-scaler-value);
+      line-height: var(--line-height); } }
   @media screen and (min-width: 47.5em) {
     p {
       -webkit-hyphens: none;
           -ms-hyphens: none;
               hyphens: none; } }
-  p + p,
-  p + ul,
-  p + ol,
-  figure + p {
-    margin-top: var(--body-text-spacer); }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: var(--fc__default__hx__fg); }
 
 h1 {
-  font-family: var(--font-serif);
+  font-family: "Roboto Slab", var(--font-serif-fallback);
   font-weight: normal;
-  font-size: clamp(2rem, 5vw, 5.5rem);
+  font-size: 2rem;
+  line-height: 1.05em;
   font-style: normal;
-  line-height: clamp(1.05em, 6vw, 1.1em);
   margin-top: 0;
   margin-bottom: calc(var(--body-text-spacer) * 1); }
+  .wf-inactive h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+    letter-spacing: 0.035em; }
   @supports (font-variation-settings: normal) {
-    h1 {
+    html:not(.novf) h1 {
       font-family: var(--font-serif-vf);
-      font-weight: 275; } }
+      font-weight: 275; }
+    html:not(.novf).wf-inactive h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: normal;
+      letter-spacing: 0.035em; } }
+  @media screen and (min-width: 47.5em) {
+    h1 {
+      font-size: 3.75rem;
+      line-height: 1.075em; } }
+  @media screen and (min-width: 62em) {
+    h1 {
+      font-size: 5.5rem;
+      line-height: 1.1em; } }
+  @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    h1 {
+      --font-size-min: 2rem;
+      --font-size-max: 5.5rem;
+      --font-size-scaler-value: var(--h1-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min: 1.05em;
+      --font-lh-max: 1.1em;
+      --font-lh-scaler-value: var(--h1-lh-scaler-value);
+      line-height: var(--line-height); } }
 
 h2 {
   font-family: var(--font-serif);
@@ -1327,6 +1433,7 @@ table {
       height: 100%; }
   .media-item figcaption {
     background-color: var(--fc__primary--light__bg--dark);
+    margin-top: 0;
     padding: 0.5rem 0.75rem; }
 
 .qh__site-branding {

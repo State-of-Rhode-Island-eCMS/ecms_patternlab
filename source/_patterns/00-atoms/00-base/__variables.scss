@@ -67,7 +67,7 @@ $zindex: (
 );
 
 /* Light mode */
-:root {
+body {
   --osLightMode: light;
   @media (prefers-color-scheme:dark) {
     --osLightMode: dark;
@@ -75,16 +75,123 @@ $zindex: (
 }
 
 /* Font size modifier */
-:root {
+body {
   --fontSizeModifier: 1;
 }
 
 /* Line-height modifier */
-:root {
+body {
   --lineHeightModifier: 1;
 }
 
 /* word space modifier */
-:root {
+body {
   --wordSpaceModifier: 0;
+}
+
+/* Typography variables */
+
+/* Preprocessed for fallbacks */
+
+/* Set base text size for all calcs */
+$text-base-size: 16;
+
+/* Change px values here for all font sizing */
+$p-size-s-px: 16;
+$p-size-m-px: 18;
+$p-size-l-px: 20;
+
+$h1-size-s-px: 32;
+$h1-size-m-px: 60;
+$h1-size-l-px: 88;
+
+$h2-size-s-px: 16;
+$h2-size-m-px: 18;
+$h2-size-l-px: 20;
+
+/* Font size REMs */
+$p-size-s: $p-size-s-px / $text-base-size * 1rem;
+$p-size-m: $p-size-m-px / $text-base-size * 1rem;
+$p-size-l: $p-size-l-px / $text-base-size * 1rem;
+
+$h1-size-s: $h1-size-s-px / $text-base-size * 1rem;
+$h1-size-m: $h1-size-m-px / $text-base-size * 1rem;
+$h1-size-l: $h1-size-l-px / $text-base-size * 1rem;
+
+/* Line-height (needs to be in EMs) */
+$p-lh-s: 1.5em;
+$p-lh-m: 1.525em;
+$p-lh-l: 1.55em;
+
+$h1-lh-s: 1.05em;
+$h1-lh-m: 1.075em;
+$h1-lh-l: 1.1em;
+
+/* Custom props for modern browsers */
+body {
+  --p-size-s: #{$p-size-s};
+  --p-size-m: #{$p-size-m};
+  --p-size-l: #{$p-size-l};
+
+  --h1-size-s: #{$h1-size-s};
+  --h1-size-m: #{$h1-size-m};
+  --h1-size-l: #{$h1-size-l};
+
+
+  --p-lh-s: #{$p-lh-s};
+  --p-lh-m: #{$p-lh-m};
+  --p-lh-l: #{$p-lh-l};
+
+  --h1-lh-s: #{$h1-lh-s};
+  --h1-lh-m: #{$h1-lh-m};
+  --h1-lh-l: #{$h1-lh-l};
+
+
+}
+
+/* Scaling accessible typography setup */
+
+/* Set scaling values */
+body {
+  --p-scaler-value: 1.25;
+  --p-lh-scaler-value: 3;
+
+  --h1-scaler-value: 6;
+  --h1-lh-scaler-value: 6;
+
+  --h2-scaler-value: 3;
+  --h2-lh-scaler-value: 3;
+
+  --h3-scaler-value: 2;
+  --h3-lh-scaler-value: 3.75;
+
+  --bq-scaler-value: 2.25;
+  --bq-lh-scaler-value: 2.5;
+
+}
+
+* {
+  /* default starting values for scaling formulas */
+  --font-size-min-value: #{$p-size-s};
+  --font-size-max-value: #{$p-size-l};
+  --font-size-scaler-value: var(--p-scaler-value);
+  --font-lh-min-value: #{$p-lh-s};
+  --font-lh-max-value: #{$p-lh-l};
+  --font-lh-scaler-value: var(--p-lh-scaler-value);
+
+  /* facter in fontSizeModifier preference */
+  --font-size-min: calc(var(--font-size-min-value) * var(--fontSizeModifier) * 1rem);
+  --font-size-max: calc(var(--font-size-max-value) * var(--fontSizeModifier)  * 1rem);
+
+  /* reusable font-size var for each text element */
+  --font-size: clamp(var(--font-size-min), calc(0.5rem + (var(--font-size-scaler-value) * 1vw)), var(--font-size-max));
+
+  /* facter in lineHeightModifier preference */
+  --font-lh-min: calc(var(--font-lh-min-value) * var(--lineHeightModifier) * 1em);
+  --font-lh-max: calc(var(--font-lh-max-value) * var(--lineHeightModifier) * 1em);
+
+  /* reusable line-height var for each text element */
+  --line-height: clamp(var(--font-lh-min), calc(var(--font-lh-scaler-value) * 1vw), var(--font-lh-max)); 
+
+  --word-spacing: calc( 1em * var(--wordSpaceModifier) );
 }
