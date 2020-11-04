@@ -767,9 +767,9 @@ body {
 
 p, address, time, ul,
 ol,
-dl, button,
+dl, .form__actions a, button,
 .qh__btn,
-.button {
+.button, table th, table td, .qh__accordion__button, .qh__file-list__item__label {
   font-family: "Work Sans", var(--font-sans-fallback);
   font-weight: normal;
   font-size: 1rem;
@@ -782,50 +782,50 @@ dl, button,
           hyphens: auto; }
   .wf-inactive p, .wf-inactive address, .wf-inactive time, .wf-inactive ul,
   .wf-inactive ol,
-  .wf-inactive dl, .wf-inactive button,
+  .wf-inactive dl, .wf-inactive .form__actions a, .form__actions .wf-inactive a, .wf-inactive button,
   .wf-inactive .qh__btn,
-  .wf-inactive .button {
+  .wf-inactive .button, .wf-inactive table th, table .wf-inactive th, .wf-inactive table td, table .wf-inactive td, .wf-inactive .qh__accordion__button, .wf-inactive .qh__file-list__item__label {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: normal;
     letter-spacing: 0.04em; }
   @supports (font-variation-settings: normal) {
     html:not(.novf) p, html:not(.novf) address, html:not(.novf) time, html:not(.novf) ul,
     html:not(.novf) ol,
-    html:not(.novf) dl, html:not(.novf) button,
+    html:not(.novf) dl, html:not(.novf) .form__actions a, .form__actions html:not(.novf) a, html:not(.novf) button,
     html:not(.novf) .qh__btn,
-    html:not(.novf) .button {
+    html:not(.novf) .button, html:not(.novf) table th, table html:not(.novf) th, html:not(.novf) table td, table html:not(.novf) td, html:not(.novf) .qh__accordion__button, html:not(.novf) .qh__file-list__item__label {
       font-family: var(--font-sans-vf);
       font-weight: var(--p-font-wght); }
     html:not(.novf).wf-inactive p, html:not(.novf).wf-inactive address, html:not(.novf).wf-inactive time, html:not(.novf).wf-inactive ul,
     html:not(.novf).wf-inactive ol,
-    html:not(.novf).wf-inactive dl, html:not(.novf).wf-inactive button,
+    html:not(.novf).wf-inactive dl, html:not(.novf).wf-inactive .form__actions a, .form__actions html:not(.novf).wf-inactive a, html:not(.novf).wf-inactive button,
     html:not(.novf).wf-inactive .qh__btn,
-    html:not(.novf).wf-inactive .button {
+    html:not(.novf).wf-inactive .button, html:not(.novf).wf-inactive table th, table html:not(.novf).wf-inactive th, html:not(.novf).wf-inactive table td, table html:not(.novf).wf-inactive td, html:not(.novf).wf-inactive .qh__accordion__button, html:not(.novf).wf-inactive .qh__file-list__item__label {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: normal;
       letter-spacing: 0.035em; } }
   @media screen and (min-width: 47.5em) {
     p, address, time, ul,
     ol,
-    dl, button,
+    dl, .form__actions a, button,
     .qh__btn,
-    .button {
+    .button, table th, table td, .qh__accordion__button, .qh__file-list__item__label {
       font-size: 1.125rem;
       line-height: 1.525em; } }
   @media screen and (min-width: 62em) {
     p, address, time, ul,
     ol,
-    dl, button,
+    dl, .form__actions a, button,
     .qh__btn,
-    .button {
+    .button, table th, table td, .qh__accordion__button, .qh__file-list__item__label {
       font-size: 1.25rem;
       line-height: 1.55em; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     p, address, time, ul,
     ol,
-    dl, button,
+    dl, .form__actions a, button,
     .qh__btn,
-    .button {
+    .button, table th, table td, .qh__accordion__button, .qh__file-list__item__label {
       --font-size-min: 1rem;
       --font-size-max: 1.25rem;
       --font-size-scaler-value: var(--p-scaler-value);
@@ -837,9 +837,9 @@ dl, button,
   @media screen and (min-width: 47.5em) {
     p, address, time, ul,
     ol,
-    dl, button,
+    dl, .form__actions a, button,
     .qh__btn,
-    .button {
+    .button, table th, table td, .qh__accordion__button, .qh__file-list__item__label {
       -webkit-hyphens: none;
           -ms-hyphens: none;
               hyphens: none; } }
@@ -1113,9 +1113,9 @@ blockquote {
   max-width: var(--content-width); }
   blockquote p, blockquote address, blockquote time, blockquote ul,
   blockquote ol,
-  blockquote dl, blockquote button,
+  blockquote dl, blockquote .form__actions a, .form__actions blockquote a, blockquote button,
   blockquote .qh__btn,
-  blockquote .button {
+  blockquote .button, blockquote table th, table blockquote th, blockquote table td, table blockquote td, blockquote .qh__accordion__button, blockquote .qh__file-list__item__label {
     font-family: "Roboto Slab", var(--font-serif-fallback);
     font-weight: normal;
     font-size: 1.25rem;
@@ -1125,9 +1125,9 @@ blockquote {
     margin-top: 0.75rem; }
     .wf-inactive blockquote p, .wf-inactive blockquote address, .wf-inactive blockquote time, .wf-inactive blockquote ul,
     .wf-inactive blockquote ol,
-    .wf-inactive blockquote dl, .wf-inactive blockquote button,
+    .wf-inactive blockquote dl, .wf-inactive blockquote .form__actions a, .form__actions .wf-inactive blockquote a, .wf-inactive blockquote button,
     .wf-inactive blockquote .qh__btn,
-    .wf-inactive blockquote .button {
+    .wf-inactive blockquote .button, .wf-inactive blockquote table th, table .wf-inactive blockquote th, .wf-inactive blockquote table td, table .wf-inactive blockquote td, .wf-inactive blockquote .qh__accordion__button, .wf-inactive blockquote .qh__file-list__item__label {
       font-family: Georgia, "Times New Roman", serif;
       font-variant-numeric: lining-nums;
       font-weight: normal;
@@ -1135,16 +1135,16 @@ blockquote {
     @supports (font-variation-settings: normal) {
       html:not(.novf) blockquote p, html:not(.novf) blockquote address, html:not(.novf) blockquote time, html:not(.novf) blockquote ul,
       html:not(.novf) blockquote ol,
-      html:not(.novf) blockquote dl, html:not(.novf) blockquote button,
+      html:not(.novf) blockquote dl, html:not(.novf) blockquote .form__actions a, .form__actions html:not(.novf) blockquote a, html:not(.novf) blockquote button,
       html:not(.novf) blockquote .qh__btn,
-      html:not(.novf) blockquote .button {
+      html:not(.novf) blockquote .button, html:not(.novf) blockquote table th, table html:not(.novf) blockquote th, html:not(.novf) blockquote table td, table html:not(.novf) blockquote td, html:not(.novf) blockquote .qh__accordion__button, html:not(.novf) blockquote .qh__file-list__item__label {
         font-family: var(--font-serif-vf);
         font-weight: 150; }
       html:not(.novf).wf-inactive blockquote p, html:not(.novf).wf-inactive blockquote address, html:not(.novf).wf-inactive blockquote time, html:not(.novf).wf-inactive blockquote ul,
       html:not(.novf).wf-inactive blockquote ol,
-      html:not(.novf).wf-inactive blockquote dl, html:not(.novf).wf-inactive blockquote button,
+      html:not(.novf).wf-inactive blockquote dl, html:not(.novf).wf-inactive blockquote .form__actions a, .form__actions html:not(.novf).wf-inactive blockquote a, html:not(.novf).wf-inactive blockquote button,
       html:not(.novf).wf-inactive blockquote .qh__btn,
-      html:not(.novf).wf-inactive blockquote .button {
+      html:not(.novf).wf-inactive blockquote .button, html:not(.novf).wf-inactive blockquote table th, table html:not(.novf).wf-inactive blockquote th, html:not(.novf).wf-inactive blockquote table td, table html:not(.novf).wf-inactive blockquote td, html:not(.novf).wf-inactive blockquote .qh__accordion__button, html:not(.novf).wf-inactive blockquote .qh__file-list__item__label {
         font-family: Georgia, "Times New Roman", serif;
         font-variant-numeric: lining-nums;
         font-weight: normal;
@@ -1152,25 +1152,25 @@ blockquote {
     @media screen and (min-width: 47.5em) {
       blockquote p, blockquote address, blockquote time, blockquote ul,
       blockquote ol,
-      blockquote dl, blockquote button,
+      blockquote dl, blockquote .form__actions a, .form__actions blockquote a, blockquote button,
       blockquote .qh__btn,
-      blockquote .button {
+      blockquote .button, blockquote table th, table blockquote th, blockquote table td, table blockquote td, blockquote .qh__accordion__button, blockquote .qh__file-list__item__label {
         font-size: 1.375rem;
         line-height: 1.525em; } }
     @media screen and (min-width: 62em) {
       blockquote p, blockquote address, blockquote time, blockquote ul,
       blockquote ol,
-      blockquote dl, blockquote button,
+      blockquote dl, blockquote .form__actions a, .form__actions blockquote a, blockquote button,
       blockquote .qh__btn,
-      blockquote .button {
+      blockquote .button, blockquote table th, table blockquote th, blockquote table td, table blockquote td, blockquote .qh__accordion__button, blockquote .qh__file-list__item__label {
         font-size: 1.5rem;
         line-height: 1.55em; } }
     @supports (font-size: clamp(1rem, 2vw, 2rem)) {
       blockquote p, blockquote address, blockquote time, blockquote ul,
       blockquote ol,
-      blockquote dl, blockquote button,
+      blockquote dl, blockquote .form__actions a, .form__actions blockquote a, blockquote button,
       blockquote .qh__btn,
-      blockquote .button {
+      blockquote .button, blockquote table th, table blockquote th, blockquote table td, table blockquote td, blockquote .qh__accordion__button, blockquote .qh__file-list__item__label {
         --font-size-min: 1.25rem;
         --font-size-max: 1.5rem;
         --font-size-scaler-value: var(--bq-scaler-value);
@@ -1184,35 +1184,35 @@ blockquote {
 body {
   --st-font-wght: var(--default-body-wght); }
 
-.small-text, label, figcaption {
+.small-text, label, figcaption, .qh__file-list__item__filesize {
   font-family: "Work Sans", var(--font-sans-fallback);
   font-size: 0.75rem;
   line-height: 1.1em;
   font-style: normal; }
-  .wf-inactive .small-text, .wf-inactive label, .wf-inactive figcaption {
+  .wf-inactive .small-text, .wf-inactive label, .wf-inactive figcaption, .wf-inactive .qh__file-list__item__filesize {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-variant-numeric: lining-nums;
     font-weight: normal;
     letter-spacing: 0.035em; }
   @supports (font-variation-settings: normal) {
-    html:not(.novf) .small-text, html:not(.novf) label, html:not(.novf) figcaption {
+    html:not(.novf) .small-text, html:not(.novf) label, html:not(.novf) figcaption, html:not(.novf) .qh__file-list__item__filesize {
       font-family: var(--font-sans-vf);
       font-weight: var(--st-font-wght); }
-    html:not(.novf).wf-inactive .small-text, html:not(.novf).wf-inactive label, html:not(.novf).wf-inactive figcaption {
+    html:not(.novf).wf-inactive .small-text, html:not(.novf).wf-inactive label, html:not(.novf).wf-inactive figcaption, html:not(.novf).wf-inactive .qh__file-list__item__filesize {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-variant-numeric: lining-nums;
       font-weight: normal;
       letter-spacing: 0.035em; } }
   @media screen and (min-width: 47.5em) {
-    .small-text, label, figcaption {
+    .small-text, label, figcaption, .qh__file-list__item__filesize {
       font-size: 0.8125rem;
       line-height: 1.2em; } }
   @media screen and (min-width: 62em) {
-    .small-text, label, figcaption {
+    .small-text, label, figcaption, .qh__file-list__item__filesize {
       font-size: 0.875rem;
       line-height: 1.3em; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-    .small-text, label, figcaption {
+    .small-text, label, figcaption, .qh__file-list__item__filesize {
       --font-size-min: 0.75rem;
       --font-size-max: 0.875rem;
       --font-size-scaler-value: var(--st-scaler-value);
@@ -1276,7 +1276,7 @@ dl {
 figure {
   margin: 0;
   padding: 0; }
-  p + figure, address + figure, time + figure, ul + figure, ol + figure, dl + figure, button + figure, .qh__btn + figure, .button + figure {
+  p + figure, address + figure, time + figure, ul + figure, ol + figure, dl + figure, .form__actions a + figure, button + figure, .qh__btn + figure, .button + figure, table th + figure, table td + figure, .qh__accordion__button + figure, .qh__file-list__item__label + figure {
     margin-top: var(--body-text-spacer); }
 
 img {
@@ -1319,9 +1319,9 @@ form {
     min-width: unset; }
   .flexbox-container > p, .flexbox-container > address, .flexbox-container > time, .flexbox-container > ul,
   .flexbox-container > ol,
-  .flexbox-container > dl, .flexbox-container > button,
+  .flexbox-container > dl, .form__actions .flexbox-container > a, .flexbox-container > button,
   .flexbox-container > .qh__btn,
-  .flexbox-container > .button {
+  .flexbox-container > .button, table .flexbox-container > th, table .flexbox-container > td, .flexbox-container > .qh__accordion__button, .flexbox-container > .qh__file-list__item__label {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
     width: 100%; }
@@ -1339,10 +1339,19 @@ fieldset {
   padding: 1rem 0 1rem 1rem; }
   fieldset > legend {
     display: block;
-    font-family: var(--font-sans-vf);
+    font-family: "Work Sans", var(--font-sans-fallback);
     font-size: 1rem;
     font-weight: 575;
     text-transform: uppercase; }
+    .wf-inactive fieldset > legend {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: bold; }
+    @supports (font-variation-settings: normal) {
+      html:not(.novf) fieldset > legend {
+        font-family: var(--font-sans-vf); }
+      html:not(.novf).wf-inactive fieldset > legend {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: bold; } }
   fieldset + fieldset {
     margin-top: calc(var(--body-text-spacer) * 1.5); }
 
@@ -1352,9 +1361,7 @@ fieldset {
     margin-top: calc(var(--body-text-spacer) * 1.5); }
 
 .form__actions a {
-  font-family: var(--font-sans-vf);
-  font-size: 1rem;
-  font-weight: 400; }
+  --p-font-wght: 400; }
 
 input[type='text'],
 input[type='url'],
@@ -1367,7 +1374,7 @@ input[type='datetime-local'],
 input[type='month'],
 input[type='tel'],
 input[type='week'] {
-  font-family: var(--font-sans-vf);
+  font-family: "Work Sans", var(--font-sans-fallback);
   font-size: 1rem;
   font-weight: 500;
   width: 100%;
@@ -1380,6 +1387,45 @@ input[type='week'] {
   padding: 0.75em;
   -webkit-transition: all 250ms ease;
   transition: all 250ms ease; }
+  .wf-inactive input[type='text'], .wf-inactive
+  input[type='url'], .wf-inactive
+  input[type='email'], .wf-inactive
+  input[type='number'], .wf-inactive
+  input[type='search'], .wf-inactive
+  input[type='date'], .wf-inactive
+  input[type='datetime'], .wf-inactive
+  input[type='datetime-local'], .wf-inactive
+  input[type='month'], .wf-inactive
+  input[type='tel'], .wf-inactive
+  input[type='week'] {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal; }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf) input[type='text'], html:not(.novf)
+    input[type='url'], html:not(.novf)
+    input[type='email'], html:not(.novf)
+    input[type='number'], html:not(.novf)
+    input[type='search'], html:not(.novf)
+    input[type='date'], html:not(.novf)
+    input[type='datetime'], html:not(.novf)
+    input[type='datetime-local'], html:not(.novf)
+    input[type='month'], html:not(.novf)
+    input[type='tel'], html:not(.novf)
+    input[type='week'] {
+      font-family: var(--font-sans-vf); }
+    html:not(.novf).wf-inactive input[type='text'], html:not(.novf).wf-inactive
+    input[type='url'], html:not(.novf).wf-inactive
+    input[type='email'], html:not(.novf).wf-inactive
+    input[type='number'], html:not(.novf).wf-inactive
+    input[type='search'], html:not(.novf).wf-inactive
+    input[type='date'], html:not(.novf).wf-inactive
+    input[type='datetime'], html:not(.novf).wf-inactive
+    input[type='datetime-local'], html:not(.novf).wf-inactive
+    input[type='month'], html:not(.novf).wf-inactive
+    input[type='tel'], html:not(.novf).wf-inactive
+    input[type='week'] {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: normal; } }
   input[type='text']:hover,
   input[type='url']:hover,
   input[type='email']:hover,
@@ -1420,30 +1466,48 @@ input[type='week'] {
 
 input[type='password'] {
   border-radius: 0.15em;
-  font-family: var(--font-sans-fallback);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: normal;
   padding: 0.5em 0.5em 0.45em; }
   label + input[type='password'] {
     margin-top: 0.1em; }
 
 textarea {
   border-radius: 0.15em;
-  font-family: var(--font-sans-vf);
+  font-family: "Work Sans", var(--font-sans-fallback);
   font-size: 1rem;
   font-weight: 400;
   padding: 0.5em 0.5em 0.45em;
   width: 100%; }
+  .wf-inactive textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal; }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf) textarea {
+      font-family: var(--font-sans-vf); }
+    html:not(.novf).wf-inactive textarea {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: normal; } }
   label + textarea {
     margin-top: 0.1em; }
 
 select {
   border-radius: 0.15em;
-  font-family: var(--font-sans-vf);
+  font-family: "Work Sans", var(--font-sans-fallback);
   font-size: 1rem;
   font-weight: 400;
   padding: 0.5em 0.5em 0.45em;
   width: 100%; }
+  .wf-inactive select {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal; }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf) select {
+      font-family: var(--font-sans-vf); }
+    html:not(.novf).wf-inactive select {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: normal; } }
   label + select {
     margin-top: 0.1em; }
 
@@ -1572,7 +1636,6 @@ body {
       --fc__table__border__v: rgba(255, 255, 255, 0.15); } }
 
 table {
-  font-family: var(--font-sans-vf);
   background-color: transparent;
   border-spacing: 0;
   margin-bottom: 1.5rem;
@@ -1598,23 +1661,25 @@ table {
   table td {
     padding: 0.5rem 0.75rem; }
   table th {
-    font-weight: 550; }
+    --p-font-wght: 550; }
     table th + th {
       border-left: 0.0625rem solid var(--fc__table__border__v); }
   table td {
-    border-bottom: 0.0625rem solid var(--fc__table__border__h);
-    font-weight: 400; }
+    border-bottom: 0.0625rem solid var(--fc__table__border__h); }
     table td + td {
       border-left: 0.0625rem solid var(--fc__table__border__v); }
 
 .google-visualization-table-table {
-  font-family: var(--font-sans-vf) !important;
+  font-family: "Work Sans", var(--font-sans-fallback) !important;
   font-size: inherit !important;
   cursor: default;
   margin: inherit !important;
   background: inherit !important;
   border-spacing: 0;
   border-collapse: inherit !important; }
+  @supports (font-variation-settings: normal) {
+    .google-visualization-table-table {
+      font-family: var(--font-sans-vf) !important; } }
 
 .google-visualization-table .gradient {
   background-image: inherit !important; }
@@ -1675,12 +1740,18 @@ table {
 
 .google-visualization-table-div-page {
   background-color: inherit !important;
-  font-family: var(--font-sans-vf) !important; }
+  font-family: "Work Sans", var(--font-sans-fallback) !important; }
+  @supports (font-variation-settings: normal) {
+    .google-visualization-table-div-page {
+      font-family: var(--font-sans-vf) !important; } }
 
 .google-visualization-table-div-page [role="button"] {
-  font-family: var(--font-sans-vf) !important;
+  font-family: "Work Sans", var(--font-sans-fallback) !important;
   font-size: inherit !important;
   line-height: inherit !important; }
+  @supports (font-variation-settings: normal) {
+    .google-visualization-table-div-page [role="button"] {
+      font-family: var(--font-sans-vf) !important; } }
 
 .qh-layout-section {
   display: grid;
@@ -1974,48 +2045,68 @@ table {
     color: var(--fc__official__link--active); }
   .qh__global-header p, .qh__global-header address, .qh__global-header time, .qh__global-header ul,
   .qh__global-header ol,
-  .qh__global-header dl, .qh__global-header button,
+  .qh__global-header dl, .qh__global-header .form__actions a, .form__actions .qh__global-header a, .qh__global-header button,
   .qh__global-header .qh__btn,
-  .qh__global-header .button {
+  .qh__global-header .button, .qh__global-header table th, table .qh__global-header th, .qh__global-header table td, table .qh__global-header td, .qh__global-header .qh__accordion__button, .qh__global-header .qh__file-list__item__label {
     font-size: 0.875rem;
     font-weight: 375; }
-    .qh__global-header p + p, .qh__global-header address + p, .qh__global-header time + p, .qh__global-header ul + p, .qh__global-header ol + p, .qh__global-header dl + p, .qh__global-header button + p, .qh__global-header .qh__btn + p, .qh__global-header .button + p, .qh__global-header p + address, .qh__global-header address + address, .qh__global-header time + address, .qh__global-header ul + address, .qh__global-header ol + address, .qh__global-header dl + address, .qh__global-header button + address, .qh__global-header .qh__btn + address, .qh__global-header .button + address, .qh__global-header p + time, .qh__global-header address + time, .qh__global-header time + time, .qh__global-header ul + time, .qh__global-header ol + time, .qh__global-header dl + time, .qh__global-header button + time, .qh__global-header .qh__btn + time, .qh__global-header .button + time, .qh__global-header p + ul, .qh__global-header address + ul, .qh__global-header time + ul, .qh__global-header ul + ul, .qh__global-header ol + ul, .qh__global-header dl + ul, .qh__global-header button + ul, .qh__global-header .qh__btn + ul, .qh__global-header .button + ul,
+    .qh__global-header p + p, .qh__global-header address + p, .qh__global-header time + p, .qh__global-header ul + p, .qh__global-header ol + p, .qh__global-header dl + p, .qh__global-header .form__actions a + p, .form__actions .qh__global-header a + p, .qh__global-header button + p, .qh__global-header .qh__btn + p, .qh__global-header .button + p, .qh__global-header table th + p, table .qh__global-header th + p, .qh__global-header table td + p, table .qh__global-header td + p, .qh__global-header .qh__accordion__button + p, .qh__global-header .qh__file-list__item__label + p, .qh__global-header p + address, .qh__global-header address + address, .qh__global-header time + address, .qh__global-header ul + address, .qh__global-header ol + address, .qh__global-header dl + address, .qh__global-header .form__actions a + address, .form__actions .qh__global-header a + address, .qh__global-header button + address, .qh__global-header .qh__btn + address, .qh__global-header .button + address, .qh__global-header table th + address, table .qh__global-header th + address, .qh__global-header table td + address, table .qh__global-header td + address, .qh__global-header .qh__accordion__button + address, .qh__global-header .qh__file-list__item__label + address, .qh__global-header p + time, .qh__global-header address + time, .qh__global-header time + time, .qh__global-header ul + time, .qh__global-header ol + time, .qh__global-header dl + time, .qh__global-header .form__actions a + time, .form__actions .qh__global-header a + time, .qh__global-header button + time, .qh__global-header .qh__btn + time, .qh__global-header .button + time, .qh__global-header table th + time, table .qh__global-header th + time, .qh__global-header table td + time, table .qh__global-header td + time, .qh__global-header .qh__accordion__button + time, .qh__global-header .qh__file-list__item__label + time, .qh__global-header p + ul, .qh__global-header address + ul, .qh__global-header time + ul, .qh__global-header ul + ul, .qh__global-header ol + ul, .qh__global-header dl + ul, .qh__global-header .form__actions a + ul, .form__actions .qh__global-header a + ul, .qh__global-header button + ul, .qh__global-header .qh__btn + ul, .qh__global-header .button + ul, .qh__global-header table th + ul, table .qh__global-header th + ul, .qh__global-header table td + ul, table .qh__global-header td + ul, .qh__global-header .qh__accordion__button + ul, .qh__global-header .qh__file-list__item__label + ul,
     .qh__global-header p + ol,
     .qh__global-header address + ol,
     .qh__global-header time + ol,
     .qh__global-header ul + ol,
     .qh__global-header ol + ol,
     .qh__global-header dl + ol,
+    .qh__global-header .form__actions a + ol, .form__actions .qh__global-header a + ol,
     .qh__global-header button + ol,
     .qh__global-header .qh__btn + ol,
     .qh__global-header .button + ol,
+    .qh__global-header table th + ol, table .qh__global-header th + ol,
+    .qh__global-header table td + ol, table .qh__global-header td + ol,
+    .qh__global-header .qh__accordion__button + ol,
+    .qh__global-header .qh__file-list__item__label + ol,
     .qh__global-header p + dl,
     .qh__global-header address + dl,
     .qh__global-header time + dl,
     .qh__global-header ul + dl,
     .qh__global-header ol + dl,
     .qh__global-header dl + dl,
+    .qh__global-header .form__actions a + dl, .form__actions .qh__global-header a + dl,
     .qh__global-header button + dl,
     .qh__global-header .qh__btn + dl,
-    .qh__global-header .button + dl, .qh__global-header p + button, .qh__global-header address + button, .qh__global-header time + button, .qh__global-header ul + button, .qh__global-header ol + button, .qh__global-header dl + button, .qh__global-header button + button, .qh__global-header .qh__btn + button, .qh__global-header .button + button,
+    .qh__global-header .button + dl,
+    .qh__global-header table th + dl, table .qh__global-header th + dl,
+    .qh__global-header table td + dl, table .qh__global-header td + dl,
+    .qh__global-header .qh__accordion__button + dl,
+    .qh__global-header .qh__file-list__item__label + dl, .qh__global-header .form__actions p + a, .form__actions .qh__global-header p + a, .qh__global-header .form__actions address + a, .form__actions .qh__global-header address + a, .qh__global-header .form__actions time + a, .form__actions .qh__global-header time + a, .qh__global-header .form__actions ul + a, .form__actions .qh__global-header ul + a, .qh__global-header .form__actions ol + a, .form__actions .qh__global-header ol + a, .qh__global-header .form__actions dl + a, .form__actions .qh__global-header dl + a, .qh__global-header .form__actions a + a, .form__actions .qh__global-header a + a, .qh__global-header .form__actions button + a, .form__actions .qh__global-header button + a, .qh__global-header .form__actions .qh__btn + a, .form__actions .qh__global-header .qh__btn + a, .qh__global-header .form__actions .button + a, .form__actions .qh__global-header .button + a, .qh__global-header table .form__actions th + a, .form__actions .qh__global-header table th + a, table .qh__global-header .form__actions th + a, .form__actions table .qh__global-header th + a, .qh__global-header table .form__actions td + a, .form__actions .qh__global-header table td + a, table .qh__global-header .form__actions td + a, .form__actions table .qh__global-header td + a, .qh__global-header .form__actions .qh__accordion__button + a, .form__actions .qh__global-header .qh__accordion__button + a, .qh__global-header .form__actions .qh__file-list__item__label + a, .form__actions .qh__global-header .qh__file-list__item__label + a, .qh__global-header p + button, .qh__global-header address + button, .qh__global-header time + button, .qh__global-header ul + button, .qh__global-header ol + button, .qh__global-header dl + button, .qh__global-header .form__actions a + button, .form__actions .qh__global-header a + button, .qh__global-header button + button, .qh__global-header .qh__btn + button, .qh__global-header .button + button, .qh__global-header table th + button, table .qh__global-header th + button, .qh__global-header table td + button, table .qh__global-header td + button, .qh__global-header .qh__accordion__button + button, .qh__global-header .qh__file-list__item__label + button,
     .qh__global-header p + .qh__btn,
     .qh__global-header address + .qh__btn,
     .qh__global-header time + .qh__btn,
     .qh__global-header ul + .qh__btn,
     .qh__global-header ol + .qh__btn,
     .qh__global-header dl + .qh__btn,
+    .qh__global-header .form__actions a + .qh__btn, .form__actions .qh__global-header a + .qh__btn,
     .qh__global-header button + .qh__btn,
     .qh__global-header .qh__btn + .qh__btn,
     .qh__global-header .button + .qh__btn,
+    .qh__global-header table th + .qh__btn, table .qh__global-header th + .qh__btn,
+    .qh__global-header table td + .qh__btn, table .qh__global-header td + .qh__btn,
+    .qh__global-header .qh__accordion__button + .qh__btn,
+    .qh__global-header .qh__file-list__item__label + .qh__btn,
     .qh__global-header p + .button,
     .qh__global-header address + .button,
     .qh__global-header time + .button,
     .qh__global-header ul + .button,
     .qh__global-header ol + .button,
     .qh__global-header dl + .button,
+    .qh__global-header .form__actions a + .button, .form__actions .qh__global-header a + .button,
     .qh__global-header button + .button,
     .qh__global-header .qh__btn + .button,
-    .qh__global-header .button + .button {
+    .qh__global-header .button + .button,
+    .qh__global-header table th + .button, table .qh__global-header th + .button,
+    .qh__global-header table td + .button, table .qh__global-header td + .button,
+    .qh__global-header .qh__accordion__button + .button,
+    .qh__global-header .qh__file-list__item__label + .button, .qh__global-header table p + th, table .qh__global-header p + th, .qh__global-header table address + th, table .qh__global-header address + th, .qh__global-header table time + th, table .qh__global-header time + th, .qh__global-header table ul + th, table .qh__global-header ul + th, .qh__global-header table ol + th, table .qh__global-header ol + th, .qh__global-header table dl + th, table .qh__global-header dl + th, .qh__global-header .form__actions table a + th, table .qh__global-header .form__actions a + th, .form__actions .qh__global-header table a + th, table .form__actions .qh__global-header a + th, .qh__global-header table button + th, table .qh__global-header button + th, .qh__global-header table .qh__btn + th, table .qh__global-header .qh__btn + th, .qh__global-header table .button + th, table .qh__global-header .button + th, .qh__global-header table th + th, table .qh__global-header th + th, .qh__global-header table td + th, table .qh__global-header td + th, .qh__global-header table .qh__accordion__button + th, table .qh__global-header .qh__accordion__button + th, .qh__global-header table .qh__file-list__item__label + th, table .qh__global-header .qh__file-list__item__label + th, .qh__global-header table p + td, table .qh__global-header p + td, .qh__global-header table address + td, table .qh__global-header address + td, .qh__global-header table time + td, table .qh__global-header time + td, .qh__global-header table ul + td, table .qh__global-header ul + td, .qh__global-header table ol + td, table .qh__global-header ol + td, .qh__global-header table dl + td, table .qh__global-header dl + td, .qh__global-header .form__actions table a + td, table .qh__global-header .form__actions a + td, .form__actions .qh__global-header table a + td, table .form__actions .qh__global-header a + td, .qh__global-header table button + td, table .qh__global-header button + td, .qh__global-header table .qh__btn + td, table .qh__global-header .qh__btn + td, .qh__global-header table .button + td, table .qh__global-header .button + td, .qh__global-header table th + td, table .qh__global-header th + td, .qh__global-header table td + td, table .qh__global-header td + td, .qh__global-header table .qh__accordion__button + td, table .qh__global-header .qh__accordion__button + td, .qh__global-header table .qh__file-list__item__label + td, table .qh__global-header .qh__file-list__item__label + td, .qh__global-header p + .qh__accordion__button, .qh__global-header address + .qh__accordion__button, .qh__global-header time + .qh__accordion__button, .qh__global-header ul + .qh__accordion__button, .qh__global-header ol + .qh__accordion__button, .qh__global-header dl + .qh__accordion__button, .qh__global-header .form__actions a + .qh__accordion__button, .form__actions .qh__global-header a + .qh__accordion__button, .qh__global-header button + .qh__accordion__button, .qh__global-header .qh__btn + .qh__accordion__button, .qh__global-header .button + .qh__accordion__button, .qh__global-header table th + .qh__accordion__button, table .qh__global-header th + .qh__accordion__button, .qh__global-header table td + .qh__accordion__button, table .qh__global-header td + .qh__accordion__button, .qh__global-header .qh__accordion__button + .qh__accordion__button, .qh__global-header .qh__file-list__item__label + .qh__accordion__button, .qh__global-header p + .qh__file-list__item__label, .qh__global-header address + .qh__file-list__item__label, .qh__global-header time + .qh__file-list__item__label, .qh__global-header ul + .qh__file-list__item__label, .qh__global-header ol + .qh__file-list__item__label, .qh__global-header dl + .qh__file-list__item__label, .qh__global-header .form__actions a + .qh__file-list__item__label, .form__actions .qh__global-header a + .qh__file-list__item__label, .qh__global-header button + .qh__file-list__item__label, .qh__global-header .qh__btn + .qh__file-list__item__label, .qh__global-header .button + .qh__file-list__item__label, .qh__global-header table th + .qh__file-list__item__label, table .qh__global-header th + .qh__file-list__item__label, .qh__global-header table td + .qh__file-list__item__label, table .qh__global-header td + .qh__file-list__item__label, .qh__global-header .qh__accordion__button + .qh__file-list__item__label, .qh__global-header .qh__file-list__item__label + .qh__file-list__item__label {
       margin-top: 0; }
 
 .dialog-off-canvas-main-canvas {
@@ -2489,9 +2580,9 @@ table {
       color: var(--fc__footer__fg); }
   .qh__site-footer p, .qh__site-footer address, .qh__site-footer time, .qh__site-footer ul,
   .qh__site-footer ol,
-  .qh__site-footer dl, .qh__site-footer button,
+  .qh__site-footer dl, .qh__site-footer .form__actions a, .form__actions .qh__site-footer a, .qh__site-footer button,
   .qh__site-footer .qh__btn,
-  .qh__site-footer .button {
+  .qh__site-footer .button, .qh__site-footer table th, table .qh__site-footer th, .qh__site-footer table td, table .qh__site-footer td, .qh__site-footer .qh__accordion__button, .qh__site-footer .qh__file-list__item__label {
     font-size: 1rem;
     margin-top: 0; }
   .qh__site-footer__content-left {
@@ -2536,9 +2627,9 @@ table {
               justify-content: flex-start; }
       .qh__site-footer__copyright__content p, .qh__site-footer__copyright__content address, .qh__site-footer__copyright__content time, .qh__site-footer__copyright__content ul,
       .qh__site-footer__copyright__content ol,
-      .qh__site-footer__copyright__content dl, .qh__site-footer__copyright__content button,
+      .qh__site-footer__copyright__content dl, .qh__site-footer__copyright__content .form__actions a, .form__actions .qh__site-footer__copyright__content a, .qh__site-footer__copyright__content button,
       .qh__site-footer__copyright__content .qh__btn,
-      .qh__site-footer__copyright__content .button {
+      .qh__site-footer__copyright__content .button, .qh__site-footer__copyright__content table th, table .qh__site-footer__copyright__content th, .qh__site-footer__copyright__content table td, table .qh__site-footer__copyright__content td, .qh__site-footer__copyright__content .qh__accordion__button, .qh__site-footer__copyright__content .qh__file-list__item__label {
         font-size: 87.5%;
         max-width: unset; }
     .qh__site-footer__copyright svg:first-of-type {
@@ -2646,8 +2737,7 @@ table {
             box-shadow: none;
     color: var(--fc__default__fg);
     display: block;
-    font-family: "Work Sans VF", var(--font-sans-fallback);
-    font-size: 1.25rem;
+    --p-font-wght: 450;
     outline: none;
     padding: 1rem 1.5rem;
     text-align: left;
@@ -2865,9 +2955,9 @@ table {
     padding: 1.5rem 1rem; }
     .qh__icon-card__content p, .qh__icon-card__content address, .qh__icon-card__content time, .qh__icon-card__content ul,
     .qh__icon-card__content ol,
-    .qh__icon-card__content dl, .qh__icon-card__content button,
+    .qh__icon-card__content dl, .qh__icon-card__content .form__actions a, .form__actions .qh__icon-card__content a, .qh__icon-card__content button,
     .qh__icon-card__content .qh__btn,
-    .qh__icon-card__content .button,
+    .qh__icon-card__content .button, .qh__icon-card__content table th, table .qh__icon-card__content th, .qh__icon-card__content table td, table .qh__icon-card__content td, .qh__icon-card__content .qh__accordion__button, .qh__icon-card__content .qh__file-list__item__label,
     .qh__icon-card__content ul {
       font-size: 1rem; }
   .qh__icon-card h3.qh__icon-card__title {
@@ -2926,15 +3016,12 @@ table {
   padding: 1.5rem 0; }
 
 .qh__file-list__item__label {
-  display: block;
-  font-family: var(--font-sans-vf);
-  font-weight: 525; }
+  --p-font-wght: 525;
+  display: block; }
 
 .qh__file-list__item__filesize {
   color: var(--fc__default__fg);
-  display: block;
-  font-family: var(--font-sans-vf);
-  font-size: 87.5%; }
+  display: block; }
 
 .qh__file-list__item__download {
   margin-left: auto;

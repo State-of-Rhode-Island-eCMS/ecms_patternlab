@@ -37,9 +37,22 @@ fieldset {
   padding: 1rem 0 1rem 1rem;
   > legend {
       display: block;
-      font-family: var(--font-sans-vf);
+      font-family: $font-sans-static;
       font-size: 1rem;
       font-weight: 575;
+      .wf-inactive & {
+        font-family: $font-sans-fallback;
+        font-weight: bold;
+      }
+      @supports (font-variation-settings: normal) {
+        html:not(.novf) & {
+          font-family: var(--font-sans-vf);
+        }
+        html:not(.novf).wf-inactive & {
+          font-family: $font-sans-fallback;
+          font-weight: bold;
+        }
+      }
       text-transform: uppercase;
   }
   + fieldset {
@@ -56,9 +69,8 @@ fieldset {
 
 .form__actions {
   a {
-    font-family: var(--font-sans-vf);
-    font-size: 1rem;
-    font-weight: 400;
+    --p-font-wght: 400;
+    @extend p;
   }
 }
 
@@ -73,9 +85,22 @@ input[type='datetime-local'],
 input[type='month'],
 input[type='tel'],
 input[type='week'] {
-  font-family: var(--font-sans-vf);
+  font-family: $font-sans-static;
   font-size: 1rem;
   font-weight: 500;
+  .wf-inactive & {
+    font-family: $font-sans-fallback;
+    font-weight: normal;
+  }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf) & {
+      font-family: var(--font-sans-vf);
+    }
+    html:not(.novf).wf-inactive & {
+      font-family: $font-sans-fallback;
+      font-weight: normal;
+    }
+  }
   width: 100%;
 
 
@@ -107,9 +132,9 @@ input[type='week'] {
 input[type='password'] {
   border-radius: 0.15em;
   //border: solid 1px $color-quahog-tint1;
-  font-family: var(--font-sans-fallback);
+  font-family: $font-sans-fallback;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: normal;
   padding: 0.5em 0.5em 0.45em;
 
   label + & {
@@ -120,9 +145,23 @@ input[type='password'] {
 textarea {
   border-radius: 0.15em;
   //border: solid 1px $color-quahog-tint1;
-  font-family: var(--font-sans-vf);
+  font-family: $font-sans-static;
   font-size: 1rem;
   font-weight: 400;
+  .wf-inactive & {
+    font-family: $font-sans-fallback;
+    font-weight: normal;
+  }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf) & {
+      font-family: var(--font-sans-vf);
+    }
+    html:not(.novf).wf-inactive & {
+      font-family: $font-sans-fallback;
+      font-weight: normal;
+    }
+  }
+
   padding: 0.5em 0.5em 0.45em;
   width: 100%;
 
@@ -134,9 +173,22 @@ textarea {
 select {
   border-radius: 0.15em;
   //border: solid 1px $color-quahog-tint1;
-  font-family: var(--font-sans-vf);
+  font-family: $font-sans-static;
   font-size: 1rem;
   font-weight: 400;
+  .wf-inactive & {
+    font-family: $font-sans-fallback;
+    font-weight: normal;
+  }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf) & {
+      font-family: var(--font-sans-vf);
+    }
+    html:not(.novf).wf-inactive & {
+      font-family: $font-sans-fallback;
+      font-weight: normal;
+    }
+  }
   padding: 0.5em 0.5em 0.45em;
   width: 100%;
 

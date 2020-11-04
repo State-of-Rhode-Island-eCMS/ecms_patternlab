@@ -50,17 +50,16 @@
 
     // span
     &__label {
+      --p-font-wght: 525;
+      @extend p;
       display: block;
-      font-family: var(--font-sans-vf);
-      font-weight: 525;
     }
 
     // span
     &__filesize {
       color: var(--fc__default__fg);
+      @extend .small-text;
       display: block;
-      font-family: var(--font-sans-vf);
-      font-size: 87.5%;
     }
 
     &__download {
