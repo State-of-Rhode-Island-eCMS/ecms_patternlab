@@ -1528,7 +1528,8 @@ select {
   .qh__form__nowrap > input {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 calc(100% - 12rem);
-            flex: 1 0 calc(100% - 12rem); }
+            flex: 1 0 calc(100% - 12rem);
+    margin-right: 0.5rem; }
 
 button,
 .qh__btn,
@@ -1925,9 +1926,9 @@ table {
 .qh__social-links a.qh__social-links__link {
   display: block; }
   .qh__social-links a.qh__social-links__link, .qh__social-links a.qh__social-links__link:visited {
-    color: var(--fc__default__link); }
+    color: var(--fc__header__social__link); }
   .qh__social-links a.qh__social-links__link:hover, .qh__social-links a.qh__social-links__link:focus {
-    color: var(--fc__default__link--hover); }
+    color: var(--fc__header__social__link--hover); }
   .qh__social-links a.qh__social-links__link:focus {
     outline: 0.125rem solid var(--fc__default__link--focus);
     outline-offset: -0.125rem; }
