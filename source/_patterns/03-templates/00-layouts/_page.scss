@@ -8,10 +8,17 @@ $sidebar-row-gap: rem(36);
     @include qh-content-maxwidth();
     display: grid;
     grid-template-areas:
-    'sidebar-top content'
-    'sidebar-middle content'
-    'sidebar-bottom content';
-    grid-template-columns: minmax($sidebar-min, max-content) minmax(0, 1fr);
+      'sidebar-top'
+      'content'
+      'sidebar-middle'
+      'sidebar-bottom';
+    @media screen and (min-width: $bp--medium) {
+      grid-template-areas:
+        'sidebar-top content'
+        'sidebar-middle content'
+        'sidebar-bottom content';
+      grid-template-columns: minmax($sidebar-min, max-content) minmax(0, 1fr);
+    }
 
     margin-top: 5rem;
     margin-bottom: 5rem;
@@ -19,7 +26,7 @@ $sidebar-row-gap: rem(36);
 
   &__content {
     grid-area: content;
-    max-width: 100%;
+    max-width: var(--content-max-width);
   }
 
   &__sidebar-top {

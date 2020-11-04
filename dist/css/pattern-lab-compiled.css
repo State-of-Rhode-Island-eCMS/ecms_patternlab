@@ -3071,18 +3071,21 @@ table {
   margin: 0 auto;
   max-width: 93vw;
   display: grid;
-  grid-template-areas: 'sidebar-top content' 'sidebar-middle content' 'sidebar-bottom content';
-  grid-template-columns: minmax(12.5rem, -webkit-max-content) minmax(0, 1fr);
-  grid-template-columns: minmax(12.5rem, max-content) minmax(0, 1fr);
+  grid-template-areas: 'sidebar-top' 'content' 'sidebar-middle' 'sidebar-bottom';
   margin-top: 5rem;
   margin-bottom: 5rem; }
   @supports (width: 5px) {
     .qh-layout__grid {
       max-width: var(--content-max-width); } }
+  @media screen and (min-width: 47.5em) {
+    .qh-layout__grid {
+      grid-template-areas: 'sidebar-top content' 'sidebar-middle content' 'sidebar-bottom content';
+      grid-template-columns: minmax(12.5rem, -webkit-max-content) minmax(0, 1fr);
+      grid-template-columns: minmax(12.5rem, max-content) minmax(0, 1fr); } }
 
 .qh-layout__content {
   grid-area: content;
-  max-width: 100%; }
+  max-width: var(--content-max-width); }
 
 .qh-layout__sidebar-top {
   grid-area: sidebar-top;
