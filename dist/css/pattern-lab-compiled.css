@@ -32,8 +32,15 @@ body {
 
 /* Typography variables */
 /* Preprocessed for fallbacks */
+/* Default 'normal' weight for body text */
+body {
+  --default-body-wght: 350;
+  --p-font-wght: 350;
+  --st-font-wght: 350; }
+
 /* Set base text size for all calcs */
 /* Change px values here for all font sizing */
+/* small text */
 /* Font size REMs */
 /* Line-height (needs to be in EMs) */
 /* Custom props for modern browsers */
@@ -62,6 +69,9 @@ body {
   --bq-size-s: 1.25rem;
   --bq-size-m: 1.375rem;
   --bq-size-l: 1.5rem;
+  --st-size-s: 0.75rem;
+  --st-size-m: 0.8125rem;
+  --st-size-l: 0.875rem;
   --p-lh-s: 1.5em;
   --p-lh-m: 1.525em;
   --p-lh-l: 1.55em;
@@ -85,7 +95,10 @@ body {
   --h6-lh-l: 1.3em;
   --bq-lh-s: 1.5em;
   --bq-lh-m: 1.525em;
-  --bq-lh-l: 1.55em; }
+  --bq-lh-l: 1.55em;
+  --st-lh-s: 1.1em;
+  --st-lh-m: 1.2em;
+  --st-lh-l: 1.3em; }
 
 /* Scaling accessible typography setup */
 /* Set scaling values */
@@ -105,7 +118,9 @@ body {
   --h6-scaler-value: 1;
   --h6-lh-scaler-value: 4;
   --bq-scaler-value: 2;
-  --bq-lh-scaler-value: 2.5; }
+  --bq-lh-scaler-value: 2.5;
+  --st-scaler-value: 1;
+  --st-lh-scaler-value: 2; }
 
 * {
   /* default starting values for scaling formulas */
@@ -747,10 +762,14 @@ body {
   --body-text-spacer: clamp(1rem, 2vw, 1.25rem); }
 
 /* following element spacing selector, just inside node content */
-.node * + * {
+.node > * + * {
   margin-top: var(--body-text-spacer); }
 
-p, address, time {
+p, address, time, ul,
+ol,
+dl, button,
+.qh__btn,
+.button {
   font-family: "Work Sans", var(--font-sans-fallback);
   font-weight: normal;
   font-size: 1rem;
@@ -761,28 +780,52 @@ p, address, time {
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
           hyphens: auto; }
-  .wf-inactive p, .wf-inactive address, .wf-inactive time {
+  .wf-inactive p, .wf-inactive address, .wf-inactive time, .wf-inactive ul,
+  .wf-inactive ol,
+  .wf-inactive dl, .wf-inactive button,
+  .wf-inactive .qh__btn,
+  .wf-inactive .button {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: normal;
     letter-spacing: 0.04em; }
   @supports (font-variation-settings: normal) {
-    html:not(.novf) p, html:not(.novf) address, html:not(.novf) time {
+    html:not(.novf) p, html:not(.novf) address, html:not(.novf) time, html:not(.novf) ul,
+    html:not(.novf) ol,
+    html:not(.novf) dl, html:not(.novf) button,
+    html:not(.novf) .qh__btn,
+    html:not(.novf) .button {
       font-family: var(--font-sans-vf);
-      font-weight: 350; }
-    html:not(.novf).wf-inactive p, html:not(.novf).wf-inactive address, html:not(.novf).wf-inactive time {
+      font-weight: var(--p-font-wght); }
+    html:not(.novf).wf-inactive p, html:not(.novf).wf-inactive address, html:not(.novf).wf-inactive time, html:not(.novf).wf-inactive ul,
+    html:not(.novf).wf-inactive ol,
+    html:not(.novf).wf-inactive dl, html:not(.novf).wf-inactive button,
+    html:not(.novf).wf-inactive .qh__btn,
+    html:not(.novf).wf-inactive .button {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: normal;
       letter-spacing: 0.035em; } }
   @media screen and (min-width: 47.5em) {
-    p, address, time {
+    p, address, time, ul,
+    ol,
+    dl, button,
+    .qh__btn,
+    .button {
       font-size: 1.125rem;
       line-height: 1.525em; } }
   @media screen and (min-width: 62em) {
-    p, address, time {
+    p, address, time, ul,
+    ol,
+    dl, button,
+    .qh__btn,
+    .button {
       font-size: 1.25rem;
       line-height: 1.55em; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-    p, address, time {
+    p, address, time, ul,
+    ol,
+    dl, button,
+    .qh__btn,
+    .button {
       --font-size-min: 1rem;
       --font-size-max: 1.25rem;
       --font-size-scaler-value: var(--p-scaler-value);
@@ -792,7 +835,11 @@ p, address, time {
       --font-lh-scaler-value: var(--p-lh-scaler-value);
       line-height: var(--line-height); } }
   @media screen and (min-width: 47.5em) {
-    p, address, time {
+    p, address, time, ul,
+    ol,
+    dl, button,
+    .qh__btn,
+    .button {
       -webkit-hyphens: none;
           -ms-hyphens: none;
               hyphens: none; } }
@@ -1064,7 +1111,11 @@ b {
 blockquote {
   margin: 0;
   max-width: var(--content-width); }
-  blockquote p, blockquote address, blockquote time {
+  blockquote p, blockquote address, blockquote time, blockquote ul,
+  blockquote ol,
+  blockquote dl, blockquote button,
+  blockquote .qh__btn,
+  blockquote .button {
     font-family: "Roboto Slab", var(--font-serif-fallback);
     font-weight: normal;
     font-size: 1.25rem;
@@ -1072,30 +1123,54 @@ blockquote {
     margin-left: auto;
     margin-right: auto;
     margin-top: 0.75rem; }
-    .wf-inactive blockquote p, .wf-inactive blockquote address, .wf-inactive blockquote time {
+    .wf-inactive blockquote p, .wf-inactive blockquote address, .wf-inactive blockquote time, .wf-inactive blockquote ul,
+    .wf-inactive blockquote ol,
+    .wf-inactive blockquote dl, .wf-inactive blockquote button,
+    .wf-inactive blockquote .qh__btn,
+    .wf-inactive blockquote .button {
       font-family: Georgia, "Times New Roman", serif;
       font-variant-numeric: lining-nums;
       font-weight: normal;
       letter-spacing: 0.035em; }
     @supports (font-variation-settings: normal) {
-      html:not(.novf) blockquote p, html:not(.novf) blockquote address, html:not(.novf) blockquote time {
+      html:not(.novf) blockquote p, html:not(.novf) blockquote address, html:not(.novf) blockquote time, html:not(.novf) blockquote ul,
+      html:not(.novf) blockquote ol,
+      html:not(.novf) blockquote dl, html:not(.novf) blockquote button,
+      html:not(.novf) blockquote .qh__btn,
+      html:not(.novf) blockquote .button {
         font-family: var(--font-serif-vf);
         font-weight: 150; }
-      html:not(.novf).wf-inactive blockquote p, html:not(.novf).wf-inactive blockquote address, html:not(.novf).wf-inactive blockquote time {
+      html:not(.novf).wf-inactive blockquote p, html:not(.novf).wf-inactive blockquote address, html:not(.novf).wf-inactive blockquote time, html:not(.novf).wf-inactive blockquote ul,
+      html:not(.novf).wf-inactive blockquote ol,
+      html:not(.novf).wf-inactive blockquote dl, html:not(.novf).wf-inactive blockquote button,
+      html:not(.novf).wf-inactive blockquote .qh__btn,
+      html:not(.novf).wf-inactive blockquote .button {
         font-family: Georgia, "Times New Roman", serif;
         font-variant-numeric: lining-nums;
         font-weight: normal;
         letter-spacing: 0.035em; } }
     @media screen and (min-width: 47.5em) {
-      blockquote p, blockquote address, blockquote time {
+      blockquote p, blockquote address, blockquote time, blockquote ul,
+      blockquote ol,
+      blockquote dl, blockquote button,
+      blockquote .qh__btn,
+      blockquote .button {
         font-size: 1.375rem;
         line-height: 1.525em; } }
     @media screen and (min-width: 62em) {
-      blockquote p, blockquote address, blockquote time {
+      blockquote p, blockquote address, blockquote time, blockquote ul,
+      blockquote ol,
+      blockquote dl, blockquote button,
+      blockquote .qh__btn,
+      blockquote .button {
         font-size: 1.5rem;
         line-height: 1.55em; } }
     @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-      blockquote p, blockquote address, blockquote time {
+      blockquote p, blockquote address, blockquote time, blockquote ul,
+      blockquote ol,
+      blockquote dl, blockquote button,
+      blockquote .qh__btn,
+      blockquote .button {
         --font-size-min: 1.25rem;
         --font-size-max: 1.5rem;
         --font-size-scaler-value: var(--bq-scaler-value);
@@ -1105,51 +1180,80 @@ blockquote {
         --font-lh-scaler-value: var(--bq-lh-scaler-value);
         line-height: var(--line-height); } }
 
-label {
+/* using this for any small bits of text that should be 'next size down' from paragraphs */
+body {
+  --st-font-wght: var(--default-body-wght); }
+
+.small-text, label, figcaption {
   font-family: "Work Sans", var(--font-sans-fallback);
-  font-weight: normal;
+  font-size: 0.75rem;
+  line-height: 1.1em;
+  font-style: normal; }
+  .wf-inactive .small-text, .wf-inactive label, .wf-inactive figcaption {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-variant-numeric: lining-nums;
+    font-weight: normal;
+    letter-spacing: 0.035em; }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf) .small-text, html:not(.novf) label, html:not(.novf) figcaption {
+      font-family: var(--font-sans-vf);
+      font-weight: var(--st-font-wght); }
+    html:not(.novf).wf-inactive .small-text, html:not(.novf).wf-inactive label, html:not(.novf).wf-inactive figcaption {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-variant-numeric: lining-nums;
+      font-weight: normal;
+      letter-spacing: 0.035em; } }
+  @media screen and (min-width: 47.5em) {
+    .small-text, label, figcaption {
+      font-size: 0.8125rem;
+      line-height: 1.2em; } }
+  @media screen and (min-width: 62em) {
+    .small-text, label, figcaption {
+      font-size: 0.875rem;
+      line-height: 1.3em; } }
+  @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    .small-text, label, figcaption {
+      --font-size-min: 0.75rem;
+      --font-size-max: 0.875rem;
+      --font-size-scaler-value: var(--st-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min: 1.1em;
+      --font-lh-max: 1.3em;
+      --font-lh-scaler-value: var(--st-lh-scaler-value);
+      line-height: var(--line-height); } }
+
+label {
+  --st-font-wght: 475;
   display: block;
   font-size: 0.875rem; }
-  @supports (font-variation-settings: normal) {
-    label {
-      font-family: var(--font-sans-vf);
-      font-weight: 475; } }
 
 ul,
 ol,
 dl {
-  font-family: var(--font-sans-vf);
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  font-weight: 350;
-  font-style: normal;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  line-height: clamp(1.25em, 2vw, 1.4em);
-  margin: 0;
-  max-width: 40em;
   padding: 0; }
-  @media screen and (min-width: 47.5em) {
-    ul,
-    ol,
-    dl {
-      -webkit-hyphens: none;
-          -ms-hyphens: none;
-              hyphens: none; } }
-  p + ul, address + ul, time + ul,
-  ul + ul,
-  ul + p,
-  ul + address,
-  ul + time, p + ol, address + ol, time + ol,
-  ol + ul,
-  ol + p,
-  ol + address,
-  ol + time, p + dl, address + dl, time + dl,
-  dl + ul,
-  dl + p,
-  dl + address,
-  dl + time {
-    margin-top: var(--body-text-spacer); }
+  ul li,
+  ul dd,
+  ol li,
+  ol dd,
+  dl li,
+  dl dd {
+    margin-top: 0;
+    margin-left: 1em; }
+    ul li::marker,
+    ul dd::marker,
+    ol li::marker,
+    ol dd::marker,
+    dl li::marker,
+    dl dd::marker {
+      color: var(--fc__default__text__accent);
+      font-size: 0.875em; }
+    ul li + li,
+    ul dd + li,
+    ol li + li,
+    ol dd + li,
+    dl li + li,
+    dl dd + li {
+      margin-top: calc(var(--body-text-spacer) * 0.5); }
   ul ul,
   ul ol,
   ul dl,
@@ -1160,17 +1264,6 @@ dl {
   dl ol,
   dl dl {
     margin: 0; }
-
-li,
-dd {
-  margin-left: 1em; }
-  li::marker,
-  dd::marker {
-    color: var(--fc__default__text__accent);
-    font-size: 0.875em; }
-  li + li,
-  dd + li {
-    margin-top: calc(var(--body-text-spacer) * 0.5); }
 
 .qh-u__list-reset {
   list-style: none;
@@ -1183,12 +1276,8 @@ dd {
 figure {
   margin: 0;
   padding: 0; }
-  p + figure, address + figure, time + figure {
+  p + figure, address + figure, time + figure, ul + figure, ol + figure, dl + figure, button + figure, .qh__btn + figure, .button + figure {
     margin-top: var(--body-text-spacer); }
-
-figcaption {
-  font-family: var(--font-sans-vf);
-  font-size: clamp(0.75rem, 2vw, 0.925rem); }
 
 img {
   display: block;
@@ -1228,7 +1317,11 @@ form {
     min-width: 21rem; }
   .flexbox-container > legend {
     min-width: unset; }
-  .flexbox-container > p, .flexbox-container > address, .flexbox-container > time {
+  .flexbox-container > p, .flexbox-container > address, .flexbox-container > time, .flexbox-container > ul,
+  .flexbox-container > ol,
+  .flexbox-container > dl, .flexbox-container > button,
+  .flexbox-container > .qh__btn,
+  .flexbox-container > .button {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
     width: 100%; }
@@ -1376,14 +1469,11 @@ select {
 button,
 .qh__btn,
 .button {
+  --p-font-wght: 500;
   border: 0;
   border-radius: 0.1875em;
   display: inline-block;
-  font-family: var(--font-serif-vf);
-  font-size: 1rem;
-  font-weight: 500;
   letter-spacing: 0.03125em;
-  line-height: 1;
   overflow: hidden;
   padding: 1em 1.5em;
   -webkit-transition: all 250ms ease;
@@ -1882,10 +1972,50 @@ table {
     outline-color: var(--fc__official__link--focus); }
   .qh__global-header a:active {
     color: var(--fc__official__link--active); }
-  .qh__global-header p, .qh__global-header address, .qh__global-header time {
+  .qh__global-header p, .qh__global-header address, .qh__global-header time, .qh__global-header ul,
+  .qh__global-header ol,
+  .qh__global-header dl, .qh__global-header button,
+  .qh__global-header .qh__btn,
+  .qh__global-header .button {
     font-size: 0.875rem;
     font-weight: 375; }
-    .qh__global-header p + p, .qh__global-header address + p, .qh__global-header time + p, .qh__global-header p + address, .qh__global-header address + address, .qh__global-header time + address, .qh__global-header p + time, .qh__global-header address + time, .qh__global-header time + time {
+    .qh__global-header p + p, .qh__global-header address + p, .qh__global-header time + p, .qh__global-header ul + p, .qh__global-header ol + p, .qh__global-header dl + p, .qh__global-header button + p, .qh__global-header .qh__btn + p, .qh__global-header .button + p, .qh__global-header p + address, .qh__global-header address + address, .qh__global-header time + address, .qh__global-header ul + address, .qh__global-header ol + address, .qh__global-header dl + address, .qh__global-header button + address, .qh__global-header .qh__btn + address, .qh__global-header .button + address, .qh__global-header p + time, .qh__global-header address + time, .qh__global-header time + time, .qh__global-header ul + time, .qh__global-header ol + time, .qh__global-header dl + time, .qh__global-header button + time, .qh__global-header .qh__btn + time, .qh__global-header .button + time, .qh__global-header p + ul, .qh__global-header address + ul, .qh__global-header time + ul, .qh__global-header ul + ul, .qh__global-header ol + ul, .qh__global-header dl + ul, .qh__global-header button + ul, .qh__global-header .qh__btn + ul, .qh__global-header .button + ul,
+    .qh__global-header p + ol,
+    .qh__global-header address + ol,
+    .qh__global-header time + ol,
+    .qh__global-header ul + ol,
+    .qh__global-header ol + ol,
+    .qh__global-header dl + ol,
+    .qh__global-header button + ol,
+    .qh__global-header .qh__btn + ol,
+    .qh__global-header .button + ol,
+    .qh__global-header p + dl,
+    .qh__global-header address + dl,
+    .qh__global-header time + dl,
+    .qh__global-header ul + dl,
+    .qh__global-header ol + dl,
+    .qh__global-header dl + dl,
+    .qh__global-header button + dl,
+    .qh__global-header .qh__btn + dl,
+    .qh__global-header .button + dl, .qh__global-header p + button, .qh__global-header address + button, .qh__global-header time + button, .qh__global-header ul + button, .qh__global-header ol + button, .qh__global-header dl + button, .qh__global-header button + button, .qh__global-header .qh__btn + button, .qh__global-header .button + button,
+    .qh__global-header p + .qh__btn,
+    .qh__global-header address + .qh__btn,
+    .qh__global-header time + .qh__btn,
+    .qh__global-header ul + .qh__btn,
+    .qh__global-header ol + .qh__btn,
+    .qh__global-header dl + .qh__btn,
+    .qh__global-header button + .qh__btn,
+    .qh__global-header .qh__btn + .qh__btn,
+    .qh__global-header .button + .qh__btn,
+    .qh__global-header p + .button,
+    .qh__global-header address + .button,
+    .qh__global-header time + .button,
+    .qh__global-header ul + .button,
+    .qh__global-header ol + .button,
+    .qh__global-header dl + .button,
+    .qh__global-header button + .button,
+    .qh__global-header .qh__btn + .button,
+    .qh__global-header .button + .button {
       margin-top: 0; }
 
 .dialog-off-canvas-main-canvas {
@@ -2357,7 +2487,11 @@ table {
       color: var(--fc__footer__fg); }
     .qh__site-footer a:visited {
       color: var(--fc__footer__fg); }
-  .qh__site-footer p, .qh__site-footer address, .qh__site-footer time {
+  .qh__site-footer p, .qh__site-footer address, .qh__site-footer time, .qh__site-footer ul,
+  .qh__site-footer ol,
+  .qh__site-footer dl, .qh__site-footer button,
+  .qh__site-footer .qh__btn,
+  .qh__site-footer .button {
     font-size: 1rem;
     margin-top: 0; }
   .qh__site-footer__content-left {
@@ -2400,7 +2534,11 @@ table {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start; }
-      .qh__site-footer__copyright__content p, .qh__site-footer__copyright__content address, .qh__site-footer__copyright__content time {
+      .qh__site-footer__copyright__content p, .qh__site-footer__copyright__content address, .qh__site-footer__copyright__content time, .qh__site-footer__copyright__content ul,
+      .qh__site-footer__copyright__content ol,
+      .qh__site-footer__copyright__content dl, .qh__site-footer__copyright__content button,
+      .qh__site-footer__copyright__content .qh__btn,
+      .qh__site-footer__copyright__content .button {
         font-size: 87.5%;
         max-width: unset; }
     .qh__site-footer__copyright svg:first-of-type {
@@ -2725,7 +2863,11 @@ table {
   .qh__icon-card__content {
     color: var(--fc__attention-card__fg);
     padding: 1.5rem 1rem; }
-    .qh__icon-card__content p, .qh__icon-card__content address, .qh__icon-card__content time,
+    .qh__icon-card__content p, .qh__icon-card__content address, .qh__icon-card__content time, .qh__icon-card__content ul,
+    .qh__icon-card__content ol,
+    .qh__icon-card__content dl, .qh__icon-card__content button,
+    .qh__icon-card__content .qh__btn,
+    .qh__icon-card__content .button,
     .qh__icon-card__content ul {
       font-size: 1rem; }
   .qh__icon-card h3.qh__icon-card__title {

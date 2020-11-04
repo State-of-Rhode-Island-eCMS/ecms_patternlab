@@ -95,6 +95,14 @@ body {
 
 /* Preprocessed for fallbacks */
 
+/* Default 'normal' weight for body text */
+$default-body-wght: 350;
+body {
+  --default-body-wght: #{$default-body-wght};
+  --p-font-wght: #{$default-body-wght};
+  --st-font-wght: #{$default-body-wght};
+}
+
 /* Set base text size for all calcs */
 $text-base-size: 16;
 
@@ -131,6 +139,11 @@ $bq-size-s-px: 20;
 $bq-size-m-px: 22;
 $bq-size-l-px: 24;
 
+/* small text */
+$st-size-s-px: 12;
+$st-size-m-px: 13;
+$st-size-l-px: 14;
+
 /* Font size REMs */
 $p-size-s: $p-size-s-px / $text-base-size * 1rem;
 $p-size-m: $p-size-m-px / $text-base-size * 1rem;
@@ -164,6 +177,10 @@ $bq-size-s: $bq-size-s-px / $text-base-size * 1rem;
 $bq-size-m: $bq-size-m-px / $text-base-size * 1rem;
 $bq-size-l: $bq-size-l-px / $text-base-size * 1rem;
 
+$st-size-s: $st-size-s-px / $text-base-size * 1rem;
+$st-size-m: $st-size-m-px / $text-base-size * 1rem;
+$st-size-l: $st-size-l-px / $text-base-size * 1rem;
+
 /* Line-height (needs to be in EMs) */
 $p-lh-s: 1.5em;
 $p-lh-m: 1.525em;
@@ -196,6 +213,10 @@ $h6-lh-l: 1.3em;
 $bq-lh-s: 1.5em;
 $bq-lh-m: 1.525em;
 $bq-lh-l: 1.55em;
+
+$st-lh-s: 1.1em;
+$st-lh-m: 1.2em;
+$st-lh-l: 1.3em;
 
 /* Custom props for modern browsers */
 body {
@@ -231,6 +252,10 @@ body {
   --bq-size-m: #{$bq-size-m};
   --bq-size-l: #{$bq-size-l};
 
+  --st-size-s: #{$st-size-s};
+  --st-size-m: #{$st-size-m};
+  --st-size-l: #{$st-size-l};
+
 
   --p-lh-s: #{$p-lh-s};
   --p-lh-m: #{$p-lh-m};
@@ -264,6 +289,10 @@ body {
   --bq-lh-m: #{$bq-lh-m};
   --bq-lh-l: #{$bq-lh-l};
 
+  --st-lh-s: #{$st-lh-s};
+  --st-lh-m: #{$st-lh-m};
+  --st-lh-l: #{$st-lh-l};
+
 }
 
 /* Scaling accessible typography setup */
@@ -293,6 +322,9 @@ body {
 
   --bq-scaler-value: 2;
   --bq-lh-scaler-value: 2.5;
+
+  --st-scaler-value: 1;
+  --st-lh-scaler-value: 2;
 
 }
 
