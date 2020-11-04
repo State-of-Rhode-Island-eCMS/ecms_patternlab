@@ -44,12 +44,42 @@ body {
   --h1-size-s: 2rem;
   --h1-size-m: 3.75rem;
   --h1-size-l: 5.5rem;
+  --h2-size-s: 1.5rem;
+  --h2-size-m: 2.25rem;
+  --h2-size-l: 3rem;
+  --h3-size-s: 1.25rem;
+  --h3-size-m: 1.625rem;
+  --h3-size-l: 2rem;
+  --h4-size-s: 1rem;
+  --h4-size-m: 1.125rem;
+  --h4-size-l: 1.25rem;
+  --h5-size-s: 0.9375rem;
+  --h5-size-m: 1rem;
+  --h5-size-l: 1.125rem;
+  --h6-size-s: 0.875rem;
+  --h6-size-m: 0.9375rem;
+  --h6-size-l: 1rem;
   --p-lh-s: 1.5em;
   --p-lh-m: 1.525em;
   --p-lh-l: 1.55em;
   --h1-lh-s: 1.05em;
   --h1-lh-m: 1.075em;
-  --h1-lh-l: 1.1em; }
+  --h1-lh-l: 1.1em;
+  --h2-lh-s: 1.1em;
+  --h2-lh-m: 1.125em;
+  --h2-lh-l: 1.15em;
+  --h3-lh-s: 1.1em;
+  --h3-lh-m: 1.125em;
+  --h3-lh-l: 1.15em;
+  --h4-lh-s: 1.1em;
+  --h4-lh-m: 1.2em;
+  --h4-lh-l: 1.3em;
+  --h5-lh-s: 1.1em;
+  --h5-lh-m: 1.2em;
+  --h5-lh-l: 1.3em;
+  --h6-lh-s: 1.1em;
+  --h6-lh-m: 1.2em;
+  --h6-lh-l: 1.3em; }
 
 /* Scaling accessible typography setup */
 /* Set scaling values */
@@ -58,10 +88,16 @@ body {
   --p-lh-scaler-value: 3;
   --h1-scaler-value: 6;
   --h1-lh-scaler-value: 6;
-  --h2-scaler-value: 3;
-  --h2-lh-scaler-value: 3;
-  --h3-scaler-value: 2;
-  --h3-lh-scaler-value: 3.75;
+  --h2-scaler-value: 4;
+  --h2-lh-scaler-value: 6;
+  --h3-scaler-value: 2.5;
+  --h3-lh-scaler-value: 5;
+  --h4-scaler-value: 2;
+  --h4-lh-scaler-value: 5;
+  --h5-scaler-value: 1;
+  --h5-lh-scaler-value: 4;
+  --h6-scaler-value: 1;
+  --h6-lh-scaler-value: 4;
   --bq-scaler-value: 2.25;
   --bq-lh-scaler-value: 2.5; }
 
@@ -768,14 +804,16 @@ h1 {
   margin-bottom: calc(var(--body-text-spacer) * 1); }
   .wf-inactive h1 {
     font-family: Georgia, "Times New Roman", serif;
+    font-variant-numeric: lining-nums;
     font-weight: normal;
     letter-spacing: 0.035em; }
   @supports (font-variation-settings: normal) {
-    html:not(.novf) h1 {
+    html:not(.novf):not(.wf-inactive) h1 {
       font-family: var(--font-serif-vf);
       font-weight: 275; }
     html:not(.novf).wf-inactive h1 {
       font-family: Georgia, "Times New Roman", serif;
+      font-variant-numeric: lining-nums;
       font-weight: normal;
       letter-spacing: 0.035em; } }
   @media screen and (min-width: 47.5em) {
@@ -798,17 +836,45 @@ h1 {
       line-height: var(--line-height); } }
 
 h2 {
-  font-family: var(--font-serif);
+  font-family: "Roboto Slab", var(--font-serif-fallback);
   font-weight: normal;
-  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-size: 1.5rem;
+  line-height: 1.1em;
   font-style: normal;
-  line-height: clamp(1.1em, 6vw, 1.15em);
   margin-top: calc(var(--body-text-spacer) * 2);
   margin-bottom: calc(var(--body-text-spacer) * 0.5); }
+  .wf-inactive h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-variant-numeric: lining-nums;
+    font-weight: normal;
+    letter-spacing: 0.035em; }
   @supports (font-variation-settings: normal) {
-    h2 {
+    html:not(.novf) h2 {
       font-family: var(--font-serif-vf);
-      font-weight: 475; } }
+      font-weight: 475; }
+    html:not(.novf).wf-inactive h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-variant-numeric: lining-nums;
+      font-weight: normal;
+      letter-spacing: 0.035em; } }
+  @media screen and (min-width: 47.5em) {
+    h2 {
+      font-size: 2.25rem;
+      line-height: 1.125em; } }
+  @media screen and (min-width: 62em) {
+    h2 {
+      font-size: 3rem;
+      line-height: 1.15em; } }
+  @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    h2 {
+      --font-size-min: 1.5rem;
+      --font-size-max: 3rem;
+      --font-size-scaler-value: var(--h2-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min: 1.1em;
+      --font-lh-max: 1.15em;
+      --font-lh-scaler-value: var(--h2-lh-scaler-value);
+      line-height: var(--line-height); } }
   h2:first-of-type::after, h2.emphasis::after {
     content: ' ';
     display: block;
@@ -818,52 +884,168 @@ h2 {
     width: 1.125em; }
 
 h3 {
-  font-family: var(--font-sans);
+  font-family: "Work Sans", var(--font-sans-fallback);
   font-weight: bold;
-  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-size: 1.25rem;
+  line-height: 1.1em;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5); }
+  .wf-inactive h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-variant-numeric: lining-nums;
+    font-weight: normal;
+    letter-spacing: 0.035em; }
   @supports (font-variation-settings: normal) {
+    html:not(.novf) h3 {
+      font-family: var(--font-serif-vf);
+      font-weight: 575; }
+    html:not(.novf).wf-inactive h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-variant-numeric: lining-nums;
+      font-weight: normal;
+      letter-spacing: 0.035em; } }
+  @media screen and (min-width: 47.5em) {
     h3 {
-      font-family: var(--font-sans-vf);
-      font-weight: 575; } }
+      font-size: 1.625rem;
+      line-height: 1.125em; } }
+  @media screen and (min-width: 62em) {
+    h3 {
+      font-size: 2rem;
+      line-height: 1.15em; } }
+  @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    h3 {
+      --font-size-min: 1.25rem;
+      --font-size-max: 2rem;
+      --font-size-scaler-value: var(--h3-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min: 1.1em;
+      --font-lh-max: 1.15em;
+      --font-lh-scaler-value: var(--h3-lh-scaler-value);
+      line-height: var(--line-height); } }
 
 h4 {
-  font-family: var(--font-serif);
+  font-family: "Roboto Slab", var(--font-serif-fallback);
   font-weight: normal;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: 1rem;
+  line-height: 1.1em;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5); }
+  .wf-inactive h4 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-variant-numeric: lining-nums;
+    font-weight: normal;
+    letter-spacing: 0.035em; }
   @supports (font-variation-settings: normal) {
-    h4 {
+    html:not(.novf) h4 {
       font-family: var(--font-serif-vf);
-      font-weight: 400; } }
+      font-weight: 400; }
+    html:not(.novf).wf-inactive h4 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-variant-numeric: lining-nums;
+      font-weight: normal;
+      letter-spacing: 0.035em; } }
+  @media screen and (min-width: 47.5em) {
+    h4 {
+      font-size: 1.125rem;
+      line-height: 1.2em; } }
+  @media screen and (min-width: 62em) {
+    h4 {
+      font-size: 1.25rem;
+      line-height: 1.3em; } }
+  @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    h4 {
+      --font-size-min: 1rem;
+      --font-size-max: 1.25rem;
+      --font-size-scaler-value: var(--h4-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min: 1.1em;
+      --font-lh-max: 1.3em;
+      --font-lh-scaler-value: var(--h4-lh-scaler-value);
+      line-height: var(--line-height); } }
 
 h5 {
-  font-family: var(--font-serif);
+  font-family: "Roboto Slab", var(--font-serif-fallback);
   font-weight: bold;
-  font-size: clamp(0.925rem, 1vw, 1.125rem);
+  font-size: 0.9375rem;
+  line-height: 1.1em;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5); }
+  .wf-inactive h5 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-variant-numeric: lining-nums;
+    font-weight: normal;
+    letter-spacing: 0.035em; }
   @supports (font-variation-settings: normal) {
-    h5 {
+    html:not(.novf) h5 {
       font-family: var(--font-serif-vf);
-      font-weight: 500; } }
+      font-weight: 500; }
+    html:not(.novf).wf-inactive h5 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-variant-numeric: lining-nums;
+      font-weight: normal;
+      letter-spacing: 0.035em; } }
+  @media screen and (min-width: 47.5em) {
+    h5 {
+      font-size: 1rem;
+      line-height: 1.2em; } }
+  @media screen and (min-width: 62em) {
+    h5 {
+      font-size: 1.125rem;
+      line-height: 1.3em; } }
+  @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    h5 {
+      --font-size-min: 0.9375rem;
+      --font-size-max: 1.125rem;
+      --font-size-scaler-value: var(--h5-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min: 1.1em;
+      --font-lh-max: 1.3em;
+      --font-lh-scaler-value: var(--h5-lh-scaler-value);
+      line-height: var(--line-height); } }
 
 h6 {
-  font-family: var(--font-serif);
+  font-family: "Roboto Slab", var(--font-serif-fallback);
   font-weight: bold;
-  font-size: clamp(0.825rem, 1vw, 1rem);
+  font-size: 0.875rem;
+  line-height: 1.1em;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5); }
+  .wf-inactive h6 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-variant-numeric: lining-nums;
+    font-weight: normal;
+    letter-spacing: 0.035em; }
   @supports (font-variation-settings: normal) {
-    h6 {
+    html:not(.novf) h6 {
       font-family: var(--font-serif-vf);
-      font-weight: 600; } }
+      font-weight: 600; }
+    html:not(.novf).wf-inactive h6 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-variant-numeric: lining-nums;
+      font-weight: normal;
+      letter-spacing: 0.035em; } }
+  @media screen and (min-width: 47.5em) {
+    h6 {
+      font-size: 0.9375rem;
+      line-height: 1.2em; } }
+  @media screen and (min-width: 62em) {
+    h6 {
+      font-size: 1rem;
+      line-height: 1.3em; } }
+  @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    h6 {
+      --font-size-min: 0.875rem;
+      --font-size-max: 1rem;
+      --font-size-scaler-value: var(--h6-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min: 1.1em;
+      --font-lh-max: 1.3em;
+      --font-lh-scaler-value: var(--h6-lh-scaler-value);
+      line-height: var(--line-height); } }
 
 .headline-super {
   font-size: clamp(2.5rem, 6vw, 8rem);

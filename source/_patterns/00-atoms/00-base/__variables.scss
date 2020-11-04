@@ -107,9 +107,25 @@ $h1-size-s-px: 32;
 $h1-size-m-px: 60;
 $h1-size-l-px: 88;
 
-$h2-size-s-px: 16;
-$h2-size-m-px: 18;
-$h2-size-l-px: 20;
+$h2-size-s-px: 24;
+$h2-size-m-px: 36;
+$h2-size-l-px: 48;
+
+$h3-size-s-px: 20;
+$h3-size-m-px: 26;
+$h3-size-l-px: 32;
+
+$h4-size-s-px: 16;
+$h4-size-m-px: 18;
+$h4-size-l-px: 20;
+
+$h5-size-s-px: 15;
+$h5-size-m-px: 16;
+$h5-size-l-px: 18;
+
+$h6-size-s-px: 14;
+$h6-size-m-px: 15;
+$h6-size-l-px: 16;
 
 /* Font size REMs */
 $p-size-s: $p-size-s-px / $text-base-size * 1rem;
@@ -120,6 +136,26 @@ $h1-size-s: $h1-size-s-px / $text-base-size * 1rem;
 $h1-size-m: $h1-size-m-px / $text-base-size * 1rem;
 $h1-size-l: $h1-size-l-px / $text-base-size * 1rem;
 
+$h2-size-s: $h2-size-s-px / $text-base-size * 1rem;
+$h2-size-m: $h2-size-m-px / $text-base-size * 1rem;
+$h2-size-l: $h2-size-l-px / $text-base-size * 1rem;
+
+$h3-size-s: $h3-size-s-px / $text-base-size * 1rem;
+$h3-size-m: $h3-size-m-px / $text-base-size * 1rem;
+$h3-size-l: $h3-size-l-px / $text-base-size * 1rem;
+
+$h4-size-s: $h4-size-s-px / $text-base-size * 1rem;
+$h4-size-m: $h4-size-m-px / $text-base-size * 1rem;
+$h4-size-l: $h4-size-l-px / $text-base-size * 1rem;
+
+$h5-size-s: $h5-size-s-px / $text-base-size * 1rem;
+$h5-size-m: $h5-size-m-px / $text-base-size * 1rem;
+$h5-size-l: $h5-size-l-px / $text-base-size * 1rem;
+
+$h6-size-s: $h6-size-s-px / $text-base-size * 1rem;
+$h6-size-m: $h6-size-m-px / $text-base-size * 1rem;
+$h6-size-l: $h6-size-l-px / $text-base-size * 1rem;
+
 /* Line-height (needs to be in EMs) */
 $p-lh-s: 1.5em;
 $p-lh-m: 1.525em;
@@ -128,6 +164,26 @@ $p-lh-l: 1.55em;
 $h1-lh-s: 1.05em;
 $h1-lh-m: 1.075em;
 $h1-lh-l: 1.1em;
+
+$h2-lh-s: 1.1em;
+$h2-lh-m: 1.125em;
+$h2-lh-l: 1.15em;
+
+$h3-lh-s: 1.1em;
+$h3-lh-m: 1.125em;
+$h3-lh-l: 1.15em;
+
+$h4-lh-s: 1.1em;
+$h4-lh-m: 1.2em;
+$h4-lh-l: 1.3em;
+
+$h5-lh-s: 1.1em;
+$h5-lh-m: 1.2em;
+$h5-lh-l: 1.3em;
+
+$h6-lh-s: 1.1em;
+$h6-lh-m: 1.2em;
+$h6-lh-l: 1.3em;
 
 /* Custom props for modern browsers */
 body {
@@ -139,6 +195,26 @@ body {
   --h1-size-m: #{$h1-size-m};
   --h1-size-l: #{$h1-size-l};
 
+  --h2-size-s: #{$h2-size-s};
+  --h2-size-m: #{$h2-size-m};
+  --h2-size-l: #{$h2-size-l};
+
+  --h3-size-s: #{$h3-size-s};
+  --h3-size-m: #{$h3-size-m};
+  --h3-size-l: #{$h3-size-l};
+
+  --h4-size-s: #{$h4-size-s};
+  --h4-size-m: #{$h4-size-m};
+  --h4-size-l: #{$h4-size-l};
+
+  --h5-size-s: #{$h5-size-s};
+  --h5-size-m: #{$h5-size-m};
+  --h5-size-l: #{$h5-size-l};
+
+  --h6-size-s: #{$h6-size-s};
+  --h6-size-m: #{$h6-size-m};
+  --h6-size-l: #{$h6-size-l};
+
 
   --p-lh-s: #{$p-lh-s};
   --p-lh-m: #{$p-lh-m};
@@ -148,6 +224,25 @@ body {
   --h1-lh-m: #{$h1-lh-m};
   --h1-lh-l: #{$h1-lh-l};
 
+  --h2-lh-s: #{$h2-lh-s};
+  --h2-lh-m: #{$h2-lh-m};
+  --h2-lh-l: #{$h2-lh-l};
+
+  --h3-lh-s: #{$h3-lh-s};
+  --h3-lh-m: #{$h3-lh-m};
+  --h3-lh-l: #{$h3-lh-l};
+
+  --h4-lh-s: #{$h4-lh-s};
+  --h4-lh-m: #{$h4-lh-m};
+  --h4-lh-l: #{$h4-lh-l};
+
+  --h5-lh-s: #{$h5-lh-s};
+  --h5-lh-m: #{$h5-lh-m};
+  --h5-lh-l: #{$h5-lh-l};
+
+  --h6-lh-s: #{$h6-lh-s};
+  --h6-lh-m: #{$h6-lh-m};
+  --h6-lh-l: #{$h6-lh-l};
 
 }
 
@@ -161,11 +256,20 @@ body {
   --h1-scaler-value: 6;
   --h1-lh-scaler-value: 6;
 
-  --h2-scaler-value: 3;
-  --h2-lh-scaler-value: 3;
+  --h2-scaler-value: 4;
+  --h2-lh-scaler-value: 6;
 
-  --h3-scaler-value: 2;
-  --h3-lh-scaler-value: 3.75;
+  --h3-scaler-value: 2.5;
+  --h3-lh-scaler-value: 5;
+
+  --h4-scaler-value: 2;
+  --h4-lh-scaler-value: 5;
+
+  --h5-scaler-value: 1;
+  --h5-lh-scaler-value: 4;
+
+  --h6-scaler-value: 1;
+  --h6-lh-scaler-value: 4;
 
   --bq-scaler-value: 2.25;
   --bq-lh-scaler-value: 2.5;
