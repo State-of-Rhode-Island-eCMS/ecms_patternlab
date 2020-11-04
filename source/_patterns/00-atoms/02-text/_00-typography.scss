@@ -376,8 +376,47 @@ blockquote {
   max-width: var(--content-width);
 
   p {
-    font-size: clamp(1.25rem, 2vw, 1.5rem);
-    font-weight: 150;
+    font-family: $font-serif-static;
+    font-weight: normal;
+    font-size: $bq-size-s;
+    line-height: $bq-lh-s;
+    .wf-inactive & {
+      font-family: $font-serif-fallback;
+      font-variant-numeric: lining-nums;
+      font-weight: normal;
+      letter-spacing: 0.035em;
+    }
+    @supports (font-variation-settings: normal) {
+      html:not(.novf) & {
+        font-family: var(--font-serif-vf);
+        font-weight: 150;
+      }
+      html:not(.novf).wf-inactive & {
+        font-family: $font-serif-fallback;
+        font-variant-numeric: lining-nums;
+        font-weight: normal;
+        letter-spacing: 0.035em;
+      }
+    }
+    @media screen and (min-width: $bp--medium) {
+      font-size: $bq-size-m;
+      line-height: $bq-lh-m;
+    }
+    @media screen and (min-width: $bp--large) {
+      font-size: $bq-size-l;
+      line-height: $bq-lh-l;
+    }
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      --font-size-min: #{$bq-size-s};
+      --font-size-max: #{$bq-size-l};
+      --font-size-scaler-value: var(--bq-scaler-value);
+      font-size: var(--font-size);
+  
+      --font-lh-min: #{$bq-lh-s};
+      --font-lh-max: #{$bq-lh-l};
+      --font-lh-scaler-value: var(--bq-lh-scaler-value);
+      line-height: var(--line-height);
+    }
     margin-left: auto;
     margin-right: auto;
     margin-top: 0.75rem;
@@ -385,27 +424,15 @@ blockquote {
 }
 
 address {
-  font-family: var(--font-sans);
-  font-weight: normal;
-  @supports (font-variation-settings: normal) {
-    font-family: var(--font-sans-vf);
-    font-weight: 350;
-  }
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  @extend p;
 }
 
 time {
-  font-family: var(--font-sans);
-  font-weight: normal;
-  @supports (font-variation-settings: normal) {
-    font-family: var(--font-sans-vf);
-    font-weight: 350;
-  }
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  @extend p;
 }
 
 label {
-  font-family: var(--font-sans);
+  font-family: $font-sans-static;
   font-weight: normal;
   @supports (font-variation-settings: normal) {
     font-family: var(--font-sans-vf);

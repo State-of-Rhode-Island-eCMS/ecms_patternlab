@@ -127,6 +127,10 @@ $h6-size-s-px: 14;
 $h6-size-m-px: 15;
 $h6-size-l-px: 16;
 
+$bq-size-s-px: 20;
+$bq-size-m-px: 22;
+$bq-size-l-px: 24;
+
 /* Font size REMs */
 $p-size-s: $p-size-s-px / $text-base-size * 1rem;
 $p-size-m: $p-size-m-px / $text-base-size * 1rem;
@@ -156,6 +160,10 @@ $h6-size-s: $h6-size-s-px / $text-base-size * 1rem;
 $h6-size-m: $h6-size-m-px / $text-base-size * 1rem;
 $h6-size-l: $h6-size-l-px / $text-base-size * 1rem;
 
+$bq-size-s: $bq-size-s-px / $text-base-size * 1rem;
+$bq-size-m: $bq-size-m-px / $text-base-size * 1rem;
+$bq-size-l: $bq-size-l-px / $text-base-size * 1rem;
+
 /* Line-height (needs to be in EMs) */
 $p-lh-s: 1.5em;
 $p-lh-m: 1.525em;
@@ -184,6 +192,10 @@ $h5-lh-l: 1.3em;
 $h6-lh-s: 1.1em;
 $h6-lh-m: 1.2em;
 $h6-lh-l: 1.3em;
+
+$bq-lh-s: 1.5em;
+$bq-lh-m: 1.525em;
+$bq-lh-l: 1.55em;
 
 /* Custom props for modern browsers */
 body {
@@ -215,6 +227,10 @@ body {
   --h6-size-m: #{$h6-size-m};
   --h6-size-l: #{$h6-size-l};
 
+  --bq-size-s: #{$bq-size-s};
+  --bq-size-m: #{$bq-size-m};
+  --bq-size-l: #{$bq-size-l};
+
 
   --p-lh-s: #{$p-lh-s};
   --p-lh-m: #{$p-lh-m};
@@ -244,6 +260,10 @@ body {
   --h6-lh-m: #{$h6-lh-m};
   --h6-lh-l: #{$h6-lh-l};
 
+  --bq-lh-s: #{$bq-lh-s};
+  --bq-lh-m: #{$bq-lh-m};
+  --bq-lh-l: #{$bq-lh-l};
+
 }
 
 /* Scaling accessible typography setup */
@@ -271,7 +291,7 @@ body {
   --h6-scaler-value: 1;
   --h6-lh-scaler-value: 4;
 
-  --bq-scaler-value: 2.25;
+  --bq-scaler-value: 2;
   --bq-lh-scaler-value: 2.5;
 
 }
