@@ -4,7 +4,7 @@ $grid-gap: 2rem;
 .qh-layout-section {
   display: grid;
   grid-gap: $grid-gap;
-  max-width: 80rem;
+  max-width: var(--content-max-width);
   margin: 0 auto;
 
   // Temp gutters and VR
@@ -40,38 +40,68 @@ $grid-gap: 2rem;
 
     // Two Column sizing
     &-25-75 {
-      grid-template-areas: 'first second second second';
+      grid-template-columns: 1fr;
+      @media screen and (min-width: $bp--medium) {
+        grid-template-columns: 1fr 2fr;
+      }
+      @media screen and (min-width: $bp--xlarge) {
+        grid-template-columns: 1fr 3fr;
+      }
     }
 
     &-33-67 {
-      grid-template-areas: 'first second second';
+      grid-template-columns: 1fr;
+      @media screen and (min-width: $bp--medium) {
+        grid-template-columns: 1fr 2fr;
+      }
     }
 
     &-50-50 {
-      grid-template-areas: 'first second';
+      grid-template-columns: 1fr;
+      @media screen and (min-width: $bp--medium) {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
     &-67-33 {
-      grid-template-areas: 'first first second';
+      grid-template-columns: 1fr;
+      @media screen and (min-width: $bp--medium) {
+        grid-template-columns: 2fr 1fr;
+      }
     }
 
     &-75-25 {
-      grid-template-areas: 'first first first second';
+      grid-template-columns: 1fr;
+      @media screen and (min-width: $bp--medium) {
+        grid-template-columns: 2fr 1fr;
+      }
+      @media screen and (min-width: $bp--xlarge) {
+        grid-template-columns: 3fr 1fr;
+      }
     }
 
     // Three and four column grids are repeated with equal columns.
     &-33-repeat {
-      grid-template-areas: 'first second third';
+      grid-template-columns: 1fr;
+      @media screen and (min-width: $bp--medium) {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
     }
 
     &-25-repeat {
-      grid-template-areas: 'first second third fourth';
+      grid-template-columns: 1fr;
+      @media screen and (min-width: $bp--medium) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @media screen and (min-width: $bp--xlarge) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
     }
   }
 
   // Column elements
   &__col {
- 
+
     .block:first-child:last-child {
       height: 100%;
     }
@@ -82,22 +112,18 @@ $grid-gap: 2rem;
     }
 
     &--first {
-      grid-area: first;
       max-width: 100%;
     }
 
     &--second {
-      grid-area: second;
       max-width: 100%;
     }
 
     &--third {
-      grid-area: third;
       max-width: 100%;
     }
 
     &--fourth {
-      grid-area: fourth;
       max-width: 100%;
     }
   }
