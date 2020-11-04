@@ -15,12 +15,12 @@
 
     &,
     &:visited {
-      color: var(--fc__default__link);
+      color: var(--fc__header__social__link);
     }
 
     &:hover,
     &:focus {
-      color: var(--fc__default__link--hover);
+      color: var(--fc__header__social__link--hover);
     }
 
     &:focus {

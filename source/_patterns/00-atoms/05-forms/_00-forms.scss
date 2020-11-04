@@ -213,6 +213,7 @@ select {
     > input {
       // Oddly, a size larger than any button width does not make the input too small
       flex: 1 0 calc(100% - 12rem);
+      margin-right: 0.5rem;
     }
   }
 }
