@@ -226,6 +226,7 @@ body {
 
   // <ul>
   &__list {
+    max-width: none;
 
     &__outermost {
       // For mobile, make this an off canvas right drawer
