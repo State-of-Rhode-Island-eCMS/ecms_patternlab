@@ -11,6 +11,8 @@
  * - align: left | right | [none]
  * - alt: [string] or [none]
  * - caption: [string] or [none]
+ * - link_url: [link url of image]
+ * - link_title: [link title of image]
  * - url: [full url of image]
  * - source: [full iframe embed of video]
  *
@@ -27,7 +29,13 @@
 
 <figure class="media-item {{ classes }}">
   {% if type == 'img' %}
-    <img src="{{ url }}" alt="{{ alt }}" />
+    {% if link_url %}
+      <a href={{ link_url }} title="{{ link_title|t }}">
+    {% endif %}
+      <img src="{{ url }}" alt="{{ alt }}" />
+    {% if link_url %}
+      </a>
+    {% endif %}
   {% elseif type == 'video' %}
     <div class="media-item__video">{{ source|raw }}</div>
   {% endif %}
