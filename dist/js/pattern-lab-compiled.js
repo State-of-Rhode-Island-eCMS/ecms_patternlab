@@ -38,6 +38,7 @@ function getQhNavState() {
   return getComputedStyle(qh_body).getPropertyValue("--nav-state");
 }
 
+
 // Mobile: Move the Search component into the Navigation drawer
 // Benefit of insertBefore is that it moves the element, not a copy of the element
 function moveSearchIntoNav(direction) {
@@ -45,9 +46,12 @@ function moveSearchIntoNav(direction) {
   var qh_header = document.getElementById('js__search-social');
   var qh_mainnav = document.getElementById('js__primary-menu');
 
+  //console.log('moveSearchIntoNav fired');
+
   if (qh_search !== null && qh_search !== undefined) {
     // Which direction is this going?
     if (direction === 'toNav') {
+      // Move from header to nav drawer
       if (qh_mainnav !== null && qh_mainnav !== undefined) {
         // Create a new <li>
         var qh_new_li = document.createElement('li');
@@ -58,6 +62,7 @@ function moveSearchIntoNav(direction) {
         qh_mainnav.insertBefore(qh_new_li, qh_mainnav.firstChild);
       }
     } else {
+      // Move from nav drawer to header
       if (qh_header !== null && qh_mainnav !== undefined) {
         // Append search to the header container
         qh_header.appendChild(qh_search);
@@ -77,9 +82,12 @@ function moveSocialIntoNav(direction) {
   var qh_header = document.getElementById('js__search-social');
   var qh_mainnav = document.getElementById('js__primary-menu');
 
+  //console.log('moveSocialIntoNav fired');
+
   if (qh_social !== null && qh_social !== undefined) {
     // Which direction is this going?
     if (direction === 'toNav') {
+      // Move from header to nav drawer
       if (qh_mainnav !== null && qh_mainnav !== undefined) {
         // Create a new <li>
         var qh_new_li = document.createElement('li');
@@ -90,6 +98,7 @@ function moveSocialIntoNav(direction) {
         qh_mainnav.insertBefore(qh_new_li, qh_mainnav.lastChild.nextSibling);
       }
     } else {
+      // Move from nav drawer to header
       if (qh_header !== null && qh_header !== undefined) {
         // Append search to the header container
         qh_header.appendChild(qh_social);
@@ -104,18 +113,29 @@ function moveSocialIntoNav(direction) {
 }
 
 function moveSearchAndSocial() {
-  var test = getQhNavState();
-  if (test.trim() === 'js-mobile') {
-    moveSearchIntoNav('toNav');
-    moveSocialIntoNav('toNav');
-  } else {
-    moveSocialIntoNav('fromNav');
-    moveSearchIntoNav('fromNav');
+  var qh_viewport_again = getQhNavState();
+  if (qh_viewport_again.trim() !== qh_viewport.trim()) {
+    if (qh_viewport_again.trim() === 'js-mobile') {
+      //console.log('toNav – qh_viewport= ' + qh_viewport);
+      //console.log('qh_viewport_again= ' + qh_viewport_again);
+      moveSearchIntoNav('toNav');
+      moveSocialIntoNav('toNav');
+    } else {
+      //console.log('fromNav – qh_viewport= ' + qh_viewport);
+      //console.log('qh_viewport_again= ' + qh_viewport_again);
+      moveSocialIntoNav('fromNav');
+      moveSearchIntoNav('fromNav');
+    }
+    // The two are different, reset the global variable
+    window.qh_viewport = qh_viewport_again;
   }
 }
 
 
 document.addEventListener('DOMContentLoaded', function() {
+
+  // Declare the viewport state globally
+  window.qh_viewport = getQhNavState();
 
   // Call on page ready
   moveSearchAndSocial();
