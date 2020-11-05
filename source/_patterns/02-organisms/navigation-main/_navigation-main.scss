@@ -235,7 +235,7 @@ body {
         opacity: 0;
         position: absolute;
         top: 100%;
-        right: 0;
+        right: calc((100vw - var(--content-max-width)) * -0.5);
         transform: translateX(100vw);
         transition: $transition-medium;
         width: 86vw;

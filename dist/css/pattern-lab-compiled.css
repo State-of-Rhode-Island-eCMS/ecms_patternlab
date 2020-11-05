@@ -2313,7 +2313,7 @@ body {
       opacity: 0;
       position: absolute;
       top: 100%;
-      right: 0;
+      right: calc((100vw - var(--content-max-width)) * -0.5);
       -webkit-transform: translateX(100vw);
               transform: translateX(100vw);
       -webkit-transition: all 500ms ease;
