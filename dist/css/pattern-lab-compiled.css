@@ -2488,7 +2488,7 @@ body {
       color: var(--fc__nav-main__fg);
       cursor: default;
       font-weight: 550;
-      padding: 1rem 1rem 0.75rem;
+      padding: 0.75rem 1rem 1rem;
       pointer-events: none; }
       @media (max-width: 47.4375em) {
         .qh__nav-main__link.qh__nav-main__link--current {

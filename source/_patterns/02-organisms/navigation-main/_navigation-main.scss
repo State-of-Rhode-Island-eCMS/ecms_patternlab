@@ -458,7 +458,7 @@ body {
       color: var(--fc__nav-main__fg);
       cursor: default;
       font-weight: 550; // TODO: replace this with the proper font weight
-      padding: $nav-a-v-spacing $nav-a-h-spacing--sm ($nav-a-v-spacing * 0.75);
+      padding: ($nav-a-v-spacing * 0.75) $nav-a-h-spacing--sm $nav-a-v-spacing;
       pointer-events: none;
 
       @include breakpoint-down($bp__show__desktop-nav) {
