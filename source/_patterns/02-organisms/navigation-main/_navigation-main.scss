@@ -85,16 +85,19 @@ body {
 
     &,
     &:visited {
-      color: var(--fc__nav-main--link);
+      color: var(--fc__nav-main__link);
+      background-color: transparent;
     }
 
     &:hover,
     &:focus {
-      color: var(--fc__nav-main--link--hover);
+      color: var(--fc__nav-main__link--hover);
+      background-color: transparent;
     }
 
     &:active {
-      color: var(--fc__nav-main--link--active);
+      color: var(--fc__nav-main__link--active);
+      background-color: transparent;
     }
 
     &__label {}
