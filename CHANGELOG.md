@@ -21,6 +21,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.1.7] - 2020-11-05
+### Changed
+- RIG-130 - Fix main navigation max width.
+
 ## [0.1.6] - 2020-11-05
 ### Changed
 - RIG-130: Updated styling.
@@ -52,7 +56,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.6...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.7...HEAD
+[0.1.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.6...0.1.7
 [0.1.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.5...0.1.6
 [0.1.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.4...0.1.5
 [0.1.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.4...0.1.5
