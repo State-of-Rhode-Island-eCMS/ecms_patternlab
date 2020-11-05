@@ -497,7 +497,7 @@
         "header": [
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "rhody-red--dark" },
-          { "fnName": "social__link", "colorName": "ocean" },
+          { "fnName": "social__link", "colorName": "white" },
           # Hover should use the accent or violator color
           { "fnName": "social__link--hover", "colorName": "hope-gold" }
         ],
