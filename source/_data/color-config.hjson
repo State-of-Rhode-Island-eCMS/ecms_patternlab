@@ -282,7 +282,7 @@
           { "fnName": "social__link--hover", "colorName": "hope-gold" }
         ],
         "nav-main": [
-          { "fnName": "fg", "colorName": "quahog" },
+          { "fnName": "fg", "colorName": "quahog--dark" },
           { "fnName": "bg", "colorName": "ocean" },
           { "fnName": "link", "colorName": "quahog--darker" },
           { "fnName": "link--hover", "colorName": "navy" },
@@ -417,7 +417,7 @@
           { "fnName": "bg", "colorName": "navy" },
           { "fnName": "link", "colorName": "quahog--light" },
           { "fnName": "link--hover", "colorName": "white" },
-          { "fnName": "link--hover__bg", "colorName": "quahog" },
+          { "fnName": "link--hover__bg", "colorName": "quahog--darker" },
           { "fnName": "link--focus", "colorName": "hope-gold" },
           { "fnName": "link--active", "colorName": "hope-gold" },
           { "fnName": "link--current__border", "colorName": "navy--dark" },

@@ -4,6 +4,16 @@
   overflow: hidden;
 }
 
+// Set a CSS var that JS will check for the state of the nav
+body {
+  --nav-state: js-mobile;
+}
+@include breakpoint-up($bp__show__desktop-nav) {
+  body {
+    --nav-state: js-desktop;
+  }
+}
+
 .qh__nav-main {
   background-color: var(--fc__nav-main__bg);
   color: var(--fc__nav-main__fg);
@@ -11,11 +21,6 @@
   a {
     display: block;
     transition: $transition-base;
-  }
-
-  // Icons used in the nav
-  .qh__icon {
-    margin: -0.75em -0.75em -0.75em 0;
   }
 
   // There is one of this in the UL and one outside for mobile
@@ -246,10 +251,7 @@
         align-items: center;
         justify-content: flex-start;
       }
-    }
-  }
-
-  &__list {
+    } // end &__outermost
 
     &__sub {
       background-color: var(--fc__nav-main__link--hover__bg);
@@ -288,8 +290,8 @@
         transition: $transition-duration-medium opacity ease 0s, 0s visibility linear $transition-duration-medium;
         visibility: hidden;
       }
-    }
-  }
+    } // end &__sub
+  } // end &__list
 
   // <li>
   &__item {
@@ -304,6 +306,30 @@
       height: 0;
       margin: 0 em(8);
     }
+
+    // For mobile, Search and Social list item are added
+    &__search {
+      padding: ($nav-a-v-spacing * 0.5) ($nav-a-h-spacing * 0.5);
+
+      .qh__form__nowrap > input {
+        // Remove max-width from the search styles
+        max-width: unset;
+      }
+    }
+
+    &__social {
+      padding: ($nav-a-v-spacing * 0.5) ($nav-a-h-spacing * 0.5);
+    }
+
+    &__search,
+    &__social {
+      @include breakpoint-up($bp__show__desktop-nav) {
+        // Handle the flash of content when it is there before JS debounces
+        opacity: 0;
+        visibility: hidden;
+        width: 0;
+      }
+    }
   }
 
   // An item with children in a drop down
@@ -315,6 +341,10 @@
 
     @include breakpoint-down($bp__show__desktop-nav) {
       justify-content: space-between;
+    }
+
+    .qh__icon {
+      margin: -0.75em -0.75em -0.75em 0;
     }
 
     .qh__icon__chevron-down {
