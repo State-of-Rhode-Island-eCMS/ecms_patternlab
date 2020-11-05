@@ -1,23 +1,22 @@
 ul,
 ol,
 dl {
-  font-family: var(--font-sans-vf);
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  font-weight: 350;
-  font-style: normal;
-  hyphens: auto;
-  line-height: clamp(1.25em, 2vw, 1.4em);
-  margin: 0;
-  max-width: 40em;
+  @extend p;
   padding: 0;
-  @media screen and (min-width: $bp--medium) {
-    hyphens: none;
-  }
 
-  p + &,
-  + ul,
-  + p {
-    margin-top: var(--body-text-spacer);
+  li,
+  dd {
+    margin-top: 0;
+    margin-left: 1em;
+
+    &::marker {
+      color: var(--fc__default__text__accent);
+      font-size: 0.875em;
+    }
+
+    + li {
+      margin-top: calc(var(--body-text-spacer) * 0.5);
+    }
   }
 
   ul,
@@ -27,19 +26,6 @@ dl {
   }
 }
 
-li,
-dd {
-  margin-left: 1em;
-
-  &::marker {
-    color: var(--fc__default__text__accent);
-    font-size: 0.875em;
-  }
-
-  + li {
-    margin-top: calc(var(--body-text-spacer) * 0.5);
-  }
-}
 
 // Utilities
 .qh-u__list-reset {

@@ -13,6 +13,16 @@
   @return map-get(map-get($colors, $colorName), 'hsl');
 }
 
+// Expected return values:
+// - dark-text
+// - light-text
+@function qh-which-color-fg($colorName) {
+  @if map-has-key($colors, $colorName) == false {
+    @error "Key `#{$colorName}` is not a valid color name from $colors.";
+  }
+  @return map-get(map-get($colors, $colorName), 'needs');
+}
+
 
 // Keep things DRY
 // Outputs the theme's functional color definition. Used a bunch of times in the loops below

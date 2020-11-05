@@ -1,0 +1,23 @@
+.qh__site-search {
+
+  // <from>
+  &__form {
+    margin: 0;
+  }
+
+  &__container {}
+
+  // <input>
+  &__query {
+    max-width: 12rem;
+  }
+
+  // <button>
+  &__submit {
+    background-color: var(--fc__default__accent);
+    color: var(--fc__default__accent__fg);
+    padding: 0.1875rem;
+
+    .qh__icon {}
+  }
+}

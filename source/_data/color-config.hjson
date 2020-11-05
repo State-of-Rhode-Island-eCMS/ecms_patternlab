@@ -47,6 +47,9 @@
       "hsl": "hsla(0, 0, 100%, 0)",
       "needs": "dark-text"
     },
+    #
+    # Quahog
+    #
     "quahog--darker": {
       "name": "Quahog dark",
       "hue": "black",
@@ -95,6 +98,9 @@
       "hsl": "hsl(0, 0%, 83%)",
       "needs": "dark-text"
     },
+    #
+    # Navy
+    #
     "navy--dark": {
       "name": "Navy dark",
       "hue": "blue",
@@ -143,6 +149,9 @@
       "hsl": "hsl(254, 62%, 80%)",
       "needs": "dark-text"
     },
+    #
+    # Rhody Red
+    #
     "rhody-red--dark": {
       "name": "Rhody Red dark",
       "hue": "maroon",
@@ -167,6 +176,9 @@
       "hsl": "hsla(360, 79%, 62%, 0.15)",
       "needs": "dark-text"
     },
+    #
+    # Accents
+    #
     "calamari": {
       "name": "Calamari",
       "hue": "orange",
@@ -191,6 +203,9 @@
       "hsl": "hsla(110, 49%, 51%, 0.15)",
       "needs": "dark-text"
     },
+    #
+    # Ocean
+    #
     "ocean--bright": {
       "name": "Ocean State bright",
       "hue": "light blue green",
@@ -209,6 +224,9 @@
       "hsl": "hsla(208, 54%, 73%, 0.25)",
       "needs": "dark-text"
     },
+    #
+    # Cawfee Milk
+    #
     "coffee-milk": {
       "name": "Coffee Milk",
       "hue": "light tan",
@@ -254,15 +272,17 @@
           { "fnName": "bg", "colorName": "navy--dark" },
           { "fnName": "link", "colorName": "white" },
           { "fnName": "link--hover", "colorName": "calamari" },
-          { "fnName": "link--focus", "colorName": "calamari" },
-          { "fnName": "link--visited", "colorName": "white" }
+          { "fnName": "link--focus", "colorName": "calamari" }
         ],
         "header": [
           { "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "navy" }
+          { "fnName": "bg", "colorName": "navy" },
+          { "fnName": "social__link", "colorName": "ocean" },
+          # Hover should use the accent or violator color
+          { "fnName": "social__link--hover", "colorName": "hope-gold" }
         ],
         "nav-main": [
-          { "fnName": "fg", "colorName": "quahog" },
+          { "fnName": "fg", "colorName": "quahog--dark" },
           { "fnName": "bg", "colorName": "ocean" },
           { "fnName": "link", "colorName": "quahog--darker" },
           { "fnName": "link--hover", "colorName": "navy" },
@@ -287,7 +307,10 @@
           { "fnName": "link--active", "colorName": "calamari" },
           { "fnName": "hx__fg", "colorName": "quahog--medium" },
           { "fnName": "violator", "colorName": "calamari" },
+          # Accent pair, bg and fg
           { "fnName": "accent", "colorName": "hope-gold" },
+          { "fnName": "accent__fg", "colorName": "quahog--dark" },
+          # text__accent currently used for bullet mark color
           { "fnName": "text__accent", "colorName": "quahog--medium" },
           { "fnName": "button__bg", "colorName": "navy" },
           { "fnName": "button__fg", "colorName": "hope-gold" },
@@ -380,19 +403,21 @@
           { "fnName": "bg", "colorName": "quahog--darker" },
           { "fnName": "link", "colorName": "ocean" },
           { "fnName": "link--hover", "colorName": "hope-gold" },
-          { "fnName": "link--focus", "colorName": "hope-gold" },
-          { "fnName": "link--visited", "colorName": "ocean" }
+          { "fnName": "link--focus", "colorName": "hope-gold" }
         ],
         "header": [
           { "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "navy--dark" }
+          { "fnName": "bg", "colorName": "navy--dark" },
+          { "fnName": "social__link", "colorName": "ocean" },
+          # Hover should use the accent or violator color
+          { "fnName": "social__link--hover", "colorName": "hope-gold" }
         ],
         "nav-main": [
           { "fnName": "fg", "colorName": "quahog--light" },
           { "fnName": "bg", "colorName": "navy" },
           { "fnName": "link", "colorName": "quahog--light" },
           { "fnName": "link--hover", "colorName": "white" },
-          { "fnName": "link--hover__bg", "colorName": "quahog" },
+          { "fnName": "link--hover__bg", "colorName": "quahog--darker" },
           { "fnName": "link--focus", "colorName": "hope-gold" },
           { "fnName": "link--active", "colorName": "hope-gold" },
           { "fnName": "link--current__border", "colorName": "navy--dark" },
@@ -456,6 +481,9 @@
         ]
       }
     },
+    #
+    # Federal Hill theme: red and dark maroon with light blue highlights
+    #
     "federal-hill": {
       "humanName": "Federal Hill",
       "values": {
@@ -464,12 +492,14 @@
           { "fnName": "bg", "colorName": "quahog--darker" },
           { "fnName": "link", "colorName": "white" },
           { "fnName": "link--hover", "colorName": "rhody-red" },
-          { "fnName": "link--focus", "colorName": "rhody-red" },
-          { "fnName": "link--visited", "colorName": "white" }
+          { "fnName": "link--focus", "colorName": "rhody-red" }
         ],
         "header": [
           { "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "rhody-red--dark" }
+          { "fnName": "bg", "colorName": "rhody-red--dark" },
+          { "fnName": "social__link", "colorName": "ocean" },
+          # Hover should use the accent or violator color
+          { "fnName": "social__link--hover", "colorName": "hope-gold" }
         ],
         "nav-main": [
           { "fnName": "fg", "colorName": "quahog" },
@@ -546,6 +576,9 @@
         ]
       }
     },
+    #
+    # Federal Hill Dark theme: red and dark maroon with light blue highlights
+    #
     "federal-hill--dark": {
       "humanName": "Federal Hill dark",
       "values": {
@@ -554,12 +587,14 @@
           { "fnName": "bg", "colorName": "quahog--darker" },
           { "fnName": "link", "colorName": "white" },
           { "fnName": "link--hover", "colorName": "rhody-red" },
-          { "fnName": "link--focus", "colorName": "rhody-red" },
-          { "fnName": "link--visited", "colorName": "white" }
+          { "fnName": "link--focus", "colorName": "rhody-red" }
         ],
         "header": [
           { "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "quahog--dark" }
+          { "fnName": "bg", "colorName": "quahog--dark" },
+          { "fnName": "social__link", "colorName": "rhody-red" },
+          # Hover should use the accent or violator color
+          { "fnName": "social__link--hover", "colorName": "hope-gold" }
         ],
         "nav-main": [
           { "fnName": "fg", "colorName": "quahog--light" },

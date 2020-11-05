@@ -26,8 +26,8 @@
     box-shadow: none; // Reset from .qh__btn
     color: var(--fc__default__fg);
     display: block;
-    font-family: $font-sans-vf;
-    font-size: 1.25rem; // TODO: Reset with the proper
+    --p-font-wght: 450;
+    @extend p;
     outline: none;
     padding: $nav-a-v-spacing $nav-a-h-spacing;
     text-align: left;

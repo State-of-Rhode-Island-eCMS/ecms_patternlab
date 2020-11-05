@@ -3,7 +3,6 @@
  *
  */
 
-
 // mq values (no unit)
 $bp--small-value: 22.5;   // 360
 $bp--medium-value: 47.5;  // 760
@@ -17,3 +16,21 @@ $bp--medium: $bp--medium-value * 1em;
 $bp--large: $bp--large-value * 1em;
 $bp--xlarge: $bp--xlarge-value * 1em;
 $bp--xxlarge: $bp--xxlarge-value * 1em;
+
+
+// Stored common breakpoints across multiple molecules
+$bp__show__desktop-nav: $bp--medium;
+
+
+// Media query helpers
+@mixin breakpoint-up($bp) {
+  @media (min-width: #{$bp}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($bp) {
+  @media (max-width: #{($bp - em(1))}) {
+    @content;
+  }
+}

@@ -11,6 +11,180 @@
 body {
   --content-max-width: min(93vw, 90rem); }
 
+/* Light mode */
+body {
+  --osLightMode: light; }
+  @media (prefers-color-scheme: dark) {
+    body {
+      --osLightMode: dark; } }
+
+/* Font size modifier */
+body {
+  --fontSizeModifier: 1; }
+
+/* Line-height modifier */
+body {
+  --lineHeightModifier: 1; }
+
+/* word space modifier */
+body {
+  --wordSpaceModifier: 0; }
+
+/* Typography variables */
+/* Preprocessed for fallbacks */
+/* Default 'normal' weight for body text */
+body {
+  --default-body-wght: 350;
+  --p-font-wght: 350;
+  --st-font-wght: 350; }
+
+/* Set base text size for all calcs */
+/* Change px values here for all font sizing */
+/* small text */
+/* Font size REMs */
+/* Line-height (needs to be in EMs) */
+/* Custom props for modern browsers */
+body {
+  --p-size-s: 1rem;
+  --p-size-m: 1.125rem;
+  --p-size-l: 1.25rem;
+  --h1-size-s: 2rem;
+  --h1-size-m: 3.75rem;
+  --h1-size-l: 5.5rem;
+  --h2-size-s: 1.5rem;
+  --h2-size-m: 2.25rem;
+  --h2-size-l: 3rem;
+  --h3-size-s: 1.25rem;
+  --h3-size-m: 1.625rem;
+  --h3-size-l: 2rem;
+  --h4-size-s: 1rem;
+  --h4-size-m: 1.125rem;
+  --h4-size-l: 1.25rem;
+  --h5-size-s: 0.9375rem;
+  --h5-size-m: 1rem;
+  --h5-size-l: 1.125rem;
+  --h6-size-s: 0.875rem;
+  --h6-size-m: 0.9375rem;
+  --h6-size-l: 1rem;
+  --bq-size-s: 1.25rem;
+  --bq-size-m: 1.375rem;
+  --bq-size-l: 1.5rem;
+  --st-size-s: 0.75rem;
+  --st-size-m: 0.8125rem;
+  --st-size-l: 0.875rem;
+  --p-lh-s: 1.5em;
+  --p-lh-m: 1.525em;
+  --p-lh-l: 1.55em;
+  --h1-lh-s: 1.05em;
+  --h1-lh-m: 1.075em;
+  --h1-lh-l: 1.1em;
+  --h2-lh-s: 1.1em;
+  --h2-lh-m: 1.125em;
+  --h2-lh-l: 1.15em;
+  --h3-lh-s: 1.1em;
+  --h3-lh-m: 1.125em;
+  --h3-lh-l: 1.15em;
+  --h4-lh-s: 1.1em;
+  --h4-lh-m: 1.2em;
+  --h4-lh-l: 1.3em;
+  --h5-lh-s: 1.1em;
+  --h5-lh-m: 1.2em;
+  --h5-lh-l: 1.3em;
+  --h6-lh-s: 1.1em;
+  --h6-lh-m: 1.2em;
+  --h6-lh-l: 1.3em;
+  --bq-lh-s: 1.5em;
+  --bq-lh-m: 1.525em;
+  --bq-lh-l: 1.55em;
+  --st-lh-s: 1.1em;
+  --st-lh-m: 1.2em;
+  --st-lh-l: 1.3em; }
+
+/* Scaling accessible typography setup */
+/* Set scaling values */
+body {
+  --p-scaler-value: 1.25;
+  --p-lh-scaler-value: 3;
+  --h1-scaler-value: 6;
+  --h1-lh-scaler-value: 6;
+  --h2-scaler-value: 4;
+  --h2-lh-scaler-value: 6;
+  --h3-scaler-value: 2.5;
+  --h3-lh-scaler-value: 5;
+  --h4-scaler-value: 2;
+  --h4-lh-scaler-value: 5;
+  --h5-scaler-value: 1;
+  --h5-lh-scaler-value: 4;
+  --h6-scaler-value: 1;
+  --h6-lh-scaler-value: 4;
+  --bq-scaler-value: 2;
+  --bq-lh-scaler-value: 2.5;
+  --st-scaler-value: 1;
+  --st-lh-scaler-value: 2; }
+
+* {
+  /* default starting values for scaling formulas */
+  --font-size-min-value: 1rem;
+  --font-size-max-value: 1.25rem;
+  --font-size-scaler-value: var(--p-scaler-value);
+  --font-lh-min-value: 1.5em;
+  --font-lh-max-value: 1.55em;
+  --font-lh-scaler-value: var(--p-lh-scaler-value);
+  /* facter in fontSizeModifier preference */
+  --font-size-min: calc(var(--font-size-min-value) * var(--fontSizeModifier) * 1rem);
+  --font-size-max: calc(var(--font-size-max-value) * var(--fontSizeModifier)  * 1rem);
+  /* reusable font-size var for each text element */
+  --font-size: clamp(var(--font-size-min), calc(0.5rem + (var(--font-size-scaler-value) * 1vw)), var(--font-size-max));
+  /* facter in lineHeightModifier preference */
+  --font-lh-min: calc(var(--font-lh-min-value) * var(--lineHeightModifier) * 1em);
+  --font-lh-max: calc(var(--font-lh-max-value) * var(--lineHeightModifier) * 1em);
+  /* reusable line-height var for each text element */
+  --line-height: clamp(var(--font-lh-min), calc(var(--font-lh-scaler-value) * 1vw), var(--font-lh-max));
+  --word-spacing: calc( 1em * var(--wordSpaceModifier) ); }
+
+/* Static Fonts */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/roboto-slab/RobotoSlab-Regular-subset.woff2") format("woff2"), url("../fonts/roboto-slab/RobotoSlab-Regular-subset.woff") format("woff");
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/roboto-slab/RobotoSlab-Bold-subset.woff2") format("woff2"), url("../fonts/roboto-slab/RobotoSlab-Bold-subset.woff") format("woff");
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Work Sans';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/work-sans/WorkSans-Regular-subset.woff2") format("woff2"), url("../fonts/work-sans/WorkSans-Regular-subset.woff") format("woff");
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Work Sans';
+  font-weight: normal;
+  font-style: italic;
+  src: url("../fonts/work-sans-vf/WorkSans-Italic-subset.woff2") format("woff2 supports variations"), url("../fonts/work-sans-vf/WorkSans-Italic-subset.woff2") format("woff2-variations");
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Work Sans';
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/work-sans/WorkSans-Bold-subset.woff2") format("woff2"), url("../fonts/work-sans/WorkSans-Bold-subset.woff") format("woff");
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Work Sans';
+  font-weight: bold;
+  font-style: italic;
+  src: url("../fonts/work-sans/WorkSans-BoldItalic-subset.woff2") format("woff2"), url("../fonts/work-sans/WorkSans-BoldItalic-subset.woff") format("woff");
+  font-display: swap; }
+
 /* Variable Font  */
 @font-face {
   font-family: 'Roboto Slab VF';
@@ -18,7 +192,7 @@ body {
   /* default: 400 */
   font-style: normal;
   font-stretch: normal;
-  src: url("../fonts/work-sans-vf/WorkSans-Roman-subset.woff2") format("woff2 supports variations"), url("../fonts/roboto-slab-vf/RobotoSlab.woff2") format("woff2-variations"); }
+  src: url("../fonts/work-sans-vf/RobotoSlab-subset.woff2") format("woff2 supports variations"), url("../fonts/roboto-slab-vf/RobotoSlab-subset.woff2") format("woff2-variations"); }
 
 @font-face {
   font-family: 'Work Sans VF';
@@ -89,10 +263,11 @@ html {
   --fc__official__link: white;
   --fc__official__link--hover: #ff8e47;
   --fc__official__link--focus: #ff8e47;
-  --fc__official__link--visited: white;
   --fc__header__fg: white;
   --fc__header__bg: #293557;
-  --fc__nav-main__fg: #404040;
+  --fc__header__social__link: #95bddf;
+  --fc__header__social__link--hover: #face3d;
+  --fc__nav-main__fg: #2e2e2e;
   --fc__nav-main__bg: #95bddf;
   --fc__nav-main__link: #141414;
   --fc__nav-main__link--hover: #293557;
@@ -116,6 +291,7 @@ html {
   --fc__default__hx__fg: #6e6e6e;
   --fc__default__violator: #ff8e47;
   --fc__default__accent: #face3d;
+  --fc__default__accent__fg: #2e2e2e;
   --fc__default__text__accent: #6e6e6e;
   --fc__default__button__bg: #293557;
   --fc__default__button__fg: #face3d;
@@ -159,14 +335,15 @@ html {
     --fc__official__link: #95bddf;
     --fc__official__link--hover: #face3d;
     --fc__official__link--focus: #face3d;
-    --fc__official__link--visited: #95bddf;
     --fc__header__fg: white;
     --fc__header__bg: #1b243b;
+    --fc__header__social__link: #95bddf;
+    --fc__header__social__link--hover: #face3d;
     --fc__nav-main__fg: #d4d4d4;
     --fc__nav-main__bg: #293557;
     --fc__nav-main__link: #d4d4d4;
     --fc__nav-main__link--hover: white;
-    --fc__nav-main__link--hover__bg: #404040;
+    --fc__nav-main__link--hover__bg: #141414;
     --fc__nav-main__link--focus: #face3d;
     --fc__nav-main__link--active: #face3d;
     --fc__nav-main__link--current__border: #1b243b;
@@ -212,9 +389,10 @@ html {
     --fc__official__link: white;
     --fc__official__link--hover: #eb5252;
     --fc__official__link--focus: #eb5252;
-    --fc__official__link--visited: white;
     --fc__header__fg: white;
     --fc__header__bg: #8e3339;
+    --fc__header__social__link: #95bddf;
+    --fc__header__social__link--hover: #face3d;
     --fc__nav-main__fg: #404040;
     --fc__nav-main__bg: #eb5252;
     --fc__nav-main__link: #141414;
@@ -278,9 +456,10 @@ html {
     --fc__official__link: white;
     --fc__official__link--hover: #eb5252;
     --fc__official__link--focus: #eb5252;
-    --fc__official__link--visited: white;
     --fc__header__fg: white;
     --fc__header__bg: #2e2e2e;
+    --fc__header__social__link: #eb5252;
+    --fc__header__social__link--hover: #face3d;
     --fc__nav-main__fg: #d4d4d4;
     --fc__nav-main__bg: #8e3339;
     --fc__nav-main__link: #d4d4d4;
@@ -336,14 +515,15 @@ html {
       --fc__official__link: #95bddf;
       --fc__official__link--hover: #face3d;
       --fc__official__link--focus: #face3d;
-      --fc__official__link--visited: #95bddf;
       --fc__header__fg: white;
       --fc__header__bg: #1b243b;
+      --fc__header__social__link: #95bddf;
+      --fc__header__social__link--hover: #face3d;
       --fc__nav-main__fg: #d4d4d4;
       --fc__nav-main__bg: #293557;
       --fc__nav-main__link: #d4d4d4;
       --fc__nav-main__link--hover: white;
-      --fc__nav-main__link--hover__bg: #404040;
+      --fc__nav-main__link--hover__bg: #141414;
       --fc__nav-main__link--focus: #face3d;
       --fc__nav-main__link--active: #face3d;
       --fc__nav-main__link--current__border: #1b243b;
@@ -389,9 +569,10 @@ html {
         --fc__official__link: white;
         --fc__official__link--hover: #eb5252;
         --fc__official__link--focus: #eb5252;
-        --fc__official__link--visited: white;
         --fc__header__fg: white;
         --fc__header__bg: #2e2e2e;
+        --fc__header__social__link: #eb5252;
+        --fc__header__social__link--hover: #face3d;
         --fc__nav-main__fg: #d4d4d4;
         --fc__nav-main__bg: #8e3339;
         --fc__nav-main__link: #d4d4d4;
@@ -548,7 +729,13 @@ nav ol {
   /* added line */ }
 
 a {
-  color: var(--fc__default__link); }
+  color: var(--fc__default__link);
+  text-decoration: underline;
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: .075em;
+  text-decoration-skip-ink: auto;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease; }
   a:hover, a:focus {
     color: var(--fc__default__link--hover); }
   a:focus {
@@ -577,53 +764,182 @@ a {
   a[rel*="external"]::before {
     -webkit-mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8.5 14.5h-7v-7H5V6H0v10h10v-5H8.5z'/%3E%3Cpath d='M7 3v1.5h3.8l-8.2 8.1.8.8 8.1-8.2V9H13V3z'/%3E%3C/svg%3E") no-repeat;
             mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8.5 14.5h-7v-7H5V6H0v10h10v-5H8.5z'/%3E%3Cpath d='M7 3v1.5h3.8l-8.2 8.1.8.8 8.1-8.2V9H13V3z'/%3E%3C/svg%3E") no-repeat; }
+  .qh__u__no-mail a[href^="mailto:"]::before,
+  .qh__u__no-tel a[href^="tel:"]::before,
+  .qh__u__no-external a[rel*="external"]::before {
+    display: none; }
 
 /* text-size proportional spacer */
 body {
   --body-text-spacer: clamp(1rem, 2vw, 1.25rem); }
 
-p {
-  font-family: var(--font-sans-vf);
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  font-weight: 350;
+/* following element spacing selector, just inside node content */
+.node > * + * {
+  margin-top: var(--body-text-spacer); }
+
+p, address, time, ul,
+ol,
+dl, .form__actions a, button,
+.qh__btn,
+.button, table th, table td, .qh__accordion__button, .qh__file-list__item__label {
+  font-family: "Work Sans", var(--font-sans-fallback);
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5em;
   font-style: normal;
+  margin: 0;
+  max-width: 40em;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;
-          hyphens: auto;
-  line-height: clamp(1.25em, 2vw, 1.4em);
-  margin: 0;
-  max-width: 40em; }
+          hyphens: auto; }
+  .wf-inactive p, .wf-inactive address, .wf-inactive time, .wf-inactive ul,
+  .wf-inactive ol,
+  .wf-inactive dl, .wf-inactive .form__actions a, .form__actions .wf-inactive a, .wf-inactive button,
+  .wf-inactive .qh__btn,
+  .wf-inactive .button, .wf-inactive table th, table .wf-inactive th, .wf-inactive table td, table .wf-inactive td, .wf-inactive .qh__accordion__button, .wf-inactive .qh__file-list__item__label {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.04em; }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf) p, html:not(.novf) address, html:not(.novf) time, html:not(.novf) ul,
+    html:not(.novf) ol,
+    html:not(.novf) dl, html:not(.novf) .form__actions a, .form__actions html:not(.novf) a, html:not(.novf) button,
+    html:not(.novf) .qh__btn,
+    html:not(.novf) .button, html:not(.novf) table th, table html:not(.novf) th, html:not(.novf) table td, table html:not(.novf) td, html:not(.novf) .qh__accordion__button, html:not(.novf) .qh__file-list__item__label {
+      font-family: var(--font-sans-vf);
+      font-weight: var(--p-font-wght); }
+    html:not(.novf).wf-inactive p, html:not(.novf).wf-inactive address, html:not(.novf).wf-inactive time, html:not(.novf).wf-inactive ul,
+    html:not(.novf).wf-inactive ol,
+    html:not(.novf).wf-inactive dl, html:not(.novf).wf-inactive .form__actions a, .form__actions html:not(.novf).wf-inactive a, html:not(.novf).wf-inactive button,
+    html:not(.novf).wf-inactive .qh__btn,
+    html:not(.novf).wf-inactive .button, html:not(.novf).wf-inactive table th, table html:not(.novf).wf-inactive th, html:not(.novf).wf-inactive table td, table html:not(.novf).wf-inactive td, html:not(.novf).wf-inactive .qh__accordion__button, html:not(.novf).wf-inactive .qh__file-list__item__label {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: normal;
+      letter-spacing: 0.035em; } }
   @media screen and (min-width: 47.5em) {
-    p {
+    p, address, time, ul,
+    ol,
+    dl, .form__actions a, button,
+    .qh__btn,
+    .button, table th, table td, .qh__accordion__button, .qh__file-list__item__label {
+      font-size: 1.125rem;
+      line-height: 1.525em; } }
+  @media screen and (min-width: 62em) {
+    p, address, time, ul,
+    ol,
+    dl, .form__actions a, button,
+    .qh__btn,
+    .button, table th, table td, .qh__accordion__button, .qh__file-list__item__label {
+      font-size: 1.25rem;
+      line-height: 1.55em; } }
+  @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    p, address, time, ul,
+    ol,
+    dl, .form__actions a, button,
+    .qh__btn,
+    .button, table th, table td, .qh__accordion__button, .qh__file-list__item__label {
+      --font-size-min: 1rem;
+      --font-size-max: 1.25rem;
+      --font-size-scaler-value: var(--p-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min: 1.5em;
+      --font-lh-max: 1.55em;
+      --font-lh-scaler-value: var(--p-lh-scaler-value);
+      line-height: var(--line-height); } }
+  @media screen and (min-width: 47.5em) {
+    p, address, time, ul,
+    ol,
+    dl, .form__actions a, button,
+    .qh__btn,
+    .button, table th, table td, .qh__accordion__button, .qh__file-list__item__label {
       -webkit-hyphens: none;
           -ms-hyphens: none;
               hyphens: none; } }
-  p + p,
-  p + ul,
-  p + ol,
-  figure + p {
-    margin-top: var(--body-text-spacer); }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: var(--fc__default__hx__fg); }
 
 h1 {
-  font-family: var(--font-serif-vf);
-  font-size: clamp(2rem, 5vw, 5.5rem);
-  font-weight: 275;
+  font-family: "Roboto Slab", var(--font-serif-fallback);
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 1.05em;
   font-style: normal;
-  line-height: clamp(1.05em, 6vw, 1.1em);
   margin-top: 0;
   margin-bottom: calc(var(--body-text-spacer) * 1); }
+  .wf-inactive h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-variant-numeric: lining-nums;
+    font-weight: normal;
+    letter-spacing: 0.035em; }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf):not(.wf-inactive) h1 {
+      font-family: var(--font-serif-vf);
+      font-weight: 275; }
+    html:not(.novf).wf-inactive h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-variant-numeric: lining-nums;
+      font-weight: normal;
+      letter-spacing: 0.035em; } }
+  @media screen and (min-width: 47.5em) {
+    h1 {
+      font-size: 3.75rem;
+      line-height: 1.075em; } }
+  @media screen and (min-width: 62em) {
+    h1 {
+      font-size: 5.5rem;
+      line-height: 1.1em; } }
+  @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    h1 {
+      --font-size-min: 2rem;
+      --font-size-max: 5.5rem;
+      --font-size-scaler-value: var(--h1-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min: 1.05em;
+      --font-lh-max: 1.1em;
+      --font-lh-scaler-value: var(--h1-lh-scaler-value);
+      line-height: var(--line-height); } }
 
 h2 {
-  font-family: var(--font-serif-vf);
-  font-size: clamp(1.5rem, 4vw, 3rem);
-  font-weight: 475;
+  font-family: "Roboto Slab", var(--font-serif-fallback);
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 1.1em;
   font-style: normal;
-  line-height: clamp(1.1em, 6vw, 1.15em);
   margin-top: calc(var(--body-text-spacer) * 2);
   margin-bottom: calc(var(--body-text-spacer) * 0.5); }
+  .wf-inactive h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-variant-numeric: lining-nums;
+    font-weight: normal;
+    letter-spacing: 0.035em; }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf) h2 {
+      font-family: var(--font-serif-vf);
+      font-weight: 475; }
+    html:not(.novf).wf-inactive h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-variant-numeric: lining-nums;
+      font-weight: normal;
+      letter-spacing: 0.035em; } }
+  @media screen and (min-width: 47.5em) {
+    h2 {
+      font-size: 2.25rem;
+      line-height: 1.125em; } }
+  @media screen and (min-width: 62em) {
+    h2 {
+      font-size: 3rem;
+      line-height: 1.15em; } }
+  @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    h2 {
+      --font-size-min: 1.5rem;
+      --font-size-max: 3rem;
+      --font-size-scaler-value: var(--h2-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min: 1.1em;
+      --font-lh-max: 1.15em;
+      --font-lh-scaler-value: var(--h2-lh-scaler-value);
+      line-height: var(--line-height); } }
   h2:first-of-type::after, h2.emphasis::after {
     content: ' ';
     display: block;
@@ -633,36 +949,168 @@ h2 {
     width: 1.125em; }
 
 h3 {
-  font-family: var(--font-sans-vf);
-  font-size: clamp(1.25rem, 2.5vw, 2rem);
-  font-weight: 575;
+  font-family: "Work Sans", var(--font-sans-fallback);
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 1.1em;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5); }
+  .wf-inactive h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-variant-numeric: lining-nums;
+    font-weight: normal;
+    letter-spacing: 0.035em; }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf) h3 {
+      font-family: var(--font-serif-vf);
+      font-weight: 575; }
+    html:not(.novf).wf-inactive h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-variant-numeric: lining-nums;
+      font-weight: normal;
+      letter-spacing: 0.035em; } }
+  @media screen and (min-width: 47.5em) {
+    h3 {
+      font-size: 1.625rem;
+      line-height: 1.125em; } }
+  @media screen and (min-width: 62em) {
+    h3 {
+      font-size: 2rem;
+      line-height: 1.15em; } }
+  @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    h3 {
+      --font-size-min: 1.25rem;
+      --font-size-max: 2rem;
+      --font-size-scaler-value: var(--h3-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min: 1.1em;
+      --font-lh-max: 1.15em;
+      --font-lh-scaler-value: var(--h3-lh-scaler-value);
+      line-height: var(--line-height); } }
 
 h4 {
-  font-family: var(--font-serif-vf);
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  font-weight: 400;
+  font-family: "Roboto Slab", var(--font-serif-fallback);
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.1em;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5); }
+  .wf-inactive h4 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-variant-numeric: lining-nums;
+    font-weight: normal;
+    letter-spacing: 0.035em; }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf) h4 {
+      font-family: var(--font-serif-vf);
+      font-weight: 400; }
+    html:not(.novf).wf-inactive h4 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-variant-numeric: lining-nums;
+      font-weight: normal;
+      letter-spacing: 0.035em; } }
+  @media screen and (min-width: 47.5em) {
+    h4 {
+      font-size: 1.125rem;
+      line-height: 1.2em; } }
+  @media screen and (min-width: 62em) {
+    h4 {
+      font-size: 1.25rem;
+      line-height: 1.3em; } }
+  @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    h4 {
+      --font-size-min: 1rem;
+      --font-size-max: 1.25rem;
+      --font-size-scaler-value: var(--h4-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min: 1.1em;
+      --font-lh-max: 1.3em;
+      --font-lh-scaler-value: var(--h4-lh-scaler-value);
+      line-height: var(--line-height); } }
 
 h5 {
-  font-family: var(--font-serif-vf);
-  font-size: clamp(0.925rem, 1vw, 1.125rem);
-  font-weight: 500;
+  font-family: "Roboto Slab", var(--font-serif-fallback);
+  font-weight: bold;
+  font-size: 0.9375rem;
+  line-height: 1.1em;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5); }
+  .wf-inactive h5 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-variant-numeric: lining-nums;
+    font-weight: normal;
+    letter-spacing: 0.035em; }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf) h5 {
+      font-family: var(--font-serif-vf);
+      font-weight: 500; }
+    html:not(.novf).wf-inactive h5 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-variant-numeric: lining-nums;
+      font-weight: normal;
+      letter-spacing: 0.035em; } }
+  @media screen and (min-width: 47.5em) {
+    h5 {
+      font-size: 1rem;
+      line-height: 1.2em; } }
+  @media screen and (min-width: 62em) {
+    h5 {
+      font-size: 1.125rem;
+      line-height: 1.3em; } }
+  @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    h5 {
+      --font-size-min: 0.9375rem;
+      --font-size-max: 1.125rem;
+      --font-size-scaler-value: var(--h5-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min: 1.1em;
+      --font-lh-max: 1.3em;
+      --font-lh-scaler-value: var(--h5-lh-scaler-value);
+      line-height: var(--line-height); } }
 
 h6 {
-  font-family: var(--font-serif-vf);
-  font-size: clamp(0.825rem, 1vw, 1rem);
-  font-weight: 600;
+  font-family: "Roboto Slab", var(--font-serif-fallback);
+  font-weight: bold;
+  font-size: 0.875rem;
+  line-height: 1.1em;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5); }
+  .wf-inactive h6 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-variant-numeric: lining-nums;
+    font-weight: normal;
+    letter-spacing: 0.035em; }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf) h6 {
+      font-family: var(--font-serif-vf);
+      font-weight: 600; }
+    html:not(.novf).wf-inactive h6 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-variant-numeric: lining-nums;
+      font-weight: normal;
+      letter-spacing: 0.035em; } }
+  @media screen and (min-width: 47.5em) {
+    h6 {
+      font-size: 0.9375rem;
+      line-height: 1.2em; } }
+  @media screen and (min-width: 62em) {
+    h6 {
+      font-size: 1rem;
+      line-height: 1.3em; } }
+  @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    h6 {
+      --font-size-min: 0.875rem;
+      --font-size-max: 1rem;
+      --font-size-scaler-value: var(--h6-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min: 1.1em;
+      --font-lh-max: 1.3em;
+      --font-lh-scaler-value: var(--h6-lh-scaler-value);
+      line-height: var(--line-height); } }
 
 .headline-super {
   font-size: clamp(2.5rem, 6vw, 8rem);
@@ -675,60 +1123,149 @@ b {
 blockquote {
   margin: 0;
   max-width: var(--content-width); }
-  blockquote p {
-    font-size: clamp(1.25rem, 2vw, 1.5rem);
-    font-weight: 150;
+  blockquote p, blockquote address, blockquote time, blockquote ul,
+  blockquote ol,
+  blockquote dl, blockquote .form__actions a, .form__actions blockquote a, blockquote button,
+  blockquote .qh__btn,
+  blockquote .button, blockquote table th, table blockquote th, blockquote table td, table blockquote td, blockquote .qh__accordion__button, blockquote .qh__file-list__item__label {
+    font-family: "Roboto Slab", var(--font-serif-fallback);
+    font-weight: normal;
+    font-size: 1.25rem;
+    line-height: 1.5em;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0.75rem; }
+    .wf-inactive blockquote p, .wf-inactive blockquote address, .wf-inactive blockquote time, .wf-inactive blockquote ul,
+    .wf-inactive blockquote ol,
+    .wf-inactive blockquote dl, .wf-inactive blockquote .form__actions a, .form__actions .wf-inactive blockquote a, .wf-inactive blockquote button,
+    .wf-inactive blockquote .qh__btn,
+    .wf-inactive blockquote .button, .wf-inactive blockquote table th, table .wf-inactive blockquote th, .wf-inactive blockquote table td, table .wf-inactive blockquote td, .wf-inactive blockquote .qh__accordion__button, .wf-inactive blockquote .qh__file-list__item__label {
+      font-family: Georgia, "Times New Roman", serif;
+      font-variant-numeric: lining-nums;
+      font-weight: normal;
+      letter-spacing: 0.035em; }
+    @supports (font-variation-settings: normal) {
+      html:not(.novf) blockquote p, html:not(.novf) blockquote address, html:not(.novf) blockquote time, html:not(.novf) blockquote ul,
+      html:not(.novf) blockquote ol,
+      html:not(.novf) blockquote dl, html:not(.novf) blockquote .form__actions a, .form__actions html:not(.novf) blockquote a, html:not(.novf) blockquote button,
+      html:not(.novf) blockquote .qh__btn,
+      html:not(.novf) blockquote .button, html:not(.novf) blockquote table th, table html:not(.novf) blockquote th, html:not(.novf) blockquote table td, table html:not(.novf) blockquote td, html:not(.novf) blockquote .qh__accordion__button, html:not(.novf) blockquote .qh__file-list__item__label {
+        font-family: var(--font-serif-vf);
+        font-weight: 150; }
+      html:not(.novf).wf-inactive blockquote p, html:not(.novf).wf-inactive blockquote address, html:not(.novf).wf-inactive blockquote time, html:not(.novf).wf-inactive blockquote ul,
+      html:not(.novf).wf-inactive blockquote ol,
+      html:not(.novf).wf-inactive blockquote dl, html:not(.novf).wf-inactive blockquote .form__actions a, .form__actions html:not(.novf).wf-inactive blockquote a, html:not(.novf).wf-inactive blockquote button,
+      html:not(.novf).wf-inactive blockquote .qh__btn,
+      html:not(.novf).wf-inactive blockquote .button, html:not(.novf).wf-inactive blockquote table th, table html:not(.novf).wf-inactive blockquote th, html:not(.novf).wf-inactive blockquote table td, table html:not(.novf).wf-inactive blockquote td, html:not(.novf).wf-inactive blockquote .qh__accordion__button, html:not(.novf).wf-inactive blockquote .qh__file-list__item__label {
+        font-family: Georgia, "Times New Roman", serif;
+        font-variant-numeric: lining-nums;
+        font-weight: normal;
+        letter-spacing: 0.035em; } }
+    @media screen and (min-width: 47.5em) {
+      blockquote p, blockquote address, blockquote time, blockquote ul,
+      blockquote ol,
+      blockquote dl, blockquote .form__actions a, .form__actions blockquote a, blockquote button,
+      blockquote .qh__btn,
+      blockquote .button, blockquote table th, table blockquote th, blockquote table td, table blockquote td, blockquote .qh__accordion__button, blockquote .qh__file-list__item__label {
+        font-size: 1.375rem;
+        line-height: 1.525em; } }
+    @media screen and (min-width: 62em) {
+      blockquote p, blockquote address, blockquote time, blockquote ul,
+      blockquote ol,
+      blockquote dl, blockquote .form__actions a, .form__actions blockquote a, blockquote button,
+      blockquote .qh__btn,
+      blockquote .button, blockquote table th, table blockquote th, blockquote table td, table blockquote td, blockquote .qh__accordion__button, blockquote .qh__file-list__item__label {
+        font-size: 1.5rem;
+        line-height: 1.55em; } }
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      blockquote p, blockquote address, blockquote time, blockquote ul,
+      blockquote ol,
+      blockquote dl, blockquote .form__actions a, .form__actions blockquote a, blockquote button,
+      blockquote .qh__btn,
+      blockquote .button, blockquote table th, table blockquote th, blockquote table td, table blockquote td, blockquote .qh__accordion__button, blockquote .qh__file-list__item__label {
+        --font-size-min: 1.25rem;
+        --font-size-max: 1.5rem;
+        --font-size-scaler-value: var(--bq-scaler-value);
+        font-size: var(--font-size);
+        --font-lh-min: 1.5em;
+        --font-lh-max: 1.55em;
+        --font-lh-scaler-value: var(--bq-lh-scaler-value);
+        line-height: var(--line-height); } }
 
-address {
-  font-family: var(--font-sans-vf);
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  font-weight: 350; }
+/* using this for any small bits of text that should be 'next size down' from paragraphs */
+body {
+  --st-font-wght: var(--default-body-wght); }
 
-time {
-  font-family: var(--font-sans-vf);
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  font-weight: 350; }
+.small-text, label, figcaption, .qh__file-list__item__filesize {
+  font-family: "Work Sans", var(--font-sans-fallback);
+  font-size: 0.75rem;
+  line-height: 1.1em;
+  font-style: normal; }
+  .wf-inactive .small-text, .wf-inactive label, .wf-inactive figcaption, .wf-inactive .qh__file-list__item__filesize {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-variant-numeric: lining-nums;
+    font-weight: normal;
+    letter-spacing: 0.035em; }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf) .small-text, html:not(.novf) label, html:not(.novf) figcaption, html:not(.novf) .qh__file-list__item__filesize {
+      font-family: var(--font-sans-vf);
+      font-weight: var(--st-font-wght); }
+    html:not(.novf).wf-inactive .small-text, html:not(.novf).wf-inactive label, html:not(.novf).wf-inactive figcaption, html:not(.novf).wf-inactive .qh__file-list__item__filesize {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-variant-numeric: lining-nums;
+      font-weight: normal;
+      letter-spacing: 0.035em; } }
+  @media screen and (min-width: 47.5em) {
+    .small-text, label, figcaption, .qh__file-list__item__filesize {
+      font-size: 0.8125rem;
+      line-height: 1.2em; } }
+  @media screen and (min-width: 62em) {
+    .small-text, label, figcaption, .qh__file-list__item__filesize {
+      font-size: 0.875rem;
+      line-height: 1.3em; } }
+  @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    .small-text, label, figcaption, .qh__file-list__item__filesize {
+      --font-size-min: 0.75rem;
+      --font-size-max: 0.875rem;
+      --font-size-scaler-value: var(--st-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min: 1.1em;
+      --font-lh-max: 1.3em;
+      --font-lh-scaler-value: var(--st-lh-scaler-value);
+      line-height: var(--line-height); } }
 
 label {
+  --st-font-wght: 475;
   display: block;
-  font-family: var(--font-sans-vf);
-  font-size: 0.875rem;
-  font-weight: 475; }
+  font-size: 0.875rem; }
 
 ul,
 ol,
 dl {
-  font-family: var(--font-sans-vf);
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  font-weight: 350;
-  font-style: normal;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  line-height: clamp(1.25em, 2vw, 1.4em);
-  margin: 0;
-  max-width: 40em;
   padding: 0; }
-  @media screen and (min-width: 47.5em) {
-    ul,
-    ol,
-    dl {
-      -webkit-hyphens: none;
-          -ms-hyphens: none;
-              hyphens: none; } }
-  p + ul,
-  ul + ul,
-  ul + p, p +
-  ol,
-  ol + ul,
-  ol + p, p +
-  dl,
-  dl + ul,
-  dl + p {
-    margin-top: var(--body-text-spacer); }
+  ul li,
+  ul dd,
+  ol li,
+  ol dd,
+  dl li,
+  dl dd {
+    margin-top: 0;
+    margin-left: 1em; }
+    ul li::marker,
+    ul dd::marker,
+    ol li::marker,
+    ol dd::marker,
+    dl li::marker,
+    dl dd::marker {
+      color: var(--fc__default__text__accent);
+      font-size: 0.875em; }
+    ul li + li,
+    ul dd + li,
+    ol li + li,
+    ol dd + li,
+    dl li + li,
+    dl dd + li {
+      margin-top: calc(var(--body-text-spacer) * 0.5); }
   ul ul,
   ul ol,
   ul dl,
@@ -739,17 +1276,6 @@ dl {
   dl ol,
   dl dl {
     margin: 0; }
-
-li,
-dd {
-  margin-left: 1em; }
-  li::marker,
-  dd::marker {
-    color: var(--fc__default__text__accent);
-    font-size: 0.875em; }
-  li + li,
-  dd + li {
-    margin-top: calc(var(--body-text-spacer) * 0.5); }
 
 .qh-u__list-reset {
   list-style: none;
@@ -762,12 +1288,8 @@ dd {
 figure {
   margin: 0;
   padding: 0; }
-  p + figure {
+  p + figure, address + figure, time + figure, ul + figure, ol + figure, dl + figure, .form__actions a + figure, button + figure, .qh__btn + figure, .button + figure, table th + figure, table td + figure, .qh__accordion__button + figure, .qh__file-list__item__label + figure {
     margin-top: var(--body-text-spacer); }
-
-figcaption {
-  font-family: var(--font-sans-vf);
-  font-size: clamp(0.75rem, 2vw, 0.925rem); }
 
 img {
   display: block;
@@ -780,6 +1302,8 @@ img {
   height: 2.75rem;
   width: 2.75rem;
   pointer-events: none; }
+  .qh__icon__path {
+    fill: currentColor; }
 
 form {
   margin-top: calc(var(--body-text-spacer) * 1);
@@ -805,7 +1329,11 @@ form {
     min-width: 21rem; }
   .flexbox-container > legend {
     min-width: unset; }
-  .flexbox-container > p {
+  .flexbox-container > p, .flexbox-container > address, .flexbox-container > time, .flexbox-container > ul,
+  .flexbox-container > ol,
+  .flexbox-container > dl, .form__actions .flexbox-container > a, .flexbox-container > button,
+  .flexbox-container > .qh__btn,
+  .flexbox-container > .button, table .flexbox-container > th, table .flexbox-container > td, .flexbox-container > .qh__accordion__button, .flexbox-container > .qh__file-list__item__label {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
     width: 100%; }
@@ -823,10 +1351,19 @@ fieldset {
   padding: 1rem 0 1rem 1rem; }
   fieldset > legend {
     display: block;
-    font-family: var(--font-sans-vf);
+    font-family: "Work Sans", var(--font-sans-fallback);
     font-size: 1rem;
     font-weight: 575;
     text-transform: uppercase; }
+    .wf-inactive fieldset > legend {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: bold; }
+    @supports (font-variation-settings: normal) {
+      html:not(.novf) fieldset > legend {
+        font-family: var(--font-sans-vf); }
+      html:not(.novf).wf-inactive fieldset > legend {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: bold; } }
   fieldset + fieldset {
     margin-top: calc(var(--body-text-spacer) * 1.5); }
 
@@ -836,9 +1373,7 @@ fieldset {
     margin-top: calc(var(--body-text-spacer) * 1.5); }
 
 .form__actions a {
-  font-family: var(--font-sans-vf);
-  font-size: 1rem;
-  font-weight: 400; }
+  --p-font-wght: 400; }
 
 input[type='text'],
 input[type='url'],
@@ -851,7 +1386,7 @@ input[type='datetime-local'],
 input[type='month'],
 input[type='tel'],
 input[type='week'] {
-  font-family: var(--font-sans-vf);
+  font-family: "Work Sans", var(--font-sans-fallback);
   font-size: 1rem;
   font-weight: 500;
   width: 100%;
@@ -861,7 +1396,73 @@ input[type='week'] {
   color: var(--fc__default__fg);
   display: inline-block;
   line-height: 1.25;
-  padding: 0.75em 1em; }
+  padding: 0.75em;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease; }
+  .wf-inactive input[type='text'], .wf-inactive
+  input[type='url'], .wf-inactive
+  input[type='email'], .wf-inactive
+  input[type='number'], .wf-inactive
+  input[type='search'], .wf-inactive
+  input[type='date'], .wf-inactive
+  input[type='datetime'], .wf-inactive
+  input[type='datetime-local'], .wf-inactive
+  input[type='month'], .wf-inactive
+  input[type='tel'], .wf-inactive
+  input[type='week'] {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal; }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf) input[type='text'], html:not(.novf)
+    input[type='url'], html:not(.novf)
+    input[type='email'], html:not(.novf)
+    input[type='number'], html:not(.novf)
+    input[type='search'], html:not(.novf)
+    input[type='date'], html:not(.novf)
+    input[type='datetime'], html:not(.novf)
+    input[type='datetime-local'], html:not(.novf)
+    input[type='month'], html:not(.novf)
+    input[type='tel'], html:not(.novf)
+    input[type='week'] {
+      font-family: var(--font-sans-vf); }
+    html:not(.novf).wf-inactive input[type='text'], html:not(.novf).wf-inactive
+    input[type='url'], html:not(.novf).wf-inactive
+    input[type='email'], html:not(.novf).wf-inactive
+    input[type='number'], html:not(.novf).wf-inactive
+    input[type='search'], html:not(.novf).wf-inactive
+    input[type='date'], html:not(.novf).wf-inactive
+    input[type='datetime'], html:not(.novf).wf-inactive
+    input[type='datetime-local'], html:not(.novf).wf-inactive
+    input[type='month'], html:not(.novf).wf-inactive
+    input[type='tel'], html:not(.novf).wf-inactive
+    input[type='week'] {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: normal; } }
+  input[type='text']:hover,
+  input[type='url']:hover,
+  input[type='email']:hover,
+  input[type='number']:hover,
+  input[type='search']:hover,
+  input[type='date']:hover,
+  input[type='datetime']:hover,
+  input[type='datetime-local']:hover,
+  input[type='month']:hover,
+  input[type='tel']:hover,
+  input[type='week']:hover {
+    border-color: var(--fc__default__link--hover); }
+  input[type='text']:focus,
+  input[type='url']:focus,
+  input[type='email']:focus,
+  input[type='number']:focus,
+  input[type='search']:focus,
+  input[type='date']:focus,
+  input[type='datetime']:focus,
+  input[type='datetime-local']:focus,
+  input[type='month']:focus,
+  input[type='tel']:focus,
+  input[type='week']:focus {
+    border-color: var(--fc__default__violator);
+    outline: 0; }
   label + input[type='text'], label +
   input[type='url'], label +
   input[type='email'], label +
@@ -877,44 +1478,79 @@ input[type='week'] {
 
 input[type='password'] {
   border-radius: 0.15em;
-  font-family: var(--font-sans-fallback);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: normal;
   padding: 0.5em 0.5em 0.45em; }
   label + input[type='password'] {
     margin-top: 0.1em; }
 
 textarea {
   border-radius: 0.15em;
-  font-family: var(--font-sans-vf);
+  font-family: "Work Sans", var(--font-sans-fallback);
   font-size: 1rem;
   font-weight: 400;
   padding: 0.5em 0.5em 0.45em;
   width: 100%; }
+  .wf-inactive textarea {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal; }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf) textarea {
+      font-family: var(--font-sans-vf); }
+    html:not(.novf).wf-inactive textarea {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: normal; } }
   label + textarea {
     margin-top: 0.1em; }
 
 select {
   border-radius: 0.15em;
-  font-family: var(--font-sans-vf);
+  font-family: "Work Sans", var(--font-sans-fallback);
   font-size: 1rem;
   font-weight: 400;
   padding: 0.5em 0.5em 0.45em;
   width: 100%; }
+  .wf-inactive select {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: normal; }
+  @supports (font-variation-settings: normal) {
+    html:not(.novf) select {
+      font-family: var(--font-sans-vf); }
+    html:not(.novf).wf-inactive select {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: normal; } }
   label + select {
     margin-top: 0.1em; }
+
+.qh__form__nowrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .qh__form__nowrap > input {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 calc(100% - 12rem);
+            flex: 1 0 calc(100% - 12rem);
+    margin-right: 0.5rem; }
 
 button,
 .qh__btn,
 .button {
+  --p-font-wght: 500;
   border: 0;
   border-radius: 0.1875em;
   display: inline-block;
-  font-family: var(--font-serif-vf);
-  font-size: 1rem;
-  font-weight: 500;
   letter-spacing: 0.03125em;
-  line-height: 1;
   overflow: hidden;
   padding: 1em 1.5em;
   -webkit-transition: all 250ms ease;
@@ -1013,7 +1649,6 @@ body {
       --fc__table__border__v: rgba(255, 255, 255, 0.15); } }
 
 table {
-  font-family: var(--font-sans-vf);
   background-color: transparent;
   border-spacing: 0;
   margin-bottom: 1.5rem;
@@ -1039,23 +1674,25 @@ table {
   table td {
     padding: 0.5rem 0.75rem; }
   table th {
-    font-weight: 550; }
+    --p-font-wght: 550; }
     table th + th {
       border-left: 0.0625rem solid var(--fc__table__border__v); }
   table td {
-    border-bottom: 0.0625rem solid var(--fc__table__border__h);
-    font-weight: 400; }
+    border-bottom: 0.0625rem solid var(--fc__table__border__h); }
     table td + td {
       border-left: 0.0625rem solid var(--fc__table__border__v); }
 
 .google-visualization-table-table {
-  font-family: var(--font-sans-vf) !important;
+  font-family: "Work Sans", var(--font-sans-fallback) !important;
   font-size: inherit !important;
   cursor: default;
   margin: inherit !important;
   background: inherit !important;
   border-spacing: 0;
   border-collapse: inherit !important; }
+  @supports (font-variation-settings: normal) {
+    .google-visualization-table-table {
+      font-family: var(--font-sans-vf) !important; } }
 
 .google-visualization-table .gradient {
   background-image: inherit !important; }
@@ -1116,80 +1753,18 @@ table {
 
 .google-visualization-table-div-page {
   background-color: inherit !important;
-  font-family: var(--font-sans-vf) !important; }
+  font-family: "Work Sans", var(--font-sans-fallback) !important; }
+  @supports (font-variation-settings: normal) {
+    .google-visualization-table-div-page {
+      font-family: var(--font-sans-vf) !important; } }
 
 .google-visualization-table-div-page [role="button"] {
-  font-family: var(--font-sans-vf) !important;
+  font-family: "Work Sans", var(--font-sans-fallback) !important;
   font-size: inherit !important;
   line-height: inherit !important; }
-
-.qh-layout-section {
-  display: grid;
-  grid-gap: 2rem;
-  max-width: 80rem;
-  margin: 0 auto;
-  padding: 2rem 0; }
-  .qh-layout-section--col-size-25 {
-    display: block;
-    margin: 0 auto;
-    width: 25%; }
-  .qh-layout-section--col-size-50 {
-    display: block;
-    margin: 0 auto;
-    width: 50%; }
-  .qh-layout-section--col-size-75 {
-    display: block;
-    margin: 0 auto;
-    width: 75%; }
-  .qh-layout-section--col-size-100 {
-    display: block;
-    margin: 0 auto;
-    width: 100%; }
-  .qh-layout-section--col-size-25-75 {
-    grid-template-areas: 'first second second second'; }
-  .qh-layout-section--col-size-33-67 {
-    grid-template-areas: 'first second second'; }
-  .qh-layout-section--col-size-50-50 {
-    grid-template-areas: 'first second'; }
-  .qh-layout-section--col-size-67-33 {
-    grid-template-areas: 'first first second'; }
-  .qh-layout-section--col-size-75-25 {
-    grid-template-areas: 'first first first second'; }
-  .qh-layout-section--col-size-33-repeat {
-    grid-template-areas: 'first second third'; }
-  .qh-layout-section--col-size-25-repeat {
-    grid-template-areas: 'first second third fourth'; }
-  .qh-layout-section__col .block:first-child:last-child {
-    height: 100%; }
-  .qh-layout-section__col > * + * {
-    margin-top: 1.5rem; }
-  .qh-layout-section__col--first {
-    grid-area: first;
-    max-width: 100%; }
-  .qh-layout-section__col--second {
-    grid-area: second;
-    max-width: 100%; }
-  .qh-layout-section__col--third {
-    grid-area: third;
-    max-width: 100%; }
-  .qh-layout-section__col--fourth {
-    grid-area: fourth;
-    max-width: 100%; }
-  .qh-layout-section--full-width {
-    max-width: 100%; }
-
-.layout-container.layout-builder-page {
-  max-width: 100%; }
-
-.qh-background--rhodyred {
-  background-color: var(--c__rhody-red); }
-
-.qh-background--calamari {
-  background-color: var(--c__calamari); }
-
-.qh-background--navy {
-  background-color: var(--c__navy);
-  color: var(--c__white); }
+  @supports (font-variation-settings: normal) {
+    .google-visualization-table-div-page [role="button"] {
+      font-family: var(--font-sans-vf) !important; } }
 
 .media-item {
   border-left: solid 1rem var(--fc__default__accent); }
@@ -1225,45 +1800,175 @@ table {
       height: 100%; }
   .media-item figcaption {
     background-color: var(--fc__primary--light__bg--dark);
+    margin-top: 0;
     padding: 0.5rem 0.75rem; }
 
-.site-branding {
+.qh__site-branding {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 1rem 1rem 1rem 0; }
-  .site-branding__logo {
+  margin: 1.5rem 1rem 1.5rem 0; }
+  .qh__site-branding__logo {
     margin-right: 1rem;
     display: block;
     width: 3rem;
     min-height: 4.5rem; }
-  .site-branding__name {
+  .qh__site-branding__name {
     display: block; }
-    .site-branding__name:link, .site-branding__name:visited {
+    .qh__site-branding__name, .qh__site-branding__name:visited {
       text-decoration: none; }
-    .site-branding__name__top-line {
+    .qh__site-branding__name__top-line {
+      font-family: "Work Sans", var(--font-sans-fallback);
+      font-weight: normal;
+      font-size: 0.75rem;
+      line-height: 1.1em;
       display: block;
-      font-family: "Work Sans VF", var(--font-sans-fallback);
-      font-size: 0.875rem;
-      font-weight: 450;
-      letter-spacing: 0.035em;
-      line-height: 1;
+      letter-spacing: 0.03125em;
       text-transform: uppercase; }
-    .site-branding__name__main-line {
-      display: block;
-      font-family: "Roboto Slab VF", var(--font-serif-fallback);
-      font-size: 3rem;
-      font-weight: 300;
-      line-height: 1.1; }
-    .site-branding__name__bottom-line {
-      display: block;
-      font-family: "Work Sans VF", var(--font-sans-fallback);
-      font-size: 1rem;
-      font-weight: 350;
-      line-height: 1.5; }
+      .wf-inactive .qh__site-branding__name__top-line {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.04em; }
+      @supports (font-variation-settings: normal) {
+        html:not(.novf) .qh__site-branding__name__top-line {
+          font-family: var(--font-sans-vf);
+          font-weight: 450; }
+        html:not(.novf).wf-inactive .qh__site-branding__name__top-line {
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-weight: normal;
+          letter-spacing: 0.035em; } }
+      @media screen and (min-width: 47.5em) {
+        .qh__site-branding__name__top-line {
+          font-size: 0.8125rem;
+          line-height: 1.2em; } }
+      @media screen and (min-width: 62em) {
+        .qh__site-branding__name__top-line {
+          font-size: 0.875rem;
+          line-height: 1.3em; } }
+      @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+        .qh__site-branding__name__top-line {
+          --font-size-min: 0.75rem;
+          --font-size-max: 0.875rem;
+          --font-size-scaler-value: var(--st-scaler-value);
+          font-size: var(--font-size);
+          --font-lh-min: 1.1em;
+          --font-lh-max: 1.3em;
+          --font-lh-scaler-value: var(--st-lh-scaler-value);
+          line-height: var(--line-height); } }
+    .qh__site-branding__name__main-line {
+      font-family: "Roboto Slab", var(--font-serif-fallback);
+      font-weight: normal;
+      font-size: 2rem;
+      line-height: 1.05em;
+      font-style: normal;
+      display: block; }
+      .wf-inactive .qh__site-branding__name__main-line {
+        font-family: Georgia, "Times New Roman", serif;
+        font-weight: normal;
+        letter-spacing: 0.04em; }
+      @supports (font-variation-settings: normal) {
+        html:not(.novf) .qh__site-branding__name__main-line {
+          font-family: var(--font-serif-vf);
+          font-weight: 300; }
+        html:not(.novf).wf-inactive .qh__site-branding__name__main-line {
+          font-family: Georgia, "Times New Roman", serif;
+          font-weight: normal;
+          letter-spacing: 0.035em; } }
+      @media screen and (min-width: 47.5em) {
+        .qh__site-branding__name__main-line {
+          font-size: 2.5rem;
+          line-height: 1.075em; } }
+      @media screen and (min-width: 62em) {
+        .qh__site-branding__name__main-line {
+          font-size: 3rem;
+          line-height: 1.1em; } }
+      @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+        .qh__site-branding__name__main-line {
+          --font-size-min: 1.75rem;
+          --font-size-max: 3rem;
+          --font-size-scaler-value: var(--h2-scaler-value);
+          font-size: var(--font-size);
+          --font-lh-min: 1.05em;
+          --font-lh-max: 1.1em;
+          --font-lh-scaler-value: var(--h1-lh-scaler-value);
+          line-height: var(--line-height); } }
+    .qh__site-branding__name__bottom-line {
+      font-family: "Work Sans", var(--font-sans-fallback);
+      font-weight: normal;
+      font-size: 0.81255rem;
+      line-height: 1.5em;
+      display: block; }
+      .wf-inactive .qh__site-branding__name__bottom-line {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-weight: normal;
+        letter-spacing: 0.04em; }
+      @supports (font-variation-settings: normal) {
+        html:not(.novf) .qh__site-branding__name__bottom-line {
+          font-family: var(--font-sans-vf);
+          font-weight: 350; }
+        html:not(.novf).wf-inactive .qh__site-branding__name__bottom-line {
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-weight: normal;
+          letter-spacing: 0.035em; } }
+      @media screen and (min-width: 47.5em) {
+        .qh__site-branding__name__bottom-line {
+          font-size: 0.875rem;
+          line-height: 1.2em; } }
+      @media screen and (min-width: 62em) {
+        .qh__site-branding__name__bottom-line {
+          font-size: 1rem;
+          line-height: 1.55em; } }
+      @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+        .qh__site-branding__name__bottom-line {
+          --font-size-min: 0.8125rem;
+          --font-size-max: 1rem;
+          --font-size-scaler-value: var(--p-scaler-value);
+          font-size: var(--font-size);
+          --font-lh-min: 1.5em;
+          --font-lh-max: 1.55em;
+          --font-lh-scaler-value: var(--p-lh-scaler-value);
+          line-height: var(--line-height); } }
+
+.qh__site-search__form {
+  margin: 0; }
+
+.qh__site-search__query {
+  max-width: 12rem; }
+
+.qh__site-search__submit {
+  background-color: var(--fc__default__accent);
+  color: var(--fc__default__accent__fg);
+  padding: 0.1875rem; }
+
+.qh__social-links__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+.qh__social-links a.qh__social-links__link {
+  display: block; }
+  .qh__social-links a.qh__social-links__link, .qh__social-links a.qh__social-links__link:visited {
+    color: var(--fc__header__social__link); }
+  .qh__social-links a.qh__social-links__link:hover, .qh__social-links a.qh__social-links__link:focus {
+    color: var(--fc__header__social__link--hover); }
+  .qh__social-links a.qh__social-links__link:focus {
+    outline: 0.125rem solid var(--fc__default__link--focus);
+    outline-offset: -0.125rem; }
+  .qh__social-links a.qh__social-links__link:active {
+    color: var(--fc__default__link--active); }
 
 .qh__teaser-article {
   position: relative;
@@ -1347,10 +2052,10 @@ table {
         .qh__articles-latest__list > * .qh__teaser-article__cta {
           margin-top: auto; } }
 
-.global-header {
+.qh__global-header {
   background-color: var(--fc__official__bg);
   color: var(--fc__official__fg); }
-  .global-header .content-wrapper {
+  .qh__global-header__wrapper {
     margin: 0 auto;
     max-width: 93vw;
     display: -webkit-box;
@@ -1361,31 +2066,95 @@ table {
             justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    padding: 0.75rem 1rem; }
     @supports (width: 5px) {
-      .global-header .content-wrapper {
+      .qh__global-header__wrapper {
         max-width: var(--content-max-width); } }
-  .global-header a:link {
+  .qh__global-header a, .qh__global-header a:visited {
     color: var(--fc__official__link); }
-  .global-header a:hover {
+  .qh__global-header a:hover, .qh__global-header a:focus {
     color: var(--fc__official__link--hover); }
-  .global-header a:focus {
-    color: var(--fc__official__link--focus); }
-  .global-header a:active {
+  .qh__global-header a:focus {
+    outline-color: var(--fc__official__link--focus); }
+  .qh__global-header a:active {
     color: var(--fc__official__link--active); }
-  .global-header a:visited {
-    color: var(--fc__official__link--visited); }
-  .global-header p {
+  .qh__global-header p, .qh__global-header address, .qh__global-header time, .qh__global-header ul,
+  .qh__global-header ol,
+  .qh__global-header dl, .qh__global-header .form__actions a, .form__actions .qh__global-header a, .qh__global-header button,
+  .qh__global-header .qh__btn,
+  .qh__global-header .button, .qh__global-header table th, table .qh__global-header th, .qh__global-header table td, table .qh__global-header td, .qh__global-header .qh__accordion__button, .qh__global-header .qh__file-list__item__label {
     font-size: 0.875rem;
     font-weight: 375; }
-  .global-header button {
-    background: transparent;
-    border: none;
-    color: var(--fc__official__link);
-    font-family: "Work Sans VF", var(--font-sans-fallback);
-    font-size: 0.875rem;
-    font-weight: 375;
-    text-decoration: underline; }
+    .qh__global-header p + p, .qh__global-header address + p, .qh__global-header time + p, .qh__global-header ul + p, .qh__global-header ol + p, .qh__global-header dl + p, .qh__global-header .form__actions a + p, .form__actions .qh__global-header a + p, .qh__global-header button + p, .qh__global-header .qh__btn + p, .qh__global-header .button + p, .qh__global-header table th + p, table .qh__global-header th + p, .qh__global-header table td + p, table .qh__global-header td + p, .qh__global-header .qh__accordion__button + p, .qh__global-header .qh__file-list__item__label + p, .qh__global-header p + address, .qh__global-header address + address, .qh__global-header time + address, .qh__global-header ul + address, .qh__global-header ol + address, .qh__global-header dl + address, .qh__global-header .form__actions a + address, .form__actions .qh__global-header a + address, .qh__global-header button + address, .qh__global-header .qh__btn + address, .qh__global-header .button + address, .qh__global-header table th + address, table .qh__global-header th + address, .qh__global-header table td + address, table .qh__global-header td + address, .qh__global-header .qh__accordion__button + address, .qh__global-header .qh__file-list__item__label + address, .qh__global-header p + time, .qh__global-header address + time, .qh__global-header time + time, .qh__global-header ul + time, .qh__global-header ol + time, .qh__global-header dl + time, .qh__global-header .form__actions a + time, .form__actions .qh__global-header a + time, .qh__global-header button + time, .qh__global-header .qh__btn + time, .qh__global-header .button + time, .qh__global-header table th + time, table .qh__global-header th + time, .qh__global-header table td + time, table .qh__global-header td + time, .qh__global-header .qh__accordion__button + time, .qh__global-header .qh__file-list__item__label + time, .qh__global-header p + ul, .qh__global-header address + ul, .qh__global-header time + ul, .qh__global-header ul + ul, .qh__global-header ol + ul, .qh__global-header dl + ul, .qh__global-header .form__actions a + ul, .form__actions .qh__global-header a + ul, .qh__global-header button + ul, .qh__global-header .qh__btn + ul, .qh__global-header .button + ul, .qh__global-header table th + ul, table .qh__global-header th + ul, .qh__global-header table td + ul, table .qh__global-header td + ul, .qh__global-header .qh__accordion__button + ul, .qh__global-header .qh__file-list__item__label + ul,
+    .qh__global-header p + ol,
+    .qh__global-header address + ol,
+    .qh__global-header time + ol,
+    .qh__global-header ul + ol,
+    .qh__global-header ol + ol,
+    .qh__global-header dl + ol,
+    .qh__global-header .form__actions a + ol, .form__actions .qh__global-header a + ol,
+    .qh__global-header button + ol,
+    .qh__global-header .qh__btn + ol,
+    .qh__global-header .button + ol,
+    .qh__global-header table th + ol, table .qh__global-header th + ol,
+    .qh__global-header table td + ol, table .qh__global-header td + ol,
+    .qh__global-header .qh__accordion__button + ol,
+    .qh__global-header .qh__file-list__item__label + ol,
+    .qh__global-header p + dl,
+    .qh__global-header address + dl,
+    .qh__global-header time + dl,
+    .qh__global-header ul + dl,
+    .qh__global-header ol + dl,
+    .qh__global-header dl + dl,
+    .qh__global-header .form__actions a + dl, .form__actions .qh__global-header a + dl,
+    .qh__global-header button + dl,
+    .qh__global-header .qh__btn + dl,
+    .qh__global-header .button + dl,
+    .qh__global-header table th + dl, table .qh__global-header th + dl,
+    .qh__global-header table td + dl, table .qh__global-header td + dl,
+    .qh__global-header .qh__accordion__button + dl,
+    .qh__global-header .qh__file-list__item__label + dl, .qh__global-header .form__actions p + a, .form__actions .qh__global-header p + a, .qh__global-header .form__actions address + a, .form__actions .qh__global-header address + a, .qh__global-header .form__actions time + a, .form__actions .qh__global-header time + a, .qh__global-header .form__actions ul + a, .form__actions .qh__global-header ul + a, .qh__global-header .form__actions ol + a, .form__actions .qh__global-header ol + a, .qh__global-header .form__actions dl + a, .form__actions .qh__global-header dl + a, .qh__global-header .form__actions a + a, .form__actions .qh__global-header a + a, .qh__global-header .form__actions button + a, .form__actions .qh__global-header button + a, .qh__global-header .form__actions .qh__btn + a, .form__actions .qh__global-header .qh__btn + a, .qh__global-header .form__actions .button + a, .form__actions .qh__global-header .button + a, .qh__global-header table .form__actions th + a, .form__actions .qh__global-header table th + a, table .qh__global-header .form__actions th + a, .form__actions table .qh__global-header th + a, .qh__global-header table .form__actions td + a, .form__actions .qh__global-header table td + a, table .qh__global-header .form__actions td + a, .form__actions table .qh__global-header td + a, .qh__global-header .form__actions .qh__accordion__button + a, .form__actions .qh__global-header .qh__accordion__button + a, .qh__global-header .form__actions .qh__file-list__item__label + a, .form__actions .qh__global-header .qh__file-list__item__label + a, .qh__global-header p + button, .qh__global-header address + button, .qh__global-header time + button, .qh__global-header ul + button, .qh__global-header ol + button, .qh__global-header dl + button, .qh__global-header .form__actions a + button, .form__actions .qh__global-header a + button, .qh__global-header button + button, .qh__global-header .qh__btn + button, .qh__global-header .button + button, .qh__global-header table th + button, table .qh__global-header th + button, .qh__global-header table td + button, table .qh__global-header td + button, .qh__global-header .qh__accordion__button + button, .qh__global-header .qh__file-list__item__label + button,
+    .qh__global-header p + .qh__btn,
+    .qh__global-header address + .qh__btn,
+    .qh__global-header time + .qh__btn,
+    .qh__global-header ul + .qh__btn,
+    .qh__global-header ol + .qh__btn,
+    .qh__global-header dl + .qh__btn,
+    .qh__global-header .form__actions a + .qh__btn, .form__actions .qh__global-header a + .qh__btn,
+    .qh__global-header button + .qh__btn,
+    .qh__global-header .qh__btn + .qh__btn,
+    .qh__global-header .button + .qh__btn,
+    .qh__global-header table th + .qh__btn, table .qh__global-header th + .qh__btn,
+    .qh__global-header table td + .qh__btn, table .qh__global-header td + .qh__btn,
+    .qh__global-header .qh__accordion__button + .qh__btn,
+    .qh__global-header .qh__file-list__item__label + .qh__btn,
+    .qh__global-header p + .button,
+    .qh__global-header address + .button,
+    .qh__global-header time + .button,
+    .qh__global-header ul + .button,
+    .qh__global-header ol + .button,
+    .qh__global-header dl + .button,
+    .qh__global-header .form__actions a + .button, .form__actions .qh__global-header a + .button,
+    .qh__global-header button + .button,
+    .qh__global-header .qh__btn + .button,
+    .qh__global-header .button + .button,
+    .qh__global-header table th + .button, table .qh__global-header th + .button,
+    .qh__global-header table td + .button, table .qh__global-header td + .button,
+    .qh__global-header .qh__accordion__button + .button,
+    .qh__global-header .qh__file-list__item__label + .button, .qh__global-header table p + th, table .qh__global-header p + th, .qh__global-header table address + th, table .qh__global-header address + th, .qh__global-header table time + th, table .qh__global-header time + th, .qh__global-header table ul + th, table .qh__global-header ul + th, .qh__global-header table ol + th, table .qh__global-header ol + th, .qh__global-header table dl + th, table .qh__global-header dl + th, .qh__global-header .form__actions table a + th, table .qh__global-header .form__actions a + th, .form__actions .qh__global-header table a + th, table .form__actions .qh__global-header a + th, .qh__global-header table button + th, table .qh__global-header button + th, .qh__global-header table .qh__btn + th, table .qh__global-header .qh__btn + th, .qh__global-header table .button + th, table .qh__global-header .button + th, .qh__global-header table th + th, table .qh__global-header th + th, .qh__global-header table td + th, table .qh__global-header td + th, .qh__global-header table .qh__accordion__button + th, table .qh__global-header .qh__accordion__button + th, .qh__global-header table .qh__file-list__item__label + th, table .qh__global-header .qh__file-list__item__label + th, .qh__global-header table p + td, table .qh__global-header p + td, .qh__global-header table address + td, table .qh__global-header address + td, .qh__global-header table time + td, table .qh__global-header time + td, .qh__global-header table ul + td, table .qh__global-header ul + td, .qh__global-header table ol + td, table .qh__global-header ol + td, .qh__global-header table dl + td, table .qh__global-header dl + td, .qh__global-header .form__actions table a + td, table .qh__global-header .form__actions a + td, .form__actions .qh__global-header table a + td, table .form__actions .qh__global-header a + td, .qh__global-header table button + td, table .qh__global-header button + td, .qh__global-header table .qh__btn + td, table .qh__global-header .qh__btn + td, .qh__global-header table .button + td, table .qh__global-header .button + td, .qh__global-header table th + td, table .qh__global-header th + td, .qh__global-header table td + td, table .qh__global-header td + td, .qh__global-header table .qh__accordion__button + td, table .qh__global-header .qh__accordion__button + td, .qh__global-header table .qh__file-list__item__label + td, table .qh__global-header .qh__file-list__item__label + td, .qh__global-header p + .qh__accordion__button, .qh__global-header address + .qh__accordion__button, .qh__global-header time + .qh__accordion__button, .qh__global-header ul + .qh__accordion__button, .qh__global-header ol + .qh__accordion__button, .qh__global-header dl + .qh__accordion__button, .qh__global-header .form__actions a + .qh__accordion__button, .form__actions .qh__global-header a + .qh__accordion__button, .qh__global-header button + .qh__accordion__button, .qh__global-header .qh__btn + .qh__accordion__button, .qh__global-header .button + .qh__accordion__button, .qh__global-header table th + .qh__accordion__button, table .qh__global-header th + .qh__accordion__button, .qh__global-header table td + .qh__accordion__button, table .qh__global-header td + .qh__accordion__button, .qh__global-header .qh__accordion__button + .qh__accordion__button, .qh__global-header .qh__file-list__item__label + .qh__accordion__button, .qh__global-header p + .qh__file-list__item__label, .qh__global-header address + .qh__file-list__item__label, .qh__global-header time + .qh__file-list__item__label, .qh__global-header ul + .qh__file-list__item__label, .qh__global-header ol + .qh__file-list__item__label, .qh__global-header dl + .qh__file-list__item__label, .qh__global-header .form__actions a + .qh__file-list__item__label, .form__actions .qh__global-header a + .qh__file-list__item__label, .qh__global-header button + .qh__file-list__item__label, .qh__global-header .qh__btn + .qh__file-list__item__label, .qh__global-header .button + .qh__file-list__item__label, .qh__global-header table th + .qh__file-list__item__label, table .qh__global-header th + .qh__file-list__item__label, .qh__global-header table td + .qh__file-list__item__label, table .qh__global-header td + .qh__file-list__item__label, .qh__global-header .qh__accordion__button + .qh__file-list__item__label, .qh__global-header .qh__file-list__item__label + .qh__file-list__item__label {
+      margin-top: 0; }
+
+.dialog-off-canvas-main-canvas {
+  position: relative;
+  overflow: hidden; }
+
+body {
+  --nav-state: js-mobile; }
+
+@media (min-width: 47.5em) {
+  body {
+    --nav-state: js-desktop; } }
 
 .qh__nav-main {
   background-color: var(--fc__nav-main__bg);
@@ -1394,13 +2163,53 @@ table {
     display: block;
     -webkit-transition: all 250ms ease;
     transition: all 250ms ease; }
-  .qh__nav-main .qh__icon {
-    margin: -0.75em -0.75em -0.75em 0; }
-  .qh__nav-main .qh__icon__home__shape {
-    fill: var(--fc__nav-main__fg); }
-  .qh__nav-main > .qh__nav-main__list {
+  .qh__nav-main__wrapper {
     margin: 0 auto;
     max-width: 93vw;
+    position: relative;
+    overflow: visible;
+    z-index: 451; }
+    @supports (width: 5px) {
+      .qh__nav-main__wrapper {
+        max-width: var(--content-max-width); } }
+    @media (max-width: 47.4375em) {
+      .qh__nav-main__wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row nowrap;
+                flex-flow: row nowrap;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
+  .qh__nav-main__overlay::after {
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.25);
+    content: '';
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    pointer-events: none;
+    -webkit-transition: opacity 500ms ease 0ms, z-index 0ms linear 500ms;
+    transition: opacity 500ms ease 0ms, z-index 0ms linear 500ms;
+    z-index: -1; }
+  .qh__nav-main__overlay--visible::after {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transition: opacity 500ms ease 0ms, z-index 0ms linear 0ms;
+    transition: opacity 500ms ease 0ms, z-index 0ms linear 0ms;
+    z-index: 450; }
+  .qh__nav-main__toggle {
+    background-image: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1411,24 +2220,161 @@ table {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; }
-    @supports (width: 5px) {
-      .qh__nav-main > .qh__nav-main__list {
-        max-width: var(--content-max-width); } }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 1.5rem 0 0.75rem; }
+    .qh__nav-main__toggle, .qh__nav-main__toggle:visited {
+      color: var(--fc__nav-main__link);
+      background-color: transparent; }
+    .qh__nav-main__toggle:hover, .qh__nav-main__toggle:focus {
+      color: var(--fc__nav-main__link--hover);
+      background-color: transparent; }
+    .qh__nav-main__toggle:active {
+      color: var(--fc__nav-main__link--active);
+      background-color: transparent; }
+    @media (min-width: 47.5em) {
+      .qh__nav-main__toggle {
+        display: none; } }
+    .qh__nav-main__toggle .qh__icon__menu {
+      display: block;
+      height: 2.75rem;
+      width: 2.75rem;
+      overflow: hidden;
+      position: relative;
+      z-index: 1; }
+      .qh__nav-main__toggle .qh__icon__menu::before, .qh__nav-main__toggle .qh__icon__menu::after,
+      .qh__nav-main__toggle .qh__icon__menu > span {
+        display: block;
+        background-color: currentColor;
+        height: 0.125rem;
+        position: absolute;
+        width: 1.25rem; }
+      .qh__nav-main__toggle .qh__icon__menu::before {
+        content: '';
+        top: 0.75rem;
+        left: 0.75rem; }
+      .qh__nav-main__toggle .qh__icon__menu > span {
+        top: 1.3125rem;
+        left: 0.75rem; }
+      .qh__nav-main__toggle .qh__icon__menu::after {
+        content: '';
+        top: 1.875rem;
+        left: 0.75rem; }
+    .qh__nav-main__toggle:hover .qh__icon__menu::before,
+    .qh__nav-main__toggle:hover .qh__icon__menu::after, .qh__nav-main__toggle:focus .qh__icon__menu::before,
+    .qh__nav-main__toggle:focus .qh__icon__menu::after, .qh__nav-main__toggle:active .qh__icon__menu::before,
+    .qh__nav-main__toggle:active .qh__icon__menu::after {
+      left: 0.625rem; }
+    .qh__nav-main__toggle:hover .qh__icon__menu > span, .qh__nav-main__toggle:focus .qh__icon__menu > span, .qh__nav-main__toggle:active .qh__icon__menu > span {
+      left: 0.875rem; }
+    .qh__nav-main__toggle[aria-expanded="false"] .qh__icon__menu::before,
+    .qh__nav-main__toggle[aria-expanded="false"] .qh__icon__menu::after,
+    .qh__nav-main__toggle[aria-expanded="false"] .qh__icon__menu > span {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg); }
+    .qh__nav-main__toggle[aria-expanded="false"] .qh__icon__menu::before,
+    .qh__nav-main__toggle[aria-expanded="false"] .qh__icon__menu::after {
+      -webkit-transition: top 250ms ease, left 250ms ease, width 250ms ease, -webkit-transform 250ms ease;
+      transition: top 250ms ease, left 250ms ease, width 250ms ease, -webkit-transform 250ms ease;
+      transition: transform 250ms ease, top 250ms ease, left 250ms ease, width 250ms ease;
+      transition: transform 250ms ease, top 250ms ease, left 250ms ease, width 250ms ease, -webkit-transform 250ms ease; }
+    .qh__nav-main__toggle[aria-expanded="false"] .qh__icon__menu > span {
+      opacity: 1;
+      -webkit-transition: opacity 250ms ease 62.5ms, left 250ms ease 0ms;
+      transition: opacity 250ms ease 62.5ms, left 250ms ease 0ms; }
+    .qh__nav-main__toggle[aria-expanded="true"] .qh__icon__menu::before,
+    .qh__nav-main__toggle[aria-expanded="true"] .qh__icon__menu::after {
+      -webkit-transition: top 250ms ease, left 250ms ease, width 250ms ease, -webkit-transform 250ms ease;
+      transition: top 250ms ease, left 250ms ease, width 250ms ease, -webkit-transform 250ms ease;
+      transition: transform 250ms ease, top 250ms ease, left 250ms ease, width 250ms ease;
+      transition: transform 250ms ease, top 250ms ease, left 250ms ease, width 250ms ease, -webkit-transform 250ms ease; }
+    .qh__nav-main__toggle[aria-expanded="true"] .qh__icon__menu::before {
+      top: 1.3125rem;
+      left: 0.625rem;
+      -webkit-transform: rotate(135deg);
+              transform: rotate(135deg);
+      width: 1.5rem; }
+    .qh__nav-main__toggle[aria-expanded="true"] .qh__icon__menu > span {
+      left: -1.25rem;
+      opacity: 0;
+      -webkit-transition: opacity 250ms ease 0ms, left 250ms ease 62.5ms;
+      transition: opacity 250ms ease 0ms, left 250ms ease 62.5ms; }
+    .qh__nav-main__toggle[aria-expanded="true"] .qh__icon__menu::after {
+      top: 1.3125rem;
+      left: 0.625rem;
+      -webkit-transform: rotate(-135deg);
+              transform: rotate(-135deg);
+      width: 1.5rem; }
+  @media (max-width: 47.4375em) {
+    .qh__nav-main__list__outermost {
+      background-color: var(--fc__nav-main__bg);
+      color: var(--fc__nav-main__fg);
+      opacity: 0;
+      position: absolute;
+      top: 100%;
+      right: calc((100vw - var(--content-max-width)) * -0.5);
+      -webkit-transform: translateX(100vw);
+              transform: translateX(100vw);
+      -webkit-transition: all 500ms ease;
+      transition: all 500ms ease;
+      width: 86vw; }
+      [aria-expanded="true"] + .qh__nav-main__list__outermost {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease; } }
+  @media (min-width: 47.5em) {
+    .qh__nav-main__list__outermost {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
   .qh__nav-main__list__sub {
     background-color: var(--fc__nav-main__link--hover__bg);
-    -webkit-box-shadow: 0 0.125em 0.5em var(--c__quahog--dark--trans33);
-            box-shadow: 0 0.125em 0.5em var(--c__quahog--dark--trans33);
-    min-width: 15rem;
-    opacity: 0;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    -webkit-transition: 500ms opacity ease 0s, 0s visibility linear 500ms;
-    transition: 500ms opacity ease 0s, 0s visibility linear 500ms;
-    visibility: hidden; }
+    min-width: 15rem; }
+    @media (max-width: 47.4375em) {
+      .qh__nav-main__list__sub {
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: max-height 0s linear 1s, visibility 0s linear 0s;
+        transition: max-height 0s linear 1s, visibility 0s linear 0s;
+        visibility: hidden; }
+        .qh__nav-main__list__sub > li {
+          border-left: 0.5rem solid var(--fc__nav-main__bg);
+          opacity: 0;
+          -webkit-transition: all 250ms ease 0ms;
+          transition: all 250ms ease 0ms; }
+        .js [aria-expanded="true"] + .qh__nav-main__list__sub {
+          max-height: unset;
+          -webkit-transition: max-height 0s linear 500s, visibility 0s linear 0ms;
+          transition: max-height 0s linear 500s, visibility 0s linear 0ms;
+          visibility: visible; }
+          .js [aria-expanded="true"] + .qh__nav-main__list__sub > li {
+            opacity: 1;
+            -webkit-transition: all 250ms ease 125ms;
+            transition: all 250ms ease 125ms; } }
+    @media (min-width: 47.5em) {
+      .qh__nav-main__list__sub {
+        -webkit-box-shadow: 0 0.125em 0.5em var(--c__quahog--dark--trans33);
+                box-shadow: 0 0.125em 0.5em var(--c__quahog--dark--trans33);
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        -webkit-transition: 500ms opacity ease 0s, 0s visibility linear 500ms;
+        transition: 500ms opacity ease 0s, 0s visibility linear 500ms;
+        visibility: hidden; } }
   .qh__nav-main__item {
     position: relative;
     overflow: visible;
@@ -1439,6 +2385,17 @@ table {
       display: block;
       height: 0;
       margin: 0 0.5em; }
+    .qh__nav-main__item__search {
+      padding: 0.5rem 0.75rem; }
+      .qh__nav-main__item__search .qh__form__nowrap > input {
+        max-width: unset; }
+    .qh__nav-main__item__social {
+      padding: 0.5rem 0.75rem; }
+    @media (min-width: 47.5em) {
+      .qh__nav-main__item__search, .qh__nav-main__item__social {
+        opacity: 0;
+        visibility: hidden;
+        width: 0; } }
   .qh__nav-main__has-children .qh__nav-main__link {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1453,6 +2410,13 @@ table {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
+    @media (max-width: 47.4375em) {
+      .qh__nav-main__has-children .qh__nav-main__link {
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
+    .qh__nav-main__has-children .qh__nav-main__link .qh__icon {
+      margin: -0.75em -0.75em -0.75em 0; }
     .qh__nav-main__has-children .qh__nav-main__link .qh__icon__chevron-down__circle {
       fill: var(--fc__nav-main__icon__bg); }
     .qh__nav-main__has-children .qh__nav-main__link .qh__icon__chevron-down__arrow {
@@ -1501,23 +2465,30 @@ table {
     padding: 0.75rem 1rem 1rem; }
     .qh__nav-main__link, .qh__nav-main__link:visited {
       background-color: transparent;
-      border-top: 0.25rem solid var(--fc__nav-main__bg);
       color: var(--fc__nav-main__link);
       font-size: clamp(0.925rem, 1.5vw, 1rem);
       font-weight: 450;
       text-decoration: none; }
+      @media (min-width: 47.5em) {
+        .qh__nav-main__link, .qh__nav-main__link:visited {
+          border-top: 0.25rem solid var(--fc__nav-main__bg); } }
     .qh__nav-main__link:focus {
       outline-color: var(--fc__nav-main__link--focus);
       outline-offset: -2px; }
     .qh__nav-main__link:active {
       color: var(--fc__nav-main__link--active); }
     .qh__nav-main__link.qh__nav-main__link--current {
-      border-top-color: var(--fc__nav-main__link--hover__bg);
       color: var(--fc__nav-main__fg);
       cursor: default;
       font-weight: 550;
       padding: 1rem 1rem 0.75rem;
       pointer-events: none; }
+      @media (max-width: 47.4375em) {
+        .qh__nav-main__link.qh__nav-main__link--current {
+          border-left: 0.5rem solid var(--fc__nav-main__link--hover__bg); } }
+      @media (min-width: 47.5em) {
+        .qh__nav-main__link.qh__nav-main__link--current {
+          border-top: 0.25rem solid var(--fc__nav-main__link--hover__bg); } }
     .qh__nav-main__link__sub {
       border: 0;
       padding: 0.625rem 1rem; }
@@ -1528,6 +2499,14 @@ table {
       cursor: default;
       padding: 0.625rem 1rem;
       pointer-events: none; }
+    @media (min-width: 47.5em) {
+      .qh__nav-main__wrapper > .qh__nav-main__link--home {
+        display: none;
+        visibility: hidden; } }
+    @media (max-width: 47.4375em) {
+      .qh__nav-main__list__outermost .qh__nav-main__link--home {
+        display: none;
+        visibility: hidden; } }
     .qh__nav-main__link--home .qh__icon {
       margin: 0; }
     .qh__nav-main__link--home, .qh__nav-main__link--home:visited {
@@ -1611,7 +2590,7 @@ table {
     background-color: var(--fc__nav-minor__link__bg);
     color: var(--fc__nav-minor__link);
     text-decoration: none; }
-  .qh__nav-minor .qh__accordion__button:hover, .qh__nav-minor .qh__accordion__button:focus, .qh__nav-minor__link:hover, .qh__nav-minor__link:focus {
+  .qh__nav-minor .qh__accordion__button :hover, .qh__nav-minor .qh__accordion__button :focus, .qh__nav-minor__link :hover, .qh__nav-minor__link :focus {
     background-color: var(--fc__nav-minor__link--hover__bg);
     color: var(--fc__nav-minor__link--hover); }
   .qh__nav-minor .qh__accordion__button:focus, .qh__nav-minor__link:focus {
@@ -1656,7 +2635,11 @@ table {
       color: var(--fc__footer__fg); }
     .qh__site-footer a:visited {
       color: var(--fc__footer__fg); }
-  .qh__site-footer p {
+  .qh__site-footer p, .qh__site-footer address, .qh__site-footer time, .qh__site-footer ul,
+  .qh__site-footer ol,
+  .qh__site-footer dl, .qh__site-footer .form__actions a, .form__actions .qh__site-footer a, .qh__site-footer button,
+  .qh__site-footer .qh__btn,
+  .qh__site-footer .button, .qh__site-footer table th, table .qh__site-footer th, .qh__site-footer table td, table .qh__site-footer td, .qh__site-footer .qh__accordion__button, .qh__site-footer .qh__file-list__item__label {
     font-size: 1rem;
     margin-top: 0; }
   .qh__site-footer__content-left {
@@ -1699,52 +2682,103 @@ table {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start; }
-      .qh__site-footer__copyright__content p {
+      .qh__site-footer__copyright__content p, .qh__site-footer__copyright__content address, .qh__site-footer__copyright__content time, .qh__site-footer__copyright__content ul,
+      .qh__site-footer__copyright__content ol,
+      .qh__site-footer__copyright__content dl, .qh__site-footer__copyright__content .form__actions a, .form__actions .qh__site-footer__copyright__content a, .qh__site-footer__copyright__content button,
+      .qh__site-footer__copyright__content .qh__btn,
+      .qh__site-footer__copyright__content .button, .qh__site-footer__copyright__content table th, table .qh__site-footer__copyright__content th, .qh__site-footer__copyright__content table td, table .qh__site-footer__copyright__content td, .qh__site-footer__copyright__content .qh__accordion__button, .qh__site-footer__copyright__content .qh__file-list__item__label {
         font-size: 87.5%;
         max-width: unset; }
     .qh__site-footer__copyright svg:first-of-type {
       width: 3.125rem;
       margin: -0.75rem 1rem -0.75rem 0; }
 
-.page-header {
+.qh__page-header {
   background-color: var(--fc__header__bg);
   color: var(--fc__header__fg); }
-  .page-header .content-wrapper {
+  .qh__page-header__wrapper {
+    margin: 0 auto;
+    max-width: 93vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
-    margin: 0 auto;
-    max-width: 93vw; }
+            align-items: center; }
     @supports (width: 5px) {
-      .page-header .content-wrapper {
+      .qh__page-header__wrapper {
         max-width: var(--content-max-width); } }
-  .page-header a:link {
+    .qh__page-header__wrapper .qh__site-branding {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 66%;
+              flex: 1 1 66%; }
+      @media (min-width: 62em) {
+        .qh__page-header__wrapper .qh__site-branding {
+          -webkit-box-flex: 1;
+              -ms-flex: 1 1 auto;
+                  flex: 1 1 auto; } }
+  .qh__page-header__inner {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0%;
+            flex: 1 1 0%; }
+    @media (max-width: 47.4375em) {
+      .qh__page-header__inner {
+        opacity: 0;
+        visibility: hidden; } }
+    @media (min-width: 47.5em) {
+      .qh__page-header__inner {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 34%;
+                flex: 1 1 34%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+                flex-flow: column;
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: flex-end;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
+    @media (max-width: 61.9375em) {
+      .qh__page-header__inner .qh__social-links__list {
+        margin-top: -0.5rem;
+        margin-right: -0.5rem; } }
+    @media (min-width: 62em) {
+      .qh__page-header__inner {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row nowrap;
+                flex-flow: row nowrap;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end; }
+        .qh__page-header__inner .qh__social-links {
+          padding: 0 1rem; } }
+  .qh__page-header a, .qh__page-header a:visited {
     color: var(--fc__header__link); }
-  .page-header a:hover {
+  .qh__page-header a:hover, .qh__page-header a:focus {
     color: var(--fc__header__link--hover); }
-  .page-header a:focus {
-    color: var(--fc__header__link--focus); }
-  .page-header a:active {
+  .qh__page-header a:focus {
+    outline-color: var(--fc__header__link--focus); }
+  .qh__page-header a:active {
     color: var(--fc__header__link--active); }
-  .page-header a:visited {
-    color: var(--fc__header__link--visited); }
-  .page-header p {
-    font-size: 0.875rem;
-    font-weight: 375; }
-  .page-header button {
-    background: transparent;
-    border: none;
-    color: var(--fc__header__link);
-    font-family: "Work Sans VF", var(--font-sans-fallback);
-    font-size: 0.875rem;
-    font-weight: 375;
-    text-decoration: underline; }
 
 /*
  * Styling and functional best practices from:
@@ -1769,8 +2803,7 @@ table {
             box-shadow: none;
     color: var(--fc__default__fg);
     display: block;
-    font-family: "Work Sans VF", var(--font-sans-fallback);
-    font-size: 1.25rem;
+    --p-font-wght: 450;
     outline: none;
     padding: 1rem 1.5rem;
     text-align: left;
@@ -1986,7 +3019,11 @@ table {
   .qh__icon-card__content {
     color: var(--fc__attention-card__fg);
     padding: 1.5rem 1rem; }
-    .qh__icon-card__content p,
+    .qh__icon-card__content p, .qh__icon-card__content address, .qh__icon-card__content time, .qh__icon-card__content ul,
+    .qh__icon-card__content ol,
+    .qh__icon-card__content dl, .qh__icon-card__content .form__actions a, .form__actions .qh__icon-card__content a, .qh__icon-card__content button,
+    .qh__icon-card__content .qh__btn,
+    .qh__icon-card__content .button, .qh__icon-card__content table th, table .qh__icon-card__content th, .qh__icon-card__content table td, table .qh__icon-card__content td, .qh__icon-card__content .qh__accordion__button, .qh__icon-card__content .qh__file-list__item__label,
     .qh__icon-card__content ul {
       font-size: 1rem; }
   .qh__icon-card h3.qh__icon-card__title {
@@ -2012,6 +3049,16 @@ table {
       .qh__icon-card h3.qh__icon-card__title {
         min-height: 4.375rem; } }
 
+.qh__paragraph__column-container {
+  display: grid;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
+  row-gap: 1.5rem; }
+  @media (min-width: 47.5em) {
+    .qh__paragraph__column-container {
+      grid-template-columns: repeat(2, 1fr); } }
+
 .qh__file-list .qh__icon__file-pdf__path {
   fill: var(--fc__icon__pdf); }
 
@@ -2021,10 +3068,10 @@ table {
 .qh__file-list .qh__icon__file-excel__path {
   fill: var(--fc__icon__excel); }
 
-.qh__file-list .qh__icon__file-generic {
+.qh__file-list .qh__icon__file-generic__path {
   fill: var(--fc__icon__generic); }
 
-.qh__file-list .qh__icon__download {
+.qh__file-list .qh__icon__download__path {
   fill: var(--fc__icon__download); }
 
 .qh__file-list__inner {
@@ -2045,15 +3092,12 @@ table {
   padding: 1.5rem 0; }
 
 .qh__file-list__item__label {
-  display: block;
-  font-family: var(--font-sans-vf);
-  font-weight: 525; }
+  --p-font-wght: 525;
+  display: block; }
 
 .qh__file-list__item__filesize {
   color: var(--fc__default__fg);
-  display: block;
-  font-family: var(--font-sans-vf);
-  font-size: 87.5%; }
+  display: block; }
 
 .qh__file-list__item__download {
   margin-left: auto;
@@ -2099,22 +3143,119 @@ table {
   .qh__file-list__link:focus .qh__file-list__item__download .qh__icon__download {
     fill: var(--fc__default__link--hover); }
 
+.qh-layout-section {
+  display: grid;
+  grid-gap: 2rem;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 2rem 0; }
+  .qh-layout-section--col-size-25 {
+    display: block;
+    margin: 0 auto;
+    width: 25%; }
+  .qh-layout-section--col-size-50 {
+    display: block;
+    margin: 0 auto;
+    width: 50%; }
+  .qh-layout-section--col-size-75 {
+    display: block;
+    margin: 0 auto;
+    width: 75%; }
+  .qh-layout-section--col-size-100 {
+    display: block;
+    margin: 0 auto;
+    width: 100%; }
+  .qh-layout-section--col-size-25-75 {
+    grid-template-columns: 1fr; }
+    @media screen and (min-width: 47.5em) {
+      .qh-layout-section--col-size-25-75 {
+        grid-template-columns: 1fr 2fr; } }
+    @media screen and (min-width: 75em) {
+      .qh-layout-section--col-size-25-75 {
+        grid-template-columns: 1fr 3fr; } }
+  .qh-layout-section--col-size-33-67 {
+    grid-template-columns: 1fr; }
+    @media screen and (min-width: 47.5em) {
+      .qh-layout-section--col-size-33-67 {
+        grid-template-columns: 1fr 2fr; } }
+  .qh-layout-section--col-size-50-50 {
+    grid-template-columns: 1fr; }
+    @media screen and (min-width: 47.5em) {
+      .qh-layout-section--col-size-50-50 {
+        grid-template-columns: 1fr 1fr; } }
+  .qh-layout-section--col-size-67-33 {
+    grid-template-columns: 1fr; }
+    @media screen and (min-width: 47.5em) {
+      .qh-layout-section--col-size-67-33 {
+        grid-template-columns: 2fr 1fr; } }
+  .qh-layout-section--col-size-75-25 {
+    grid-template-columns: 1fr; }
+    @media screen and (min-width: 47.5em) {
+      .qh-layout-section--col-size-75-25 {
+        grid-template-columns: 2fr 1fr; } }
+    @media screen and (min-width: 75em) {
+      .qh-layout-section--col-size-75-25 {
+        grid-template-columns: 3fr 1fr; } }
+  .qh-layout-section--col-size-33-repeat {
+    grid-template-columns: 1fr; }
+    @media screen and (min-width: 47.5em) {
+      .qh-layout-section--col-size-33-repeat {
+        grid-template-columns: 1fr 1fr 1fr; } }
+  .qh-layout-section--col-size-25-repeat {
+    grid-template-columns: 1fr; }
+    @media screen and (min-width: 47.5em) {
+      .qh-layout-section--col-size-25-repeat {
+        grid-template-columns: 1fr 1fr; } }
+    @media screen and (min-width: 75em) {
+      .qh-layout-section--col-size-25-repeat {
+        grid-template-columns: 1fr 1fr 1fr 1fr; } }
+  .qh-layout-section__col .block:first-child:last-child {
+    height: 100%; }
+  .qh-layout-section__col > * + * {
+    margin-top: 1.5rem; }
+  .qh-layout-section__col--first {
+    max-width: 100%; }
+  .qh-layout-section__col--second {
+    max-width: 100%; }
+  .qh-layout-section__col--third {
+    max-width: 100%; }
+  .qh-layout-section__col--fourth {
+    max-width: 100%; }
+  .qh-layout-section--full-width {
+    max-width: 100%; }
+
+.layout-container.layout-builder-page {
+  max-width: 100%; }
+
+.qh-background--rhodyred {
+  background-color: var(--c__rhody-red); }
+
+.qh-background--calamari {
+  background-color: var(--c__calamari); }
+
+.qh-background--navy {
+  background-color: var(--c__navy);
+  color: var(--c__white); }
+
 .qh-layout__grid {
   margin: 0 auto;
   max-width: 93vw;
   display: grid;
-  grid-template-areas: 'sidebar-top content' 'sidebar-middle content' 'sidebar-bottom content';
-  grid-template-columns: minmax(12.5rem, -webkit-max-content) minmax(0, 1fr);
-  grid-template-columns: minmax(12.5rem, max-content) minmax(0, 1fr);
+  grid-template-areas: 'sidebar-top' 'content' 'sidebar-middle' 'sidebar-bottom';
   margin-top: 5rem;
   margin-bottom: 5rem; }
   @supports (width: 5px) {
     .qh-layout__grid {
       max-width: var(--content-max-width); } }
+  @media screen and (min-width: 47.5em) {
+    .qh-layout__grid {
+      grid-template-areas: 'sidebar-top content' 'sidebar-middle content' 'sidebar-bottom content';
+      grid-template-columns: minmax(12.5rem, -webkit-max-content) minmax(0, 1fr);
+      grid-template-columns: minmax(12.5rem, max-content) minmax(0, 1fr); } }
 
 .qh-layout__content {
   grid-area: content;
-  max-width: 100%; }
+  max-width: var(--content-max-width); }
 
 .qh-layout__sidebar-top {
   grid-area: sidebar-top;

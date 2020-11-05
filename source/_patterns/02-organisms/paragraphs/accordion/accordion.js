@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
       var target = event.target;
 
       if (target.classList.contains('js-qh-accordion-trigger')) {
-        console.log('accordion trigger clicked');
+        //console.log('accordion trigger clicked');
 
         // Check if the current toggle is expanded.
         var isExpanded = target.getAttribute('aria-expanded') == 'true';

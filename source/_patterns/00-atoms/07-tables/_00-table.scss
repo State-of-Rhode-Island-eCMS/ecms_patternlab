@@ -15,7 +15,6 @@ body {
 }
 
 table {
-  font-family: var(--font-sans-vf);
   background-color: transparent;
   border-spacing: 0;
   margin-bottom: $general-v-spacing;
@@ -55,7 +54,8 @@ table {
   }
 
   th {
-    font-weight: 550;
+    --p-font-wght: 550;
+    @extend p;
 
     & + th {
       border-left: $border-xs solid var(--fc__table__border__v);
@@ -63,8 +63,8 @@ table {
   }
 
   td {
+    @extend p;
     border-bottom: $border-xs solid var(--fc__table__border__h);
-    font-weight: 400;
 
     & + td {
       border-left: $border-xs solid var(--fc__table__border__v);

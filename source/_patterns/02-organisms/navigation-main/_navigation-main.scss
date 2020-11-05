@@ -1,3 +1,19 @@
+// We need a wrapper that can hide the off-canvas nav panel for mobile
+.dialog-off-canvas-main-canvas {
+  position: relative;
+  overflow: hidden;
+}
+
+// Set a CSS var that JS will check for the state of the nav
+body {
+  --nav-state: js-mobile;
+}
+@include breakpoint-up($bp__show__desktop-nav) {
+  body {
+    --nav-state: js-desktop;
+  }
+}
+
 .qh__nav-main {
   background-color: var(--fc__nav-main__bg);
   color: var(--fc__nav-main__fg);
@@ -7,42 +23,280 @@
     transition: $transition-base;
   }
 
-  // Icons used in the nav
-  .qh__icon {
-    margin: -0.75em -0.75em -0.75em 0;
-  }
+  // There is one of this in the UL and one outside for mobile
+  .qh__icon__home {}
 
-  .qh__icon__home {
-    &__shape {
-      fill: var(--fc__nav-main__fg);
+  // <div>
+  &__wrapper {
+    @include qh-content-maxwidth();
+    position: relative;
+    overflow: visible;
+    z-index: z(mobile-nav-bar);
+
+    // For mobile we need to flex
+    @include breakpoint-down($bp__show__desktop-nav) {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
     }
   }
 
-  // UL
-  & > &__list {
-    @include qh-content-maxwidth();
+  // <body>
+  // Blur the background behind the active navigation drawer
+  &__overlay {
+    &::after {
+      backdrop-filter: blur(4px);
+      background-color: rgba(#000, 0.25);
+      content: '';
+      opacity: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      pointer-events: none;
+      transition:
+        opacity $transition-duration-medium $transition-timing-base 0ms,
+        z-index 0ms linear $transition-duration-medium;
+      z-index: -1;
+    }
+
+    &--visible {
+      &::after {
+        opacity: 1;
+        pointer-events: auto;
+        transition:
+          opacity $transition-duration-medium $transition-timing-base 0ms,
+          z-index 0ms linear 0ms;
+        z-index: z(mobile-body-overlay);
+      }
+    }
+  }
+
+  // mobile button
+  &__toggle {
+    background-image: none;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: flex-start;
-  }
+    justify-content: space-between;
+    padding: 0 $nav-a-h-spacing 0 ($nav-a-h-spacing/2);
 
+    &,
+    &:visited {
+      color: var(--fc__nav-main__link);
+      background-color: transparent;
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--fc__nav-main__link--hover);
+      background-color: transparent;
+    }
+
+    &:active {
+      color: var(--fc__nav-main__link--active);
+      background-color: transparent;
+    }
+
+    &__label {}
+
+    // Hidden for desktop
+    @include breakpoint-up($bp__show__desktop-nav) {
+      display: none;
+    }
+
+    // Menu icon general styles
+    .qh__icon__menu {
+      @include qh-icon-size;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+
+      // Draw three bars with CSS
+      &::before,
+      &::after,
+      > span {
+        display: block;
+        background-color: currentColor;
+        height: rem(2);
+        position: absolute;
+        width: rem(20);
+      }
+
+      // Top bar
+      &::before {
+        content: '';
+        top: rem(12);
+        left: rem(12);
+      }
+
+      // Mid bar
+      > span {
+        top: rem(21);
+        left: rem(12);
+      }
+
+      // Bottom bar
+      &::after {
+        content: '';
+        top: rem(30);
+        left: rem(12);
+      }
+    } // end .qh__icon__menu
+
+    // Slight animation of the icon on hover, focus, and active (for tap)
+    &:hover,
+    &:focus,
+    &:active {
+      .qh__icon__menu::before,
+      .qh__icon__menu::after {
+        left: rem(10);
+      }
+      .qh__icon__menu > span {
+        left: rem(14);
+      }
+    }
+
+    // Icon animation on aria-expanded change
+    &[aria-expanded="false"] {
+
+      .qh__icon__menu::before,
+      .qh__icon__menu::after,
+      .qh__icon__menu > span {
+        transform: rotate(0deg);
+      }
+
+      .qh__icon__menu::before,
+      .qh__icon__menu::after {
+        transition:
+          transform $transition-duration-base ease,
+          top $transition-duration-base ease,
+          left $transition-duration-base ease,
+          width $transition-duration-base ease;
+      }
+
+      .qh__icon__menu > span {
+        opacity: 1;
+        // Transition as it comes back into view from the "true" state
+        transition:
+          opacity $transition-duration-base ease ($transition-duration-base/4),
+          left $transition-duration-base ease 0ms;
+      }
+    }
+
+    &[aria-expanded="true"] {
+
+      .qh__icon__menu::before,
+      .qh__icon__menu::after {
+        transition:
+          transform $transition-duration-base ease,
+          top $transition-duration-base ease,
+          left $transition-duration-base ease,
+          width $transition-duration-base ease;
+      }
+
+      // Top bar — spin and drop down
+      .qh__icon__menu::before {
+        top: rem(21);
+        left: rem(10);
+        transform: rotate(135deg);
+        width: rem(24);
+      }
+
+      // Mid bar — fly away left
+      .qh__icon__menu > span {
+        left: - rem(20);
+        opacity: 0;
+        transition:
+          opacity $transition-duration-base ease 0ms,
+          left $transition-duration-base ease ($transition-duration-base/4);
+      }
+
+      // Botton bar – spin and lift up
+      .qh__icon__menu::after {
+        top: rem(21);
+        left: rem(10);
+        transform: rotate(-135deg);
+        width: rem(24);
+      }
+    }
+  } // end &__toggle
+
+  // <ul>
   &__list {
+
+    &__outermost {
+      // For mobile, make this an off canvas right drawer
+      @include breakpoint-down($bp__show__desktop-nav) {
+        background-color: var(--fc__nav-main__bg);
+        color: var(--fc__nav-main__fg);
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        right: calc((100vw - var(--content-max-width)) * -0.5);
+        transform: translateX(100vw);
+        transition: $transition-medium;
+        width: 86vw;
+
+        [aria-expanded="true"] + & {
+          opacity: 1;
+          transform: translateX(0);
+          transition: $transition-medium;
+        }
+      }
+
+      // For desktop the design is a horizontal row
+      @include breakpoint-up($bp__show__desktop-nav) {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: flex-start;
+      }
+    } // end &__outermost
 
     &__sub {
       background-color: var(--fc__nav-main__link--hover__bg);
-      box-shadow: $box-shadow-base;
       min-width: 15rem;
-      opacity: 0;
-      position: absolute;
-        top: 100%;
-        left: 0;
-      transition: $transition-duration-medium opacity ease 0s, 0s visibility linear $transition-duration-medium;
-      visibility: hidden;
-    }
-  }
 
-  // LI
+      @include breakpoint-down($bp__show__desktop-nav) {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0s linear 1s, visibility 0s linear 0s;
+        visibility: hidden;
+
+        > li {
+          border-left: ($nav-a-v-spacing * 0.5) solid var(--fc__nav-main__bg);
+          opacity: 0;
+          transition: $transition-base 0ms;
+        }
+
+        .js [aria-expanded="true"] + & {
+          max-height: unset;
+          transition: max-height 0s linear 500s, visibility 0s linear 0ms;
+          visibility: visible;
+
+          > li {
+            opacity: 1;
+            transition: $transition-base ($transition-duration-base/2);
+          }
+        }
+      }
+
+      @include breakpoint-up($bp__show__desktop-nav) {
+        box-shadow: $box-shadow-base;
+        opacity: 0;
+        position: absolute;
+          top: 100%;
+          left: 0;
+        transition: $transition-duration-medium opacity ease 0s, 0s visibility linear $transition-duration-medium;
+        visibility: hidden;
+      }
+    } // end &__sub
+  } // end &__list
+
+  // <li>
   &__item {
     position: relative;
     overflow: visible;
@@ -55,6 +309,30 @@
       height: 0;
       margin: 0 em(8);
     }
+
+    // For mobile, Search and Social list item are added
+    &__search {
+      padding: ($nav-a-v-spacing * 0.5) ($nav-a-h-spacing * 0.5);
+
+      .qh__form__nowrap > input {
+        // Remove max-width from the search styles
+        max-width: unset;
+      }
+    }
+
+    &__social {
+      padding: ($nav-a-v-spacing * 0.5) ($nav-a-h-spacing * 0.5);
+    }
+
+    &__search,
+    &__social {
+      @include breakpoint-up($bp__show__desktop-nav) {
+        // Handle the flash of content when it is there before JS debounces
+        opacity: 0;
+        visibility: hidden;
+        width: 0;
+      }
+    }
   }
 
   // An item with children in a drop down
@@ -63,6 +341,14 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-start;
+
+    @include breakpoint-down($bp__show__desktop-nav) {
+      justify-content: space-between;
+    }
+
+    .qh__icon {
+      margin: -0.75em -0.75em -0.75em 0;
+    }
 
     .qh__icon__chevron-down {
       &__circle {
@@ -135,18 +421,21 @@
     }
   }
 
-  // A
+  // <a>
   &__link {
     padding: ($nav-a-v-spacing * 0.75) $nav-a-h-spacing--sm $nav-a-v-spacing;
 
     &,
     &:visited {
       background-color: transparent;
-      border-top: ($nav-a-v-spacing * 0.25) solid var(--fc__nav-main__bg);
       color: var(--fc__nav-main__link);
       font-size: clamp(0.925rem, 1.5vw, 1rem);
       font-weight: 450;
       text-decoration: none;
+
+      @include breakpoint-up($bp__show__desktop-nav) {
+        border-top: ($nav-a-v-spacing * 0.25) solid var(--fc__nav-main__bg);
+      }
     }
 
     &:hover,
@@ -165,12 +454,19 @@
 
     // Treat a current link as disabled. It should not have a visual state change
     &#{&}--current {
-      border-top-color: var(--fc__nav-main__link--hover__bg);
       color: var(--fc__nav-main__fg);
       cursor: default;
       font-weight: 550; // TODO: replace this with the proper font weight
       padding: $nav-a-v-spacing $nav-a-h-spacing--sm ($nav-a-v-spacing * 0.75);
       pointer-events: none;
+
+      @include breakpoint-down($bp__show__desktop-nav) {
+        border-left: ($nav-a-v-spacing * 0.5) solid var(--fc__nav-main__link--hover__bg);
+      }
+
+      @include breakpoint-up($bp__show__desktop-nav) {
+        border-top: ($nav-a-v-spacing * 0.25) solid var(--fc__nav-main__link--hover__bg);
+      }
     }
 
     &__sub {
@@ -190,7 +486,26 @@
       pointer-events: none;
     }
 
-    // Exception
+    // Exceptions
+
+    // Home button in navbar
+    .qh__nav-main__wrapper > &--home {
+      // Hide for desktop
+      @include breakpoint-up($bp__show__desktop-nav) {
+        display: none;
+        visibility: hidden;
+      }
+    }
+
+    // Home button in drop down navigation
+    .qh__nav-main__list__outermost &--home {
+      // Hide for mobile
+      @include breakpoint-down($bp__show__desktop-nav) {
+        display: none;
+        visibility: hidden;
+      }
+    }
+
     &--home .qh__icon {
       margin: 0;
     }

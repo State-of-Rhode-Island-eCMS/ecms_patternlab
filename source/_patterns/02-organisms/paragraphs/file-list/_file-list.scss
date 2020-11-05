@@ -13,11 +13,11 @@
     fill: var(--fc__icon__excel);
   }
 
-  .qh__icon__file-generic {
+  .qh__icon__file-generic__path {
     fill: var(--fc__icon__generic);
   }
 
-  .qh__icon__download {
+  .qh__icon__download__path {
     fill: var(--fc__icon__download);
   }
 
@@ -50,17 +50,16 @@
 
     // span
     &__label {
+      --p-font-wght: 525;
+      @extend p;
       display: block;
-      font-family: var(--font-sans-vf);
-      font-weight: 525;
     }
 
     // span
     &__filesize {
       color: var(--fc__default__fg);
+      @extend .small-text;
       display: block;
-      font-family: var(--font-sans-vf);
-      font-size: 87.5%;
     }
 
     &__download {

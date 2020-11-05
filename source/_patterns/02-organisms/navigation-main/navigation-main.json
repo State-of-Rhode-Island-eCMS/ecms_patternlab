@@ -4,6 +4,7 @@
       "is_expanded": true,
       "in_active_trail": false,
       "title": "About",
+      "url": "about-this-agency",
       "below": [
         {
           "is_expanded": true,
@@ -29,6 +30,7 @@
       "is_expanded": true,
       "in_active_trail": false,
       "title": "What does this agency do?",
+      "url": "what-does-this-agency-do",
       "below": [
         {
           "is_expanded": true,
@@ -54,12 +56,14 @@
       "is_expanded": true,
       "in_active_trail": true,
       "title": "In Active Trail",
+      "url": "in-active-trail",
       "below": []
     },
     {
       "is_expanded": true,
       "in_active_trail": false,
       "title": "Another Link",
+      "url": "another-link",
       "below": []
     }
   ]

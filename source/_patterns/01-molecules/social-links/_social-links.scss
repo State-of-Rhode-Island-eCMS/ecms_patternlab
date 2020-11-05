@@ -1,0 +1,35 @@
+.qh__social-links {
+
+  &__list {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__item {}
+
+  // When in Header, specificity of the <a> styles needs to have the element present
+  a#{&}__link {
+    display: block;
+
+    &,
+    &:visited {
+      color: var(--fc__header__social__link);
+    }
+
+    &:hover,
+    &:focus {
+      color: var(--fc__header__social__link--hover);
+    }
+
+    &:focus {
+      outline: $border-sm solid var(--fc__default__link--focus);
+      outline-offset: - $border-sm;
+    }
+
+    &:active {
+      color: var(--fc__default__link--active);
+    }
+  }
+}
