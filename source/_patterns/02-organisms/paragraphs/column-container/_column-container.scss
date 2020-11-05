@@ -1,0 +1,9 @@
+.qh__paragraph__column-container {
+  display: grid;
+  column-gap: $general-h-spacing;
+  row-gap: $general-v-spacing;
+
+  @media (min-width: $bp--medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
