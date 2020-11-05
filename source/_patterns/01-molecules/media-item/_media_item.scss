@@ -1,5 +1,4 @@
 .media-item {
-  border-left: solid 1rem var(--fc__default__accent);
 
   // align 
   &.left {
@@ -10,6 +9,7 @@
     margin-right: 2rem;
   }
   &.right {
+    border-left: solid 1rem var(--fc__default__accent);
     clear: right;
     float: right;
     margin-left: 2rem;
