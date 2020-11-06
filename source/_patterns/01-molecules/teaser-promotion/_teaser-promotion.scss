@@ -1,0 +1,15 @@
+.qh__teaser-promotion {
+  display: block;
+  border: $border-sm solid var(--fc__default__border);
+  text-align: center;
+  text-decoration: none;
+
+  &__title {
+    margin: $general-v-spacing $general-h-spacing;
+  }
+
+  &__text {
+    margin: $general-v-spacing $general-h-spacing;
+    color: var(--fc__default__fg);
+  }
+}
