@@ -2,7 +2,7 @@
   "items": [
     {
       "is_expanded": true,
-      "in_active_trail": false,
+      "in_active_trail": true,
       "title": "About",
       "url": "about-this-agency",
       "below": [
