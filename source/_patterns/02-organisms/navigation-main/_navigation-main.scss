@@ -379,9 +379,9 @@ body {
     }
 
     // In the case where the current link looks disabled, but it is still a trigger to a drop down
-    &--current,
-    &--current:hover,
-    &--current:focus {
+    &#{&}--current,
+    &#{&}--current:hover,
+    &#{&}--current:focus {
       cursor: pointer;
       pointer-events: auto;
     }
@@ -466,10 +466,10 @@ body {
     // Treat a current link as disabled. It should not have a visual state change
     &#{&}--current {
       color: var(--fc__nav-main__fg);
-      cursor: default;
+      // cursor: default;
       font-weight: 550; // TODO: replace this with the proper font weight
       padding: ($nav-a-v-spacing * 0.75) $nav-a-h-spacing--sm $nav-a-v-spacing;
-      pointer-events: none;
+      // pointer-events: none;
 
       @include breakpoint-down($bp__show__desktop-nav) {
         border-left: ($nav-a-v-spacing * 0.5) solid var(--fc__nav-main__link--hover__bg);
