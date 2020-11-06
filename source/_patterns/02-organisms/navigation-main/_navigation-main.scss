@@ -229,10 +229,11 @@ body {
     max-width: none;
 
     &__outermost {
-      // For mobile, make this an off canvas right drawer
+      // For mobile, this an off canvas right drawer
       @include breakpoint-down($bp__show__desktop-nav) {
         background-color: var(--fc__nav-main__bg);
         color: var(--fc__nav-main__fg);
+        max-width: em(480);
         opacity: 0;
         position: absolute;
         top: 100%;
@@ -241,10 +242,19 @@ body {
         transition: $transition-medium;
         width: 86vw;
 
+        > li {
+          transition: transform $transition-duration-base $transition-timing-base ($transition-duration-base/2);
+          transform: translateX(em(240));
+        }
+
         [aria-expanded="true"] + & {
           opacity: 1;
           transform: translateX(0);
           transition: $transition-medium;
+
+          > li {
+            transform: translateX(0);
+          }
         }
       }
 

@@ -13,7 +13,10 @@
 
     {# Main list wrapper only. Add nav wrapper. Add Level 1 Link #}
     {% if menu_level == 0 %}
-      <nav class="qh__nav-minor" aria-label="Secondary">
+      <nav id="js__minor-menu" class="qh__nav-minor" aria-label="Secondary">
+        <button id="js__minor-toggle" class="qh__nav-minor__toggle" type="button" aria-controls="js__minor-menu" aria-haspopup="true" aria-expanded="false" aria-label="Toggle section navigation">
+          {{ "Section Menu"|t }}
+        </button>
         <ul class="qh__nav-minor__list qh__accordion js-qh-accordion" role="list" data-allow-multiple>
           <li class="qh__nav-minor__item">
             <a href="{{ level_one_link.url }}" class="qh__nav-minor__link {{ level_one_link.active ? 'qh__nav-minor__link--current' }}">{{ level_one_link.title }}</a>

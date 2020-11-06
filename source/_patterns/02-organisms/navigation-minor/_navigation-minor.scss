@@ -1,7 +1,30 @@
 .qh__nav-minor {
+  background-color: var(--fc__default__bg);
   border-top: $border-lg solid var(--fc__nav-minor__border);
-  background-color: var(--fc__nav-minor__bg);
-  min-width: 20rem;
+  min-width: rem(320);
+  position: relative;
+  overflow: visible;
+
+  @include breakpoint-down($bp__single-col-content) {
+    position: fixed;
+    left: 0;
+    width: rem(320);
+    transform: translateX(- rem(320));
+    transition: transform $transition-duration-base $transition-timing-base;
+
+    > ul {
+      transform: translateX(- rem(48));
+      transition: transform $transition-duration-base $transition-timing-base ($transition-duration-base/2);
+    }
+
+    &#{&}--expanded {
+      transform: translateX(0);
+
+      > ul {
+        transform: translateX(0);
+      }
+    }
+  }
 
   // Interaction styles come from .qh__accordion
   &:hover,
@@ -13,11 +36,52 @@
     transition: $transition-base;
   }
 
+  // <button>
+  &__toggle {
+    background-color: var(--fc__nav-minor__border);
+    background-image: none;
+    padding: ($button-v-spacing/2) $button-h-spacing ($button-v-spacing/2) 0;
+    overflow: visible;
+    position: absolute;
+      top: - $border-lg;
+      right: 0;
+    transform: rotate(-90deg);
+    transform-origin: top right;
+
+    &:hover::before,
+    &:focus::before {
+      border-top-color: var(--fc__default__button--hover__bg);
+      border-right-color: var(--fc__default__button--hover__bg);
+    }
+
+    // Little triangle at the bottom
+    &::before {
+      border-top: rem(21) solid var(--fc__nav-minor__border);
+      border-right: rem(21) solid var(--fc__nav-minor__border);
+      border-bottom: rem(21) solid transparent;
+      border-left: rem(21) solid transparent;
+      content: '';
+      height: 0;
+      width: 0;
+      position: absolute;
+        top: 0;
+        left: - rem(42);
+      transition: $transition-base;
+    }
+
+    @include breakpoint-up($bp__single-col-content) {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
   // <ul>
   &__list {
+    background-color: var(--fc__nav-minor__bg);
 
     &.qh__accordion {
       border: $border-xs solid transparent;
+      margin-top: 0;
     }
 
     &__sub {
