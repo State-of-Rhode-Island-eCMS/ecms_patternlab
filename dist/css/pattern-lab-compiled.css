@@ -2162,8 +2162,7 @@ table {
       margin-top: 0; }
 
 .dialog-off-canvas-main-canvas {
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
 
 body {
   --nav-state: js-mobile; }
@@ -2174,7 +2173,8 @@ body {
 
 .qh__nav-main {
   background-color: var(--fc__nav-main__bg);
-  color: var(--fc__nav-main__fg); }
+  color: var(--fc__nav-main__fg);
+  overflow-x: clip; }
   .qh__nav-main a {
     display: block;
     -webkit-transition: all 250ms ease;
@@ -2544,15 +2544,14 @@ body {
       .qh__nav-main__link--home:hover, .qh__nav-main__link--home:focus, .qh__nav-main__link--home:visited:hover, .qh__nav-main__link--home:visited:focus {
         padding: 0.0625em !important; }
 
-/* Trying some things to get the sidebar nav to be sticky
-
 .qh-layout__sidebar-top {
-  @include breakpoint-up($bp__single-col-content) {
-    position: sticky;
-    top: 3rem;
-  }
-}
-*/
+  position: sticky;
+  top: 3rem; }
+  @media (min-width: 47.5em) {
+    .qh-layout__sidebar-top {
+      position: relative;
+      top: auto; } }
+
 .qh__nav-minor {
   background-color: var(--fc__default__bg);
   border-top: 0.875rem solid var(--fc__nav-minor__border);
@@ -2561,7 +2560,7 @@ body {
   @media (max-width: 47.4375em) {
     .qh__nav-minor {
       position: absolute;
-      left: 0;
+      left: calc((2rem + 3.5vw) * -1);
       width: 20rem;
       -webkit-transform: translateX(-20rem);
               transform: translateX(-20rem);

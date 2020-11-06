@@ -1,12 +1,12 @@
-/* Trying some things to get the sidebar nav to be sticky
-
 .qh-layout__sidebar-top {
+  position: sticky;
+  top: 3rem;
   @include breakpoint-up($bp__single-col-content) {
-    position: sticky;
-    top: 3rem;
+    position: relative;
+    top: auto;
   }
 }
-*/
+
 .qh__nav-minor {
   background-color: var(--fc__default__bg);
   border-top: $border-lg solid var(--fc__nav-minor__border);
@@ -16,7 +16,7 @@
 
   @include breakpoint-down($bp__single-col-content) {
     position: absolute;
-    left: 0;
+    left: calc((2rem + 3.5vw) * -1);
     width: rem(320);
     transform: translateX(- rem(320));
     transition: transform $transition-duration-base $transition-timing-base;

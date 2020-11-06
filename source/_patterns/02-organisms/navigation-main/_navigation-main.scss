@@ -1,7 +1,7 @@
 // We need a wrapper that can hide the off-canvas nav panel for mobile
 .dialog-off-canvas-main-canvas {
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 // Set a CSS var that JS will check for the state of the nav
@@ -17,6 +17,7 @@ body {
 .qh__nav-main {
   background-color: var(--fc__nav-main__bg);
   color: var(--fc__nav-main__fg);
+  overflow-x: clip;
 
   a {
     display: block;
