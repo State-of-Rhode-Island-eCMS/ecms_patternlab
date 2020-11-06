@@ -2544,6 +2544,15 @@ body {
       .qh__nav-main__link--home:hover, .qh__nav-main__link--home:focus, .qh__nav-main__link--home:visited:hover, .qh__nav-main__link--home:visited:focus {
         padding: 0.0625em !important; }
 
+/* Trying some things to get the sidebar nav to be sticky
+
+.qh-layout__sidebar-top {
+  @include breakpoint-up($bp__single-col-content) {
+    position: sticky;
+    top: 3rem;
+  }
+}
+*/
 .qh__nav-minor {
   background-color: var(--fc__default__bg);
   border-top: 0.875rem solid var(--fc__nav-minor__border);
@@ -2594,16 +2603,16 @@ body {
       border-top-color: var(--fc__default__button--hover__bg);
       border-right-color: var(--fc__default__button--hover__bg); }
     .qh__nav-minor__toggle::before {
-      border-top: 1.3125rem solid var(--fc__nav-minor__border);
-      border-right: 1.3125rem solid var(--fc__nav-minor__border);
-      border-bottom: 1.3125rem solid transparent;
-      border-left: 1.3125rem solid transparent;
+      border-top: 1.25rem solid var(--fc__nav-minor__border);
+      border-right: 1.25rem solid var(--fc__nav-minor__border);
+      border-bottom: 1.25rem solid transparent;
+      border-left: 1.25rem solid transparent;
       content: '';
       height: 0;
       width: 0;
       position: absolute;
-      top: -0.1rem;
-      left: -2.625rem;
+      top: 0;
+      left: -2.5rem;
       -webkit-transition: all 250ms ease;
       transition: all 250ms ease; }
     @media (min-width: 47.5em) {

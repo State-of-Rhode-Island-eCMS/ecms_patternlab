@@ -1,3 +1,12 @@
+/* Trying some things to get the sidebar nav to be sticky
+
+.qh-layout__sidebar-top {
+  @include breakpoint-up($bp__single-col-content) {
+    position: sticky;
+    top: 3rem;
+  }
+}
+*/
 .qh__nav-minor {
   background-color: var(--fc__default__bg);
   border-top: $border-lg solid var(--fc__nav-minor__border);
@@ -57,16 +66,16 @@
 
     // Little triangle at the bottom
     &::before {
-      border-top: rem(21) solid var(--fc__nav-minor__border);
-      border-right: rem(21) solid var(--fc__nav-minor__border);
-      border-bottom: rem(21) solid transparent;
-      border-left: rem(21) solid transparent;
+      border-top: rem(20) solid var(--fc__nav-minor__border);
+      border-right: rem(20) solid var(--fc__nav-minor__border);
+      border-bottom: rem(20) solid transparent;
+      border-left: rem(20) solid transparent;
       content: '';
       height: 0;
       width: 0;
       position: absolute;
-        top: -0.1rem;;
-        left: - rem(42);
+        top: 0;
+        left: - rem(40);
       transition: $transition-base;
     }
 
