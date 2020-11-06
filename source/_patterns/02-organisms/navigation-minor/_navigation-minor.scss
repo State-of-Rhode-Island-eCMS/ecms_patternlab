@@ -2,11 +2,11 @@
   background-color: var(--fc__default__bg);
   border-top: $border-lg solid var(--fc__nav-minor__border);
   min-width: rem(320);
-  position: relative;
+  //position: relative;
   overflow: visible;
 
   @include breakpoint-down($bp__single-col-content) {
-    position: fixed;
+    position: absolute;
     left: 0;
     width: rem(320);
     transform: translateX(- rem(320));
@@ -40,6 +40,7 @@
   &__toggle {
     background-color: var(--fc__nav-minor__border);
     background-image: none;
+    border-radius: 0;
     padding: ($button-v-spacing/2) $button-h-spacing ($button-v-spacing/2) 0;
     overflow: visible;
     position: absolute;
@@ -64,7 +65,7 @@
       height: 0;
       width: 0;
       position: absolute;
-        top: 0;
+        top: -0.1rem;;
         left: - rem(42);
       transition: $transition-base;
     }
