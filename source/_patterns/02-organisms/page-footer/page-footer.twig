@@ -1,26 +1,20 @@
 <footer class="qh__site-footer" role="contentinfo">
-  <div class="content-wrapper">
-    <div class="qh__site-footer__content-left">
-      <div>
-        {{ footer_preprocess_values.footer_left|raw }}
-      </div>
-
-      <div>
-        {{ footer_preprocess_values.footer_center|raw }}
-      </div>
-
-      <div>
-        {{ footer_preprocess_values.footer_right|raw }}
-      </div>
+  <div class="qh__site-footer__inner">
+    <div class="qh__site-footer__content qh__site-footer__first">
+      {{ footer_preprocess_values.footer_left|raw }}
     </div>
-    <div class="qh__site-footer__content-right">
-      <div>
-        {{ footer_preprocess_values.state_info|raw }}
-      </div>
+    <div class="qh__site-footer__content qh__site-footer__second">
+      {{ footer_preprocess_values.footer_center|raw }}
+    </div>
+    <div class="qh__site-footer__content qh__site-footer__third">
+      {{ footer_preprocess_values.footer_right|raw }}
+    </div>
+    <div class="qh__site-footer__content qh__site-footer__fourth">
+      {{ footer_preprocess_values.state_info|raw }}
     </div>
   </div>
   <div class="qh__site-footer__copyright">
-    <div class="content-wrapper">
+    <div class="qh__site-footer__inner">
       <div class="qh__site-footer__copyright__content">
         {% include ('@icons/ri-state-seal.svg') %}
         <p>
