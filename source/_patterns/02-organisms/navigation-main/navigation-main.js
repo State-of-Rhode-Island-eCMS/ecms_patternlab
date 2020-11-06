@@ -112,7 +112,7 @@ function moveSearchAndSocial() {
 document.addEventListener('DOMContentLoaded', function() {
 
   // Declare the viewport state globally
-  window.qh_viewport = getQhNavState();
+  window.qh_viewport = '';
 
   // Call on page ready
   moveSearchAndSocial();
