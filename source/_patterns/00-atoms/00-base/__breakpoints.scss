@@ -20,9 +20,10 @@ $bp--xxlarge: $bp--xxlarge-value * 1em;
 
 // Stored common breakpoints across multiple molecules
 $bp__show__desktop-nav: $bp--medium;
-
+$bp__single-col-content: $bp--medium;
 
 // Media query helpers
+// Oomph usually does not include "media" so that the styles apply to all media types
 @mixin breakpoint-up($bp) {
   @media (min-width: #{$bp}) {
     @content;
