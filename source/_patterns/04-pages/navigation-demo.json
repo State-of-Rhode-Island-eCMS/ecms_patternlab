@@ -10,6 +10,10 @@
     "footer_right": '<p><strong>COVID-19 Info Line</strong></p><p>Monday – Friday</p><p>7:30 AM - 7:00 PM</p><p>Saturday – Sunday</p><p>8:30 AM - 4:30 PM</p><p>Phone: <a href="/">401-222-8022 </a></p><p>After hours: <a href="/">Call 211</a></p><p>RIDOH.COVID19Questions@health.ri.gov</p>',
     "state_info": '<p><strong>State of Rhode Island</strong></p><p><a href="">Office of the Governor</a></p><p><a href="">RI.gov</a></p><p><a href="">Elected Officials</a></p><p><a href="">State Agencies (A-Z)</a></p>'
   },
+  "level_one_link": {
+    "title": "Level 1 link",
+    "url": "#"
+  },
   "main_items": [
     {
       "is_expanded": true,

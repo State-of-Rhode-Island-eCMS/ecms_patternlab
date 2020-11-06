@@ -1,4 +1,8 @@
 {
+  "level_one_link": {
+    "title": "Level 1 link",
+    "url": "#"
+  },
   "items": [
     {
       "is_expanded": true,
