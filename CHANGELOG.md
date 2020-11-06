@@ -18,9 +18,15 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
-- RIG-69 - Removed t function from media item twig.
 
 ### Security
+
+## [0.1.8] - 2020-11-06
+### Added
+- RIG-130 - Nav current updates, Sidebar nav theming, Promo teasers, Social updates.
+
+### Changed
+- RIG-69 - Removed t function from media item twig.
 
 ## [0.1.7] - 2020-11-05
 ### Changed
@@ -57,7 +63,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.7...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.8...HEAD
+[0.1.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.7...0.1.8
 [0.1.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.6...0.1.7
 [0.1.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.5...0.1.6
 [0.1.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.4...0.1.5
