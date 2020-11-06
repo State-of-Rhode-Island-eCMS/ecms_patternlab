@@ -1,0 +1,142 @@
+{
+  "header_preprocess_values": {
+    "top_line": "State of Rhode Island",
+    "main_line": "Department Name",
+    "bottom_line": "Department Name Third Line"
+  },
+  "footer_preprocess_values": {
+    "footer_left": '<p>Department of Health<br>3 Capitol Hill<br>Providence, RI 02908<br><a href="mailto:someone@ri.gov">Email us</a><br><a href="#" rel="external">Directions</a><br><a href="#">Phonebook</a><br>Phone: <a href="tel:401-222-5960">401-222-5960</a><br>After Hours Phone: <a href="tel:401-276-8046">401-276-8046</a></p>',
+    "footer_center": '<p><strong>Office Hours</strong></p><p>Monday - Friday</p><p>8:30 AM - 4:30 PM</p><p><a href="/">Vital Records 7:30 AM - 3:30 PM</a></p><p><a href="/">Food Protection 8:30 AM - 4 PM</a></p><p><a href="/">Parking restrictions until 3 PM</a></p><p>&nbsp;</p><p><strong>Publications Center</strong></p><p><a href="">Order Materials</a></p>',
+    "footer_right": '<p><strong>COVID-19 Info Line</strong></p><p>Monday – Friday</p><p>7:30 AM - 7:00 PM</p><p>Saturday – Sunday</p><p>8:30 AM - 4:30 PM</p><p>Phone: <a href="/">401-222-8022 </a></p><p>After hours: <a href="/">Call 211</a></p><p>RIDOH.COVID19Questions@health.ri.gov</p>',
+    "state_info": '<p><strong>State of Rhode Island</strong></p><p><a href="">Office of the Governor</a></p><p><a href="">RI.gov</a></p><p><a href="">Elected Officials</a></p><p><a href="">State Agencies (A-Z)</a></p>'
+  },
+  "level_one_link": {
+    "title": "Level 1 link",
+    "url": "#"
+  },
+  "main_items": [
+    {
+      "is_expanded": true,
+      "in_active_trail": false,
+      "title": "About",
+      "url": "about-this-agency",
+      "below": [
+        {
+          "is_expanded": true,
+          "in_active_trail": false,
+          "title": "Child Item 1",
+          "url": "#"
+        },
+        {
+          "is_expanded": true,
+          "in_active_trail": false,
+          "title": "Child Item 2",
+          "url": "#"
+        },
+        {
+          "is_expanded": true,
+          "in_active_trail": false,
+          "title": "Child Item 3",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "is_expanded": true,
+      "in_active_trail": false,
+      "title": "What does this agency do?",
+      "url": "what-does-this-agency-do",
+      "below": [
+        {
+          "is_expanded": true,
+          "in_active_trail": false,
+          "title": "Child Item 1",
+          "url": "#"
+        },
+        {
+          "is_expanded": true,
+          "in_active_trail": false,
+          "title": "Child Item 2",
+          "url": "#"
+        },
+        {
+          "is_expanded": true,
+          "in_active_trail": true,
+          "title": "In Active Trail",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "is_expanded": true,
+      "in_active_trail": true,
+      "title": "In Active Trail",
+      "url": "in-active-trail",
+      "below": []
+    },
+    {
+      "is_expanded": true,
+      "in_active_trail": false,
+      "title": "Another Link",
+      "url": "another-link",
+      "below": []
+    }
+  ],
+  "minor_items": [
+    {
+      "is_expanded": true,
+      "in_active_trail": false,
+      "title": "About",
+      "url": "#",
+      "below": []
+    },
+    {
+      "is_expanded": true,
+      "in_active_trail": false,
+      "title": "Clams",
+      "url": "#",
+      "below": [
+        {
+          "is_expanded": true,
+          "in_active_trail": false,
+          "title": "Little Necks",
+          "url": "#"
+        },
+        {
+          "is_expanded": true,
+          "in_active_trail": false,
+          "title": "Quahog",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "is_expanded": true,
+      "in_active_trail": true,
+      "title": "Open on page load and with a really long link label",
+      "url": "#",
+      "below": [
+        {
+          "is_expanded": true,
+          "in_active_trail": false,
+          "title": "Active trail sub item",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "is_expanded": true,
+      "in_active_trail": true,
+      "title": "Also in active trail",
+      "url": "#",
+      "below": []
+    },
+    {
+      "is_expanded": true,
+      "in_active_trail": false,
+      "title": "Contact",
+      "url": "#",
+      "below": []
+    }
+  ]
+}

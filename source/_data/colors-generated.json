@@ -130,7 +130,7 @@
   "t__federal-hill__official__link--focus": "hsl(360, 79%, 62%)",
   "t__federal-hill__header__fg": "hsl(0, 0%, 100%)",
   "t__federal-hill__header__bg": "hsl(356, 47%, 38%)",
-  "t__federal-hill__header__social__link": "hsl(208, 54%, 73%)",
+  "t__federal-hill__header__social__link": "hsl(0, 0%, 100%)",
   "t__federal-hill__header__social__link--hover": "hsl(46, 95%, 61%)",
   "t__federal-hill__nav-main__fg": "hsl(0, 0%, 25%)",
   "t__federal-hill__nav-main__bg": "hsl(360, 79%, 62%)",
