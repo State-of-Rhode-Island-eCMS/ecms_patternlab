@@ -4,7 +4,7 @@
  */
 
 // mq values (no unit)
-$bp--small-value: 22.5;   // 360
+$bp--small-value: 40;   // 640
 $bp--medium-value: 47.5;  // 760
 $bp--large-value: 62;     // 992
 $bp--xlarge-value: 75;    // 1200
@@ -26,6 +26,12 @@ $bp__single-col-content: $bp--medium;
 // Oomph usually does not include "media" so that the styles apply to all media types
 @mixin breakpoint-up($bp) {
   @media (min-width: #{$bp}) {
+    @content;
+  }
+}
+
+@mixin breakpoint-between($bp1, $bp2) {
+  @media (min-width: #{$bp1}) and (max-width: #{($bp2 - em(1))}) {
     @content;
   }
 }
