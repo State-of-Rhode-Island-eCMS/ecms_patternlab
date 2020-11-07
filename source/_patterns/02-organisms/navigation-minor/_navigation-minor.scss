@@ -50,6 +50,7 @@
     background-color: var(--fc__nav-minor__border);
     background-image: none;
     border-radius: 0;
+    color: var(--fc__nav-minor__fg);
     padding: ($button-v-spacing/2) $button-h-spacing ($button-v-spacing/2) 0;
     overflow: visible;
     position: absolute;
@@ -92,6 +93,8 @@
     &.qh__accordion {
       border: $border-xs solid transparent;
       margin-top: 0;
+      max-height: 80vh;
+      overflow: scroll;
     }
 
     &__sub {
