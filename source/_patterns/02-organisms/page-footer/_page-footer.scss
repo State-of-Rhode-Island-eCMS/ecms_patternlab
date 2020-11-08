@@ -1,17 +1,14 @@
 .qh__site-footer {
-  background-color: var(--fc__footer__bg);
-  color: var(--fc__footer__fg);
-  font-size: 1rem;
-  border-top: $border-xl solid var(--fc__footer__border-top);
 
-  .content-wrapper {
-    @include qh-content-maxwidth();
-    display: flex;
-  }
+  $qh__footer-sm-bp: $bp--small;
+  $qh__footer-lg-bp: em(1020);
+
+  background-color: var(--fc__footer__bg);
+  border-top: $border-xl solid var(--fc__footer__border-top);
+  color: var(--fc__footer__fg);
 
   a {
     color: var(--fc__footer__fg);
-    font-size: 1rem;
 
     &:hover,
     &:focus {
@@ -25,31 +22,95 @@
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1rem; // stop any other rules from making this type size grow
     margin-top: 0;
-  }
+    hyphens: auto !important; // Please forgive me
 
-  &__content-left {
-    display: flex;
-    flex-grow: 1;
-    padding: $general-v-spacing $general-h-spacing;
-
-    > div {
-      min-height: 2rem; // mostly for Pattern Lab
-      width: 33%;
+    + p {
+      margin-top: var(--body-text-spacer);
     }
   }
 
-  &__content-right {
-    display: flex;
-    margin-left: 0;
-    padding: $general-v-spacing $general-h-spacing $general-v-spacing 0;
-    width: 20%;
+  &__inner {
+    @include qh-content-maxwidth();
+  }
 
-    > div {
-      border-left: $border-xs solid var(--fc__footer__fg);
-      min-height: 2rem; // mostly for Pattern Lab
-      padding-left: ($general-h-spacing * 2);
+  & > &__inner {
+    padding: $general-v-spacing 0;
+
+    @include breakpoint-up($qh__footer-sm-bp) {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+  }
+
+  &__content {
+    padding: $general-v-spacing 0;
+    position: relative;
+
+    @include breakpoint-down($qh__footer-sm-bp) {
+      & + &::before {
+        border-top: $border-xs solid var(--fc__footer__fg);
+        content: '';
+        opacity: 0.33;
+        position: absolute;
+          top: 0; left: 0;
+        width: 100%;
+      }
+    }
+
+    // Four column 2 over 2 layout
+    @include breakpoint-up($qh__footer-sm-bp) {
+      flex: 0 0 50%;
+    }
+
+    // Four columns across layout
+    @include breakpoint-up($qh__footer-lg-bp) {
+      flex: 0 0 25%;
+    }
+  }
+
+  // Four column 2 over 2 layout. Horizontal borders in between
+  @include breakpoint-between($qh__footer-sm-bp, $qh__footer-lg-bp) {
+    &__first,
+    &__third {
+      padding-right: $general-h-spacing;
+
+      &::before {
+        border-right: $border-xs solid var(--fc__footer__fg);
+        content: '';
+        opacity: 0.33;
+        position: absolute;
+          top: $general-h-spacing; right: 0; bottom: $general-h-spacing;
+      }
+    }
+
+    &__second,
+    &__fourth {
+      padding-left: $general-h-spacing;
+    }
+  }
+
+  // Four columns across. Borders only on last element
+  @include breakpoint-up($qh__footer-lg-bp) {
+    &__first,
+    &__second,
+    &__third {
+      padding-right: $general-h-spacing;
+    }
+
+    &__fourth {
+      padding-left: $general-h-spacing;
+
+      &::before {
+        border-left: $border-xs solid var(--fc__footer__fg);
+        content: '';
+        opacity: 0.33;
+        position: absolute;
+          top: $general-h-spacing; left: 0; bottom: $general-h-spacing;
+      }
     }
   }
 
@@ -65,14 +126,24 @@
       justify-content: flex-start;
 
       p {
+        flex: 1 1 auto;
         font-size: 87.5%;
+        margin-left: 1rem;
         max-width: unset;
       }
     }
 
     svg:first-of-type {
-      width: rem(50);
-      margin: -0.75rem 1rem -0.75rem 0;
+      flex: 0 0 rem(50);
+      margin: -0.75rem 0;
+
+      @include breakpoint-up($qh__footer-sm-bp) {
+        flex: 0 0 rem(62);
+      }
+
+      @include breakpoint-up($qh__footer-lg-bp) {
+        flex: 0 0 rem(75);
+      }
     }
   }
 }
