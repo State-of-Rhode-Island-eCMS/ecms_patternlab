@@ -443,6 +443,7 @@ body {
       color: var(--fc__nav-main__link);
       font-size: clamp(0.925rem, 1.5vw, 1rem);
       font-weight: 450;
+      line-height: clamp(1.2rem, 3vw, 1.3rem);
       text-decoration: none;
 
       @include breakpoint-up($bp__show__desktop-nav) {

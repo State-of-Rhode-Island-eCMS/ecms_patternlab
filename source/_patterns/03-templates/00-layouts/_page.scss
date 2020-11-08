@@ -1,6 +1,6 @@
 $sidebar-min: rem(200);
 $sidebar-max: rem(380);
-$sidebar-column-gap: rem(75);
+$sidebar-column-gap: 5vw;
 $sidebar-row-gap: rem(36);
 
 .qh-layout {
@@ -14,7 +14,7 @@ $sidebar-row-gap: rem(36);
       'sidebar-bottom';
     margin-top: 5rem;
     margin-bottom: 5rem;
-    padding-left: 2rem;
+    padding-left: 1rem;
 
     @include breakpoint-up($bp__single-col-content) {
       grid-template-areas:
@@ -28,7 +28,10 @@ $sidebar-row-gap: rem(36);
 
   &__content {
     grid-area: content;
-    max-width: var(--content-max-width);
+    max-width: 89vw;
+    @include breakpoint-up($bp__single-col-content) {
+      max-width: var(--content-max-width);
+    }
   }
 
   &__sidebar-top {

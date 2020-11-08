@@ -816,7 +816,7 @@ dl, .form__actions a, button,
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: normal;
       letter-spacing: 0.035em; } }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 50em) {
     p, address, time, ul,
     ol,
     dl, .form__actions a, button,
@@ -846,7 +846,7 @@ dl, .form__actions a, button,
       --font-lh-max: 1.55em;
       --font-lh-scaler-value: var(--p-lh-scaler-value);
       line-height: var(--line-height); } }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 50em) {
     p, address, time, ul,
     ol,
     dl, .form__actions a, button,
@@ -881,7 +881,7 @@ h1 {
       font-variant-numeric: lining-nums;
       font-weight: normal;
       letter-spacing: 0.035em; } }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 50em) {
     h1 {
       font-size: 3.75rem;
       line-height: 1.075em; } }
@@ -922,7 +922,7 @@ h2 {
       font-variant-numeric: lining-nums;
       font-weight: normal;
       letter-spacing: 0.035em; } }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 50em) {
     h2 {
       font-size: 2.25rem;
       line-height: 1.125em; } }
@@ -970,7 +970,7 @@ h3 {
       font-variant-numeric: lining-nums;
       font-weight: normal;
       letter-spacing: 0.035em; } }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 50em) {
     h3 {
       font-size: 1.625rem;
       line-height: 1.125em; } }
@@ -1011,7 +1011,7 @@ h4 {
       font-variant-numeric: lining-nums;
       font-weight: normal;
       letter-spacing: 0.035em; } }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 50em) {
     h4 {
       font-size: 1.125rem;
       line-height: 1.2em; } }
@@ -1052,7 +1052,7 @@ h5 {
       font-variant-numeric: lining-nums;
       font-weight: normal;
       letter-spacing: 0.035em; } }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 50em) {
     h5 {
       font-size: 1rem;
       line-height: 1.2em; } }
@@ -1093,7 +1093,7 @@ h6 {
       font-variant-numeric: lining-nums;
       font-weight: normal;
       letter-spacing: 0.035em; } }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 50em) {
     h6 {
       font-size: 0.9375rem;
       line-height: 1.2em; } }
@@ -1161,7 +1161,7 @@ blockquote {
         font-variant-numeric: lining-nums;
         font-weight: normal;
         letter-spacing: 0.035em; } }
-    @media screen and (min-width: 47.5em) {
+    @media screen and (min-width: 50em) {
       blockquote p, blockquote address, blockquote time, blockquote ul,
       blockquote ol,
       blockquote dl, blockquote .form__actions a, .form__actions blockquote a, blockquote button,
@@ -1215,7 +1215,7 @@ body {
       font-variant-numeric: lining-nums;
       font-weight: normal;
       letter-spacing: 0.035em; } }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 50em) {
     .small-text, label, figcaption, .qh__file-list__item__filesize {
       font-size: 0.8125rem;
       line-height: 1.2em; } }
@@ -1326,7 +1326,10 @@ form {
         flex-basis: 0;
     margin-right: 1rem;
     margin-top: 1rem;
-    min-width: 21rem; }
+    min-width: 18rem; }
+    @media (min-width: 50em) {
+      .flexbox-container > * {
+        min-width: 21rem; } }
   .flexbox-container > legend {
     min-width: unset; }
   .flexbox-container > p, .flexbox-container > address, .flexbox-container > time, .flexbox-container > ul,
@@ -1845,7 +1848,7 @@ table {
           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
           font-weight: normal;
           letter-spacing: 0.035em; } }
-      @media screen and (min-width: 47.5em) {
+      @media screen and (min-width: 50em) {
         .qh__site-branding__name__top-line {
           font-size: 0.8125rem;
           line-height: 1.2em; } }
@@ -1882,7 +1885,7 @@ table {
           font-family: Georgia, "Times New Roman", serif;
           font-weight: normal;
           letter-spacing: 0.035em; } }
-      @media screen and (min-width: 47.5em) {
+      @media screen and (min-width: 50em) {
         .qh__site-branding__name__main-line {
           font-size: 2.5rem;
           line-height: 1.075em; } }
@@ -1918,7 +1921,7 @@ table {
           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
           font-weight: normal;
           letter-spacing: 0.035em; } }
-      @media screen and (min-width: 47.5em) {
+      @media screen and (min-width: 50em) {
         .qh__site-branding__name__bottom-line {
           font-size: 0.875rem;
           line-height: 1.2em; } }
@@ -2024,7 +2027,7 @@ table {
     padding-bottom: 1.5rem; }
   .qh__articles-latest__list {
     margin: 0 -1rem; }
-    @media (min-width: 47.5em) {
+    @media (min-width: 50em) {
       .qh__articles-latest__list {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -2041,10 +2044,10 @@ table {
                 justify-content: center; } }
   .qh__articles-latest__list > * {
     padding: 0 1rem; }
-    @media (max-width: 47.4375em) {
+    @media (max-width: 49.9375em) {
       .qh__articles-latest__list > * + .qh__articles-latest__list > * {
         padding-top: 1.5rem; } }
-    @media (min-width: 47.5em) {
+    @media (min-width: 50em) {
       .qh__articles-latest__list > * {
         -webkit-box-flex: 1;
             -ms-flex: 1 1 0px;
@@ -2167,7 +2170,7 @@ table {
 body {
   --nav-state: js-mobile; }
 
-@media (min-width: 47.5em) {
+@media (min-width: 50em) {
   body {
     --nav-state: js-desktop; } }
 
@@ -2188,7 +2191,7 @@ body {
     @supports (width: 5px) {
       .qh__nav-main__wrapper {
         max-width: var(--content-max-width); } }
-    @media (max-width: 47.4375em) {
+    @media (max-width: 49.9375em) {
       .qh__nav-main__wrapper {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -2249,7 +2252,7 @@ body {
     .qh__nav-main__toggle:active {
       color: var(--fc__nav-main__link--active);
       background-color: transparent; }
-    @media (min-width: 47.5em) {
+    @media (min-width: 50em) {
       .qh__nav-main__toggle {
         display: none; } }
     .qh__nav-main__toggle .qh__icon__menu {
@@ -2324,7 +2327,7 @@ body {
       width: 1.5rem; }
   .qh__nav-main__list {
     max-width: none; }
-    @media (max-width: 47.4375em) {
+    @media (max-width: 49.9375em) {
       .qh__nav-main__list__outermost {
         background-color: var(--fc__nav-main__bg);
         color: var(--fc__nav-main__fg);
@@ -2354,7 +2357,7 @@ body {
           [aria-expanded="true"] + .qh__nav-main__list__outermost > li {
             -webkit-transform: translateX(0);
                     transform: translateX(0); } }
-    @media (min-width: 47.5em) {
+    @media (min-width: 50em) {
       .qh__nav-main__list__outermost {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -2372,7 +2375,7 @@ body {
     .qh__nav-main__list__sub {
       background-color: var(--fc__nav-main__link--hover__bg);
       min-width: 15rem; }
-      @media (max-width: 47.4375em) {
+      @media (max-width: 49.9375em) {
         .qh__nav-main__list__sub {
           max-height: 0;
           overflow: hidden;
@@ -2393,7 +2396,7 @@ body {
               opacity: 1;
               -webkit-transition: all 250ms ease 125ms;
               transition: all 250ms ease 125ms; } }
-      @media (min-width: 47.5em) {
+      @media (min-width: 50em) {
         .qh__nav-main__list__sub {
           -webkit-box-shadow: 0 0.125em 0.5em var(--c__quahog--dark--trans33);
                   box-shadow: 0 0.125em 0.5em var(--c__quahog--dark--trans33);
@@ -2420,7 +2423,7 @@ body {
         max-width: unset; }
     .qh__nav-main__item__social {
       padding: 0.5rem 0.75rem; }
-    @media (min-width: 47.5em) {
+    @media (min-width: 50em) {
       .qh__nav-main__item__search, .qh__nav-main__item__social {
         opacity: 0;
         visibility: hidden;
@@ -2439,7 +2442,7 @@ body {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
-    @media (max-width: 47.4375em) {
+    @media (max-width: 49.9375em) {
       .qh__nav-main__has-children .qh__nav-main__link {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
@@ -2499,8 +2502,9 @@ body {
       color: var(--fc__nav-main__link);
       font-size: clamp(0.925rem, 1.5vw, 1rem);
       font-weight: 450;
+      line-height: clamp(1.2rem, 3vw, 1.3rem);
       text-decoration: none; }
-      @media (min-width: 47.5em) {
+      @media (min-width: 50em) {
         .qh__nav-main__link, .qh__nav-main__link:visited {
           border-top: 0.25rem solid var(--fc__nav-main__bg); } }
     .qh__nav-main__link:focus {
@@ -2512,10 +2516,10 @@ body {
       color: var(--fc__nav-main__fg);
       font-weight: 550;
       padding: 0.75rem 1rem 1rem; }
-      @media (max-width: 47.4375em) {
+      @media (max-width: 49.9375em) {
         .qh__nav-main__link.qh__nav-main__link--current {
           border-left: 0.5rem solid var(--fc__nav-main__link--hover__bg); } }
-      @media (min-width: 47.5em) {
+      @media (min-width: 50em) {
         .qh__nav-main__link.qh__nav-main__link--current {
           border-top: 0.25rem solid var(--fc__nav-main__link--hover__bg); } }
     .qh__nav-main__link__sub {
@@ -2528,11 +2532,11 @@ body {
       cursor: default;
       padding: 0.625rem 1rem;
       pointer-events: none; }
-    @media (min-width: 47.5em) {
+    @media (min-width: 50em) {
       .qh__nav-main__wrapper > .qh__nav-main__link--home {
         display: none;
         visibility: hidden; } }
-    @media (max-width: 47.4375em) {
+    @media (max-width: 49.9375em) {
       .qh__nav-main__list__outermost .qh__nav-main__link--home {
         display: none;
         visibility: hidden; } }
@@ -2547,7 +2551,7 @@ body {
 .qh-layout__sidebar-top {
   position: sticky;
   top: 3rem; }
-  @media (min-width: 47.5em) {
+  @media (min-width: 50em) {
     .qh-layout__sidebar-top {
       position: relative;
       top: auto; } }
@@ -2557,10 +2561,10 @@ body {
   border-top: 0.875rem solid var(--fc__nav-minor__border);
   min-width: 20rem;
   overflow: visible; }
-  @media (max-width: 47.4375em) {
+  @media (max-width: 49.9375em) {
     .qh__nav-minor {
       position: absolute;
-      left: calc((2rem + 3.5vw) * -1);
+      left: calc((1.125rem + 3.5vw) * -1);
       width: 20rem;
       -webkit-transform: translateX(-20rem);
               transform: translateX(-20rem);
@@ -2590,7 +2594,7 @@ body {
     background-image: none;
     border-radius: 0;
     color: var(--fc__nav-minor__fg);
-    padding: 0.5em 1.5em 0.5em 0;
+    padding: 0.125em 1.5em 0.125em 0;
     overflow: visible;
     position: absolute;
     top: -0.875rem;
@@ -2600,8 +2604,7 @@ body {
     -webkit-transform-origin: top right;
             transform-origin: top right; }
     .qh__nav-minor__toggle:hover::before, .qh__nav-minor__toggle:focus::before {
-      border-top-color: var(--fc__default__button--hover__bg);
-      border-right-color: var(--fc__default__button--hover__bg); }
+      background-color: var(--fc__default__button--hover__bg); }
     .qh__nav-minor__toggle::before {
       background-color: var(--fc__nav-minor__border);
       background-image: none;
@@ -2616,7 +2619,7 @@ body {
               transform: skew(25deg, 0deg);
       -webkit-transition: all 250ms ease;
       transition: all 250ms ease; }
-    @media (min-width: 47.5em) {
+    @media (min-width: 50em) {
       .qh__nav-minor__toggle {
         display: none;
         visibility: hidden; } }
@@ -2701,10 +2704,12 @@ body {
   .qh__nav-minor .qh__accordion__button:active, .qh__nav-minor__link:active {
     color: var(--fc__nav-main__link--active); }
   .qh__nav-minor__link {
-    font-weight: normal;
+    font-size: clamp(0.925rem, 1.5vw, 1rem);
+    line-height: clamp(1.2rem, 3vw, 1.3rem);
     padding: 1rem 1rem; }
     .qh__nav-minor__link__sub {
-      font-size: 0.875em; }
+      font-size: clamp(0.875rem, 1.5vw, 0.925rem);
+      line-height: clamp(1.2rem, 3vw, 1.3rem); }
     .qh__nav-minor__link--current {
       cursor: default;
       pointer-events: none; }
@@ -2945,11 +2950,11 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 0%;
             flex: 1 1 0%; }
-    @media (max-width: 47.4375em) {
+    @media (max-width: 49.9375em) {
       .qh__page-header__inner {
         opacity: 0;
         visibility: hidden; } }
-    @media (min-width: 47.5em) {
+    @media (min-width: 50em) {
       .qh__page-header__inner {
         -webkit-box-flex: 1;
             -ms-flex: 1 1 34%;
@@ -3272,7 +3277,7 @@ body {
      -moz-column-gap: 1rem;
           column-gap: 1rem;
   row-gap: 1.5rem; }
-  @media (min-width: 47.5em) {
+  @media (min-width: 50em) {
     .qh__paragraph__column-container {
       grid-template-columns: repeat(2, 1fr); } }
 
@@ -3384,7 +3389,7 @@ body {
     width: 100%; }
   .qh-layout-section--col-size-25-75 {
     grid-template-columns: 1fr; }
-    @media screen and (min-width: 47.5em) {
+    @media screen and (min-width: 50em) {
       .qh-layout-section--col-size-25-75 {
         grid-template-columns: 1fr 2fr; } }
     @media screen and (min-width: 75em) {
@@ -3392,22 +3397,22 @@ body {
         grid-template-columns: 1fr 3fr; } }
   .qh-layout-section--col-size-33-67 {
     grid-template-columns: 1fr; }
-    @media screen and (min-width: 47.5em) {
+    @media screen and (min-width: 50em) {
       .qh-layout-section--col-size-33-67 {
         grid-template-columns: 1fr 2fr; } }
   .qh-layout-section--col-size-50-50 {
     grid-template-columns: 1fr; }
-    @media screen and (min-width: 47.5em) {
+    @media screen and (min-width: 50em) {
       .qh-layout-section--col-size-50-50 {
         grid-template-columns: 1fr 1fr; } }
   .qh-layout-section--col-size-67-33 {
     grid-template-columns: 1fr; }
-    @media screen and (min-width: 47.5em) {
+    @media screen and (min-width: 50em) {
       .qh-layout-section--col-size-67-33 {
         grid-template-columns: 2fr 1fr; } }
   .qh-layout-section--col-size-75-25 {
     grid-template-columns: 1fr; }
-    @media screen and (min-width: 47.5em) {
+    @media screen and (min-width: 50em) {
       .qh-layout-section--col-size-75-25 {
         grid-template-columns: 2fr 1fr; } }
     @media screen and (min-width: 75em) {
@@ -3415,12 +3420,12 @@ body {
         grid-template-columns: 3fr 1fr; } }
   .qh-layout-section--col-size-33-repeat {
     grid-template-columns: 1fr; }
-    @media screen and (min-width: 47.5em) {
+    @media screen and (min-width: 50em) {
       .qh-layout-section--col-size-33-repeat {
         grid-template-columns: 1fr 1fr 1fr; } }
   .qh-layout-section--col-size-25-repeat {
     grid-template-columns: 1fr; }
-    @media screen and (min-width: 47.5em) {
+    @media screen and (min-width: 50em) {
       .qh-layout-section--col-size-25-repeat {
         grid-template-columns: 1fr 1fr; } }
     @media screen and (min-width: 75em) {
@@ -3461,11 +3466,11 @@ body {
   grid-template-areas: 'sidebar-top' 'content' 'sidebar-middle' 'sidebar-bottom';
   margin-top: 5rem;
   margin-bottom: 5rem;
-  padding-left: 2rem; }
+  padding-left: 1rem; }
   @supports (width: 5px) {
     .qh-layout__grid {
       max-width: var(--content-max-width); } }
-  @media (min-width: 47.5em) {
+  @media (min-width: 50em) {
     .qh-layout__grid {
       grid-template-areas: 'sidebar-top content' 'sidebar-middle content' 'sidebar-bottom content';
       grid-template-columns: minmax(12.5rem, -webkit-max-content) minmax(0, 1fr);
@@ -3474,30 +3479,33 @@ body {
 
 .qh-layout__content {
   grid-area: content;
-  max-width: var(--content-max-width); }
+  max-width: 89vw; }
+  @media (min-width: 50em) {
+    .qh-layout__content {
+      max-width: var(--content-max-width); } }
 
 .qh-layout__sidebar-top {
   grid-area: sidebar-top;
   max-width: 23.75rem;
-  margin-right: 4.6875rem;
+  margin-right: 5vw;
   margin-bottom: 2.25rem; }
   [dir="rtl"] .qh-layout__sidebar-top {
-    margin-left: 4.6875rem;
+    margin-left: 5vw;
     margin-right: 0; }
-  @media (max-width: 47.4375em) {
+  @media (max-width: 49.9375em) {
     .qh-layout__sidebar-top {
       margin: 0; } }
 
 .qh-layout__sidebar-middle {
   grid-area: sidebar-middle;
   max-width: 23.75rem;
-  margin-right: 4.6875rem;
+  margin-right: 5vw;
   margin-bottom: 2.25rem; }
 
 .qh-layout__sidebar-bottom {
   grid-area: sidebar-bottom;
   max-width: 23.75rem;
-  margin-right: 4.6875rem;
+  margin-right: 5vw;
   margin-bottom: 2.25rem; }
 
 /*------------------------------------*\
