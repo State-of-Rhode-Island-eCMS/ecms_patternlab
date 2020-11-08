@@ -2589,6 +2589,7 @@ body {
     background-color: var(--fc__nav-minor__border);
     background-image: none;
     border-radius: 0;
+    color: var(--fc__nav-minor__fg);
     padding: 0.5em 1.5em 0.5em 0;
     overflow: visible;
     position: absolute;
@@ -2602,16 +2603,17 @@ body {
       border-top-color: var(--fc__default__button--hover__bg);
       border-right-color: var(--fc__default__button--hover__bg); }
     .qh__nav-minor__toggle::before {
-      border-top: 1.25rem solid var(--fc__nav-minor__border);
-      border-right: 1.25rem solid var(--fc__nav-minor__border);
-      border-bottom: 1.25rem solid transparent;
-      border-left: 1.25rem solid transparent;
-      content: '';
-      height: 0;
-      width: 0;
+      background-color: var(--fc__nav-minor__border);
+      background-image: none;
+      content: " ";
+      display: block;
+      height: 100%;
+      width: 2.5rem;
       position: absolute;
       top: 0;
-      left: -2.5rem;
+      left: -1.875rem;
+      -webkit-transform: skew(25deg, 0deg);
+              transform: skew(25deg, 0deg);
       -webkit-transition: all 250ms ease;
       transition: all 250ms ease; }
     @media (min-width: 47.5em) {
@@ -2622,7 +2624,9 @@ body {
     background-color: var(--fc__nav-minor__bg); }
     .qh__nav-minor__list.qh__accordion {
       border: 0.0625rem solid transparent;
-      margin-top: 0; }
+      margin-top: 0;
+      max-height: 80vh;
+      overflow: scroll; }
     .qh__nav-minor__list__sub {
       background-color: var(--fc__nav-minor__sub__bg);
       border-left: 0.5rem solid var(--fc__nav-minor__link--hover__bg); }
@@ -2713,21 +2717,10 @@ body {
 
 .qh__site-footer {
   background-color: var(--fc__footer__bg);
-  color: var(--fc__footer__fg);
-  font-size: 1rem;
-  border-top: 1.3125rem solid var(--fc__footer__border-top); }
-  .qh__site-footer .content-wrapper {
-    margin: 0 auto;
-    max-width: 93vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
-    @supports (width: 5px) {
-      .qh__site-footer .content-wrapper {
-        max-width: var(--content-max-width); } }
+  border-top: 1.3125rem solid var(--fc__footer__border-top);
+  color: var(--fc__footer__fg); }
   .qh__site-footer a {
-    color: var(--fc__footer__fg);
-    font-size: 1rem; }
+    color: var(--fc__footer__fg); }
     .qh__site-footer a:hover, .qh__site-footer a:focus {
       text-decoration: none;
       color: var(--fc__footer__fg); }
@@ -2739,29 +2732,139 @@ body {
   .qh__site-footer .qh__btn,
   .qh__site-footer .button, .qh__site-footer table th, table .qh__site-footer th, .qh__site-footer table td, table .qh__site-footer td, .qh__site-footer .qh__accordion__button, .qh__site-footer .qh__file-list__item__label {
     font-size: 1rem;
-    margin-top: 0; }
-  .qh__site-footer__content-left {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    padding: 1.5rem 1rem; }
-    .qh__site-footer__content-left > div {
-      min-height: 2rem;
-      width: 33%; }
-  .qh__site-footer__content-right {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 0;
-    padding: 1.5rem 1rem 1.5rem 0;
-    width: 20%; }
-    .qh__site-footer__content-right > div {
-      border-left: 0.0625rem solid var(--fc__footer__fg);
-      min-height: 2rem;
-      padding-left: 2rem; }
+    margin-top: 0;
+    -webkit-hyphens: auto !important;
+        -ms-hyphens: auto !important;
+            hyphens: auto !important; }
+    .qh__site-footer p + p, .qh__site-footer address + p, .qh__site-footer time + p, .qh__site-footer ul + p, .qh__site-footer ol + p, .qh__site-footer dl + p, .qh__site-footer .form__actions a + p, .form__actions .qh__site-footer a + p, .qh__site-footer button + p, .qh__site-footer .qh__btn + p, .qh__site-footer .button + p, .qh__site-footer table th + p, table .qh__site-footer th + p, .qh__site-footer table td + p, table .qh__site-footer td + p, .qh__site-footer .qh__accordion__button + p, .qh__site-footer .qh__file-list__item__label + p, .qh__site-footer p + address, .qh__site-footer address + address, .qh__site-footer time + address, .qh__site-footer ul + address, .qh__site-footer ol + address, .qh__site-footer dl + address, .qh__site-footer .form__actions a + address, .form__actions .qh__site-footer a + address, .qh__site-footer button + address, .qh__site-footer .qh__btn + address, .qh__site-footer .button + address, .qh__site-footer table th + address, table .qh__site-footer th + address, .qh__site-footer table td + address, table .qh__site-footer td + address, .qh__site-footer .qh__accordion__button + address, .qh__site-footer .qh__file-list__item__label + address, .qh__site-footer p + time, .qh__site-footer address + time, .qh__site-footer time + time, .qh__site-footer ul + time, .qh__site-footer ol + time, .qh__site-footer dl + time, .qh__site-footer .form__actions a + time, .form__actions .qh__site-footer a + time, .qh__site-footer button + time, .qh__site-footer .qh__btn + time, .qh__site-footer .button + time, .qh__site-footer table th + time, table .qh__site-footer th + time, .qh__site-footer table td + time, table .qh__site-footer td + time, .qh__site-footer .qh__accordion__button + time, .qh__site-footer .qh__file-list__item__label + time, .qh__site-footer p + ul, .qh__site-footer address + ul, .qh__site-footer time + ul, .qh__site-footer ul + ul, .qh__site-footer ol + ul, .qh__site-footer dl + ul, .qh__site-footer .form__actions a + ul, .form__actions .qh__site-footer a + ul, .qh__site-footer button + ul, .qh__site-footer .qh__btn + ul, .qh__site-footer .button + ul, .qh__site-footer table th + ul, table .qh__site-footer th + ul, .qh__site-footer table td + ul, table .qh__site-footer td + ul, .qh__site-footer .qh__accordion__button + ul, .qh__site-footer .qh__file-list__item__label + ul,
+    .qh__site-footer p + ol,
+    .qh__site-footer address + ol,
+    .qh__site-footer time + ol,
+    .qh__site-footer ul + ol,
+    .qh__site-footer ol + ol,
+    .qh__site-footer dl + ol,
+    .qh__site-footer .form__actions a + ol, .form__actions .qh__site-footer a + ol,
+    .qh__site-footer button + ol,
+    .qh__site-footer .qh__btn + ol,
+    .qh__site-footer .button + ol,
+    .qh__site-footer table th + ol, table .qh__site-footer th + ol,
+    .qh__site-footer table td + ol, table .qh__site-footer td + ol,
+    .qh__site-footer .qh__accordion__button + ol,
+    .qh__site-footer .qh__file-list__item__label + ol,
+    .qh__site-footer p + dl,
+    .qh__site-footer address + dl,
+    .qh__site-footer time + dl,
+    .qh__site-footer ul + dl,
+    .qh__site-footer ol + dl,
+    .qh__site-footer dl + dl,
+    .qh__site-footer .form__actions a + dl, .form__actions .qh__site-footer a + dl,
+    .qh__site-footer button + dl,
+    .qh__site-footer .qh__btn + dl,
+    .qh__site-footer .button + dl,
+    .qh__site-footer table th + dl, table .qh__site-footer th + dl,
+    .qh__site-footer table td + dl, table .qh__site-footer td + dl,
+    .qh__site-footer .qh__accordion__button + dl,
+    .qh__site-footer .qh__file-list__item__label + dl, .qh__site-footer .form__actions p + a, .form__actions .qh__site-footer p + a, .qh__site-footer .form__actions address + a, .form__actions .qh__site-footer address + a, .qh__site-footer .form__actions time + a, .form__actions .qh__site-footer time + a, .qh__site-footer .form__actions ul + a, .form__actions .qh__site-footer ul + a, .qh__site-footer .form__actions ol + a, .form__actions .qh__site-footer ol + a, .qh__site-footer .form__actions dl + a, .form__actions .qh__site-footer dl + a, .qh__site-footer .form__actions a + a, .form__actions .qh__site-footer a + a, .qh__site-footer .form__actions button + a, .form__actions .qh__site-footer button + a, .qh__site-footer .form__actions .qh__btn + a, .form__actions .qh__site-footer .qh__btn + a, .qh__site-footer .form__actions .button + a, .form__actions .qh__site-footer .button + a, .qh__site-footer table .form__actions th + a, .form__actions .qh__site-footer table th + a, table .qh__site-footer .form__actions th + a, .form__actions table .qh__site-footer th + a, .qh__site-footer table .form__actions td + a, .form__actions .qh__site-footer table td + a, table .qh__site-footer .form__actions td + a, .form__actions table .qh__site-footer td + a, .qh__site-footer .form__actions .qh__accordion__button + a, .form__actions .qh__site-footer .qh__accordion__button + a, .qh__site-footer .form__actions .qh__file-list__item__label + a, .form__actions .qh__site-footer .qh__file-list__item__label + a, .qh__site-footer p + button, .qh__site-footer address + button, .qh__site-footer time + button, .qh__site-footer ul + button, .qh__site-footer ol + button, .qh__site-footer dl + button, .qh__site-footer .form__actions a + button, .form__actions .qh__site-footer a + button, .qh__site-footer button + button, .qh__site-footer .qh__btn + button, .qh__site-footer .button + button, .qh__site-footer table th + button, table .qh__site-footer th + button, .qh__site-footer table td + button, table .qh__site-footer td + button, .qh__site-footer .qh__accordion__button + button, .qh__site-footer .qh__file-list__item__label + button,
+    .qh__site-footer p + .qh__btn,
+    .qh__site-footer address + .qh__btn,
+    .qh__site-footer time + .qh__btn,
+    .qh__site-footer ul + .qh__btn,
+    .qh__site-footer ol + .qh__btn,
+    .qh__site-footer dl + .qh__btn,
+    .qh__site-footer .form__actions a + .qh__btn, .form__actions .qh__site-footer a + .qh__btn,
+    .qh__site-footer button + .qh__btn,
+    .qh__site-footer .qh__btn + .qh__btn,
+    .qh__site-footer .button + .qh__btn,
+    .qh__site-footer table th + .qh__btn, table .qh__site-footer th + .qh__btn,
+    .qh__site-footer table td + .qh__btn, table .qh__site-footer td + .qh__btn,
+    .qh__site-footer .qh__accordion__button + .qh__btn,
+    .qh__site-footer .qh__file-list__item__label + .qh__btn,
+    .qh__site-footer p + .button,
+    .qh__site-footer address + .button,
+    .qh__site-footer time + .button,
+    .qh__site-footer ul + .button,
+    .qh__site-footer ol + .button,
+    .qh__site-footer dl + .button,
+    .qh__site-footer .form__actions a + .button, .form__actions .qh__site-footer a + .button,
+    .qh__site-footer button + .button,
+    .qh__site-footer .qh__btn + .button,
+    .qh__site-footer .button + .button,
+    .qh__site-footer table th + .button, table .qh__site-footer th + .button,
+    .qh__site-footer table td + .button, table .qh__site-footer td + .button,
+    .qh__site-footer .qh__accordion__button + .button,
+    .qh__site-footer .qh__file-list__item__label + .button, .qh__site-footer table p + th, table .qh__site-footer p + th, .qh__site-footer table address + th, table .qh__site-footer address + th, .qh__site-footer table time + th, table .qh__site-footer time + th, .qh__site-footer table ul + th, table .qh__site-footer ul + th, .qh__site-footer table ol + th, table .qh__site-footer ol + th, .qh__site-footer table dl + th, table .qh__site-footer dl + th, .qh__site-footer .form__actions table a + th, table .qh__site-footer .form__actions a + th, .form__actions .qh__site-footer table a + th, table .form__actions .qh__site-footer a + th, .qh__site-footer table button + th, table .qh__site-footer button + th, .qh__site-footer table .qh__btn + th, table .qh__site-footer .qh__btn + th, .qh__site-footer table .button + th, table .qh__site-footer .button + th, .qh__site-footer table th + th, table .qh__site-footer th + th, .qh__site-footer table td + th, table .qh__site-footer td + th, .qh__site-footer table .qh__accordion__button + th, table .qh__site-footer .qh__accordion__button + th, .qh__site-footer table .qh__file-list__item__label + th, table .qh__site-footer .qh__file-list__item__label + th, .qh__site-footer table p + td, table .qh__site-footer p + td, .qh__site-footer table address + td, table .qh__site-footer address + td, .qh__site-footer table time + td, table .qh__site-footer time + td, .qh__site-footer table ul + td, table .qh__site-footer ul + td, .qh__site-footer table ol + td, table .qh__site-footer ol + td, .qh__site-footer table dl + td, table .qh__site-footer dl + td, .qh__site-footer .form__actions table a + td, table .qh__site-footer .form__actions a + td, .form__actions .qh__site-footer table a + td, table .form__actions .qh__site-footer a + td, .qh__site-footer table button + td, table .qh__site-footer button + td, .qh__site-footer table .qh__btn + td, table .qh__site-footer .qh__btn + td, .qh__site-footer table .button + td, table .qh__site-footer .button + td, .qh__site-footer table th + td, table .qh__site-footer th + td, .qh__site-footer table td + td, table .qh__site-footer td + td, .qh__site-footer table .qh__accordion__button + td, table .qh__site-footer .qh__accordion__button + td, .qh__site-footer table .qh__file-list__item__label + td, table .qh__site-footer .qh__file-list__item__label + td, .qh__site-footer p + .qh__accordion__button, .qh__site-footer address + .qh__accordion__button, .qh__site-footer time + .qh__accordion__button, .qh__site-footer ul + .qh__accordion__button, .qh__site-footer ol + .qh__accordion__button, .qh__site-footer dl + .qh__accordion__button, .qh__site-footer .form__actions a + .qh__accordion__button, .form__actions .qh__site-footer a + .qh__accordion__button, .qh__site-footer button + .qh__accordion__button, .qh__site-footer .qh__btn + .qh__accordion__button, .qh__site-footer .button + .qh__accordion__button, .qh__site-footer table th + .qh__accordion__button, table .qh__site-footer th + .qh__accordion__button, .qh__site-footer table td + .qh__accordion__button, table .qh__site-footer td + .qh__accordion__button, .qh__site-footer .qh__accordion__button + .qh__accordion__button, .qh__site-footer .qh__file-list__item__label + .qh__accordion__button, .qh__site-footer p + .qh__file-list__item__label, .qh__site-footer address + .qh__file-list__item__label, .qh__site-footer time + .qh__file-list__item__label, .qh__site-footer ul + .qh__file-list__item__label, .qh__site-footer ol + .qh__file-list__item__label, .qh__site-footer dl + .qh__file-list__item__label, .qh__site-footer .form__actions a + .qh__file-list__item__label, .form__actions .qh__site-footer a + .qh__file-list__item__label, .qh__site-footer button + .qh__file-list__item__label, .qh__site-footer .qh__btn + .qh__file-list__item__label, .qh__site-footer .button + .qh__file-list__item__label, .qh__site-footer table th + .qh__file-list__item__label, table .qh__site-footer th + .qh__file-list__item__label, .qh__site-footer table td + .qh__file-list__item__label, table .qh__site-footer td + .qh__file-list__item__label, .qh__site-footer .qh__accordion__button + .qh__file-list__item__label, .qh__site-footer .qh__file-list__item__label + .qh__file-list__item__label {
+      margin-top: var(--body-text-spacer); }
+  .qh__site-footer__inner {
+    margin: 0 auto;
+    max-width: 93vw; }
+    @supports (width: 5px) {
+      .qh__site-footer__inner {
+        max-width: var(--content-max-width); } }
+  .qh__site-footer > .qh__site-footer__inner {
+    padding: 1.5rem 0; }
+    @media (min-width: 40em) {
+      .qh__site-footer > .qh__site-footer__inner {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; } }
+  .qh__site-footer__content {
+    padding: 1.5rem 0;
+    position: relative; }
+    @media (max-width: 39.9375em) {
+      .qh__site-footer__content + .qh__site-footer__content::before {
+        border-top: 0.0625rem solid var(--fc__footer__fg);
+        content: '';
+        opacity: 0.33;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; } }
+    @media (min-width: 40em) {
+      .qh__site-footer__content {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+                flex: 0 0 50%; } }
+    @media (min-width: 63.75em) {
+      .qh__site-footer__content {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 25%;
+                flex: 0 0 25%; } }
+  @media (min-width: 40em) and (max-width: 63.6875em) {
+    .qh__site-footer__first, .qh__site-footer__third {
+      padding-right: 1rem; }
+      .qh__site-footer__first::before, .qh__site-footer__third::before {
+        border-right: 0.0625rem solid var(--fc__footer__fg);
+        content: '';
+        opacity: 0.33;
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        bottom: 1rem; }
+    .qh__site-footer__second, .qh__site-footer__fourth {
+      padding-left: 1rem; } }
+  @media (min-width: 63.75em) {
+    .qh__site-footer__first, .qh__site-footer__second, .qh__site-footer__third {
+      padding-right: 1rem; }
+    .qh__site-footer__fourth {
+      padding-left: 1rem; }
+      .qh__site-footer__fourth::before {
+        border-left: 0.0625rem solid var(--fc__footer__fg);
+        content: '';
+        opacity: 0.33;
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        bottom: 1rem; } }
   .qh__site-footer__copyright {
     background-color: var(--fc__footer__copyright__bg);
     color: var(--fc__footer__fg);
@@ -2785,11 +2888,27 @@ body {
       .qh__site-footer__copyright__content dl, .qh__site-footer__copyright__content .form__actions a, .form__actions .qh__site-footer__copyright__content a, .qh__site-footer__copyright__content button,
       .qh__site-footer__copyright__content .qh__btn,
       .qh__site-footer__copyright__content .button, .qh__site-footer__copyright__content table th, table .qh__site-footer__copyright__content th, .qh__site-footer__copyright__content table td, table .qh__site-footer__copyright__content td, .qh__site-footer__copyright__content .qh__accordion__button, .qh__site-footer__copyright__content .qh__file-list__item__label {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
         font-size: 87.5%;
+        margin-left: 1rem;
         max-width: unset; }
     .qh__site-footer__copyright svg:first-of-type {
-      width: 3.125rem;
-      margin: -0.75rem 1rem -0.75rem 0; }
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 3.125rem;
+              flex: 0 0 3.125rem;
+      margin: -0.75rem 0; }
+      @media (min-width: 40em) {
+        .qh__site-footer__copyright svg:first-of-type {
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 3.875rem;
+                  flex: 0 0 3.875rem; } }
+      @media (min-width: 63.75em) {
+        .qh__site-footer__copyright svg:first-of-type {
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 4.6875rem;
+                  flex: 0 0 4.6875rem; } }
 
 .qh__page-header {
   background-color: var(--fc__header__bg);
