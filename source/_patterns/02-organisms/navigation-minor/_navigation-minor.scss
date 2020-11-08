@@ -67,16 +67,16 @@
 
     // Little triangle at the bottom
     &::before {
-      border-top: rem(20) solid var(--fc__nav-minor__border);
-      border-right: rem(20) solid var(--fc__nav-minor__border);
-      border-bottom: rem(20) solid transparent;
-      border-left: rem(20) solid transparent;
-      content: '';
-      height: 0;
-      width: 0;
+      background-color: var(--fc__nav-minor__border);
+      background-image: none;
+      content: " ";
+      display: block;
+      height: 100%;
+      width: rem(40);
       position: absolute;
         top: 0;
-        left: - rem(40);
+        left: - rem(30);
+      transform: skew(25deg, 0deg);
       transition: $transition-base;
     }
 
