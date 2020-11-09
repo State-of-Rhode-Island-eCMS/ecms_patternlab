@@ -68,3 +68,25 @@ function activatePageOverlay() {
   var pageOverlay = document.getElementById('page_overlay');
   pageOverlay.classList.add('active');
 }
+
+// Expand / Collapse utility
+document.addEventListener("DOMContentLoaded", function() {
+
+  document.querySelectorAll(".js-expand-collapse").forEach(toggle_element => {
+    toggle_element.addEventListener('click', function(event) {
+      if (a11yClick(event) === true) {
+        var expanded = toggle_element.getAttribute('aria-expanded');
+        var target_id = toggle_element.getAttribute('aria-controls');
+        var target_element = document.getElementById(target_id);
+
+        if (expanded == 'true') {
+          toggle_element.setAttribute('aria-expanded', 'false');
+          target_element.classList.remove('aria-expanded')
+        } else {
+          toggle_element.setAttribute('aria-expanded', 'true');
+          target_element.classList.add('aria-expanded')
+        }
+      }
+    })
+  })
+});
