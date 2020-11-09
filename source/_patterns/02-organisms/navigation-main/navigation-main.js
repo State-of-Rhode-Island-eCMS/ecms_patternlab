@@ -161,8 +161,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (a11yClick(event) === true) {
           var expanded = toggle.getAttribute('aria-expanded');
           // Close all
-          allMenuCloser();
-
+          qh_dd_btns.forEach(function(btn) {
+            btn.setAttribute('aria-expanded', 'false');
+          });
+          
           // Open the one that was pressed
           if (expanded == 'false') {
             toggle.setAttribute('aria-expanded', 'true');

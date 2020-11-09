@@ -5,6 +5,7 @@
   @include breakpoint-up($bp__single-col-content) {
     position: relative;
     top: auto;
+    z-index: unset;
   }
 }
 
@@ -91,6 +92,9 @@
     background-color: var(--fc__nav-minor__bg);
     position: relative;
     z-index: z(drop-down-menu);
+    @include breakpoint-up($bp__single-col-content) {
+      z-index: unset;
+    }
 
     &.qh__accordion {
       border: $border-xs solid transparent;
