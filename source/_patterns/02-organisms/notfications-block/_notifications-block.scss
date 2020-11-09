@@ -1,0 +1,71 @@
+.qh__notifications-block {
+  position: relative;
+  &__wrapper {
+    background-color: var(--fc__notification__bg);
+    @include qh-content-maxwidth();
+
+    // Light colored background
+    &::before {
+      background-color: var(--fc__notification__bg);
+      content: '';
+      opacity: 0.3;
+      position: absolute;
+      @include qh-inset-supports(0);
+      z-index: -2;
+    }
+  }
+
+  &__header {
+    display: flex;
+
+    align-items: center;
+    margin: 0 $general-h-spacing;
+    padding: rem(12) 0;
+    font-weight: bold;
+
+    svg {
+      width: rem(24);
+      margin-right: $general-h-spacing;
+      color: var(--fc__notification__icon);
+    }
+
+    .qh__btn {
+      margin-left: auto;
+
+      &[aria-expanded="true"]::after {
+        content: attr(data-text-true);
+      }
+
+      &[aria-expanded="false"]::after {
+        content: attr(data-text-false);
+      }
+    }
+  }
+
+  &__content {
+    .js & {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0s linear 1s, visibility 0s linear 0s;
+      visibility: hidden;
+
+      > article {
+        opacity: 0;
+        transition: $transition-base 0ms;
+      }
+
+      &.aria-expanded {
+        max-height: unset;
+        padding: $general-v-spacing $general-h-spacing;
+        transition: max-height 0s linear 500s, visibility 0s linear 0ms;
+        visibility: visible;
+
+        > article {
+          opacity: 1;
+          transition: $transition-base 125ms;
+        }
+      }
+    }
+  }
+}
+
