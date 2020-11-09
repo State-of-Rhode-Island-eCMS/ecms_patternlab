@@ -2,6 +2,7 @@
   position: sticky;
   top: 3rem;
   z-index: z(mobile-nav-bar);
+
   @include breakpoint-up($bp__single-col-content) {
     position: relative;
     top: auto;
@@ -12,14 +13,17 @@
   background-color: var(--fc__default__bg);
   border-top: $border-lg solid var(--fc__nav-minor__border);
   min-width: rem(320);
-  //position: relative;
   overflow: visible;
 
   @include breakpoint-down($bp__single-col-content) {
+    $button-trigger-height: 28;
+
     position: absolute;
+    // This calc replicates the spacing variable to negate it, and push the button trigger over to the edge of the viewport
     left: calc((1.125rem + 3.5vw) * -1);
-    width: rem(320);
-    transform: translateX(- rem(320));
+    min-width: unset;
+    width: rem(320 - $button-trigger-height);
+    transform: translateX(- rem(320 - $button-trigger-height));
     transition: transform $transition-duration-base $transition-timing-base;
 
     > ul {
@@ -125,7 +129,7 @@
   // <li>
   &__has-children {
     // Set up a split button design
-    $button-width: em(44);
+    $button-width: rem(44);
 
     display: flex;
     flex-flow: row wrap;
