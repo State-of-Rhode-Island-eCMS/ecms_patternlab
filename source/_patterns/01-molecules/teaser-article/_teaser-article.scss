@@ -34,11 +34,20 @@
 
   // <p>
   &__cta {
+    display: inline-block;
     padding-top: ($general-v-spacing/2);
+
+    &::after {
+      color: var(--fc__default__link);
+      content: ' >';
+      display: inline-block;
+      transition: $transition-base;
+      transform: translateX(0);
+    }
   }
 
-  // <a>
-  &__link {
+  // <a> with "Read article"
+  &__cta &__link {
 
     // Do we want this effect? The whole article card is now clickable
     // and sighted keyboard users still can target the two links within
@@ -50,5 +59,17 @@
       @include qh-inset-supports(0);
       overflow: visible;
     }
+  }
+
+  // Because we are using the above method, a:hover will not affect children.
+  // Therefore, we can not color the Headline when the Read More link is hovered.
+  // Therefore therefore, we use a hover on the <article> element
+  // Hover ONLY because keyboard focus still works as expected
+  &:hover &__title a {
+    color: var(--fc__default__link--hover);
+  }
+
+  &:hover &__cta::after {
+    transform: translateX(4px);
   }
 }

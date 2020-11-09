@@ -1,0 +1,35 @@
+<div class="qh__articles-latest" aria-label="Articles">
+  <h2 class="qh__articles-latest__title">{{ title }}</h2>
+  <div class="qh__articles-latest__list" role="list">
+    {% include '@molecules/teaser-article/teaser-article.twig' with {
+      title: article_teaser1.title,
+      date: article_teaser1.date,
+      excerpt: article_teaser1.excerpt,
+      url: article_teaser1.url
+    } %}
+    {% include '@molecules/teaser-article/teaser-article.twig' with {
+      title: article_teaser2.title,
+      date: article_teaser2.date,
+      excerpt: article_teaser2.excerpt,
+      url: article_teaser2.url
+    } %}
+    {% include '@molecules/teaser-article/teaser-article.twig' with {
+      title: article_teaser1.title,
+      date: article_teaser1.date,
+      excerpt: article_teaser1.excerpt,
+      url: article_teaser1.url
+    } %}
+    {% include '@molecules/teaser-article/teaser-article.twig' with {
+      title: article_teaser2.title,
+      date: article_teaser2.date,
+      excerpt: article_teaser2.excerpt,
+      url: article_teaser2.url
+    } %}
+    {% include '@molecules/teaser-article/teaser-article.twig' with {
+      title: article_teaser1.title,
+      date: article_teaser1.date,
+      excerpt: article_teaser1.excerpt,
+      url: article_teaser1.url
+    } %}
+  </div>
+</div>
