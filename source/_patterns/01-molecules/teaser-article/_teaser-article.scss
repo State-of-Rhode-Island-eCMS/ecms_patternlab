@@ -70,6 +70,7 @@
   }
 
   &:hover &__cta::after {
+    color: var(--fc__default__link--hover);
     transform: translateX(4px);
   }
 }
