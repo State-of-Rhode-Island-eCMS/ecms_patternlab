@@ -69,6 +69,22 @@ function activatePageOverlay() {
   pageOverlay.classList.add('active');
 }
 
+
+const settingsMenuToggle = document.getElementById('settings_trigger');
+
+const settingsMenuTriggers = [].slice.call(document.querySelectorAll('.settings-menu-trigger'));
+settingsMenuTriggers.forEach(settingsMenuTrigger => settingsMenuTrigger.addEventListener('click', function(e) {
+	e.preventDefault();
+	if (settingsMenuTrigger.parentElement.classList.contains('open')) {
+		settingsMenuTrigger.parentElement.classList.remove('open');
+		deactivatePageOverlay();
+	} else {
+		// reset open menus
+		allMenuCloser();
+		settingsMenuTrigger.parentElement.classList.add('open');
+		activatePageOverlay();
+	}
+}));
 // There are custom properties that track what breakpoint the site is using
 function getQhNavState() {
   // NOTE: Strings from CSS get returned exactly as written
@@ -232,8 +248,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (a11yClick(event) === true) {
           var expanded = toggle.getAttribute('aria-expanded');
           // Close all
-          allMenuCloser();
-
+          qh_dd_btns.forEach(function(btn) {
+            btn.setAttribute('aria-expanded', 'false');
+          });
+          
           // Open the one that was pressed
           if (expanded == 'false') {
             toggle.setAttribute('aria-expanded', 'true');
