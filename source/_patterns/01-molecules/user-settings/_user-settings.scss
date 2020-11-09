@@ -1,0 +1,179 @@
+/* Settings */
+
+.settings-menu {
+  --text-opsz: 10;
+  display: inline-block;
+  font-family: var(--fonts-serif-static-caption);
+  position: relative;
+  @supports (font-variation-settings: normal) {
+    font-family: var(--fonts-serif);
+    .wf-inactive & {
+      font-family: var(--fonts-base-serif);
+      font-size: 1.1em;
+    }
+  }
+  .settings__menu {
+    background-color: var(--fc__official__bg);
+    color: var(--fc__official__fg);
+    font-size: 0.92rem;
+    height: 1px;
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0.25rem;
+    position: absolute;
+    text-align: left;
+    top: 2rem;
+    transition: opacity 0.2s ease-in, height 0.1s ease-in;
+    left: 0;
+    width: 100%;
+    z-index: z(drop-down-menu);
+    li {
+      border-bottom: solid 1px rgba(0,0,0,.25);
+      &:last-child {
+        border-bottom: none;
+      }
+      &.active {
+        padding: 0.5em 0.15em;
+      }
+    }
+
+    a {
+      display: block;
+      font-size: 0.875rem;
+      padding: 0.5em 0.15em;
+      .wf-inactive & {
+        font-size: 0.9rem;
+        padding: 0.475em 0.15em;
+      }
+
+      &:link {
+        text-decoration: none;
+      }
+      
+      &:visited {
+        text-decoration: none;
+      }
+      
+      html:not(.touch-nav) &:hover {
+        background-color: rgba(0,0,0,.05);
+        text-decoration: none;
+      }
+      
+      &:focus {
+        background-color: rgba(0,0,0,.05);
+        text-decoration: none;
+      }
+      
+      &:active {
+        background-color: rgba(0,0,0,.05);
+        text-decoration: none;
+      }
+    }
+  }
+  &-trigger {
+    display: block;
+    height: 2rem;
+    position: relative;
+    text-align: right;
+    z-index: z(mobile-nav-bar);
+    &:link,
+    &:visited {
+      text-decoration: none;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+    &:focus {
+      text-decoration: underline;
+    }
+    &:active {
+      text-decoration: underline;
+    }
+    @media (pointer: coarse) {
+      &:hover {
+        text-decoration: unset;
+      }
+    }
+  }
+  html:not(.touch-nav) &:focus-within,
+  html:not(.touch-nav) &:hover,
+  &.open {
+    .settings__menu {
+      left: auto;
+      min-height: 50vh;
+      min-width: 22rem;
+      opacity: 1;
+      overflow-y: scroll;
+      position: absolute;
+      right: 0;
+      z-index: z(mobile-nav-bar);
+    }
+    &.toc .menu {
+      right: -5rem;
+    }
+    &.settings .menu {
+      right: -2vw;
+    }
+  }
+}
+
+
+
+.settings__menu {
+  list-style: none;
+
+  li {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  label {
+    font-weight: 500;
+    padding-bottom: 0.25rem;
+  }
+
+  a.toggle-lightmode {
+    .dark & {
+      &.switch:after {
+        content: ' to light';
+      }
+    }
+    html:not(.dark) & {
+      &.switch:after {
+        content: ' to dark';
+      }
+    }
+    @media (prefers-color-scheme:dark) {
+      html:not(.light) & {
+        &.switch:after {
+          content: ' to light';
+        }
+      }
+    
+    }
+    .light & {
+      &.switch:after {
+        content: ' to dark';
+      }
+    }
+  }
+
+  .settings-toggle {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    padding: 0 1.5vw;
+  }
+  .settings-slider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 1.5vw;
+    input {
+      grid-column: 1 / 3;
+    }
+    div {
+      font-size: 0.875rem;
+    }
+  }
+
+}
