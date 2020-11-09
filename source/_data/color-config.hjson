@@ -344,6 +344,14 @@
           { "fnName": "sub__bg", "colorName": "white--trans25" }
         ],
         #
+        # Site Notifications component
+        #
+        "notification": [
+          { "fnName": "bg", "colorName": "hope-gold" },
+          { "fnName": "icon", "colorName": "quahog--darker" }
+          { "fnName": "link", "colorName": "navy" }
+        ],
+        #
         # Only the icon foreground and background is colorable
         # Other colors are consistently coffee-milk
         #
