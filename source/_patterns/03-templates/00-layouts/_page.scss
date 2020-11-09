@@ -63,3 +63,26 @@ $sidebar-row-gap: rem(36);
     margin-bottom: $sidebar-row-gap;
   }
 }
+
+// Page overlay for when any nav element is open
+.page-overlay {
+  backdrop-filter: blur(4px);
+  background-color: rgba(0,0,0,0.25);
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  transition:
+    opacity $transition-duration-medium $transition-timing-base 0ms,
+    z-index 0ms linear $transition-duration-medium;
+  z-index: -1;
+&.active {
+    background-color: rgba(0,0,0,.35);
+    opacity: 1;
+    z-index: z(mobile-body-overlay);
+  }
+}
+
+

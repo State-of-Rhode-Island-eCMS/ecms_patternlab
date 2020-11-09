@@ -19,4 +19,52 @@ document.addEventListener("DOMContentLoaded", function() {
   // If JS is loaded, change the no-js class
   document.documentElement.classList.remove("no-js");
   document.documentElement.classList.add("js");
+  addPageOverlay();
 });
+
+// Menu closer function
+function allMenuCloser() {
+
+  // Close main nav
+  var qh_toggle_btn = document.getElementById('js-toggle-nav');
+  if (qh_toggle_btn !== null) {
+    qh_toggle_btn.setAttribute('aria-expanded', 'false');
+  }
+
+  // Close sidebar nav
+  var qh_nav_minor = document.getElementById('js__minor-menu');
+  if (qh_nav_minor !== null) {
+    qh_nav_minor.classList.remove('qh__nav-minor--expanded');
+  }
+}
+
+// Add screen overlay 
+function addPageOverlay() {
+  const pageOverlay = document.createElement("div");
+  let divContent = document.createTextNode(" "); 
+  pageOverlay.appendChild(divContent);
+  pageOverlay.id = 'page_overlay';
+  pageOverlay.classList.add('page-overlay');
+  document.getElementsByTagName("body")[0].appendChild(pageOverlay);
+
+  if (pageOverlay) {
+    document.getElementsByTagName("html")[0].classList.add('touch-nav');
+
+    pageOverlay.addEventListener('click', function(e) {
+      e.preventDefault();
+      allMenuCloser();
+      deactivatePageOverlay();
+    });
+  }
+
+}
+
+function deactivatePageOverlay() {
+  var pageOverlay = document.getElementById('page_overlay');
+  pageOverlay.classList.remove('active');
+}
+
+function activatePageOverlay() {
+  var pageOverlay = document.getElementById('page_overlay');
+  pageOverlay.classList.add('active');
+}

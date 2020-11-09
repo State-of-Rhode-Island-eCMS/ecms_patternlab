@@ -43,38 +43,6 @@ body {
     }
   }
 
-  // <body>
-  // Blur the background behind the active navigation drawer
-  &__overlay {
-    &::after {
-      backdrop-filter: blur(4px);
-      background-color: rgba(#000, 0.25);
-      content: '';
-      opacity: 0;
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      pointer-events: none;
-      transition:
-        opacity $transition-duration-medium $transition-timing-base 0ms,
-        z-index 0ms linear $transition-duration-medium;
-      z-index: -1;
-    }
-
-    &--visible {
-      &::after {
-        opacity: 1;
-        pointer-events: auto;
-        transition:
-          opacity $transition-duration-medium $transition-timing-base 0ms,
-          z-index 0ms linear 0ms;
-        z-index: z(mobile-body-overlay);
-      }
-    }
-  }
-
   // mobile button
   &__toggle {
     background-image: none;

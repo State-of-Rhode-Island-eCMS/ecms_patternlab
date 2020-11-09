@@ -2206,27 +2206,6 @@ body {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between; } }
-  .qh__nav-main__overlay::after {
-    -webkit-backdrop-filter: blur(4px);
-            backdrop-filter: blur(4px);
-    background-color: rgba(0, 0, 0, 0.25);
-    content: '';
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    pointer-events: none;
-    -webkit-transition: opacity 500ms ease 0ms, z-index 0ms linear 500ms;
-    transition: opacity 500ms ease 0ms, z-index 0ms linear 500ms;
-    z-index: -1; }
-  .qh__nav-main__overlay--visible::after {
-    opacity: 1;
-    pointer-events: auto;
-    -webkit-transition: opacity 500ms ease 0ms, z-index 0ms linear 0ms;
-    transition: opacity 500ms ease 0ms, z-index 0ms linear 0ms;
-    z-index: 450; }
   .qh__nav-main__toggle {
     background-image: none;
     display: -webkit-box;
@@ -2550,7 +2529,8 @@ body {
 
 .qh-layout__sidebar-top {
   position: sticky;
-  top: 3rem; }
+  top: 3rem;
+  z-index: 451; }
   @media (min-width: 50em) {
     .qh-layout__sidebar-top {
       position: relative;
@@ -2624,7 +2604,9 @@ body {
         display: none;
         visibility: hidden; } }
   .qh__nav-minor__list {
-    background-color: var(--fc__nav-minor__bg); }
+    background-color: var(--fc__nav-minor__bg);
+    position: relative;
+    z-index: 500; }
     .qh__nav-minor__list.qh__accordion {
       border: 0.0625rem solid transparent;
       margin-top: 0;
@@ -3507,6 +3489,24 @@ body {
   max-width: 23.75rem;
   margin-right: 5vw;
   margin-bottom: 2.25rem; }
+
+.page-overlay {
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  -webkit-transition: opacity 500ms ease 0ms, z-index 0ms linear 500ms;
+  transition: opacity 500ms ease 0ms, z-index 0ms linear 500ms;
+  z-index: -1; }
+  .page-overlay.active {
+    background-color: rgba(0, 0, 0, 0.35);
+    opacity: 1;
+    z-index: 450; }
 
 /*------------------------------------*\
     $Admin

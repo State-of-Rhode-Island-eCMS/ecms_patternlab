@@ -1,6 +1,7 @@
 .qh-layout__sidebar-top {
   position: sticky;
   top: 3rem;
+  z-index: z(mobile-nav-bar);
   @include breakpoint-up($bp__single-col-content) {
     position: relative;
     top: auto;
@@ -88,6 +89,8 @@
   // <ul>
   &__list {
     background-color: var(--fc__nav-minor__bg);
+    position: relative;
+    z-index: z(drop-down-menu);
 
     &.qh__accordion {
       border: $border-xs solid transparent;

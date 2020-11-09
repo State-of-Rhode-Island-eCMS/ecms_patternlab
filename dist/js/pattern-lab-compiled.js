@@ -19,7 +19,55 @@ document.addEventListener("DOMContentLoaded", function() {
   // If JS is loaded, change the no-js class
   document.documentElement.classList.remove("no-js");
   document.documentElement.classList.add("js");
+  addPageOverlay();
 });
+
+// Menu closer function
+function allMenuCloser() {
+
+  // Close main nav
+  var qh_toggle_btn = document.getElementById('js-toggle-nav');
+  if (qh_toggle_btn !== null) {
+    qh_toggle_btn.setAttribute('aria-expanded', 'false');
+  }
+
+  // Close sidebar nav
+  var qh_nav_minor = document.getElementById('js__minor-menu');
+  if (qh_nav_minor !== null) {
+    qh_nav_minor.classList.remove('qh__nav-minor--expanded');
+  }
+}
+
+// Add screen overlay 
+function addPageOverlay() {
+  const pageOverlay = document.createElement("div");
+  let divContent = document.createTextNode(" "); 
+  pageOverlay.appendChild(divContent);
+  pageOverlay.id = 'page_overlay';
+  pageOverlay.classList.add('page-overlay');
+  document.getElementsByTagName("body")[0].appendChild(pageOverlay);
+
+  if (pageOverlay) {
+    document.getElementsByTagName("html")[0].classList.add('touch-nav');
+
+    pageOverlay.addEventListener('click', function(e) {
+      e.preventDefault();
+      allMenuCloser();
+      deactivatePageOverlay();
+    });
+  }
+
+}
+
+function deactivatePageOverlay() {
+  var pageOverlay = document.getElementById('page_overlay');
+  pageOverlay.classList.remove('active');
+}
+
+function activatePageOverlay() {
+  var pageOverlay = document.getElementById('page_overlay');
+  pageOverlay.classList.add('active');
+}
 
 // There are custom properties that track what breakpoint the site is using
 function getQhNavState() {
@@ -152,19 +200,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Toggle button for mobile menu
   var qh_toggle_btn = document.getElementById('js-toggle-nav');
-  var qh_body_element = document.getElementsByTagName('body')[0];
   if (qh_toggle_btn !== null && qh_toggle_btn !== undefined) {
-    qh_body_element.classList.add('qh__nav-main__overlay');
     qh_toggle_btn.addEventListener('click', function(event) {
       // a11yClick function restricts keypress to spacebar or enter
       if (a11yClick(event) === true) {
         var expanded = qh_toggle_btn.getAttribute('aria-expanded');
         if (expanded == 'true') {
           qh_toggle_btn.setAttribute('aria-expanded', 'false');
-          qh_body_element.classList.remove('qh__nav-main__overlay--visible');
+          deactivatePageOverlay();
         } else {
+          allMenuCloser();
+          activatePageOverlay();
           qh_toggle_btn.setAttribute('aria-expanded', 'true');
-          qh_body_element.classList.add('qh__nav-main__overlay--visible');
         }
       }
     });
@@ -185,9 +232,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (a11yClick(event) === true) {
           var expanded = toggle.getAttribute('aria-expanded');
           // Close all
-          qh_dd_btns.forEach(function(btn) {
-            btn.setAttribute('aria-expanded', 'false');
-          });
+          allMenuCloser();
+
           // Open the one that was pressed
           if (expanded == 'false') {
             toggle.setAttribute('aria-expanded', 'true');
@@ -208,13 +254,16 @@ document.addEventListener('DOMContentLoaded', function() {
     qh_toggle_btn.addEventListener('click', function(event) {
       // This may look the same as other accordion type buttons but it is not
       // The target is a parent element, not an adjacent sibling
-      console.log('qh_toggle_btn clicked');
+      // console.log('qh_toggle_btn clicked');
       // a11yClick function restricts keypress to spacebar or enter
       if (a11yClick(event) === true) {
-        console.log('qh_toggle_btn a11y clicked');
+        // console.log('qh_toggle_btn a11y clicked');
         if (qh_nav_minor.classList.contains('qh__nav-minor--expanded')) {
           qh_nav_minor.classList.remove('qh__nav-minor--expanded');
+          deactivatePageOverlay();
         } else {
+          allMenuCloser();
+          activatePageOverlay();
           qh_nav_minor.classList.add('qh__nav-minor--expanded');
         }
       }
