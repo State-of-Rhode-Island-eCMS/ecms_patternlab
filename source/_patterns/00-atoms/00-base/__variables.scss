@@ -70,7 +70,7 @@ $zindex: (
 );
 
 /* Light mode */
-body {
+html {
   --osLightMode: light;
   @media (prefers-color-scheme:dark) {
     --osLightMode: dark;
@@ -78,17 +78,17 @@ body {
 }
 
 /* Font size modifier */
-body {
+html {
   --fontSizeModifier: 1;
 }
 
 /* Line-height modifier */
-body {
+html {
   --lineHeightModifier: 1;
 }
 
 /* word space modifier */
-body {
+html {
   --wordSpaceModifier: 0;
 }
 
