@@ -347,14 +347,17 @@
         # Site Notifications component
         #
         "notification": [
+          { "fnName": "fg", "colorName": "navy--dark" },
           { "fnName": "bg", "colorName": "hope-gold" },
-          { "fnName": "icon", "colorName": "quahog--darker" },
-          { "fnName": "fg", "colorName": "quahog--darker" },
-          { "fnName": "link", "colorName": "navy" },
+          { "fnName": "icon", "colorName": "navy" },
+          { "fnName": "link", "colorName": "navy--dark" },
           { "fnName": "link--hover", "colorName": "navy--sat-lgt" },
-          { "fnName": "link--focus", "colorName": "navy" },
-          { "fnName": "link--visited", "colorName": "navy--warm" },
+          { "fnName": "link--focus", "colorName": "navy--dark" },
           { "fnName": "link--active", "colorName": "calamari" },
+          # Hover will always reverse these button colors
+          { "fnName": "button__fg", "colorName": "navy" },
+          { "fnName": "button__bg", "colorName": "white" },
+          { "fnName": "border", "colorName": "quahog--dark--trans33" }
         ],
         #
         # Only the icon foreground and background is colorable

@@ -1,11 +1,9 @@
-<div class="qh__notifications-block">
+<div class="qh__notifications-block" role="banner">
   <div class="qh__notifications-block__wrapper">
 
     <div class="qh__notifications-block__header">
       {% include '@icons/alarm-bell.svg' %}
-
-      <span>{{ "Emergency Alerts" }}</span>
-
+      <p class="qh__notifications-block__title"><strong>{{ "Emergency Alerts" }}</strong></p>
       <button
         aria-expanded="true"
         class="qh__btn qh__btn--small js__expand-collapse"
@@ -24,7 +22,7 @@
       aria-labelledby="summary-notifications"
       class="qh__notifications-block__content js__qh-accordion-panel js__aria-expanded"
       >
-      {{ content}}
+      {{ content }}
     </div>
   </div>
 </div>
