@@ -108,6 +108,7 @@ h1 {
     --font-lh-max-value: #{$h1-lh-l};
     --font-lh-scaler-value: var(--h1-lh-scaler-value);
     line-height: var(--line-height);
+    word-spacing: var(--word-spacing);
   }
   font-style: normal;
   margin-top: 0;
@@ -155,7 +156,7 @@ h2 {
     --font-lh-max-value: #{$h2-lh-l};
     --font-lh-scaler-value: var(--h2-lh-scaler-value);
     line-height: var(--line-height);
-    
+    word-spacing: var(--word-spacing);
   }
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 2);
@@ -215,6 +216,7 @@ h3 {
     --font-lh-max-value: #{$h3-lh-l};
     --font-lh-scaler-value: var(--h3-lh-scaler-value);
     line-height: var(--line-height);
+    word-spacing: var(--word-spacing);
   }
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
@@ -262,6 +264,7 @@ h4 {
     --font-lh-max-value: #{$h4-lh-l};
     --font-lh-scaler-value: var(--h4-lh-scaler-value);
     line-height: var(--line-height);
+    word-spacing: var(--word-spacing);
   }
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
@@ -309,6 +312,7 @@ h5 {
     --font-lh-max-value: #{$h5-lh-l};
     --font-lh-scaler-value: var(--h5-lh-scaler-value);
     line-height: var(--line-height);
+    word-spacing: var(--word-spacing);
   }
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
@@ -356,6 +360,7 @@ h6 {
     --font-lh-max-value: #{$h6-lh-l};
     --font-lh-scaler-value: var(--h6-lh-scaler-value);
     line-height: var(--line-height);
+    word-spacing: var(--word-spacing);
   }
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
@@ -413,6 +418,7 @@ blockquote {
       --font-lh-max-value: #{$bq-lh-l};
       --font-lh-scaler-value: var(--bq-lh-scaler-value);
       line-height: var(--line-height);
+      word-spacing: var(--word-spacing);
     }
     margin-left: auto;
     margin-right: auto;
@@ -472,6 +478,7 @@ body {
     --font-lh-max: #{$st-lh-l};
     --font-lh-scaler-value: var(--st-lh-scaler-value);
     line-height: var(--line-height);
+    word-spacing: var(--word-spacing);
   }
   font-style: normal;
 }

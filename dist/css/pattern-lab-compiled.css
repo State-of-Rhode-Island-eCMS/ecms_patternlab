@@ -908,7 +908,8 @@ h1 {
       --font-lh-min-value: 1.05;
       --font-lh-max-value: 1.1;
       --font-lh-scaler-value: var(--h1-lh-scaler-value);
-      line-height: var(--line-height); } }
+      line-height: var(--line-height);
+      word-spacing: var(--word-spacing); } }
 
 h2 {
   font-family: "Roboto Slab", var(--font-serif-fallback);
@@ -949,7 +950,8 @@ h2 {
       --font-lh-min-value: 1.1;
       --font-lh-max-value: 1.15;
       --font-lh-scaler-value: var(--h2-lh-scaler-value);
-      line-height: var(--line-height); } }
+      line-height: var(--line-height);
+      word-spacing: var(--word-spacing); } }
   h2:first-of-type::after, h2.emphasis::after {
     content: ' ';
     display: block;
@@ -997,7 +999,8 @@ h3 {
       --font-lh-min-value: 1.1;
       --font-lh-max-value: 1.15;
       --font-lh-scaler-value: var(--h3-lh-scaler-value);
-      line-height: var(--line-height); } }
+      line-height: var(--line-height);
+      word-spacing: var(--word-spacing); } }
 
 h4 {
   font-family: "Roboto Slab", var(--font-serif-fallback);
@@ -1038,7 +1041,8 @@ h4 {
       --font-lh-min-value: 1.1;
       --font-lh-max-value: 1.3;
       --font-lh-scaler-value: var(--h4-lh-scaler-value);
-      line-height: var(--line-height); } }
+      line-height: var(--line-height);
+      word-spacing: var(--word-spacing); } }
 
 h5 {
   font-family: "Roboto Slab", var(--font-serif-fallback);
@@ -1079,7 +1083,8 @@ h5 {
       --font-lh-min-value: 1.1;
       --font-lh-max-value: 1.3;
       --font-lh-scaler-value: var(--h5-lh-scaler-value);
-      line-height: var(--line-height); } }
+      line-height: var(--line-height);
+      word-spacing: var(--word-spacing); } }
 
 h6 {
   font-family: "Roboto Slab", var(--font-serif-fallback);
@@ -1120,7 +1125,8 @@ h6 {
       --font-lh-min-value: 1.1;
       --font-lh-max-value: 1.3;
       --font-lh-scaler-value: var(--h6-lh-scaler-value);
-      line-height: var(--line-height); } }
+      line-height: var(--line-height);
+      word-spacing: var(--word-spacing); } }
 
 strong,
 b {
@@ -1196,7 +1202,8 @@ blockquote {
         --font-lh-min-value: 1.5;
         --font-lh-max-value: 1.55;
         --font-lh-scaler-value: var(--bq-lh-scaler-value);
-        line-height: var(--line-height); } }
+        line-height: var(--line-height);
+        word-spacing: var(--word-spacing); } }
 
 /* using this for any small bits of text that should be 'next size down' from paragraphs */
 body {
@@ -1238,7 +1245,8 @@ body {
       --font-lh-min: 1.1;
       --font-lh-max: 1.3;
       --font-lh-scaler-value: var(--st-lh-scaler-value);
-      line-height: var(--line-height); } }
+      line-height: var(--line-height);
+      word-spacing: var(--word-spacing); } }
 
 label {
   --st-font-wght: 475;
@@ -2197,10 +2205,10 @@ table {
     padding-bottom: 0.25rem; }
   .dark .settings__menu a.toggle-lightmode.switch:after {
     content: ' to light'; }
-  html:not(.dark) .settings__menu a.toggle-lightmode.switch:after {
+  body:not(.dark) .settings__menu a.toggle-lightmode.switch:after {
     content: ' to dark'; }
   @media (prefers-color-scheme: dark) {
-    html:not(.light) .settings__menu a.toggle-lightmode.switch:after {
+    body:not(.light) .settings__menu a.toggle-lightmode.switch:after {
       content: ' to light'; } }
   .light .settings__menu a.toggle-lightmode.switch:after {
     content: ' to dark'; }

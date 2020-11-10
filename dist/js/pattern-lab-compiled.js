@@ -150,26 +150,26 @@ lightModeToggle.addEventListener('click', function(e) {
 		// set a cookie to expire the setting
 		console.log('check: '+osLightMode);
 		document.cookie = "lightMode=light; max-age=31536000; path=/; samesite=strict";
-		document.getElementsByTagName("html")[0].classList.remove('dark');
-		document.getElementsByTagName("html")[0].classList.add('light');
-	} else if (document.getElementsByTagName("html")[0].classList.contains('dark')) {
+		document.getElementsByTagName("body")[0].classList.remove('dark');
+		document.getElementsByTagName("body")[0].classList.add('light');
+	} else if (document.getElementsByTagName("body")[0].classList.contains('dark')) {
 		// set a cookie to save the setting
 		document.cookie = "lightMode=light; max-age=31536000; path=/; samesite=strict";
-		document.getElementsByTagName("html")[0].classList.remove('dark');
-		document.getElementsByTagName("html")[0].classList.add('light');
+		document.getElementsByTagName("body")[0].classList.remove('dark');
+		document.getElementsByTagName("body")[0].classList.add('light');
 	} else {
 		// set a cookie to save the setting
 		document.cookie = "lightMode=dark; max-age=31536000; path=/; samesite=strict";
-		document.getElementsByTagName("html")[0].classList.remove('light');
-		document.getElementsByTagName("html")[0].classList.add('dark');
+		document.getElementsByTagName("body")[0].classList.remove('light');
+		document.getElementsByTagName("body")[0].classList.add('dark');
 	}
 	e.blur();
 });
 lightModeReset.addEventListener('click', function(e) {
 	e.preventDefault();
 	document.cookie = "lightMode=auto; max-age=31536000; path=/; samesite=strict";
-	document.getElementsByTagName("html")[0].classList.remove('dark');
-	document.getElementsByTagName("html")[0].classList.remove('light');
+	document.getElementsByTagName("body")[0].classList.remove('dark');
+	document.getElementsByTagName("body")[0].classList.remove('light');
 	e.blur();
 });
 
