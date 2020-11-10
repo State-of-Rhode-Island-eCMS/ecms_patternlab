@@ -1,0 +1,94 @@
+.qh__teaser-hotel {
+  background-color: var(--fc__default__bg);
+  border: $border-xs solid var(--fc__default__border);
+  margin-bottom: $general-v-spacing;
+  padding: $general-v-spacing $general-h-spacing;
+  position: relative;
+
+  &__image-wrap {
+
+    a {
+      display: block;
+      overflow: hidden;
+      position: relative;
+
+      &,
+      &:visited {
+        text-decoration: none;
+      }
+    }
+
+    img {}
+  }
+
+  // <span>
+  &__snipe {
+    color: var(--fc__default__accent__fg);
+    font-family: var(--font-sans-vf);
+    font-size: 200%;
+    position: absolute;
+      top: 0.25rem; right: 0.25rem;
+    z-index: 1;
+    transition: color $transition-duration-base $transition-timing-base;
+
+    &::before {
+      background-color: var(--fc__default__accent);
+      content: '';
+      position: absolute;
+        top: -2.5em; left: 3.5em;
+      height: 7em;
+      width: 7em;
+      z-index: -1;
+      transition: background-color $transition-duration-base $transition-timing-base;
+      transform: rotate(-45deg);
+      transform-origin: bottom left;
+    }
+
+    sup {
+      font-size: 50%;
+    }
+
+    // Hover effects on snipe
+    .qh__teaser-hotel:hover &,
+    a:hover &,
+    a:focus & {
+      color: var(--fc__default__link);
+
+      &::before {
+        background-color: var(--fc__default__bg);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  // <h3>
+  &__title {
+    flex: 0 0 100%;
+  }
+
+  // <p>
+  &__location {}
+
+  // <p>
+  &__cta {
+    margin-left: auto;
+  }
+
+  &__link {
+    display: block;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      @include qh-inset-supports(0);
+      overflow: visible;
+    }
+  }
+}
