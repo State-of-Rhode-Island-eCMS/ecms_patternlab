@@ -311,6 +311,17 @@ body {
 
     &__social {
       padding: ($nav-a-v-spacing * 0.5) ($nav-a-h-spacing * 0.5);
+
+      // Specifically set these colors, otherwise, header colors are used
+      .qh__social-links a.qh__social-links__link,
+      .qh__social-links a.qh__social-links__link:visited {
+        color: var(--fc__nav-main__link);
+      }
+
+      .qh__social-links a.qh__social-links__link:hover,
+      .qh__social-links a.qh__social-links__link:focus {
+        color: var(--fc__nav-main__link--hover__bg);
+      }
     }
 
     &__search,
