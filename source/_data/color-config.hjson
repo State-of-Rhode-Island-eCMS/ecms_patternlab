@@ -348,8 +348,13 @@
         #
         "notification": [
           { "fnName": "bg", "colorName": "hope-gold" },
-          { "fnName": "icon", "colorName": "quahog--darker" }
-          { "fnName": "link", "colorName": "navy" }
+          { "fnName": "icon", "colorName": "quahog--darker" },
+          { "fnName": "fg", "colorName": "quahog--darker" },
+          { "fnName": "link", "colorName": "navy" },
+          { "fnName": "link--hover", "colorName": "navy--sat-lgt" },
+          { "fnName": "link--focus", "colorName": "navy" },
+          { "fnName": "link--visited", "colorName": "navy--warm" },
+          { "fnName": "link--active", "colorName": "calamari" },
         ],
         #
         # Only the icon foreground and background is colorable
