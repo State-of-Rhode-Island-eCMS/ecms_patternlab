@@ -1,0 +1,44 @@
+<nav class="qh__pagination" aria-label="Pages">
+  <ul class="qh__pagination__list">
+    <li class="qh__pagination__item">
+      {# Show the placeholder link but REMOVE the HREF #}
+      <a class="qh__pagination__link qh__pagination__link--first qh__pagination__link--disabled" title="{{ 'Go to first page'|t }}">
+        {% include ('@icons/guillemot-left.svg') %}
+      </a>
+    </li>
+    <li class="qh__pagination__item">
+      {# Show the placeholder link but REMOVE the HREF #}
+      <a class="qh__pagination__link qh__pagination__link--prev qh__pagination__link--disabled" title="{{ 'Previous page'|t }}">
+        {% include ('@icons/chevron-left.svg') %}
+      </a>
+    </li>
+    <li class="qh__pagination__item">
+      <a class="qh__pagination__link qh__pagination__link--current qh__pagination__link--disabled" title="{{ 'Current page'|t }}" href="#">01</a>
+    </li>
+    <li class="qh__pagination__item">
+      <a class="qh__pagination__link" href="#">02</a>
+    </li>
+    <li class="qh__pagination__item">
+      <a class="qh__pagination__link" href="#">03</a>
+    </li>
+    <li class="qh__pagination__item">
+      <a class="qh__pagination__link" href="#">04</a>
+    </li>
+    <li class="qh__pagination__item">
+      <span class="qh__pagination__ellipses" aria-label="{{ 'Full list of pages is truncated'|t }}" role="text">&hellip;</span>
+    </li>
+    <li class="qh__pagination__item">
+      <a class="qh__pagination__link" href="#">100</a>
+    </li>
+    <li class="qh__pagination__item">
+      <a class="qh__pagination__link qh__pagination__link--next" href="#" title="{{ 'Next page'|t }}">
+        {% include ('@icons/chevron-right.svg') %}
+      </a>
+    </li>
+    <li class="qh__pagination__item">
+      <a class="qh__pagination__link qh__pagination__link--last" href="#" title="{{ 'Go to last page'|t }}">
+        {% include ('@icons/guillemot-right.svg') %}
+      </a>
+    </li>
+  </ul>
+</nav>

@@ -101,6 +101,11 @@ button,
     }
   }
 
+  &--small {
+    font-size: rem(14);
+    padding: ($button-v-spacing / 2) ($button-h-spacing / 2);
+  }
+
   &:disabled,
   &--disabled {
     @include button-disabled-style;
