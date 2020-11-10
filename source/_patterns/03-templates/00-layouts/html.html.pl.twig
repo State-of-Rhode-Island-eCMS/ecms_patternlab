@@ -47,7 +47,6 @@
 						// set a cookie to save the setting
 						document.cookie = "lightMode=dark;max-age=31536000;path=/;samesite=strict";
 						document.documentElement.className += " dark";
-						document.body.classList.addClass("dark");
 						lightSetting = true;
 					} else if (cookies[i].includes('lightMode=light')) {
 						document.cookie = "lightMode=light;max-age=31536000;path=/;samesite=strict";
