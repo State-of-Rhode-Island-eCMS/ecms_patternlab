@@ -209,7 +209,11 @@ body {
         top: 100%;
         right: calc((100vw - var(--content-max-width)) * -0.5);
         transform: translateX(100vw);
-        transition: $transition-medium;
+        transition:
+          opacity $transition-duration-medium $transition-timing-base 0ms,
+          transform $transition-duration-medium $transition-timing-base 0ms,
+          visibility $transition-duration-medium $transition-timing-base $transition-duration-base;
+        visibility: hidden; // Needed to keep anchor from being keyboard tabbable
         width: 86vw;
 
         > li {
@@ -220,7 +224,11 @@ body {
         [aria-expanded="true"] + & {
           opacity: 1;
           transform: translateX(0);
-          transition: $transition-medium;
+          transition:
+            opacity $transition-duration-medium $transition-timing-base 0ms,
+            transform $transition-duration-medium $transition-timing-base 0ms,
+            visibility $transition-duration-medium $transition-timing-base 0ms;
+          visibility: visible;
 
           > li {
             transform: translateX(0);
