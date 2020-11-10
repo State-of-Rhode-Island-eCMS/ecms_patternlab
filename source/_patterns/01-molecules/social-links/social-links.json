@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "title": "Follow us on Facebook",
+      "url": "#",
+      "icon": "social-facebook"
+    },
+    {
+      "title": "Follow us on YouTube",
+      "url": "#",
+      "icon": "social-youtube"
+    },
+    {
+      "title": "Follow us on Instgram",
+      "url": "#",
+      "icon": "social-instagram"
+    },
+    {
+      "title": "Follow us on LinkedIn",
+      "url": "#",
+      "icon": "social-linkedin"
+    },
+    {
+      "title": "View our RSS feed",
+      "url": "#",
+      "icon": "feed"
+    }
+  ]
+}
