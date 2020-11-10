@@ -20,13 +20,13 @@
               <span class="visually-hidden">{{ "Home"|t }}</span>
             </span>
           </a>
-          <button id="js-toggle-nav" class="qh__nav-main__toggle" type="button" aria-controls="js__primary-menu" aria-haspopup="true" aria-expanded="false" aria-label="Toggle navigation">
+          <button id="js__toggle-nav" class="qh__nav-main__toggle js__expand-collapse" type="button" aria-controls="js__primary-menu" aria-haspopup="true" aria-expanded="false" aria-label="Toggle navigation">
             <span class="qh__icon__menu">
               <span></span>
             </span>
             <span class="qh__nav-main__toggle__label">{{ "Menu"|t }}</span>
           </button>
-          <ul id="js__primary-menu" class="qh__nav-main__list qh__nav-main__list__outermost" role="list" aria-labelledby="toggle-nav">
+          <ul id="js__primary-menu" class="qh__nav-main__list qh__nav-main__list__outermost" role="list" aria-labelledby="js__toggle-nav">
             <li class="qh__nav-main__item qh__nav-main__item--home">
               <a href="{{ front_page }}" class="qh__nav-main__link qh__nav-main__link--home" title="Back to Home">
                 <span class="qh__icon">
@@ -62,7 +62,7 @@
       {# If there is a menu item below this level. Add dropdown icon and call the macro again. #}
       {% if (item.is_expanded and item.below) %}
         <li class="{{ list_item_classes }}">
-          <a href="{{ item.url }}" class="js-qh-dd-toggle qh__nav-main__link {{ item.in_active_trail ? 'qh__nav-main__link--current' }}" id="menu-{{ link_id }}" role="button" aria-haspopup="true" aria-expanded="false">
+          <a href="{{ item.url }}" class="js__qh-dd-toggle qh__nav-main__link {{ item.in_active_trail ? 'qh__nav-main__link--current' }}" id="menu-{{ link_id }}" role="button" aria-haspopup="true" aria-expanded="false">
             {{ item.title }}
             <span class="qh__icon">
               {% include ('@icons/chevron-down.svg') %}
