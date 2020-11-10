@@ -128,8 +128,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   // Toggle button for mobile menu
-  // ONLY activates/deactivates page overlay
-  // Open/close off canvas menu handled by global js__expand-collapse
+  // Activates/deactivates page overlay
+  // Also open/close off canvas menu
+  // NOT globalized because of page overlay actions
   var qh_toggle_btn = document.getElementById('js__toggle-nav');
   if (qh_toggle_btn !== null && qh_toggle_btn !== undefined) {
     qh_toggle_btn.addEventListener('click', function(event) {
@@ -137,8 +138,10 @@ document.addEventListener('DOMContentLoaded', function() {
       if (a11yClick(event) === true) {
         var expanded = qh_toggle_btn.getAttribute('aria-expanded');
         if (expanded == 'true') {
+          qh_toggle_btn.setAttribute('aria-expanded', 'false');
           deactivatePageOverlay();
         } else {
+          qh_toggle_btn.setAttribute('aria-expanded', 'true');
           allMenuCloser();
           activatePageOverlay();
         }
@@ -151,10 +154,11 @@ document.addEventListener('DOMContentLoaded', function() {
   // Toggle the value of aria-expanded but also remove the content of href on parent
   var qh_dd_btns = document.querySelectorAll('.js__qh-dd-toggle');
   if (qh_dd_btns !== null && qh_dd_btns !== undefined) {
+    console.log('qh_dd_btns is not null or undefined');
     qh_dd_btns.forEach(function(toggle_element) {
+      // Remove the contents of the href from this parent button
+      toggle_element.setAttribute('href', '#');
       toggle_element.addEventListener('click', function(event) {
-        // Remove the contents of the href from this parent button
-        toggle_element.setAttribute('href', '#');
         // a11yClick function restricts keypress to spacebar or enter
         if (a11yClick(event) === true) {
           var expanded = toggle_element.getAttribute('aria-expanded');
