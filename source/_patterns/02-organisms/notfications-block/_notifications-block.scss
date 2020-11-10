@@ -16,8 +16,8 @@
   }
 
   &__header {
+    color:  var(--fc__notification__fg);
     display: flex;
-
     align-items: center;
     margin: 0 $general-h-spacing;
     padding: rem(12) 0;
@@ -41,7 +41,6 @@
       }
     }
   }
-
   &__content {
     .js & {
       max-height: 0;
@@ -54,9 +53,9 @@
         transition: $transition-base 0ms;
       }
 
-      &.aria-expanded {
+      &.js__aria-expanded {
         max-height: unset;
-        padding: $general-v-spacing $general-h-spacing;
+        padding: 0 $general-h-spacing;
         transition: max-height 0s linear 500s, visibility 0s linear 0ms;
         visibility: visible;
 
@@ -65,6 +64,18 @@
           transition: $transition-base 125ms;
         }
       }
+    }
+  }
+
+  .qh__teaser-notification {
+    border-bottom: $border-xs solid var(--fc__notification__fg);
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: 0;
     }
   }
 }
