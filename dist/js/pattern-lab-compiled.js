@@ -1,5 +1,6 @@
 // Global functions
 
+
 // Check for mouse clicks, enter keypress (13), or spacebar keypress (32)
 // https://karlgroves.com/2014/11/24/ridiculously-easy-trick-for-keyboard-accessibility
 function a11yClick(event){
@@ -7,7 +8,7 @@ function a11yClick(event){
     return true;
   } else if(event.type === 'keypress') {
     var code = event.charCode || event.keyCode;
-    if((code === 32)|| (code === 13)) {
+    if((code === 32) || (code === 13)) {
       return true;
     }
   } else {
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.documentElement.classList.add("js");
   addPageOverlay();
 });
+
 
 // Menu closer function
 function allMenuCloser() {
@@ -44,10 +46,10 @@ function allMenuCloser() {
   }
 }
 
-// Add screen overlay 
+// Add screen overlay
 function addPageOverlay() {
   const pageOverlay = document.createElement("div");
-  let divContent = document.createTextNode(" "); 
+  let divContent = document.createTextNode(" ");
   pageOverlay.appendChild(divContent);
   pageOverlay.id = 'page_overlay';
   pageOverlay.classList.add('page-overlay');
@@ -62,7 +64,6 @@ function addPageOverlay() {
       deactivatePageOverlay();
     });
   }
-
 }
 
 function deactivatePageOverlay() {
@@ -75,10 +76,28 @@ function activatePageOverlay() {
   pageOverlay.classList.add('active');
 }
 
+function getCookie(name) {
+	var value = "; " + document.cookie;
+	var parts = value.split("; " + name + "=");
+	if (parts.length == 2) return parts.pop().split(";").shift();
+};
+
+
 // Expand / Collapse utility
+//
+//Minimum expected markup:
+//<div>
+//  <div>
+//    <button id="summaryId" class="js__expand-collapse" aria-expanded="false" aria-controls="targetId">See More</button>
+//  </div>
+//  <div id="targetId" aria-labelledby="summaryId" class="">Content to reveal here</div>
+//</div>
+//
+// This function ONLY toggles a show/hide class on the target and toggles aria-expanded
+// Any other functionality (like swapping the text content if true/false) needs to be in the component JS
 document.addEventListener("DOMContentLoaded", function() {
 
-  document.querySelectorAll(".js-expand-collapse").forEach(toggle_element => {
+  document.querySelectorAll(".js__expand-collapse").forEach(toggle_element => {
     toggle_element.addEventListener('click', function(event) {
       if (a11yClick(event) === true) {
         var expanded = toggle_element.getAttribute('aria-expanded');
@@ -87,10 +106,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (expanded == 'true') {
           toggle_element.setAttribute('aria-expanded', 'false');
-          target_element.classList.remove('aria-expanded')
+          target_element.classList.remove('js__aria-expanded')
         } else {
           toggle_element.setAttribute('aria-expanded', 'true');
-          target_element.classList.add('aria-expanded')
+          target_element.classList.add('js__aria-expanded')
         }
       }
     })
@@ -157,6 +176,7 @@ lightModeReset.addEventListener('click', function(e) {
 // Font size settings 
 const fontSizeSlider = document.getElementById('font_size_modifier');
 var currentFontSizeModifier = getComputedStyle(document.documentElement).getPropertyValue('--fontSizeModifier');
+console.log(fontSizeSlider);
 
 fontSizeSlider.addEventListener('change', handleFontSizeSliderUpdate);
 
@@ -204,32 +224,6 @@ function wordSpaceSliderSet() {
 	document.getElementById('word_space_modifier').setAttribute('value',wordSpaceModifier.trim());
 
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-
-  // Toggle button for mobile menu
-  var qh_toggle_btn = document.getElementById('js__minor-toggle');
-  var qh_nav_minor = document.getElementById('js__minor-menu');
-  if (qh_toggle_btn !== null && qh_toggle_btn !== undefined) {
-    qh_toggle_btn.addEventListener('click', function(event) {
-      // This may look the same as other accordion type buttons but it is not
-      // The target is a parent element, not an adjacent sibling
-      // console.log('qh_toggle_btn clicked');
-      // a11yClick function restricts keypress to spacebar or enter
-      if (a11yClick(event) === true) {
-        // console.log('qh_toggle_btn a11y clicked');
-        if (qh_nav_minor.classList.contains('qh__nav-minor--expanded')) {
-          qh_nav_minor.classList.remove('qh__nav-minor--expanded');
-          deactivatePageOverlay();
-        } else {
-          allMenuCloser();
-          activatePageOverlay();
-          qh_nav_minor.classList.add('qh__nav-minor--expanded');
-        }
-      }
-    });
-  }
-});
 
 // There are custom properties that track what breakpoint the site is using
 function getQhNavState() {
@@ -361,46 +355,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   // Toggle button for mobile menu
-  var qh_toggle_btn = document.getElementById('js-toggle-nav');
+  // ONLY activates/deactivates page overlay
+  // Open/close off canvas menu handled by global js__expand-collapse
+  var qh_toggle_btn = document.getElementById('js__toggle-nav');
   if (qh_toggle_btn !== null && qh_toggle_btn !== undefined) {
     qh_toggle_btn.addEventListener('click', function(event) {
       // a11yClick function restricts keypress to spacebar or enter
       if (a11yClick(event) === true) {
         var expanded = qh_toggle_btn.getAttribute('aria-expanded');
         if (expanded == 'true') {
-          qh_toggle_btn.setAttribute('aria-expanded', 'false');
           deactivatePageOverlay();
         } else {
           allMenuCloser();
           activatePageOverlay();
-          qh_toggle_btn.setAttribute('aria-expanded', 'true');
         }
       }
     });
   }
-  // TODO: Add handler that checks for a click outside of Menu and closes the menu
-  // Since the body overlay is a ::after element, this needs to be done by processing the
-  // x y coordinates of the click and checking to see if it is inside the menu or not
 
 
   // Listen to mouse press, spacebar key press, and enter key press on Drop Down menu parents
-  var qh_dd_btns = document.querySelectorAll('.js-qh-dd-toggle');
+  // Toggle the value of aria-expanded but also remove the content of href on parent
+  var qh_dd_btns = document.querySelectorAll('.js__qh-dd-toggle');
   if (qh_dd_btns !== null && qh_dd_btns !== undefined) {
-    qh_dd_btns.forEach(function(toggle) {
-      toggle.addEventListener('click', function(event) {
+    qh_dd_btns.forEach(function(toggle_element) {
+      toggle_element.addEventListener('click', function(event) {
         // Remove the contents of the href from this parent button
-        toggle.setAttribute('href', '#');
+        toggle_element.setAttribute('href', '#');
         // a11yClick function restricts keypress to spacebar or enter
         if (a11yClick(event) === true) {
-          var expanded = toggle.getAttribute('aria-expanded');
+          var expanded = toggle_element.getAttribute('aria-expanded');
           // Close all
           qh_dd_btns.forEach(function(btn) {
             btn.setAttribute('aria-expanded', 'false');
           });
-          
           // Open the one that was pressed
           if (expanded == 'false') {
-            toggle.setAttribute('aria-expanded', 'true');
+            toggle_element.setAttribute('aria-expanded', 'true');
           }
         }
       });
@@ -409,140 +400,54 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-/*
-*   This content is licensed according to the W3C Software License at
-*   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
-*
-*   Simple accordion pattern example
-*/
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Toggle button for mobile menu
+  var qh_toggle_btn = document.getElementById('js__minor-toggle');
+  var qh_nav_minor = document.getElementById('js__minor-menu');
+  if (qh_toggle_btn !== null && qh_toggle_btn !== undefined) {
+    qh_toggle_btn.addEventListener('click', function(event) {
+      // This may look the same as other accordion type buttons but it is not
+      // The target is a parent element, not an adjacent sibling
+      // console.log('qh_toggle_btn clicked');
+      // a11yClick function restricts keypress to spacebar or enter
+      if (a11yClick(event) === true) {
+        // console.log('qh_toggle_btn a11y clicked');
+        if (qh_nav_minor.classList.contains('qh__nav-minor--expanded')) {
+          qh_nav_minor.classList.remove('qh__nav-minor--expanded');
+          deactivatePageOverlay();
+        } else {
+          allMenuCloser();
+          activatePageOverlay();
+          qh_nav_minor.classList.add('qh__nav-minor--expanded');
+        }
+      }
+    });
+  }
+});
+
 document.addEventListener("DOMContentLoaded", function() {
+  // Hide notifications based on cookie value.
+  var notificationCookie = getCookie('siteNotifications');
+  if (notificationCookie === 'hidden') {
+    console.log('hidden');
+    document.getElementById('summary-notifications').setAttribute('aria-expanded', 'false');
+    document.getElementById('details-notifications').classList.remove('js__aria-expanded');
+  }
 
-  'use strict';
+  // Add logic to set cookie values based on state of button.
+  const notificationsToggle = document.getElementById('summary-notifications');
+  notificationsToggle.addEventListener('click', function(event) {
+    if (a11yClick(event) === true) {
+      var expanded = notificationsToggle.getAttribute('aria-expanded');
 
-  Array.prototype.slice.call(document.querySelectorAll('.js-qh-accordion')).forEach(function (accordion) {
-
-    // Allow for multiple accordion sections to be expanded at the same time
-
-    // This will not work now! Each accordion is a separate container
-    var allowMultiple = accordion.hasAttribute('data-allow-multiple');
-    // Allow for each toggle to both open and close individually
-    var allowToggle = (allowMultiple) ? allowMultiple : accordion.hasAttribute('data-allow-toggle');
-
-    // Create the array of toggle elements for the accordion group
-    var triggers = Array.prototype.slice.call(accordion.querySelectorAll('.js-qh-accordion-trigger'));
-    var panels = Array.prototype.slice.call(accordion.querySelectorAll('.js-qh-accordion-panel'));
-
-    accordion.addEventListener('click', function (event) {
-      var target = event.target;
-
-      if (target.classList.contains('js-qh-accordion-trigger')) {
-        //console.log('accordion trigger clicked');
-
-        // Check if the current toggle is expanded.
-        var isExpanded = target.getAttribute('aria-expanded') == 'true';
-        var active = accordion.querySelector('[aria-expanded="true"]');
-
-        // without allowMultiple, close the open accordion
-        if (!allowMultiple && active && active !== target) {
-          // Set the expanded state on the triggering element
-          active.setAttribute('aria-expanded', 'false');
-          // Hide the accordion sections, using aria-controls to specify the desired section
-          //document.getElementById(active.getAttribute('aria-controls')).setAttribute('hidden', '');
-
-          // When toggling is not allowed, clean up disabled state
-          if (!allowToggle) {
-            active.removeAttribute('aria-disabled');
-          }
-        }
-
-        if (!isExpanded) {
-          // Set the expanded state on the triggering element
-          target.setAttribute('aria-expanded', 'true');
-          // Hide the accordion sections, using aria-controls to specify the desired section
-          //document.getElementById(target.getAttribute('aria-controls')).removeAttribute('hidden');
-
-          // If toggling is not allowed, set disabled state on trigger
-          if (!allowToggle) {
-            target.setAttribute('aria-disabled', 'true');
-          }
-        }
-        else if (allowToggle && isExpanded) {
-          // Set the expanded state on the triggering element
-          target.setAttribute('aria-expanded', 'false');
-          // Hide the accordion sections, using aria-controls to specify the desired section
-          //document.getElementById(target.getAttribute('aria-controls')).setAttribute('hidden', '');
-        }
-
-        event.preventDefault();
-      }
-    });
-
-    // Bind keyboard behaviors on the main accordion container
-
-    // This will not work now! Each accordion is a separate container
-    accordion.addEventListener('keydown', function (event) {
-      var target = event.target;
-      var key = event.which.toString();
-
-      var isExpanded = target.getAttribute('aria-expanded') == 'true';
-      var allowToggle = (allowMultiple) ? allowMultiple : accordion.hasAttribute('data-allow-toggle');
-
-      // 33 = Page Up, 34 = Page Down
-      var ctrlModifier = (event.ctrlKey && key.match(/33|34/));
-
-      // Is this coming from an accordion header?
-      if (target.classList.contains('js-qh-accordion-trigger')) {
-        // Up/ Down arrow and Control + Page Up/ Page Down keyboard operations
-        // 38 = Up, 40 = Down
-        if (key.match(/38|40/) || ctrlModifier) {
-          var index = triggers.indexOf(target);
-          var direction = (key.match(/34|40/)) ? 1 : -1;
-          var length = triggers.length;
-          var newIndex = (index + length + direction) % length;
-
-          triggers[newIndex].focus();
-
-          event.preventDefault();
-        }
-        else if (key.match(/35|36/)) {
-          // 35 = End, 36 = Home keyboard operations
-          switch (key) {
-            // Go to first accordion
-            case '36':
-              triggers[0].focus();
-              break;
-              // Go to last accordion
-            case '35':
-              triggers[triggers.length - 1].focus();
-              break;
-          }
-          event.preventDefault();
-        }
-      }
-    });
-
-    // These are used to style the accordion when one of the buttons has focus
-    accordion.querySelectorAll('.js-qh-accordion-trigger').forEach(function (trigger) {
-
-      trigger.addEventListener('focus', function (event) {
-        accordion.classList.add('js-qh-focused');
-      });
-
-      trigger.addEventListener('blur', function (event) {
-        accordion.classList.remove('js-qh-focused');
-      });
-    });
-
-    // Minor setup: will set disabled state, via aria-disabled, to an
-    // expanded/active accordion which is not allowed to be toggled close
-    if (!allowToggle) {
-      // Get the first expanded/ active accordion
-      var expanded = accordion.querySelector('[aria-expanded="true"]');
-
-      // If an expanded/active accordion is found, disable
-      if (expanded) {
-        expanded.setAttribute('aria-disabled', 'true');
+      console.log('clicked')
+      if (expanded == 'true') {
+        document.cookie = "siteNotifications=display; max-age=31536000; path=/; samesite=strict";
+      } else {
+        document.cookie = "siteNotifications=hidden; max-age=31536000; path=/; samesite=strict";
       }
     }
-  });
+  })
 });
+

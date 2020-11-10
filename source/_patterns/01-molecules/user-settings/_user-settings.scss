@@ -96,7 +96,9 @@
   html:not(.touch-nav) &:hover,
   &.open {
     .settings__menu {
+      height: auto;
       left: auto;
+      max-height: 80vh;
       min-height: 50vh;
       min-width: 22rem;
       opacity: 1;
