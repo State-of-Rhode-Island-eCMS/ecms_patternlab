@@ -32,7 +32,7 @@ body {
     @include qh-content-maxwidth();
     position: relative;
     overflow: visible;
-    z-index: z(mobile-nav-bar);
+    z-index: z(desktop-nav-bar);
 
     // For mobile we need to flex
     @include breakpoint-down($bp__show__desktop-nav) {
@@ -40,6 +40,7 @@ body {
       flex-flow: row nowrap;
       align-items: center;
       justify-content: space-between;
+      z-index: z(mobile-nav-bar);
     }
   }
 

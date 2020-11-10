@@ -63,13 +63,14 @@ $nav-a-h-spacing--sm: 1rem;
 // Z-indices
 $zindex: (
   base: 1,
+  desktop-nav-bar: 449,
   mobile-body-overlay: 450,
   mobile-nav-bar: 451,
   drop-down-menu: 500
 );
 
 /* Light mode */
-body {
+html {
   --osLightMode: light;
   @media (prefers-color-scheme:dark) {
     --osLightMode: dark;
@@ -77,17 +78,17 @@ body {
 }
 
 /* Font size modifier */
-body {
+html {
   --fontSizeModifier: 1;
 }
 
 /* Line-height modifier */
-body {
+html {
   --lineHeightModifier: 1;
 }
 
 /* word space modifier */
-body {
+html {
   --wordSpaceModifier: 0;
 }
 

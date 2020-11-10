@@ -1,5 +1,6 @@
 // Global functions
 
+
 // Check for mouse clicks, enter keypress (13), or spacebar keypress (32)
 // https://karlgroves.com/2014/11/24/ridiculously-easy-trick-for-keyboard-accessibility
 function a11yClick(event){
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
   addPageOverlay();
 });
 
+
 // Menu closer function
 function allMenuCloser() {
 
@@ -36,12 +38,18 @@ function allMenuCloser() {
   if (qh_nav_minor !== null) {
     qh_nav_minor.classList.remove('qh__nav-minor--expanded');
   }
+
+  // Close settings nav
+  var settingsMenuTrigger = document.getElementById('settings_trigger');
+  if (settingsMenuTrigger !== null) {
+    settingsMenuTrigger.parentElement.classList.remove('open');
+  }
 }
 
-// Add screen overlay 
+// Add screen overlay
 function addPageOverlay() {
   const pageOverlay = document.createElement("div");
-  let divContent = document.createTextNode(" "); 
+  let divContent = document.createTextNode(" ");
   pageOverlay.appendChild(divContent);
   pageOverlay.id = 'page_overlay';
   pageOverlay.classList.add('page-overlay');
@@ -56,7 +64,6 @@ function addPageOverlay() {
       deactivatePageOverlay();
     });
   }
-
 }
 
 function deactivatePageOverlay() {
@@ -69,10 +76,22 @@ function activatePageOverlay() {
   pageOverlay.classList.add('active');
 }
 
+
 // Expand / Collapse utility
+//
+//Minimum expected markup:
+//<div>
+//  <div>
+//    <button id="summaryId" class="js__expand-collapse" aria-expanded="false" aria-controls="targetId">See More</button>
+//  </div>
+//  <div id="targetId" aria-labelledby="summaryId" class="">Content to reveal here</div>
+//</div>
+//
+// This function ONLY toggles a show/hide class on the target and toggles aria-expanded
+// Any other functionality (like swapping the text content if true/false) needs to be in the component JS
 document.addEventListener("DOMContentLoaded", function() {
 
-  document.querySelectorAll(".js-expand-collapse").forEach(toggle_element => {
+  document.querySelectorAll(".js__expand-collapse").forEach(toggle_element => {
     toggle_element.addEventListener('click', function(event) {
       if (a11yClick(event) === true) {
         var expanded = toggle_element.getAttribute('aria-expanded');
@@ -81,10 +100,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (expanded == 'true') {
           toggle_element.setAttribute('aria-expanded', 'false');
-          target_element.classList.remove('aria-expanded')
+          target_element.classList.remove('js__aria-expanded')
         } else {
           toggle_element.setAttribute('aria-expanded', 'true');
-          target_element.classList.add('aria-expanded')
+          target_element.classList.add('js__aria-expanded')
         }
       }
     })

@@ -1,7 +1,7 @@
-<div class="qh__accordion js-qh-accordion" data-allow-toggle>
+<div class="qh__accordion">
   <button
     aria-expanded="false"
-    class="qh__accordion__button js-qh-accordion-trigger"
+    class="qh__accordion__button js__expand-collapse"
     aria-controls="details-{{pid}}"
     data-id="{{pid}}"
     id="summary-{{pid}}"
@@ -17,7 +17,7 @@
     id="details-{{pid}}"
     role="region"
     aria-labelledby="summary-{{pid}}"
-    class="qh__accordion__content js-qh-accordion-panel"
+    class="qh__accordion__content js__qh-accordion-panel"
     >
     <div>
       {{ content.field_item_flexible_text }}

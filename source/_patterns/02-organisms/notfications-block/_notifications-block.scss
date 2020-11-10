@@ -1,5 +1,6 @@
 .qh__notifications-block {
   position: relative;
+
   &__wrapper {
     background-color: var(--fc__notification__bg);
     @include qh-content-maxwidth();
@@ -42,6 +43,7 @@
     }
   }
   &__content {
+
     .js & {
       max-height: 0;
       overflow: hidden;

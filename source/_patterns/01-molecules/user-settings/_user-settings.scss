@@ -1,21 +1,13 @@
 /* Settings */
 
 .settings-menu {
+  @extend p;
   --text-opsz: 10;
   display: inline-block;
-  font-family: var(--fonts-serif-static-caption);
   position: relative;
-  @supports (font-variation-settings: normal) {
-    font-family: var(--fonts-serif);
-    .wf-inactive & {
-      font-family: var(--fonts-base-serif);
-      font-size: 1.1em;
-    }
-  }
   .settings__menu {
     background-color: var(--fc__official__bg);
     color: var(--fc__official__fg);
-    font-size: 0.92rem;
     height: 1px;
     list-style: none;
     margin: 0;
@@ -24,7 +16,7 @@
     padding: 0.25rem;
     position: absolute;
     text-align: left;
-    top: 2rem;
+    top: 1.4rem;
     transition: opacity 0.2s ease-in, height 0.1s ease-in;
     left: 0;
     width: 100%;
@@ -49,32 +41,33 @@
       }
 
       &:link {
-        text-decoration: none;
+        text-decoration: underline;
       }
       
       &:visited {
-        text-decoration: none;
+        text-decoration: underline;
       }
       
       html:not(.touch-nav) &:hover {
         background-color: rgba(0,0,0,.05);
-        text-decoration: none;
+        text-decoration: underline;
       }
       
       &:focus {
         background-color: rgba(0,0,0,.05);
-        text-decoration: none;
+        text-decoration: underline;
       }
       
       &:active {
         background-color: rgba(0,0,0,.05);
-        text-decoration: none;
+        text-decoration: underline;
       }
     }
   }
   &-trigger {
+    background-color: var(--fc__official__bg);
     display: block;
-    height: 2rem;
+    padding: 0.15rem 0.25rem;
     position: relative;
     text-align: right;
     z-index: z(mobile-nav-bar);
@@ -85,7 +78,9 @@
     &:hover {
       text-decoration: underline;
     }
-    &:focus {
+    &:focus,
+    .qh__page-header &:focus {
+      outline-color: transparent;
       text-decoration: underline;
     }
     &:active {
@@ -108,7 +103,7 @@
       overflow-y: scroll;
       position: absolute;
       right: 0;
-      z-index: z(mobile-nav-bar);
+      z-index: z(drop-down-menu);
     }
     &.toc .menu {
       right: -5rem;
