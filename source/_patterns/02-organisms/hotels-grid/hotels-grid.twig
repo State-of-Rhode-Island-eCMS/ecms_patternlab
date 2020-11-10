@@ -1,0 +1,50 @@
+<div class="qh__hotels-grid">
+  <h2 class="qh__hotels-grid__title">{{ title }}</h2>
+  <ul class="qh__hotels-grid__list">
+    <li>
+      {% include '@molecules/teaser-hotel/teaser-hotel.twig' with {
+        url: hotel_teaser1.url,
+        price: hotel_teaser1.price,
+        image_path: hotel_teaser1.image_path,
+        title: hotel_teaser1.title,
+        location: hotel_teaser1.location
+      } %}
+    </li>
+    <li>
+      {% include '@molecules/teaser-hotel/teaser-hotel.twig' with {
+        url: hotel_teaser2.url,
+        price: hotel_teaser2.price,
+        image_path: hotel_teaser2.image_path,
+        title: hotel_teaser2.title,
+        location: hotel_teaser2.location
+      } %}
+    </li>
+    <li>
+      {% include '@molecules/teaser-hotel/teaser-hotel.twig' with {
+        url: hotel_teaser3.url,
+        price: hotel_teaser3.price,
+        image_path: hotel_teaser3.image_path,
+        title: hotel_teaser3.title,
+        location: hotel_teaser3.location
+      } %}
+    </li>
+    <li>
+      {% include '@molecules/teaser-hotel/teaser-hotel.twig' with {
+        url: hotel_teaser1.url,
+        price: hotel_teaser1.price,
+        image_path: hotel_teaser1.image_path,
+        title: hotel_teaser1.title,
+        location: hotel_teaser1.location
+      } %}
+    </li>
+    <li>
+      {% include '@molecules/teaser-hotel/teaser-hotel.twig' with {
+        url: hotel_teaser2.url,
+        price: hotel_teaser2.price,
+        image_path: hotel_teaser2.image_path,
+        title: hotel_teaser2.title,
+        location: hotel_teaser2.location
+      } %}
+    </li>
+  </ul>
+</div>

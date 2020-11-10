@@ -1,0 +1,43 @@
+.qh__hotels-grid {
+
+  // <h2>
+  &__title {}
+
+  // <ul>
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin: 0 #{- ($general-h-spacing/2)};
+    max-width: unset;
+
+    > li {
+      padding: 0 ($general-h-spacing/2) $general-v-spacing;
+
+      @include breakpoint-up($bp--small) {
+        flex: 0 1 50%;
+      }
+
+      @include breakpoint-up($bp--large) {
+        flex: 0 1 33%;
+      }
+
+      > div {
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        margin-bottom: 0;
+      }
+
+      .qh__teaser-hotel__content {
+        flex: 1 0 auto;
+      }
+
+      .qh__teaser-hotel__location,
+      .qh__teaser-hotel__cta {
+        margin-top: auto;
+      }
+    }
+  }
+}
