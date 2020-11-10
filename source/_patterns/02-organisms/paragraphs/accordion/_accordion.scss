@@ -11,11 +11,13 @@
   border: $border-xs solid transparent;
   margin-top: ($general-v-spacing/2);
 
-  &:hover,
-  &:focus-within {
-    border-color: var(--fc__default__link--focus);
-    transition: $transition-base;
-  }
+  // Removing… a proper accordion group needs these styles, but none
+  // of our accordions can be grouped together
+  //&:hover,
+  //&:focus-within {
+  //  border-color: var(--fc__default__link--focus);
+  //  transition: $transition-base;
+  //}
 
   &__title {}
 
