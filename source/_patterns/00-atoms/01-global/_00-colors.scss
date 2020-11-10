@@ -106,7 +106,7 @@ html {
       $classString: '.qh__t__#{$key}';
       @if str-index($key, "--dark") {
         $newKey: str-slice($key, 0, -7);
-        $classString: '.qh__t__#{$newKey}.dark';
+        $classString: '&.dark .qh__t__#{$newKey}';
       }
       #{$classString} {
         @each $block, $section in $values {

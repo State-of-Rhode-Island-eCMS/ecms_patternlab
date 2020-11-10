@@ -338,7 +338,7 @@ html {
   --fc__primary--light__bg: #95bddf;
   --fc__primary--light__fg--dark: white;
   --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.25); }
-  html .qh__t__scarborough.dark {
+  html.dark .qh__t__scarborough {
     --fc__official__fg: #d4d4d4;
     --fc__official__bg: #141414;
     --fc__official__link: #95bddf;
@@ -459,7 +459,7 @@ html {
     --fc__primary--light__bg: #eb5252;
     --fc__primary--light__fg--dark: white;
     --fc__primary--light__bg--dark: rgba(235, 82, 82, 0.5); }
-  html .qh__t__federal-hill.dark {
+  html.dark .qh__t__federal-hill {
     --fc__official__fg: #d4d4d4;
     --fc__official__bg: #141414;
     --fc__official__link: white;
@@ -2205,10 +2205,10 @@ table {
     padding-bottom: 0.25rem; }
   .dark .settings__menu a.toggle-lightmode.switch:after {
     content: ' to light'; }
-  body:not(.dark) .settings__menu a.toggle-lightmode.switch:after {
+  html:not(.dark) .settings__menu a.toggle-lightmode.switch:after {
     content: ' to dark'; }
   @media (prefers-color-scheme: dark) {
-    body:not(.light) .settings__menu a.toggle-lightmode.switch:after {
+    html:not(.light) .settings__menu a.toggle-lightmode.switch:after {
       content: ' to light'; } }
   .light .settings__menu a.toggle-lightmode.switch:after {
     content: ' to dark'; }

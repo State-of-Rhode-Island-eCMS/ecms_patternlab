@@ -136,13 +136,13 @@
         content: ' to light';
       }
     }
-    body:not(.dark) & {
+    html:not(.dark) & {
       &.switch:after {
         content: ' to dark';
       }
     }
     @media (prefers-color-scheme:dark) {
-      body:not(.light) & {
+      html:not(.light) & {
         &.switch:after {
           content: ' to light';
         }
