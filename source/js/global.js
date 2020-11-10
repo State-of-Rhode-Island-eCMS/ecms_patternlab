@@ -36,6 +36,12 @@ function allMenuCloser() {
   if (qh_nav_minor !== null) {
     qh_nav_minor.classList.remove('qh__nav-minor--expanded');
   }
+
+  // Close settings nav
+  var settingsMenuTrigger = document.getElementById('settings_trigger');
+  if (settingsMenuTrigger !== null) {
+    settingsMenuTrigger.parentElement.classList.remove('open');
+  }
 }
 
 // Add screen overlay 
