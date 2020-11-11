@@ -1,25 +1,8 @@
 .qh__teaser-notification {
   padding: ($general-v-spacing / 2) 0;
+  border-top: $border-xs solid var(--fc__notification__border);
 
   p {
     font-size: rem(16);
-  }
-
-  a {
-    color: var(--fc__notification__link);
-
-    &:hover,
-    &:focus {
-      color: var(--fc__notification__link--hover);
-    }
-
-    // Not crazy about setting these globally. If we do, we have to reset all of them when the theme changes
-    &:visited {
-      color: var(--fc__notification__link--visited);
-    }
-
-    &:active {
-      color: var(--fc__notification__link--active);
-    }
   }
 }
