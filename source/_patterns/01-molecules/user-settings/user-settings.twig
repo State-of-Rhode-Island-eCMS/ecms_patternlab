@@ -1,10 +1,12 @@
 <div class="settings-menu">
   <a href="#" class="settings-menu-trigger" id="settings_trigger" role="button">User settings</a>
   <ul class="settings__menu">
+    {% if (language_switcher) %}
     <li class="settings__language">
       <label>Display site in: </label>
         {{ language_switcher }}
     </li>
+    {% endif %}
     <li class="settings__lightmode">
       <label>Light mode: </label>
       <div class="settings-toggle">
