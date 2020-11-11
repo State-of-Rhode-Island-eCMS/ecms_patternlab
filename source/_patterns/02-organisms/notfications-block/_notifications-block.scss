@@ -9,7 +9,7 @@
     &::before {
       background-color: var(--fc__notification__bg);
       content: '';
-      opacity: 0.33;
+      opacity: 0.67;
       position: absolute;
       @include qh-inset-supports(0);
       z-index: -2;
