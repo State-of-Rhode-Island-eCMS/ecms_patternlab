@@ -1,15 +1,30 @@
+.qh-layout__sidebar-top {
+  position: sticky;
+  top: 3rem;
+  z-index: z(mobile-nav-bar);
+
+  @include breakpoint-up($bp__single-col-content) {
+    position: relative;
+    top: auto;
+    z-index: unset;
+  }
+}
+
 .qh__nav-minor {
   background-color: var(--fc__default__bg);
   border-top: $border-lg solid var(--fc__nav-minor__border);
   min-width: rem(320);
-  //position: relative;
   overflow: visible;
 
   @include breakpoint-down($bp__single-col-content) {
+    $button-trigger-height: 28;
+
     position: absolute;
-    left: 0;
-    width: rem(320);
-    transform: translateX(- rem(320));
+    // This calc replicates the spacing variable to negate it, and push the button trigger over to the edge of the viewport
+    left: calc((1.125rem + 3.5vw) * -1);
+    min-width: unset;
+    width: rem(320 - $button-trigger-height);
+    transform: translateX(- rem(320 - $button-trigger-height));
     transition: transform $transition-duration-base $transition-timing-base;
 
     > ul {
@@ -41,7 +56,8 @@
     background-color: var(--fc__nav-minor__border);
     background-image: none;
     border-radius: 0;
-    padding: ($button-v-spacing/2) $button-h-spacing ($button-v-spacing/2) 0;
+    color: var(--fc__nav-minor__fg);
+    padding: ($button-v-spacing/8) $button-h-spacing ($button-v-spacing/8) 0;
     overflow: visible;
     position: absolute;
       top: - $border-lg;
@@ -51,22 +67,21 @@
 
     &:hover::before,
     &:focus::before {
-      border-top-color: var(--fc__default__button--hover__bg);
-      border-right-color: var(--fc__default__button--hover__bg);
+      background-color: var(--fc__default__button--hover__bg);
     }
 
     // Little triangle at the bottom
     &::before {
-      border-top: rem(21) solid var(--fc__nav-minor__border);
-      border-right: rem(21) solid var(--fc__nav-minor__border);
-      border-bottom: rem(21) solid transparent;
-      border-left: rem(21) solid transparent;
-      content: '';
-      height: 0;
-      width: 0;
+      background-color: var(--fc__nav-minor__border);
+      background-image: none;
+      content: " ";
+      display: block;
+      height: 100%;
+      width: rem(40);
       position: absolute;
-        top: -0.1rem;;
-        left: - rem(42);
+        top: 0;
+        left: - rem(30);
+      transform: skew(25deg, 0deg);
       transition: $transition-base;
     }
 
@@ -79,10 +94,17 @@
   // <ul>
   &__list {
     background-color: var(--fc__nav-minor__bg);
+    position: relative;
+    z-index: z(drop-down-menu);
+    @include breakpoint-up($bp__single-col-content) {
+      z-index: unset;
+    }
 
     &.qh__accordion {
       border: $border-xs solid transparent;
       margin-top: 0;
+      max-height: 80vh;
+      overflow: scroll;
     }
 
     &__sub {
@@ -111,7 +133,7 @@
   // <li>
   &__has-children {
     // Set up a split button design
-    $button-width: em(44);
+    $button-width: rem(44);
 
     display: flex;
     flex-flow: row wrap;
@@ -204,11 +226,13 @@
 
   // <a>
   &__link {
-    font-weight: normal; // TODO: Reset with the proper weight
+    font-size: clamp(0.925rem, 1.5vw, 1rem);
+    line-height: clamp(1.2rem, 3vw, 1.3rem);
     padding: $nav-a-v-spacing $nav-a-h-spacing--sm;
 
     &__sub {
-      font-size: 0.875em; // TODO: Reset with the proper size
+      font-size: clamp(0.875rem, 1.5vw, 0.925rem);
+      line-height: clamp(1.2rem, 3vw, 1.3rem);
     }
 
     // Treat a current link as disabled. It should not have a visual state change

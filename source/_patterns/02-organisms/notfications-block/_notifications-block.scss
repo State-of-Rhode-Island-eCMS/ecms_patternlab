@@ -1,0 +1,111 @@
+.qh__notifications-block {
+  position: relative;
+
+  &__wrapper {
+    background-color: var(--fc__notification__bg);
+    @include qh-content-maxwidth();
+
+    // Light colored background as a pseudo element with opacity applied
+    &::before {
+      background-color: var(--fc__notification__bg);
+      content: '';
+      opacity: 0.67;
+      position: absolute;
+      @include qh-inset-supports(0);
+      z-index: -2;
+    }
+  }
+
+  .qh__icon__svg {
+    color: var(--fc__notification__icon);
+    margin-right: $general-h-spacing;
+    height: rem(32);
+    width: rem(32);
+  }
+
+  // <p>
+  &__title {
+    font-size: 1rem;
+  }
+
+  &__header {
+    color:  var(--fc__notification__fg);
+    display: flex;
+    align-items: center;
+    margin: 0 $general-h-spacing;
+    padding: rem(12) 0;
+
+    .qh__btn {
+      margin-left: auto;
+
+      &,
+      &:visited {
+        background-color: var(--fc__notification__button__bg);
+        color: var(--fc__notification__button__fg);
+      }
+
+      &:hover,
+      &:focus {
+        background-color: var(--fc__notification__button__fg);
+        color: var(--fc__notification__button__bg);
+      }
+
+      &[aria-expanded="true"]::after {
+        content: attr(data-text-true);
+      }
+
+      &[aria-expanded="false"]::after {
+        content: attr(data-text-false);
+      }
+    }
+  }
+
+  &__content {
+    color:  var(--fc__notification__fg);
+
+    // Restyle all anchors in case this bg color can not support the default colors
+    a,
+    a:visited {
+      color: var(--fc__notification__link, var(--fc__defauilt__link));
+    }
+
+    a:hover,
+    a:focus {
+      color: var(--fc__notification__link--hover, var(--fc__defauilt__link--hover));
+    }
+
+    a:focus {
+      outline-color: var(--fc__notification__link--focus, var(--fc__defauilt__link--focus));
+    }
+
+    a:active {
+      color: var(--fc__notification__link--active, var(--fc__defauilt__link--active));
+    }
+
+    // Expand and collapse if JS is present
+    .js & {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0s linear 1s, visibility 0s linear 0s;
+      visibility: hidden;
+
+      > article {
+        opacity: 0;
+        transition: $transition-base 0ms;
+      }
+
+      &.js__aria-expanded {
+        max-height: unset;
+        padding: 0 $general-h-spacing;
+        transition: max-height 0s linear 500s, visibility 0s linear 0ms;
+        visibility: visible;
+
+        > article {
+          opacity: 1;
+          transition: $transition-base 125ms;
+        }
+      }
+    }
+  }
+}
+

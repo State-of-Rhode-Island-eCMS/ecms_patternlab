@@ -42,15 +42,16 @@ p {
     line-height: $p-lh-l;
   }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-    --font-size-min: #{$p-size-s};
-    --font-size-max: #{$p-size-l};
+    --font-size-min-value: #{$p-size-s-value};
+    --font-size-max-value: #{$p-size-l-value};
     --font-size-scaler-value: var(--p-scaler-value);
     font-size: var(--font-size);
 
-    --font-lh-min: #{$p-lh-s};
-    --font-lh-max: #{$p-lh-l};
+    --font-lh-min-value: #{$p-lh-s};
+    --font-lh-max-value: #{$p-lh-l};
     --font-lh-scaler-value: var(--p-lh-scaler-value);
     line-height: var(--line-height);
+    word-spacing: var(--word-spacing);
   }
   font-style: normal;
   margin: 0;
@@ -98,15 +99,16 @@ h1 {
     line-height: $h1-lh-l;
   }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-    --font-size-min: #{$h1-size-s};
-    --font-size-max: #{$h1-size-l};
+    --font-size-min-value: #{$h1-size-s-value};
+    --font-size-max-value: #{$h1-size-l-value};
     --font-size-scaler-value: var(--h1-scaler-value);
     font-size: var(--font-size);
 
-    --font-lh-min: #{$h1-lh-s};
-    --font-lh-max: #{$h1-lh-l};
+    --font-lh-min-value: #{$h1-lh-s};
+    --font-lh-max-value: #{$h1-lh-l};
     --font-lh-scaler-value: var(--h1-lh-scaler-value);
     line-height: var(--line-height);
+    word-spacing: var(--word-spacing);
   }
   font-style: normal;
   margin-top: 0;
@@ -145,15 +147,16 @@ h2 {
     line-height: $h2-lh-l;
   }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-    --font-size-min: #{$h2-size-s};
-    --font-size-max: #{$h2-size-l};
+    --font-size-min-value: #{$h2-size-s-value};
+    --font-size-max-value: #{$h2-size-l-value};
     --font-size-scaler-value: var(--h2-scaler-value);
     font-size: var(--font-size);
 
-    --font-lh-min: #{$h2-lh-s};
-    --font-lh-max: #{$h2-lh-l};
+    --font-lh-min-value: #{$h2-lh-s};
+    --font-lh-max-value: #{$h2-lh-l};
     --font-lh-scaler-value: var(--h2-lh-scaler-value);
     line-height: var(--line-height);
+    word-spacing: var(--word-spacing);
   }
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 2);
@@ -204,15 +207,16 @@ h3 {
     line-height: $h3-lh-l;
   }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-    --font-size-min: #{$h3-size-s};
-    --font-size-max: #{$h3-size-l};
+    --font-size-min-value: #{$h3-size-s-value};
+    --font-size-max-value: #{$h3-size-l-value};
     --font-size-scaler-value: var(--h3-scaler-value);
     font-size: var(--font-size);
 
-    --font-lh-min: #{$h3-lh-s};
-    --font-lh-max: #{$h3-lh-l};
+    --font-lh-min-value: #{$h3-lh-s};
+    --font-lh-max-value: #{$h3-lh-l};
     --font-lh-scaler-value: var(--h3-lh-scaler-value);
     line-height: var(--line-height);
+    word-spacing: var(--word-spacing);
   }
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
@@ -251,15 +255,16 @@ h4 {
     line-height: $h4-lh-l;
   }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-    --font-size-min: #{$h4-size-s};
-    --font-size-max: #{$h4-size-l};
+    --font-size-min-value: #{$h4-size-s-value};
+    --font-size-max-value: #{$h4-size-l-value};
     --font-size-scaler-value: var(--h4-scaler-value);
     font-size: var(--font-size);
 
-    --font-lh-min: #{$h4-lh-s};
-    --font-lh-max: #{$h4-lh-l};
+    --font-lh-min-value: #{$h4-lh-s};
+    --font-lh-max-value: #{$h4-lh-l};
     --font-lh-scaler-value: var(--h4-lh-scaler-value);
     line-height: var(--line-height);
+    word-spacing: var(--word-spacing);
   }
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
@@ -298,15 +303,16 @@ h5 {
     line-height: $h5-lh-l;
   }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-    --font-size-min: #{$h5-size-s};
-    --font-size-max: #{$h5-size-l};
+    --font-size-min-value: #{$h5-size-s-value};
+    --font-size-max-value: #{$h5-size-l-value};
     --font-size-scaler-value: var(--h5-scaler-value);
     font-size: var(--font-size);
 
-    --font-lh-min: #{$h5-lh-s};
-    --font-lh-max: #{$h5-lh-l};
+    --font-lh-min-value: #{$h5-lh-s};
+    --font-lh-max-value: #{$h5-lh-l};
     --font-lh-scaler-value: var(--h5-lh-scaler-value);
     line-height: var(--line-height);
+    word-spacing: var(--word-spacing);
   }
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
@@ -345,24 +351,20 @@ h6 {
     line-height: $h6-lh-l;
   }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-    --font-size-min: #{$h6-size-s};
-    --font-size-max: #{$h6-size-l};
+    --font-size-min-value: #{$h6-size-s-value};
+    --font-size-max-value: #{$h6-size-l-value};
     --font-size-scaler-value: var(--h6-scaler-value);
     font-size: var(--font-size);
 
-    --font-lh-min: #{$h6-lh-s};
-    --font-lh-max: #{$h6-lh-l};
+    --font-lh-min-value: #{$h6-lh-s};
+    --font-lh-max-value: #{$h6-lh-l};
     --font-lh-scaler-value: var(--h6-lh-scaler-value);
     line-height: var(--line-height);
+    word-spacing: var(--word-spacing);
   }
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
-}
-
-.headline-super {
-  font-size: clamp(2.5rem, 6vw, 8rem);
-  font-weight: 225;
 }
 
 strong,
@@ -407,15 +409,16 @@ blockquote {
       line-height: $bq-lh-l;
     }
     @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-      --font-size-min: #{$bq-size-s};
-      --font-size-max: #{$bq-size-l};
+      --font-size-min-value: #{$bq-size-s-value};
+      --font-size-max-value: #{$bq-size-l-value};
       --font-size-scaler-value: var(--bq-scaler-value);
       font-size: var(--font-size);
   
-      --font-lh-min: #{$bq-lh-s};
-      --font-lh-max: #{$bq-lh-l};
+      --font-lh-min-value: #{$bq-lh-s};
+      --font-lh-max-value: #{$bq-lh-l};
       --font-lh-scaler-value: var(--bq-lh-scaler-value);
       line-height: var(--line-height);
+      word-spacing: var(--word-spacing);
     }
     margin-left: auto;
     margin-right: auto;
@@ -466,8 +469,8 @@ body {
     line-height: $st-lh-l;
   }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-    --font-size-min: #{$st-size-s};
-    --font-size-max: #{$st-size-l};
+    --font-size-min-value: #{$st-size-s-value};
+    --font-size-max-value: #{$st-size-l-value};
     --font-size-scaler-value: var(--st-scaler-value);
     font-size: var(--font-size);
 
@@ -475,6 +478,7 @@ body {
     --font-lh-max: #{$st-lh-l};
     --font-lh-scaler-value: var(--st-lh-scaler-value);
     line-height: var(--line-height);
+    word-spacing: var(--word-spacing);
   }
   font-style: normal;
 }

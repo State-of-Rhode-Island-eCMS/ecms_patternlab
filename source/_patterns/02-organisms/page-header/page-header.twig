@@ -17,7 +17,10 @@
  */
 #}
 <header role="banner" class="qh__page-header">
-  {% include '@organisms/global-header/global-header.twig' %}
+  {% include '@organisms/global-header/global-header.twig' with {
+    language_switcher: language_switcher 
+  }
+  %}
 
   <div class="qh__page-header__wrapper">
     {% include '@molecules/site-branding/site-branding.twig' with {
@@ -27,7 +30,7 @@
     %}
 
     <div id="js__search-social" class="qh__page-header__inner">
-      {% include '@molecules/social-links/social-links.twig' %}
+      {{ header_inner }}
       {% include '@molecules/site-search/site-search.twig' %}
     </div>
   </div>

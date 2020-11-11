@@ -12,22 +12,22 @@ body {
   --content-max-width: min(93vw, 90rem); }
 
 /* Light mode */
-body {
+html {
   --osLightMode: light; }
   @media (prefers-color-scheme: dark) {
-    body {
+    html {
       --osLightMode: dark; } }
 
 /* Font size modifier */
-body {
+html {
   --fontSizeModifier: 1; }
 
 /* Line-height modifier */
-body {
+html {
   --lineHeightModifier: 1; }
 
 /* word space modifier */
-body {
+html {
   --wordSpaceModifier: 0; }
 
 /* Typography variables */
@@ -41,6 +41,7 @@ body {
 /* Set base text size for all calcs */
 /* Change px values here for all font sizing */
 /* small text */
+/* Font size REM values */
 /* Font size REMs */
 /* Line-height (needs to be in EMs) */
 /* Custom props for modern browsers */
@@ -72,33 +73,33 @@ body {
   --st-size-s: 0.75rem;
   --st-size-m: 0.8125rem;
   --st-size-l: 0.875rem;
-  --p-lh-s: 1.5em;
-  --p-lh-m: 1.525em;
-  --p-lh-l: 1.55em;
-  --h1-lh-s: 1.05em;
-  --h1-lh-m: 1.075em;
-  --h1-lh-l: 1.1em;
-  --h2-lh-s: 1.1em;
-  --h2-lh-m: 1.125em;
-  --h2-lh-l: 1.15em;
-  --h3-lh-s: 1.1em;
-  --h3-lh-m: 1.125em;
-  --h3-lh-l: 1.15em;
-  --h4-lh-s: 1.1em;
-  --h4-lh-m: 1.2em;
-  --h4-lh-l: 1.3em;
-  --h5-lh-s: 1.1em;
-  --h5-lh-m: 1.2em;
-  --h5-lh-l: 1.3em;
-  --h6-lh-s: 1.1em;
-  --h6-lh-m: 1.2em;
-  --h6-lh-l: 1.3em;
-  --bq-lh-s: 1.5em;
-  --bq-lh-m: 1.525em;
-  --bq-lh-l: 1.55em;
-  --st-lh-s: 1.1em;
-  --st-lh-m: 1.2em;
-  --st-lh-l: 1.3em; }
+  --p-lh-s: 1.5;
+  --p-lh-m: 1.525;
+  --p-lh-l: 1.55;
+  --h1-lh-s: 1.05;
+  --h1-lh-m: 1.075;
+  --h1-lh-l: 1.1;
+  --h2-lh-s: 1.1;
+  --h2-lh-m: 1.125;
+  --h2-lh-l: 1.15;
+  --h3-lh-s: 1.1;
+  --h3-lh-m: 1.125;
+  --h3-lh-l: 1.15;
+  --h4-lh-s: 1.1;
+  --h4-lh-m: 1.2;
+  --h4-lh-l: 1.3;
+  --h5-lh-s: 1.1;
+  --h5-lh-m: 1.2;
+  --h5-lh-l: 1.3;
+  --h6-lh-s: 1.1;
+  --h6-lh-m: 1.2;
+  --h6-lh-l: 1.3;
+  --bq-lh-s: 1.5;
+  --bq-lh-m: 1.525;
+  --bq-lh-l: 1.55;
+  --st-lh-s: 1.1;
+  --st-lh-m: 1.2;
+  --st-lh-l: 1.3; }
 
 /* Scaling accessible typography setup */
 /* Set scaling values */
@@ -127,8 +128,8 @@ body {
   --font-size-min-value: 1rem;
   --font-size-max-value: 1.25rem;
   --font-size-scaler-value: var(--p-scaler-value);
-  --font-lh-min-value: 1.5em;
-  --font-lh-max-value: 1.55em;
+  --font-lh-min-value: 1.5;
+  --font-lh-max-value: 1.55;
   --font-lh-scaler-value: var(--p-lh-scaler-value);
   /* facter in fontSizeModifier preference */
   --font-size-min: calc(var(--font-size-min-value) * var(--fontSizeModifier) * 1rem);
@@ -312,6 +313,16 @@ html {
   --fc__nav-minor__link--focus: #ff8e47;
   --fc__nav-minor__link--active: #ff8e47;
   --fc__nav-minor__sub__bg: rgba(255, 255, 255, 0.25);
+  --fc__notification__fg: #1b243b;
+  --fc__notification__bg: #face3d;
+  --fc__notification__icon: #293557;
+  --fc__notification__link: #1b243b;
+  --fc__notification__link--hover: #476cd1;
+  --fc__notification__link--focus: #1b243b;
+  --fc__notification__link--active: #ff8e47;
+  --fc__notification__button__fg: #293557;
+  --fc__notification__button__bg: white;
+  --fc__notification__border: rgba(20, 20, 20, 0.33);
   --fc__accordion__icon__fg: #1b243b;
   --fc__accordion__icon__bg: #ff8e47;
   --fc__attention-card__fg: #1b243b;
@@ -329,7 +340,7 @@ html {
   --fc__primary--light__bg: #95bddf;
   --fc__primary--light__fg--dark: white;
   --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.25); }
-  html .qh__t__scarborough.dark {
+  html.dark .qh__t__scarborough {
     --fc__official__fg: #d4d4d4;
     --fc__official__bg: #141414;
     --fc__official__link: #95bddf;
@@ -437,6 +448,16 @@ html {
     --fc__nav-minor__link--focus: #eb5252;
     --fc__nav-minor__link--active: #eb5252;
     --fc__nav-minor__sub__bg: rgba(255, 255, 255, 0.25);
+    --fc__notification__fg: #293557;
+    --fc__notification__bg: #95bddf;
+    --fc__notification__icon: #293557;
+    --fc__notification__link: #1b243b;
+    --fc__notification__link--hover: #8e3339;
+    --fc__notification__link--focus: #293557;
+    --fc__notification__link--active: #ff8e47;
+    --fc__notification__button__fg: #293557;
+    --fc__notification__button__bg: white;
+    --fc__notification__border: rgba(41, 53, 87, 0.5);
     --fc__attention-card__fg: #141414;
     --fc__attention-card__bar: #eb5252;
     --fc__attention-card__icon: white;
@@ -450,7 +471,7 @@ html {
     --fc__primary--light__bg: #eb5252;
     --fc__primary--light__fg--dark: white;
     --fc__primary--light__bg--dark: rgba(235, 82, 82, 0.5); }
-  html .qh__t__federal-hill.dark {
+  html.dark .qh__t__federal-hill {
     --fc__official__fg: #d4d4d4;
     --fc__official__bg: #141414;
     --fc__official__link: white;
@@ -781,11 +802,11 @@ p, address, time, ul,
 ol,
 dl, .form__actions a, button,
 .qh__btn,
-.button, table th, table td, .qh__accordion__button, .qh__file-list__item__label {
+.button, table th, table td, .settings-menu, .qh__accordion__button, .qh__file-list__item__label {
   font-family: "Work Sans", var(--font-sans-fallback);
   font-weight: normal;
   font-size: 1rem;
-  line-height: 1.5em;
+  line-height: 1.5;
   font-style: normal;
   margin: 0;
   max-width: 40em;
@@ -796,7 +817,7 @@ dl, .form__actions a, button,
   .wf-inactive ol,
   .wf-inactive dl, .wf-inactive .form__actions a, .form__actions .wf-inactive a, .wf-inactive button,
   .wf-inactive .qh__btn,
-  .wf-inactive .button, .wf-inactive table th, table .wf-inactive th, .wf-inactive table td, table .wf-inactive td, .wf-inactive .qh__accordion__button, .wf-inactive .qh__file-list__item__label {
+  .wf-inactive .button, .wf-inactive table th, table .wf-inactive th, .wf-inactive table td, table .wf-inactive td, .wf-inactive .settings-menu, .wf-inactive .qh__accordion__button, .wf-inactive .qh__file-list__item__label {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: normal;
     letter-spacing: 0.04em; }
@@ -805,53 +826,54 @@ dl, .form__actions a, button,
     html:not(.novf) ol,
     html:not(.novf) dl, html:not(.novf) .form__actions a, .form__actions html:not(.novf) a, html:not(.novf) button,
     html:not(.novf) .qh__btn,
-    html:not(.novf) .button, html:not(.novf) table th, table html:not(.novf) th, html:not(.novf) table td, table html:not(.novf) td, html:not(.novf) .qh__accordion__button, html:not(.novf) .qh__file-list__item__label {
+    html:not(.novf) .button, html:not(.novf) table th, table html:not(.novf) th, html:not(.novf) table td, table html:not(.novf) td, html:not(.novf) .settings-menu, html:not(.novf) .qh__accordion__button, html:not(.novf) .qh__file-list__item__label {
       font-family: var(--font-sans-vf);
       font-weight: var(--p-font-wght); }
     html:not(.novf).wf-inactive p, html:not(.novf).wf-inactive address, html:not(.novf).wf-inactive time, html:not(.novf).wf-inactive ul,
     html:not(.novf).wf-inactive ol,
     html:not(.novf).wf-inactive dl, html:not(.novf).wf-inactive .form__actions a, .form__actions html:not(.novf).wf-inactive a, html:not(.novf).wf-inactive button,
     html:not(.novf).wf-inactive .qh__btn,
-    html:not(.novf).wf-inactive .button, html:not(.novf).wf-inactive table th, table html:not(.novf).wf-inactive th, html:not(.novf).wf-inactive table td, table html:not(.novf).wf-inactive td, html:not(.novf).wf-inactive .qh__accordion__button, html:not(.novf).wf-inactive .qh__file-list__item__label {
+    html:not(.novf).wf-inactive .button, html:not(.novf).wf-inactive table th, table html:not(.novf).wf-inactive th, html:not(.novf).wf-inactive table td, table html:not(.novf).wf-inactive td, html:not(.novf).wf-inactive .settings-menu, html:not(.novf).wf-inactive .qh__accordion__button, html:not(.novf).wf-inactive .qh__file-list__item__label {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: normal;
       letter-spacing: 0.035em; } }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 50em) {
     p, address, time, ul,
     ol,
     dl, .form__actions a, button,
     .qh__btn,
-    .button, table th, table td, .qh__accordion__button, .qh__file-list__item__label {
+    .button, table th, table td, .settings-menu, .qh__accordion__button, .qh__file-list__item__label {
       font-size: 1.125rem;
-      line-height: 1.525em; } }
+      line-height: 1.525; } }
   @media screen and (min-width: 62em) {
     p, address, time, ul,
     ol,
     dl, .form__actions a, button,
     .qh__btn,
-    .button, table th, table td, .qh__accordion__button, .qh__file-list__item__label {
+    .button, table th, table td, .settings-menu, .qh__accordion__button, .qh__file-list__item__label {
       font-size: 1.25rem;
-      line-height: 1.55em; } }
+      line-height: 1.55; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     p, address, time, ul,
     ol,
     dl, .form__actions a, button,
     .qh__btn,
-    .button, table th, table td, .qh__accordion__button, .qh__file-list__item__label {
-      --font-size-min: 1rem;
-      --font-size-max: 1.25rem;
+    .button, table th, table td, .settings-menu, .qh__accordion__button, .qh__file-list__item__label {
+      --font-size-min-value: 1;
+      --font-size-max-value: 1.25;
       --font-size-scaler-value: var(--p-scaler-value);
       font-size: var(--font-size);
-      --font-lh-min: 1.5em;
-      --font-lh-max: 1.55em;
+      --font-lh-min-value: 1.5;
+      --font-lh-max-value: 1.55;
       --font-lh-scaler-value: var(--p-lh-scaler-value);
-      line-height: var(--line-height); } }
-  @media screen and (min-width: 47.5em) {
+      line-height: var(--line-height);
+      word-spacing: var(--word-spacing); } }
+  @media screen and (min-width: 50em) {
     p, address, time, ul,
     ol,
     dl, .form__actions a, button,
     .qh__btn,
-    .button, table th, table td, .qh__accordion__button, .qh__file-list__item__label {
+    .button, table th, table td, .settings-menu, .qh__accordion__button, .qh__file-list__item__label {
       -webkit-hyphens: none;
           -ms-hyphens: none;
               hyphens: none; } }
@@ -863,7 +885,7 @@ h1 {
   font-family: "Roboto Slab", var(--font-serif-fallback);
   font-weight: normal;
   font-size: 2rem;
-  line-height: 1.05em;
+  line-height: 1.05;
   font-style: normal;
   margin-top: 0;
   margin-bottom: calc(var(--body-text-spacer) * 1); }
@@ -881,30 +903,31 @@ h1 {
       font-variant-numeric: lining-nums;
       font-weight: normal;
       letter-spacing: 0.035em; } }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 50em) {
     h1 {
       font-size: 3.75rem;
-      line-height: 1.075em; } }
+      line-height: 1.075; } }
   @media screen and (min-width: 62em) {
     h1 {
       font-size: 5.5rem;
-      line-height: 1.1em; } }
+      line-height: 1.1; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     h1 {
-      --font-size-min: 2rem;
-      --font-size-max: 5.5rem;
+      --font-size-min-value: 2;
+      --font-size-max-value: 5.5;
       --font-size-scaler-value: var(--h1-scaler-value);
       font-size: var(--font-size);
-      --font-lh-min: 1.05em;
-      --font-lh-max: 1.1em;
+      --font-lh-min-value: 1.05;
+      --font-lh-max-value: 1.1;
       --font-lh-scaler-value: var(--h1-lh-scaler-value);
-      line-height: var(--line-height); } }
+      line-height: var(--line-height);
+      word-spacing: var(--word-spacing); } }
 
 h2 {
   font-family: "Roboto Slab", var(--font-serif-fallback);
   font-weight: normal;
   font-size: 1.5rem;
-  line-height: 1.1em;
+  line-height: 1.1;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 2);
   margin-bottom: calc(var(--body-text-spacer) * 0.5); }
@@ -922,24 +945,25 @@ h2 {
       font-variant-numeric: lining-nums;
       font-weight: normal;
       letter-spacing: 0.035em; } }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 50em) {
     h2 {
       font-size: 2.25rem;
-      line-height: 1.125em; } }
+      line-height: 1.125; } }
   @media screen and (min-width: 62em) {
     h2 {
       font-size: 3rem;
-      line-height: 1.15em; } }
+      line-height: 1.15; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     h2 {
-      --font-size-min: 1.5rem;
-      --font-size-max: 3rem;
+      --font-size-min-value: 1.5;
+      --font-size-max-value: 3;
       --font-size-scaler-value: var(--h2-scaler-value);
       font-size: var(--font-size);
-      --font-lh-min: 1.1em;
-      --font-lh-max: 1.15em;
+      --font-lh-min-value: 1.1;
+      --font-lh-max-value: 1.15;
       --font-lh-scaler-value: var(--h2-lh-scaler-value);
-      line-height: var(--line-height); } }
+      line-height: var(--line-height);
+      word-spacing: var(--word-spacing); } }
   h2:first-of-type::after, h2.emphasis::after {
     content: ' ';
     display: block;
@@ -952,7 +976,7 @@ h3 {
   font-family: "Work Sans", var(--font-sans-fallback);
   font-weight: bold;
   font-size: 1.25rem;
-  line-height: 1.1em;
+  line-height: 1.1;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5); }
@@ -970,30 +994,31 @@ h3 {
       font-variant-numeric: lining-nums;
       font-weight: normal;
       letter-spacing: 0.035em; } }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 50em) {
     h3 {
       font-size: 1.625rem;
-      line-height: 1.125em; } }
+      line-height: 1.125; } }
   @media screen and (min-width: 62em) {
     h3 {
       font-size: 2rem;
-      line-height: 1.15em; } }
+      line-height: 1.15; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     h3 {
-      --font-size-min: 1.25rem;
-      --font-size-max: 2rem;
+      --font-size-min-value: 1.25;
+      --font-size-max-value: 2;
       --font-size-scaler-value: var(--h3-scaler-value);
       font-size: var(--font-size);
-      --font-lh-min: 1.1em;
-      --font-lh-max: 1.15em;
+      --font-lh-min-value: 1.1;
+      --font-lh-max-value: 1.15;
       --font-lh-scaler-value: var(--h3-lh-scaler-value);
-      line-height: var(--line-height); } }
+      line-height: var(--line-height);
+      word-spacing: var(--word-spacing); } }
 
 h4 {
   font-family: "Roboto Slab", var(--font-serif-fallback);
   font-weight: normal;
   font-size: 1rem;
-  line-height: 1.1em;
+  line-height: 1.1;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5); }
@@ -1011,30 +1036,31 @@ h4 {
       font-variant-numeric: lining-nums;
       font-weight: normal;
       letter-spacing: 0.035em; } }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 50em) {
     h4 {
       font-size: 1.125rem;
-      line-height: 1.2em; } }
+      line-height: 1.2; } }
   @media screen and (min-width: 62em) {
     h4 {
       font-size: 1.25rem;
-      line-height: 1.3em; } }
+      line-height: 1.3; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     h4 {
-      --font-size-min: 1rem;
-      --font-size-max: 1.25rem;
+      --font-size-min-value: 1;
+      --font-size-max-value: 1.25;
       --font-size-scaler-value: var(--h4-scaler-value);
       font-size: var(--font-size);
-      --font-lh-min: 1.1em;
-      --font-lh-max: 1.3em;
+      --font-lh-min-value: 1.1;
+      --font-lh-max-value: 1.3;
       --font-lh-scaler-value: var(--h4-lh-scaler-value);
-      line-height: var(--line-height); } }
+      line-height: var(--line-height);
+      word-spacing: var(--word-spacing); } }
 
 h5 {
   font-family: "Roboto Slab", var(--font-serif-fallback);
   font-weight: bold;
   font-size: 0.9375rem;
-  line-height: 1.1em;
+  line-height: 1.1;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5); }
@@ -1052,30 +1078,31 @@ h5 {
       font-variant-numeric: lining-nums;
       font-weight: normal;
       letter-spacing: 0.035em; } }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 50em) {
     h5 {
       font-size: 1rem;
-      line-height: 1.2em; } }
+      line-height: 1.2; } }
   @media screen and (min-width: 62em) {
     h5 {
       font-size: 1.125rem;
-      line-height: 1.3em; } }
+      line-height: 1.3; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     h5 {
-      --font-size-min: 0.9375rem;
-      --font-size-max: 1.125rem;
+      --font-size-min-value: 0.9375;
+      --font-size-max-value: 1.125;
       --font-size-scaler-value: var(--h5-scaler-value);
       font-size: var(--font-size);
-      --font-lh-min: 1.1em;
-      --font-lh-max: 1.3em;
+      --font-lh-min-value: 1.1;
+      --font-lh-max-value: 1.3;
       --font-lh-scaler-value: var(--h5-lh-scaler-value);
-      line-height: var(--line-height); } }
+      line-height: var(--line-height);
+      word-spacing: var(--word-spacing); } }
 
 h6 {
   font-family: "Roboto Slab", var(--font-serif-fallback);
   font-weight: bold;
   font-size: 0.875rem;
-  line-height: 1.1em;
+  line-height: 1.1;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5); }
@@ -1093,28 +1120,25 @@ h6 {
       font-variant-numeric: lining-nums;
       font-weight: normal;
       letter-spacing: 0.035em; } }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 50em) {
     h6 {
       font-size: 0.9375rem;
-      line-height: 1.2em; } }
+      line-height: 1.2; } }
   @media screen and (min-width: 62em) {
     h6 {
       font-size: 1rem;
-      line-height: 1.3em; } }
+      line-height: 1.3; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     h6 {
-      --font-size-min: 0.875rem;
-      --font-size-max: 1rem;
+      --font-size-min-value: 0.875;
+      --font-size-max-value: 1;
       --font-size-scaler-value: var(--h6-scaler-value);
       font-size: var(--font-size);
-      --font-lh-min: 1.1em;
-      --font-lh-max: 1.3em;
+      --font-lh-min-value: 1.1;
+      --font-lh-max-value: 1.3;
       --font-lh-scaler-value: var(--h6-lh-scaler-value);
-      line-height: var(--line-height); } }
-
-.headline-super {
-  font-size: clamp(2.5rem, 6vw, 8rem);
-  font-weight: 225; }
+      line-height: var(--line-height);
+      word-spacing: var(--word-spacing); } }
 
 strong,
 b {
@@ -1127,11 +1151,11 @@ blockquote {
   blockquote ol,
   blockquote dl, blockquote .form__actions a, .form__actions blockquote a, blockquote button,
   blockquote .qh__btn,
-  blockquote .button, blockquote table th, table blockquote th, blockquote table td, table blockquote td, blockquote .qh__accordion__button, blockquote .qh__file-list__item__label {
+  blockquote .button, blockquote table th, table blockquote th, blockquote table td, table blockquote td, blockquote .settings-menu, blockquote .qh__accordion__button, blockquote .qh__file-list__item__label {
     font-family: "Roboto Slab", var(--font-serif-fallback);
     font-weight: normal;
     font-size: 1.25rem;
-    line-height: 1.5em;
+    line-height: 1.5;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0.75rem; }
@@ -1139,7 +1163,7 @@ blockquote {
     .wf-inactive blockquote ol,
     .wf-inactive blockquote dl, .wf-inactive blockquote .form__actions a, .form__actions .wf-inactive blockquote a, .wf-inactive blockquote button,
     .wf-inactive blockquote .qh__btn,
-    .wf-inactive blockquote .button, .wf-inactive blockquote table th, table .wf-inactive blockquote th, .wf-inactive blockquote table td, table .wf-inactive blockquote td, .wf-inactive blockquote .qh__accordion__button, .wf-inactive blockquote .qh__file-list__item__label {
+    .wf-inactive blockquote .button, .wf-inactive blockquote table th, table .wf-inactive blockquote th, .wf-inactive blockquote table td, table .wf-inactive blockquote td, .wf-inactive blockquote .settings-menu, .wf-inactive blockquote .qh__accordion__button, .wf-inactive blockquote .qh__file-list__item__label {
       font-family: Georgia, "Times New Roman", serif;
       font-variant-numeric: lining-nums;
       font-weight: normal;
@@ -1149,48 +1173,49 @@ blockquote {
       html:not(.novf) blockquote ol,
       html:not(.novf) blockquote dl, html:not(.novf) blockquote .form__actions a, .form__actions html:not(.novf) blockquote a, html:not(.novf) blockquote button,
       html:not(.novf) blockquote .qh__btn,
-      html:not(.novf) blockquote .button, html:not(.novf) blockquote table th, table html:not(.novf) blockquote th, html:not(.novf) blockquote table td, table html:not(.novf) blockquote td, html:not(.novf) blockquote .qh__accordion__button, html:not(.novf) blockquote .qh__file-list__item__label {
+      html:not(.novf) blockquote .button, html:not(.novf) blockquote table th, table html:not(.novf) blockquote th, html:not(.novf) blockquote table td, table html:not(.novf) blockquote td, html:not(.novf) blockquote .settings-menu, html:not(.novf) blockquote .qh__accordion__button, html:not(.novf) blockquote .qh__file-list__item__label {
         font-family: var(--font-serif-vf);
         font-weight: 150; }
       html:not(.novf).wf-inactive blockquote p, html:not(.novf).wf-inactive blockquote address, html:not(.novf).wf-inactive blockquote time, html:not(.novf).wf-inactive blockquote ul,
       html:not(.novf).wf-inactive blockquote ol,
       html:not(.novf).wf-inactive blockquote dl, html:not(.novf).wf-inactive blockquote .form__actions a, .form__actions html:not(.novf).wf-inactive blockquote a, html:not(.novf).wf-inactive blockquote button,
       html:not(.novf).wf-inactive blockquote .qh__btn,
-      html:not(.novf).wf-inactive blockquote .button, html:not(.novf).wf-inactive blockquote table th, table html:not(.novf).wf-inactive blockquote th, html:not(.novf).wf-inactive blockquote table td, table html:not(.novf).wf-inactive blockquote td, html:not(.novf).wf-inactive blockquote .qh__accordion__button, html:not(.novf).wf-inactive blockquote .qh__file-list__item__label {
+      html:not(.novf).wf-inactive blockquote .button, html:not(.novf).wf-inactive blockquote table th, table html:not(.novf).wf-inactive blockquote th, html:not(.novf).wf-inactive blockquote table td, table html:not(.novf).wf-inactive blockquote td, html:not(.novf).wf-inactive blockquote .settings-menu, html:not(.novf).wf-inactive blockquote .qh__accordion__button, html:not(.novf).wf-inactive blockquote .qh__file-list__item__label {
         font-family: Georgia, "Times New Roman", serif;
         font-variant-numeric: lining-nums;
         font-weight: normal;
         letter-spacing: 0.035em; } }
-    @media screen and (min-width: 47.5em) {
+    @media screen and (min-width: 50em) {
       blockquote p, blockquote address, blockquote time, blockquote ul,
       blockquote ol,
       blockquote dl, blockquote .form__actions a, .form__actions blockquote a, blockquote button,
       blockquote .qh__btn,
-      blockquote .button, blockquote table th, table blockquote th, blockquote table td, table blockquote td, blockquote .qh__accordion__button, blockquote .qh__file-list__item__label {
+      blockquote .button, blockquote table th, table blockquote th, blockquote table td, table blockquote td, blockquote .settings-menu, blockquote .qh__accordion__button, blockquote .qh__file-list__item__label {
         font-size: 1.375rem;
-        line-height: 1.525em; } }
+        line-height: 1.525; } }
     @media screen and (min-width: 62em) {
       blockquote p, blockquote address, blockquote time, blockquote ul,
       blockquote ol,
       blockquote dl, blockquote .form__actions a, .form__actions blockquote a, blockquote button,
       blockquote .qh__btn,
-      blockquote .button, blockquote table th, table blockquote th, blockquote table td, table blockquote td, blockquote .qh__accordion__button, blockquote .qh__file-list__item__label {
+      blockquote .button, blockquote table th, table blockquote th, blockquote table td, table blockquote td, blockquote .settings-menu, blockquote .qh__accordion__button, blockquote .qh__file-list__item__label {
         font-size: 1.5rem;
-        line-height: 1.55em; } }
+        line-height: 1.55; } }
     @supports (font-size: clamp(1rem, 2vw, 2rem)) {
       blockquote p, blockquote address, blockquote time, blockquote ul,
       blockquote ol,
       blockquote dl, blockquote .form__actions a, .form__actions blockquote a, blockquote button,
       blockquote .qh__btn,
-      blockquote .button, blockquote table th, table blockquote th, blockquote table td, table blockquote td, blockquote .qh__accordion__button, blockquote .qh__file-list__item__label {
-        --font-size-min: 1.25rem;
-        --font-size-max: 1.5rem;
+      blockquote .button, blockquote table th, table blockquote th, blockquote table td, table blockquote td, blockquote .settings-menu, blockquote .qh__accordion__button, blockquote .qh__file-list__item__label {
+        --font-size-min-value: 1.25;
+        --font-size-max-value: 1.5;
         --font-size-scaler-value: var(--bq-scaler-value);
         font-size: var(--font-size);
-        --font-lh-min: 1.5em;
-        --font-lh-max: 1.55em;
+        --font-lh-min-value: 1.5;
+        --font-lh-max-value: 1.55;
         --font-lh-scaler-value: var(--bq-lh-scaler-value);
-        line-height: var(--line-height); } }
+        line-height: var(--line-height);
+        word-spacing: var(--word-spacing); } }
 
 /* using this for any small bits of text that should be 'next size down' from paragraphs */
 body {
@@ -1199,7 +1224,7 @@ body {
 .small-text, label, figcaption, .qh__file-list__item__filesize {
   font-family: "Work Sans", var(--font-sans-fallback);
   font-size: 0.75rem;
-  line-height: 1.1em;
+  line-height: 1.1;
   font-style: normal; }
   .wf-inactive .small-text, .wf-inactive label, .wf-inactive figcaption, .wf-inactive .qh__file-list__item__filesize {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1215,24 +1240,25 @@ body {
       font-variant-numeric: lining-nums;
       font-weight: normal;
       letter-spacing: 0.035em; } }
-  @media screen and (min-width: 47.5em) {
+  @media screen and (min-width: 50em) {
     .small-text, label, figcaption, .qh__file-list__item__filesize {
       font-size: 0.8125rem;
-      line-height: 1.2em; } }
+      line-height: 1.2; } }
   @media screen and (min-width: 62em) {
     .small-text, label, figcaption, .qh__file-list__item__filesize {
       font-size: 0.875rem;
-      line-height: 1.3em; } }
+      line-height: 1.3; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     .small-text, label, figcaption, .qh__file-list__item__filesize {
-      --font-size-min: 0.75rem;
-      --font-size-max: 0.875rem;
+      --font-size-min-value: 0.75;
+      --font-size-max-value: 0.875;
       --font-size-scaler-value: var(--st-scaler-value);
       font-size: var(--font-size);
-      --font-lh-min: 1.1em;
-      --font-lh-max: 1.3em;
+      --font-lh-min: 1.1;
+      --font-lh-max: 1.3;
       --font-lh-scaler-value: var(--st-lh-scaler-value);
-      line-height: var(--line-height); } }
+      line-height: var(--line-height);
+      word-spacing: var(--word-spacing); } }
 
 label {
   --st-font-wght: 475;
@@ -1288,7 +1314,7 @@ dl {
 figure {
   margin: 0;
   padding: 0; }
-  p + figure, address + figure, time + figure, ul + figure, ol + figure, dl + figure, .form__actions a + figure, button + figure, .qh__btn + figure, .button + figure, table th + figure, table td + figure, .qh__accordion__button + figure, .qh__file-list__item__label + figure {
+  p + figure, address + figure, time + figure, ul + figure, ol + figure, dl + figure, .form__actions a + figure, button + figure, .qh__btn + figure, .button + figure, table th + figure, table td + figure, .settings-menu + figure, .qh__accordion__button + figure, .qh__file-list__item__label + figure {
     margin-top: var(--body-text-spacer); }
 
 img {
@@ -1326,14 +1352,17 @@ form {
         flex-basis: 0;
     margin-right: 1rem;
     margin-top: 1rem;
-    min-width: 21rem; }
+    min-width: 18rem; }
+    @media (min-width: 50em) {
+      .flexbox-container > * {
+        min-width: 21rem; } }
   .flexbox-container > legend {
     min-width: unset; }
   .flexbox-container > p, .flexbox-container > address, .flexbox-container > time, .flexbox-container > ul,
   .flexbox-container > ol,
   .flexbox-container > dl, .form__actions .flexbox-container > a, .flexbox-container > button,
   .flexbox-container > .qh__btn,
-  .flexbox-container > .button, table .flexbox-container > th, table .flexbox-container > td, .flexbox-container > .qh__accordion__button, .flexbox-container > .qh__file-list__item__label {
+  .flexbox-container > .button, table .flexbox-container > th, table .flexbox-container > td, .flexbox-container > .settings-menu, .flexbox-container > .qh__accordion__button, .flexbox-container > .qh__file-list__item__label {
     -ms-flex-preferred-size: auto;
         flex-basis: auto;
     width: 100%; }
@@ -1621,6 +1650,10 @@ button,
   background-color: var(--fc__default__fg);
   color: var(--fc__default__bg); }
 
+.qh__btn--small {
+  font-size: 0.875rem;
+  padding: 0.5em 0.75em; }
+
 .qh__btn:disabled, .qh__btn--disabled {
   background-color: transparent;
   background: repeating-linear-gradient(-45deg, var(--fc__default__button__bg), var(--fc__default__button__bg) 0.5em, var(--fc__default__button--hover__bg) 0.5em, var(--fc__default__button--hover__bg) 1em);
@@ -1766,6 +1799,31 @@ table {
     .google-visualization-table-div-page [role="button"] {
       font-family: var(--font-sans-vf) !important; } }
 
+.language-switcher {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .language-switcher li,
+  .settings__menu .language-switcher li {
+    border-bottom: none;
+    margin: 0;
+    padding: 0; }
+  .language-switcher a:link.is-active, .language-switcher a:visited.is-active {
+    font-weight: bold;
+    text-decoration: none; }
+    @supports (font-variation-settings: normal) {
+      html:not(.novf) .language-switcher a:link.is-active, html:not(.novf) .language-switcher a:visited.is-active {
+        font-weight: 575; }
+      html:not(.novf).wf-inactive .language-switcher a:link.is-active, html:not(.novf).wf-inactive .language-switcher a:visited.is-active {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-variant-numeric: lining-nums;
+        font-weight: bold;
+        letter-spacing: 0.035em; } }
+    .language-switcher a:link.is-active:before, .language-switcher a:visited.is-active:before {
+      content: "["; }
+    .language-switcher a:link.is-active:after, .language-switcher a:visited.is-active:after {
+      content: "]"; }
+
 .media-item.left {
   border-left: none;
   border-right: solid 1rem var(--fc__default__accent);
@@ -1808,6 +1866,44 @@ table {
   margin-top: 0;
   padding: 0.5rem 0.75rem; }
 
+.qh__pagination__list {
+  text-align: center; }
+
+.qh__pagination__item {
+  display: inline-block;
+  vertical-align: middle; }
+  .qh__pagination__item + .qh__pagination__item {
+    margin-left: -0.25rem; }
+
+.qh__pagination__link, .qh__pagination__ellipses {
+  display: block;
+  -webkit-font-feature-settings: "lnum";
+          font-feature-settings: "lnum";
+  line-height: 1;
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+  padding: 0.875rem 0.875rem; }
+
+.qh__pagination__link, .qh__pagination__link:visited {
+  text-decoration: none; }
+
+.qh__pagination__link--first, .qh__pagination__link--last, .qh__pagination__link--prev, .qh__pagination__link--next {
+  height: 2.75rem;
+  width: 2.75rem;
+  padding: 0; }
+
+.qh__pagination__link--current {
+  background-color: var(--fc__default__link);
+  color: var(--fc__default__bg);
+  pointer-events: none; }
+
+.qh__pagination__link--disabled:not(.qh__pagination__link--current) {
+  opacity: 0.5;
+  pointer-events: none; }
+
+.qh__pagination__ellipses {
+  opacity: 0.67; }
+
 .qh__site-branding {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1829,7 +1925,7 @@ table {
       font-family: "Work Sans", var(--font-sans-fallback);
       font-weight: normal;
       font-size: 0.75rem;
-      line-height: 1.1em;
+      line-height: 1.1;
       display: block;
       letter-spacing: 0.03125em;
       text-transform: uppercase; }
@@ -1845,29 +1941,29 @@ table {
           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
           font-weight: normal;
           letter-spacing: 0.035em; } }
-      @media screen and (min-width: 47.5em) {
+      @media screen and (min-width: 50em) {
         .qh__site-branding__name__top-line {
           font-size: 0.8125rem;
-          line-height: 1.2em; } }
+          line-height: 1.2; } }
       @media screen and (min-width: 62em) {
         .qh__site-branding__name__top-line {
           font-size: 0.875rem;
-          line-height: 1.3em; } }
+          line-height: 1.3; } }
       @supports (font-size: clamp(1rem, 2vw, 2rem)) {
         .qh__site-branding__name__top-line {
           --font-size-min: 0.75rem;
           --font-size-max: 0.875rem;
           --font-size-scaler-value: var(--st-scaler-value);
           font-size: var(--font-size);
-          --font-lh-min: 1.1em;
-          --font-lh-max: 1.3em;
+          --font-lh-min: 1.1;
+          --font-lh-max: 1.3;
           --font-lh-scaler-value: var(--st-lh-scaler-value);
           line-height: var(--line-height); } }
     .qh__site-branding__name__main-line {
       font-family: "Roboto Slab", var(--font-serif-fallback);
       font-weight: normal;
       font-size: 2rem;
-      line-height: 1.05em;
+      line-height: 1.05;
       font-style: normal;
       display: block; }
       .wf-inactive .qh__site-branding__name__main-line {
@@ -1882,29 +1978,29 @@ table {
           font-family: Georgia, "Times New Roman", serif;
           font-weight: normal;
           letter-spacing: 0.035em; } }
-      @media screen and (min-width: 47.5em) {
+      @media screen and (min-width: 50em) {
         .qh__site-branding__name__main-line {
           font-size: 2.5rem;
-          line-height: 1.075em; } }
+          line-height: 1.075; } }
       @media screen and (min-width: 62em) {
         .qh__site-branding__name__main-line {
           font-size: 3rem;
-          line-height: 1.1em; } }
+          line-height: 1.1; } }
       @supports (font-size: clamp(1rem, 2vw, 2rem)) {
         .qh__site-branding__name__main-line {
           --font-size-min: 1.75rem;
           --font-size-max: 3rem;
           --font-size-scaler-value: var(--h2-scaler-value);
           font-size: var(--font-size);
-          --font-lh-min: 1.05em;
-          --font-lh-max: 1.1em;
+          --font-lh-min: 1.05;
+          --font-lh-max: 1.1;
           --font-lh-scaler-value: var(--h1-lh-scaler-value);
           line-height: var(--line-height); } }
     .qh__site-branding__name__bottom-line {
       font-family: "Work Sans", var(--font-sans-fallback);
       font-weight: normal;
       font-size: 0.81255rem;
-      line-height: 1.5em;
+      line-height: 1.5;
       display: block; }
       .wf-inactive .qh__site-branding__name__bottom-line {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1918,22 +2014,22 @@ table {
           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
           font-weight: normal;
           letter-spacing: 0.035em; } }
-      @media screen and (min-width: 47.5em) {
+      @media screen and (min-width: 50em) {
         .qh__site-branding__name__bottom-line {
           font-size: 0.875rem;
-          line-height: 1.2em; } }
+          line-height: 1.2; } }
       @media screen and (min-width: 62em) {
         .qh__site-branding__name__bottom-line {
           font-size: 1rem;
-          line-height: 1.55em; } }
+          line-height: 1.55; } }
       @supports (font-size: clamp(1rem, 2vw, 2rem)) {
         .qh__site-branding__name__bottom-line {
           --font-size-min: 0.8125rem;
           --font-size-max: 1rem;
           --font-size-scaler-value: var(--p-scaler-value);
           font-size: var(--font-size);
-          --font-lh-min: 1.5em;
-          --font-lh-max: 1.55em;
+          --font-lh-min: 1.5;
+          --font-lh-max: 1.55;
           --font-lh-scaler-value: var(--p-lh-scaler-value);
           line-height: var(--line-height); } }
 
@@ -1992,19 +2088,126 @@ table {
   .qh__teaser-article__content {
     padding-bottom: 1.5rem; }
   .qh__teaser-article__cta {
+    display: inline-block;
     padding-top: 0.75rem; }
-  .qh__teaser-article__link::before {
+    .qh__teaser-article__cta::after {
+      color: var(--fc__default__link);
+      content: ' >';
+      display: inline-block;
+      -webkit-transition: all 250ms ease;
+      transition: all 250ms ease;
+      -webkit-transform: translateX(0);
+              transform: translateX(0); }
+  .qh__teaser-article__cta .qh__teaser-article__link::before {
     content: '';
     display: block;
     position: absolute;
     inset: 0;
     overflow: visible; }
     @supports not (inset: 0) {
-      .qh__teaser-article__link::before {
+      .qh__teaser-article__cta .qh__teaser-article__link::before {
         top: 0;
         right: 0;
         bottom: 0;
         left: 0; } }
+  .qh__teaser-article:hover .qh__teaser-article__title a {
+    color: var(--fc__default__link--hover); }
+  .qh__teaser-article:hover .qh__teaser-article__cta::after {
+    color: var(--fc__default__link--hover);
+    -webkit-transform: translateX(4px);
+            transform: translateX(4px); }
+
+.qh__teaser-hotel {
+  background-color: var(--fc__default__bg);
+  border: 0.0625rem solid var(--fc__default__border);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 1rem;
+  position: relative; }
+  .qh__teaser-hotel__image-wrap a {
+    display: block;
+    overflow: hidden;
+    position: relative; }
+    .qh__teaser-hotel__image-wrap a, .qh__teaser-hotel__image-wrap a:visited {
+      text-decoration: none; }
+  .qh__teaser-hotel__snipe {
+    color: var(--fc__default__accent__fg);
+    font-family: var(--font-sans-vf);
+    font-size: 200%;
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    z-index: 1;
+    -webkit-transition: color 250ms ease;
+    transition: color 250ms ease; }
+    .qh__teaser-hotel__snipe::before {
+      background-color: var(--fc__default__accent);
+      content: '';
+      position: absolute;
+      top: -2.5em;
+      left: 3.5em;
+      height: 7em;
+      width: 7em;
+      z-index: -1;
+      -webkit-transition: background-color 250ms ease;
+      transition: background-color 250ms ease;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left; }
+    .qh__teaser-hotel__snipe sup {
+      font-size: 50%; }
+    .qh__teaser-hotel:hover .qh__teaser-hotel__snipe,
+    a:hover .qh__teaser-hotel__snipe,
+    a:focus .qh__teaser-hotel__snipe {
+      color: var(--fc__default__link); }
+      .qh__teaser-hotel:hover .qh__teaser-hotel__snipe::before,
+      a:hover .qh__teaser-hotel__snipe::before,
+      a:focus .qh__teaser-hotel__snipe::before {
+        background-color: var(--fc__default__bg); }
+  .qh__teaser-hotel__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .qh__teaser-hotel__title {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%; }
+  .qh__teaser-hotel__cta {
+    margin-left: auto; }
+  .qh__teaser-hotel__link {
+    display: block; }
+    .qh__teaser-hotel__link::before {
+      content: '';
+      display: block;
+      position: absolute;
+      inset: 0;
+      overflow: visible; }
+      @supports not (inset: 0) {
+        .qh__teaser-hotel__link::before {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0; } }
+
+.qh__teaser-notification {
+  padding: 0.75rem 0;
+  border-top: 0.0625rem solid var(--fc__notification__border); }
+  .qh__teaser-notification p, .qh__teaser-notification address, .qh__teaser-notification time, .qh__teaser-notification ul,
+  .qh__teaser-notification ol,
+  .qh__teaser-notification dl, .qh__teaser-notification .form__actions a, .form__actions .qh__teaser-notification a, .qh__teaser-notification button,
+  .qh__teaser-notification .qh__btn,
+  .qh__teaser-notification .button, .qh__teaser-notification table th, table .qh__teaser-notification th, .qh__teaser-notification table td, table .qh__teaser-notification td, .qh__teaser-notification .settings-menu, .qh__teaser-notification .qh__accordion__button, .qh__teaser-notification .qh__file-list__item__label {
+    font-size: 1rem; }
 
 .qh__teaser-promotion {
   display: block;
@@ -2017,6 +2220,123 @@ table {
     margin: 1.5rem 1rem;
     color: var(--fc__default__fg); }
 
+/* Settings */
+.settings-menu {
+  --text-opsz: 10;
+  display: inline-block;
+  position: relative; }
+  .settings-menu .settings__menu {
+    background-color: var(--fc__official__bg);
+    color: var(--fc__official__fg);
+    height: 1px;
+    list-style: none;
+    margin: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0.25rem;
+    position: absolute;
+    text-align: left;
+    top: 1.4rem;
+    -webkit-transition: opacity 0.2s ease-in, height 0.1s ease-in;
+    transition: opacity 0.2s ease-in, height 0.1s ease-in;
+    left: 0;
+    width: 100%;
+    z-index: 500; }
+  .settings-menu-trigger {
+    background-color: var(--fc__official__bg);
+    display: block;
+    padding: 0.15rem 0.25rem;
+    position: relative;
+    text-align: right;
+    z-index: 451; }
+    .settings-menu-trigger:link, .settings-menu-trigger:visited {
+      text-decoration: none; }
+    .settings-menu-trigger:hover {
+      text-decoration: underline; }
+    .settings-menu-trigger:focus,
+    .qh__page-header .settings-menu-trigger:focus {
+      outline-color: transparent;
+      text-decoration: underline; }
+    .settings-menu-trigger:active {
+      text-decoration: underline; }
+    @media (pointer: coarse) {
+      .settings-menu-trigger:hover {
+        text-decoration: unset; } }
+  html:not(.touch-nav) .settings-menu:focus-within .settings__menu,
+  html:not(.touch-nav) .settings-menu:hover .settings__menu, .settings-menu.open .settings__menu {
+    height: auto;
+    left: auto;
+    max-height: 80vh;
+    min-height: 50vh;
+    min-width: 22rem;
+    opacity: 1;
+    overflow-y: scroll;
+    position: absolute;
+    right: 0;
+    z-index: 500; }
+  html:not(.touch-nav) .settings-menu:focus-within.toc .menu,
+  html:not(.touch-nav) .settings-menu:hover.toc .menu, .settings-menu.open.toc .menu {
+    right: -5rem; }
+  html:not(.touch-nav) .settings-menu:focus-within.settings .menu,
+  html:not(.touch-nav) .settings-menu:hover.settings .menu, .settings-menu.open.settings .menu {
+    right: -2vw; }
+
+.settings__menu {
+  list-style: none; }
+  .settings__menu li {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.25); }
+    .settings__menu li:last-child {
+      border-bottom: none; }
+    .settings__menu li.active {
+      padding: 0.5em 0.15em; }
+  .settings__menu a {
+    display: block;
+    font-size: 0.875rem;
+    padding: 0.5em 0.15em; }
+    .wf-inactive .settings__menu a {
+      font-size: 0.9rem;
+      padding: 0.475em 0.15em; }
+    .settings__menu a:link {
+      text-decoration: underline; }
+    .settings__menu a:visited {
+      text-decoration: underline; }
+    html:not(.touch-nav) .settings__menu a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      text-decoration: underline; }
+    .settings__menu a:focus {
+      background-color: rgba(0, 0, 0, 0.05);
+      text-decoration: underline; }
+    .settings__menu a:active {
+      background-color: rgba(0, 0, 0, 0.05);
+      text-decoration: underline; }
+  .settings__menu li {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem; }
+  .settings__menu label {
+    font-weight: 500;
+    padding-bottom: 0.25rem; }
+  .dark .settings__menu a.toggle-lightmode.switch:after {
+    content: ' to light'; }
+  html:not(.dark) .settings__menu a.toggle-lightmode.switch:after {
+    content: ' to dark'; }
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) .settings__menu a.toggle-lightmode.switch:after {
+      content: ' to light'; } }
+  .light .settings__menu a.toggle-lightmode.switch:after {
+    content: ' to dark'; }
+  .settings__menu .settings-toggle {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    padding: 0 1.5vw; }
+  .settings__menu .settings-slider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 1.5vw; }
+    .settings__menu .settings-slider input {
+      grid-column: 1 / 3; }
+    .settings__menu .settings-slider div {
+      font-size: 0.875rem; }
+
 .qh__articles-latest {
   padding: 1.5rem 0; }
   .qh__articles-latest__title {
@@ -2024,7 +2344,7 @@ table {
     padding-bottom: 1.5rem; }
   .qh__articles-latest__list {
     margin: 0 -1rem; }
-    @media (min-width: 47.5em) {
+    @media (min-width: 50em) {
       .qh__articles-latest__list {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -2041,10 +2361,10 @@ table {
                 justify-content: center; } }
   .qh__articles-latest__list > * {
     padding: 0 1rem; }
-    @media (max-width: 47.4375em) {
+    @media (max-width: 49.9375em) {
       .qh__articles-latest__list > * + .qh__articles-latest__list > * {
         padding-top: 1.5rem; } }
-    @media (min-width: 47.5em) {
+    @media (min-width: 50em) {
       .qh__articles-latest__list > * {
         -webkit-box-flex: 1;
             -ms-flex: 1 1 0px;
@@ -2099,10 +2419,10 @@ table {
   .qh__global-header ol,
   .qh__global-header dl, .qh__global-header .form__actions a, .form__actions .qh__global-header a, .qh__global-header button,
   .qh__global-header .qh__btn,
-  .qh__global-header .button, .qh__global-header table th, table .qh__global-header th, .qh__global-header table td, table .qh__global-header td, .qh__global-header .qh__accordion__button, .qh__global-header .qh__file-list__item__label {
+  .qh__global-header .button, .qh__global-header table th, table .qh__global-header th, .qh__global-header table td, table .qh__global-header td, .qh__global-header .settings-menu, .qh__global-header .qh__accordion__button, .qh__global-header .qh__file-list__item__label {
     font-size: 0.875rem;
     font-weight: 375; }
-    .qh__global-header p + p, .qh__global-header address + p, .qh__global-header time + p, .qh__global-header ul + p, .qh__global-header ol + p, .qh__global-header dl + p, .qh__global-header .form__actions a + p, .form__actions .qh__global-header a + p, .qh__global-header button + p, .qh__global-header .qh__btn + p, .qh__global-header .button + p, .qh__global-header table th + p, table .qh__global-header th + p, .qh__global-header table td + p, table .qh__global-header td + p, .qh__global-header .qh__accordion__button + p, .qh__global-header .qh__file-list__item__label + p, .qh__global-header p + address, .qh__global-header address + address, .qh__global-header time + address, .qh__global-header ul + address, .qh__global-header ol + address, .qh__global-header dl + address, .qh__global-header .form__actions a + address, .form__actions .qh__global-header a + address, .qh__global-header button + address, .qh__global-header .qh__btn + address, .qh__global-header .button + address, .qh__global-header table th + address, table .qh__global-header th + address, .qh__global-header table td + address, table .qh__global-header td + address, .qh__global-header .qh__accordion__button + address, .qh__global-header .qh__file-list__item__label + address, .qh__global-header p + time, .qh__global-header address + time, .qh__global-header time + time, .qh__global-header ul + time, .qh__global-header ol + time, .qh__global-header dl + time, .qh__global-header .form__actions a + time, .form__actions .qh__global-header a + time, .qh__global-header button + time, .qh__global-header .qh__btn + time, .qh__global-header .button + time, .qh__global-header table th + time, table .qh__global-header th + time, .qh__global-header table td + time, table .qh__global-header td + time, .qh__global-header .qh__accordion__button + time, .qh__global-header .qh__file-list__item__label + time, .qh__global-header p + ul, .qh__global-header address + ul, .qh__global-header time + ul, .qh__global-header ul + ul, .qh__global-header ol + ul, .qh__global-header dl + ul, .qh__global-header .form__actions a + ul, .form__actions .qh__global-header a + ul, .qh__global-header button + ul, .qh__global-header .qh__btn + ul, .qh__global-header .button + ul, .qh__global-header table th + ul, table .qh__global-header th + ul, .qh__global-header table td + ul, table .qh__global-header td + ul, .qh__global-header .qh__accordion__button + ul, .qh__global-header .qh__file-list__item__label + ul,
+    .qh__global-header p + p, .qh__global-header address + p, .qh__global-header time + p, .qh__global-header ul + p, .qh__global-header ol + p, .qh__global-header dl + p, .qh__global-header .form__actions a + p, .form__actions .qh__global-header a + p, .qh__global-header button + p, .qh__global-header .qh__btn + p, .qh__global-header .button + p, .qh__global-header table th + p, table .qh__global-header th + p, .qh__global-header table td + p, table .qh__global-header td + p, .qh__global-header .settings-menu + p, .qh__global-header .qh__accordion__button + p, .qh__global-header .qh__file-list__item__label + p, .qh__global-header p + address, .qh__global-header address + address, .qh__global-header time + address, .qh__global-header ul + address, .qh__global-header ol + address, .qh__global-header dl + address, .qh__global-header .form__actions a + address, .form__actions .qh__global-header a + address, .qh__global-header button + address, .qh__global-header .qh__btn + address, .qh__global-header .button + address, .qh__global-header table th + address, table .qh__global-header th + address, .qh__global-header table td + address, table .qh__global-header td + address, .qh__global-header .settings-menu + address, .qh__global-header .qh__accordion__button + address, .qh__global-header .qh__file-list__item__label + address, .qh__global-header p + time, .qh__global-header address + time, .qh__global-header time + time, .qh__global-header ul + time, .qh__global-header ol + time, .qh__global-header dl + time, .qh__global-header .form__actions a + time, .form__actions .qh__global-header a + time, .qh__global-header button + time, .qh__global-header .qh__btn + time, .qh__global-header .button + time, .qh__global-header table th + time, table .qh__global-header th + time, .qh__global-header table td + time, table .qh__global-header td + time, .qh__global-header .settings-menu + time, .qh__global-header .qh__accordion__button + time, .qh__global-header .qh__file-list__item__label + time, .qh__global-header p + ul, .qh__global-header address + ul, .qh__global-header time + ul, .qh__global-header ul + ul, .qh__global-header ol + ul, .qh__global-header dl + ul, .qh__global-header .form__actions a + ul, .form__actions .qh__global-header a + ul, .qh__global-header button + ul, .qh__global-header .qh__btn + ul, .qh__global-header .button + ul, .qh__global-header table th + ul, table .qh__global-header th + ul, .qh__global-header table td + ul, table .qh__global-header td + ul, .qh__global-header .settings-menu + ul, .qh__global-header .qh__accordion__button + ul, .qh__global-header .qh__file-list__item__label + ul,
     .qh__global-header p + ol,
     .qh__global-header address + ol,
     .qh__global-header time + ol,
@@ -2115,6 +2435,7 @@ table {
     .qh__global-header .button + ol,
     .qh__global-header table th + ol, table .qh__global-header th + ol,
     .qh__global-header table td + ol, table .qh__global-header td + ol,
+    .qh__global-header .settings-menu + ol,
     .qh__global-header .qh__accordion__button + ol,
     .qh__global-header .qh__file-list__item__label + ol,
     .qh__global-header p + dl,
@@ -2129,8 +2450,9 @@ table {
     .qh__global-header .button + dl,
     .qh__global-header table th + dl, table .qh__global-header th + dl,
     .qh__global-header table td + dl, table .qh__global-header td + dl,
+    .qh__global-header .settings-menu + dl,
     .qh__global-header .qh__accordion__button + dl,
-    .qh__global-header .qh__file-list__item__label + dl, .qh__global-header .form__actions p + a, .form__actions .qh__global-header p + a, .qh__global-header .form__actions address + a, .form__actions .qh__global-header address + a, .qh__global-header .form__actions time + a, .form__actions .qh__global-header time + a, .qh__global-header .form__actions ul + a, .form__actions .qh__global-header ul + a, .qh__global-header .form__actions ol + a, .form__actions .qh__global-header ol + a, .qh__global-header .form__actions dl + a, .form__actions .qh__global-header dl + a, .qh__global-header .form__actions a + a, .form__actions .qh__global-header a + a, .qh__global-header .form__actions button + a, .form__actions .qh__global-header button + a, .qh__global-header .form__actions .qh__btn + a, .form__actions .qh__global-header .qh__btn + a, .qh__global-header .form__actions .button + a, .form__actions .qh__global-header .button + a, .qh__global-header table .form__actions th + a, .form__actions .qh__global-header table th + a, table .qh__global-header .form__actions th + a, .form__actions table .qh__global-header th + a, .qh__global-header table .form__actions td + a, .form__actions .qh__global-header table td + a, table .qh__global-header .form__actions td + a, .form__actions table .qh__global-header td + a, .qh__global-header .form__actions .qh__accordion__button + a, .form__actions .qh__global-header .qh__accordion__button + a, .qh__global-header .form__actions .qh__file-list__item__label + a, .form__actions .qh__global-header .qh__file-list__item__label + a, .qh__global-header p + button, .qh__global-header address + button, .qh__global-header time + button, .qh__global-header ul + button, .qh__global-header ol + button, .qh__global-header dl + button, .qh__global-header .form__actions a + button, .form__actions .qh__global-header a + button, .qh__global-header button + button, .qh__global-header .qh__btn + button, .qh__global-header .button + button, .qh__global-header table th + button, table .qh__global-header th + button, .qh__global-header table td + button, table .qh__global-header td + button, .qh__global-header .qh__accordion__button + button, .qh__global-header .qh__file-list__item__label + button,
+    .qh__global-header .qh__file-list__item__label + dl, .qh__global-header .form__actions p + a, .form__actions .qh__global-header p + a, .qh__global-header .form__actions address + a, .form__actions .qh__global-header address + a, .qh__global-header .form__actions time + a, .form__actions .qh__global-header time + a, .qh__global-header .form__actions ul + a, .form__actions .qh__global-header ul + a, .qh__global-header .form__actions ol + a, .form__actions .qh__global-header ol + a, .qh__global-header .form__actions dl + a, .form__actions .qh__global-header dl + a, .qh__global-header .form__actions a + a, .form__actions .qh__global-header a + a, .qh__global-header .form__actions button + a, .form__actions .qh__global-header button + a, .qh__global-header .form__actions .qh__btn + a, .form__actions .qh__global-header .qh__btn + a, .qh__global-header .form__actions .button + a, .form__actions .qh__global-header .button + a, .qh__global-header table .form__actions th + a, .form__actions .qh__global-header table th + a, table .qh__global-header .form__actions th + a, .form__actions table .qh__global-header th + a, .qh__global-header table .form__actions td + a, .form__actions .qh__global-header table td + a, table .qh__global-header .form__actions td + a, .form__actions table .qh__global-header td + a, .qh__global-header .form__actions .settings-menu + a, .form__actions .qh__global-header .settings-menu + a, .qh__global-header .form__actions .qh__accordion__button + a, .form__actions .qh__global-header .qh__accordion__button + a, .qh__global-header .form__actions .qh__file-list__item__label + a, .form__actions .qh__global-header .qh__file-list__item__label + a, .qh__global-header p + button, .qh__global-header address + button, .qh__global-header time + button, .qh__global-header ul + button, .qh__global-header ol + button, .qh__global-header dl + button, .qh__global-header .form__actions a + button, .form__actions .qh__global-header a + button, .qh__global-header button + button, .qh__global-header .qh__btn + button, .qh__global-header .button + button, .qh__global-header table th + button, table .qh__global-header th + button, .qh__global-header table td + button, table .qh__global-header td + button, .qh__global-header .settings-menu + button, .qh__global-header .qh__accordion__button + button, .qh__global-header .qh__file-list__item__label + button,
     .qh__global-header p + .qh__btn,
     .qh__global-header address + .qh__btn,
     .qh__global-header time + .qh__btn,
@@ -2143,6 +2465,7 @@ table {
     .qh__global-header .button + .qh__btn,
     .qh__global-header table th + .qh__btn, table .qh__global-header th + .qh__btn,
     .qh__global-header table td + .qh__btn, table .qh__global-header td + .qh__btn,
+    .qh__global-header .settings-menu + .qh__btn,
     .qh__global-header .qh__accordion__button + .qh__btn,
     .qh__global-header .qh__file-list__item__label + .qh__btn,
     .qh__global-header p + .button,
@@ -2157,24 +2480,71 @@ table {
     .qh__global-header .button + .button,
     .qh__global-header table th + .button, table .qh__global-header th + .button,
     .qh__global-header table td + .button, table .qh__global-header td + .button,
+    .qh__global-header .settings-menu + .button,
     .qh__global-header .qh__accordion__button + .button,
-    .qh__global-header .qh__file-list__item__label + .button, .qh__global-header table p + th, table .qh__global-header p + th, .qh__global-header table address + th, table .qh__global-header address + th, .qh__global-header table time + th, table .qh__global-header time + th, .qh__global-header table ul + th, table .qh__global-header ul + th, .qh__global-header table ol + th, table .qh__global-header ol + th, .qh__global-header table dl + th, table .qh__global-header dl + th, .qh__global-header .form__actions table a + th, table .qh__global-header .form__actions a + th, .form__actions .qh__global-header table a + th, table .form__actions .qh__global-header a + th, .qh__global-header table button + th, table .qh__global-header button + th, .qh__global-header table .qh__btn + th, table .qh__global-header .qh__btn + th, .qh__global-header table .button + th, table .qh__global-header .button + th, .qh__global-header table th + th, table .qh__global-header th + th, .qh__global-header table td + th, table .qh__global-header td + th, .qh__global-header table .qh__accordion__button + th, table .qh__global-header .qh__accordion__button + th, .qh__global-header table .qh__file-list__item__label + th, table .qh__global-header .qh__file-list__item__label + th, .qh__global-header table p + td, table .qh__global-header p + td, .qh__global-header table address + td, table .qh__global-header address + td, .qh__global-header table time + td, table .qh__global-header time + td, .qh__global-header table ul + td, table .qh__global-header ul + td, .qh__global-header table ol + td, table .qh__global-header ol + td, .qh__global-header table dl + td, table .qh__global-header dl + td, .qh__global-header .form__actions table a + td, table .qh__global-header .form__actions a + td, .form__actions .qh__global-header table a + td, table .form__actions .qh__global-header a + td, .qh__global-header table button + td, table .qh__global-header button + td, .qh__global-header table .qh__btn + td, table .qh__global-header .qh__btn + td, .qh__global-header table .button + td, table .qh__global-header .button + td, .qh__global-header table th + td, table .qh__global-header th + td, .qh__global-header table td + td, table .qh__global-header td + td, .qh__global-header table .qh__accordion__button + td, table .qh__global-header .qh__accordion__button + td, .qh__global-header table .qh__file-list__item__label + td, table .qh__global-header .qh__file-list__item__label + td, .qh__global-header p + .qh__accordion__button, .qh__global-header address + .qh__accordion__button, .qh__global-header time + .qh__accordion__button, .qh__global-header ul + .qh__accordion__button, .qh__global-header ol + .qh__accordion__button, .qh__global-header dl + .qh__accordion__button, .qh__global-header .form__actions a + .qh__accordion__button, .form__actions .qh__global-header a + .qh__accordion__button, .qh__global-header button + .qh__accordion__button, .qh__global-header .qh__btn + .qh__accordion__button, .qh__global-header .button + .qh__accordion__button, .qh__global-header table th + .qh__accordion__button, table .qh__global-header th + .qh__accordion__button, .qh__global-header table td + .qh__accordion__button, table .qh__global-header td + .qh__accordion__button, .qh__global-header .qh__accordion__button + .qh__accordion__button, .qh__global-header .qh__file-list__item__label + .qh__accordion__button, .qh__global-header p + .qh__file-list__item__label, .qh__global-header address + .qh__file-list__item__label, .qh__global-header time + .qh__file-list__item__label, .qh__global-header ul + .qh__file-list__item__label, .qh__global-header ol + .qh__file-list__item__label, .qh__global-header dl + .qh__file-list__item__label, .qh__global-header .form__actions a + .qh__file-list__item__label, .form__actions .qh__global-header a + .qh__file-list__item__label, .qh__global-header button + .qh__file-list__item__label, .qh__global-header .qh__btn + .qh__file-list__item__label, .qh__global-header .button + .qh__file-list__item__label, .qh__global-header table th + .qh__file-list__item__label, table .qh__global-header th + .qh__file-list__item__label, .qh__global-header table td + .qh__file-list__item__label, table .qh__global-header td + .qh__file-list__item__label, .qh__global-header .qh__accordion__button + .qh__file-list__item__label, .qh__global-header .qh__file-list__item__label + .qh__file-list__item__label {
+    .qh__global-header .qh__file-list__item__label + .button, .qh__global-header table p + th, table .qh__global-header p + th, .qh__global-header table address + th, table .qh__global-header address + th, .qh__global-header table time + th, table .qh__global-header time + th, .qh__global-header table ul + th, table .qh__global-header ul + th, .qh__global-header table ol + th, table .qh__global-header ol + th, .qh__global-header table dl + th, table .qh__global-header dl + th, .qh__global-header .form__actions table a + th, table .qh__global-header .form__actions a + th, .form__actions .qh__global-header table a + th, table .form__actions .qh__global-header a + th, .qh__global-header table button + th, table .qh__global-header button + th, .qh__global-header table .qh__btn + th, table .qh__global-header .qh__btn + th, .qh__global-header table .button + th, table .qh__global-header .button + th, .qh__global-header table th + th, table .qh__global-header th + th, .qh__global-header table td + th, table .qh__global-header td + th, .qh__global-header table .settings-menu + th, table .qh__global-header .settings-menu + th, .qh__global-header table .qh__accordion__button + th, table .qh__global-header .qh__accordion__button + th, .qh__global-header table .qh__file-list__item__label + th, table .qh__global-header .qh__file-list__item__label + th, .qh__global-header table p + td, table .qh__global-header p + td, .qh__global-header table address + td, table .qh__global-header address + td, .qh__global-header table time + td, table .qh__global-header time + td, .qh__global-header table ul + td, table .qh__global-header ul + td, .qh__global-header table ol + td, table .qh__global-header ol + td, .qh__global-header table dl + td, table .qh__global-header dl + td, .qh__global-header .form__actions table a + td, table .qh__global-header .form__actions a + td, .form__actions .qh__global-header table a + td, table .form__actions .qh__global-header a + td, .qh__global-header table button + td, table .qh__global-header button + td, .qh__global-header table .qh__btn + td, table .qh__global-header .qh__btn + td, .qh__global-header table .button + td, table .qh__global-header .button + td, .qh__global-header table th + td, table .qh__global-header th + td, .qh__global-header table td + td, table .qh__global-header td + td, .qh__global-header table .settings-menu + td, table .qh__global-header .settings-menu + td, .qh__global-header table .qh__accordion__button + td, table .qh__global-header .qh__accordion__button + td, .qh__global-header table .qh__file-list__item__label + td, table .qh__global-header .qh__file-list__item__label + td, .qh__global-header p + .settings-menu, .qh__global-header address + .settings-menu, .qh__global-header time + .settings-menu, .qh__global-header ul + .settings-menu, .qh__global-header ol + .settings-menu, .qh__global-header dl + .settings-menu, .qh__global-header .form__actions a + .settings-menu, .form__actions .qh__global-header a + .settings-menu, .qh__global-header button + .settings-menu, .qh__global-header .qh__btn + .settings-menu, .qh__global-header .button + .settings-menu, .qh__global-header table th + .settings-menu, table .qh__global-header th + .settings-menu, .qh__global-header table td + .settings-menu, table .qh__global-header td + .settings-menu, .qh__global-header .settings-menu + .settings-menu, .qh__global-header .qh__accordion__button + .settings-menu, .qh__global-header .qh__file-list__item__label + .settings-menu, .qh__global-header p + .qh__accordion__button, .qh__global-header address + .qh__accordion__button, .qh__global-header time + .qh__accordion__button, .qh__global-header ul + .qh__accordion__button, .qh__global-header ol + .qh__accordion__button, .qh__global-header dl + .qh__accordion__button, .qh__global-header .form__actions a + .qh__accordion__button, .form__actions .qh__global-header a + .qh__accordion__button, .qh__global-header button + .qh__accordion__button, .qh__global-header .qh__btn + .qh__accordion__button, .qh__global-header .button + .qh__accordion__button, .qh__global-header table th + .qh__accordion__button, table .qh__global-header th + .qh__accordion__button, .qh__global-header table td + .qh__accordion__button, table .qh__global-header td + .qh__accordion__button, .qh__global-header .settings-menu + .qh__accordion__button, .qh__global-header .qh__accordion__button + .qh__accordion__button, .qh__global-header .qh__file-list__item__label + .qh__accordion__button, .qh__global-header p + .qh__file-list__item__label, .qh__global-header address + .qh__file-list__item__label, .qh__global-header time + .qh__file-list__item__label, .qh__global-header ul + .qh__file-list__item__label, .qh__global-header ol + .qh__file-list__item__label, .qh__global-header dl + .qh__file-list__item__label, .qh__global-header .form__actions a + .qh__file-list__item__label, .form__actions .qh__global-header a + .qh__file-list__item__label, .qh__global-header button + .qh__file-list__item__label, .qh__global-header .qh__btn + .qh__file-list__item__label, .qh__global-header .button + .qh__file-list__item__label, .qh__global-header table th + .qh__file-list__item__label, table .qh__global-header th + .qh__file-list__item__label, .qh__global-header table td + .qh__file-list__item__label, table .qh__global-header td + .qh__file-list__item__label, .qh__global-header .settings-menu + .qh__file-list__item__label, .qh__global-header .qh__accordion__button + .qh__file-list__item__label, .qh__global-header .qh__file-list__item__label + .qh__file-list__item__label {
       margin-top: 0; }
 
+.qh__hotels-grid__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0 -0.5rem;
+  max-width: unset; }
+  .qh__hotels-grid__list > li {
+    padding: 0 0.5rem 1.5rem; }
+    @media (min-width: 40em) {
+      .qh__hotels-grid__list > li {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 50%;
+                flex: 0 1 50%; } }
+    @media (min-width: 62em) {
+      .qh__hotels-grid__list > li {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 33%;
+                flex: 0 1 33%; } }
+    .qh__hotels-grid__list > li > div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column;
+              flex-flow: column;
+      height: 100%;
+      margin-bottom: 0; }
+    .qh__hotels-grid__list > li .qh__teaser-hotel__content {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 auto;
+              flex: 1 0 auto; }
+    .qh__hotels-grid__list > li .qh__teaser-hotel__location,
+    .qh__hotels-grid__list > li .qh__teaser-hotel__cta {
+      margin-top: auto; }
+
 .dialog-off-canvas-main-canvas {
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
 
 body {
   --nav-state: js-mobile; }
 
-@media (min-width: 47.5em) {
+@media (min-width: 50em) {
   body {
     --nav-state: js-desktop; } }
 
 .qh__nav-main {
   background-color: var(--fc__nav-main__bg);
-  color: var(--fc__nav-main__fg); }
+  color: var(--fc__nav-main__fg);
+  overflow-x: clip; }
   .qh__nav-main a {
     display: block;
     -webkit-transition: all 250ms ease;
@@ -2184,11 +2554,11 @@ body {
     max-width: 93vw;
     position: relative;
     overflow: visible;
-    z-index: 451; }
+    z-index: 449; }
     @supports (width: 5px) {
       .qh__nav-main__wrapper {
         max-width: var(--content-max-width); } }
-    @media (max-width: 47.4375em) {
+    @media (max-width: 49.9375em) {
       .qh__nav-main__wrapper {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -2202,28 +2572,8 @@ body {
                 align-items: center;
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
-                justify-content: space-between; } }
-  .qh__nav-main__overlay::after {
-    -webkit-backdrop-filter: blur(4px);
-            backdrop-filter: blur(4px);
-    background-color: rgba(0, 0, 0, 0.25);
-    content: '';
-    opacity: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    pointer-events: none;
-    -webkit-transition: opacity 500ms ease 0ms, z-index 0ms linear 500ms;
-    transition: opacity 500ms ease 0ms, z-index 0ms linear 500ms;
-    z-index: -1; }
-  .qh__nav-main__overlay--visible::after {
-    opacity: 1;
-    pointer-events: auto;
-    -webkit-transition: opacity 500ms ease 0ms, z-index 0ms linear 0ms;
-    transition: opacity 500ms ease 0ms, z-index 0ms linear 0ms;
-    z-index: 450; }
+                justify-content: space-between;
+        z-index: 451; } }
   .qh__nav-main__toggle {
     background-image: none;
     display: -webkit-box;
@@ -2249,7 +2599,7 @@ body {
     .qh__nav-main__toggle:active {
       color: var(--fc__nav-main__link--active);
       background-color: transparent; }
-    @media (min-width: 47.5em) {
+    @media (min-width: 50em) {
       .qh__nav-main__toggle {
         display: none; } }
     .qh__nav-main__toggle .qh__icon__menu {
@@ -2324,7 +2674,7 @@ body {
       width: 1.5rem; }
   .qh__nav-main__list {
     max-width: none; }
-    @media (max-width: 47.4375em) {
+    @media (max-width: 49.9375em) {
       .qh__nav-main__list__outermost {
         background-color: var(--fc__nav-main__bg);
         color: var(--fc__nav-main__fg);
@@ -2335,8 +2685,11 @@ body {
         right: calc((100vw - var(--content-max-width)) * -0.5);
         -webkit-transform: translateX(100vw);
                 transform: translateX(100vw);
-        -webkit-transition: all 500ms ease;
-        transition: all 500ms ease;
+        -webkit-transition: opacity 500ms ease 0ms, visibility 500ms ease 250ms, -webkit-transform 500ms ease 0ms;
+        transition: opacity 500ms ease 0ms, visibility 500ms ease 250ms, -webkit-transform 500ms ease 0ms;
+        transition: opacity 500ms ease 0ms, transform 500ms ease 0ms, visibility 500ms ease 250ms;
+        transition: opacity 500ms ease 0ms, transform 500ms ease 0ms, visibility 500ms ease 250ms, -webkit-transform 500ms ease 0ms;
+        visibility: hidden;
         width: 86vw; }
         .qh__nav-main__list__outermost > li {
           -webkit-transition: -webkit-transform 250ms ease 125ms;
@@ -2349,12 +2702,15 @@ body {
           opacity: 1;
           -webkit-transform: translateX(0);
                   transform: translateX(0);
-          -webkit-transition: all 500ms ease;
-          transition: all 500ms ease; }
+          -webkit-transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
+          transition: opacity 500ms ease 0ms, visibility 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
+          transition: opacity 500ms ease 0ms, transform 500ms ease 0ms, visibility 500ms ease 0ms;
+          transition: opacity 500ms ease 0ms, transform 500ms ease 0ms, visibility 500ms ease 0ms, -webkit-transform 500ms ease 0ms;
+          visibility: visible; }
           [aria-expanded="true"] + .qh__nav-main__list__outermost > li {
             -webkit-transform: translateX(0);
                     transform: translateX(0); } }
-    @media (min-width: 47.5em) {
+    @media (min-width: 50em) {
       .qh__nav-main__list__outermost {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -2372,7 +2728,7 @@ body {
     .qh__nav-main__list__sub {
       background-color: var(--fc__nav-main__link--hover__bg);
       min-width: 15rem; }
-      @media (max-width: 47.4375em) {
+      @media (max-width: 49.9375em) {
         .qh__nav-main__list__sub {
           max-height: 0;
           overflow: hidden;
@@ -2393,7 +2749,7 @@ body {
               opacity: 1;
               -webkit-transition: all 250ms ease 125ms;
               transition: all 250ms ease 125ms; } }
-      @media (min-width: 47.5em) {
+      @media (min-width: 50em) {
         .qh__nav-main__list__sub {
           -webkit-box-shadow: 0 0.125em 0.5em var(--c__quahog--dark--trans33);
                   box-shadow: 0 0.125em 0.5em var(--c__quahog--dark--trans33);
@@ -2420,7 +2776,13 @@ body {
         max-width: unset; }
     .qh__nav-main__item__social {
       padding: 0.5rem 0.75rem; }
-    @media (min-width: 47.5em) {
+      .qh__nav-main__item__social .qh__social-links a.qh__social-links__link,
+      .qh__nav-main__item__social .qh__social-links a.qh__social-links__link:visited {
+        color: var(--fc__nav-main__link); }
+      .qh__nav-main__item__social .qh__social-links a.qh__social-links__link:hover,
+      .qh__nav-main__item__social .qh__social-links a.qh__social-links__link:focus {
+        color: var(--fc__nav-main__link--hover__bg); }
+    @media (min-width: 50em) {
       .qh__nav-main__item__search, .qh__nav-main__item__social {
         opacity: 0;
         visibility: hidden;
@@ -2439,7 +2801,7 @@ body {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
-    @media (max-width: 47.4375em) {
+    @media (max-width: 49.9375em) {
       .qh__nav-main__has-children .qh__nav-main__link {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
@@ -2499,8 +2861,9 @@ body {
       color: var(--fc__nav-main__link);
       font-size: clamp(0.925rem, 1.5vw, 1rem);
       font-weight: 450;
+      line-height: clamp(1.2rem, 3vw, 1.3rem);
       text-decoration: none; }
-      @media (min-width: 47.5em) {
+      @media (min-width: 50em) {
         .qh__nav-main__link, .qh__nav-main__link:visited {
           border-top: 0.25rem solid var(--fc__nav-main__bg); } }
     .qh__nav-main__link:focus {
@@ -2512,10 +2875,10 @@ body {
       color: var(--fc__nav-main__fg);
       font-weight: 550;
       padding: 0.75rem 1rem 1rem; }
-      @media (max-width: 47.4375em) {
+      @media (max-width: 49.9375em) {
         .qh__nav-main__link.qh__nav-main__link--current {
           border-left: 0.5rem solid var(--fc__nav-main__link--hover__bg); } }
-      @media (min-width: 47.5em) {
+      @media (min-width: 50em) {
         .qh__nav-main__link.qh__nav-main__link--current {
           border-top: 0.25rem solid var(--fc__nav-main__link--hover__bg); } }
     .qh__nav-main__link__sub {
@@ -2528,11 +2891,11 @@ body {
       cursor: default;
       padding: 0.625rem 1rem;
       pointer-events: none; }
-    @media (min-width: 47.5em) {
+    @media (min-width: 50em) {
       .qh__nav-main__wrapper > .qh__nav-main__link--home {
         display: none;
         visibility: hidden; } }
-    @media (max-width: 47.4375em) {
+    @media (max-width: 49.9375em) {
       .qh__nav-main__list__outermost .qh__nav-main__link--home {
         display: none;
         visibility: hidden; } }
@@ -2544,18 +2907,29 @@ body {
       .qh__nav-main__link--home:hover, .qh__nav-main__link--home:focus, .qh__nav-main__link--home:visited:hover, .qh__nav-main__link--home:visited:focus {
         padding: 0.0625em !important; }
 
+.qh-layout__sidebar-top {
+  position: sticky;
+  top: 3rem;
+  z-index: 451; }
+  @media (min-width: 50em) {
+    .qh-layout__sidebar-top {
+      position: relative;
+      top: auto;
+      z-index: unset; } }
+
 .qh__nav-minor {
   background-color: var(--fc__default__bg);
   border-top: 0.875rem solid var(--fc__nav-minor__border);
   min-width: 20rem;
   overflow: visible; }
-  @media (max-width: 47.4375em) {
+  @media (max-width: 49.9375em) {
     .qh__nav-minor {
       position: absolute;
-      left: 0;
-      width: 20rem;
-      -webkit-transform: translateX(-20rem);
-              transform: translateX(-20rem);
+      left: calc((1.125rem + 3.5vw) * -1);
+      min-width: unset;
+      width: 18.25rem;
+      -webkit-transform: translateX(-18.25rem);
+              transform: translateX(-18.25rem);
       -webkit-transition: -webkit-transform 250ms ease;
       transition: -webkit-transform 250ms ease;
       transition: transform 250ms ease;
@@ -2581,7 +2955,8 @@ body {
     background-color: var(--fc__nav-minor__border);
     background-image: none;
     border-radius: 0;
-    padding: 0.5em 1.5em 0.5em 0;
+    color: var(--fc__nav-minor__fg);
+    padding: 0.125em 1.5em 0.125em 0;
     overflow: visible;
     position: absolute;
     top: -0.875rem;
@@ -2591,30 +2966,37 @@ body {
     -webkit-transform-origin: top right;
             transform-origin: top right; }
     .qh__nav-minor__toggle:hover::before, .qh__nav-minor__toggle:focus::before {
-      border-top-color: var(--fc__default__button--hover__bg);
-      border-right-color: var(--fc__default__button--hover__bg); }
+      background-color: var(--fc__default__button--hover__bg); }
     .qh__nav-minor__toggle::before {
-      border-top: 1.3125rem solid var(--fc__nav-minor__border);
-      border-right: 1.3125rem solid var(--fc__nav-minor__border);
-      border-bottom: 1.3125rem solid transparent;
-      border-left: 1.3125rem solid transparent;
-      content: '';
-      height: 0;
-      width: 0;
+      background-color: var(--fc__nav-minor__border);
+      background-image: none;
+      content: " ";
+      display: block;
+      height: 100%;
+      width: 2.5rem;
       position: absolute;
-      top: -0.1rem;
-      left: -2.625rem;
+      top: 0;
+      left: -1.875rem;
+      -webkit-transform: skew(25deg, 0deg);
+              transform: skew(25deg, 0deg);
       -webkit-transition: all 250ms ease;
       transition: all 250ms ease; }
-    @media (min-width: 47.5em) {
+    @media (min-width: 50em) {
       .qh__nav-minor__toggle {
         display: none;
         visibility: hidden; } }
   .qh__nav-minor__list {
-    background-color: var(--fc__nav-minor__bg); }
+    background-color: var(--fc__nav-minor__bg);
+    position: relative;
+    z-index: 500; }
+    @media (min-width: 50em) {
+      .qh__nav-minor__list {
+        z-index: unset; } }
     .qh__nav-minor__list.qh__accordion {
       border: 0.0625rem solid transparent;
-      margin-top: 0; }
+      margin-top: 0;
+      max-height: 80vh;
+      overflow: scroll; }
     .qh__nav-minor__list__sub {
       background-color: var(--fc__nav-minor__sub__bg);
       border-left: 0.5rem solid var(--fc__nav-minor__link--hover__bg); }
@@ -2645,10 +3027,10 @@ body {
             justify-content: space-between; }
     .qh__nav-minor__has-children .qh__nav-minor__link {
       -webkit-box-flex: 1;
-          -ms-flex: 1 0 calc(100% - 2.75em);
-              flex: 1 0 calc(100% - 2.75em);
+          -ms-flex: 1 0 calc(100% - 2.75rem);
+              flex: 1 0 calc(100% - 2.75rem);
       margin-left: auto;
-      min-width: calc(100% - 2.75em); }
+      min-width: calc(100% - 2.75rem); }
     .qh__nav-minor__has-children .qh__accordion__button {
       display: block;
       -webkit-box-flex: 0;
@@ -2689,10 +3071,12 @@ body {
   .qh__nav-minor .qh__accordion__button:active, .qh__nav-minor__link:active {
     color: var(--fc__nav-main__link--active); }
   .qh__nav-minor__link {
-    font-weight: normal;
+    font-size: clamp(0.925rem, 1.5vw, 1rem);
+    line-height: clamp(1.2rem, 3vw, 1.3rem);
     padding: 1rem 1rem; }
     .qh__nav-minor__link__sub {
-      font-size: 0.875em; }
+      font-size: clamp(0.875rem, 1.5vw, 0.925rem);
+      line-height: clamp(1.2rem, 3vw, 1.3rem); }
     .qh__nav-minor__link--current {
       cursor: default;
       pointer-events: none; }
@@ -2703,23 +3087,96 @@ body {
       font-weight: 550;
       text-decoration: none; }
 
-.qh__site-footer {
-  background-color: var(--fc__footer__bg);
-  color: var(--fc__footer__fg);
-  font-size: 1rem;
-  border-top: 1.3125rem solid var(--fc__footer__border-top); }
-  .qh__site-footer .content-wrapper {
+.qh__notifications-block {
+  position: relative; }
+  .qh__notifications-block__wrapper {
+    background-color: var(--fc__notification__bg);
     margin: 0 auto;
-    max-width: 93vw;
+    max-width: 93vw; }
+    @supports (width: 5px) {
+      .qh__notifications-block__wrapper {
+        max-width: var(--content-max-width); } }
+    .qh__notifications-block__wrapper::before {
+      background-color: var(--fc__notification__bg);
+      content: '';
+      opacity: 0.67;
+      position: absolute;
+      inset: 0;
+      z-index: -2; }
+      @supports not (inset: 0) {
+        .qh__notifications-block__wrapper::before {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0; } }
+  .qh__notifications-block .qh__icon__svg {
+    color: var(--fc__notification__icon);
+    margin-right: 1rem;
+    height: 2rem;
+    width: 2rem; }
+  .qh__notifications-block__title {
+    font-size: 1rem; }
+  .qh__notifications-block__header {
+    color: var(--fc__notification__fg);
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
-    @supports (width: 5px) {
-      .qh__site-footer .content-wrapper {
-        max-width: var(--content-max-width); } }
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 1rem;
+    padding: 0.75rem 0; }
+    .qh__notifications-block__header .qh__btn {
+      margin-left: auto; }
+      .qh__notifications-block__header .qh__btn, .qh__notifications-block__header .qh__btn:visited {
+        background-color: var(--fc__notification__button__bg);
+        color: var(--fc__notification__button__fg); }
+      .qh__notifications-block__header .qh__btn:hover, .qh__notifications-block__header .qh__btn:focus {
+        background-color: var(--fc__notification__button__fg);
+        color: var(--fc__notification__button__bg); }
+      .qh__notifications-block__header .qh__btn[aria-expanded="true"]::after {
+        content: attr(data-text-true); }
+      .qh__notifications-block__header .qh__btn[aria-expanded="false"]::after {
+        content: attr(data-text-false); }
+  .qh__notifications-block__content {
+    color: var(--fc__notification__fg); }
+    .qh__notifications-block__content a,
+    .qh__notifications-block__content a:visited {
+      color: var(--fc__notification__link, var(--fc__defauilt__link)); }
+    .qh__notifications-block__content a:hover,
+    .qh__notifications-block__content a:focus {
+      color: var(--fc__notification__link--hover, var(--fc__defauilt__link--hover)); }
+    .qh__notifications-block__content a:focus {
+      outline-color: var(--fc__notification__link--focus, var(--fc__defauilt__link--focus)); }
+    .qh__notifications-block__content a:active {
+      color: var(--fc__notification__link--active, var(--fc__defauilt__link--active)); }
+    .js .qh__notifications-block__content {
+      max-height: 0;
+      overflow: hidden;
+      -webkit-transition: max-height 0s linear 1s, visibility 0s linear 0s;
+      transition: max-height 0s linear 1s, visibility 0s linear 0s;
+      visibility: hidden; }
+      .js .qh__notifications-block__content > article {
+        opacity: 0;
+        -webkit-transition: all 250ms ease 0ms;
+        transition: all 250ms ease 0ms; }
+      .js .qh__notifications-block__content.js__aria-expanded {
+        max-height: unset;
+        padding: 0 1rem;
+        -webkit-transition: max-height 0s linear 500s, visibility 0s linear 0ms;
+        transition: max-height 0s linear 500s, visibility 0s linear 0ms;
+        visibility: visible; }
+        .js .qh__notifications-block__content.js__aria-expanded > article {
+          opacity: 1;
+          -webkit-transition: all 250ms ease 125ms;
+          transition: all 250ms ease 125ms; }
+
+.qh__site-footer {
+  background-color: var(--fc__footer__bg);
+  border-top: 1.3125rem solid var(--fc__footer__border-top);
+  color: var(--fc__footer__fg); }
   .qh__site-footer a {
-    color: var(--fc__footer__fg);
-    font-size: 1rem; }
+    color: var(--fc__footer__fg); }
     .qh__site-footer a:hover, .qh__site-footer a:focus {
       text-decoration: none;
       color: var(--fc__footer__fg); }
@@ -2729,31 +3186,145 @@ body {
   .qh__site-footer ol,
   .qh__site-footer dl, .qh__site-footer .form__actions a, .form__actions .qh__site-footer a, .qh__site-footer button,
   .qh__site-footer .qh__btn,
-  .qh__site-footer .button, .qh__site-footer table th, table .qh__site-footer th, .qh__site-footer table td, table .qh__site-footer td, .qh__site-footer .qh__accordion__button, .qh__site-footer .qh__file-list__item__label {
+  .qh__site-footer .button, .qh__site-footer table th, table .qh__site-footer th, .qh__site-footer table td, table .qh__site-footer td, .qh__site-footer .settings-menu, .qh__site-footer .qh__accordion__button, .qh__site-footer .qh__file-list__item__label {
     font-size: 1rem;
-    margin-top: 0; }
-  .qh__site-footer__content-left {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    padding: 1.5rem 1rem; }
-    .qh__site-footer__content-left > div {
-      min-height: 2rem;
-      width: 33%; }
-  .qh__site-footer__content-right {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 0;
-    padding: 1.5rem 1rem 1.5rem 0;
-    width: 20%; }
-    .qh__site-footer__content-right > div {
-      border-left: 0.0625rem solid var(--fc__footer__fg);
-      min-height: 2rem;
-      padding-left: 2rem; }
+    margin-top: 0;
+    -webkit-hyphens: auto !important;
+        -ms-hyphens: auto !important;
+            hyphens: auto !important; }
+    .qh__site-footer p + p, .qh__site-footer address + p, .qh__site-footer time + p, .qh__site-footer ul + p, .qh__site-footer ol + p, .qh__site-footer dl + p, .qh__site-footer .form__actions a + p, .form__actions .qh__site-footer a + p, .qh__site-footer button + p, .qh__site-footer .qh__btn + p, .qh__site-footer .button + p, .qh__site-footer table th + p, table .qh__site-footer th + p, .qh__site-footer table td + p, table .qh__site-footer td + p, .qh__site-footer .settings-menu + p, .qh__site-footer .qh__accordion__button + p, .qh__site-footer .qh__file-list__item__label + p, .qh__site-footer p + address, .qh__site-footer address + address, .qh__site-footer time + address, .qh__site-footer ul + address, .qh__site-footer ol + address, .qh__site-footer dl + address, .qh__site-footer .form__actions a + address, .form__actions .qh__site-footer a + address, .qh__site-footer button + address, .qh__site-footer .qh__btn + address, .qh__site-footer .button + address, .qh__site-footer table th + address, table .qh__site-footer th + address, .qh__site-footer table td + address, table .qh__site-footer td + address, .qh__site-footer .settings-menu + address, .qh__site-footer .qh__accordion__button + address, .qh__site-footer .qh__file-list__item__label + address, .qh__site-footer p + time, .qh__site-footer address + time, .qh__site-footer time + time, .qh__site-footer ul + time, .qh__site-footer ol + time, .qh__site-footer dl + time, .qh__site-footer .form__actions a + time, .form__actions .qh__site-footer a + time, .qh__site-footer button + time, .qh__site-footer .qh__btn + time, .qh__site-footer .button + time, .qh__site-footer table th + time, table .qh__site-footer th + time, .qh__site-footer table td + time, table .qh__site-footer td + time, .qh__site-footer .settings-menu + time, .qh__site-footer .qh__accordion__button + time, .qh__site-footer .qh__file-list__item__label + time, .qh__site-footer p + ul, .qh__site-footer address + ul, .qh__site-footer time + ul, .qh__site-footer ul + ul, .qh__site-footer ol + ul, .qh__site-footer dl + ul, .qh__site-footer .form__actions a + ul, .form__actions .qh__site-footer a + ul, .qh__site-footer button + ul, .qh__site-footer .qh__btn + ul, .qh__site-footer .button + ul, .qh__site-footer table th + ul, table .qh__site-footer th + ul, .qh__site-footer table td + ul, table .qh__site-footer td + ul, .qh__site-footer .settings-menu + ul, .qh__site-footer .qh__accordion__button + ul, .qh__site-footer .qh__file-list__item__label + ul,
+    .qh__site-footer p + ol,
+    .qh__site-footer address + ol,
+    .qh__site-footer time + ol,
+    .qh__site-footer ul + ol,
+    .qh__site-footer ol + ol,
+    .qh__site-footer dl + ol,
+    .qh__site-footer .form__actions a + ol, .form__actions .qh__site-footer a + ol,
+    .qh__site-footer button + ol,
+    .qh__site-footer .qh__btn + ol,
+    .qh__site-footer .button + ol,
+    .qh__site-footer table th + ol, table .qh__site-footer th + ol,
+    .qh__site-footer table td + ol, table .qh__site-footer td + ol,
+    .qh__site-footer .settings-menu + ol,
+    .qh__site-footer .qh__accordion__button + ol,
+    .qh__site-footer .qh__file-list__item__label + ol,
+    .qh__site-footer p + dl,
+    .qh__site-footer address + dl,
+    .qh__site-footer time + dl,
+    .qh__site-footer ul + dl,
+    .qh__site-footer ol + dl,
+    .qh__site-footer dl + dl,
+    .qh__site-footer .form__actions a + dl, .form__actions .qh__site-footer a + dl,
+    .qh__site-footer button + dl,
+    .qh__site-footer .qh__btn + dl,
+    .qh__site-footer .button + dl,
+    .qh__site-footer table th + dl, table .qh__site-footer th + dl,
+    .qh__site-footer table td + dl, table .qh__site-footer td + dl,
+    .qh__site-footer .settings-menu + dl,
+    .qh__site-footer .qh__accordion__button + dl,
+    .qh__site-footer .qh__file-list__item__label + dl, .qh__site-footer .form__actions p + a, .form__actions .qh__site-footer p + a, .qh__site-footer .form__actions address + a, .form__actions .qh__site-footer address + a, .qh__site-footer .form__actions time + a, .form__actions .qh__site-footer time + a, .qh__site-footer .form__actions ul + a, .form__actions .qh__site-footer ul + a, .qh__site-footer .form__actions ol + a, .form__actions .qh__site-footer ol + a, .qh__site-footer .form__actions dl + a, .form__actions .qh__site-footer dl + a, .qh__site-footer .form__actions a + a, .form__actions .qh__site-footer a + a, .qh__site-footer .form__actions button + a, .form__actions .qh__site-footer button + a, .qh__site-footer .form__actions .qh__btn + a, .form__actions .qh__site-footer .qh__btn + a, .qh__site-footer .form__actions .button + a, .form__actions .qh__site-footer .button + a, .qh__site-footer table .form__actions th + a, .form__actions .qh__site-footer table th + a, table .qh__site-footer .form__actions th + a, .form__actions table .qh__site-footer th + a, .qh__site-footer table .form__actions td + a, .form__actions .qh__site-footer table td + a, table .qh__site-footer .form__actions td + a, .form__actions table .qh__site-footer td + a, .qh__site-footer .form__actions .settings-menu + a, .form__actions .qh__site-footer .settings-menu + a, .qh__site-footer .form__actions .qh__accordion__button + a, .form__actions .qh__site-footer .qh__accordion__button + a, .qh__site-footer .form__actions .qh__file-list__item__label + a, .form__actions .qh__site-footer .qh__file-list__item__label + a, .qh__site-footer p + button, .qh__site-footer address + button, .qh__site-footer time + button, .qh__site-footer ul + button, .qh__site-footer ol + button, .qh__site-footer dl + button, .qh__site-footer .form__actions a + button, .form__actions .qh__site-footer a + button, .qh__site-footer button + button, .qh__site-footer .qh__btn + button, .qh__site-footer .button + button, .qh__site-footer table th + button, table .qh__site-footer th + button, .qh__site-footer table td + button, table .qh__site-footer td + button, .qh__site-footer .settings-menu + button, .qh__site-footer .qh__accordion__button + button, .qh__site-footer .qh__file-list__item__label + button,
+    .qh__site-footer p + .qh__btn,
+    .qh__site-footer address + .qh__btn,
+    .qh__site-footer time + .qh__btn,
+    .qh__site-footer ul + .qh__btn,
+    .qh__site-footer ol + .qh__btn,
+    .qh__site-footer dl + .qh__btn,
+    .qh__site-footer .form__actions a + .qh__btn, .form__actions .qh__site-footer a + .qh__btn,
+    .qh__site-footer button + .qh__btn,
+    .qh__site-footer .qh__btn + .qh__btn,
+    .qh__site-footer .button + .qh__btn,
+    .qh__site-footer table th + .qh__btn, table .qh__site-footer th + .qh__btn,
+    .qh__site-footer table td + .qh__btn, table .qh__site-footer td + .qh__btn,
+    .qh__site-footer .settings-menu + .qh__btn,
+    .qh__site-footer .qh__accordion__button + .qh__btn,
+    .qh__site-footer .qh__file-list__item__label + .qh__btn,
+    .qh__site-footer p + .button,
+    .qh__site-footer address + .button,
+    .qh__site-footer time + .button,
+    .qh__site-footer ul + .button,
+    .qh__site-footer ol + .button,
+    .qh__site-footer dl + .button,
+    .qh__site-footer .form__actions a + .button, .form__actions .qh__site-footer a + .button,
+    .qh__site-footer button + .button,
+    .qh__site-footer .qh__btn + .button,
+    .qh__site-footer .button + .button,
+    .qh__site-footer table th + .button, table .qh__site-footer th + .button,
+    .qh__site-footer table td + .button, table .qh__site-footer td + .button,
+    .qh__site-footer .settings-menu + .button,
+    .qh__site-footer .qh__accordion__button + .button,
+    .qh__site-footer .qh__file-list__item__label + .button, .qh__site-footer table p + th, table .qh__site-footer p + th, .qh__site-footer table address + th, table .qh__site-footer address + th, .qh__site-footer table time + th, table .qh__site-footer time + th, .qh__site-footer table ul + th, table .qh__site-footer ul + th, .qh__site-footer table ol + th, table .qh__site-footer ol + th, .qh__site-footer table dl + th, table .qh__site-footer dl + th, .qh__site-footer .form__actions table a + th, table .qh__site-footer .form__actions a + th, .form__actions .qh__site-footer table a + th, table .form__actions .qh__site-footer a + th, .qh__site-footer table button + th, table .qh__site-footer button + th, .qh__site-footer table .qh__btn + th, table .qh__site-footer .qh__btn + th, .qh__site-footer table .button + th, table .qh__site-footer .button + th, .qh__site-footer table th + th, table .qh__site-footer th + th, .qh__site-footer table td + th, table .qh__site-footer td + th, .qh__site-footer table .settings-menu + th, table .qh__site-footer .settings-menu + th, .qh__site-footer table .qh__accordion__button + th, table .qh__site-footer .qh__accordion__button + th, .qh__site-footer table .qh__file-list__item__label + th, table .qh__site-footer .qh__file-list__item__label + th, .qh__site-footer table p + td, table .qh__site-footer p + td, .qh__site-footer table address + td, table .qh__site-footer address + td, .qh__site-footer table time + td, table .qh__site-footer time + td, .qh__site-footer table ul + td, table .qh__site-footer ul + td, .qh__site-footer table ol + td, table .qh__site-footer ol + td, .qh__site-footer table dl + td, table .qh__site-footer dl + td, .qh__site-footer .form__actions table a + td, table .qh__site-footer .form__actions a + td, .form__actions .qh__site-footer table a + td, table .form__actions .qh__site-footer a + td, .qh__site-footer table button + td, table .qh__site-footer button + td, .qh__site-footer table .qh__btn + td, table .qh__site-footer .qh__btn + td, .qh__site-footer table .button + td, table .qh__site-footer .button + td, .qh__site-footer table th + td, table .qh__site-footer th + td, .qh__site-footer table td + td, table .qh__site-footer td + td, .qh__site-footer table .settings-menu + td, table .qh__site-footer .settings-menu + td, .qh__site-footer table .qh__accordion__button + td, table .qh__site-footer .qh__accordion__button + td, .qh__site-footer table .qh__file-list__item__label + td, table .qh__site-footer .qh__file-list__item__label + td, .qh__site-footer p + .settings-menu, .qh__site-footer address + .settings-menu, .qh__site-footer time + .settings-menu, .qh__site-footer ul + .settings-menu, .qh__site-footer ol + .settings-menu, .qh__site-footer dl + .settings-menu, .qh__site-footer .form__actions a + .settings-menu, .form__actions .qh__site-footer a + .settings-menu, .qh__site-footer button + .settings-menu, .qh__site-footer .qh__btn + .settings-menu, .qh__site-footer .button + .settings-menu, .qh__site-footer table th + .settings-menu, table .qh__site-footer th + .settings-menu, .qh__site-footer table td + .settings-menu, table .qh__site-footer td + .settings-menu, .qh__site-footer .settings-menu + .settings-menu, .qh__site-footer .qh__accordion__button + .settings-menu, .qh__site-footer .qh__file-list__item__label + .settings-menu, .qh__site-footer p + .qh__accordion__button, .qh__site-footer address + .qh__accordion__button, .qh__site-footer time + .qh__accordion__button, .qh__site-footer ul + .qh__accordion__button, .qh__site-footer ol + .qh__accordion__button, .qh__site-footer dl + .qh__accordion__button, .qh__site-footer .form__actions a + .qh__accordion__button, .form__actions .qh__site-footer a + .qh__accordion__button, .qh__site-footer button + .qh__accordion__button, .qh__site-footer .qh__btn + .qh__accordion__button, .qh__site-footer .button + .qh__accordion__button, .qh__site-footer table th + .qh__accordion__button, table .qh__site-footer th + .qh__accordion__button, .qh__site-footer table td + .qh__accordion__button, table .qh__site-footer td + .qh__accordion__button, .qh__site-footer .settings-menu + .qh__accordion__button, .qh__site-footer .qh__accordion__button + .qh__accordion__button, .qh__site-footer .qh__file-list__item__label + .qh__accordion__button, .qh__site-footer p + .qh__file-list__item__label, .qh__site-footer address + .qh__file-list__item__label, .qh__site-footer time + .qh__file-list__item__label, .qh__site-footer ul + .qh__file-list__item__label, .qh__site-footer ol + .qh__file-list__item__label, .qh__site-footer dl + .qh__file-list__item__label, .qh__site-footer .form__actions a + .qh__file-list__item__label, .form__actions .qh__site-footer a + .qh__file-list__item__label, .qh__site-footer button + .qh__file-list__item__label, .qh__site-footer .qh__btn + .qh__file-list__item__label, .qh__site-footer .button + .qh__file-list__item__label, .qh__site-footer table th + .qh__file-list__item__label, table .qh__site-footer th + .qh__file-list__item__label, .qh__site-footer table td + .qh__file-list__item__label, table .qh__site-footer td + .qh__file-list__item__label, .qh__site-footer .settings-menu + .qh__file-list__item__label, .qh__site-footer .qh__accordion__button + .qh__file-list__item__label, .qh__site-footer .qh__file-list__item__label + .qh__file-list__item__label {
+      margin-top: var(--body-text-spacer); }
+  .qh__site-footer__inner {
+    margin: 0 auto;
+    max-width: 93vw; }
+    @supports (width: 5px) {
+      .qh__site-footer__inner {
+        max-width: var(--content-max-width); } }
+  .qh__site-footer > .qh__site-footer__inner {
+    padding: 1.5rem 0; }
+    @media (min-width: 40em) {
+      .qh__site-footer > .qh__site-footer__inner {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: row wrap;
+                flex-flow: row wrap;
+        -webkit-box-align: stretch;
+            -ms-flex-align: stretch;
+                align-items: stretch;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; } }
+  .qh__site-footer__content {
+    padding: 1.5rem 0;
+    position: relative; }
+    @media (max-width: 39.9375em) {
+      .qh__site-footer__content + .qh__site-footer__content::before {
+        border-top: 0.0625rem solid var(--fc__footer__fg);
+        content: '';
+        opacity: 0.33;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; } }
+    @media (min-width: 40em) {
+      .qh__site-footer__content {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+                flex: 0 0 50%; } }
+    @media (min-width: 63.75em) {
+      .qh__site-footer__content {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 25%;
+                flex: 0 0 25%; } }
+  @media (min-width: 40em) and (max-width: 63.6875em) {
+    .qh__site-footer__first, .qh__site-footer__third {
+      padding-right: 1rem; }
+      .qh__site-footer__first::before, .qh__site-footer__third::before {
+        border-right: 0.0625rem solid var(--fc__footer__fg);
+        content: '';
+        opacity: 0.33;
+        position: absolute;
+        top: 1rem;
+        right: 0;
+        bottom: 1rem; }
+    .qh__site-footer__second, .qh__site-footer__fourth {
+      padding-left: 1rem; } }
+  @media (min-width: 63.75em) {
+    .qh__site-footer__first, .qh__site-footer__second, .qh__site-footer__third {
+      padding-right: 1rem; }
+    .qh__site-footer__fourth {
+      padding-left: 1rem; }
+      .qh__site-footer__fourth::before {
+        border-left: 0.0625rem solid var(--fc__footer__fg);
+        content: '';
+        opacity: 0.33;
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        bottom: 1rem; } }
   .qh__site-footer__copyright {
     background-color: var(--fc__footer__copyright__bg);
     color: var(--fc__footer__fg);
@@ -2776,12 +3347,28 @@ body {
       .qh__site-footer__copyright__content ol,
       .qh__site-footer__copyright__content dl, .qh__site-footer__copyright__content .form__actions a, .form__actions .qh__site-footer__copyright__content a, .qh__site-footer__copyright__content button,
       .qh__site-footer__copyright__content .qh__btn,
-      .qh__site-footer__copyright__content .button, .qh__site-footer__copyright__content table th, table .qh__site-footer__copyright__content th, .qh__site-footer__copyright__content table td, table .qh__site-footer__copyright__content td, .qh__site-footer__copyright__content .qh__accordion__button, .qh__site-footer__copyright__content .qh__file-list__item__label {
+      .qh__site-footer__copyright__content .button, .qh__site-footer__copyright__content table th, table .qh__site-footer__copyright__content th, .qh__site-footer__copyright__content table td, table .qh__site-footer__copyright__content td, .qh__site-footer__copyright__content .settings-menu, .qh__site-footer__copyright__content .qh__accordion__button, .qh__site-footer__copyright__content .qh__file-list__item__label {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
         font-size: 87.5%;
+        margin-left: 1rem;
         max-width: unset; }
     .qh__site-footer__copyright svg:first-of-type {
-      width: 3.125rem;
-      margin: -0.75rem 1rem -0.75rem 0; }
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 3.125rem;
+              flex: 0 0 3.125rem;
+      margin: -0.75rem 0; }
+      @media (min-width: 40em) {
+        .qh__site-footer__copyright svg:first-of-type {
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 3.875rem;
+                  flex: 0 0 3.875rem; } }
+      @media (min-width: 63.75em) {
+        .qh__site-footer__copyright svg:first-of-type {
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 4.6875rem;
+                  flex: 0 0 4.6875rem; } }
 
 .qh__page-header {
   background-color: var(--fc__header__bg);
@@ -2818,11 +3405,11 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 0%;
             flex: 1 1 0%; }
-    @media (max-width: 47.4375em) {
+    @media (max-width: 49.9375em) {
       .qh__page-header__inner {
         opacity: 0;
         visibility: hidden; } }
-    @media (min-width: 47.5em) {
+    @media (min-width: 50em) {
       .qh__page-header__inner {
         -webkit-box-flex: 1;
             -ms-flex: 1 1 34%;
@@ -2881,10 +3468,6 @@ body {
 .qh__accordion {
   border: 0.0625rem solid transparent;
   margin-top: 0.75rem; }
-  .qh__accordion:hover, .qh__accordion:focus-within {
-    border-color: var(--fc__default__link--focus);
-    -webkit-transition: all 250ms ease;
-    transition: all 250ms ease; }
   .qh__accordion__button {
     background-color: var(--c__coffee-milk--trans25);
     background-image: none;
@@ -3113,7 +3696,7 @@ body {
     .qh__icon-card__content ol,
     .qh__icon-card__content dl, .qh__icon-card__content .form__actions a, .form__actions .qh__icon-card__content a, .qh__icon-card__content button,
     .qh__icon-card__content .qh__btn,
-    .qh__icon-card__content .button, .qh__icon-card__content table th, table .qh__icon-card__content th, .qh__icon-card__content table td, table .qh__icon-card__content td, .qh__icon-card__content .qh__accordion__button, .qh__icon-card__content .qh__file-list__item__label,
+    .qh__icon-card__content .button, .qh__icon-card__content table th, table .qh__icon-card__content th, .qh__icon-card__content table td, table .qh__icon-card__content td, .qh__icon-card__content .settings-menu, .qh__icon-card__content .qh__accordion__button, .qh__icon-card__content .qh__file-list__item__label,
     .qh__icon-card__content ul {
       font-size: 1rem; }
   .qh__icon-card h3.qh__icon-card__title {
@@ -3145,7 +3728,7 @@ body {
      -moz-column-gap: 1rem;
           column-gap: 1rem;
   row-gap: 1.5rem; }
-  @media (min-width: 47.5em) {
+  @media (min-width: 50em) {
     .qh__paragraph__column-container {
       grid-template-columns: repeat(2, 1fr); } }
 
@@ -3257,7 +3840,7 @@ body {
     width: 100%; }
   .qh-layout-section--col-size-25-75 {
     grid-template-columns: 1fr; }
-    @media screen and (min-width: 47.5em) {
+    @media screen and (min-width: 50em) {
       .qh-layout-section--col-size-25-75 {
         grid-template-columns: 1fr 2fr; } }
     @media screen and (min-width: 75em) {
@@ -3265,22 +3848,22 @@ body {
         grid-template-columns: 1fr 3fr; } }
   .qh-layout-section--col-size-33-67 {
     grid-template-columns: 1fr; }
-    @media screen and (min-width: 47.5em) {
+    @media screen and (min-width: 50em) {
       .qh-layout-section--col-size-33-67 {
         grid-template-columns: 1fr 2fr; } }
   .qh-layout-section--col-size-50-50 {
     grid-template-columns: 1fr; }
-    @media screen and (min-width: 47.5em) {
+    @media screen and (min-width: 50em) {
       .qh-layout-section--col-size-50-50 {
         grid-template-columns: 1fr 1fr; } }
   .qh-layout-section--col-size-67-33 {
     grid-template-columns: 1fr; }
-    @media screen and (min-width: 47.5em) {
+    @media screen and (min-width: 50em) {
       .qh-layout-section--col-size-67-33 {
         grid-template-columns: 2fr 1fr; } }
   .qh-layout-section--col-size-75-25 {
     grid-template-columns: 1fr; }
-    @media screen and (min-width: 47.5em) {
+    @media screen and (min-width: 50em) {
       .qh-layout-section--col-size-75-25 {
         grid-template-columns: 2fr 1fr; } }
     @media screen and (min-width: 75em) {
@@ -3288,12 +3871,12 @@ body {
         grid-template-columns: 3fr 1fr; } }
   .qh-layout-section--col-size-33-repeat {
     grid-template-columns: 1fr; }
-    @media screen and (min-width: 47.5em) {
+    @media screen and (min-width: 50em) {
       .qh-layout-section--col-size-33-repeat {
         grid-template-columns: 1fr 1fr 1fr; } }
   .qh-layout-section--col-size-25-repeat {
     grid-template-columns: 1fr; }
-    @media screen and (min-width: 47.5em) {
+    @media screen and (min-width: 50em) {
       .qh-layout-section--col-size-25-repeat {
         grid-template-columns: 1fr 1fr; } }
     @media screen and (min-width: 75em) {
@@ -3332,13 +3915,15 @@ body {
   max-width: 93vw;
   display: grid;
   grid-template-areas: 'sidebar-top' 'content' 'sidebar-middle' 'sidebar-bottom';
+  grid-template-rows: -webkit-min-content 1fr;
+  grid-template-rows: min-content 1fr;
   margin-top: 5rem;
   margin-bottom: 5rem;
-  padding-left: 2rem; }
+  padding-left: 1rem; }
   @supports (width: 5px) {
     .qh-layout__grid {
       max-width: var(--content-max-width); } }
-  @media (min-width: 47.5em) {
+  @media (min-width: 50em) {
     .qh-layout__grid {
       grid-template-areas: 'sidebar-top content' 'sidebar-middle content' 'sidebar-bottom content';
       grid-template-columns: minmax(12.5rem, -webkit-max-content) minmax(0, 1fr);
@@ -3347,31 +3932,52 @@ body {
 
 .qh-layout__content {
   grid-area: content;
-  max-width: var(--content-max-width); }
+  max-width: 89vw; }
+  @media (min-width: 50em) {
+    .qh-layout__content {
+      max-width: var(--content-max-width); } }
 
 .qh-layout__sidebar-top {
   grid-area: sidebar-top;
   max-width: 23.75rem;
-  margin-right: 4.6875rem;
+  margin-right: 5vw;
   margin-bottom: 2.25rem; }
   [dir="rtl"] .qh-layout__sidebar-top {
-    margin-left: 4.6875rem;
+    margin-left: 5vw;
     margin-right: 0; }
-  @media (max-width: 47.4375em) {
+  @media (max-width: 49.9375em) {
     .qh-layout__sidebar-top {
       margin: 0; } }
 
 .qh-layout__sidebar-middle {
   grid-area: sidebar-middle;
   max-width: 23.75rem;
-  margin-right: 4.6875rem;
+  margin-right: 5vw;
   margin-bottom: 2.25rem; }
 
 .qh-layout__sidebar-bottom {
   grid-area: sidebar-bottom;
   max-width: 23.75rem;
-  margin-right: 4.6875rem;
+  margin-right: 5vw;
   margin-bottom: 2.25rem; }
+
+.page-overlay {
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 100vh;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  -webkit-transition: opacity 500ms ease 0ms, z-index 0ms linear 500ms;
+  transition: opacity 500ms ease 0ms, z-index 0ms linear 500ms;
+  z-index: -1; }
+  .page-overlay.active {
+    background-color: rgba(0, 0, 0, 0.35);
+    opacity: 1;
+    z-index: 450; }
 
 /*------------------------------------*\
     $Admin

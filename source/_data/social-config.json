@@ -1,0 +1,30 @@
+{
+  "social-platforms": {
+    "facebook": {
+      "link-title": "Follow us on Facebook",
+      "icon": "social-facebook"
+    },
+    "youtube": {
+      "link-title": "Follow us on YouTube",
+      "icon": "social-youtube"
+    },
+    "twitter": {
+      "link-title": "Follow us on Twitter",
+      "icon": "social-twitter"
+    },
+    "instagram": {
+      "link-title": "Follow us on Instagram",
+      "icon": "social-instagram"
+    },
+    "linkedin": {
+      "link-title": "Follow us on LinkedIn",
+      "icon": "social-linkedin"
+    },
+    "rss": {
+      "link-title": "View our RSS feed",
+      "icon": "feed"
+    }
+  }
+}
+
+

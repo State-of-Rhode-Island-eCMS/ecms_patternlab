@@ -1,7 +1,7 @@
 // We need a wrapper that can hide the off-canvas nav panel for mobile
 .dialog-off-canvas-main-canvas {
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;
 }
 
 // Set a CSS var that JS will check for the state of the nav
@@ -17,6 +17,7 @@ body {
 .qh__nav-main {
   background-color: var(--fc__nav-main__bg);
   color: var(--fc__nav-main__fg);
+  overflow-x: clip;
 
   a {
     display: block;
@@ -31,7 +32,7 @@ body {
     @include qh-content-maxwidth();
     position: relative;
     overflow: visible;
-    z-index: z(mobile-nav-bar);
+    z-index: z(desktop-nav-bar);
 
     // For mobile we need to flex
     @include breakpoint-down($bp__show__desktop-nav) {
@@ -39,38 +40,7 @@ body {
       flex-flow: row nowrap;
       align-items: center;
       justify-content: space-between;
-    }
-  }
-
-  // <body>
-  // Blur the background behind the active navigation drawer
-  &__overlay {
-    &::after {
-      backdrop-filter: blur(4px);
-      background-color: rgba(#000, 0.25);
-      content: '';
-      opacity: 0;
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      pointer-events: none;
-      transition:
-        opacity $transition-duration-medium $transition-timing-base 0ms,
-        z-index 0ms linear $transition-duration-medium;
-      z-index: -1;
-    }
-
-    &--visible {
-      &::after {
-        opacity: 1;
-        pointer-events: auto;
-        transition:
-          opacity $transition-duration-medium $transition-timing-base 0ms,
-          z-index 0ms linear 0ms;
-        z-index: z(mobile-body-overlay);
-      }
+      z-index: z(mobile-nav-bar);
     }
   }
 
@@ -239,7 +209,11 @@ body {
         top: 100%;
         right: calc((100vw - var(--content-max-width)) * -0.5);
         transform: translateX(100vw);
-        transition: $transition-medium;
+        transition:
+          opacity $transition-duration-medium $transition-timing-base 0ms,
+          transform $transition-duration-medium $transition-timing-base 0ms,
+          visibility $transition-duration-medium $transition-timing-base $transition-duration-base;
+        visibility: hidden; // Needed to keep anchor from being keyboard tabbable
         width: 86vw;
 
         > li {
@@ -250,7 +224,11 @@ body {
         [aria-expanded="true"] + & {
           opacity: 1;
           transform: translateX(0);
-          transition: $transition-medium;
+          transition:
+            opacity $transition-duration-medium $transition-timing-base 0ms,
+            transform $transition-duration-medium $transition-timing-base 0ms,
+            visibility $transition-duration-medium $transition-timing-base 0ms;
+          visibility: visible;
 
           > li {
             transform: translateX(0);
@@ -333,6 +311,17 @@ body {
 
     &__social {
       padding: ($nav-a-v-spacing * 0.5) ($nav-a-h-spacing * 0.5);
+
+      // Specifically set these colors, otherwise, header colors are used
+      .qh__social-links a.qh__social-links__link,
+      .qh__social-links a.qh__social-links__link:visited {
+        color: var(--fc__nav-main__link);
+      }
+
+      .qh__social-links a.qh__social-links__link:hover,
+      .qh__social-links a.qh__social-links__link:focus {
+        color: var(--fc__nav-main__link--hover__bg);
+      }
     }
 
     &__search,
@@ -442,6 +431,7 @@ body {
       color: var(--fc__nav-main__link);
       font-size: clamp(0.925rem, 1.5vw, 1rem);
       font-weight: 450;
+      line-height: clamp(1.2rem, 3vw, 1.3rem);
       text-decoration: none;
 
       @include breakpoint-up($bp__show__desktop-nav) {

@@ -49,6 +49,7 @@ button,
   }
 
   // Primary color theme (highlight, more colorful)
+  // :visited on a <button> is not a thing but most of the time these may be <a>s
   &,
   &:visited {
     background-color: var(--fc__default__button__bg);
@@ -99,6 +100,11 @@ button,
       background-color: var(--fc__default__fg);
       color: var(--fc__default__bg);
     }
+  }
+
+  &--small {
+    font-size: rem(14);
+    padding: ($button-v-spacing / 2) ($button-h-spacing / 2);
   }
 
   &:disabled,

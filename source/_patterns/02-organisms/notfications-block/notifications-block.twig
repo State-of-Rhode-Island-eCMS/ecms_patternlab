@@ -1,0 +1,28 @@
+<div class="qh__notifications-block" role="banner">
+  <div class="qh__notifications-block__wrapper">
+
+    <div class="qh__notifications-block__header">
+      {% include '@icons/alarm-bell.svg' %}
+      <p class="qh__notifications-block__title"><strong>{{ "Emergency Alerts" }}</strong></p>
+      <button
+        aria-expanded="true"
+        class="qh__btn qh__btn--small js__expand-collapse"
+        aria-controls="details-notifications"
+        data-id="notifications"
+        id="summary-notifications"
+        data-text-true="{{ "Hide Alerts"|t }}"
+        data-text-false="{{ "Show Alerts"|t }}"
+        >
+      </button>
+    </div>
+
+    <div
+      id="details-notifications"
+      role="region"
+      aria-labelledby="summary-notifications"
+      class="qh__notifications-block__content js__qh-accordion-panel js__aria-expanded"
+      >
+      {{ content }}
+    </div>
+  </div>
+</div>

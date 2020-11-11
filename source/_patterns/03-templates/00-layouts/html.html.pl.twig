@@ -45,6 +45,7 @@
 					// Check for Light Mode preference
 					if (cookies[i].includes('lightMode=dark')) {
 						// set a cookie to save the setting
+						console.log('it’s dark out');
 						document.cookie = "lightMode=dark;max-age=31536000;path=/;samesite=strict";
 						document.documentElement.className += " dark";
 						lightSetting = true;

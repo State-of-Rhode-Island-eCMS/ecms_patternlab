@@ -1,59 +1,21 @@
-<nav id="js__social-links" class="qh__social-links" aria-label="Social Media">
-  <ul class="qh__social-links__list qh__u__no-external">
-    <li class="qh__social-links__item">
-      {# Facebook social "card" #}
-      <a class="qh__social-links__link" href="#" rel="external">
-        <span class="qh__icon">
-          {% include ('@icons/social-facebook.svg') %}
-        </span>
-        <span class="visually-hidden">{{ "Follow us on Facebook"|t }}</span>
-      </a>
-    </li>
-    <li>
-      {# Twitter social "card" #}
-      <a class="qh__social-links__link" href="#" rel="external">
-        <span class="qh__icon">
-          {% include ('@icons/social-twitter.svg') %}
-        </span>
-        <span class="visually-hidden">{{ "Follow us on Twitter"|t }}</span>
-      </a>
-    </li>
-    <li>
-      {# YouTube social "card" #}
-      <a class="qh__social-links__link" href="#" rel="external">
-        <span class="qh__icon">
-          {% include ('@icons/social-youtube.svg') %}
-        </span>
-        <span class="visually-hidden">{{ "Watch us on YouTube"|t }}</span>
-      </a>
-    </li>
-    <li>
-      {# Instagram social "card" #}
-      <a class="qh__social-links__link" href="#" rel="external">
-        <span class="qh__icon">
-          {% include ('@icons/social-instagram.svg') %}
-        </span>
-        <span class="visually-hidden">{{ "Follow us on Instagram"|t }}</span>
-      </a>
-    </li>
-    <li>
-      {# LinkedIn social "card" #}
-      <a class="qh__social-links__link" href="#" rel="external">
-        <span class="qh__icon">
-          {% include ('@icons/social-linkedin.svg') %}
-        </span>
-        <span class="visually-hidden">{{ "Follow us on LinkedIn"|t }}</span>
-      </a>
-    </li>
-
-    <li>
-      {# RSS social "card" #}
-      <a class="qh__social-links__link" href="#" rel="external">
-        <span class="qh__icon">
-          {% include ('@icons/feed.svg') %}
-        </span>
-        <span class="visually-hidden">{{ "Subscribe to our Feed"|t }}</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+{% if items %}
+  {# Subnavigation list wrapper #}
+  <nav id="js__social-links" class="qh__social-links" aria-label="Social Media">
+    <ul class="qh__social-links__list qh__u__no-external">
+      {% for item in items %}
+        <li class="qh__social-links__item">
+          <a href="{{ item.url }}" class="qh__social-links__link" rel="external">
+            <span class="qh__icon">
+              {% if item.icon is empty or item.icon is same as("other") %}
+                {% include ('@icons/file-generic.svg') %}
+              {% else %}
+                {% include ('@icons/' ~ item.icon ~ '.svg') %}
+              {% endif %}
+            </span>
+             <span class="visually-hidden">{{ item.title }}</span>
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
+  </nav>
+{% endif %}

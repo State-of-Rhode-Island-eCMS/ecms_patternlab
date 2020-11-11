@@ -1,0 +1,8 @@
+.qh__teaser-notification {
+  padding: ($general-v-spacing / 2) 0;
+  border-top: $border-xs solid var(--fc__notification__border);
+
+  p {
+    font-size: rem(16);
+  }
+}

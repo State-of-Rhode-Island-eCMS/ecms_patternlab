@@ -1,0 +1,24 @@
+{
+  "title": 'Hotels',
+  "hotel_teaser1": {
+    "url" : "#",
+    "price" : "59",
+    "image_path" : "../../images/sample/landscape-16x9-mountains.jpg",
+    "title": "Newport Ambassador Inn & Suites",
+    "location": "Middletown, RI"
+  },
+  "hotel_teaser2": {
+    "url" : "#",
+    "price" : "129",
+    "image_path" : "../../images/sample/landscape-16x9-mountains.jpg",
+    "title": "Fairfield Inn & Suites Providence Airport Warwick",
+    "location": "Warwick, RI"
+  },
+  "hotel_teaser3": {
+    "url" : "#",
+    "price" : "199.99",
+    "image_path" : "../../images/sample/landscape-16x9-mountains.jpg",
+    "title": "Ramada by Wyndham Middletown Newport",
+    "location": "North Smithfield, RI"
+  }
+}

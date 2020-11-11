@@ -128,46 +128,47 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   // Toggle button for mobile menu
-  var qh_toggle_btn = document.getElementById('js-toggle-nav');
-  var qh_body_element = document.getElementsByTagName('body')[0];
+  // Activates/deactivates page overlay
+  // Also open/close off canvas menu
+  // NOT globalized because of page overlay actions
+  var qh_toggle_btn = document.getElementById('js__toggle-nav');
   if (qh_toggle_btn !== null && qh_toggle_btn !== undefined) {
-    qh_body_element.classList.add('qh__nav-main__overlay');
     qh_toggle_btn.addEventListener('click', function(event) {
       // a11yClick function restricts keypress to spacebar or enter
       if (a11yClick(event) === true) {
         var expanded = qh_toggle_btn.getAttribute('aria-expanded');
         if (expanded == 'true') {
           qh_toggle_btn.setAttribute('aria-expanded', 'false');
-          qh_body_element.classList.remove('qh__nav-main__overlay--visible');
+          deactivatePageOverlay();
         } else {
           qh_toggle_btn.setAttribute('aria-expanded', 'true');
-          qh_body_element.classList.add('qh__nav-main__overlay--visible');
+          allMenuCloser();
+          activatePageOverlay();
         }
       }
     });
   }
-  // TODO: Add handler that checks for a click outside of Menu and closes the menu
-  // Since the body overlay is a ::after element, this needs to be done by processing the
-  // x y coordinates of the click and checking to see if it is inside the menu or not
 
 
   // Listen to mouse press, spacebar key press, and enter key press on Drop Down menu parents
-  var qh_dd_btns = document.querySelectorAll('.js-qh-dd-toggle');
+  // Toggle the value of aria-expanded but also remove the content of href on parent
+  var qh_dd_btns = document.querySelectorAll('.js__qh-dd-toggle');
   if (qh_dd_btns !== null && qh_dd_btns !== undefined) {
-    qh_dd_btns.forEach(function(toggle) {
-      toggle.addEventListener('click', function(event) {
-        // Remove the contents of the href from this parent button
-        toggle.setAttribute('href', '#');
+    console.log('qh_dd_btns is not null or undefined');
+    qh_dd_btns.forEach(function(toggle_element) {
+      // Remove the contents of the href from this parent button
+      toggle_element.setAttribute('href', '#');
+      toggle_element.addEventListener('click', function(event) {
         // a11yClick function restricts keypress to spacebar or enter
         if (a11yClick(event) === true) {
-          var expanded = toggle.getAttribute('aria-expanded');
+          var expanded = toggle_element.getAttribute('aria-expanded');
           // Close all
           qh_dd_btns.forEach(function(btn) {
             btn.setAttribute('aria-expanded', 'false');
           });
           // Open the one that was pressed
           if (expanded == 'false') {
-            toggle.setAttribute('aria-expanded', 'true');
+            toggle_element.setAttribute('aria-expanded', 'true');
           }
         }
       });

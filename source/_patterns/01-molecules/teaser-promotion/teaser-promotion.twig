@@ -14,9 +14,9 @@
       {% endif %}
 
       {% if text is not empty %}
-        <p class="qh__teaser-promotion__text">
-          {{ text }}
-        </p>
+        <div class="qh__teaser-promotion__text">
+          {{ text|raw }}
+        </div>
       {% endif %}
 
 {% if url is not empty %}

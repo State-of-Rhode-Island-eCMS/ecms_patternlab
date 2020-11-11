@@ -1,0 +1,76 @@
+.qh__pagination {
+  // We want to hit a minimum of 44 x 44px
+  $pager-link-v-spacing: 0.875rem;
+  $pager-link-h-spacing: 0.875rem;
+
+  // <ul>
+  &__list {
+    text-align: center;
+  }
+
+  // <li>
+  &__item {
+    display: inline-block;
+    vertical-align: middle;
+
+    & + & {
+      margin-left: - rem(4);
+    }
+  }
+
+  // <a>
+  &__link,
+  &__ellipses {
+    display: block;
+    font-feature-settings: "lnum";
+    line-height: 1;
+    min-height: rem(44);
+    min-width: rem(44);
+    padding: $pager-link-v-spacing $pager-link-h-spacing;
+  }
+
+  &__link {
+    &,
+    &:visited {
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {}
+
+    &:active {}
+
+    // All pagers with icons do not need padding
+    &--first,
+    &--last,
+    &--prev,
+    &--next {
+      height: rem(44);
+      width: rem(44);
+      padding: 0;
+    }
+
+    &--first {}
+
+    &--last {}
+
+    &--prev {}
+
+    &--next {}
+
+    &--current {
+      background-color: var(--fc__default__link);
+      color: var(--fc__default__bg);
+      pointer-events: none;
+    }
+
+    &--disabled:not(&--current) {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  &__ellipses {
+    opacity: 0.67;
+  }
+}

@@ -1,0 +1,42 @@
+.language-switcher {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    &,
+    .settings__menu & {
+      border-bottom: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  a {
+    &:link,
+    &:visited {
+      &.is-active {
+        font-weight: bold;
+        text-decoration: none;
+        @supports (font-variation-settings: normal) {
+          html:not(.novf) & {
+            font-weight: 575;
+          }
+          html:not(.novf).wf-inactive & {
+            font-family: $font-sans-fallback;
+            font-variant-numeric: lining-nums;
+            font-weight: bold;
+            letter-spacing: 0.035em;
+          }
+        }
+        &:before {
+          content: "[";
+        }
+        &:after {
+          content: "]";
+        }
+      }
+    }
+  }
+  
+}

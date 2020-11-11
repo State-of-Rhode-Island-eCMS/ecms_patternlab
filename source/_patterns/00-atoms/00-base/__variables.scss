@@ -63,13 +63,14 @@ $nav-a-h-spacing--sm: 1rem;
 // Z-indices
 $zindex: (
   base: 1,
+  desktop-nav-bar: 449,
   mobile-body-overlay: 450,
   mobile-nav-bar: 451,
   drop-down-menu: 500
 );
 
 /* Light mode */
-body {
+html {
   --osLightMode: light;
   @media (prefers-color-scheme:dark) {
     --osLightMode: dark;
@@ -77,17 +78,17 @@ body {
 }
 
 /* Font size modifier */
-body {
+html {
   --fontSizeModifier: 1;
 }
 
 /* Line-height modifier */
-body {
+html {
   --lineHeightModifier: 1;
 }
 
 /* word space modifier */
-body {
+html {
   --wordSpaceModifier: 0;
 }
 
@@ -144,6 +145,34 @@ $st-size-s-px: 12;
 $st-size-m-px: 13;
 $st-size-l-px: 14;
 
+/* Font size REM values */
+$p-size-s-value: $p-size-s-px / $text-base-size;
+$p-size-l-value: $p-size-l-px / $text-base-size;
+
+$h1-size-s-value: $h1-size-s-px / $text-base-size;
+$h1-size-l-value: $h1-size-l-px / $text-base-size;
+
+$h2-size-s-value: $h2-size-s-px / $text-base-size;
+$h2-size-l-value: $h2-size-l-px / $text-base-size;
+
+$h3-size-s-value: $h3-size-s-px / $text-base-size;
+$h3-size-l-value: $h3-size-l-px / $text-base-size;
+
+$h4-size-s-value: $h4-size-s-px / $text-base-size;
+$h4-size-l-value: $h4-size-l-px / $text-base-size;
+
+$h5-size-s-value: $h5-size-s-px / $text-base-size;
+$h5-size-l-value: $h5-size-l-px / $text-base-size;
+
+$h6-size-s-value: $h6-size-s-px / $text-base-size;
+$h6-size-l-value: $h6-size-l-px / $text-base-size;
+
+$bq-size-s-value: $bq-size-s-px / $text-base-size;
+$bq-size-l-value: $bq-size-l-px / $text-base-size;
+
+$st-size-s-value: $st-size-s-px / $text-base-size;
+$st-size-l-value: $st-size-l-px / $text-base-size;
+
 /* Font size REMs */
 $p-size-s: $p-size-s-px / $text-base-size * 1rem;
 $p-size-m: $p-size-m-px / $text-base-size * 1rem;
@@ -182,41 +211,41 @@ $st-size-m: $st-size-m-px / $text-base-size * 1rem;
 $st-size-l: $st-size-l-px / $text-base-size * 1rem;
 
 /* Line-height (needs to be in EMs) */
-$p-lh-s: 1.5em;
-$p-lh-m: 1.525em;
-$p-lh-l: 1.55em;
+$p-lh-s: 1.5;
+$p-lh-m: 1.525;
+$p-lh-l: 1.55;
 
-$h1-lh-s: 1.05em;
-$h1-lh-m: 1.075em;
-$h1-lh-l: 1.1em;
+$h1-lh-s: 1.05;
+$h1-lh-m: 1.075;
+$h1-lh-l: 1.1;
 
-$h2-lh-s: 1.1em;
-$h2-lh-m: 1.125em;
-$h2-lh-l: 1.15em;
+$h2-lh-s: 1.1;
+$h2-lh-m: 1.125;
+$h2-lh-l: 1.15;
 
-$h3-lh-s: 1.1em;
-$h3-lh-m: 1.125em;
-$h3-lh-l: 1.15em;
+$h3-lh-s: 1.1;
+$h3-lh-m: 1.125;
+$h3-lh-l: 1.15;
 
-$h4-lh-s: 1.1em;
-$h4-lh-m: 1.2em;
-$h4-lh-l: 1.3em;
+$h4-lh-s: 1.1;
+$h4-lh-m: 1.2;
+$h4-lh-l: 1.3;
 
-$h5-lh-s: 1.1em;
-$h5-lh-m: 1.2em;
-$h5-lh-l: 1.3em;
+$h5-lh-s: 1.1;
+$h5-lh-m: 1.2;
+$h5-lh-l: 1.3;
 
-$h6-lh-s: 1.1em;
-$h6-lh-m: 1.2em;
-$h6-lh-l: 1.3em;
+$h6-lh-s: 1.1;
+$h6-lh-m: 1.2;
+$h6-lh-l: 1.3;
 
-$bq-lh-s: 1.5em;
-$bq-lh-m: 1.525em;
-$bq-lh-l: 1.55em;
+$bq-lh-s: 1.5;
+$bq-lh-m: 1.525;
+$bq-lh-l: 1.55;
 
-$st-lh-s: 1.1em;
-$st-lh-m: 1.2em;
-$st-lh-l: 1.3em;
+$st-lh-s: 1.1;
+$st-lh-m: 1.2;
+$st-lh-l: 1.3;
 
 /* Custom props for modern browsers */
 body {

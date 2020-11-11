@@ -344,6 +344,22 @@
           { "fnName": "sub__bg", "colorName": "white--trans25" }
         ],
         #
+        # Site Notifications component
+        #
+        "notification": [
+          { "fnName": "fg", "colorName": "navy--dark" },
+          { "fnName": "bg", "colorName": "hope-gold" },
+          { "fnName": "icon", "colorName": "navy" },
+          { "fnName": "link", "colorName": "navy--dark" },
+          { "fnName": "link--hover", "colorName": "navy--sat-lgt" },
+          { "fnName": "link--focus", "colorName": "navy--dark" },
+          { "fnName": "link--active", "colorName": "calamari" },
+          # Hover will always reverse these button colors
+          { "fnName": "button__fg", "colorName": "navy" },
+          { "fnName": "button__bg", "colorName": "white" },
+          { "fnName": "border", "colorName": "quahog--dark--trans33" }
+        ],
+        #
         # Only the icon foreground and background is colorable
         # Other colors are consistently coffee-milk
         #
@@ -464,6 +480,9 @@
           { "fnName": "link--active", "colorName": "hope-gold" },
           { "fnName": "sub__bg", "colorName": "quahog--dark--trans33" }
         ],
+        #
+        # Notification colors usually fall back to the same palette as the Light theme
+        #
         "accordion": [
           { "fnName": "icon__fg", "colorName": "quahog--darker" },
           { "fnName": "icon__bg", "colorName": "calamari" }
@@ -552,6 +571,19 @@
           { "fnName": "link--focus", "colorName": "rhody-red" },
           { "fnName": "link--active", "colorName": "rhody-red" },
           { "fnName": "sub__bg", "colorName": "white--trans25" }
+        ],
+        "notification": [
+          { "fnName": "fg", "colorName": "navy" },
+          { "fnName": "bg", "colorName": "ocean" },
+          { "fnName": "icon", "colorName": "navy" },
+          { "fnName": "link", "colorName": "navy--dark" },
+          { "fnName": "link--hover", "colorName": "rhody-red--dark" },
+          { "fnName": "link--focus", "colorName": "navy" },
+          { "fnName": "link--active", "colorName": "calamari" },
+          # Hover will always reverse these button colors
+          { "fnName": "button__fg", "colorName": "navy" },
+          { "fnName": "button__bg", "colorName": "white" },
+          { "fnName": "border", "colorName": "navy--trans50" }
         ],
         "attention-card": [
           { "fnName": "fg", "colorName": "quahog--darker" },
