@@ -21,6 +21,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.1.9] - 2020-11-11
+### Changed
+- RIG-130 - Continued theme improvements.
+
 ## [0.1.8] - 2020-11-06
 ### Added
 - RIG-130 - Nav current updates, Sidebar nav theming, Promo teasers, Social updates.
@@ -63,7 +67,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.8...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.9...HEAD
+[0.1.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.8...0.1.9
 [0.1.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.7...0.1.8
 [0.1.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.6...0.1.7
 [0.1.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.1.5...0.1.6
