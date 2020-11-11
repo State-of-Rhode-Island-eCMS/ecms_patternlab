@@ -1798,6 +1798,21 @@ table {
     border-bottom: none;
     margin: 0;
     padding: 0; }
+  .language-switcher a:link.is-active, .language-switcher a:visited.is-active {
+    font-weight: bold;
+    text-decoration: none; }
+    @supports (font-variation-settings: normal) {
+      html:not(.novf) .language-switcher a:link.is-active, html:not(.novf) .language-switcher a:visited.is-active {
+        font-weight: 575; }
+      html:not(.novf).wf-inactive .language-switcher a:link.is-active, html:not(.novf).wf-inactive .language-switcher a:visited.is-active {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-variant-numeric: lining-nums;
+        font-weight: bold;
+        letter-spacing: 0.035em; } }
+    .language-switcher a:link.is-active:before, .language-switcher a:visited.is-active:before {
+      content: "["; }
+    .language-switcher a:link.is-active:after, .language-switcher a:visited.is-active:after {
+      content: "]"; }
 
 .media-item.left {
   border-left: none;
