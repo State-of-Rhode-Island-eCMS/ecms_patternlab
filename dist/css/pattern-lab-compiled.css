@@ -313,14 +313,16 @@ html {
   --fc__nav-minor__link--focus: #ff8e47;
   --fc__nav-minor__link--active: #ff8e47;
   --fc__nav-minor__sub__bg: rgba(255, 255, 255, 0.25);
+  --fc__notification__fg: #1b243b;
   --fc__notification__bg: #face3d;
-  --fc__notification__icon: #141414;
-  --fc__notification__fg: #141414;
-  --fc__notification__link: #293557;
+  --fc__notification__icon: #293557;
+  --fc__notification__link: #1b243b;
   --fc__notification__link--hover: #476cd1;
-  --fc__notification__link--focus: #293557;
-  --fc__notification__link--visited: #5c55be;
+  --fc__notification__link--focus: #1b243b;
   --fc__notification__link--active: #ff8e47;
+  --fc__notification__button__fg: #293557;
+  --fc__notification__button__bg: white;
+  --fc__notification__border: rgba(20, 20, 20, 0.33);
   --fc__accordion__icon__fg: #1b243b;
   --fc__accordion__icon__bg: #ff8e47;
   --fc__attention-card__fg: #1b243b;
@@ -1787,6 +1789,16 @@ table {
     .google-visualization-table-div-page [role="button"] {
       font-family: var(--font-sans-vf) !important; } }
 
+.language-switcher {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .language-switcher li,
+  .settings__menu .language-switcher li {
+    border-bottom: none;
+    margin: 0;
+    padding: 0; }
+
 .media-item.left {
   border-left: none;
   border-right: solid 1rem var(--fc__default__accent);
@@ -2080,6 +2092,88 @@ table {
     -webkit-transform: translateX(4px);
             transform: translateX(4px); }
 
+.qh__teaser-hotel {
+  background-color: var(--fc__default__bg);
+  border: 0.0625rem solid var(--fc__default__border);
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 1rem;
+  position: relative; }
+  .qh__teaser-hotel__image-wrap a {
+    display: block;
+    overflow: hidden;
+    position: relative; }
+    .qh__teaser-hotel__image-wrap a, .qh__teaser-hotel__image-wrap a:visited {
+      text-decoration: none; }
+  .qh__teaser-hotel__snipe {
+    color: var(--fc__default__accent__fg);
+    font-family: var(--font-sans-vf);
+    font-size: 200%;
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    z-index: 1;
+    -webkit-transition: color 250ms ease;
+    transition: color 250ms ease; }
+    .qh__teaser-hotel__snipe::before {
+      background-color: var(--fc__default__accent);
+      content: '';
+      position: absolute;
+      top: -2.5em;
+      left: 3.5em;
+      height: 7em;
+      width: 7em;
+      z-index: -1;
+      -webkit-transition: background-color 250ms ease;
+      transition: background-color 250ms ease;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      -webkit-transform-origin: bottom left;
+              transform-origin: bottom left; }
+    .qh__teaser-hotel__snipe sup {
+      font-size: 50%; }
+    .qh__teaser-hotel:hover .qh__teaser-hotel__snipe,
+    a:hover .qh__teaser-hotel__snipe,
+    a:focus .qh__teaser-hotel__snipe {
+      color: var(--fc__default__link); }
+      .qh__teaser-hotel:hover .qh__teaser-hotel__snipe::before,
+      a:hover .qh__teaser-hotel__snipe::before,
+      a:focus .qh__teaser-hotel__snipe::before {
+        background-color: var(--fc__default__bg); }
+  .qh__teaser-hotel__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .qh__teaser-hotel__title {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%; }
+  .qh__teaser-hotel__cta {
+    margin-left: auto; }
+  .qh__teaser-hotel__link {
+    display: block; }
+    .qh__teaser-hotel__link::before {
+      content: '';
+      display: block;
+      position: absolute;
+      inset: 0;
+      overflow: visible; }
+      @supports not (inset: 0) {
+        .qh__teaser-hotel__link::before {
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0; } }
+
 .qh__teaser-notification {
   padding: 0.75rem 0; }
   .qh__teaser-notification p, .qh__teaser-notification address, .qh__teaser-notification time, .qh__teaser-notification ul,
@@ -2130,32 +2224,6 @@ table {
     left: 0;
     width: 100%;
     z-index: 500; }
-    .settings-menu .settings__menu li {
-      border-bottom: solid 1px rgba(0, 0, 0, 0.25); }
-      .settings-menu .settings__menu li:last-child {
-        border-bottom: none; }
-      .settings-menu .settings__menu li.active {
-        padding: 0.5em 0.15em; }
-    .settings-menu .settings__menu a {
-      display: block;
-      font-size: 0.875rem;
-      padding: 0.5em 0.15em; }
-      .wf-inactive .settings-menu .settings__menu a {
-        font-size: 0.9rem;
-        padding: 0.475em 0.15em; }
-      .settings-menu .settings__menu a:link {
-        text-decoration: underline; }
-      .settings-menu .settings__menu a:visited {
-        text-decoration: underline; }
-      html:not(.touch-nav) .settings-menu .settings__menu a:hover {
-        background-color: rgba(0, 0, 0, 0.05);
-        text-decoration: underline; }
-      .settings-menu .settings__menu a:focus {
-        background-color: rgba(0, 0, 0, 0.05);
-        text-decoration: underline; }
-      .settings-menu .settings__menu a:active {
-        background-color: rgba(0, 0, 0, 0.05);
-        text-decoration: underline; }
   .settings-menu-trigger {
     background-color: var(--fc__official__bg);
     display: block;
@@ -2197,6 +2265,32 @@ table {
 
 .settings__menu {
   list-style: none; }
+  .settings__menu li {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.25); }
+    .settings__menu li:last-child {
+      border-bottom: none; }
+    .settings__menu li.active {
+      padding: 0.5em 0.15em; }
+  .settings__menu a {
+    display: block;
+    font-size: 0.875rem;
+    padding: 0.5em 0.15em; }
+    .wf-inactive .settings__menu a {
+      font-size: 0.9rem;
+      padding: 0.475em 0.15em; }
+    .settings__menu a:link {
+      text-decoration: underline; }
+    .settings__menu a:visited {
+      text-decoration: underline; }
+    html:not(.touch-nav) .settings__menu a:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      text-decoration: underline; }
+    .settings__menu a:focus {
+      background-color: rgba(0, 0, 0, 0.05);
+      text-decoration: underline; }
+    .settings__menu a:active {
+      background-color: rgba(0, 0, 0, 0.05);
+      text-decoration: underline; }
   .settings__menu li {
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem; }
@@ -2372,6 +2466,52 @@ table {
     .qh__global-header .qh__accordion__button + .button,
     .qh__global-header .qh__file-list__item__label + .button, .qh__global-header table p + th, table .qh__global-header p + th, .qh__global-header table address + th, table .qh__global-header address + th, .qh__global-header table time + th, table .qh__global-header time + th, .qh__global-header table ul + th, table .qh__global-header ul + th, .qh__global-header table ol + th, table .qh__global-header ol + th, .qh__global-header table dl + th, table .qh__global-header dl + th, .qh__global-header .form__actions table a + th, table .qh__global-header .form__actions a + th, .form__actions .qh__global-header table a + th, table .form__actions .qh__global-header a + th, .qh__global-header table button + th, table .qh__global-header button + th, .qh__global-header table .qh__btn + th, table .qh__global-header .qh__btn + th, .qh__global-header table .button + th, table .qh__global-header .button + th, .qh__global-header table th + th, table .qh__global-header th + th, .qh__global-header table td + th, table .qh__global-header td + th, .qh__global-header table .settings-menu + th, table .qh__global-header .settings-menu + th, .qh__global-header table .qh__accordion__button + th, table .qh__global-header .qh__accordion__button + th, .qh__global-header table .qh__file-list__item__label + th, table .qh__global-header .qh__file-list__item__label + th, .qh__global-header table p + td, table .qh__global-header p + td, .qh__global-header table address + td, table .qh__global-header address + td, .qh__global-header table time + td, table .qh__global-header time + td, .qh__global-header table ul + td, table .qh__global-header ul + td, .qh__global-header table ol + td, table .qh__global-header ol + td, .qh__global-header table dl + td, table .qh__global-header dl + td, .qh__global-header .form__actions table a + td, table .qh__global-header .form__actions a + td, .form__actions .qh__global-header table a + td, table .form__actions .qh__global-header a + td, .qh__global-header table button + td, table .qh__global-header button + td, .qh__global-header table .qh__btn + td, table .qh__global-header .qh__btn + td, .qh__global-header table .button + td, table .qh__global-header .button + td, .qh__global-header table th + td, table .qh__global-header th + td, .qh__global-header table td + td, table .qh__global-header td + td, .qh__global-header table .settings-menu + td, table .qh__global-header .settings-menu + td, .qh__global-header table .qh__accordion__button + td, table .qh__global-header .qh__accordion__button + td, .qh__global-header table .qh__file-list__item__label + td, table .qh__global-header .qh__file-list__item__label + td, .qh__global-header p + .settings-menu, .qh__global-header address + .settings-menu, .qh__global-header time + .settings-menu, .qh__global-header ul + .settings-menu, .qh__global-header ol + .settings-menu, .qh__global-header dl + .settings-menu, .qh__global-header .form__actions a + .settings-menu, .form__actions .qh__global-header a + .settings-menu, .qh__global-header button + .settings-menu, .qh__global-header .qh__btn + .settings-menu, .qh__global-header .button + .settings-menu, .qh__global-header table th + .settings-menu, table .qh__global-header th + .settings-menu, .qh__global-header table td + .settings-menu, table .qh__global-header td + .settings-menu, .qh__global-header .settings-menu + .settings-menu, .qh__global-header .qh__accordion__button + .settings-menu, .qh__global-header .qh__file-list__item__label + .settings-menu, .qh__global-header p + .qh__accordion__button, .qh__global-header address + .qh__accordion__button, .qh__global-header time + .qh__accordion__button, .qh__global-header ul + .qh__accordion__button, .qh__global-header ol + .qh__accordion__button, .qh__global-header dl + .qh__accordion__button, .qh__global-header .form__actions a + .qh__accordion__button, .form__actions .qh__global-header a + .qh__accordion__button, .qh__global-header button + .qh__accordion__button, .qh__global-header .qh__btn + .qh__accordion__button, .qh__global-header .button + .qh__accordion__button, .qh__global-header table th + .qh__accordion__button, table .qh__global-header th + .qh__accordion__button, .qh__global-header table td + .qh__accordion__button, table .qh__global-header td + .qh__accordion__button, .qh__global-header .settings-menu + .qh__accordion__button, .qh__global-header .qh__accordion__button + .qh__accordion__button, .qh__global-header .qh__file-list__item__label + .qh__accordion__button, .qh__global-header p + .qh__file-list__item__label, .qh__global-header address + .qh__file-list__item__label, .qh__global-header time + .qh__file-list__item__label, .qh__global-header ul + .qh__file-list__item__label, .qh__global-header ol + .qh__file-list__item__label, .qh__global-header dl + .qh__file-list__item__label, .qh__global-header .form__actions a + .qh__file-list__item__label, .form__actions .qh__global-header a + .qh__file-list__item__label, .qh__global-header button + .qh__file-list__item__label, .qh__global-header .qh__btn + .qh__file-list__item__label, .qh__global-header .button + .qh__file-list__item__label, .qh__global-header table th + .qh__file-list__item__label, table .qh__global-header th + .qh__file-list__item__label, .qh__global-header table td + .qh__file-list__item__label, table .qh__global-header td + .qh__file-list__item__label, .qh__global-header .settings-menu + .qh__file-list__item__label, .qh__global-header .qh__accordion__button + .qh__file-list__item__label, .qh__global-header .qh__file-list__item__label + .qh__file-list__item__label {
       margin-top: 0; }
+
+.qh__hotels-grid__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 0 -0.5rem;
+  max-width: unset; }
+  .qh__hotels-grid__list > li {
+    padding: 0 0.5rem 1.5rem; }
+    @media (min-width: 40em) {
+      .qh__hotels-grid__list > li {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 50%;
+                flex: 0 1 50%; } }
+    @media (min-width: 62em) {
+      .qh__hotels-grid__list > li {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 33%;
+                flex: 0 1 33%; } }
+    .qh__hotels-grid__list > li > div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column;
+              flex-flow: column;
+      height: 100%;
+      margin-bottom: 0; }
+    .qh__hotels-grid__list > li .qh__teaser-hotel__content {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 auto;
+              flex: 1 0 auto; }
+    .qh__hotels-grid__list > li .qh__teaser-hotel__location,
+    .qh__hotels-grid__list > li .qh__teaser-hotel__cta {
+      margin-top: auto; }
 
 .dialog-off-canvas-main-canvas {
   position: relative; }
@@ -2618,6 +2758,12 @@ body {
         max-width: unset; }
     .qh__nav-main__item__social {
       padding: 0.5rem 0.75rem; }
+      .qh__nav-main__item__social .qh__social-links a.qh__social-links__link,
+      .qh__nav-main__item__social .qh__social-links a.qh__social-links__link:visited {
+        color: var(--fc__nav-main__link); }
+      .qh__nav-main__item__social .qh__social-links a.qh__social-links__link:hover,
+      .qh__nav-main__item__social .qh__social-links a.qh__social-links__link:focus {
+        color: var(--fc__nav-main__link--hover__bg); }
     @media (min-width: 50em) {
       .qh__nav-main__item__search, .qh__nav-main__item__social {
         opacity: 0;
@@ -2935,7 +3081,7 @@ body {
     .qh__notifications-block__wrapper::before {
       background-color: var(--fc__notification__bg);
       content: '';
-      opacity: 0.3;
+      opacity: 0.33;
       position: absolute;
       inset: 0;
       z-index: -2; }
@@ -2945,6 +3091,13 @@ body {
           right: 0;
           bottom: 0;
           left: 0; } }
+  .qh__notifications-block .qh__icon__svg {
+    color: var(--fc__notification__icon);
+    margin-right: 1rem;
+    height: 2rem;
+    width: 2rem; }
+  .qh__notifications-block__title {
+    font-size: 1rem; }
   .qh__notifications-block__header {
     color: var(--fc__notification__fg);
     display: -webkit-box;
@@ -2954,44 +3107,53 @@ body {
         -ms-flex-align: center;
             align-items: center;
     margin: 0 1rem;
-    padding: 0.75rem 0;
-    font-weight: bold; }
-    .qh__notifications-block__header svg {
-      width: 1.5rem;
-      margin-right: 1rem;
-      color: var(--fc__notification__icon); }
+    padding: 0.75rem 0; }
     .qh__notifications-block__header .qh__btn {
       margin-left: auto; }
+      .qh__notifications-block__header .qh__btn, .qh__notifications-block__header .qh__btn:visited {
+        background-color: var(--fc__notification__button__bg);
+        color: var(--fc__notification__button__fg); }
+      .qh__notifications-block__header .qh__btn:hover, .qh__notifications-block__header .qh__btn:focus {
+        background-color: var(--fc__notification__button__fg);
+        color: var(--fc__notification__button__bg); }
       .qh__notifications-block__header .qh__btn[aria-expanded="true"]::after {
         content: attr(data-text-true); }
       .qh__notifications-block__header .qh__btn[aria-expanded="false"]::after {
         content: attr(data-text-false); }
-  .js .qh__notifications-block__content {
-    max-height: 0;
-    overflow: hidden;
-    -webkit-transition: max-height 0s linear 1s, visibility 0s linear 0s;
-    transition: max-height 0s linear 1s, visibility 0s linear 0s;
-    visibility: hidden; }
-    .js .qh__notifications-block__content > article {
-      opacity: 0;
-      -webkit-transition: all 250ms ease 0ms;
-      transition: all 250ms ease 0ms; }
-    .js .qh__notifications-block__content.js__aria-expanded {
-      max-height: unset;
-      padding: 0 1rem;
-      -webkit-transition: max-height 0s linear 500s, visibility 0s linear 0ms;
-      transition: max-height 0s linear 500s, visibility 0s linear 0ms;
-      visibility: visible; }
-      .js .qh__notifications-block__content.js__aria-expanded > article {
-        opacity: 1;
-        -webkit-transition: all 250ms ease 125ms;
-        transition: all 250ms ease 125ms; }
+  .qh__notifications-block__content {
+    color: var(--fc__notification__fg); }
+    .qh__notifications-block__content a,
+    .qh__notifications-block__content a:visited {
+      color: var(--fc__notification__link, var(--fc__defauilt__link)); }
+    .qh__notifications-block__content a:hover,
+    .qh__notifications-block__content a:focus {
+      color: var(--fc__notification__link--hover, var(--fc__defauilt__link--hover)); }
+    .qh__notifications-block__content a:focus {
+      outline-color: var(--fc__notification__link--focus, var(--fc__defauilt__link--focus)); }
+    .qh__notifications-block__content a:active {
+      color: var(--fc__notification__link--active, var(--fc__defauilt__link--active)); }
+    .js .qh__notifications-block__content {
+      max-height: 0;
+      overflow: hidden;
+      -webkit-transition: max-height 0s linear 1s, visibility 0s linear 0s;
+      transition: max-height 0s linear 1s, visibility 0s linear 0s;
+      visibility: hidden; }
+      .js .qh__notifications-block__content > article {
+        opacity: 0;
+        -webkit-transition: all 250ms ease 0ms;
+        transition: all 250ms ease 0ms; }
+      .js .qh__notifications-block__content.js__aria-expanded {
+        max-height: unset;
+        padding: 0 1rem;
+        -webkit-transition: max-height 0s linear 500s, visibility 0s linear 0ms;
+        transition: max-height 0s linear 500s, visibility 0s linear 0ms;
+        visibility: visible; }
+        .js .qh__notifications-block__content.js__aria-expanded > article {
+          opacity: 1;
+          -webkit-transition: all 250ms ease 125ms;
+          transition: all 250ms ease 125ms; }
   .qh__notifications-block .qh__teaser-notification {
-    border-bottom: 0.0625rem solid var(--fc__notification__fg); }
-    .qh__notifications-block .qh__teaser-notification:first-child {
-      padding-top: 0; }
-    .qh__notifications-block .qh__teaser-notification:last-child {
-      border-bottom: 0; }
+    border-top: 0.0625rem solid var(--fc__notification__border); }
 
 .qh__site-footer {
   background-color: var(--fc__footer__bg);
