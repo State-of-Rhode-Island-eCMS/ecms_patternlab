@@ -1,0 +1,115 @@
+@media print {
+  @page {
+    size: letter portrait;
+    // For browsers that honor @page, this margin WILL ADD to
+    // whatever margin the printer already has defined
+    margin: .25in;
+
+    // Safari ignores
+    // Chrome ignores
+    @bottom-left {
+      content: "Page " counter(page) " of " counter(pages);
+    }
+
+    // Safari ignores
+    // Chrome ignores
+    @bottom-right {
+      content: string(doctitle);
+    }
+  }
+
+  *,
+  *::before,
+  *::after {
+    color: black !important; // Black prints faster
+    text-shadow: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    transition: none;
+  }
+
+  html,
+  body {
+    background-color: white !important;
+    font-size: 9pt;
+  }
+
+  p,
+  h2,
+  h3 {
+    max-width: unset;
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-inside: avoid;
+    page-break-after: avoid;
+  }
+
+  figure,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+  }
+
+  a {
+    &:not(.qh__btn):not(.button) {
+      text-decoration: underline;
+    }
+
+    // But no underline on the site header
+    .qh__site-branding &:not(.qh__btn):not(.button) {
+      text-decoration: none;
+    }
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  // Make some elements full width
+  .qh__page-header__wrapper,
+  .qh-layout__grid,
+  .qh-layout__content,
+  .qh-layout__sidebar-top {
+    max-width: unset;
+  }
+
+  // Eliminate the grid layout of the main container
+  .qh-layout__grid {
+    grid-template-areas:
+      'sidebar-top'
+      'content'
+      'sidebar-middle'
+      'sidebar-bottom';
+    margin: 0;
+  }
+
+  // Change to flex so we can move the Nav-minor to be first
+  .qh-layout__content {
+    display: flex;
+    flex-flow: column;
+
+    > .block-block-content {
+      order: 2;
+    }
+
+    .qh-layout__sidebar-middle {
+      order: 3;
+    }
+
+    .qh-layout__sidebar-bottom {
+      order: 4;
+    }
+  }
+  .qh-layout__sidebar-top {
+    order: 1;
+  }
+}

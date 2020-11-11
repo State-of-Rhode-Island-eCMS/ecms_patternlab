@@ -249,4 +249,22 @@
       text-decoration: none;
     }
   }
+
+  // Treat the Minor Nav like a breadcrumb trail at the top of the first page
+  @media print {
+    // Only allow the current page link to show
+    a:not(#{&}__link--current):not([href="/"]) {
+      display: none;
+    }
+
+    // Label the current link with the destination URL, which should be this page
+    a#{&}__link--current[href]::after {
+      content: " (" attr(href) ")";
+    }
+
+    // Hide border
+    &__item:not(#{&}__item__sub) + &__item:not(#{&}__item__sub)::before {
+      border-top: 0;
+    }
+  }
 }
