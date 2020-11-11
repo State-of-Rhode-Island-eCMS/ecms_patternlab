@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 function allMenuCloser() {
 
   // Close main nav
-  var qh_toggle_btn = document.getElementById('js-toggle-nav');
+  var qh_toggle_btn = document.getElementById('js__toggle-nav');
   if (qh_toggle_btn !== null) {
     qh_toggle_btn.setAttribute('aria-expanded', 'false');
   }
