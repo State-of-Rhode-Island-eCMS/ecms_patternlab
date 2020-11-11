@@ -21,7 +21,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
-## [0.1.9] - 2020-11-06
+## [0.1.9] - 2020-11-11
 ### Changed
 - RIG-130 - Continued theme improvements.
 
