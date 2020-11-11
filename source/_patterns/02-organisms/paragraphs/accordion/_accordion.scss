@@ -86,6 +86,10 @@
         transform: rotate(-360deg);
       }
     }
+
+    @media print {
+      padding-left: 0;
+    }
   } // end &__button
 
   &__content {
@@ -115,6 +119,19 @@
       > div {
         opacity: 1;
         transition: $transition-base 125ms;
+      }
+    }
+
+    // In print, accordions are always open
+    @media print {
+      .js & {
+        max-height: unset;
+        overflow: visible;
+        visibility: visible;
+
+        > div {
+          opacity: 1;
+        }
       }
     }
   }

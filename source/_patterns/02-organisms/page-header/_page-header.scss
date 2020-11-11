@@ -54,7 +54,11 @@
         padding: 0 $general-h-spacing;
       }
     }
-  }
+
+    @media print {
+      display: none;
+    }
+  } // end &__inner
 
   a {
     &,
