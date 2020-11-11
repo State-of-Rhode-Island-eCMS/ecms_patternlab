@@ -448,6 +448,16 @@ html {
     --fc__nav-minor__link--focus: #eb5252;
     --fc__nav-minor__link--active: #eb5252;
     --fc__nav-minor__sub__bg: rgba(255, 255, 255, 0.25);
+    --fc__notification__fg: #293557;
+    --fc__notification__bg: #95bddf;
+    --fc__notification__icon: #293557;
+    --fc__notification__link: #1b243b;
+    --fc__notification__link--hover: #8e3339;
+    --fc__notification__link--focus: #293557;
+    --fc__notification__link--active: #ff8e47;
+    --fc__notification__button__fg: #293557;
+    --fc__notification__button__bg: white;
+    --fc__notification__border: rgba(41, 53, 87, 0.5);
     --fc__attention-card__fg: #141414;
     --fc__attention-card__bar: #eb5252;
     --fc__attention-card__icon: white;
@@ -2190,21 +2200,14 @@ table {
           left: 0; } }
 
 .qh__teaser-notification {
-  padding: 0.75rem 0; }
+  padding: 0.75rem 0;
+  border-top: 0.0625rem solid var(--fc__notification__border); }
   .qh__teaser-notification p, .qh__teaser-notification address, .qh__teaser-notification time, .qh__teaser-notification ul,
   .qh__teaser-notification ol,
   .qh__teaser-notification dl, .qh__teaser-notification .form__actions a, .form__actions .qh__teaser-notification a, .qh__teaser-notification button,
   .qh__teaser-notification .qh__btn,
   .qh__teaser-notification .button, .qh__teaser-notification table th, table .qh__teaser-notification th, .qh__teaser-notification table td, table .qh__teaser-notification td, .qh__teaser-notification .settings-menu, .qh__teaser-notification .qh__accordion__button, .qh__teaser-notification .qh__file-list__item__label {
     font-size: 1rem; }
-  .qh__teaser-notification a {
-    color: var(--fc__notification__link); }
-    .qh__teaser-notification a:hover, .qh__teaser-notification a:focus {
-      color: var(--fc__notification__link--hover); }
-    .qh__teaser-notification a:visited {
-      color: var(--fc__notification__link--visited); }
-    .qh__teaser-notification a:active {
-      color: var(--fc__notification__link--active); }
 
 .qh__teaser-promotion {
   display: block;
@@ -3096,7 +3099,7 @@ body {
     .qh__notifications-block__wrapper::before {
       background-color: var(--fc__notification__bg);
       content: '';
-      opacity: 0.33;
+      opacity: 0.67;
       position: absolute;
       inset: 0;
       z-index: -2; }
@@ -3167,8 +3170,6 @@ body {
           opacity: 1;
           -webkit-transition: all 250ms ease 125ms;
           transition: all 250ms ease 125ms; }
-  .qh__notifications-block .qh__teaser-notification {
-    border-top: 0.0625rem solid var(--fc__notification__border); }
 
 .qh__site-footer {
   background-color: var(--fc__footer__bg);
@@ -3914,6 +3915,8 @@ body {
   max-width: 93vw;
   display: grid;
   grid-template-areas: 'sidebar-top' 'content' 'sidebar-middle' 'sidebar-bottom';
+  grid-template-rows: -webkit-min-content 1fr;
+  grid-template-rows: min-content 1fr;
   margin-top: 5rem;
   margin-bottom: 5rem;
   padding-left: 1rem; }
