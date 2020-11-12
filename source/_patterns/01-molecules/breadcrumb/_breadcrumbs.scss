@@ -1,0 +1,32 @@
+.qh__breadcrumb {
+
+  // <ol>
+  &__list {}
+
+  // <li>
+  &__item {
+    display: inline-block;
+    margin-right: - rem(4);
+    vertical-align: middle;
+
+    &--home {
+      @include breakpoint-down($bp--small) {
+        display: none;
+      }
+    }
+  }
+
+  // <a> and <span>
+  &__page {
+    display: block;
+    font-size: 87.5%;
+  }
+
+  @at-root {
+    a#{&}__page::after {
+      display: inline-block;
+      content: '»';
+      margin: 0 0.5em;
+    }
+  }
+}
