@@ -29,8 +29,7 @@ a {
   // Grouped properties for the following
   &[href^="mailto:"],
   &[href^="tel:"],
-  &[rel*="external"],
-  &.ext {
+  &[target="_blank"] {
 
     &::before {
       background-color: var(--fc__default__link--hover);
@@ -65,8 +64,9 @@ a {
   }
 
   // External links
-  &[rel*="external"],
-  &.ext {
+  // External links module makes sure there is a target="_blank" as well as
+  // rel="noopener nofollow noreferrer"
+  &[target="_blank"] {
 
     &::before {
       mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8.5 14.5h-7v-7H5V6H0v10h10v-5H8.5z'/%3E%3Cpath d='M7 3v1.5h3.8l-8.2 8.1.8.8 8.1-8.2V9H13V3z'/%3E%3C/svg%3E") no-repeat;
@@ -76,7 +76,7 @@ a {
   // Utility classes
   .qh__u__no-mail &[href^="mailto:"],
   .qh__u__no-tel &[href^="tel:"],
-  .qh__u__no-external &[rel*="external"] {
+  .qh__u__no-external &[target="_blank"] {
     &::before {
       display: none;
     }
