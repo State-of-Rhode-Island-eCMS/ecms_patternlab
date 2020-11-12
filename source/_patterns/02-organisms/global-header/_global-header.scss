@@ -2,6 +2,10 @@
   background-color: var(--fc__official__bg);
   color: var(--fc__official__fg);
 
+  @media print {
+    display: none;
+  }
+
   &__wrapper {
     @include qh-content-maxwidth();
     display: flex;

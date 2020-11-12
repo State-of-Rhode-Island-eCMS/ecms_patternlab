@@ -7,6 +7,10 @@
   border-top: $border-xl solid var(--fc__footer__border-top);
   color: var(--fc__footer__fg);
 
+  @media print {
+    display: none;
+  }
+
   a {
     color: var(--fc__footer__fg);
 

@@ -19,6 +19,10 @@ body {
   color: var(--fc__nav-main__fg);
   overflow-x: clip;
 
+  @media print {
+    display: none;
+  }
+
   a {
     display: block;
     transition: $transition-base;

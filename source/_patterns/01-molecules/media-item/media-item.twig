@@ -23,11 +23,11 @@
 
 {# Set up classes #}
 {% set classes = "" %}
-{% set classes = classes ~ "media-" ~ type %}
+{% set classes = classes ~ "qh__media-" ~ type %}
 {% set classes = classes ~ " " ~ size %}
 {% set classes = classes ~ " " ~ align %}
 
-<figure class="media-item {{ classes }}">
+<figure class="qh__media-item {{ classes }}">
   {% if type == 'img' %}
     {% if link_url %}
       <a href={{ link_url }} title="{{ link_title }}">

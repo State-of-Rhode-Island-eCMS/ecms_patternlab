@@ -141,8 +141,8 @@ document.addEventListener('DOMContentLoaded', function() {
           qh_toggle_btn.setAttribute('aria-expanded', 'false');
           deactivatePageOverlay();
         } else {
-          qh_toggle_btn.setAttribute('aria-expanded', 'true');
           allMenuCloser();
+          qh_toggle_btn.setAttribute('aria-expanded', 'true');
           activatePageOverlay();
         }
       }
