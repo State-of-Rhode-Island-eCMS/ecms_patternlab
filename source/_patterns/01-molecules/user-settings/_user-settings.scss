@@ -6,6 +6,14 @@
   display: inline-block;
   position: relative;
 
+  &__icon {
+    display: inline-block;
+    height: em(20);
+    margin: -0.125em 0.25em 0 0;
+    vertical-align: middle;
+    width: em(20);
+  }
+
   .settings__menu {
     background-color: var(--fc__official__bg);
     color: var(--fc__official__fg);
