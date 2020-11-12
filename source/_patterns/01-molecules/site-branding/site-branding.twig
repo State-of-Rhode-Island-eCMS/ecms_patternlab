@@ -17,16 +17,13 @@
  */
 #}
 
-
     <div class="qh__site-branding">
-      <a href="{{ front_page }}" rel="home" class="qh__site-branding__logo">
+      <a href="{{ front_page }}" class="qh__site-branding__logo" aria-hidden="true">
         {% include ('@icons/default-logo.svg') %}
       </a>
-
       <a href="{{ front_page }}" rel="home" class="qh__site-branding__name">
         <span class="qh__site-branding__name__top-line">{{ header_preprocess_values.top_line }}</span>
         <span class="qh__site-branding__name__main-line">{{ header_preprocess_values.main_line }}</span>
         <span class="qh__site-branding__name__bottom-line">{{ header_preprocess_values.bottom_line }}</span>
       </a>
-
     </div>
