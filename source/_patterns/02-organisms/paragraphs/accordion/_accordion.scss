@@ -8,7 +8,7 @@
  */
 
 .qh__accordion {
-  border: $border-xs solid transparent;
+  //border: $border-xs solid transparent;
   margin-top: ($general-v-spacing/2);
 
   // Removing… a proper accordion group needs these styles, but none
@@ -30,6 +30,7 @@
     display: block;
     --p-font-wght: 450;
     @extend p;
+    max-width: unset;
     outline: none;
     padding: $nav-a-v-spacing $nav-a-h-spacing;
     text-align: left;
@@ -96,6 +97,12 @@
     // In case any content inside is floated, which might be possible
     @include clearfix();
     background-color: var(--c__coffee-milk--trans10);
+
+    > div {
+      > * + * {
+        margin-top: var(--body-text-spacer);
+      }
+    }
 
     // TODO: Transitions not firing as we want them to
     .js & {
