@@ -132,7 +132,7 @@ html {
           }
         } @else {
           // Remove the "--dark" from the theme slug
-          .qh__t__#{str-slice($key, 0, -7)} {
+          &:not(.light) .qh__t__#{str-slice($key, 0, -7)} {
             @each $block, $section in $values {
               @include qh-output-color-var($block, $section, $palette);
             }
