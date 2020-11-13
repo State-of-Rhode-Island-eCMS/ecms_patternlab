@@ -48,6 +48,7 @@ table {
     color: var(--fc__table__color-bright);
   }
 
+  // <p>-like typography styles applied via 02-text/00-typography
   th,
   td {
     padding: $table-cell-v-padding $table-cell-h-padding;
@@ -55,7 +56,6 @@ table {
 
   th {
     --p-font-wght: 550;
-    @extend p;
 
     & + th {
       border-left: $border-xs solid var(--fc__table__border__v);
@@ -63,7 +63,6 @@ table {
   }
 
   td {
-    @extend p;
     border-bottom: $border-xs solid var(--fc__table__border__h);
 
     & + td {

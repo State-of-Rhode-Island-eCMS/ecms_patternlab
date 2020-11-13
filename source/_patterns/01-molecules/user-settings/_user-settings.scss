@@ -1,7 +1,7 @@
 /* Settings */
 
 .settings-menu {
-  @extend p;
+  @include qh__p;
   --text-opsz: 10;
   display: inline-block;
   position: relative;

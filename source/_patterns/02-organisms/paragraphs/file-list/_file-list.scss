@@ -50,8 +50,8 @@
 
     // span
     &__label {
+      @include qh__p;
       --p-font-wght: 525;
-      @extend p;
       display: block;
     }
 

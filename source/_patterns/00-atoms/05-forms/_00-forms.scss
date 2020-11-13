@@ -72,8 +72,8 @@ fieldset {
 
 .form__actions {
   a {
+    @include qh__p;
     --p-font-wght: 400;
-    @extend p;
   }
 }
 
