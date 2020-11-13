@@ -35,6 +35,10 @@
     }
   }
 
+  p, 
+  li {
+    font-variant-numeric: lining-nums;
+  }
   &__inner {
     @include qh-content-maxwidth();
   }

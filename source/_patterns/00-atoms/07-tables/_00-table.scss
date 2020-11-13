@@ -23,10 +23,12 @@ table {
   thead th {
     border-bottom: $border-sm solid var(--fc__table__border__h);
     color: var(--fc__table__color-bright);
+    font-variant-numeric: lining-nums tabular-nums;
     vertical-align: bottom;
   }
 
   tbody td {
+    font-variant-numeric: lining-nums tabular-nums;
     vertical-align: top;
   }
 
