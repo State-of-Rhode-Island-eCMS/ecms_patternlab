@@ -1,12 +1,15 @@
 {% if url is not empty %}
-  <a href={{ url }} class="qh__teaser-promotion" title="{{ title }}">
-    <div>
+  <a href={{ url }} class="qh__teaser-promotion qh__teaser-promotion--link" title="{{ title }}">
+    <div class="qh__teaser-promotion__layout">
 {% else %}
-  <div class="qh__teaser-promotion">
+  <div class="qh__teaser-promotion qh__teaser-promotion__layout">
 {% endif %}
 
+    <div class="qh__teaser-promotion__img-wrapper">
       {{ img }}
+    </div>
 
+    <div class="qh__teaser-promotion__content">
       {% if display_title %}
         <h3 class="qh__teaser-promotion__title">
           {{ title }}
@@ -18,6 +21,7 @@
           {{ text|raw }}
         </div>
       {% endif %}
+    </div>
 
 {% if url is not empty %}
     </div>

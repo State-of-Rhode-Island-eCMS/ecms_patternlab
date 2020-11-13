@@ -1,8 +1,40 @@
 .qh__teaser-promotion {
-  display: block;
   border: $border-sm solid var(--fc__default__border);
   text-align: center;
   text-decoration: none;
+
+  &--link {
+    display: block;
+
+    // Hide external link indicator.
+    &::before {
+      display: none !important;
+    }
+
+    &:hover {
+      border: $border-sm solid var(--fc__default__link--hover);
+    }
+  }
+
+  &__layout {
+    display: flex;
+    flex-direction: column;
+
+    // Styles pertaining to promotions inside flexible content areas.
+    .qh-layout__content & {
+
+      @include breakpoint-up($bp--xxlarge) {
+        flex-direction: row;
+
+        .qh__teaser-promotion__content  {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
 
   &__title {
     margin: $general-v-spacing $general-h-spacing;
