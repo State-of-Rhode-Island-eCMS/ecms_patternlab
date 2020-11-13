@@ -92,7 +92,13 @@ a {
   text-decoration: none;
   width: 100%;
 
+  &,
+  &:visited {
+    color: var(--fc__default__link--hover);
+  }
+
   &:focus {
+    color: var(--fc__default__link--hover);
     outline-offset: - ($border-sm * 2);
   }
 }
