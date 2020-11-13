@@ -1894,6 +1894,7 @@ a.qh__breadcrumb__page::after {
   .language-switcher li,
   .settings__menu .language-switcher li {
     border-bottom: none;
+    line-height: 1.3;
     margin: 0;
     padding: 0; }
   .language-switcher a:link.is-active, .language-switcher a:visited.is-active {
@@ -2430,6 +2431,8 @@ a.qh__breadcrumb__page::after {
   .settings-menu-trigger {
     background-color: var(--fc__official__bg);
     display: block;
+    font-size: 0.875rem;
+    line-height: 1;
     padding: 0.15rem 0.25rem;
     position: relative;
     text-align: right;
@@ -2495,10 +2498,12 @@ a.qh__breadcrumb__page::after {
       background-color: rgba(0, 0, 0, 0.05);
       text-decoration: underline; }
   .settings__menu li {
+    line-height: 1.3;
     margin-bottom: 0.5rem;
     padding-bottom: 0.5rem; }
   .settings__menu .label {
     display: inline-block;
+    font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.3;
     padding-bottom: 0.25rem;
@@ -3861,8 +3866,17 @@ body {
     color: var(--fc__attention-card__fg);
     padding: 1.5rem 1rem; }
     .qh__icon-card__content p,
-    .qh__icon-card__content ul {
+    .qh__icon-card__content ul,
+    .qh__icon-card__content li {
       font-size: 1rem; }
+      @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+        .qh__icon-card__content p,
+        .qh__icon-card__content ul,
+        .qh__icon-card__content li {
+          --font-size-min-value: 0.925;
+          --font-size-max-value: 1;
+          --font-size-scaler-value: var(--p-scaler-value);
+          font-size: var(--font-size); } }
   .qh__icon-card h3.qh__icon-card__title {
     color: var(--fc__attention-card__fg);
     display: -webkit-box;
@@ -3872,6 +3886,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
+    font-size: 1.25rem;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
