@@ -26,7 +26,7 @@
       {% else %}
         {% set title = 'Go to page @key'|t({'@key': key}) %}
       {% endif %}
-      <a href="{{ current == key ? '#' : item.href }}" title="{{ title }}"{{ item.attributes|without('href', 'title') }} class="qh__pagination__link {{ current == key ? ' qh__pagination__link--current qh__pagination__link--disabled' : '' }}" title="{{ 'Current page'|t }}">
+      <a href="{{ current == key ? '#' : item.href }}" title="{{ title }}" class="qh__pagination__link {{ current == key ? ' qh__pagination__link--current qh__pagination__link--disabled' : '' }}" title="{{ 'Current page'|t }}">
         {{- key -}}
       </a>
     </li>
