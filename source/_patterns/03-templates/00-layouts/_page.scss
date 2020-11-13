@@ -12,7 +12,6 @@ $sidebar-row-gap: rem(36);
       'content'
       'sidebar-middle'
       'sidebar-bottom';
-    grid-template-rows: min-content 1fr;
     margin-top: 5rem;
     margin-bottom: 5rem;
     padding-left: 1rem;
@@ -23,6 +22,7 @@ $sidebar-row-gap: rem(36);
         'sidebar-middle content'
         'sidebar-bottom content';
       grid-template-columns: minmax($sidebar-min, max-content) minmax(0, 1fr);
+      grid-template-rows: min-content min-content 1fr;
       padding-left: 0;
     }
   }
@@ -54,14 +54,29 @@ $sidebar-row-gap: rem(36);
     grid-area: sidebar-middle;
     max-width: $sidebar-max;
     margin-right: $sidebar-column-gap;
-    margin-bottom: $sidebar-row-gap;
   }
 
   &__sidebar-bottom {
     grid-area: sidebar-bottom;
     max-width: $sidebar-max;
     margin-right: $sidebar-column-gap;
-    margin-bottom: $sidebar-row-gap;
+  }
+
+  // When empty, they look like this
+  //<aside class="qh-layout__sidebar-middle" role="complementary">
+  //  <div class="views-element-container block block-views block-views-blockpromotions-block-1" id="block-views-block-promotions-block-1">
+  //    <div>
+  //
+  //    </div>
+  //  </div>
+  //</aside>
+  // With whitespace as it is, &:empty will not match
+  &__sidebar-middle,
+  &__sidebar-bottom {
+    // Kind of gross, but because of the above, only add margin if we have THREE levels of divs, not two
+    > div > div > div {
+      margin-bottom: $sidebar-row-gap;
+    }
   }
 }
 

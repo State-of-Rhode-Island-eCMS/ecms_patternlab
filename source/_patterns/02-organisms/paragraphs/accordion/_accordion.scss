@@ -22,6 +22,7 @@
   &__title {}
 
   &__button {
+    @include qh__p;
     background-color: var(--c__coffee-milk--trans25);
     background-image: none; // Reset from .qh__btn
     border-radius: 0; // Reset from .qh__btn
@@ -29,7 +30,6 @@
     color: var(--fc__default__fg);
     display: block;
     --p-font-wght: 450;
-    @extend p;
     max-width: unset;
     outline: none;
     padding: $nav-a-v-spacing $nav-a-h-spacing;

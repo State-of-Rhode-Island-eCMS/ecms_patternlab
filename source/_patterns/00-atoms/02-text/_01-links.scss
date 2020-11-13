@@ -82,3 +82,23 @@ a {
     }
   }
 }
+
+// Assumed to be any 'visually-hidden focusable skip-link'
+.skip-link {
+  display: block;
+  margin: 0 auto;
+  padding: 0.625rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+
+  &,
+  &:visited {
+    color: var(--fc__default__link--hover);
+  }
+
+  &:focus {
+    color: var(--fc__default__link--hover);
+    outline-offset: - ($border-sm * 2);
+  }
+}
