@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // If JS is loaded, change the no-js class
   document.documentElement.classList.remove("no-js");
   document.documentElement.classList.add("js");
+  // Add an empty element that is styled when a menu is open
   addPageOverlay();
 });
 
@@ -40,9 +41,9 @@ function allMenuCloser() {
   }
 
   // Close settings nav
-  var settingsMenuTrigger = document.getElementById('settings_trigger');
-  if (settingsMenuTrigger !== null) {
-    settingsMenuTrigger.parentElement.classList.remove('open');
+  var qh_usersettings_btn = document.getElementById('js__user-settings__toggle');
+  if (qh_usersettings_btn !== null) {
+    qh_usersettings_btn.setAttribute('aria-expanded', 'false');
   }
 }
 

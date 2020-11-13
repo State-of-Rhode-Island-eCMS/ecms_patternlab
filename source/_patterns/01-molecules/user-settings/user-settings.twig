@@ -1,45 +1,52 @@
-<div class="settings-menu">
-  <a href="#" class="settings-menu-trigger" id="settings_trigger" role="button">
-    <span class="settings-menu__icon" aria-hidden="true">
+<div class="qh__settings-menu">
+  <button id="js__user-settings__toggle" class="qh__u__btn-as-text qh__settings-menu__toggle" aria-expanded="false" aria-controls="js__user-settings__list">
+    <span class="qh__settings-menu__icon" aria-hidden="true">
       {% include ('@icons/cog.svg') %}
-    </span>{{ "User settings"|t }}
-  </a>
-  <ul class="settings__menu">
+    </span>
+    {{ "User settings"|t }}
+  </button>
+  <ul id="js__user-settings__list" class="qh-u__list-reset qh__settings-menu__list" aria-labelledby="js__user-settings__toggle">
     {% if (language_switcher) %}
     <li class="settings__language">
-      <span class="label">{{ "Display site in"|t }}:</span>
+      <label class="qh__settings-menu__label">{{ "Display site in"|t }}:</label>
       {{ language_switcher }}
     </li>
     {% endif %}
     <li class="settings__lightmode">
-      <span class="label">{{ "Light mode"|t }}:</span>
-      <div class="settings-toggle">
-        <a href="#" id="light_mode_switch" class="toggle-lightmode switch">{{ "Switch"|t }}</a>
-        <a href="#" id="light_mode_reset" class="toggle-lightmode auto">{{ "Use system preference"|t }}</a>
+      <label class="qh__settings-menu__label">{{ "Light mode"|t }}:</label>
+      <div class="qh__settings-menu__boolean">
+        <button id="light_mode_switch" class="small-text qh__u__btn-as-text toggle-lightmode switch">{{ "Switch"|t }}</button>
+        <button id="light_mode_reset" class="small-text qh__u__btn-as-text toggle-lightmode auto">{{ "Use system preference"|t }}</button>
       </div>
     </li>
     <li class="settings__fontsize">
-      <label class="label" for="font_size_modifier">{{ "Font size"|t }}:</label>
-      <div class="settings-slider">
-        <input type="range" min="1" max="3" value="1" step="0.01" name="size" id="font_size_modifier" />
-        <div class="settings__fontsize--value low">{{ "Original"|t }}</div>
-        <div class="settings__fontsize--value high">{{ "Larger"|t }}</div>
+      <label class="qh__settings-menu__label" for="font_size_modifier">{{ "Font size"|t }}:</label>
+      <div class="qh__settings-menu__slider">
+        <div class="qh__form__input__range">
+          <input type="range" min="1" max="3" value="1" step="0.01" name="size" id="font_size_modifier" />
+        </div>
+        <div class="small-text settings__fontsize--value low">{{ "Original"|t }}</div>
+        <div class="small-text settings__fontsize--value high">{{ "Larger"|t }}</div>
       </div>
     </li>
     <li class="settings__lineheight">
-      <label class="label" for="line_height_modifier">{{ "Line spacing"|t }}:</label>
-      <div class="settings-slider">
-        <input type="range" min="1" max="3" value="1" step="0.01" name="lineheight" id="line_height_modifier" />
-        <div class="settings__lineheight--value low">{{ "Original"|t }}</div>
-        <div class="settings__lineheight--value high">{{ "More"|t }}</div>
+      <label class="qh__settings-menu__label" for="line_height_modifier">{{ "Line spacing"|t }}:</label>
+      <div class="qh__settings-menu__slider">
+        <div class="qh__form__input__range">
+          <input type="range" min="1" max="3" value="1" step="0.01" name="lineheight" id="line_height_modifier" />
+        </div>
+        <div class="small-text settings__lineheight--value low">{{ "Original"|t }}</div>
+        <div class="small-text settings__lineheight--value high">{{ "More"|t }}</div>
       </div>
     </li>
     <li class="settings__wordspace">
-      <label class="label" for="word_space_modifier">{{ "Word spacing"|t }}:</label>
-      <div class="settings-slider">
-        <input type="range" min="0" max="2" value="1" step="0.01" name="wordspace" id="word_space_modifier" />
-        <div class="settings__wordspace--value low">{{ "Original"|t }}</div>
-        <div class="settings__wordspace--value high">{{ "More"|t }}</div>
+      <label class="qh__settings-menu__label" for="word_space_modifier">{{ "Word spacing"|t }}:</label>
+      <div class="qh__settings-menu__slider">
+        <div class="qh__form__input__range">
+          <input type="range" min="0" max="2" value="1" step="0.01" name="wordspace" id="word_space_modifier" />
+        </div>
+        <div class="small-text settings__wordspace--value low">{{ "Original"|t }}</div>
+        <div class="small-text settings__wordspace--value high">{{ "More"|t }}</div>
       </div>
     </li>
   </ul>

@@ -14,7 +14,8 @@
     padding: ($general-v-spacing/2) $general-h-spacing;
   }
 
-  a {
+  a,
+  .qh__settings-menu__toggle {
 
     &,
     &:visited {
@@ -35,8 +36,9 @@
     }
   }
 
-  p {
-    font-size: 0.875rem;
+  p,
+  .qh__settings-menu__toggle {
+    font-size: 87.5%;
     font-weight: 375;
 
     // Remove later once there are vertical rhythm rules in place for content containers only
