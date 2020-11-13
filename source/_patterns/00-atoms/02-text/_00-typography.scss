@@ -12,16 +12,21 @@ body {
   }
 }
 
-p {
+// Defining this mixin here so things are all in one place
+@mixin qh__p {
   font-family: $font-sans-static;
   font-weight: normal;
   font-size: $p-size-s;
   line-height: $p-lh-s;
+  font-style: normal;
+  margin: 0;
+  max-width: $max-line-length;
+  hyphens: auto;
 
   .wf-inactive & {
     font-family: $font-sans-fallback;
     font-weight: normal;
-    letter-spacing: 0.04em;
+    letter-spacing: $kerning-base;
   }
 
   @supports (font-variation-settings: normal) {
@@ -32,7 +37,7 @@ p {
     html:not(.novf).wf-inactive & {
       font-family: $font-sans-fallback;
       font-weight: normal;
-      letter-spacing: 0.035em;
+      letter-spacing: $kerning-base
     }
   }
 
@@ -58,14 +63,9 @@ p {
     word-spacing: var(--word-spacing);
   }
 
-  font-style: normal;
-  margin: 0;
-  max-width: $max-line-length;
-  hyphens: auto;
   @media screen and (min-width: $bp--medium) {
     hyphens: none;
   }
-
 }
 
 #{$all-headers} {
@@ -77,12 +77,14 @@ h1 {
   font-weight: normal;
   font-size: $h1-size-s;
   line-height: $h1-lh-s;
+
   .wf-inactive & {
     font-family: $font-serif-fallback;
     font-variant-numeric: lining-nums;
     font-weight: normal;
-    letter-spacing: 0.035em;
+    letter-spacing: $kerning-base;
   }
+
   @supports (font-variation-settings: normal) {
     html:not(.novf):not(.wf-inactive) & {
       font-family: var(--font-serif-vf);
@@ -92,17 +94,20 @@ h1 {
       font-family: $font-serif-fallback;
       font-variant-numeric: lining-nums;
       font-weight: normal;
-      letter-spacing: 0.035em;
+      letter-spacing: $kerning-base;
     }
   }
+
   @media screen and (min-width: $bp--medium) {
     font-size: $h1-size-m;
     line-height: $h1-lh-m;
   }
+
   @media screen and (min-width: $bp--large) {
     font-size: $h1-size-l;
     line-height: $h1-lh-l;
   }
+
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     --font-size-min-value: #{$h1-size-s-value};
     --font-size-max-value: #{$h1-size-l-value};
@@ -115,6 +120,7 @@ h1 {
     line-height: var(--line-height);
     word-spacing: var(--word-spacing);
   }
+
   font-style: normal;
   margin-top: 0;
   margin-bottom: calc(var(--body-text-spacer) * 1);
@@ -125,12 +131,14 @@ h2 {
   font-weight: normal;
   font-size: $h2-size-s;
   line-height: $h2-lh-s;
+
   .wf-inactive & {
     font-family: $font-serif-fallback;
     font-variant-numeric: lining-nums;
     font-weight: normal;
-    letter-spacing: 0.035em;
+    letter-spacing: $kerning-base;
   }
+
   @supports (font-variation-settings: normal) {
     html:not(.novf) & {
       font-family: var(--font-serif-vf);
@@ -140,29 +148,32 @@ h2 {
       font-family: $font-serif-fallback;
       font-variant-numeric: lining-nums;
       font-weight: normal;
-      letter-spacing: 0.035em;
+      letter-spacing: $kerning-base;
     }
   }
+
   @media screen and (min-width: $bp--medium) {
     font-size: $h2-size-m;
     line-height: $h2-lh-m;
   }
+
   @media screen and (min-width: $bp--large) {
     font-size: $h2-size-l;
     line-height: $h2-lh-l;
   }
+
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     --font-size-min-value: #{$h2-size-s-value};
     --font-size-max-value: #{$h2-size-l-value};
     --font-size-scaler-value: var(--h2-scaler-value);
     font-size: var(--font-size);
-
     --font-lh-min-value: #{$h2-lh-s};
     --font-lh-max-value: #{$h2-lh-l};
     --font-lh-scaler-value: var(--h2-lh-scaler-value);
     line-height: var(--line-height);
     word-spacing: var(--word-spacing);
   }
+
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 2);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
@@ -185,12 +196,14 @@ h3 {
   font-weight: bold;
   font-size: $h3-size-s;
   line-height: $h3-lh-s;
+
   .wf-inactive & {
     font-family: $font-serif-fallback;
     font-variant-numeric: lining-nums;
     font-weight: normal;
-    letter-spacing: 0.035em;
+    letter-spacing: $kerning-base;
   }
+
   @supports (font-variation-settings: normal) {
     html:not(.novf) & {
       font-family: var(--font-serif-vf);
@@ -200,23 +213,25 @@ h3 {
       font-family: $font-serif-fallback;
       font-variant-numeric: lining-nums;
       font-weight: normal;
-      letter-spacing: 0.035em;
+      letter-spacing: $kerning-base;
     }
   }
+
   @media screen and (min-width: $bp--medium) {
     font-size: $h3-size-m;
     line-height: $h3-lh-m;
   }
+
   @media screen and (min-width: $bp--large) {
     font-size: $h3-size-l;
     line-height: $h3-lh-l;
   }
+
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     --font-size-min-value: #{$h3-size-s-value};
     --font-size-max-value: #{$h3-size-l-value};
     --font-size-scaler-value: var(--h3-scaler-value);
     font-size: var(--font-size);
-
     --font-lh-min-value: #{$h3-lh-s};
     --font-lh-max-value: #{$h3-lh-l};
     --font-lh-scaler-value: var(--h3-lh-scaler-value);
@@ -233,12 +248,14 @@ h4 {
   font-weight: normal;
   font-size: $h4-size-s;
   line-height: $h4-lh-s;
+
   .wf-inactive & {
     font-family: $font-serif-fallback;
     font-variant-numeric: lining-nums;
     font-weight: normal;
-    letter-spacing: 0.035em;
+    letter-spacing: $kerning-base;
   }
+
   @supports (font-variation-settings: normal) {
     html:not(.novf) & {
       font-family: var(--font-serif-vf);
@@ -248,29 +265,32 @@ h4 {
       font-family: $font-serif-fallback;
       font-variant-numeric: lining-nums;
       font-weight: normal;
-      letter-spacing: 0.035em;
+      letter-spacing: $kerning-base;
     }
   }
+
   @media screen and (min-width: $bp--medium) {
     font-size: $h4-size-m;
     line-height: $h4-lh-m;
   }
+
   @media screen and (min-width: $bp--large) {
     font-size: $h4-size-l;
     line-height: $h4-lh-l;
   }
+
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     --font-size-min-value: #{$h4-size-s-value};
     --font-size-max-value: #{$h4-size-l-value};
     --font-size-scaler-value: var(--h4-scaler-value);
     font-size: var(--font-size);
-
     --font-lh-min-value: #{$h4-lh-s};
     --font-lh-max-value: #{$h4-lh-l};
     --font-lh-scaler-value: var(--h4-lh-scaler-value);
     line-height: var(--line-height);
     word-spacing: var(--word-spacing);
   }
+
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
@@ -281,12 +301,14 @@ h5 {
   font-weight: bold;
   font-size: $h5-size-s;
   line-height: $h5-lh-s;
+
   .wf-inactive & {
     font-family: $font-serif-fallback;
     font-variant-numeric: lining-nums;
     font-weight: normal;
-    letter-spacing: 0.035em;
+    letter-spacing: $kerning-base;
   }
+
   @supports (font-variation-settings: normal) {
     html:not(.novf) & {
       font-family: var(--font-serif-vf);
@@ -296,29 +318,32 @@ h5 {
       font-family: $font-serif-fallback;
       font-variant-numeric: lining-nums;
       font-weight: normal;
-      letter-spacing: 0.035em;
+      letter-spacing: $kerning-base;
     }
   }
+
   @media screen and (min-width: $bp--medium) {
     font-size: $h5-size-m;
     line-height: $h5-lh-m;
   }
+
   @media screen and (min-width: $bp--large) {
     font-size: $h5-size-l;
     line-height: $h5-lh-l;
   }
+
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     --font-size-min-value: #{$h5-size-s-value};
     --font-size-max-value: #{$h5-size-l-value};
     --font-size-scaler-value: var(--h5-scaler-value);
     font-size: var(--font-size);
-
     --font-lh-min-value: #{$h5-lh-s};
     --font-lh-max-value: #{$h5-lh-l};
     --font-lh-scaler-value: var(--h5-lh-scaler-value);
     line-height: var(--line-height);
     word-spacing: var(--word-spacing);
   }
+
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
@@ -329,12 +354,14 @@ h6 {
   font-weight: bold;
   font-size: $h6-size-s;
   line-height: $h6-lh-s;
+
   .wf-inactive & {
     font-family: $font-serif-fallback;
     font-variant-numeric: lining-nums;
     font-weight: normal;
-    letter-spacing: 0.035em;
+    letter-spacing: $kerning-base;
   }
+
   @supports (font-variation-settings: normal) {
     html:not(.novf) & {
       font-family: var(--font-serif-vf);
@@ -344,23 +371,25 @@ h6 {
       font-family: $font-serif-fallback;
       font-variant-numeric: lining-nums;
       font-weight: normal;
-      letter-spacing: 0.035em;
+      letter-spacing: $kerning-base;
     }
   }
+
   @media screen and (min-width: $bp--medium) {
     font-size: $h6-size-m;
     line-height: $h6-lh-m;
   }
+
   @media screen and (min-width: $bp--large) {
     font-size: $h6-size-l;
     line-height: $h6-lh-l;
   }
+
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     --font-size-min-value: #{$h6-size-s-value};
     --font-size-max-value: #{$h6-size-l-value};
     --font-size-scaler-value: var(--h6-scaler-value);
     font-size: var(--font-size);
-
     --font-lh-min-value: #{$h6-lh-s};
     --font-lh-max-value: #{$h6-lh-l};
     --font-lh-scaler-value: var(--h6-lh-scaler-value);
@@ -370,6 +399,21 @@ h6 {
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
+}
+
+// Grouped declarations of similar elements
+li,
+dt,
+dd,
+th,
+td,
+p,
+address,
+button,
+.qh__btn,
+.button,
+.skip-link {
+  @include qh__p;
 }
 
 strong,
@@ -387,12 +431,14 @@ blockquote {
     font-weight: normal;
     font-size: $bq-size-s;
     line-height: $bq-lh-s;
+
     .wf-inactive & {
       font-family: $font-serif-fallback;
       font-variant-numeric: lining-nums;
       font-weight: normal;
-      letter-spacing: 0.035em;
+      letter-spacing: $kerning-base;
     }
+
     @supports (font-variation-settings: normal) {
       html:not(.novf) & {
         font-family: var(--font-serif-vf);
@@ -402,57 +448,55 @@ blockquote {
         font-family: $font-serif-fallback;
         font-variant-numeric: lining-nums;
         font-weight: normal;
-        letter-spacing: 0.035em;
+        letter-spacing: $kerning-base;
       }
     }
+
     @media screen and (min-width: $bp--medium) {
       font-size: $bq-size-m;
       line-height: $bq-lh-m;
     }
+
     @media screen and (min-width: $bp--large) {
       font-size: $bq-size-l;
       line-height: $bq-lh-l;
     }
+
     @supports (font-size: clamp(1rem, 2vw, 2rem)) {
       --font-size-min-value: #{$bq-size-s-value};
       --font-size-max-value: #{$bq-size-l-value};
       --font-size-scaler-value: var(--bq-scaler-value);
       font-size: var(--font-size);
-
       --font-lh-min-value: #{$bq-lh-s};
       --font-lh-max-value: #{$bq-lh-l};
       --font-lh-scaler-value: var(--bq-lh-scaler-value);
       line-height: var(--line-height);
       word-spacing: var(--word-spacing);
     }
+
     margin-left: auto;
     margin-right: auto;
     margin-top: 0.75rem;
   }
 }
 
-address {
-  @extend p;
-}
-
-time {
-  @extend p;
-}
-
 /* using this for any small bits of text that should be 'next size down' from paragraphs */
 body {
   --st-font-wght: var(--default-body-wght);
 }
+
 .small-text {
   font-family: $font-sans-static;
   font-size: $st-size-s;
   line-height: $st-lh-s;
+
   .wf-inactive & {
     font-family: $font-sans-fallback;
     font-variant-numeric: lining-nums;
     font-weight: normal;
-    letter-spacing: 0.035em;
+    letter-spacing: $kerning-base;
   }
+
   @supports (font-variation-settings: normal) {
     html:not(.novf) & {
       font-family: var(--font-sans-vf);
@@ -462,35 +506,37 @@ body {
       font-family: $font-sans-fallback;
       font-variant-numeric: lining-nums;
       font-weight: normal;
-      letter-spacing: 0.035em;
+      letter-spacing: $kerning-base;
     }
   }
+
   @media screen and (min-width: $bp--medium) {
     font-size: $st-size-m;
     line-height: $st-lh-m;
   }
+
   @media screen and (min-width: $bp--large) {
     font-size: $st-size-l;
     line-height: $st-lh-l;
   }
+
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     --font-size-min-value: #{$st-size-s-value};
     --font-size-max-value: #{$st-size-l-value};
     --font-size-scaler-value: var(--st-scaler-value);
     font-size: var(--font-size);
-
     --font-lh-min: #{$st-lh-s};
     --font-lh-max: #{$st-lh-l};
     --font-lh-scaler-value: var(--st-lh-scaler-value);
     line-height: var(--line-height);
     word-spacing: var(--word-spacing);
   }
+
   font-style: normal;
 }
 
 label {
-  --st-font-wght: 475;
   @extend .small-text;
+  --st-font-wght: 475;
   display: block;
-  font-size: 0.875rem;
 }
