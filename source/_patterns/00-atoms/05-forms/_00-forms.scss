@@ -38,6 +38,7 @@ form {
 
 fieldset {
   padding: 1rem 0 1rem 1rem;
+
   > legend {
       display: block;
       font-family: $font-sans-static;
@@ -58,6 +59,7 @@ fieldset {
       }
       text-transform: uppercase;
   }
+
   + fieldset {
     margin-top: calc(var(--body-text-spacer) * 1.5);
   }
@@ -65,6 +67,7 @@ fieldset {
 
 .form__row {
   padding: 1rem;
+
   * & {
     margin-top: calc(var(--body-text-spacer) * 1.5);
   }
@@ -126,7 +129,6 @@ input[type='week'] {
     outline: 0;
   }
 
-
   label + & {
     margin-top: 0.1em;
   }
@@ -144,6 +146,8 @@ input[type='password'] {
     margin-top: 0.1em;
   }
 }
+
+input[type="range"] {}
 
 textarea {
   border-radius: 0.15em;
@@ -217,6 +221,63 @@ select {
       // Oddly, a size larger than any button width does not make the input too small
       flex: 1 0 calc(100% - 12rem);
       margin-right: 0.5rem;
+    }
+  }
+
+  &__input__range {
+    display: flex;
+    align-items: middle;
+    height: 2rem;
+    margin: 0.25rem 0;
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      background: transparent;
+      width: 100%;
+
+      @mixin range-track {
+        -webkit-appearance: none;
+        background: linear-gradient(
+          to bottom right,
+          transparent 50%,
+          var(--fc__default__border) 50%
+        );
+        cursor: pointer;
+        height: 1rem;
+      }
+
+      @mixin range-thumb {
+        -webkit-appearance: none;
+        background: var(--fc__default__fg);
+        border-radius: 0.25rem;
+        cursor: pointer;
+        height: 2rem;
+        margin-top: -0.5rem;
+        width: 0.5rem;
+      }
+
+      &::-webkit-slider-runnable-track {
+        @include range-track;
+      }
+      &::-moz-range-track {
+        @include range-track;
+      }
+      &::-ms-track {
+        @include range-track;
+      }
+      &::-ms-fill-lower {
+       background: transparent;
+      }
+
+      &::-webkit-slider-thumb {
+        @include range-thumb;
+      }
+      &::-moz-range-thumb {
+        @include range-thumb;
+      }
+      &::-ms-thumb {
+        @include range-thumb;
+      }
     }
   }
 }
