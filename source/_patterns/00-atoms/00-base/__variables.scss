@@ -42,8 +42,11 @@ $input-h-spacing: 1em;
 
 // Kerning
 //$kerning-loose: 0.0625em; not used yet
-$kerning-base: 0.03125em;
+$kerning-base: 0.035em;
 //$kerning-tight: -0.03125em; not used yet
+
+// Max-width on type elements for line-length legibility
+$max-line-length: em(640);
 
 // Transitions
 $transition-duration-base: 250ms;
@@ -378,7 +381,7 @@ body {
   --font-lh-max: calc(var(--font-lh-max-value) * var(--lineHeightModifier) * 1em);
 
   /* reusable line-height var for each text element */
-  --line-height: clamp(var(--font-lh-min), calc(var(--font-lh-scaler-value) * 1vw), var(--font-lh-max)); 
+  --line-height: clamp(var(--font-lh-min), calc(var(--font-lh-scaler-value) * 1vw), var(--font-lh-max));
 
   --word-spacing: calc( 1em * var(--wordSpaceModifier) );
 }

@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Toggle the value of aria-expanded but also remove the content of href on parent
   var qh_dd_btns = document.querySelectorAll('.js__qh-dd-toggle');
   if (qh_dd_btns !== null && qh_dd_btns !== undefined) {
-    console.log('qh_dd_btns is not null or undefined');
+    //console.log('qh_dd_btns is not null or undefined');
     qh_dd_btns.forEach(function(toggle_element) {
       // Remove the contents of the href from this parent button
       toggle_element.setAttribute('href', '#');

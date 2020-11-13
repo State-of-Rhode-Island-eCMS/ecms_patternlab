@@ -4,9 +4,12 @@
   margin: $general-v-spacing $general-h-spacing $general-v-spacing 0;
 
   &__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: -0.5rem;
     margin-right: 1rem;
-    display: block;
-    width: 3rem;
+    width: 4rem;
     min-height: 4.5rem;
   }
 

@@ -12,11 +12,12 @@
   pointer-events: none;
 }
 
+
+// <p>-like typography styles applied via 02-text/00-typography
 button,
 .qh__btn,
 .button {
   --p-font-wght: 500;
-  @extend p;
   border: 0;
   border-radius: $button-border-radius;
   display: inline-block;

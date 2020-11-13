@@ -286,10 +286,11 @@
           { "fnName": "bg", "colorName": "ocean" },
           { "fnName": "link", "colorName": "quahog--darker" },
           { "fnName": "link--hover", "colorName": "navy" },
+          # Hover bg used for bg of link AND for border top of current parent
+          # Should be the same color as the Header BG to look like a notch
           { "fnName": "link--hover__bg", "colorName": "white" },
           { "fnName": "link--focus", "colorName": "hope-gold" },
           { "fnName": "link--active", "colorName": "hope-gold" },
-          { "fnName": "link--current__border", "colorName": "white" },
           { "fnName": "link__sub--hover__bg", "colorName": "ocean--trans25" },
           { "fnName": "icon__bg", "colorName": "white" },
           { "fnName": "icon__fg", "colorName": "navy" },
@@ -433,10 +434,11 @@
           { "fnName": "bg", "colorName": "navy" },
           { "fnName": "link", "colorName": "quahog--light" },
           { "fnName": "link--hover", "colorName": "white" },
+          # Hover bg used for bg of link AND for border top of current parent
+          # Should be the same color as the Header BG to look like a notch
           { "fnName": "link--hover__bg", "colorName": "quahog--darker" },
           { "fnName": "link--focus", "colorName": "hope-gold" },
           { "fnName": "link--active", "colorName": "hope-gold" },
-          { "fnName": "link--current__border", "colorName": "navy--dark" },
           { "fnName": "link__sub--hover__bg", "colorName": "quahog--dark--trans15" },
           { "fnName": "icon__bg", "colorName": "ocean" },
           #{ "fnName": "icon__fg", "colorName": "navy" },
@@ -525,10 +527,11 @@
           { "fnName": "bg", "colorName": "rhody-red" },
           { "fnName": "link", "colorName": "quahog--darker" },
           { "fnName": "link--hover", "colorName": "rhody-red--dark" },
+          # Hover bg used for bg of link AND for border top of current parent
+          # Should be the same color as the Header BG to look like a notch
           { "fnName": "link--hover__bg", "colorName": "white" },
           { "fnName": "link--focus", "colorName": "quahog--darker" },
           { "fnName": "link--active", "colorName": "rhody-red" },
-          { "fnName": "link--current__border", "colorName": "white" },
           { "fnName": "link__sub--hover__bg", "colorName": "rhody-red--trans15" },
           { "fnName": "icon__bg", "colorName": "white" },
           { "fnName": "icon__fg", "colorName": "quahog--darker" },
@@ -616,14 +619,14 @@
       "values": {
         "official": [
           { "fnName": "fg", "colorName": "quahog--light" },
-          { "fnName": "bg", "colorName": "quahog--darker" },
+          { "fnName": "bg", "colorName": "quahog--dark" },
           { "fnName": "link", "colorName": "white" },
           { "fnName": "link--hover", "colorName": "rhody-red" },
           { "fnName": "link--focus", "colorName": "rhody-red" }
         ],
         "header": [
           { "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "quahog--dark" },
+          { "fnName": "bg", "colorName": "quahog--darker" },
           { "fnName": "social__link", "colorName": "rhody-red" },
           # Hover should use the accent or violator color
           { "fnName": "social__link--hover", "colorName": "hope-gold" }
@@ -633,10 +636,11 @@
           { "fnName": "bg", "colorName": "rhody-red--dark" },
           { "fnName": "link", "colorName": "quahog--light" },
           { "fnName": "link--hover", "colorName": "white" },
-          { "fnName": "link--hover__bg", "colorName": "quahog" },
+          # Hover bg used for bg of link AND for border top of current parent
+          # Should be the same color as the Header BG to look like a notch
+          { "fnName": "link--hover__bg", "colorName": "quahog--darker" },
           { "fnName": "link--focus", "colorName": "hope-gold" },
           { "fnName": "link--active", "colorName": "hope-gold" },
-          { "fnName": "link--current__border", "colorName": "quahog--dark" },
           { "fnName": "link__sub--hover__bg", "colorName": "quahog--dark--trans15" },
           { "fnName": "icon__bg", "colorName": "rhody-red" },
           #{ "fnName": "icon__fg", "colorName": "quahog--dark" },
@@ -669,7 +673,7 @@
           { "fnName": "download", "colorName": "quahog--light" }
         ],
         "nav-minor": [
-          { "fnName": "border", "colorName": "rhody-red" },
+          { "fnName": "border", "colorName": "rhody-red--dark" },
           { "fnName": "fg", "colorName": "quahog--light" },
           { "fnName": "bg", "colorName": "rhody-red--trans15" },
           { "fnName": "link", "colorName": "coffee-milk--light" },

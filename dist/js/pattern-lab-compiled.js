@@ -236,6 +236,34 @@ function wordSpaceSliderSet() {
 
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Toggle button for mobile menu
+  // Different than the global in that we toggle a class on the parent
+  // Also needs to hook into global Page Overlay actions
+  var qh_toggle_btn = document.getElementById('js__minor-toggle');
+  var qh_nav_minor = document.getElementById('js__minor-menu');
+  if (qh_toggle_btn !== null && qh_toggle_btn !== undefined) {
+    qh_toggle_btn.addEventListener('click', function(event) {
+      // This may look the same as other accordion type buttons but it is not
+      // The target is a parent element, not an adjacent sibling
+      // console.log('qh_toggle_btn clicked');
+      // a11yClick function restricts keypress to spacebar or enter
+      if (a11yClick(event) === true) {
+        // console.log('qh_toggle_btn a11y clicked');
+        if (qh_nav_minor.classList.contains('qh__nav-minor--expanded')) {
+          qh_nav_minor.classList.remove('qh__nav-minor--expanded');
+          deactivatePageOverlay();
+        } else {
+          allMenuCloser();
+          activatePageOverlay();
+          qh_nav_minor.classList.add('qh__nav-minor--expanded');
+        }
+      }
+    });
+  }
+});
+
 // There are custom properties that track what breakpoint the site is using
 function getQhNavState() {
   // NOTE: Strings from CSS get returned exactly as written
@@ -392,7 +420,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Toggle the value of aria-expanded but also remove the content of href on parent
   var qh_dd_btns = document.querySelectorAll('.js__qh-dd-toggle');
   if (qh_dd_btns !== null && qh_dd_btns !== undefined) {
-    console.log('qh_dd_btns is not null or undefined');
+    //console.log('qh_dd_btns is not null or undefined');
     qh_dd_btns.forEach(function(toggle_element) {
       // Remove the contents of the href from this parent button
       toggle_element.setAttribute('href', '#');
@@ -415,56 +443,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-
-  // Toggle button for mobile menu
-  // Different than the global in that we toggle a class on the parent
-  // Also needs to hook into global Page Overlay actions
-  var qh_toggle_btn = document.getElementById('js__minor-toggle');
-  var qh_nav_minor = document.getElementById('js__minor-menu');
-  if (qh_toggle_btn !== null && qh_toggle_btn !== undefined) {
-    qh_toggle_btn.addEventListener('click', function(event) {
-      // This may look the same as other accordion type buttons but it is not
-      // The target is a parent element, not an adjacent sibling
-      // console.log('qh_toggle_btn clicked');
-      // a11yClick function restricts keypress to spacebar or enter
-      if (a11yClick(event) === true) {
-        // console.log('qh_toggle_btn a11y clicked');
-        if (qh_nav_minor.classList.contains('qh__nav-minor--expanded')) {
-          qh_nav_minor.classList.remove('qh__nav-minor--expanded');
-          deactivatePageOverlay();
-        } else {
-          allMenuCloser();
-          activatePageOverlay();
-          qh_nav_minor.classList.add('qh__nav-minor--expanded');
-        }
-      }
-    });
-  }
-});
-
 document.addEventListener("DOMContentLoaded", function() {
+
   // Hide notifications based on cookie value.
   var notificationCookie = getCookie('siteNotifications');
-  if (notificationCookie === 'hidden') {
-    console.log('hidden');
-    document.getElementById('summary-notifications').setAttribute('aria-expanded', 'false');
-    document.getElementById('details-notifications').classList.remove('js__aria-expanded');
+  if (notificationCookie !== null && notificationCookie !== undefined) {
+    if (notificationCookie === 'hidden') {
+      console.log('hidden');
+      document.getElementById('summary-notifications').setAttribute('aria-expanded', 'false');
+      document.getElementById('details-notifications').classList.remove('js__aria-expanded');
+    }
   }
 
   // Add logic to set cookie values based on state of button.
   const notificationsToggle = document.getElementById('summary-notifications');
-  notificationsToggle.addEventListener('click', function(event) {
-    if (a11yClick(event) === true) {
-      var expanded = notificationsToggle.getAttribute('aria-expanded');
+  if (notificationsToggle !== null && notificationsToggle !== undefined) {
+    notificationsToggle.addEventListener('click', function(event) {
+      if (a11yClick(event) === true) {
+        var expanded = notificationsToggle.getAttribute('aria-expanded');
 
-      console.log('clicked')
-      if (expanded == 'true') {
-        document.cookie = "siteNotifications=display; max-age=31536000; path=/; samesite=strict";
-      } else {
-        document.cookie = "siteNotifications=hidden; max-age=31536000; path=/; samesite=strict";
+        console.log('clicked')
+        if (expanded == 'true') {
+          document.cookie = "siteNotifications=display; max-age=31536000; path=/; samesite=strict";
+        } else {
+          document.cookie = "siteNotifications=hidden; max-age=31536000; path=/; samesite=strict";
+        }
       }
-    }
-  })
+    })
+  }
 });
 
