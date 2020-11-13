@@ -1,45 +1,25 @@
-<div class="qh__articles-latest">
-  <h2 class="qh__articles-latest__title">{{ title }}</h2>
-  <ul class="qh-u__list-reset qh__articles-latest__list">
-    <li>
-      {% include '@molecules/teaser-article/teaser-article.twig' with {
-        title: article_teaser1.title,
-        date: article_teaser1.date,
-        excerpt: article_teaser1.excerpt,
-        url: article_teaser1.url
-      } %}
-    </li>
-    <li>
-      {% include '@molecules/teaser-article/teaser-article.twig' with {
-        title: article_teaser2.title,
-        date: article_teaser2.date,
-        excerpt: article_teaser2.excerpt,
-        url: article_teaser2.url
-      } %}
-    </li>
-    <li>
-      {% include '@molecules/teaser-article/teaser-article.twig' with {
-        title: article_teaser1.title,
-        date: article_teaser1.date,
-        excerpt: article_teaser1.excerpt,
-        url: article_teaser1.url
-      } %}
-    </li>
-    <li>
-      {% include '@molecules/teaser-article/teaser-article.twig' with {
-        title: article_teaser2.title,
-        date: article_teaser2.date,
-        excerpt: article_teaser2.excerpt,
-        url: article_teaser2.url
-      } %}
-    </li>
-    <li>
-      {% include '@molecules/teaser-article/teaser-article.twig' with {
-        title: article_teaser1.title,
-        date: article_teaser1.date,
-        excerpt: article_teaser1.excerpt,
-        url: article_teaser1.url
-      } %}
-    </li>
-  </ul>
+<div class="qh__articles-list">
+  <h1 class="qh__articles-list__title">{{ title }}</h1>
+
+  {% if exposed %}
+    <div class="view-filters">
+      {{ exposed }}
+    </div>
+  {% endif %}
+
+  <div class="qh__articles-list__list">
+    {{ rows }}
+  </div>
+  {% if pager %}
+    {{ pager }}
+  {% endif %}
+  {% if more %}
+    {{ more }}
+  {% endif %}
+  {% if feed_icons %}
+    <div class="feed-icons">
+      {{ feed_icons }}
+    </div>
+  {% endif %}
+
 </div>

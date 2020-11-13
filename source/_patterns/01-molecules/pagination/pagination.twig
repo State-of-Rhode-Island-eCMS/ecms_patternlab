@@ -1,42 +1,51 @@
-<nav class="qh__pagination" aria-label="Pages">
+<nav class="qh__pagination" aria-label="Pages"> 
   <ul class="qh__pagination__list">
+    {# Print first item if we are not on the first page. #}
     <li class="qh__pagination__item">
-      {# Show the placeholder link but REMOVE the HREF #}
-      <a class="qh__pagination__link qh__pagination__link--first qh__pagination__link--disabled" title="{{ 'Go to first page'|t }}">
+      <a href="{% if items.first.href %}{{ items.first.href }}{% else %}#{% endif %}" title="{{ 'Previous page'|t }}"  class="qh__pagination__link qh__pagination__link--first{% if items.first.href %}{% else %} qh__pagination__link--disabled{% endif %}">
         {% include ('@icons/guillemot-left.svg') %}
       </a>
     </li>
+    {# Print previous item if we are not on the first page. #}
     <li class="qh__pagination__item">
-      {# Show the placeholder link but REMOVE the HREF #}
-      <a class="qh__pagination__link qh__pagination__link--prev qh__pagination__link--disabled" title="{{ 'Previous page'|t }}">
+      <a href="{% if items.previous.href %}{{ items.previous.href }}{% else %}#{% endif %}" title="{{ 'Previous page'|t }}"  class="qh__pagination__link qh__pagination__link--prev{% if items.previous.href %}{% else %} qh__pagination__link--disabled{% endif %}">
         {% include ('@icons/chevron-left.svg') %}
       </a>
     </li>
+    {# Add an ellipsis if there are further previous pages. #}
+    {% if ellipses.previous %}
+      <li class="qh__pagination__item">
+        <span class="qh__pagination__ellipses" aria-label="{{ 'Full list of pages is truncated'|t }}" role="text">&hellip;</span>
+      </li>
+    {% endif %}
+    {# Now generate the actual pager piece. #}
+    {% for key, item in items.pages %}
     <li class="qh__pagination__item">
-      <a class="qh__pagination__link qh__pagination__link--current qh__pagination__link--disabled" title="{{ 'Current page'|t }}" href="#">01</a>
+      {% if current == key %}
+        {% set title = 'Current page'|t %}
+      {% else %}
+        {% set title = 'Go to page @key'|t({'@key': key}) %}
+      {% endif %}
+      <a href="{{ current == key ? '#' : item.href }}" title="{{ title }}"{{ item.attributes|without('href', 'title') }} class="qh__pagination__link {{ current == key ? ' qh__pagination__link--current qh__pagination__link--disabled' : '' }}" title="{{ 'Current page'|t }}">
+        {{- key -}}
+      </a>
     </li>
+    {% endfor %}
+    {# Add an ellipsis if there are further next pages. #}
+    {% if ellipses.previous %}
+      <li class="qh__pagination__item">
+        <span class="qh__pagination__ellipses" aria-label="{{ 'Full list of pages is truncated'|t }}" role="text">&hellip;</span>
+      </li>
+    {% endif %}
+    {# Print next item if we are not on the last page. #}
     <li class="qh__pagination__item">
-      <a class="qh__pagination__link" href="#">02</a>
-    </li>
-    <li class="qh__pagination__item">
-      <a class="qh__pagination__link" href="#">03</a>
-    </li>
-    <li class="qh__pagination__item">
-      <a class="qh__pagination__link" href="#">04</a>
-    </li>
-    <li class="qh__pagination__item">
-      <span class="qh__pagination__ellipses" aria-label="{{ 'Full list of pages is truncated'|t }}" role="text">&hellip;</span>
-    </li>
-    <li class="qh__pagination__item">
-      <a class="qh__pagination__link" href="#">100</a>
-    </li>
-    <li class="qh__pagination__item">
-      <a class="qh__pagination__link qh__pagination__link--next" href="#" title="{{ 'Next page'|t }}">
+      <a href="{% if items.next.href %}{{ items.next.href }}{% else %}#{% endif %}" title="{{ 'Next page'|t }}"  class="qh__pagination__link qh__pagination__link--next{% if items.next.href %}{% else %} qh__pagination__link--disabled{% endif %}">
         {% include ('@icons/chevron-right.svg') %}
       </a>
     </li>
+    {# Print last item if we are not on the last page. #}
     <li class="qh__pagination__item">
-      <a class="qh__pagination__link qh__pagination__link--last" href="#" title="{{ 'Go to last page'|t }}">
+      <a href="{% if items.last.href %}{{ items.last.href }}{% else %}#{% endif %}" title="{{ 'Last page'|t }}"  class="qh__pagination__link qh__pagination__link--last{% if items.last.href %}{% else %} qh__pagination__link--disabled{% endif %}">
         {% include ('@icons/guillemot-right.svg') %}
       </a>
     </li>
