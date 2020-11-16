@@ -20,10 +20,19 @@
     text-align: right;
     z-index: z(mobile-nav-bar);
 
-    &:focus,
-    .qh__page-header &:focus {
-      outline-color: transparent;
+    // Link & hover colors in global-header.scss
+    &,
+    &:visited {
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
       text-decoration: underline;
+    }
+
+    &:focus {
+      outline-color: transparent;
     }
 
     &:active {
@@ -78,6 +87,23 @@
 
       &.active {
         padding: 0.5em 0.15em;
+      }
+    }
+
+    .qh__u__btn-as-text {
+
+      &,
+      &:visited {
+        color: var(--fc__official__link);
+      }
+
+      &:hover,
+      &:focus {
+        color: var(--fc__official__link--hover);
+      }
+
+      &:focus {
+        outline-color: var(--fc__official__link);
       }
     }
   } // end &___list

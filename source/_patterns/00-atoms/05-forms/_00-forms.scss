@@ -240,7 +240,7 @@ select {
         background: linear-gradient(
           to bottom right,
           transparent 50%,
-          var(--fc__default__border) 50%
+          var(--c__white--trans33) 50%
         );
         cursor: pointer;
         height: 1rem;
@@ -248,7 +248,7 @@ select {
 
       @mixin range-thumb {
         -webkit-appearance: none;
-        background: var(--fc__default__fg);
+        background: currentColor;
         border-radius: 0.25rem;
         cursor: pointer;
         height: 2rem;
@@ -277,6 +277,12 @@ select {
       }
       &::-ms-thumb {
         @include range-thumb;
+      }
+
+      &:focus,
+      &:focus-within {
+        outline: $border-sm solid var(--fc__official__link--focus, currentColor);
+        outline-offset: ($border-sm * 2);
       }
     }
   }
