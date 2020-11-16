@@ -11,7 +11,10 @@ function handleFontSizeSliderUpdate(e) {
 
 function fontSizeSliderSet() {
   let fontSizeModifier = getComputedStyle(document.documentElement).getPropertyValue('--fontSizeModifier');
-  document.getElementById('font_size_modifier').setAttribute('value',fontSizeModifier.trim());
+  var fontSizeElement = document.getElementById('font_size_modifier')
+  if (fontSizeElement !== null && fontSizeElement !== undefined) {
+    fontSizeElement.setAttribute('value',fontSizeModifier.trim());
+  }
 }
 
 function handleLineHeightSliderUpdate(e) {
@@ -21,7 +24,10 @@ function handleLineHeightSliderUpdate(e) {
 
 function lineHeightSliderSet() {
   let lineHeightModifier = getComputedStyle(document.documentElement).getPropertyValue('--lineHeightModifier');
-  document.getElementById('line_height_modifier').setAttribute('value',lineHeightModifier.trim());
+  var lineSpaceElement = document.getElementById('line_height_modifier');
+  if (lineSpaceElement !== null && lineSpaceElement !== undefined) {
+    lineSpaceElement.setAttribute('value',lineHeightModifier.trim());
+  }
 }
 
 function handleWordSpaceSliderUpdate(e) {
@@ -31,25 +37,11 @@ function handleWordSpaceSliderUpdate(e) {
 
 function wordSpaceSliderSet() {
   let wordSpaceModifier = getComputedStyle(document.documentElement).getPropertyValue('--wordSpaceModifier');
-  document.getElementById('word_space_modifier').setAttribute('value',wordSpaceModifier.trim());
+  var wordSpaceElement = document.getElementById('word_space_modifier');
+  if (wordSpaceElement !== null && wordSpaceElement !== undefined) {
+    wordSpaceElement.setAttribute('value',wordSpaceModifier.trim());
+  }
 }
-
-// const settingsMenuToggle = document.getElementById('js__user-settings__toggle');
-//
-// if (settingsMenuToggle !== null && settingsMenuToggle !== undefined) {
-//   settingsMenuToggle.forEach(settingsMenuTrigger => settingsMenuTrigger.addEventListener('click', function(e) {
-//     e.preventDefault();
-//     if (settingsMenuTrigger.parentElement.classList.contains('open')) {
-//       settingsMenuTrigger.parentElement.classList.remove('open');
-//       deactivatePageOverlay();
-//     } else {
-//       // reset open menus
-//       allMenuCloser();
-//       settingsMenuTrigger.parentElement.classList.add('open');
-//       activatePageOverlay();
-//     }
-//   }));
-// }
 
 document.addEventListener("DOMContentLoaded", function() {
 
