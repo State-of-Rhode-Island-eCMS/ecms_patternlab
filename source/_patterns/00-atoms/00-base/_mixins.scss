@@ -37,14 +37,12 @@
 // One value must be declared
 @mixin qh-inset-supports($value) {
   $split-value: str-split($value, ' ');
-
-  inset: $value;
-
-  @supports not (inset: $value) {
-    top: $value;
-    right: $value;
-    bottom: $value;
-    left: $value;
+  top: $value;
+  right: $value;
+  bottom: $value;
+  left: $value;
+  @supports (inset: $value) {
+    inset: $value;
   }
 }
 
