@@ -35,9 +35,12 @@ body {
   &__wrapper {
     @include qh-content-maxwidth();
     position: relative;
-    overflow: visible;
+    overflow: hidden;
     z-index: z(desktop-nav-bar);
-
+    &.open {
+      overflow: visible;
+    }
+    
     // For mobile we need to flex
     @include breakpoint-down($bp__show__desktop-nav) {
       display: flex;

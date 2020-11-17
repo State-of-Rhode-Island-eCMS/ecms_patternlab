@@ -139,10 +139,12 @@ document.addEventListener('DOMContentLoaded', function() {
         var expanded = qh_toggle_btn.getAttribute('aria-expanded');
         if (expanded == 'true') {
           qh_toggle_btn.setAttribute('aria-expanded', 'false');
+          qh_toggle_btn.parentElement.classList.remove('open');
           deactivatePageOverlay();
         } else {
           allMenuCloser();
           qh_toggle_btn.setAttribute('aria-expanded', 'true');
+          qh_toggle_btn.parentElement.classList.add('open');
           activatePageOverlay();
         }
       }
