@@ -21,6 +21,17 @@ body {
   color: var(--fc__default__bg);
 }
 
+// IE 11 still needs this
+header,
+nav,
+article,
+main,
+section,
+aside,
+footer {
+  display: block;
+}
+
 nav ul,
 nav ol {
   @include qh-list-reset;
