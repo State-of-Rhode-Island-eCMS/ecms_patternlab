@@ -12,9 +12,9 @@ $border-xl: rem(21);
 $box-shadow-base: 0 0.125em 0.5em var(--c__quahog--dark--trans33);
 
 // Buttons
-$button-border-radius: em(3);
-$button-v-spacing: 1em;
-$button-h-spacing: 1.5em;
+$button-border-radius: rem(3);
+$button-v-spacing: 0.75rem;
+$button-h-spacing: 1.25rem;
 
 // Content max-width
 $content-max-small-screen: 93vw;

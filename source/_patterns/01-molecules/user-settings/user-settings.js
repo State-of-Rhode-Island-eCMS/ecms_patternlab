@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
       e.preventDefault();
       if (osLightMode == 'dark') {
         // set a cookie to expire the setting
-        console.log('check: '+osLightMode);
+        //console.log('check: '+osLightMode);
         document.cookie = "lightMode=light; max-age=31536000; path=/; samesite=strict";
         document.getElementsByTagName("html")[0].classList.remove('dark');
         document.getElementsByTagName("html")[0].classList.add('light');
