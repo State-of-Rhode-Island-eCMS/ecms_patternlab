@@ -24,16 +24,13 @@
       }
 
       &:hover,
-      &:focus {
+      &:focus,
+      &:active {
         color: var(--fc__header__link--hover);
       }
 
       &:focus {
-        outline-color: var(--fc__header__link--focus);
-      }
-
-      &:active {
-        color: var(--fc__header__link--active);
+        outline-color: var(--fc__header__link);
       }
     }
   }
