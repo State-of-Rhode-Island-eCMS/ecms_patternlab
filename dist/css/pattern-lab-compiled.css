@@ -1920,6 +1920,14 @@ table {
     .google-visualization-table-div-page [role="button"] {
       font-family: var(--font-sans-vf) !important; } }
 
+.qh__breadcrumb__wrapper {
+  margin: 0 auto;
+  max-width: 93vw;
+  margin-top: 2rem; }
+  @supports (width: 5px) {
+    .qh__breadcrumb__wrapper {
+      max-width: var(--content-max-width); } }
+
 .qh__breadcrumb__item {
   display: inline-block;
   margin-right: -0.25rem;
@@ -1927,12 +1935,14 @@ table {
   @media (max-width: 39.9375em) {
     .qh__breadcrumb__item--home {
       display: none; } }
+  .qh__breadcrumb__item:last-child .qh__breadcrumb__page::after {
+    content: ''; }
 
 .qh__breadcrumb__page {
   display: block;
   font-size: 87.5%; }
 
-a.qh__breadcrumb__page::after {
+*.qh__breadcrumb__page::after {
   display: inline-block;
   content: '»';
   margin: 0 0.5em; }
