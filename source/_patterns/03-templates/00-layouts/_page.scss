@@ -62,20 +62,10 @@ $sidebar-row-gap: rem(36);
     margin-right: $sidebar-column-gap;
   }
 
-  // When empty, they look like this
-  //<aside class="qh-layout__sidebar-middle" role="complementary">
-  //  <div class="views-element-container block block-views block-views-blockpromotions-block-1" id="block-views-block-promotions-block-1">
-  //    <div>
-  //
-  //    </div>
-  //  </div>
-  //</aside>
-  // With whitespace as it is, &:empty will not match
-  &__sidebar-middle,
   &__sidebar-bottom {
-    // Kind of gross, but because of the above, only add margin if we have THREE levels of divs, not two
-    > div > div > div {
-      margin-bottom: $sidebar-row-gap;
+    // just add margin-top to elements added into this region
+    > div  {
+      margin-top: $general-v-spacing;
     }
   }
 }

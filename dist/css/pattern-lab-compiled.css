@@ -2371,6 +2371,8 @@ a.qh__breadcrumb__page::after {
   border: 0.125rem solid var(--fc__default__border);
   text-align: center;
   text-decoration: none; }
+  .qh__teaser-promotion + .qh__teaser-promotion {
+    margin-top: 1.5rem; }
   .qh__teaser-promotion--link {
     display: block; }
     .qh__teaser-promotion--link::before {
@@ -4192,8 +4194,8 @@ body {
   max-width: 23.75rem;
   margin-right: 5vw; }
 
-.qh-layout__sidebar-middle > div > div > div, .qh-layout__sidebar-bottom > div > div > div {
-  margin-bottom: 2.25rem; }
+.qh-layout__sidebar-bottom > div {
+  margin-top: 1.5rem; }
 
 .page-overlay {
   -webkit-backdrop-filter: blur(4px);
