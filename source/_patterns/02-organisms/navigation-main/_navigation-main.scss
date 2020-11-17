@@ -40,7 +40,12 @@ body {
     &.open {
       overflow: visible;
     }
-    
+
+    @include breakpoint-up($bp__show__desktop-nav) {
+      overflow: visible;
+    }
+  
+
     // For mobile we need to flex
     @include breakpoint-down($bp__show__desktop-nav) {
       display: flex;

@@ -2725,6 +2725,9 @@ body {
         max-width: var(--content-max-width); } }
     .qh__nav-main__wrapper.open {
       overflow: visible; }
+    @media (min-width: 50em) {
+      .qh__nav-main__wrapper {
+        overflow: visible; } }
     @media (max-width: 49.9375em) {
       .qh__nav-main__wrapper {
         display: -webkit-box;
