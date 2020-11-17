@@ -118,6 +118,140 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
+window.onload = function(){
+	fontSizeSliderSet();
+	lineHeightSliderSet();
+	wordSpaceSliderSet();
+}
+
+function handleFontSizeSliderUpdate(e) {
+  document.documentElement.style.setProperty(`--fontSizeModifier`, this.value);
+  document.cookie = "fontSizeModifier="+this.value+"; max-age=31536000; path=/; samesite=strict";
+}
+
+function fontSizeSliderSet() {
+  let fontSizeModifier = getComputedStyle(document.documentElement).getPropertyValue('--fontSizeModifier');
+  var fontSizeElement = document.getElementById('font_size_modifier')
+  if (fontSizeElement !== null && fontSizeElement !== undefined) {
+    fontSizeElement.setAttribute('value',fontSizeModifier.trim());
+  }
+}
+
+function handleLineHeightSliderUpdate(e) {
+  document.documentElement.style.setProperty(`--lineHeightModifier`, this.value);
+  document.cookie = "lineHeightModifier="+this.value+"; max-age=31536000; path=/; samesite=strict";
+}
+
+function lineHeightSliderSet() {
+  let lineHeightModifier = getComputedStyle(document.documentElement).getPropertyValue('--lineHeightModifier');
+  var lineSpaceElement = document.getElementById('line_height_modifier');
+  if (lineSpaceElement !== null && lineSpaceElement !== undefined) {
+    lineSpaceElement.setAttribute('value',lineHeightModifier.trim());
+  }
+}
+
+function handleWordSpaceSliderUpdate(e) {
+  document.documentElement.style.setProperty(`--wordSpaceModifier`, this.value);
+  document.cookie = "wordSpaceModifier="+this.value+"; max-age=31536000; path=/; samesite=strict";
+}
+
+function wordSpaceSliderSet() {
+  let wordSpaceModifier = getComputedStyle(document.documentElement).getPropertyValue('--wordSpaceModifier');
+  var wordSpaceElement = document.getElementById('word_space_modifier');
+  if (wordSpaceElement !== null && wordSpaceElement !== undefined) {
+    wordSpaceElement.setAttribute('value',wordSpaceModifier.trim());
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  var qh_usersettings_btn = document.getElementById('js__user-settings__toggle');
+  //console.log('qh_usersettings_btn: ' + qh_usersettings_btn);
+  if (qh_usersettings_btn !== null && qh_usersettings_btn !== undefined) {
+    //console.log('qh_usersettings_btn is not null or undefined');
+    qh_usersettings_btn.addEventListener('click', function(event) {
+      // a11yClick function restricts keypress to spacebar or enter
+      if (a11yClick(event) === true) {
+        var expanded = qh_usersettings_btn.getAttribute('aria-expanded');
+        if (expanded == 'true') {
+          qh_usersettings_btn.setAttribute('aria-expanded', 'false');
+          deactivatePageOverlay();
+        } else {
+          allMenuCloser();
+          qh_usersettings_btn.setAttribute('aria-expanded', 'true');
+          activatePageOverlay();
+        }
+      }
+    });
+  }
+
+
+  // Light mode settings
+  const lightModeToggle = document.getElementById('light_mode_switch');
+  const lightModeReset = document.getElementById('light_mode_reset');
+  var osLightMode = getComputedStyle(document.documentElement).getPropertyValue('--osLightMode').trim();
+
+  if (lightModeToggle !== null && lightModeToggle !== undefined) {
+    lightModeToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      if (osLightMode == 'dark') {
+        // set a cookie to expire the setting
+        //console.log('check: '+osLightMode);
+        document.cookie = "lightMode=light; max-age=31536000; path=/; samesite=strict";
+        document.getElementsByTagName("html")[0].classList.remove('dark');
+        document.getElementsByTagName("html")[0].classList.add('light');
+      } else if (document.getElementsByTagName("html")[0].classList.contains('dark')) {
+        // set a cookie to save the setting
+        document.cookie = "lightMode=light; max-age=31536000; path=/; samesite=strict";
+        document.getElementsByTagName("html")[0].classList.remove('dark');
+        document.getElementsByTagName("html")[0].classList.add('light');
+      } else {
+        // set a cookie to save the setting
+        document.cookie = "lightMode=dark; max-age=31536000; path=/; samesite=strict";
+        document.getElementsByTagName("html")[0].classList.remove('light');
+        document.getElementsByTagName("html")[0].classList.add('dark');
+      }
+      e.blur();
+    });
+  }
+
+  if (lightModeReset !== null && lightModeReset !== undefined) {
+    lightModeReset.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.cookie = "lightMode=auto; max-age=31536000; path=/; samesite=strict";
+      document.getElementsByTagName("html")[0].classList.remove('dark');
+      document.getElementsByTagName("html")[0].classList.remove('light');
+      e.blur();
+    });
+  }
+
+
+  // Font size settings
+  const fontSizeSlider = document.getElementById('font_size_modifier');
+  var currentFontSizeModifier = getComputedStyle(document.documentElement).getPropertyValue('--fontSizeModifier');
+
+  if (fontSizeSlider !== null && fontSizeSlider !== undefined) {
+    fontSizeSlider.addEventListener('change', handleFontSizeSliderUpdate);
+  }
+
+  // Line-height settings
+  const lineHeightSlider = document.getElementById('line_height_modifier');
+  var currentlineHeightModifier = getComputedStyle(document.documentElement).getPropertyValue('--lineHeightModifier');
+
+  if (lineHeightSlider !== null && lineHeightSlider !== undefined) {
+    lineHeightSlider.addEventListener('change', handleLineHeightSliderUpdate);
+  }
+
+  // Word space settings
+  const wordSpaceSlider = document.getElementById('word_space_modifier');
+  var currentWordSpaceModifier = getComputedStyle(document.documentElement).getPropertyValue('--wordSpaceModifier');
+
+  if (wordSpaceSlider !== null && wordSpaceSlider !== undefined) {
+    wordSpaceSlider.addEventListener('change', handleWordSpaceSliderUpdate);
+  }
+
+});
+
 // There are custom properties that track what breakpoint the site is using
 function getQhNavState() {
   // NOTE: Strings from CSS get returned exactly as written
@@ -299,6 +433,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+
+  // Toggle button for mobile menu
+  // Different than the global in that we toggle a class on the parent
+  // Also needs to hook into global Page Overlay actions
+  var qh_toggle_btn = document.getElementById('js__minor-toggle');
+  var qh_nav_minor = document.getElementById('js__minor-menu');
+  if (qh_toggle_btn !== null && qh_toggle_btn !== undefined) {
+    qh_toggle_btn.addEventListener('click', function(event) {
+      // This may look the same as other accordion type buttons but it is not
+      // The target is a parent element, not an adjacent sibling
+      // console.log('qh_toggle_btn clicked');
+      // a11yClick function restricts keypress to spacebar or enter
+      if (a11yClick(event) === true) {
+        // console.log('qh_toggle_btn a11y clicked');
+        if (qh_nav_minor.classList.contains('qh__nav-minor--expanded')) {
+          qh_nav_minor.classList.remove('qh__nav-minor--expanded');
+          deactivatePageOverlay();
+        } else {
+          allMenuCloser();
+          activatePageOverlay();
+          qh_nav_minor.classList.add('qh__nav-minor--expanded');
+        }
+      }
+    });
+  }
+});
+
 document.addEventListener("DOMContentLoaded", function() {
 
   // Hide notifications based on cookie value.
@@ -329,165 +491,3 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-
-document.addEventListener('DOMContentLoaded', function() {
-
-  // Toggle button for mobile menu
-  // Different than the global in that we toggle a class on the parent
-  // Also needs to hook into global Page Overlay actions
-  var qh_toggle_btn = document.getElementById('js__minor-toggle');
-  var qh_nav_minor = document.getElementById('js__minor-menu');
-  if (qh_toggle_btn !== null && qh_toggle_btn !== undefined) {
-    qh_toggle_btn.addEventListener('click', function(event) {
-      // This may look the same as other accordion type buttons but it is not
-      // The target is a parent element, not an adjacent sibling
-      // console.log('qh_toggle_btn clicked');
-      // a11yClick function restricts keypress to spacebar or enter
-      if (a11yClick(event) === true) {
-        // console.log('qh_toggle_btn a11y clicked');
-        if (qh_nav_minor.classList.contains('qh__nav-minor--expanded')) {
-          qh_nav_minor.classList.remove('qh__nav-minor--expanded');
-          deactivatePageOverlay();
-        } else {
-          allMenuCloser();
-          activatePageOverlay();
-          qh_nav_minor.classList.add('qh__nav-minor--expanded');
-        }
-      }
-    });
-  }
-});
-
-window.onload = function(){
-	fontSizeSliderSet();
-	lineHeightSliderSet();
-	wordSpaceSliderSet();
-}
-
-function handleFontSizeSliderUpdate(e) {
-  document.documentElement.style.setProperty(`--fontSizeModifier`, this.value);
-  document.cookie = "fontSizeModifier="+this.value+"; max-age=31536000; path=/; samesite=strict";
-}
-
-function fontSizeSliderSet() {
-  let fontSizeModifier = getComputedStyle(document.documentElement).getPropertyValue('--fontSizeModifier');
-  var fontSizeElement = document.getElementById('font_size_modifier')
-  if (fontSizeElement !== null && fontSizeElement !== undefined) {
-    fontSizeElement.setAttribute('value',fontSizeModifier.trim());
-  }
-}
-
-function handleLineHeightSliderUpdate(e) {
-  document.documentElement.style.setProperty(`--lineHeightModifier`, this.value);
-  document.cookie = "lineHeightModifier="+this.value+"; max-age=31536000; path=/; samesite=strict";
-}
-
-function lineHeightSliderSet() {
-  let lineHeightModifier = getComputedStyle(document.documentElement).getPropertyValue('--lineHeightModifier');
-  var lineSpaceElement = document.getElementById('line_height_modifier');
-  if (lineSpaceElement !== null && lineSpaceElement !== undefined) {
-    lineSpaceElement.setAttribute('value',lineHeightModifier.trim());
-  }
-}
-
-function handleWordSpaceSliderUpdate(e) {
-  document.documentElement.style.setProperty(`--wordSpaceModifier`, this.value);
-  document.cookie = "wordSpaceModifier="+this.value+"; max-age=31536000; path=/; samesite=strict";
-}
-
-function wordSpaceSliderSet() {
-  let wordSpaceModifier = getComputedStyle(document.documentElement).getPropertyValue('--wordSpaceModifier');
-  var wordSpaceElement = document.getElementById('word_space_modifier');
-  if (wordSpaceElement !== null && wordSpaceElement !== undefined) {
-    wordSpaceElement.setAttribute('value',wordSpaceModifier.trim());
-  }
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-
-  var qh_usersettings_btn = document.getElementById('js__user-settings__toggle');
-  //console.log('qh_usersettings_btn: ' + qh_usersettings_btn);
-  if (qh_usersettings_btn !== null && qh_usersettings_btn !== undefined) {
-    //console.log('qh_usersettings_btn is not null or undefined');
-    qh_usersettings_btn.addEventListener('click', function(event) {
-      // a11yClick function restricts keypress to spacebar or enter
-      if (a11yClick(event) === true) {
-        var expanded = qh_usersettings_btn.getAttribute('aria-expanded');
-        if (expanded == 'true') {
-          qh_usersettings_btn.setAttribute('aria-expanded', 'false');
-          deactivatePageOverlay();
-        } else {
-          allMenuCloser();
-          qh_usersettings_btn.setAttribute('aria-expanded', 'true');
-          activatePageOverlay();
-        }
-      }
-    });
-  }
-
-
-  // Light mode settings
-  const lightModeToggle = document.getElementById('light_mode_switch');
-  const lightModeReset = document.getElementById('light_mode_reset');
-  var osLightMode = getComputedStyle(document.documentElement).getPropertyValue('--osLightMode').trim();
-
-  if (lightModeToggle !== null && lightModeToggle !== undefined) {
-    lightModeToggle.addEventListener('click', function(e) {
-      e.preventDefault();
-      if (osLightMode == 'dark') {
-        // set a cookie to expire the setting
-        console.log('check: '+osLightMode);
-        document.cookie = "lightMode=light; max-age=31536000; path=/; samesite=strict";
-        document.getElementsByTagName("html")[0].classList.remove('dark');
-        document.getElementsByTagName("html")[0].classList.add('light');
-      } else if (document.getElementsByTagName("html")[0].classList.contains('dark')) {
-        // set a cookie to save the setting
-        document.cookie = "lightMode=light; max-age=31536000; path=/; samesite=strict";
-        document.getElementsByTagName("html")[0].classList.remove('dark');
-        document.getElementsByTagName("html")[0].classList.add('light');
-      } else {
-        // set a cookie to save the setting
-        document.cookie = "lightMode=dark; max-age=31536000; path=/; samesite=strict";
-        document.getElementsByTagName("html")[0].classList.remove('light');
-        document.getElementsByTagName("html")[0].classList.add('dark');
-      }
-      e.blur();
-    });
-  }
-
-  if (lightModeReset !== null && lightModeReset !== undefined) {
-    lightModeReset.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.cookie = "lightMode=auto; max-age=31536000; path=/; samesite=strict";
-      document.getElementsByTagName("html")[0].classList.remove('dark');
-      document.getElementsByTagName("html")[0].classList.remove('light');
-      e.blur();
-    });
-  }
-
-
-  // Font size settings
-  const fontSizeSlider = document.getElementById('font_size_modifier');
-  var currentFontSizeModifier = getComputedStyle(document.documentElement).getPropertyValue('--fontSizeModifier');
-
-  if (fontSizeSlider !== null && fontSizeSlider !== undefined) {
-    fontSizeSlider.addEventListener('change', handleFontSizeSliderUpdate);
-  }
-
-  // Line-height settings
-  const lineHeightSlider = document.getElementById('line_height_modifier');
-  var currentlineHeightModifier = getComputedStyle(document.documentElement).getPropertyValue('--lineHeightModifier');
-
-  if (lineHeightSlider !== null && lineHeightSlider !== undefined) {
-    lineHeightSlider.addEventListener('change', handleLineHeightSliderUpdate);
-  }
-
-  // Word space settings
-  const wordSpaceSlider = document.getElementById('word_space_modifier');
-  var currentWordSpaceModifier = getComputedStyle(document.documentElement).getPropertyValue('--wordSpaceModifier');
-
-  if (wordSpaceSlider !== null && wordSpaceSlider !== undefined) {
-    wordSpaceSlider.addEventListener('change', handleWordSpaceSliderUpdate);
-  }
-
-});
