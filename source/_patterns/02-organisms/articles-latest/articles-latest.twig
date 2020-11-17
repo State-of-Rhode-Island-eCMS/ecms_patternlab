@@ -1,6 +1,34 @@
 <div class="qh__articles-latest" aria-label="Articles">
-  <h2 class="qh__articles-latest__title">{{ title }}</h2>
+  <h2 class="qh__articles-latest__title">
+    {{ articles_latest.title }}
+    <a class="qh__articles-latest__all" href="#more">All articles</a>
+  </h2>
   <div class="qh__articles-latest__list">
     {{ rows }}
+
+    {% include '@molecules/teaser-article/teaser-article.twig' with {
+        title: articles_latest.1.title,
+        date: articles_latest.1.date,
+        excerpt: articles_latest.1.excerpt,
+        url: articles_latest.1.url
+      }
+    %}
+
+    {% include '@molecules/teaser-article/teaser-article.twig' with {
+        title: articles_latest.2.title,
+        date: articles_latest.2.date,
+        excerpt: articles_latest.2.excerpt,
+        url: articles_latest.2.url
+      }
+    %}
+
+    {% include '@molecules/teaser-article/teaser-article.twig' with {
+        title: articles_latest.3.title,
+        date: articles_latest.3.date,
+        excerpt: articles_latest.3.excerpt,
+        url: articles_latest.3.url
+      }
+    %}
   </div>
+  <p class="qh__articles-latest__all"><a href="#more" class="qh__btn">All articles</a></p>
 </div>
