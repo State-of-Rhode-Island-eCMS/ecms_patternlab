@@ -1,0 +1,165 @@
+<!-- Specific to RI.gov sites for the Department of Health -->
+
+<style>
+  @keyframes watsonSlideInRight {
+    from {
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+    }
+
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  #watson.chatLauncher {
+    animation-duration: 0.5s;
+    transition-duration: 0.5s;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 501;
+    border: none;
+    background-color: var(--fc__default__accent);
+    color: var(--fc__default__accent__fg);
+    font-size: 1rem;
+    text-align: left;
+    opacity: 0;
+    padding: 0.5rem 1em;
+    visibility: hidden;
+  }
+
+  #watson.chatLauncher.open {
+    animation-name: watsonSlideInRight;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #watson.chatLauncher:focus {
+    outline: 2px solid currentColor;
+    outline-offset: -4px;
+  }
+
+  .watson-chat-dismiss {
+    background-color: var(--fc__default__bg);
+    background-image: none;
+    box-shadow: 0 0 1px rgba(0,0,0,.5);
+    color: var(--fc__default__fg);
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+    opacity: 0;
+    position: fixed;
+    right: 1.5rem;
+    z-index: 502;
+    transition: opacity 500ms ease;
+    visibility: hidden;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .watson-chat-dismiss {
+      box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }
+  }
+  .dark .watson-chat-dismiss {
+    box-shadow: 0 0 1px rgba(255,255,255,.5);
+  }
+
+  .chatLauncher.open + .watson-chat-dismiss {
+    bottom: 6rem;
+    opacity: 1;
+    visibility: visible;
+  }
+  .chatLauncher.open + .watson-chat-dismiss::after {
+    content: 'Dismiss';
+  }
+  .chatLauncher.closed + .watson-chat-dismiss {
+    bottom: 1.5rem;
+    opacity: 1;
+    visibility: visible;
+  }
+  .chatLauncher.closed + .watson-chat-dismiss::after {
+    content: 'Open Chat';
+  }
+</style>
+<button type="button" class="chatLauncher" id="watson">
+  <div>
+    <b>Coronavirus questions?</b> Chat with<br>
+    our <b>Virtual Assistant, Rhoda.</b>
+  </div>
+</button>
+<script>
+
+
+  window.watsonAssistantChatOptions = {
+    integrationID: "62e720b6-038e-48e9-a56d-c7286949ccfa", // The ID of this integration.
+    region: "us-east", // The region your integration is hosted in.
+    serviceInstanceID: "e38bc064-d9d7-4048-b028-42a24d4114e1", // The ID of your service instance.
+    // default
+    // onLoad: function(instance) { instance.render(); },
+    // custom disclaimer
+    disclaimer: { isOn: true, disclaimerHTML: 'In providing information through this virtual assistant, the Rhode Island Department of Health (RIDOH) has attempted to be as correct as possible. However, our collective understanding of this global pandemic has evolved frequently and materially over time, and is likely to continue to do so; as a result, there can be no assurances that this virtual assistant will always reflect the best, most recent, and most thorough research available. RIDOH makes no promises, and disclaims any and all liability, with respect to the accuracy, currency, or completeness of the information provided by this virtual assistant. Before it is used or relied upon, RIDOH strongly recommends information from this virtual assistant be independently verified.<br /><br />This virtual assistant provides, and directs the user to, information on COVID-19 from various entities and websites including, but not limited to, the Centers for Disease Control and Prevention, ReopeningRI.com, Back2SchoolRI.com, and health.ri.gov. This information is intended to help the user (a) understand certain aspects of COVID-19 better, (b) make educated decisions related to COVID-19 prevention, testing, quarantine, and isolation, and (c) seek appropriate medical care for COVID-19-related concerns. This virtual assistant cannot provide professional medical advice, does not make medical diagnoses, and is not a substitute for obtaining professional medical treatment. The user should not provide any personally identifiable or private health information to any other person without understanding (i) whether the proposed recipient has a legally justifiable reason to receive such personal or private information and (ii) whether the proposed recipient is required to maintain the confidentiality of such information under HIPAA. If you are experiencing a medical emergency that requires immediate attention, please call 911.'},
+    // custom slide-out launcher
+    // Style set above.
+    showLauncher: false,
+    onLoad: function(instance) {
+
+      // Get a cookie
+      const watsonUserSetting = getCookie('watson');
+
+      // Select the button element from the page.
+      const watsonButton = document.querySelector('.chatLauncher');
+
+      // Add the event listener to open your web chat.
+      watsonButton.addEventListener('click', function clickListener() {
+        instance.openWindow();
+      });
+      // Render the web chat. Nothing appears on the page, because the launcher is
+      // hidden and the web chat window is closed by default.
+      instance.render().then(function() {
+        // Now that web chat has been rendered (but is still closed), we make the
+        // custom launcher button visible.
+        if (watsonUserSetting !== null && watsonUserSetting !== undefined && watsonUserSetting == 'closed') {
+          watsonButton.style.display = 'block';
+          watsonButton.classList.add('closed');
+        } else {
+          watsonButton.style.display = 'block';
+          watsonButton.classList.add('open');
+        }
+      });
+
+      // Dismiss the chat, but keep a new button in view to bring it back
+      var watson =  document.getElementById("watson");
+      if (watson !== null && watson !== undefined) {
+        // Add a button to close the chat window
+        // <button class="watson-chat-dismiss">Dismiss</button>
+        var closer = document.createElement('button');
+        closer.setAttribute('type', 'button');
+        closer.setAttribute('class', 'watson-chat-dismiss');
+        // Insert the element before our target element
+        watson.parentNode.insertBefore(closer, watson.nextSibling);
+
+        // Add an action to close the Watson chat
+        closer.addEventListener('click', function(event) {
+          if (a11yClick(event) === true) {
+            if (watson.classList.contains('open')) {
+              watson.classList.remove('open');
+              watson.classList.add('closed');
+              // Set a cookie
+              document.cookie = "watson=closed; max-age=31536000; path=/; samesite=strict";
+            } else {
+              watson.classList.add('open');
+              watson.classList.remove('closed');
+              // Set a cookie
+              document.cookie = "watson=open; max-age=31536000; path=/; samesite=strict";
+            }
+          }
+        });
+      }
+    }
+  };
+
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>

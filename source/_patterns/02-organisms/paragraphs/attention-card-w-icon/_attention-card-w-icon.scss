@@ -18,7 +18,7 @@
       height: 100%;
     }
   }
-  
+
   // Light colored background
   &::before {
     background-color: var(--fc__attention-card__bar);
@@ -90,6 +90,7 @@
   &__content {
     color: var(--fc__attention-card__fg);
     padding: $general-v-spacing $general-h-spacing;
+    width: calc(100% - #{($card-leftbar-width + $general-h-spacing)});
 
     p,
     ul,
@@ -108,7 +109,7 @@
     color: var(--fc__attention-card__fg);
     display: flex;
     flex-flow: column;
-    font-size: 1.25rem; 
+    font-size: 1.25rem;
     align-items: flex-start;
     justify-content: center;
     min-height: $card-header-min-height--sm;
@@ -120,7 +121,7 @@
       --font-size-scaler-value: var(--h3-scaler-value);
       font-size: var(--font-size);
     }
-  
+
     @media (min-width: $bp--large) {
       min-height: $card-header-min-height--lg;
     }

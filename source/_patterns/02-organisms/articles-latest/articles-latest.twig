@@ -1,6 +1,17 @@
 <div class="qh__articles-latest" aria-label="Articles">
-  <h2 class="qh__articles-latest__title">{{ title }}</h2>
+  <h2 class="qh__articles-latest__title">
+    {{ title }}
+
+    {% if more_url %}
+      <a class="qh__articles-latest__all" href="{{ more_url }}">{{ more_title }}</a>
+    {% endif %}
+  </h2>
+
   <div class="qh__articles-latest__list">
     {{ rows }}
   </div>
+
+  {% if more_url %}
+    <p class="qh__articles-latest__all"><a href="{{ more_url }}" class="qh__btn">{{ more_title }}</a></p>
+  {% endif %}
 </div>

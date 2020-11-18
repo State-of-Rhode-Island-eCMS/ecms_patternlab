@@ -277,6 +277,8 @@
         "header": [
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "navy" },
+          { "fnName": "link", "colorName": "white" },
+          { "fnName": "link--hover", "colorName": "ocean" },
           { "fnName": "social__link", "colorName": "ocean" },
           # Hover should use the accent or violator color
           { "fnName": "social__link--hover", "colorName": "hope-gold" }
@@ -425,6 +427,8 @@
         "header": [
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "navy--dark" },
+          { "fnName": "link", "colorName": "white" },
+          { "fnName": "link--hover", "colorName": "ocean" },
           { "fnName": "social__link", "colorName": "ocean" },
           # Hover should use the accent or violator color
           { "fnName": "social__link--hover", "colorName": "hope-gold" }
@@ -518,6 +522,8 @@
         "header": [
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "rhody-red--dark" },
+          { "fnName": "link", "colorName": "white" },
+          { "fnName": "link--hover", "colorName": "hope-gold" },
           { "fnName": "social__link", "colorName": "white" },
           # Hover should use the accent or violator color
           { "fnName": "social__link--hover", "colorName": "hope-gold" }
@@ -627,6 +633,8 @@
         "header": [
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "quahog--darker" },
+          { "fnName": "link", "colorName": "white" },
+          { "fnName": "link--hover", "colorName": "hope-gold" },
           { "fnName": "social__link", "colorName": "rhody-red" },
           # Hover should use the accent or violator color
           { "fnName": "social__link--hover", "colorName": "hope-gold" }

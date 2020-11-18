@@ -1,7 +1,6 @@
 /* Settings */
 
-.settings-menu {
-  @include qh__p;
+.qh__settings-menu {
   --text-opsz: 10;
   display: inline-block;
   position: relative;
@@ -14,47 +13,26 @@
     width: em(20);
   }
 
-  .settings__menu {
-    background-color: var(--fc__official__bg);
-    color: var(--fc__official__fg);
-    height: 1px;
-    list-style: none;
-    margin: 0;
-    opacity: 0;
-    overflow: hidden;
-    padding: 0.25rem;
-    position: absolute;
-    text-align: left;
-    top: 1.4rem;
-    transition: opacity 0.2s ease-in, height 0.1s ease-in;
-    left: 0;
-    width: 100%;
-    z-index: z(drop-down-menu);
-  }
-
-  &-trigger {
-    background-color: var(--fc__official__bg);
-    display: block;
-    font-size: 0.875rem;
-    line-height: 1;
+  &__toggle {
+    display: inline-block;
     padding: 0.15rem 0.25rem;
     position: relative;
     text-align: right;
     z-index: z(mobile-nav-bar);
 
+    // Link & hover colors in global-header.scss
     &,
     &:visited {
       text-decoration: none;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: underline;
     }
 
-    &:focus,
-    .qh__page-header &:focus {
+    &:focus {
       outline-color: transparent;
-      text-decoration: underline;
     }
 
     &:active {
@@ -66,96 +44,87 @@
         text-decoration: unset;
       }
     }
-  }
+  } // end &__toggle
 
-  html:not(.touch-nav) &:focus-within,
-  html:not(.touch-nav) &:hover,
-  &.open {
-    .settings__menu {
-      height: auto;
-      left: auto;
-      max-height: 80vh;
-      min-height: 50vh;
-      min-width: 22rem;
-      opacity: 1;
-      overflow-y: scroll;
-      position: absolute;
-      right: 0;
-      z-index: z(drop-down-menu);
-    }
-
-    &.toc .menu {
-      right: -5rem;
-    }
-
-    &.settings .menu {
-      right: -2vw;
-    }
-  }
-}
-
-.settings__menu {
-  line-height: 1.3;
-  list-style: none;
-  word-spacing: 0;
-
-  li {
-    border-bottom: solid 1px rgba(0,0,0,.25);
-    &:last-child {
-      border-bottom: none;
-    }
-    &.active {
-      padding: 0.5em 0.15em;
-    }
-  }
-
-  a {
-    display: block;
-    font-size: 0.875rem;
-    padding: 0.5em 0.15em;
-
-    .wf-inactive & {
-      font-size: 0.9rem;
-      padding: 0.475em 0.15em;
-    }
-
-    &,
-    &:visited {
-      text-decoration: underline;
-    }
-
-    html:not(.touch-nav) &:hover {
-      background-color: rgba(0,0,0,.05);
-      text-decoration: underline;
-    }
-
-    &:focus {
-      background-color: rgba(0,0,0,.05);
-      text-decoration: underline;
-    }
-
-    &:active {
-      background-color: rgba(0,0,0,.05);
-      text-decoration: underline;
-    }
-  }
-
-  li {
+  &__list {
+    background-color: var(--fc__official__bg);
+    color: var(--fc__official__fg);
     line-height: 1.3;
-    margin-bottom: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
+    opacity: 0;
+    max-height: 80vh;
+    min-height: 50vh;
+    max-width: rem(480);
+    min-width: rem(288); // 320 phone minus 32px
+    width: 50vw;
+    overflow-y: scroll;
+    padding: 0.5rem 0;
+    position: absolute;
+      top: 100%; right: - ($general-v-spacing/2);
+    text-align: left;
+    transition:
+      opacity $transition-duration-base $transition-timing-base 0ms,
+      visibility 0ms linear 0ms;
+    visibility: hidden;
+    word-spacing: 0;
+    z-index: z(drop-down-menu);
 
-  .label {
+    [aria-expanded="true"] + & {
+       opacity: 1;
+       transition:
+         opacity $transition-duration-base $transition-timing-base 0ms,
+         visibility 0ms linear $transition-duration-base;
+       visibility: visible;
+    }
+
+    li {
+      border-bottom: $border-sm solid rgba(0,0,0,0.25);
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &.active {
+        padding: 0.5em 0.15em;
+      }
+    }
+
+    .qh__u__btn-as-text {
+
+      &,
+      &:visited {
+        color: var(--fc__official__link);
+      }
+
+      &:hover,
+      &:focus {
+        color: var(--fc__official__link--hover);
+      }
+
+      &:focus {
+        outline-color: var(--fc__official__link);
+      }
+    }
+  } // end &___list
+
+  &__label {
     display: inline-block;
-    font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.3;
     padding-bottom: 0.25rem;
     word-spacing: 0;
   }
 
-  a.toggle-lightmode {
+  &__boolean {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    padding: 0.5rem 1.5vw;
+  }
+
+  button.toggle-lightmode {
+    line-height: 1.2;
+
     .dark & {
       &.switch:after {
         content: ' to light';
@@ -172,7 +141,6 @@
           content: ' to light';
         }
       }
-
     }
     .light & {
       &.switch:after {
@@ -181,21 +149,19 @@
     }
   }
 
-  .settings-toggle {
-    display: grid;
-    grid-template-columns: 4fr 5fr;
-    padding: 0 1.5vw;
-  }
-
-  .settings-slider {
+  &__slider {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 0 1.5vw;
-    input {
+
+    .qh__form__input__range {
       grid-column: 1 / 3;
     }
-    div {
-      font-size: 0.875rem;
+
+    .low {}
+
+    .high {
+      text-align: right;
     }
   }
 }

@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // If JS is loaded, change the no-js class
   document.documentElement.classList.remove("no-js");
   document.documentElement.classList.add("js");
+  // Add an empty element that is styled when a menu is open
   addPageOverlay();
 });
 
@@ -40,9 +41,9 @@ function allMenuCloser() {
   }
 
   // Close settings nav
-  var settingsMenuTrigger = document.getElementById('settings_trigger');
-  if (settingsMenuTrigger !== null) {
-    settingsMenuTrigger.parentElement.classList.remove('open');
+  var qh_usersettings_btn = document.getElementById('js__user-settings__toggle');
+  if (qh_usersettings_btn !== null) {
+    qh_usersettings_btn.setAttribute('aria-expanded', 'false');
   }
 }
 
@@ -97,7 +98,7 @@ function getCookie(name) {
 // Any other functionality (like swapping the text content if true/false) needs to be in the component JS
 document.addEventListener("DOMContentLoaded", function() {
 
-  document.querySelectorAll(".js__expand-collapse").forEach(toggle_element => {
+  document.querySelectorAll(".js__expand-collapse").forEach(function(toggle_element) {
     toggle_element.addEventListener('click', function(event) {
       if (a11yClick(event) === true) {
         var expanded = toggle_element.getAttribute('aria-expanded');
@@ -113,5 +114,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
       }
     })
-  })
+  });
+
 });

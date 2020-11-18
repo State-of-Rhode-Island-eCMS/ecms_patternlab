@@ -17,8 +17,19 @@ body {
 }
 
 ::selection {
-  background-color: var(--fc__primary__bg);
-  color: var(--fc__primary__fg);
+  background-color: var(--fc__default__fg);
+  color: var(--fc__default__bg);
+}
+
+// IE 11 still needs this
+header,
+nav,
+article,
+main,
+section,
+aside,
+footer {
+  display: block;
 }
 
 nav ul,

@@ -1,5 +1,10 @@
 .qh__breadcrumb {
 
+  &__wrapper {
+    @include qh-content-maxwidth();
+    margin-top: 2rem;
+  }
+
   // <ol>
   &__list {}
 
@@ -14,6 +19,12 @@
         display: none;
       }
     }
+
+    &:last-child {
+      .qh__breadcrumb__page::after {
+        content: '';
+      }
+    }
   }
 
   // <a> and <span>
@@ -23,7 +34,7 @@
   }
 
   @at-root {
-    a#{&}__page::after {
+    *#{&}__page::after {
       display: inline-block;
       content: '»';
       margin: 0 0.5em;

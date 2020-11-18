@@ -1,4 +1,5 @@
 .qh__teaser-article {
+  padding-bottom: $general-v-spacing;
   position: relative;
   z-index: 1;
 
@@ -21,6 +22,9 @@
 
     time {
       font-size: 87.5%; // about 16px
+      font-style: italic;
+      font-variant-numeric: oldstyle-nums;
+
     }
   }
 

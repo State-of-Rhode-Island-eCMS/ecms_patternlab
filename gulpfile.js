@@ -149,7 +149,8 @@ gulp.task('build:sass', () => {
     .pipe(sassImportJson({isScss: true}))
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
-      browsers: ['last 2 versions']
+      browsers: ['last 2 versions', 'ie 11'],
+      grid: 'autoplace'
     }))
     .pipe(gulp.dest((file) => {
       return file.base;

@@ -6,6 +6,7 @@ a {
   text-decoration-skip-ink: auto;
   transition: $transition-base;
 
+
   &:hover,
   &:focus {
     color: var(--fc__default__link--hover);
@@ -31,19 +32,20 @@ a {
   &[href^="tel:"],
   &[target="_blank"] {
 
+    &::after,
     &::before {
-      background-color: var(--fc__default__link--hover);
-      content: '';
+      background-color: currentColor;
       display: inline-block;
       height: 0.875em;
-      margin-right: 0.25em;
       vertical-align: baseline;
       width: 0.875em;
     }
 
     &:hover::before,
-    &:focus::before {
-      background-color: var(--fc__default__link);
+    &:focus::before,
+    &:hover::after,
+    &:focus::after  {
+      background-color: currentColor;
     }
   }
 
@@ -51,6 +53,8 @@ a {
   &[href^="mailto:"] {
 
     &::before {
+      content: '';
+      margin-right: 0.25em;
       mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M7.4 11.6L15 5.8H0z'/%3E%3Cpath d='M7.4 13.1L0 7.3V15h15V7.3z'/%3E%3C/svg%3E") no-repeat;
     }
   }
@@ -59,6 +63,8 @@ a {
   &[href^="tel:"] {
 
     &::before {
+      content: '';
+      margin-right: 0.25em;
       mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M13.3 15.8c-6.1.6-11.4-3.9-12-10 0-.3.1-.5.4-.6l2.4-.8c.3-.1.5 0 .7.3l1.4 2.5c.1.3.1.6-.1.8L4.8 9.3c1 1.8 2.7 3.1 4.6 3.8l1-1.5c.1-.2.4-.3.6-.2l2.7.9c.3.1.4.3.4.6l-.3 2.5c0 .2-.2.4-.5.4zM6.7 4.2c.7.4 1.1 1.1 1.1 1.9 0 .3-.2.4-.5.4L7 6.4c-.2 0-.3-.2-.3-.4 0-.4-.2-.7-.5-.9-.2 0-.2-.2-.2-.4l.1-.3c.1-.2.4-.3.6-.2zM7.8.1c2.9 1.1 4.6 4.1 4 7.1 0 .2-.3.4-.5.3l-.3-.1c-.2-.1-.3-.3-.3-.5.5-2.5-.9-5-3.3-5.9-.1 0-.2-.2-.2-.4l.1-.3c.1-.2.3-.3.5-.2zm-.6 2c1.8.8 2.9 2.7 2.6 4.6 0 .2-.3.4-.5.3L9 6.9c-.1 0-.3-.2-.2-.4.2-1.4-.6-2.8-1.9-3.4-.2-.1-.3-.3-.3-.5l.1-.3c.1-.1.3-.3.5-.2z'/%3E%3C/svg%3E") no-repeat;
     }
   }
@@ -68,22 +74,36 @@ a {
   // rel="noopener nofollow noreferrer"
   &[target="_blank"] {
 
-    &::before {
+    &::after {
+      content: '';
+      margin-left: 0.25em;
       mask: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M8.5 14.5h-7v-7H5V6H0v10h10v-5H8.5z'/%3E%3Cpath d='M7 3v1.5h3.8l-8.2 8.1.8.8 8.1-8.2V9H13V3z'/%3E%3C/svg%3E") no-repeat;
     }
   }
 
   // Utility classes
   .qh__u__no-mail &[href^="mailto:"],
-  .qh__u__no-tel &[href^="tel:"],
-  .qh__u__no-external &[target="_blank"] {
+  .qh__u__no-tel &[href^="tel:"] {
     &::before {
+      display: none;
+    }
+  }
+
+  .qh__u__no-external &[target="_blank"] {
+    &::after {
       display: none;
     }
   }
 }
 
-// Assumed to be any 'visually-hidden focusable skip-link'
+p,
+ul {
+  a {
+    font-weight: calc(var(--p-font-wght) * 1.25);
+  }  
+}
+
+// Assumed to be any of class list 'visually-hidden focusable skip-link'
 .skip-link {
   display: block;
   margin: 0 auto;

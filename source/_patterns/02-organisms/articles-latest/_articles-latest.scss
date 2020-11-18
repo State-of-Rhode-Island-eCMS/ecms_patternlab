@@ -1,13 +1,40 @@
 .qh__articles-latest {
   padding: $general-v-spacing 0;
 
+  // <h2>
   &__title {
     margin: 0;
     padding-bottom: $general-v-spacing;
+    position: relative;
   }
 
+  // <h2> <a>
+  &__title &__all {
+    font-size: 50%;
+    position: absolute;
+      top: 0.5em; right: 0;
+
+    @include breakpoint-down($bp--medium) {
+      display: none;
+    }
+  }
+
+  // <p>
+  &__list + &__all {
+
+    @include breakpoint-up($bp--medium) {
+      display: none;
+    }
+  }
+
+  // <ul>
   &__list {
     margin: 0 #{- $general-h-spacing};
+
+    .qh__teaser-article {
+      padding-left: $general-h-spacing;
+      padding-right: $general-h-spacing;
+    }
 
     @media (min-width: $bp--medium) {
       display: flex;
@@ -18,13 +45,13 @@
   }
 
   &__list > * {
-    padding: 0 $general-h-spacing;
-
-    @media (max-width: ($bp--medium - em(1))) {
-      & + & {
-        padding-top: $general-v-spacing;
-      }
-    }
+//     padding: 0 $general-h-spacing;
+//
+//     @media (max-width: ($bp--medium - em(1))) {
+//       & + & {
+//         padding-top: $general-v-spacing;
+//       }
+//     }
 
     @media (min-width: $bp--medium) {
       flex: 1 1 0;

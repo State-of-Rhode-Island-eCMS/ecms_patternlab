@@ -12,9 +12,9 @@ $border-xl: rem(21);
 $box-shadow-base: 0 0.125em 0.5em var(--c__quahog--dark--trans33);
 
 // Buttons
-$button-border-radius: em(3);
-$button-v-spacing: 1em;
-$button-h-spacing: 1.5em;
+$button-border-radius: rem(3);
+$button-v-spacing: 0.75rem;
+$button-h-spacing: 1.25rem;
 
 // Content max-width
 $content-max-small-screen: 93vw;
@@ -72,34 +72,29 @@ $zindex: (
   drop-down-menu: 500
 );
 
-/* Light mode */
+
 html {
+  // Light mode
   --osLightMode: light;
   @media (prefers-color-scheme:dark) {
     --osLightMode: dark;
   }
-}
 
-/* Font size modifier */
-html {
+  // Font size modifier
   --fontSizeModifier: 1;
-}
 
-/* Line-height modifier */
-html {
+  // Line-height modifier/
   --lineHeightModifier: 1;
-}
 
-/* word space modifier */
-html {
+  // word space modifier
   --wordSpaceModifier: 0;
 }
 
-/* Typography variables */
 
-/* Preprocessed for fallbacks */
+// Typography variables
+// Preprocessed for fallbacks
 
-/* Default 'normal' weight for body text */
+// Default 'normal' weight for body text
 $default-body-wght: 350;
 body {
   --default-body-wght: #{$default-body-wght};
@@ -107,17 +102,17 @@ body {
   --st-font-wght: #{$default-body-wght};
 }
 
-/* Set base text size for all calcs */
+// Set base text size for all calcs
 $text-base-size: 16;
 
-/* Change px values here for all font sizing */
+// Change px values here for all font sizing
 $p-size-s-px: 16;
 $p-size-m-px: 18;
 $p-size-l-px: 20;
 
 $h1-size-s-px: 32;
 $h1-size-m-px: 60;
-$h1-size-l-px: 88;
+$h1-size-l-px: 76;
 
 $h2-size-s-px: 24;
 $h2-size-m-px: 36;
@@ -143,12 +138,12 @@ $bq-size-s-px: 20;
 $bq-size-m-px: 22;
 $bq-size-l-px: 24;
 
-/* small text */
+// small text
 $st-size-s-px: 12;
 $st-size-m-px: 13;
 $st-size-l-px: 14;
 
-/* Font size REM values */
+// Font size REM values
 $p-size-s-value: $p-size-s-px / $text-base-size;
 $p-size-l-value: $p-size-l-px / $text-base-size;
 
@@ -176,7 +171,7 @@ $bq-size-l-value: $bq-size-l-px / $text-base-size;
 $st-size-s-value: $st-size-s-px / $text-base-size;
 $st-size-l-value: $st-size-l-px / $text-base-size;
 
-/* Font size REMs */
+// Font size REMs
 $p-size-s: $p-size-s-px / $text-base-size * 1rem;
 $p-size-m: $p-size-m-px / $text-base-size * 1rem;
 $p-size-l: $p-size-l-px / $text-base-size * 1rem;
@@ -213,7 +208,7 @@ $st-size-s: $st-size-s-px / $text-base-size * 1rem;
 $st-size-m: $st-size-m-px / $text-base-size * 1rem;
 $st-size-l: $st-size-l-px / $text-base-size * 1rem;
 
-/* Line-height (needs to be in EMs) */
+// Line-height (needs to be in EMs)
 $p-lh-s: 1.5;
 $p-lh-m: 1.525;
 $p-lh-l: 1.55;
@@ -250,7 +245,7 @@ $st-lh-s: 1.1;
 $st-lh-m: 1.2;
 $st-lh-l: 1.3;
 
-/* Custom props for modern browsers */
+// Custom props for modern browsers
 body {
   --p-size-s: #{$p-size-s};
   --p-size-m: #{$p-size-m};
@@ -288,7 +283,6 @@ body {
   --st-size-m: #{$st-size-m};
   --st-size-l: #{$st-size-l};
 
-
   --p-lh-s: #{$p-lh-s};
   --p-lh-m: #{$p-lh-m};
   --p-lh-l: #{$p-lh-l};
@@ -325,12 +319,10 @@ body {
   --st-lh-m: #{$st-lh-m};
   --st-lh-l: #{$st-lh-l};
 
-}
 
-/* Scaling accessible typography setup */
+  // Scaling accessible typography setup
 
-/* Set scaling values */
-body {
+  // Set scaling values
   --p-scaler-value: 1.25;
   --p-lh-scaler-value: 3;
 
@@ -357,11 +349,10 @@ body {
 
   --st-scaler-value: 1;
   --st-lh-scaler-value: 2;
-
 }
 
 * {
-  /* default starting values for scaling formulas */
+  // default starting values for scaling formulas
   --font-size-min-value: #{$p-size-s};
   --font-size-max-value: #{$p-size-l};
   --font-size-scaler-value: var(--p-scaler-value);
@@ -369,18 +360,18 @@ body {
   --font-lh-max-value: #{$p-lh-l};
   --font-lh-scaler-value: var(--p-lh-scaler-value);
 
-  /* facter in fontSizeModifier preference */
+  // factor in fontSizeModifier preference
   --font-size-min: calc(var(--font-size-min-value) * var(--fontSizeModifier) * 1rem);
   --font-size-max: calc(var(--font-size-max-value) * var(--fontSizeModifier)  * 1rem);
 
-  /* reusable font-size var for each text element */
+  // reusable font-size var for each text element
   --font-size: clamp(var(--font-size-min), calc(0.5rem + (var(--font-size-scaler-value) * 1vw)), var(--font-size-max));
 
-  /* facter in lineHeightModifier preference */
+  // factor in lineHeightModifier preference
   --font-lh-min: calc(var(--font-lh-min-value) * var(--lineHeightModifier) * 1em);
   --font-lh-max: calc(var(--font-lh-max-value) * var(--lineHeightModifier) * 1em);
 
-  /* reusable line-height var for each text element */
+  // reusable line-height var for each text element
   --line-height: clamp(var(--font-lh-min), calc(var(--font-lh-scaler-value) * 1vw), var(--font-lh-max));
 
   --word-spacing: calc( 1em * var(--wordSpaceModifier) );

@@ -5,9 +5,11 @@
   <div class="qh__teaser-promotion qh__teaser-promotion__layout">
 {% endif %}
 
-    <div class="qh__teaser-promotion__img-wrapper">
-      {{ img }}
-    </div>
+    {% if img %}
+      <div class="qh__teaser-promotion__img-wrapper">
+        {{ img }}
+      </div>
+    {% endif %}
 
     <div class="qh__teaser-promotion__content">
       {% if display_title %}

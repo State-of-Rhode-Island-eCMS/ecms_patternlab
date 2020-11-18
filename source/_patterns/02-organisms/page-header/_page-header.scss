@@ -16,6 +16,23 @@
         flex: 1 1 auto;
       }
     }
+
+    a {
+      &,
+      &:visited {
+        color: var(--fc__header__link);
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: var(--fc__header__link--hover);
+      }
+
+      &:focus {
+        outline-color: var(--fc__header__link);
+      }
+    }
   }
 
   &__inner {
@@ -59,24 +76,4 @@
       display: none;
     }
   } // end &__inner
-
-  a {
-    &,
-    &:visited {
-      color: var(--fc__header__link);
-    }
-
-    &:hover,
-    &:focus {
-      color: var(--fc__header__link--hover);
-    }
-
-    &:focus {
-      outline-color: var(--fc__header__link--focus);
-    }
-
-    &:active {
-      color: var(--fc__header__link--active);
-    }
-  }
 }
