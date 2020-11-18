@@ -24,6 +24,9 @@
   @supports (width: min(10px, 5px)) {
     max-width: var(--content-max-width);
   }
+  @include onlyIE() {
+    max-width: $content-max-width;
+  }
 }
 
 // Icons
@@ -57,6 +60,13 @@
     + li {
       margin-top: 0;
     }
+  }
+}
+
+// Browser Hacking
+@mixin onlyIE() {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
   }
 }
 
