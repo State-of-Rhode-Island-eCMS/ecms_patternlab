@@ -6,6 +6,7 @@ a {
   text-decoration-skip-ink: auto;
   transition: $transition-base;
 
+
   &:hover,
   &:focus {
     color: var(--fc__default__link--hover);
@@ -93,6 +94,13 @@ a {
       display: none;
     }
   }
+}
+
+p,
+ul {
+  a {
+    font-weight: calc(var(--p-font-wght) * 1.25);
+  }  
 }
 
 // Assumed to be any of class list 'visually-hidden focusable skip-link'

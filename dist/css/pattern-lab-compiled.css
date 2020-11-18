@@ -1288,6 +1288,10 @@ a {
   .qh__u__no-external a[target="_blank"]::after {
     display: none; }
 
+p a,
+ul a {
+  font-weight: calc(var(--p-font-wght) * 1.25); }
+
 .skip-link {
   display: block;
   margin: 0 auto;
