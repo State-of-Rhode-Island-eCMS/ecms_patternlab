@@ -301,6 +301,10 @@ $grid-gap: 1.5rem;
     .block:first-child:last-child {
       height: 100%;
     }
+
+    > * + * {
+      margin-top: $general-v-spacing;    
+    }
   }
 
   // Full width
