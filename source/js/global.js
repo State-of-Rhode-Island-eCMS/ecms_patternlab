@@ -100,6 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.querySelectorAll(".js__expand-collapse").forEach(function(toggle_element) {
     toggle_element.addEventListener('click', function(event) {
+      event.preventDefault();
       if (a11yClick(event) === true) {
         var expanded = toggle_element.getAttribute('aria-expanded');
         var target_id = toggle_element.getAttribute('aria-controls');
