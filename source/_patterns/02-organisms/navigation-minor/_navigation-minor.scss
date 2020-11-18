@@ -83,6 +83,7 @@
         left: - rem(30);
       transform: skew(25deg, 0deg);
       transition: $transition-base;
+      z-index: -1;
     }
 
     @include breakpoint-up($bp__single-col-content) {
@@ -100,11 +101,14 @@
       z-index: unset;
     }
 
-    &.qh__accordion {
-      border: $border-xs solid transparent;
-      margin-top: 0;
-      max-height: 80vh;
-      overflow: scroll;
+    // When a left drawer menu, don't let it get bigger than the viewport and
+    // allow interior scrolling for very long lists of page nav items
+    @include breakpoint-down($bp__single-col-content) {
+      &.qh__accordion {
+        margin-top: 0;
+        max-height: 80vh;
+        overflow-y: scroll;
+      }
     }
 
     &__sub {
@@ -236,16 +240,17 @@
     }
 
     // Treat a current link as disabled. It should not have a visual state change
-    &--current {
-      cursor: default;
-      pointer-events: none;
-    }
+    // Not working well if that current link is a parent to an accordion
+    //&--current {
+    //  cursor: default;
+    //  pointer-events: none;
+    //}
 
     &--current,
     .js &--current.qh__accordion__button[aria-expanded="true"] {
       background-color: var(--fc__nav-minor__bg);
       color: var(--fc__nav-minor__fg);
-      font-weight: 550; // TODO: Reset with the proper weight
+      font-weight: 650; // Bumped up from 550 2020.11.18 by J.
       text-decoration: none;
     }
   }
