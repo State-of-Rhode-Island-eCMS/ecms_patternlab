@@ -1,14 +1,16 @@
 // Desktop Only! Needs mobile styling added once the pattern is established for mobile breakpoints
-$grid-gap: 2rem;
+$grid-gap: 1.5rem;
 
 .qh-layout-section {
-  display: grid;
-  grid-gap: $grid-gap;
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: center;
   max-width: var(--content-max-width);
   margin: 0 auto;
 
   // Temp gutters and VR
-  padding: 2rem 0;
+  padding: $general-v-spacing 0;
 
   // Column sizing
   &--col-size {
@@ -38,93 +40,266 @@ $grid-gap: 2rem;
       width: 100%;
     }
 
+
     // Two Column sizing
     &-25-75 {
-      grid-template-columns: 1fr;
-      @media screen and (min-width: $bp--medium) {
-        grid-template-columns: 1fr 2fr;
+      @include breakpoint-up($bp--small) {
+        flex-flow: row wrap;
       }
-      @media screen and (min-width: $bp--xlarge) {
-        grid-template-columns: 1fr 3fr;
+
+      .qh-layout-section__col {
+
+        @include breakpoint-up($bp--small) {
+          &--first {
+            flex: 1 1 calc(33% - #{$grid-gap});
+
+            @include onlyIE() {
+              width: calc(33% - #{$grid-gap/2});
+            }
+          }
+          &--second {
+            flex: 1 1 calc(67% - #{$grid-gap});
+
+            @include onlyIE() {
+              width: calc(67% - #{$grid-gap/2});
+            }
+          }
+          + .qh-layout-section__col {
+            margin-left: $grid-gap;
+          }
+        }
+
+        @include breakpoint-up($bp--large) {
+          &--first {
+            flex: 1 1 calc(25% - #{$grid-gap});
+
+            @include onlyIE() {
+              width: calc(25% - #{$grid-gap/2});
+            }
+          }
+          &--second {
+            flex: 1 1 calc(75% - #{$grid-gap});
+
+            @include onlyIE() {
+              width: calc(75% - #{$grid-gap/2});
+            }
+          }
+        }
+
+        @include breakpoint-up($bp--xlarge) {
+          &--second {
+            padding-left: 2vw;
+          }
+        }
       }
     }
 
     &-33-67 {
-      grid-template-columns: 1fr;
-      @media screen and (min-width: $bp--medium) {
-        grid-template-columns: 1fr 2fr;
+      @include breakpoint-up($bp--medium) {
+        flex-flow: row wrap;
+      }
+
+      .qh-layout-section__col {
+
+        @include breakpoint-up($bp--medium) {
+          &--first {
+            flex: 1 1 calc(33% - #{$grid-gap});
+
+            @include onlyIE() {
+              width: calc(33% - #{$grid-gap/2});
+            }
+          }
+          &--second {
+            flex: 1 1 calc(67% - #{$grid-gap});
+
+            @include onlyIE() {
+              width: calc(67% - #{$grid-gap/2});
+            }
+          }
+          + .qh-layout-section__col {
+            margin-left: $grid-gap;
+          }
+        }
+
+        @include breakpoint-up($bp--xlarge) {
+          &--second {
+            padding-left: 2vw;
+          }
+        }
       }
     }
 
     &-50-50 {
-      grid-template-columns: 1fr;
-      @media screen and (min-width: $bp--medium) {
-        grid-template-columns: 1fr 1fr;
+      @include breakpoint-up($bp--medium) {
+        flex-flow: row wrap;
+      }
+
+      .qh-layout-section__col {
+
+        @include breakpoint-up($bp--medium) {
+          flex: 1 1 calc(50% - #{$grid-gap});
+
+          @include onlyIE() {
+            width: calc(50% - #{$grid-gap/2});
+          }
+
+          + .qh-layout-section__col {
+            margin-left: $grid-gap;
+          }
+        }
       }
     }
 
     &-67-33 {
-      grid-template-columns: 1fr;
-      @media screen and (min-width: $bp--medium) {
-        grid-template-columns: 2fr 1fr;
+      @include breakpoint-up($bp--medium) {
+        flex-flow: row wrap;
+      }
+
+      .qh-layout-section__col {
+
+        @include breakpoint-up($bp--medium) {
+          &--first {
+            flex: 1 1 calc(67% - #{$grid-gap});
+
+            @include onlyIE() {
+              width: calc(67% - #{$grid-gap/2});
+            }
+          }
+          &--second {
+            flex: 1 1 calc(33% - #{$grid-gap});
+
+            @include onlyIE() {
+              width: calc(33% - #{$grid-gap/2});
+            }
+          }
+          + .qh-layout-section__col {
+            margin-left: $grid-gap;
+          }
+        }
+
+        @include breakpoint-up($bp--xlarge) {
+          &--first {
+            padding-right: 2vw;
+          }
+        }
       }
     }
 
     &-75-25 {
-      grid-template-columns: 1fr;
-      @media screen and (min-width: $bp--medium) {
-        grid-template-columns: 2fr 1fr;
+      @include breakpoint-up($bp--small) {
+        flex-flow: row wrap;
       }
-      @media screen and (min-width: $bp--xlarge) {
-        grid-template-columns: 3fr 1fr;
+
+      .qh-layout-section__col {
+
+        @include breakpoint-up($bp--small) {
+          &--first {
+            flex: 1 1 calc(67% - #{$grid-gap});
+
+            @include onlyIE() {
+              width: calc(67% - #{$grid-gap/2});
+            }
+          }
+          &--second {
+            flex: 1 1 calc(33% - #{$grid-gap});
+
+            @include onlyIE() {
+              width: calc(33% - #{$grid-gap/2});
+            }
+          }
+          + .qh-layout-section__col {
+            margin-left: $grid-gap;
+          }
+        }
+
+        @include breakpoint-up($bp--large) {
+          &--first {
+            flex: 1 1 calc(75% - #{$grid-gap});
+
+            @include onlyIE() {
+              width: calc(75% - #{$grid-gap/2});
+            }
+          }
+          &--second {
+            flex: 1 1 calc(25% - #{$grid-gap});
+
+            @include onlyIE() {
+              width: calc(25% - #{$grid-gap/2});
+            }
+          }
+        }
+
+        @include breakpoint-up($bp--xlarge) {
+          &--first {
+            padding-right: 2vw;
+          }
+        }
       }
     }
 
+
     // Three and four column grids are repeated with equal columns.
     &-33-repeat {
-      grid-template-columns: 1fr;
-      @media screen and (min-width: $bp--medium) {
-        grid-template-columns: 1fr 1fr 1fr;
+      @include breakpoint-up($bp--medium) {
+        flex-flow: row wrap;
+      }
+
+      .qh-layout-section__col {
+
+        @include breakpoint-up($bp--medium) {
+          flex: 1 1 calc(33.3% - #{$grid-gap});
+
+          @include onlyIE() {
+            width: calc(33% - #{($grid-gap * 3)/4});
+          }
+
+          + .qh-layout-section__col {
+            margin-left: $grid-gap;
+          }
+        }
       }
     }
 
     &-25-repeat {
-      grid-template-columns: 1fr;
-      @media screen and (min-width: $bp--medium) {
-        grid-template-columns: 1fr 1fr;
+      @include breakpoint-up($bp--small) {
+        flex-flow: row wrap;
       }
-      @media screen and (min-width: $bp--xlarge) {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+      .qh-layout-section__col {
+
+        @include breakpoint-between($bp--small, $bp--xlarge) {
+          flex: 1 1 calc(50% - #{$grid-gap});
+
+          @include onlyIE() {
+            width: calc(50% - #{$grid-gap/2});
+          }
+
+          &:nth-child(even) {
+            margin-left: $grid-gap;
+          }
+        }
+
+        @include breakpoint-up($bp--xlarge) {
+          flex: 1 1 calc(25% - #{$grid-gap});
+
+          @include onlyIE() {
+            width: calc(25% - #{$grid-gap * 0.875});
+          }
+
+          + .qh-layout-section__col {
+            margin-left: $grid-gap;
+          }
+        }
       }
     }
   }
 
   // Column elements
   &__col {
+    margin-bottom: $general-v-spacing;
 
     .block:first-child:last-child {
       height: 100%;
-    }
-
-    // spacing between blocks within columns
-    > * + * {
-      margin-top: $general-v-spacing;
-    }
-
-    &--first {
-      max-width: 100%;
-    }
-
-    &--second {
-      max-width: 100%;
-    }
-
-    &--third {
-      max-width: 100%;
-    }
-
-    &--fourth {
-      max-width: 100%;
     }
   }
 
