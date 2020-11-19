@@ -4,11 +4,27 @@ form {
 }
 
 fieldset {
-  background-color: var(--c__quahog--dark--trans33);
+  background-color: var(--c__quahog--lightest);
   border: $border-xs solid var(--fc__default__border);
   padding: $general-v-spacing 0 $general-v-spacing $general-h-spacing;
 
+  .dark & {
+    background-color: var(--c__quahog--dark--trans33);
+
+    > legend {
+      background-color: var(--c__quahog--dark--trans33);
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--c__quahog--dark--trans33);
+
+    > legend {
+      background-color: var(--c__quahog--dark--trans33);
+    }
+  }
+
   > legend {
+    background-color: var(--c__quahog--lightest);
     display: block;
     font-family: $font-sans-static;
     font-size: 1rem;
@@ -42,7 +58,7 @@ fieldset {
 input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
 textarea,
 select {
-  background-color: var(--fc__default__bg); // need style for light theme
+  background-color: var(--fc__default__bg);
   border: $border-sm solid var(--fc__default__border);
   border-radius: $input-border-radius;
   color: var(--fc__default__fg);
@@ -96,9 +112,10 @@ select {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
+  // Light mode style
   background-image:
-    url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Cpath fill='%23d4d4d4' d='M22 10c-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12-5.4-12-12-12zm0 18.5l-8.8-8.8 2.4-2.4 6.4 6.4 6.4-6.4 2.4 2.4-8.8 8.8z'/%3E%3C/svg%3E"),
-    linear-gradient(to bottom, transparent 0%, var(--c__quahog--dark--trans33) 95%);
+    url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Cpath fill='%23404040' d='M22 10c-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12-5.4-12-12-12zm0 18.5l-8.8-8.8 2.4-2.4 6.4 6.4 6.4-6.4 2.4 2.4-8.8 8.8z'/%3E%3C/svg%3E"),
+    linear-gradient(to bottom, transparent 25%, var(--c__quahog--dark--trans15) 100%);
   background-repeat: no-repeat, repeat;
   background-position: right 0.75em top 50%, 0 0;
   background-size: 2em auto, 100%;
@@ -107,6 +124,17 @@ select {
   display: block;
   max-width: 100%;
   padding-right: 2.25em;
+
+  .dark & {
+    background-image:
+    url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Cpath fill='%23d4d4d4' d='M22 10c-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12-5.4-12-12-12zm0 18.5l-8.8-8.8 2.4-2.4 6.4 6.4 6.4-6.4 2.4 2.4-8.8 8.8z'/%3E%3C/svg%3E"),
+    linear-gradient(to bottom, transparent 0%, var(--c__quahog--dark--trans33) 95%);
+  }
+  @media (prefers-color-scheme: dark) {
+    background-image:
+      url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Cpath fill='%23d4d4d4' d='M22 10c-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12-5.4-12-12-12zm0 18.5l-8.8-8.8 2.4-2.4 6.4 6.4 6.4-6.4 2.4 2.4-8.8 8.8z'/%3E%3C/svg%3E"),
+      linear-gradient(to bottom, transparent 0%, var(--c__quahog--dark--trans33) 95%);
+  }
 
   [dir="rtl"] & {
     background-position: left 0.75em top 50%, 0 0;
