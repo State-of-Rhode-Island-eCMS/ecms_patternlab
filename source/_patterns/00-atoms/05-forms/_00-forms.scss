@@ -8,21 +8,6 @@ fieldset {
   border: $border-xs solid var(--fc__default__border);
   padding: $general-v-spacing 0 $general-v-spacing $general-h-spacing;
 
-  .dark & {
-    background-color: var(--c__quahog--dark--trans33);
-
-    > legend {
-      background-color: var(--c__quahog--dark--trans33);
-    }
-  }
-  @media (prefers-color-scheme: dark) {
-    background-color: var(--c__quahog--dark--trans33);
-
-    > legend {
-      background-color: var(--c__quahog--dark--trans33);
-    }
-  }
-
   > legend {
     background-color: var(--c__quahog--lightest);
     display: block;
@@ -44,6 +29,21 @@ fieldset {
         font-family: $font-sans-fallback;
         font-weight: bold;
       }
+    }
+  }
+
+  .dark & {
+    background-color: var(--c__quahog--dark--trans33);
+
+    > legend {
+      background-color: var(--c__quahog--dark--trans33);
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--c__quahog--dark--trans33);
+
+    > legend {
+      background-color: var(--c__quahog--dark--trans33);
     }
   }
 
