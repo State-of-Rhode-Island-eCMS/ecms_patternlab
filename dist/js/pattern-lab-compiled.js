@@ -332,7 +332,6 @@ document.addEventListener("DOMContentLoaded", function() {
   var notificationCookie = getCookie('siteNotifications');
   if (notificationCookie !== null && notificationCookie !== undefined) {
     if (notificationCookie === 'hidden') {
-      console.log('hidden');
       document.getElementById('summary-notifications').setAttribute('aria-expanded', 'false');
       document.getElementById('details-notifications').classList.remove('js__aria-expanded');
     }
@@ -345,7 +344,6 @@ document.addEventListener("DOMContentLoaded", function() {
       if (a11yClick(event) === true) {
         var expanded = notificationsToggle.getAttribute('aria-expanded');
 
-        console.log('clicked')
         if (expanded == 'true') {
           document.cookie = "siteNotifications=display; max-age=31536000; path=/; samesite=strict";
         } else {
