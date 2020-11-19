@@ -98,6 +98,7 @@
     position: relative;
     z-index: z(drop-down-menu);
     @include breakpoint-up($bp__single-col-content) {
+      max-height: unset;
       z-index: unset;
     }
 

@@ -3170,6 +3170,7 @@ body {
     z-index: 500; }
     @media (min-width: 50em) {
       .qh__nav-minor__list {
+        max-height: unset;
         z-index: unset; } }
     @media (max-width: 49.9375em) {
       .qh__nav-minor__list.qh__accordion {
