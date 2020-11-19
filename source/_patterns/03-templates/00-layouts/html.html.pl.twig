@@ -45,7 +45,6 @@
 					// Check for Light Mode preference
 					if (cookies[i].includes('lightMode=dark')) {
 						// set a cookie to save the setting
-						console.log('it’s dark out');
 						document.cookie = "lightMode=dark;max-age=31536000;path=/;samesite=strict";
 						document.documentElement.className += " dark";
 						lightSetting = true;
@@ -60,7 +59,6 @@
 						// get the value
 						let fontSizeModifier = fontSizeCookieString.split('=');
 						let fontSizeModifierValue = fontSizeModifier[1];
-						console.log(fontSizeModifierValue);
 						document.cookie = "fontSizeModifier="+fontSizeModifierValue+";max-age=31536000;path=/;samesite=strict";
 						document.documentElement.style.setProperty(`--fontSizeModifier`, fontSizeModifierValue);
 
@@ -70,7 +68,6 @@
 						// get the value
 						let lineHeightModifier = lineHeightCookieString.split('=');
 						let lineHeightModifierValue = lineHeightModifier[1];
-						console.log(lineHeightModifierValue);
 						document.cookie = "lineHeightModifier="+lineHeightModifierValue+";max-age=31536000;path=/;samesite=strict";
 						document.documentElement.style.setProperty(`--lineHeightModifier`, lineHeightModifierValue);
 
@@ -80,7 +77,6 @@
 						// get the value
 						let wordSpaceModifier = wordSpaceCookieString.split('=');
 						let wordSpaceModifierValue = wordSpaceModifier[1];
-						console.log(wordSpaceModifierValue);
 						document.cookie = "wordSpaceModifier="+wordSpaceModifierValue+";max-age=31536000;path=/;samesite=strict";
 						document.documentElement.style.setProperty(`--wordSpaceModifier`, wordSpaceModifierValue);
 					}
