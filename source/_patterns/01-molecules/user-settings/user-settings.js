@@ -74,14 +74,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // If using automatic cookie, set body class so toggle works
   if(lightModeCookie == 'auto') {
-    document.getElementsByTagName("html")[0].classList.add(osLightMode)
+    //document.getElementsByTagName("html")[0].classList.add(osLightMode)
   }
 
   if (lightModeToggle !== null && lightModeToggle !== undefined) {
     lightModeToggle.addEventListener('click', function(e) {
       e.preventDefault();
 
-      if (document.getElementsByTagName("html")[0].classList.contains('dark')) {
+      if ((document.getElementsByTagName("html")[0].classList.contains('dark')) || ((osLightMode == 'dark') && (lightModeCookie == 'auto')) || ((osLightMode == 'dark') && (lightModeCookie == 'dark'))) {
         // set a cookie to save the setting
         document.cookie = "lightMode=light; max-age=31536000; path=/; samesite=strict";
         document.getElementsByTagName("html")[0].classList.remove('dark');
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementsByTagName("html")[0].classList.remove('light');
 
       // Add in OS Default class.
-      document.getElementsByTagName("html")[0].classList.add(osLightMode)
+      //document.getElementsByTagName("html")[0].classList.add(osLightMode)
 
       e.blur();
     });
