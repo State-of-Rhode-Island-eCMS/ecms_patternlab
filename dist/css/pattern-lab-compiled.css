@@ -744,6 +744,9 @@ body {
 /* following element spacing selector, just inside node content */
 .node > * + * {
   margin-top: var(--body-text-spacer); }
+  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    .node > * + * {
+      margin-top: 1.25rem; } }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: var(--fc__default__hx__fg); }
@@ -789,6 +792,9 @@ h1 {
       --font-lh-scaler-value: var(--h1-lh-scaler-value);
       line-height: var(--line-height);
       word-spacing: var(--word-spacing); } }
+  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    h1 {
+      margin-bottom: 1.25rem; } }
 
 h2 {
   font-family: "Roboto Slab", var(--font-serif-fallback);
@@ -831,6 +837,10 @@ h2 {
       --font-lh-scaler-value: var(--h2-lh-scaler-value);
       line-height: var(--line-height);
       word-spacing: var(--word-spacing); } }
+  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    h2 {
+      margin-top: 2.5rem;
+      margin-bottom: 0.625rem; } }
   h2:first-of-type::after, h2.emphasis::after {
     content: ' ';
     display: block;
@@ -838,6 +848,10 @@ h2 {
     margin-top: calc(var(--body-text-spacer) * 0.85);
     margin-bottom: calc(var(--body-text-spacer) * 0.85);
     width: 1.125em; }
+    @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      h2:first-of-type::after, h2.emphasis::after {
+        margin-top: 1.0625rem;
+        margin-bottom: 1.0625rem; } }
 
 h3 {
   font-family: "Work Sans", var(--font-sans-fallback);
@@ -880,6 +894,10 @@ h3 {
       --font-lh-scaler-value: var(--h3-lh-scaler-value);
       line-height: var(--line-height);
       word-spacing: var(--word-spacing); } }
+  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    h3 {
+      margin-top: 1.875rem;
+      margin-bottom: 0.625rem; } }
 
 h4 {
   font-family: "Roboto Slab", var(--font-serif-fallback);
@@ -922,6 +940,10 @@ h4 {
       --font-lh-scaler-value: var(--h4-lh-scaler-value);
       line-height: var(--line-height);
       word-spacing: var(--word-spacing); } }
+  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    h4 {
+      margin-top: 1.875rem;
+      margin-bottom: 0.625rem; } }
 
 h5 {
   font-family: "Roboto Slab", var(--font-serif-fallback);
@@ -964,6 +986,10 @@ h5 {
       --font-lh-scaler-value: var(--h5-lh-scaler-value);
       line-height: var(--line-height);
       word-spacing: var(--word-spacing); } }
+  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    h5 {
+      margin-top: 1.875rem;
+      margin-bottom: 0.625rem; } }
 
 h6 {
   font-family: "Roboto Slab", var(--font-serif-fallback);
@@ -1006,6 +1032,10 @@ h6 {
       --font-lh-scaler-value: var(--h6-lh-scaler-value);
       line-height: var(--line-height);
       word-spacing: var(--word-spacing); } }
+  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    h6 {
+      margin-top: 1.875rem;
+      margin-bottom: 0.625rem; } }
 
 li,
 dt,
@@ -3123,6 +3153,9 @@ body {
       transition: -webkit-transform 250ms ease;
       transition: transform 250ms ease;
       transition: transform 250ms ease, -webkit-transform 250ms ease; }
+      @supports not (font-size: clamp(1rem, 2vw, 1.25rem)) {
+        .qh__nav-minor {
+          left: 0; } }
       .qh__nav-minor > ul {
         -webkit-transform: translateX(-3rem);
                 transform: translateX(-3rem);
