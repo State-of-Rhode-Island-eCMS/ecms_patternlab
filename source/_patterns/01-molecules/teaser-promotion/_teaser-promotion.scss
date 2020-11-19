@@ -11,8 +11,9 @@
     display: block;
 
     // Hide external link indicator.
-    &::before {
-      display: none !important;
+    &::before,
+    &[target="_blank"]::after {
+      display: none;
     }
 
     &:hover {

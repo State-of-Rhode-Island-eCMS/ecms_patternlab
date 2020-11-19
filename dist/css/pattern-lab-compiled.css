@@ -2363,8 +2363,8 @@ table {
     margin-top: 1.5rem; }
   .qh__teaser-promotion--link {
     display: block; }
-    .qh__teaser-promotion--link::before {
-      display: none !important; }
+    .qh__teaser-promotion--link::before, .qh__teaser-promotion--link[target="_blank"]::after {
+      display: none; }
     .qh__teaser-promotion--link:hover {
       border: 0.125rem solid var(--fc__default__link--hover); }
   .qh__teaser-promotion__layout {
