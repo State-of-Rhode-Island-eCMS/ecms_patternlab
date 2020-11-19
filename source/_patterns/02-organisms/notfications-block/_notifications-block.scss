@@ -26,6 +26,12 @@
   // <p>
   &__title {
     font-size: 1rem;
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      --font-size-min-value: 0.925;
+      --font-size-max-value: 1;
+      --font-size-scaler-value: var(--p-scaler-value);
+      font-size: var(--font-size);
+    }
   }
 
   &__header {

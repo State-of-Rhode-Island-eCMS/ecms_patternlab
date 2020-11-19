@@ -2,7 +2,15 @@
   padding: ($general-v-spacing / 2) 0;
   border-top: $border-xs solid var(--fc__notification__border);
 
-  p {
-    font-size: rem(16);
+  p,
+  strong,
+  a {
+    font-size: 1rem;
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      --font-size-min-value: 0.925;
+      --font-size-max-value: 1;
+      --font-size-scaler-value: var(--p-scaler-value);
+      font-size: var(--font-size);
+    }
   }
 }
