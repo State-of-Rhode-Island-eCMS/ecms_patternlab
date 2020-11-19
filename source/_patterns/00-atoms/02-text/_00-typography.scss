@@ -1,4 +1,4 @@
-
+$text-spacer-fallback-value: 1.25rem;
 
 /* text-size proportional spacer */
 body {
@@ -9,6 +9,10 @@ body {
 .node {
   > * + * {
     margin-top: var(--body-text-spacer);
+
+    @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      margin-top: $text-spacer-fallback-value;
+    }
   }
 }
 
@@ -124,6 +128,10 @@ h1 {
   font-style: normal;
   margin-top: 0;
   margin-bottom: calc(var(--body-text-spacer) * 1);
+
+  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    margin-bottom: $text-spacer-fallback-value;
+  }
 }
 
 h2 {
@@ -178,6 +186,11 @@ h2 {
   margin-top: calc(var(--body-text-spacer) * 2);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
 
+  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    margin-top: ($text-spacer-fallback-value * 2);
+    margin-bottom: ($text-spacer-fallback-value * 0.5);
+  }
+
   &:first-of-type,
   &.emphasis {
     &::after {
@@ -187,6 +200,11 @@ h2 {
       margin-top: calc(var(--body-text-spacer) * 0.85);
       margin-bottom: calc(var(--body-text-spacer) * 0.85);
       width: 1.125em;
+
+      @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+        margin-top: ($text-spacer-fallback-value * 0.85);
+        margin-bottom: ($text-spacer-fallback-value * 0.85);
+      }
     }
   }
 }
@@ -241,6 +259,11 @@ h3 {
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
+
+  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    margin-top: ($text-spacer-fallback-value * 1.5);
+    margin-bottom: ($text-spacer-fallback-value * 0.5);
+  }
 }
 
 h4 {
@@ -294,6 +317,11 @@ h4 {
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
+
+  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    margin-top: ($text-spacer-fallback-value * 1.5);
+    margin-bottom: ($text-spacer-fallback-value * 0.5);
+  }
 }
 
 h5 {
@@ -347,6 +375,11 @@ h5 {
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
+
+  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    margin-top: ($text-spacer-fallback-value * 1.5);
+    margin-bottom: ($text-spacer-fallback-value * 0.5);
+  }
 }
 
 h6 {
@@ -396,9 +429,15 @@ h6 {
     line-height: var(--line-height);
     word-spacing: var(--word-spacing);
   }
+
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
+
+  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    margin-top: ($text-spacer-fallback-value * 1.5);
+    margin-bottom: ($text-spacer-fallback-value * 0.5);
+  }
 }
 
 // Grouped declarations of similar elements

@@ -163,6 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
       toggle_element.addEventListener('click', function(event) {
         // a11yClick function restricts keypress to spacebar or enter
         if (a11yClick(event) === true) {
+          event.preventDefault();
           var expanded = toggle_element.getAttribute('aria-expanded');
           // Close all
           qh_dd_btns.forEach(function(btn) {

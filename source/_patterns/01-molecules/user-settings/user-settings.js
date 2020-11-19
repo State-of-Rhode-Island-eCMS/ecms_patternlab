@@ -69,18 +69,19 @@ document.addEventListener("DOMContentLoaded", function() {
   // Light mode settings
   const lightModeToggle = document.getElementById('light_mode_switch');
   const lightModeReset = document.getElementById('light_mode_reset');
-  var osLightMode = getComputedStyle(document.documentElement).getPropertyValue('--osLightMode').trim();
+  const osLightMode = getComputedStyle(document.documentElement).getPropertyValue('--osLightMode').trim();
+  const lightModeCookie = getCookie('lightMode');
+
+  // If using automatic cookie, set body class so toggle works
+  if(lightModeCookie == 'auto') {
+    document.getElementsByTagName("html")[0].classList.add(osLightMode)
+  }
 
   if (lightModeToggle !== null && lightModeToggle !== undefined) {
     lightModeToggle.addEventListener('click', function(e) {
       e.preventDefault();
-      if (osLightMode == 'dark') {
-        // set a cookie to expire the setting
-        //console.log('check: '+osLightMode);
-        document.cookie = "lightMode=light; max-age=31536000; path=/; samesite=strict";
-        document.getElementsByTagName("html")[0].classList.remove('dark');
-        document.getElementsByTagName("html")[0].classList.add('light');
-      } else if (document.getElementsByTagName("html")[0].classList.contains('dark')) {
+
+      if (document.getElementsByTagName("html")[0].classList.contains('dark')) {
         // set a cookie to save the setting
         document.cookie = "lightMode=light; max-age=31536000; path=/; samesite=strict";
         document.getElementsByTagName("html")[0].classList.remove('dark');
@@ -99,8 +100,14 @@ document.addEventListener("DOMContentLoaded", function() {
     lightModeReset.addEventListener('click', function(e) {
       e.preventDefault();
       document.cookie = "lightMode=auto; max-age=31536000; path=/; samesite=strict";
+
+      // Remove any current body classes.
       document.getElementsByTagName("html")[0].classList.remove('dark');
       document.getElementsByTagName("html")[0].classList.remove('light');
+
+      // Add in OS Default class.
+      document.getElementsByTagName("html")[0].classList.add(osLightMode)
+
       e.blur();
     });
   }
