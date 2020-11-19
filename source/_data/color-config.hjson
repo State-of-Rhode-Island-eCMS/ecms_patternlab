@@ -98,6 +98,12 @@
       "hsl": "hsl(0, 0%, 83%)",
       "needs": "dark-text"
     },
+    "quahog--lightest": {
+      "name": "Quahog lightest",
+      "hue": "light light gray",
+      "hsl": "hsl(0, 0%, 95%)",
+      "needs": "dark-text"
+    },
     #
     # Navy
     #
