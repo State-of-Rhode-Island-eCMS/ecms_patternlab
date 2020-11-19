@@ -52,14 +52,22 @@ $sidebar-row-gap: rem(36);
 
   &__sidebar-middle {
     grid-area: sidebar-middle;
-    max-width: $sidebar-max;
-    margin-right: $sidebar-column-gap;
+    max-width: 89vw;
+    margin-top: $general-v-spacing;
+    @include breakpoint-up($bp__single-col-content) {
+      max-width: $sidebar-max;
+      margin-right: $sidebar-column-gap;
+      margin-top: unset;
+    }
   }
 
   &__sidebar-bottom {
     grid-area: sidebar-bottom;
-    max-width: $sidebar-max;
-    margin-right: $sidebar-column-gap;
+    max-width: 89vw;
+    @include breakpoint-up($bp__single-col-content) {
+      max-width: $sidebar-max;
+      margin-right: $sidebar-column-gap;
+    }
   }
 
   &__sidebar-bottom {
