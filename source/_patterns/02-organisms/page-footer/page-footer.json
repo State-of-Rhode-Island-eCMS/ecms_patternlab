@@ -4,5 +4,10 @@
     "footer_center": '<p><b>Office Hours</b><br>Monday – Friday<br>8:30 AM – 4:30 PM</p><p><a href="/">Vital Records 7:30 AM - 3:30 PM</a><br><a href="/">Food Protection 8:30 AM - 4 PM</a><br><a href="/">Parking restrictions until 3 PM</a></p><p><b>Publications Center</b><br><a href="#">Order Materials</a></p>',
     "footer_right": '<p><b>COVID-19 Info Line</b><br>Monday – Friday<br>7:30 AM - 7:00 PM<br>Saturday – Sunday</br>8:30 AM - 4:30 PM<br><a href="mailto:RIDOH.COVID19Questions@health.ri.gov">Email RIDOH COVID team</a></p>',
     "state_info": '<p><b>State of Rhode Island</b><br><a href="#">Office of the Governor</a><br><a href="#">RI.gov</a><br><a href="#">Elected Officials</a><br><a href="#">State Agencies (A-Z)</a></p>'
+  },
+  "node": {
+    "changed": {
+      "value": "2020-11-07"
+    }
   }
 }

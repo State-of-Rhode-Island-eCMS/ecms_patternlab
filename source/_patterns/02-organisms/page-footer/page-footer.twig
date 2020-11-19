@@ -19,8 +19,7 @@
         {% include ('@icons/ri-state-seal.svg') %}
         <p>
           © {{ "now"|date("Y") }}
-          {{ title }}.
-          {{ copyright }}
+          RI.gov. This page last updated on {{ node.changed.value|date('F jS, Y') }}. <a href="https://www.ri.gov/policies/">View accessibility, data, and privacy policies</a>
         </p>
       </div>
     </div>
