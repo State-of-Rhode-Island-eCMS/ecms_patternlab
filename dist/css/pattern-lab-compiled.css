@@ -208,6 +208,7 @@ html {
   --c__quahog: #404040;
   --c__quahog--medium: #6e6e6e;
   --c__quahog--light: #d4d4d4;
+  --c__quahog--lightest: #f2f2f2;
   --c__navy--dark: #1b243b;
   --c__navy: #293557;
   --c__navy--trans50: rgba(41, 53, 87, 0.5);
@@ -2352,8 +2353,18 @@ table {
 .qh__teaser-notification {
   padding: 0.75rem 0;
   border-top: 0.0625rem solid var(--fc__notification__border); }
-  .qh__teaser-notification p {
+  .qh__teaser-notification p,
+  .qh__teaser-notification strong,
+  .qh__teaser-notification a {
     font-size: 1rem; }
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      .qh__teaser-notification p,
+      .qh__teaser-notification strong,
+      .qh__teaser-notification a {
+        --font-size-min-value: 0.925;
+        --font-size-max-value: 1;
+        --font-size-scaler-value: var(--p-scaler-value);
+        font-size: var(--font-size); } }
 
 .qh__teaser-promotion {
   border: 0.125rem solid var(--fc__default__border);
@@ -3303,6 +3314,12 @@ body {
     width: 2rem; }
   .qh__notifications-block__title {
     font-size: 1rem; }
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      .qh__notifications-block__title {
+        --font-size-min-value: 0.925;
+        --font-size-max-value: 1;
+        --font-size-scaler-value: var(--p-scaler-value);
+        font-size: var(--font-size); } }
   .qh__notifications-block__header {
     color: var(--fc__notification__fg);
     display: -webkit-box;
