@@ -3151,7 +3151,6 @@ body {
 .qh__nav-minor {
   background-color: var(--fc__default__bg);
   border-top: 0.875rem solid var(--fc__nav-minor__border);
-  min-width: 20rem;
   overflow: visible; }
   @media (max-width: 49.9375em) {
     .qh__nav-minor {
@@ -4423,9 +4422,8 @@ body {
   @media (min-width: 50em) {
     .qh-layout__grid {
           grid-template-areas: 'sidebar-top content' 'sidebar-middle content' 'sidebar-bottom content';
-      -ms-grid-columns: minmax(12.5rem, max-content) minmax(0, 1fr);
-      grid-template-columns: minmax(12.5rem, -webkit-max-content) minmax(0, 1fr);
-      grid-template-columns: minmax(12.5rem, max-content) minmax(0, 1fr);
+      -ms-grid-columns: minmax(12.5rem, 22rem) minmax(0, 1fr);
+      grid-template-columns: minmax(12.5rem, 22rem) minmax(0, 1fr);
       -ms-grid-rows: min-content min-content 1fr;
       grid-template-rows: -webkit-min-content -webkit-min-content 1fr;
       grid-template-rows: min-content min-content 1fr;
@@ -4445,10 +4443,10 @@ body {
   -ms-grid-column: 1;
   grid-area: sidebar-top;
   max-width: 23.75rem;
-  margin-right: 5vw;
+  margin-right: 3vw;
   margin-bottom: 2.25rem; }
   [dir="rtl"] .qh-layout__sidebar-top {
-    margin-left: 5vw;
+    margin-left: 3vw;
     margin-right: 0; }
   @media (max-width: 49.9375em) {
     .qh-layout__sidebar-top {
@@ -4463,7 +4461,7 @@ body {
   @media (min-width: 50em) {
     .qh-layout__sidebar-middle {
       max-width: 23.75rem;
-      margin-right: 5vw;
+      margin-right: 3vw;
       margin-top: unset; } }
 
 .qh-layout__sidebar-bottom {
@@ -4503,7 +4501,7 @@ body {
   @media (min-width: 50em) {
     .qh-layout__sidebar-bottom {
       max-width: 23.75rem;
-      margin-right: 5vw; } }
+      margin-right: 3vw; } }
 
 .qh-layout__sidebar-bottom > div {
   margin-top: 1.5rem; }

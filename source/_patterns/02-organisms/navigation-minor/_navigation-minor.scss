@@ -13,7 +13,6 @@
 .qh__nav-minor {
   background-color: var(--fc__default__bg);
   border-top: $border-lg solid var(--fc__nav-minor__border);
-  min-width: rem(320);
   overflow: visible;
 
   @include breakpoint-down($bp__single-col-content) {
