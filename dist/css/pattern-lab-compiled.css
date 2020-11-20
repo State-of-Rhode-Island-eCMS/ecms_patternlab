@@ -3239,6 +3239,10 @@ body {
   .qh__nav-minor__item {
     position: relative;
     overflow: visible; }
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      .qh__nav-minor__list > .qh__nav-minor__item:first-child a {
+        font-size: clamp(1rem, 1.5vw, 1.125rem);
+        font-weight: 650; } }
     .qh__nav-minor__item:not(.qh__nav-minor__item__sub) + .qh__nav-minor__item:not(.qh__nav-minor__item__sub)::before {
       border-top: 0.125rem solid var(--fc__default__bg);
       content: '';
@@ -3307,12 +3311,15 @@ body {
   .qh__nav-minor .qh__accordion__button:active, .qh__nav-minor__link:active {
     color: var(--fc__nav-main__link--active); }
   .qh__nav-minor__link {
-    font-size: clamp(0.925rem, 1.5vw, 1rem);
-    line-height: clamp(1.2rem, 3vw, 1.3rem);
     padding: 1rem 1rem; }
-    .qh__nav-minor__link__sub {
-      font-size: clamp(0.875rem, 1.5vw, 0.925rem);
-      line-height: clamp(1.2rem, 3vw, 1.3rem); }
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      .qh__nav-minor__link {
+        font-size: clamp(0.925rem, 1.5vw, 1rem);
+        line-height: clamp(1.2rem, 3vw, 1.3rem); } }
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      .qh__nav-minor__link__sub {
+        font-size: clamp(0.875rem, 1.5vw, 0.925rem);
+        line-height: clamp(1.2rem, 3vw, 1.3rem); } }
     .qh__nav-minor__link--current,
     .js .qh__nav-minor__link--current.qh__accordion__button[aria-expanded="true"] {
       background-color: var(--fc__nav-minor__bg);

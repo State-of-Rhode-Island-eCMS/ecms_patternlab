@@ -129,6 +129,15 @@
     position: relative;
     overflow: visible;
 
+    .qh__nav-minor__list > &:first-child {
+      a {
+        @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+          font-size: clamp(1rem, 1.5vw, 1.125rem);
+          font-weight: 650;
+        }
+      }
+    }
+
     &__sub {}
 
     &:not(&__sub) + &:not(&__sub)::before {
@@ -237,13 +246,17 @@
 
   // <a>
   &__link {
-    font-size: clamp(0.925rem, 1.5vw, 1rem);
-    line-height: clamp(1.2rem, 3vw, 1.3rem);
     padding: $nav-a-v-spacing $nav-a-h-spacing--sm;
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      font-size: clamp(0.925rem, 1.5vw, 1rem);
+      line-height: clamp(1.2rem, 3vw, 1.3rem);
+    }
 
     &__sub {
-      font-size: clamp(0.875rem, 1.5vw, 0.925rem);
-      line-height: clamp(1.2rem, 3vw, 1.3rem);
+      @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+        font-size: clamp(0.875rem, 1.5vw, 0.925rem);
+        line-height: clamp(1.2rem, 3vw, 1.3rem);
+      }
     }
 
     // Treat a current link as disabled. It should not have a visual state change
