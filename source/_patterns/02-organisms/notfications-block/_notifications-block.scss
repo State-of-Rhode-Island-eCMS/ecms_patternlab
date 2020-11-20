@@ -89,11 +89,19 @@
       color: var(--fc__notification__link--active, var(--fc__defauilt__link--active));
     }
 
-    p {
-      max-width: none;
-      max-width: unset;
+    h4 {
+      color: var(--fc__notification__fg);
+      margin: 0 0 0.25rem;
     }
-
+    p {
+      max-width: 44em;
+      margin-left: auto;
+      margin-right: auto;
+      & + p {
+        margin-top: 0.75em;
+      }
+    }
+  
     // Expand and collapse if JS is present
     .js & {
       max-height: 0;

@@ -3407,9 +3407,15 @@ body {
       outline-color: var(--fc__notification__link--focus, var(--fc__defauilt__link--focus)); }
     .qh__notifications-block__content a:active {
       color: var(--fc__notification__link--active, var(--fc__defauilt__link--active)); }
+    .qh__notifications-block__content h4 {
+      color: var(--fc__notification__fg);
+      margin: 0 0 0.25rem; }
     .qh__notifications-block__content p {
-      max-width: none;
-      max-width: unset; }
+      max-width: 44em;
+      margin-left: auto;
+      margin-right: auto; }
+      .qh__notifications-block__content p + p {
+        margin-top: 0.75em; }
     .js .qh__notifications-block__content {
       max-height: 0;
       overflow: hidden;
