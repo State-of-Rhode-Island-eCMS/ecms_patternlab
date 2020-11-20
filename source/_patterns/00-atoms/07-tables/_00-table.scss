@@ -2,22 +2,26 @@ $table-cell-v-padding: 0.5rem;
 $table-cell-h-padding: 0.75rem;
 
 body {
+  // Light as default
   --fc__table__color-bright: #{qh-get-color('quahog--dark')};
   --fc__table__border__h: #{qh-get-color('quahog--dark--trans25')};
   --fc__table__border__v: #{qh-get-color('quahog--dark--trans15')};
 
-  &.dark {
+  // User changed theme to dark manually
+  .dark & {
     // TODO: 'white' does not come back as valid map. Need to investigate further.
     --fc__table__color-bright: #{qh-get-color(white)};
     --fc__table__border__h: #{qh-get-color('white--trans25')};
     --fc__table__border__v: #{qh-get-color('white--trans15')};
   }
 
+  // System preference dark mode but light class is not present
   @media (prefers-color-scheme: dark) {
-    // TODO: 'white' does not come back as valid map. Need to investigate further.
-    --fc__table__color-bright: #{qh-get-color(white)};
-    --fc__table__border__h: #{qh-get-color('white--trans25')};
-    --fc__table__border__v: #{qh-get-color('white--trans15')};
+    html:not(.light) & {
+      --fc__table__color-bright: #{qh-get-color(white)};
+      --fc__table__border__h: #{qh-get-color('white--trans25')};
+      --fc__table__border__v: #{qh-get-color('white--trans15')};
+    }
   }
 }
 
@@ -26,6 +30,18 @@ table {
   border-spacing: 0;
   margin-bottom: $general-v-spacing;
   width: 100%;
+
+  @include breakpoint-down($bp--medium) {
+    // Make small viewports allow horizontal scrolling
+    display: block;
+    position: relative;
+    overflow-y: auto;
+    max-height: 100%;
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
 
   thead th {
     border-bottom: $border-sm solid var(--fc__table__border__h);
