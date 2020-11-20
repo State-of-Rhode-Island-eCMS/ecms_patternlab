@@ -28,7 +28,7 @@
     // Styles pertaining to promotions inside flexible content areas.
     .qh-layout__content & {
 
-      @include breakpoint-up($bp--xxlarge) {
+      @include breakpoint-up($bp--xlarge) {
         flex-direction: row;
 
         .qh__teaser-promotion__content  {
@@ -36,7 +36,14 @@
           flex-direction: column;
           justify-content: center;
           margin: 0 auto;
+          text-align: left;
         }
+      }
+    }
+    .qh__paragraph__column-container & {
+      flex-direction: row;
+      @include breakpoint-up($bp--medium) {
+        flex-direction: column;
       }
     }
   }
