@@ -1,0 +1,86 @@
+{# TODO: Figure out how to make this layout builder block editable without attributes #}
+
+{# list of classes
+  qh__collection__no-style
+  qh__collection__primary-bg
+  qh__collection__primary-light-bg
+  qh__collection__coffee-milk-bg
+  qh__collection__border-btwn
+#}
+
+{%
+  set classes = [
+    'qh__text-card-collection',
+    'qh__collection__' ~ card_style
+  ]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2 class="qh__text-card-collection__title">{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {% if description %}
+    <div class="qh__text-card-collection__description">
+      {{ description }}
+    </div>
+  {% endif %}
+
+  <div class="qh__text-card-collection__cards">
+    {{ cards }}
+  </div>
+</div>
+
+{# Sample Output of entire layout section #}
+
+
+{# <div class="qh-layout-section--col-size-100 qh-layout-section qh-layout-section--col-count-1">
+   <div class="qh-layout-section__col qh-layout-section__col--first">
+      <div class="qh__text-card-collection qh__collection__primary-bg">
+         <h2 class="qh__text-card-collection__title">Latest Executive Orders</h2>
+         <div class="qh__text-card-collection__description">
+            <p>Starting November 9. A maximum of two spectators for any athlete younger than 18 will be allowed. All spectators and athletes are required to wear a mask at all times, including during practices and games.</p>
+         </div>
+         <div class="qh__text-card-collection__cards">
+            <div class="qh__text-card">
+               <h3 class="qh__text-card-collection__title">Social Gatherings</h3>
+               <div class="qh__text-card-collection__text">
+                  <p>Effective immediately, social gathering size is limited to the people you live with—your household. An adult who lives alone or is a single parent can gather with one other household, as long as the gathering is not more than five people.</p>
+               </div>
+            </div>
+            <div class="qh__text-card">
+               <h3 class="qh__text-card-collection__title">Early Closures</h3>
+               <div class="qh__text-card-collection__text">
+                  <p>All restaurants, bars, gyms, recreational facilities, and personal services must close at 10 p.m. Sunday – Thursday and at 10:30 p.m. on Friday and Saturday. (Effective November 8, 2020)</p>
+               </div>
+            </div>
+            <div class="qh__text-card">
+               <h3 class="qh__text-card-collection__title">Stay-At-Home Advisory </h3>
+               <div class="qh__text-card-collection__text">
+                  <p>In effect from 10 p.m. – 5 a.m. Sunday – Thursday and from 10:30 p.m. – 5 a.m. on Friday and Saturday. (Effective November 8, 2020)</p>
+               </div>
+            </div>
+            <div class="qh__text-card">
+               <h3 class="qh__text-card-collection__title">Social Gatherings</h3>
+               <div class="qh__text-card-collection__text">
+                  <p>Effective immediately, social gathering size is limited to the people you live with—your household. An adult who lives alone or is a single parent can gather with one other household, as long as the gathering is not more than five people.</p>
+               </div>
+            </div>
+            <div class="qh__text-card">
+               <h3 class="qh__text-card-collection__title">Early Closures</h3>
+               <div class="qh__text-card-collection__text">
+                  <p>All restaurants, bars, gyms, recreational facilities, and personal services must close at 10 p.m. Sunday – Thursday and at 10:30 p.m. on Friday and Saturday. (Effective November 8, 2020)</p>
+               </div>
+            </div>
+            <div class="qh__text-card">
+               <h3 class="qh__text-card-collection__title">Stay-At-Home Advisory </h3>
+               <div class="qh__text-card-collection__text">
+                  <p>In effect from 10 p.m. – 5 a.m. Sunday – Thursday and from 10:30 p.m. – 5 a.m. on Friday and Saturday. (Effective November 8, 2020)</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div> #}
