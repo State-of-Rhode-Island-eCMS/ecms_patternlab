@@ -1,14 +1,8 @@
-<div id="js__site-search" class="qh__site-search" role="search">
-  <form class="qh__site-search__form">
-    <div class="qh__site-search__container qh__form__nowrap">
-      <label class="visually-hidden">{{ "Search the site"|t }}</label>
-      <input class="qh__site-search__query" type="search" placeholder="{{ "Search the site"|t }}">
-      <button class="qh__site-search__submit" type="button">
-        <span class="qh__icon">
-          {% include ('@icons/search-glass.svg') %}
-        </span>
-        <span class="visually-hidden">{{ "Submit"|t }}</span>
-      </button>
-    </div>
-  </form>
+
+<div
+  {% if js_id %} id="js__site-search" {% endif %}
+  class="qh__site-search"
+  role="search"
+  >
+  {{ content }}
 </div>
