@@ -69,21 +69,22 @@ document.addEventListener("DOMContentLoaded", function() {
   // Light mode settings
   const lightModeToggle = document.getElementById('light_mode_switch');
   const lightModeReset = document.getElementById('light_mode_reset');
-  const osLightMode = getComputedStyle(document.documentElement).getPropertyValue('--osLightMode').trim();
   const lightModeCookie = getCookie('lightMode');
 
   // If using automatic cookie, set body class so toggle works
-  if(lightModeCookie == 'auto') {
-    document.getElementsByTagName("html")[0].classList.add(osLightMode)
-  }
 
   if (lightModeToggle !== null && lightModeToggle !== undefined) {
+
     lightModeToggle.addEventListener('click', function(e) {
       e.preventDefault();
 
-      if (document.getElementsByTagName("html")[0].classList.contains('dark')) {
-        // set a cookie to save the setting
+      // Always check the value of the custom property before determining state.
+      if (getComputedStyle(document.documentElement).getPropertyValue('--osLightMode').trim() == 'dark' && !document.getElementsByTagName("html")[0].classList.contains('light')) {
         document.cookie = "lightMode=light; max-age=31536000; path=/; samesite=strict";
+        document.getElementsByTagName("html")[0].classList.remove('dark');
+        document.getElementsByTagName("html")[0].classList.add('light');
+      } else if( getComputedStyle(document.documentElement).getPropertyValue('--osLightMode').trim() == 'light' && document.getElementsByTagName("html")[0].classList.contains('dark')) {
+        document.cookie = "lightMode=dark; max-age=31536000; path=/; samesite=strict";
         document.getElementsByTagName("html")[0].classList.remove('dark');
         document.getElementsByTagName("html")[0].classList.add('light');
       } else {
@@ -98,6 +99,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   if (lightModeReset !== null && lightModeReset !== undefined) {
     lightModeReset.addEventListener('click', function(e) {
+      console.log(osLightMode);
       e.preventDefault();
       document.cookie = "lightMode=auto; max-age=31536000; path=/; samesite=strict";
 
@@ -106,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
       document.getElementsByTagName("html")[0].classList.remove('light');
 
       // Add in OS Default class.
-      document.getElementsByTagName("html")[0].classList.add(osLightMode)
+      //document.getElementsByTagName("html")[0].classList.add(osLightMode)
 
       e.blur();
     });
