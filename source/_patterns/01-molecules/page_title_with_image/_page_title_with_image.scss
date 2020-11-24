@@ -1,12 +1,32 @@
 .qh__page-tite-with-image {
   background-color: var(--c__quahog);
   display: grid;
+  overflow: hidden;
   position: relative;
 
   &__image {
-    width: 100%;
+    display: block;
     grid-column: 1;
     grid-row: 1;
+    margin-left: -10%;
+    margin-right: -10%;
+    width: 120%;
+    img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+      width: 100%;
+    }
+    @media screen and (min-width: $bp--small) {
+      margin-left: -5%;
+      margin-right: -5%;
+      width: 110%;
+    }
+    @media screen and (min-width: $bp--medium) {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
   }
 
   &__title {

@@ -2037,13 +2037,32 @@ table {
   background-color: var(--c__quahog);
   display: -ms-grid;
   display: grid;
+  overflow: hidden;
   position: relative; }
   .qh__page-tite-with-image__image {
-    width: 100%;
+    display: block;
     -ms-grid-column: 1;
     grid-column: 1;
     -ms-grid-row: 1;
-    grid-row: 1; }
+    grid-row: 1;
+    margin-left: -10%;
+    margin-right: -10%;
+    width: 120%; }
+    .qh__page-tite-with-image__image img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+      width: 100%; }
+    @media screen and (min-width: 40em) {
+      .qh__page-tite-with-image__image {
+        margin-left: -5%;
+        margin-right: -5%;
+        width: 110%; } }
+    @media screen and (min-width: 50em) {
+      .qh__page-tite-with-image__image {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%; } }
   .qh__page-tite-with-image__title {
     margin: 0 auto;
     max-width: 93vw;
