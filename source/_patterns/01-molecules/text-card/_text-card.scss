@@ -1,0 +1,10 @@
+.qh__text-card {
+  margin-top: $general-v-spacing;
+
+  // <h3>
+  &__title {
+    margin-top: 0;
+  }
+
+  &__content {}
+}
