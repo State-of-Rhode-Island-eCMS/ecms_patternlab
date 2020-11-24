@@ -2316,7 +2316,7 @@ table {
           --font-lh-scaler-value: var(--p-lh-scaler-value);
           line-height: var(--line-height); } }
 
-.qh__site-search__form {
+.qh__site-search form {
   margin: 0; }
 
 .qh__site-search__query {
@@ -3850,7 +3850,10 @@ body {
             -ms-flex-pack: end;
                 justify-content: flex-end; }
         .qh__page-header__inner .qh__social-links {
-          padding: 0 1rem; } }
+          padding: 0 1rem;
+          -webkit-box-ordinal-group: 0;
+              -ms-flex-order: -1;
+                  order: -1; } }
     @media print {
       .qh__page-header__inner {
         display: none; } }
