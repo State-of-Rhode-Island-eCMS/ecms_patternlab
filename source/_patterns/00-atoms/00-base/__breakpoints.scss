@@ -22,6 +22,11 @@ $bp--xxlarge: $bp--xxlarge-value * 1em;
 $bp__show__desktop-nav: $bp--large;
 $bp__single-col-content: $bp--medium;
 
+$bp__text-collection--2col: $bp--small;
+$bp__text-collection--between: $bp--medium;
+$bp__text-collection--3col: $bp--large;
+
+
 // Media query helpers
 // Oomph usually does not include "media" so that the styles apply to all media types
 @mixin breakpoint-up($bp) {

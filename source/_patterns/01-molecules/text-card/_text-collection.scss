@@ -1,0 +1,140 @@
+// Background design options
+
+.qh__collection {
+
+  &__primary-bg,
+  &__primary-light-bg,
+  &__coffee-milk-bg {
+    .qh__text-card {
+      padding: $general-v-spacing $general-h-spacing;
+    }
+
+    @include breakpoint-between($bp__text-collection--2col, $bp__text-collection--3col) {
+      .qh__text-card:nth-child(even) {
+        margin-left: $general-h-spacing;;
+      }
+    }
+
+    @include breakpoint-up($bp__text-collection--3col) {
+      // 2nd, 3rd, 5th, 6th, etc…
+      .qh__text-card:nth-child(3n - 1),
+      .qh__text-card:nth-child(3n) {
+        margin-left: $general-h-spacing;;
+      }
+    }
+  }
+
+  &__primary-bg {
+    .qh__text-card {
+      background-color: var(--fc__primary__bg);
+      color: var(--fc__primary__fg);
+
+      &__title {
+        color: var(--fc__primary__fg);
+      }
+    }
+  }
+
+  &__primary-light-bg {
+    .qh__text-card {
+      background-color: var(--fc__primary--light__bg);
+      color: var(--fc__primary--light__fg);
+
+      &__title {
+        color: var(--fc__primary--light__fg);
+      }
+    }
+  }
+
+  &__coffee-milk-bg {
+    .qh__text-card {
+      background-color: var(--c__coffee-milk--trans25);
+      color: var(--fc__default__fg);
+
+      .dark {
+        background-color: var(--c__coffee-milk--trans10);
+        color: var(--fc__default__fg);
+      }
+      @media (prefers-color-scheme: dark) {
+        html:not(.light) {
+          background-color: var(--c__coffee-milk--trans10);
+          color: var(--fc__default__fg);
+        }
+      }
+    }
+  }
+
+  &__border-btwn {
+
+    @include breakpoint-down($bp__text-collection--2col) {
+      .qh__text-card {
+        padding-top: $general-v-spacing;
+      }
+
+      .qh__text-card + .qh__text-card {
+        border-top: $border-xs solid var(--fc__default__border);
+      }
+    }
+
+    @include breakpoint-between($bp__text-collection--2col, $bp__text-collection--3col) {
+      .qh__text-card {
+        margin-top: $general-v-spacing;
+      }
+
+      .qh__text-card:nth-child(odd) {
+        border-right: $border-xs solid var(--fc__default__border);
+        padding-right: ($grid-gap/2);
+      }
+
+      .qh__text-card:nth-child(even) {
+        padding-left: ($grid-gap/2);
+      }
+
+      // If there are an odd number of columns, remove the padding and border right from the last item
+      // If they are even, the last one wont have padding or border to remove
+      .qh__text-card:last-child {
+        border-right: 0;
+        padding-right: 0;
+      }
+    }
+
+    @include breakpoint-between($bp__text-collection--between, $bp__text-collection--3col) {
+      .qh__text-card {
+        margin-top: ($general-v-spacing * 2);
+      }
+
+      .qh__text-card:nth-child(odd) {
+        padding-right: $grid-gap;
+      }
+
+      .qh__text-card:nth-child(even) {
+        padding-left: $grid-gap;
+      }
+
+      .qh__text-card:last-child {
+        padding-right: 0;
+      }
+    }
+
+    @include breakpoint-up($bp__text-collection--3col) {
+      .qh__text-card {
+        border-right: $border-xs solid var(--fc__default__border);
+        margin-top: ($general-v-spacing * 2);
+        padding-left: $grid-gap;
+        padding-right: $grid-gap;
+      }
+
+      // First, Fourth, etc…
+      .qh__text-card:nth-child(3n - 2) {
+        padding-left: 0;
+      }
+
+      // Third, Sixth, etc…
+      .qh__text-card:nth-child(3n),
+      .qh__text-card:last-child {
+        border-right: 0;
+        padding-right: 0;
+      }
+    }
+  }
+}

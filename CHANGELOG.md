@@ -11,6 +11,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 ### Added
 - RIG-131 - Theme out site search block and page.
+- RIG-130 - Bug fixes, Text cards, Forms, Page Title with Image
 
 ### Changed
 

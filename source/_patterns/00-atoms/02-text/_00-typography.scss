@@ -43,6 +43,14 @@ body {
       font-weight: normal;
       letter-spacing: $kerning-base
     }
+    @media (prefers-color-scheme: dark) {
+      html:not(.light) & {
+        --p-font-wght: calc(var(--default-body-wght) - 25);
+      }
+    }
+    .dark & {
+      --p-font-wght: calc(var(--default-body-wght) - 25);
+    }
   }
 
   @media screen and (min-width: $bp--medium) {

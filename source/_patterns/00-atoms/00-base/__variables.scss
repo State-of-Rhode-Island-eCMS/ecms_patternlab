@@ -32,6 +32,8 @@ body {
 $general-v-spacing: 1.5rem;
 $general-h-spacing: 1rem;
 
+$grid-gap: 1.5rem;
+
 // Icon sizing
 $icon-dimension: rem(44);
 
@@ -209,9 +211,9 @@ $st-size-m: $st-size-m-px / $text-base-size * 1rem;
 $st-size-l: $st-size-l-px / $text-base-size * 1rem;
 
 // Line-height (needs to be in EMs)
-$p-lh-s: 1.5;
-$p-lh-m: 1.525;
-$p-lh-l: 1.55;
+$p-lh-s: 1.35;
+$p-lh-m: 1.4;
+$p-lh-l: 1.45;
 
 $h1-lh-s: 1.05;
 $h1-lh-m: 1.075;

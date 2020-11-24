@@ -509,6 +509,18 @@
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "quahog" },
           { "fnName": "copyright__bg", "colorName": "quahog--darker" }
+        ],
+        #
+        # These sub-themes need to provide the light and dark variations
+        # In dark theme definitions, they need only contain the dark theme colors
+        #
+        "primary": [
+          { "fnName": "fg", "colorName": "white" },
+          { "fnName": "bg", "colorName": "navy--trans50" }
+        ],
+        "primary--light": [
+          { "fnName": "fg", "colorName": "white" },
+          { "fnName": "bg", "colorName": "ocean--trans25" }
         ]
       }
     },
@@ -714,12 +726,12 @@
           { "fnName": "copyright__bg", "colorName": "quahog--darker" }
         ],
         "primary": [
-          { "fnName": "fg--dark", "colorName": "white" },
-          { "fnName": "bg--dark", "colorName": "rhody-red--trans15" }
+          { "fnName": "fg", "colorName": "white" },
+          { "fnName": "bg", "colorName": "rhody-red--trans15" }
         ],
         "primary--light": [
-          { "fnName": "fg--dark", "colorName": "white" },
-          { "fnName": "bg--dark", "colorName": "rhody-red--trans50" }
+          { "fnName": "fg", "colorName": "white" },
+          { "fnName": "bg", "colorName": "rhody-red--trans50" }
         ]
       }
     }
