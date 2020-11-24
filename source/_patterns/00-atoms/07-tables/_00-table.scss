@@ -25,6 +25,11 @@ body {
   }
 }
 
+// Adding affordance with an overflowing table is only possible if we can
+// add a wrapper element in some sort of Twig template
+// https://codepen.io/huijing/pen/XBGaNQ?editors=1100
+// More ideas on accessible tables from Adrian Roselli:
+// https://adrianroselli.com/2020/11/under-engineered-responsive-tables.html
 table {
   background-color: transparent;
   border-spacing: 0;
