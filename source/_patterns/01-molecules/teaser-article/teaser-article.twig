@@ -9,7 +9,11 @@
   <div class="qh__teaser-article__content">
     <p class="qh__teaser-article__excerpt">{{ excerpt }}</p>
     <p class="qh__teaser-article__cta">
-      <a class="qh__teaser-article__link" href="{{ url }}">Read article</a>
+      {% if alt_read_text %}
+        <a class="qh__teaser-article__link" href="{{ url }}">{{ alt_read_text }}</a>
+      {% else %}
+        <a class="qh__teaser-article__link" href="{{ url }}">Read article</a>
+      {% endif %}
     </p>
   </div>
 </article>
