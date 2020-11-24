@@ -46,7 +46,7 @@
     width: 100%;
     @supports (font-size: clamp(1rem, 2vw, 2rem)) {
       --font-size-min: 1.25rem;
-      --font-size-max: 3rem;
+      --font-size-max: 3.75rem;
       --font-size-scaler-value: var(--h2-scaler-value);
       font-size: var(--font-size);
   
