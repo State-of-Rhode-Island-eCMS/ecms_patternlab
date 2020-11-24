@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Theme override to display the page title overlaid on an image.
+ *
+ * Available variables:
+ *
+ *
+ * - title: page title
+ * - img: url of the image
+ * - alt: [string] or [none]
+ *
+ *
+ * @see template_preprocess_page()
+ */
+#}
+
+<div class="qh__page-tite-with-image">
+  <img src="{{ url }}" alt="{{ alt }}" class="qh__page-tite-with-image__image" />
+  <h1 class="qh__page-tite-with-image__title">{{ title }}</h1>
+</div>

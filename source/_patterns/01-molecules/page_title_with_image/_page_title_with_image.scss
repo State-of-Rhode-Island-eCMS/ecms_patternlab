@@ -1,0 +1,43 @@
+.qh__page-tite-with-image {
+  background-color: var(--c__quahog);
+  display: grid;
+  position: relative;
+
+  &__image {
+    width: 100%;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  &__title {
+    @include qh-content-maxwidth();
+
+    align-self: end;
+    color: var(--c__white);
+    grid-column: 1;
+    grid-row: 2;
+    margin-bottom: 0.25rem;
+    text-shadow: 
+      1px 1px 1px rgba(qh-get-color('quahog'), 0.95),
+      1px 1px 1rem rgba(qh-get-color('quahog'), 0.5),
+      -1px 1px 1rem rgba(qh-get-color('quahog'), 0.5),
+      -1px -1px 1rem rgba(qh-get-color('quahog'), 0.5),
+      1px -1px 1rem rgba(qh-get-color('quahog'), 0.5);
+    width: 100%;
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      --font-size-min: 1.25rem;
+      --font-size-max: 3rem;
+      --font-size-scaler-value: var(--h2-scaler-value);
+      font-size: var(--font-size);
+  
+      --font-lh-min: #{$h2-lh-s};
+      --font-lh-max: #{$h2-lh-l};
+      --font-lh-scaler-value: var(--h2-lh-scaler-value);
+      line-height: var(--line-height);
+    }
+    @media screen and (min-width: $bp--medium) {
+      grid-row: 1;
+      margin-bottom: 1rem;
+    }
+  }
+}
