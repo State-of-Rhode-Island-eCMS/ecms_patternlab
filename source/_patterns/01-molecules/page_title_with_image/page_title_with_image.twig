@@ -7,15 +7,20 @@
  *
  *
  * - title: page title
- * - img: url of the image
+ * - img: responsive img tag
  * - alt: [string] or [none]
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
  *
  *
  * @see template_preprocess_page()
  */
 #}
-
-<div class="qh__page-tite-with-image">
-  <figure class="qh__page-tite-with-image__image"><img src="{{ url }}" alt="{{ alt }}" /></figure>
+<div {{ attributes.addClass('qh__page-tite-with-image') }}>
+  <figure class="qh__page-tite-with-image__image">{{ img }}</figure>
+  {{ title_prefix }}
   <h1 class="qh__page-tite-with-image__title">{{ title }}</h1>
+  {{ title_suffix }}
 </div>
