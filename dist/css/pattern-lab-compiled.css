@@ -1103,7 +1103,34 @@ time,
     .skip-link {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: normal;
-      letter-spacing: 0.035em; } }
+      letter-spacing: 0.035em; }
+    @media (prefers-color-scheme: dark) {
+      html:not(.light) li, html:not(.light)
+      dt, html:not(.light)
+      dd, html:not(.light)
+      th, html:not(.light)
+      td, html:not(.light)
+      p, html:not(.light)
+      address, html:not(.light)
+      button, html:not(.light)
+      time, html:not(.light)
+      .qh__btn, html:not(.light)
+      .button, html:not(.light)
+      .skip-link {
+        --p-font-wght: calc(var(--default-body-wght) - 25); } }
+    .dark li, .dark
+    dt, .dark
+    dd, .dark
+    th, .dark
+    td, .dark
+    p, .dark
+    address, .dark
+    button, .dark
+    time, .dark
+    .qh__btn, .dark
+    .button, .dark
+    .skip-link {
+      --p-font-wght: calc(var(--default-body-wght) - 25); } }
   @media screen and (min-width: 50em) {
     li,
     dt,
@@ -1569,7 +1596,12 @@ select {
     html:not(.novf).wf-inactive .form__actions a {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: normal;
-      letter-spacing: 0.035em; } }
+      letter-spacing: 0.035em; }
+    @media (prefers-color-scheme: dark) {
+      html:not(.light) .form__actions a {
+        --p-font-wght: calc(var(--default-body-wght) - 25); } }
+    .dark .form__actions a {
+      --p-font-wght: calc(var(--default-body-wght) - 25); } }
   @media screen and (min-width: 50em) {
     .form__actions a {
       font-size: 1.125rem;
@@ -3863,7 +3895,12 @@ body {
       html:not(.novf).wf-inactive .qh__accordion__button {
         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-weight: normal;
-        letter-spacing: 0.035em; } }
+        letter-spacing: 0.035em; }
+      @media (prefers-color-scheme: dark) {
+        html:not(.light) .qh__accordion__button {
+          --p-font-wght: calc(var(--default-body-wght) - 25); } }
+      .dark .qh__accordion__button {
+        --p-font-wght: calc(var(--default-body-wght) - 25); } }
     @media screen and (min-width: 50em) {
       .qh__accordion__button {
         font-size: 1.125rem;
@@ -4218,7 +4255,12 @@ body {
     html:not(.novf).wf-inactive .qh__file-list__item__label {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: normal;
-      letter-spacing: 0.035em; } }
+      letter-spacing: 0.035em; }
+    @media (prefers-color-scheme: dark) {
+      html:not(.light) .qh__file-list__item__label {
+        --p-font-wght: calc(var(--default-body-wght) - 25); } }
+    .dark .qh__file-list__item__label {
+      --p-font-wght: calc(var(--default-body-wght) - 25); } }
   @media screen and (min-width: 50em) {
     .qh__file-list__item__label {
       font-size: 1.125rem;
