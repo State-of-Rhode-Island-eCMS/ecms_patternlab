@@ -2,8 +2,7 @@
   <button id="js__user-settings__toggle" class="qh__u__btn-as-text qh__settings-menu__toggle" aria-expanded="false" aria-controls="js__user-settings__list">
     <span class="qh__settings-menu__icon" aria-hidden="true">
       {% include ('@icons/cog.svg') %}
-    </span>
-    {{ "User settings"|t }}
+    </span>{{ "User settings"|t }}{# keep this on the same line to avoid an underlined space #}
   </button>
   <ul id="js__user-settings__list" class="qh-u__list-reset qh__settings-menu__list" aria-labelledby="js__user-settings__toggle">
     {% if (language_switcher) %}
