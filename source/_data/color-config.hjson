@@ -629,7 +629,7 @@
         ],
         "primary--light": [
           { "fnName": "fg", "colorName": "quahog--darker" },
-          { "fnName": "bg", "colorName": "rhody-red" },
+          { "fnName": "bg", "colorName": "rhody-red--trans15" },
           { "fnName": "fg--dark", "colorName": "white" },
           { "fnName": "bg--dark", "colorName": "rhody-red--trans50" }
         ]

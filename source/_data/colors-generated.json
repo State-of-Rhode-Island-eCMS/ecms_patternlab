@@ -213,7 +213,7 @@
   "t__federal-hill__primary__fg--dark": "hsl(0, 0%, 100%)",
   "t__federal-hill__primary__bg--dark": "hsla(360, 79%, 62%, 0.15)",
   "t__federal-hill__primary--light__fg": "hsl(0, 0%, 8%)",
-  "t__federal-hill__primary--light__bg": "hsl(360, 79%, 62%)",
+  "t__federal-hill__primary--light__bg": "hsla(360, 79%, 62%, 0.15)",
   "t__federal-hill__primary--light__fg--dark": "hsl(0, 0%, 100%)",
   "t__federal-hill__primary--light__bg--dark": "hsla(360, 79%, 62%, 0.5)",
   "t__federal-hill--dark__official__fg": "hsl(0, 0%, 83%)",
