@@ -6,7 +6,7 @@
   &__primary-light-bg,
   &__coffee-milk-bg {
     .qh__text-card {
-      padding: $general-v-spacing ($general-h-spacing * 1.5);
+      padding: $general-v-spacing $general-h-spacing;
     }
 
     @include breakpoint-between($bp__text-collection--2col, $bp__text-collection--3col) {
@@ -24,45 +24,10 @@
     }
   }
 
-  &__primary-bg {
-    .qh__text-card {
-      background-color: var(--fc__primary__bg);
-      color: var(--fc__primary__fg);
-
-      &__title {
-        color: var(--fc__primary__fg);
-      }
-    }
-  }
-
-  &__primary-light-bg {
-    .qh__text-card {
-      background-color: var(--fc__primary--light__bg);
-      color: var(--fc__primary--light__fg);
-    
-      &__title {
-        color: var(--fc__primary--light__fg);
-      }
-    }
-  }
-
-  &__coffee-milk-bg {
-    .qh__text-card {
-      background-color: var(--c__coffee-milk--trans25);
-      color: var(--fc__default__fg);
-
-      .dark {
-        background-color: var(--c__coffee-milk--trans10);
-        color: var(--fc__default__fg);
-      }
-      @media (prefers-color-scheme: dark) {
-        html:not(.light) {
-          background-color: var(--c__coffee-milk--trans10);
-          color: var(--fc__default__fg);
-        }
-      }
-    }
-  }
+  // Text card visual theming has moved to 01-global/00-themes
+  // &__primary-bg {}
+  // &__primary-light-bg {}
+  // &__coffee-milk-bg {}
 
   &__border-btwn {
 
