@@ -47,25 +47,25 @@
     }
   }
 
-  @media (prefers-color-theme: dark) {
+  @media (prefers-color-scheme: dark) {
     html:not(.light) & {
       background-color: var(--fc__primary__bg--dark);
       color: var(--fc__primary__fg--dark);
-    }
 
-    a,
-    a:visited {
-      color: var(--fc__primary__link--dark, currentColor);
-    }
+      a,
+      a:visited {
+        color: var(--fc__primary__link--dark, currentColor);
+      }
 
-    a:hover,
-    a:focus,
-    a:active {
-      color: var(--fc__primary__link--dark--hover, var(--fc__primary__link), currentColor);
-    }
+      a:hover,
+      a:focus,
+      a:active {
+        color: var(--fc__primary__link--dark--hover, var(--fc__primary__link), currentColor);
+      }
 
-    a:focus {
-      outline-color: var(--fc__primary--dark__link--hover, var(--fc__primary__link), currentColor);
+      a:focus {
+        outline-color: var(--fc__primary--dark__link--hover, var(--fc__primary__link), currentColor);
+      }
     }
   }
 }
@@ -115,7 +115,7 @@
     }
   }
 
-  @media (prefers-color-theme: dark) {
+  @media (prefers-color-scheme: dark) {
     html:not(.light) & {
       background-color: var(--fc__primary--light__bg--dark);
       color: var(--fc__primary--light__fg--dark);
@@ -183,25 +183,25 @@
     }
   }
 
-  @media (prefers-color-theme: dark) {
+  @media (prefers-color-scheme: dark) {
     html:not(.light) & {
       background-color: var(--c__coffee-milk--trans25);
       color: var(--c__coffee-milk--light);
-    }
 
-    a,
-    a:visited {
-      color: var(--c__white);
-    }
+      a,
+      a:visited {
+        color: var(--c__white);
+      }
 
-    a:hover,
-    a:focus,
-    a:active {
-      color: var(--fc__default__accent);
-    }
+      a:hover,
+      a:focus,
+      a:active {
+        color: var(--fc__default__accent);
+      }
 
-    a:focus {
-      outline-color: var(--c__white);
+      a:focus {
+        outline-color: var(--c__white);
+      }
     }
   }
 }

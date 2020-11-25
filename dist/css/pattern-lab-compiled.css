@@ -308,12 +308,20 @@ html {
   --fc__footer__copyright__bg: #141414;
   --fc__primary__fg: white;
   --fc__primary__bg: #293557;
+  --fc__primary__link: #95a9df;
+  --fc__primary__link--hover: #face3d;
   --fc__primary__fg--dark: white;
   --fc__primary__bg--dark: rgba(41, 53, 87, 0.5);
-  --fc__primary--light__fg: #1b243b;
+  --fc__primary__link--dark: #95a9df;
+  --fc__primary__link--dark--hover: #face3d;
+  --fc__primary--light__fg: #293557;
   --fc__primary--light__bg: rgba(149, 189, 223, 0.25);
-  --fc__primary--light__fg--dark: white;
-  --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.25); }
+  --fc__primary--light__link: #1b243b;
+  --fc__primary--light__link--hover: #141414;
+  --fc__primary--light__fg--dark: #f0eee5;
+  --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.25);
+  --fc__primary--light__link--dark: white;
+  --fc__primary--light__link--dark--hover: #face3d; }
   html.dark .qh__t__scarborough {
     --fc__official__fg: #d4d4d4;
     --fc__official__bg: #141414;
@@ -370,9 +378,21 @@ html {
     --fc__footer__bg: #404040;
     --fc__footer__copyright__bg: #141414;
     --fc__primary__fg: white;
-    --fc__primary__bg: rgba(41, 53, 87, 0.5);
-    --fc__primary--light__fg: white;
-    --fc__primary--light__bg: rgba(149, 189, 223, 0.25); }
+    --fc__primary__bg: #293557;
+    --fc__primary__link: #95a9df;
+    --fc__primary__link--hover: #face3d;
+    --fc__primary__fg--dark: white;
+    --fc__primary__bg--dark: rgba(41, 53, 87, 0.5);
+    --fc__primary__link--dark: #95a9df;
+    --fc__primary__link--dark--hover: #face3d;
+    --fc__primary--light__fg: #293557;
+    --fc__primary--light__bg: rgba(149, 189, 223, 0.25);
+    --fc__primary--light__link: #1b243b;
+    --fc__primary--light__link--hover: #141414;
+    --fc__primary--light__fg--dark: #f0eee5;
+    --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.25);
+    --fc__primary--light__link--dark: white;
+    --fc__primary--light__link--dark--hover: #face3d; }
   html .qh__t__federal-hill {
     --fc__official__fg: #d4d4d4;
     --fc__official__bg: #141414;
@@ -567,9 +587,21 @@ html {
       --fc__footer__bg: #404040;
       --fc__footer__copyright__bg: #141414;
       --fc__primary__fg: white;
-      --fc__primary__bg: rgba(41, 53, 87, 0.5);
-      --fc__primary--light__fg: white;
-      --fc__primary--light__bg: rgba(149, 189, 223, 0.25); }
+      --fc__primary__bg: #293557;
+      --fc__primary__link: #95a9df;
+      --fc__primary__link--hover: #face3d;
+      --fc__primary__fg--dark: white;
+      --fc__primary__bg--dark: rgba(41, 53, 87, 0.5);
+      --fc__primary__link--dark: #95a9df;
+      --fc__primary__link--dark--hover: #face3d;
+      --fc__primary--light__fg: #293557;
+      --fc__primary--light__bg: rgba(149, 189, 223, 0.25);
+      --fc__primary--light__link: #1b243b;
+      --fc__primary--light__link--hover: #141414;
+      --fc__primary--light__fg--dark: #f0eee5;
+      --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.25);
+      --fc__primary--light__link--dark: white;
+      --fc__primary--light__link--dark--hover: #face3d; }
     html:not(.light) .qh__t__federal-hill {
       --fc__official__fg: #d4d4d4;
       --fc__official__bg: #2e2e2e;
@@ -692,47 +724,242 @@ nav ol {
             transition-duration: 0.01ms !important;
     scroll-behavior: auto !important; } }
 
-.qh__t__primary {
+.qh__t__primary,
+.qh__collection__primary-bg .qh__text-card {
   background-color: var(--fc__primary__bg);
   color: var(--fc__primary__fg); }
-  .qh__t__primary h1, .qh__t__primary .h1, .qh__t__primary h2, .qh__t__primary .h2, .qh__t__primary h3, .qh__t__primary .h3, .qh__t__primary h4, .qh__t__primary .h4, .qh__t__primary h5, .qh__t__primary .h5, .qh__t__primary h6, .qh__t__primary .h6 {
+  .qh__t__primary h1, .qh__t__primary .h1, .qh__t__primary h2, .qh__t__primary .h2, .qh__t__primary h3, .qh__t__primary .h3, .qh__t__primary h4, .qh__t__primary .h4, .qh__t__primary h5, .qh__t__primary .h5, .qh__t__primary h6, .qh__t__primary .h6,
+  .qh__collection__primary-bg .qh__text-card h1,
+  .qh__collection__primary-bg .qh__text-card .h1,
+  .qh__collection__primary-bg .qh__text-card h2,
+  .qh__collection__primary-bg .qh__text-card .h2,
+  .qh__collection__primary-bg .qh__text-card h3,
+  .qh__collection__primary-bg .qh__text-card .h3,
+  .qh__collection__primary-bg .qh__text-card h4,
+  .qh__collection__primary-bg .qh__text-card .h4,
+  .qh__collection__primary-bg .qh__text-card h5,
+  .qh__collection__primary-bg .qh__text-card .h5,
+  .qh__collection__primary-bg .qh__text-card h6,
+  .qh__collection__primary-bg .qh__text-card .h6 {
     color: currentColor; }
-  .qh__t__scarborough--dark .qh__t__primary,
-  .qh__t__federal-hill--dark .qh__t__primary {
+  .qh__t__primary a,
+  .qh__t__primary a:visited,
+  .qh__collection__primary-bg .qh__text-card a,
+  .qh__collection__primary-bg .qh__text-card a:visited {
+    color: var(--fc__primary__link, currentColor); }
+  .qh__t__primary a:hover,
+  .qh__t__primary a:focus,
+  .qh__t__primary a:active,
+  .qh__collection__primary-bg .qh__text-card a:hover,
+  .qh__collection__primary-bg .qh__text-card a:focus,
+  .qh__collection__primary-bg .qh__text-card a:active {
+    color: var(--fc__primary__link--hover, var(--fc__primary__link), currentColor); }
+  .qh__t__primary a:focus,
+  .qh__collection__primary-bg .qh__text-card a:focus {
+    outline-color: var(--fc__primary__link--hover, var(--fc__primary__link), currentColor); }
+  .dark .qh__t__primary, .dark
+  .qh__collection__primary-bg .qh__text-card {
     background-color: var(--fc__primary__bg--dark);
     color: var(--fc__primary__fg--dark); }
-  @media (prefers-color-theme: dark) {
-    .qh__t__primary {
+    .dark .qh__t__primary a,
+    .dark .qh__t__primary a:visited, .dark
+    .qh__collection__primary-bg .qh__text-card a,
+    .dark
+    .qh__collection__primary-bg .qh__text-card a:visited {
+      color: var(--fc__primary__link--dark, currentColor); }
+    .dark .qh__t__primary a:hover,
+    .dark .qh__t__primary a:focus,
+    .dark .qh__t__primary a:active, .dark
+    .qh__collection__primary-bg .qh__text-card a:hover,
+    .dark
+    .qh__collection__primary-bg .qh__text-card a:focus,
+    .dark
+    .qh__collection__primary-bg .qh__text-card a:active {
+      color: var(--fc__primary__link--dark--hover, var(--fc__primary__link), currentColor); }
+    .dark .qh__t__primary a:focus, .dark
+    .qh__collection__primary-bg .qh__text-card a:focus {
+      outline-color: var(--fc__primary--dark__link--hover, var(--fc__primary__link), currentColor); }
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) .qh__t__primary, html:not(.light)
+    .qh__collection__primary-bg .qh__text-card {
       background-color: var(--fc__primary__bg--dark);
-      color: var(--fc__primary__fg--dark); } }
+      color: var(--fc__primary__fg--dark); }
+      html:not(.light) .qh__t__primary a,
+      html:not(.light) .qh__t__primary a:visited, html:not(.light)
+      .qh__collection__primary-bg .qh__text-card a,
+      html:not(.light)
+      .qh__collection__primary-bg .qh__text-card a:visited {
+        color: var(--fc__primary__link--dark, currentColor); }
+      html:not(.light) .qh__t__primary a:hover,
+      html:not(.light) .qh__t__primary a:focus,
+      html:not(.light) .qh__t__primary a:active, html:not(.light)
+      .qh__collection__primary-bg .qh__text-card a:hover,
+      html:not(.light)
+      .qh__collection__primary-bg .qh__text-card a:focus,
+      html:not(.light)
+      .qh__collection__primary-bg .qh__text-card a:active {
+        color: var(--fc__primary__link--dark--hover, var(--fc__primary__link), currentColor); }
+      html:not(.light) .qh__t__primary a:focus, html:not(.light)
+      .qh__collection__primary-bg .qh__text-card a:focus {
+        outline-color: var(--fc__primary--dark__link--hover, var(--fc__primary__link), currentColor); } }
 
-.qh__t__primary--light {
+.qh__t__primary--light,
+.qh__collection__primary-light-bg .qh__text-card {
   background-color: var(--fc__primary--light__bg);
   color: var(--fc__primary--light__fg); }
-  .qh__t__primary--light h1, .qh__t__primary--light .h1, .qh__t__primary--light h2, .qh__t__primary--light .h2, .qh__t__primary--light h3, .qh__t__primary--light .h3, .qh__t__primary--light h4, .qh__t__primary--light .h4, .qh__t__primary--light h5, .qh__t__primary--light .h5, .qh__t__primary--light h6, .qh__t__primary--light .h6 {
+  .qh__t__primary--light h1, .qh__t__primary--light .h1, .qh__t__primary--light h2, .qh__t__primary--light .h2, .qh__t__primary--light h3, .qh__t__primary--light .h3, .qh__t__primary--light h4, .qh__t__primary--light .h4, .qh__t__primary--light h5, .qh__t__primary--light .h5, .qh__t__primary--light h6, .qh__t__primary--light .h6,
+  .qh__collection__primary-light-bg .qh__text-card h1,
+  .qh__collection__primary-light-bg .qh__text-card .h1,
+  .qh__collection__primary-light-bg .qh__text-card h2,
+  .qh__collection__primary-light-bg .qh__text-card .h2,
+  .qh__collection__primary-light-bg .qh__text-card h3,
+  .qh__collection__primary-light-bg .qh__text-card .h3,
+  .qh__collection__primary-light-bg .qh__text-card h4,
+  .qh__collection__primary-light-bg .qh__text-card .h4,
+  .qh__collection__primary-light-bg .qh__text-card h5,
+  .qh__collection__primary-light-bg .qh__text-card .h5,
+  .qh__collection__primary-light-bg .qh__text-card h6,
+  .qh__collection__primary-light-bg .qh__text-card .h6 {
     color: currentColor; }
-  .qh__t__scarborough--dark .qh__t__primary--light,
-  .qh__t__federal-hill--dark .qh__t__primary--light {
+  .qh__t__primary--light a,
+  .qh__t__primary--light a:visited,
+  .qh__collection__primary-light-bg .qh__text-card a,
+  .qh__collection__primary-light-bg .qh__text-card a:visited {
+    color: var(--fc__primary--light__link, currentColor); }
+  .qh__t__primary--light a:hover,
+  .qh__t__primary--light a:focus,
+  .qh__t__primary--light a:active,
+  .qh__collection__primary-light-bg .qh__text-card a:hover,
+  .qh__collection__primary-light-bg .qh__text-card a:focus,
+  .qh__collection__primary-light-bg .qh__text-card a:active {
+    color: var(--fc__primary--light__link--hover, var(--fc__primary--light__link), currentColor); }
+  .qh__t__primary--light a:focus,
+  .qh__collection__primary-light-bg .qh__text-card a:focus {
+    outline-color: var(--fc__primary--light__link--hover, var(--fc__primary--light__link), currentColor); }
+  .dark .qh__t__primary--light, .dark
+  .qh__collection__primary-light-bg .qh__text-card {
     background-color: var(--fc__primary--light__bg--dark);
     color: var(--fc__primary--light__fg--dark); }
-  @media (prefers-color-theme: dark) {
-    .qh__t__primary--light {
+    .dark .qh__t__primary--light a,
+    .dark .qh__t__primary--light a:visited, .dark
+    .qh__collection__primary-light-bg .qh__text-card a,
+    .dark
+    .qh__collection__primary-light-bg .qh__text-card a:visited {
+      color: var(--fc__primary--light--dark__link, currentColor); }
+    .dark .qh__t__primary--light a:hover,
+    .dark .qh__t__primary--light a:focus,
+    .dark .qh__t__primary--light a:active, .dark
+    .qh__collection__primary-light-bg .qh__text-card a:hover,
+    .dark
+    .qh__collection__primary-light-bg .qh__text-card a:focus,
+    .dark
+    .qh__collection__primary-light-bg .qh__text-card a:active {
+      color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor); }
+    .dark .qh__t__primary--light a:focus, .dark
+    .qh__collection__primary-light-bg .qh__text-card a:focus {
+      outline-color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor); }
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) .qh__t__primary--light, html:not(.light)
+    .qh__collection__primary-light-bg .qh__text-card {
       background-color: var(--fc__primary--light__bg--dark);
-      color: var(--fc__primary--light__fg--dark); } }
+      color: var(--fc__primary--light__fg--dark); }
+      html:not(.light) .qh__t__primary--light a,
+      html:not(.light) .qh__t__primary--light a:visited, html:not(.light)
+      .qh__collection__primary-light-bg .qh__text-card a,
+      html:not(.light)
+      .qh__collection__primary-light-bg .qh__text-card a:visited {
+        color: var(--fc__primary--light--dark__link, currentColor); }
+      html:not(.light) .qh__t__primary--light a:hover,
+      html:not(.light) .qh__t__primary--light a:focus,
+      html:not(.light) .qh__t__primary--light a:active, html:not(.light)
+      .qh__collection__primary-light-bg .qh__text-card a:hover,
+      html:not(.light)
+      .qh__collection__primary-light-bg .qh__text-card a:focus,
+      html:not(.light)
+      .qh__collection__primary-light-bg .qh__text-card a:active {
+        color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor); }
+      html:not(.light) .qh__t__primary--light a:focus, html:not(.light)
+      .qh__collection__primary-light-bg .qh__text-card a:focus {
+        outline-color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor); } }
 
-.qh__t__coffee-milk {
+.qh__t__coffee-milk,
+.qh__collection__coffee-milk-bg .qh__text-card {
   background-color: var(--c__coffee-milk--trans25);
   color: var(--c__quahog--dark); }
-  .qh__t__coffee-milk h1, .qh__t__coffee-milk .h1, .qh__t__coffee-milk h2, .qh__t__coffee-milk .h2, .qh__t__coffee-milk h3, .qh__t__coffee-milk .h3, .qh__t__coffee-milk h4, .qh__t__coffee-milk .h4, .qh__t__coffee-milk h5, .qh__t__coffee-milk .h5, .qh__t__coffee-milk h6, .qh__t__coffee-milk .h6 {
+  .qh__t__coffee-milk h1, .qh__t__coffee-milk .h1, .qh__t__coffee-milk h2, .qh__t__coffee-milk .h2, .qh__t__coffee-milk h3, .qh__t__coffee-milk .h3, .qh__t__coffee-milk h4, .qh__t__coffee-milk .h4, .qh__t__coffee-milk h5, .qh__t__coffee-milk .h5, .qh__t__coffee-milk h6, .qh__t__coffee-milk .h6,
+  .qh__collection__coffee-milk-bg .qh__text-card h1,
+  .qh__collection__coffee-milk-bg .qh__text-card .h1,
+  .qh__collection__coffee-milk-bg .qh__text-card h2,
+  .qh__collection__coffee-milk-bg .qh__text-card .h2,
+  .qh__collection__coffee-milk-bg .qh__text-card h3,
+  .qh__collection__coffee-milk-bg .qh__text-card .h3,
+  .qh__collection__coffee-milk-bg .qh__text-card h4,
+  .qh__collection__coffee-milk-bg .qh__text-card .h4,
+  .qh__collection__coffee-milk-bg .qh__text-card h5,
+  .qh__collection__coffee-milk-bg .qh__text-card .h5,
+  .qh__collection__coffee-milk-bg .qh__text-card h6,
+  .qh__collection__coffee-milk-bg .qh__text-card .h6 {
     color: currentColor; }
-  .qh__t__scarborough--dark .qh__t__coffee-milk,
-  .qh__t__federal-hill--dark .qh__t__coffee-milk {
+  .qh__t__coffee-milk a,
+  .qh__t__coffee-milk a:visited,
+  .qh__collection__coffee-milk-bg .qh__text-card a,
+  .qh__collection__coffee-milk-bg .qh__text-card a:visited {
+    color: var(--c__navy); }
+  .qh__t__coffee-milk a:hover,
+  .qh__t__coffee-milk a:focus,
+  .qh__t__coffee-milk a:active,
+  .qh__collection__coffee-milk-bg .qh__text-card a:hover,
+  .qh__collection__coffee-milk-bg .qh__text-card a:focus,
+  .qh__collection__coffee-milk-bg .qh__text-card a:active {
+    color: var(--c__quahog--darker); }
+  .qh__t__coffee-milk a:focus,
+  .qh__collection__coffee-milk-bg .qh__text-card a:focus {
+    outline-color: var(--c__navy); }
+  .dark .qh__t__coffee-milk, .dark
+  .qh__collection__coffee-milk-bg .qh__text-card {
     background-color: var(--c__coffee-milk--trans25);
     color: var(--c__coffee-milk--light); }
-  @media (prefers-color-theme: dark) {
-    .qh__t__coffee-milk {
+    .dark .qh__t__coffee-milk a,
+    .dark .qh__t__coffee-milk a:visited, .dark
+    .qh__collection__coffee-milk-bg .qh__text-card a,
+    .dark
+    .qh__collection__coffee-milk-bg .qh__text-card a:visited {
+      color: var(--c__white); }
+    .dark .qh__t__coffee-milk a:hover,
+    .dark .qh__t__coffee-milk a:focus,
+    .dark .qh__t__coffee-milk a:active, .dark
+    .qh__collection__coffee-milk-bg .qh__text-card a:hover,
+    .dark
+    .qh__collection__coffee-milk-bg .qh__text-card a:focus,
+    .dark
+    .qh__collection__coffee-milk-bg .qh__text-card a:active {
+      color: var(--fc__default__accent); }
+    .dark .qh__t__coffee-milk a:focus, .dark
+    .qh__collection__coffee-milk-bg .qh__text-card a:focus {
+      outline-color: var(--c__white); }
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) .qh__t__coffee-milk, html:not(.light)
+    .qh__collection__coffee-milk-bg .qh__text-card {
       background-color: var(--c__coffee-milk--trans25);
-      color: var(--c__coffee-milk--light); } }
+      color: var(--c__coffee-milk--light); }
+      html:not(.light) .qh__t__coffee-milk a,
+      html:not(.light) .qh__t__coffee-milk a:visited, html:not(.light)
+      .qh__collection__coffee-milk-bg .qh__text-card a,
+      html:not(.light)
+      .qh__collection__coffee-milk-bg .qh__text-card a:visited {
+        color: var(--c__white); }
+      html:not(.light) .qh__t__coffee-milk a:hover,
+      html:not(.light) .qh__t__coffee-milk a:focus,
+      html:not(.light) .qh__t__coffee-milk a:active, html:not(.light)
+      .qh__collection__coffee-milk-bg .qh__text-card a:hover,
+      html:not(.light)
+      .qh__collection__coffee-milk-bg .qh__text-card a:focus,
+      html:not(.light)
+      .qh__collection__coffee-milk-bg .qh__text-card a:active {
+        color: var(--fc__default__accent); }
+      html:not(.light) .qh__t__coffee-milk a:focus, html:not(.light)
+      .qh__collection__coffee-milk-bg .qh__text-card a:focus {
+        outline-color: var(--c__white); } }
 
 .visually-hidden:not(:focus):not(:active) {
   position: absolute !important;
@@ -2575,7 +2802,7 @@ table {
       line-height: var(--line-height); } }
 
 .qh__collection__primary-bg .qh__text-card, .qh__collection__primary-light-bg .qh__text-card, .qh__collection__coffee-milk-bg .qh__text-card {
-  padding: 1.5rem 1.5rem; }
+  padding: 1.5rem 1rem; }
 
 @media (min-width: 40em) and (max-width: 61.9375em) {
   .qh__collection__primary-bg .qh__text-card:nth-child(even), .qh__collection__primary-light-bg .qh__text-card:nth-child(even), .qh__collection__coffee-milk-bg .qh__text-card:nth-child(even) {
@@ -2587,29 +2814,6 @@ table {
   .qh__collection__primary-light-bg .qh__text-card:nth-child(3n), .qh__collection__coffee-milk-bg .qh__text-card:nth-child(3n - 1),
   .qh__collection__coffee-milk-bg .qh__text-card:nth-child(3n) {
     margin-left: 1rem; } }
-
-.qh__collection__primary-bg .qh__text-card {
-  background-color: var(--fc__primary__bg);
-  color: var(--fc__primary__fg); }
-  .qh__collection__primary-bg .qh__text-card__title {
-    color: var(--fc__primary__fg); }
-
-.qh__collection__primary-light-bg .qh__text-card {
-  background-color: var(--fc__primary--light__bg);
-  color: var(--fc__primary--light__fg); }
-  .qh__collection__primary-light-bg .qh__text-card__title {
-    color: var(--fc__primary--light__fg); }
-
-.qh__collection__coffee-milk-bg .qh__text-card {
-  background-color: var(--c__coffee-milk--trans25);
-  color: var(--fc__default__fg); }
-  .qh__collection__coffee-milk-bg .qh__text-card .dark {
-    background-color: var(--c__coffee-milk--trans10);
-    color: var(--fc__default__fg); }
-  @media (prefers-color-scheme: dark) {
-    .qh__collection__coffee-milk-bg .qh__text-card html:not(.light) {
-      background-color: var(--c__coffee-milk--trans10);
-      color: var(--fc__default__fg); } }
 
 @media (max-width: 39.9375em) {
   .qh__collection__border-btwn .qh__text-card {
