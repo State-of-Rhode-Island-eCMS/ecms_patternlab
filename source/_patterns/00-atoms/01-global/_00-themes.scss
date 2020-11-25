@@ -15,6 +15,11 @@
     color: var(--fc__primary__fg--dark);
   }
 
+  html:not(.light) & {
+    background-color: var(--fc__primary__bg--dark);
+    color: var(--fc__primary__fg--dark);
+  }
+
   @media (prefers-color-theme: dark) {
     background-color: var(--fc__primary__bg--dark);
     color: var(--fc__primary__fg--dark);
@@ -36,6 +41,11 @@
     color: var(--fc__primary--light__fg--dark);
   }
 
+  html:not(.light) & {
+    background-color: var(--fc__primary--light__bg--dark);
+    color: var(--fc__primary--light__fg--dark);
+  }
+
   @media (prefers-color-theme: dark) {
     background-color: var(--fc__primary--light__bg--dark);
     color: var(--fc__primary--light__fg--dark);
@@ -53,6 +63,11 @@
 
   .qh__t__scarborough--dark &,
   .qh__t__federal-hill--dark & {
+    background-color: var(--c__coffee-milk--trans25);
+    color: var(--c__coffee-milk--light);
+  }
+
+  html:not(.light) & {
     background-color: var(--c__coffee-milk--trans25);
     color: var(--c__coffee-milk--light);
   }
