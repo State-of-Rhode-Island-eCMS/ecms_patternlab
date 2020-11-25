@@ -9,20 +9,61 @@
     color: currentColor;
   }
 
-  .qh__t__scarborough--dark &,
-  .qh__t__federal-hill--dark & {
-    background-color: var(--fc__primary__bg--dark);
-    color: var(--fc__primary__fg--dark);
+  a,
+  a:visited {
+    color: var(--fc__primary__link, currentColor);
   }
 
-  html:not(.light) & {
-    background-color: var(--fc__primary__bg--dark);
+  a:hover,
+  a:focus,
+  a:active {
+    color: var(--fc__primary__link--hover, var(--fc__primary__link), currentColor);
+  }
+
+  a:focus {
+    outline-color: var(--fc__primary__link--hover, var(--fc__primary__link), currentColor);
+  }
+
+  .dark & {
+    background-color: var(--fc__primary__bg--dark); // Over the bg, compiles to #2c3243
     color: var(--fc__primary__fg--dark);
+
+    a,
+    a:visited {
+      color: var(--fc__primary__link--dark, currentColor);
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      color: var(--fc__primary__link--dark--hover, var(--fc__primary__link), currentColor);
+    }
+
+    a:focus {
+      outline-color: var(--fc__primary--dark__link--hover, var(--fc__primary__link), currentColor);
+    }
   }
 
   @media (prefers-color-theme: dark) {
-    background-color: var(--fc__primary__bg--dark);
-    color: var(--fc__primary__fg--dark);
+    html:not(.light) & {
+      background-color: var(--fc__primary__bg--dark);
+      color: var(--fc__primary__fg--dark);
+    }
+
+    a,
+    a:visited {
+      color: var(--fc__primary__link--dark, currentColor);
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      color: var(--fc__primary__link--dark--hover, var(--fc__primary__link), currentColor);
+    }
+
+    a:focus {
+      outline-color: var(--fc__primary--dark__link--hover, var(--fc__primary__link), currentColor);
+    }
   }
 }
 
@@ -35,20 +76,61 @@
     color: currentColor;
   }
 
-  .qh__t__scarborough--dark &,
-  .qh__t__federal-hill--dark & {
-    background-color: var(--fc__primary--light__bg--dark);
-    color: var(--fc__primary--light__fg--dark);
+  a,
+  a:visited {
+    color: var(--fc__primary--light__link, currentColor);
   }
 
-  html:not(.light) & {
-    background-color: var(--fc__primary--light__bg--dark);
+  a:hover,
+  a:focus,
+  a:active {
+    color: var(--fc__primary--light__link--hover, var(--fc__primary--light__link), currentColor);
+  }
+
+  a:focus {
+    outline-color: var(--fc__primary--light__link--hover, var(--fc__primary--light__link), currentColor);
+  }
+
+  .dark & {
+    background-color: var(--fc__primary--light__bg--dark); // Over the bg, compiles to #47515a
     color: var(--fc__primary--light__fg--dark);
+
+    a,
+    a:visited {
+      color: var(--fc__primary--light--dark__link, currentColor);
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor);
+    }
+
+    a:focus {
+      outline-color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor);
+    }
   }
 
   @media (prefers-color-theme: dark) {
-    background-color: var(--fc__primary--light__bg--dark);
-    color: var(--fc__primary--light__fg--dark);
+    html:not(.light) & {
+      background-color: var(--fc__primary--light__bg--dark);
+      color: var(--fc__primary--light__fg--dark);
+
+      a,
+      a:visited {
+        color: var(--fc__primary--light--dark__link, currentColor);
+      }
+
+      a:hover,
+      a:focus,
+      a:active {
+        color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor);
+      }
+
+      a:focus {
+        outline-color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor);
+      }
+    }
   }
 }
 
@@ -61,19 +143,60 @@
     color: currentColor;
   }
 
-  .qh__t__scarborough--dark &,
-  .qh__t__federal-hill--dark & {
-    background-color: var(--c__coffee-milk--trans25);
-    color: var(--c__coffee-milk--light);
+  a,
+  a:visited {
+    color: var(--c__navy);
   }
 
-  html:not(.light) & {
-    background-color: var(--c__coffee-milk--trans25);
+  a:hover,
+  a:focus,
+  a:active {
+    color: var(--c__quahog--darker);
+  }
+
+  a:focus {
+    outline-color: var(--c__navy);
+  }
+
+  .dark & {
+    background-color: var(--c__coffee-milk--trans25); // Over the bg, compiles to #57554f
     color: var(--c__coffee-milk--light);
+
+    a,
+    a:visited {
+      color: var(--c__white);
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      color: var(--fc__default__accent);
+    }
+
+    a:focus {
+      outline-color: var(--c__white);
+    }
   }
 
   @media (prefers-color-theme: dark) {
-    background-color: var(--c__coffee-milk--trans25);
-    color: var(--c__coffee-milk--light);
+    html:not(.light) & {
+      background-color: var(--c__coffee-milk--trans25);
+      color: var(--c__coffee-milk--light);
+    }
+
+    a,
+    a:visited {
+      color: var(--c__white);
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      color: var(--fc__default__accent);
+    }
+
+    a:focus {
+      outline-color: var(--c__white);
+    }
   }
 }
