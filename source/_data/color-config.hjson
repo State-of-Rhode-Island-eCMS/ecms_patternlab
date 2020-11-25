@@ -525,11 +525,24 @@
         #
         "primary": [
           { "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "navy--trans50" }
+          { "fnName": "bg", "colorName": "navy" },
+          { "fnName": "link", "colorName": "navy--light" },
+          { "fnName": "link--hover", "colorName": "hope-gold" },
+          { "fnName": "fg--dark", "colorName": "white" },
+          { "fnName": "bg--dark", "colorName": "navy--trans50" },
+          { "fnName": "link--dark", "colorName": "navy--light" },
+          { "fnName": "link--dark--hover", "colorName": "hope-gold" }
+
         ],
         "primary--light": [
-          { "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "ocean--trans25" }
+          { "fnName": "fg", "colorName": "navy" },
+          { "fnName": "bg", "colorName": "ocean--trans25" },
+          { "fnName": "link", "colorName": "navy--dark" },
+          { "fnName": "link--hover", "colorName": "quahog--darker" },
+          { "fnName": "fg--dark", "colorName": "coffee-milk--light" },
+          { "fnName": "bg--dark", "colorName": "ocean--trans25" },
+          { "fnName": "link--dark", "colorName": "white" },
+          { "fnName": "link--dark--hover", "colorName": "hope-gold" }
         ]
       }
     },
