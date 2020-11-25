@@ -21,6 +21,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.2.7] - 2020-11-25
+### Changed
+RIG-130: Resolve dark mode stuff, Bug fixes, typography changes
+
 ## [0.2.6] - 2020-11-24
 ### Added
 - RIG-131 - Theme out site search block and page.
@@ -95,7 +99,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.2.6...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.2.7...HEAD
+[0.2.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.2.6...0.2.7
 [0.2.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.2.5...0.2.6
 [0.2.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.2.4...0.2.5
 [0.2.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.2.3...0.2.4
