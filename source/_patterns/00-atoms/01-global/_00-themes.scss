@@ -1,7 +1,10 @@
 // Mini-themes: Author selected row/column color overrides
 
+// Grouping styles here for Text Card Themes, which use a different class structure
+
 // Primary
-.qh__t__primary {
+.qh__t__primary,
+.qh__collection__primary-bg .qh__text-card {
   background-color: var(--fc__primary__bg);
   color: var(--fc__primary__fg);
 
@@ -68,7 +71,8 @@
 }
 
 // Primary Light
-.qh__t__primary--light {
+.qh__t__primary--light,
+.qh__collection__primary-light-bg .qh__text-card {
   background-color: var(--fc__primary--light__bg);
   color: var(--fc__primary--light__fg);
 
@@ -135,7 +139,8 @@
 }
 
 // Coffee Milk
-.qh__t__coffee-milk {
+.qh__t__coffee-milk,
+.qh__collection__coffee-milk-bg .qh__text-card {
   background-color: var(--c__coffee-milk--trans25);
   color: var(--c__quahog--dark);
 
