@@ -511,7 +511,7 @@ html {
     --fc__primary--light__fg: white;
     --fc__primary--light__bg: rgba(235, 82, 82, 0.5); }
   @media (prefers-color-scheme: dark) {
-    html {
+    html:not(.light) .qh__t__scarborough {
       --fc__official__fg: #d4d4d4;
       --fc__official__bg: #141414;
       --fc__official__link: #95bddf;
@@ -570,65 +570,65 @@ html {
       --fc__primary__bg: rgba(41, 53, 87, 0.5);
       --fc__primary--light__fg: white;
       --fc__primary--light__bg: rgba(149, 189, 223, 0.25); }
-      html:not(.light) .qh__t__federal-hill {
-        --fc__official__fg: #d4d4d4;
-        --fc__official__bg: #2e2e2e;
-        --fc__official__link: white;
-        --fc__official__link--hover: #eb5252;
-        --fc__official__link--focus: #eb5252;
-        --fc__header__fg: white;
-        --fc__header__bg: #141414;
-        --fc__header__link: white;
-        --fc__header__link--hover: #face3d;
-        --fc__header__social__link: #eb5252;
-        --fc__header__social__link--hover: #face3d;
-        --fc__nav-main__fg: #d4d4d4;
-        --fc__nav-main__bg: #8e3339;
-        --fc__nav-main__link: #d4d4d4;
-        --fc__nav-main__link--hover: white;
-        --fc__nav-main__link--hover__bg: #141414;
-        --fc__nav-main__link--focus: #face3d;
-        --fc__nav-main__link--active: #face3d;
-        --fc__nav-main__link__sub--hover__bg: rgba(20, 20, 20, 0.15);
-        --fc__nav-main__icon__bg: #eb5252;
-        --fc__nav-main__icon__bg--hover: #face3d;
-        --fc__nav-main__icon__fg--hover: #2e2e2e;
-        --fc__default__fg: #f0eee5;
-        --fc__default__bg: #2e2e2e;
-        --fc__default__border: rgba(255, 255, 255, 0.25);
-        --fc__default__link: #95bddf;
-        --fc__default__link--hover: #face3d;
-        --fc__default__link--focus: #95bddf;
-        --fc__default__link--visited: #bbacec;
-        --fc__default__link--active: #ff8e47;
-        --fc__default__hx__fg: #d2cbb2;
-        --fc__default__text__accent: #d4d4d4;
-        --fc__icon__word: #95bddf;
-        --fc__icon__generic: #d2cbb2;
-        --fc__icon__download: #d4d4d4;
-        --fc__nav-minor__border: #8e3339;
-        --fc__nav-minor__fg: #d4d4d4;
-        --fc__nav-minor__bg: rgba(235, 82, 82, 0.15);
-        --fc__nav-minor__link: #f0eee5;
-        --fc__nav-minor__link__bg: rgba(255, 255, 255, 0);
-        --fc__nav-minor__link--hover: white;
-        --fc__nav-minor__link--hover__bg: rgba(235, 82, 82, 0.15);
-        --fc__nav-minor__link--focus: #95bddf;
-        --fc__nav-minor__link--active: #face3d;
-        --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.15);
-        --fc__accordion__icon__fg: #141414;
-        --fc__accordion__icon__bg: #ff8e47;
-        --fc__attention-card__fg: #f0eee5;
-        --fc__attention-card__bar: #8e3339;
-        --fc__attention-card__icon: #f0eee5;
-        --fc__footer__border-top: #eb5252;
-        --fc__footer__fg: white;
-        --fc__footer__bg: #2e2e2e;
-        --fc__footer__copyright__bg: #141414;
-        --fc__primary__fg: white;
-        --fc__primary__bg: rgba(235, 82, 82, 0.15);
-        --fc__primary--light__fg: white;
-        --fc__primary--light__bg: rgba(235, 82, 82, 0.5); } }
+    html:not(.light) .qh__t__federal-hill {
+      --fc__official__fg: #d4d4d4;
+      --fc__official__bg: #2e2e2e;
+      --fc__official__link: white;
+      --fc__official__link--hover: #eb5252;
+      --fc__official__link--focus: #eb5252;
+      --fc__header__fg: white;
+      --fc__header__bg: #141414;
+      --fc__header__link: white;
+      --fc__header__link--hover: #face3d;
+      --fc__header__social__link: #eb5252;
+      --fc__header__social__link--hover: #face3d;
+      --fc__nav-main__fg: #d4d4d4;
+      --fc__nav-main__bg: #8e3339;
+      --fc__nav-main__link: #d4d4d4;
+      --fc__nav-main__link--hover: white;
+      --fc__nav-main__link--hover__bg: #141414;
+      --fc__nav-main__link--focus: #face3d;
+      --fc__nav-main__link--active: #face3d;
+      --fc__nav-main__link__sub--hover__bg: rgba(20, 20, 20, 0.15);
+      --fc__nav-main__icon__bg: #eb5252;
+      --fc__nav-main__icon__bg--hover: #face3d;
+      --fc__nav-main__icon__fg--hover: #2e2e2e;
+      --fc__default__fg: #f0eee5;
+      --fc__default__bg: #2e2e2e;
+      --fc__default__border: rgba(255, 255, 255, 0.25);
+      --fc__default__link: #95bddf;
+      --fc__default__link--hover: #face3d;
+      --fc__default__link--focus: #95bddf;
+      --fc__default__link--visited: #bbacec;
+      --fc__default__link--active: #ff8e47;
+      --fc__default__hx__fg: #d2cbb2;
+      --fc__default__text__accent: #d4d4d4;
+      --fc__icon__word: #95bddf;
+      --fc__icon__generic: #d2cbb2;
+      --fc__icon__download: #d4d4d4;
+      --fc__nav-minor__border: #8e3339;
+      --fc__nav-minor__fg: #d4d4d4;
+      --fc__nav-minor__bg: rgba(235, 82, 82, 0.15);
+      --fc__nav-minor__link: #f0eee5;
+      --fc__nav-minor__link__bg: rgba(255, 255, 255, 0);
+      --fc__nav-minor__link--hover: white;
+      --fc__nav-minor__link--hover__bg: rgba(235, 82, 82, 0.15);
+      --fc__nav-minor__link--focus: #95bddf;
+      --fc__nav-minor__link--active: #face3d;
+      --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.15);
+      --fc__accordion__icon__fg: #141414;
+      --fc__accordion__icon__bg: #ff8e47;
+      --fc__attention-card__fg: #f0eee5;
+      --fc__attention-card__bar: #8e3339;
+      --fc__attention-card__icon: #f0eee5;
+      --fc__footer__border-top: #eb5252;
+      --fc__footer__fg: white;
+      --fc__footer__bg: #2e2e2e;
+      --fc__footer__copyright__bg: #141414;
+      --fc__primary__fg: white;
+      --fc__primary__bg: rgba(235, 82, 82, 0.15);
+      --fc__primary--light__fg: white;
+      --fc__primary--light__bg: rgba(235, 82, 82, 0.5); } }
 
 html {
   -webkit-box-sizing: border-box;
