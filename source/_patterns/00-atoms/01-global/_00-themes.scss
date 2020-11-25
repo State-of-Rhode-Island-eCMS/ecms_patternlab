@@ -1,7 +1,10 @@
 // Mini-themes: Author selected row/column color overrides
 
+// Grouping styles here for Text Card Themes, which use a different class structure
+
 // Primary
-.qh__t__primary {
+.qh__t__primary,
+.qh__collection__primary-bg .qh__text-card {
   background-color: var(--fc__primary__bg);
   color: var(--fc__primary__fg);
 
@@ -9,20 +12,67 @@
     color: currentColor;
   }
 
-  .qh__t__scarborough--dark &,
-  .qh__t__federal-hill--dark & {
-    background-color: var(--fc__primary__bg--dark);
-    color: var(--fc__primary__fg--dark);
+  a,
+  a:visited {
+    color: var(--fc__primary__link, currentColor);
   }
 
-  @media (prefers-color-theme: dark) {
-    background-color: var(--fc__primary__bg--dark);
+  a:hover,
+  a:focus,
+  a:active {
+    color: var(--fc__primary__link--hover, var(--fc__primary__link), currentColor);
+  }
+
+  a:focus {
+    outline-color: var(--fc__primary__link--hover, var(--fc__primary__link), currentColor);
+  }
+
+  .dark & {
+    background-color: var(--fc__primary__bg--dark); // Over the bg, compiles to #2c3243
     color: var(--fc__primary__fg--dark);
+
+    a,
+    a:visited {
+      color: var(--fc__primary__link--dark, currentColor);
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      color: var(--fc__primary__link--dark--hover, var(--fc__primary__link), currentColor);
+    }
+
+    a:focus {
+      outline-color: var(--fc__primary--dark__link--hover, var(--fc__primary__link), currentColor);
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) & {
+      background-color: var(--fc__primary__bg--dark);
+      color: var(--fc__primary__fg--dark);
+
+      a,
+      a:visited {
+        color: var(--fc__primary__link--dark, currentColor);
+      }
+
+      a:hover,
+      a:focus,
+      a:active {
+        color: var(--fc__primary__link--dark--hover, var(--fc__primary__link), currentColor);
+      }
+
+      a:focus {
+        outline-color: var(--fc__primary--dark__link--hover, var(--fc__primary__link), currentColor);
+      }
+    }
   }
 }
 
 // Primary Light
-.qh__t__primary--light {
+.qh__t__primary--light,
+.qh__collection__primary-light-bg .qh__text-card {
   background-color: var(--fc__primary--light__bg);
   color: var(--fc__primary--light__fg);
 
@@ -30,20 +80,67 @@
     color: currentColor;
   }
 
-  .qh__t__scarborough--dark &,
-  .qh__t__federal-hill--dark & {
-    background-color: var(--fc__primary--light__bg--dark);
-    color: var(--fc__primary--light__fg--dark);
+  a,
+  a:visited {
+    color: var(--fc__primary--light__link, currentColor);
   }
 
-  @media (prefers-color-theme: dark) {
-    background-color: var(--fc__primary--light__bg--dark);
+  a:hover,
+  a:focus,
+  a:active {
+    color: var(--fc__primary--light__link--hover, var(--fc__primary--light__link), currentColor);
+  }
+
+  a:focus {
+    outline-color: var(--fc__primary--light__link--hover, var(--fc__primary--light__link), currentColor);
+  }
+
+  .dark & {
+    background-color: var(--fc__primary--light__bg--dark); // Over the bg, compiles to #47515a
     color: var(--fc__primary--light__fg--dark);
+
+    a,
+    a:visited {
+      color: var(--fc__primary--light--dark__link, currentColor);
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor);
+    }
+
+    a:focus {
+      outline-color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor);
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) & {
+      background-color: var(--fc__primary--light__bg--dark);
+      color: var(--fc__primary--light__fg--dark);
+
+      a,
+      a:visited {
+        color: var(--fc__primary--light--dark__link, currentColor);
+      }
+
+      a:hover,
+      a:focus,
+      a:active {
+        color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor);
+      }
+
+      a:focus {
+        outline-color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor);
+      }
+    }
   }
 }
 
 // Coffee Milk
-.qh__t__coffee-milk {
+.qh__t__coffee-milk,
+.qh__collection__coffee-milk-bg .qh__text-card {
   background-color: var(--c__coffee-milk--trans25);
   color: var(--c__quahog--dark);
 
@@ -51,14 +148,60 @@
     color: currentColor;
   }
 
-  .qh__t__scarborough--dark &,
-  .qh__t__federal-hill--dark & {
-    background-color: var(--c__coffee-milk--trans25);
-    color: var(--c__coffee-milk--light);
+  a,
+  a:visited {
+    color: var(--c__navy);
   }
 
-  @media (prefers-color-theme: dark) {
-    background-color: var(--c__coffee-milk--trans25);
+  a:hover,
+  a:focus,
+  a:active {
+    color: var(--c__quahog--darker);
+  }
+
+  a:focus {
+    outline-color: var(--c__navy);
+  }
+
+  .dark & {
+    background-color: var(--c__coffee-milk--trans25); // Over the bg, compiles to #57554f
     color: var(--c__coffee-milk--light);
+
+    a,
+    a:visited {
+      color: var(--c__white);
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      color: var(--fc__default__accent);
+    }
+
+    a:focus {
+      outline-color: var(--c__white);
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) & {
+      background-color: var(--c__coffee-milk--trans25);
+      color: var(--c__coffee-milk--light);
+
+      a,
+      a:visited {
+        color: var(--c__white);
+      }
+
+      a:hover,
+      a:focus,
+      a:active {
+        color: var(--fc__default__accent);
+      }
+
+      a:focus {
+        outline-color: var(--c__white);
+      }
+    }
   }
 }

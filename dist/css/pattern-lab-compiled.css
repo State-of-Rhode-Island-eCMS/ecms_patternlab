@@ -37,8 +37,8 @@ body {
   --h2-size-m: 2.25rem;
   --h2-size-l: 3rem;
   --h3-size-s: 1.25rem;
-  --h3-size-m: 1.625rem;
-  --h3-size-l: 2rem;
+  --h3-size-m: 1.5rem;
+  --h3-size-l: 1.75rem;
   --h4-size-s: 1rem;
   --h4-size-m: 1.125rem;
   --h4-size-l: 1.25rem;
@@ -308,12 +308,20 @@ html {
   --fc__footer__copyright__bg: #141414;
   --fc__primary__fg: white;
   --fc__primary__bg: #293557;
+  --fc__primary__link: #95a9df;
+  --fc__primary__link--hover: #face3d;
   --fc__primary__fg--dark: white;
   --fc__primary__bg--dark: rgba(41, 53, 87, 0.5);
-  --fc__primary--light__fg: #1b243b;
-  --fc__primary--light__bg: #95bddf;
-  --fc__primary--light__fg--dark: white;
-  --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.25); }
+  --fc__primary__link--dark: #95a9df;
+  --fc__primary__link--dark--hover: #face3d;
+  --fc__primary--light__fg: #293557;
+  --fc__primary--light__bg: rgba(149, 189, 223, 0.25);
+  --fc__primary--light__link: #1b243b;
+  --fc__primary--light__link--hover: #141414;
+  --fc__primary--light__fg--dark: #f0eee5;
+  --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.25);
+  --fc__primary--light__link--dark: white;
+  --fc__primary--light__link--dark--hover: #face3d; }
   html.dark .qh__t__scarborough {
     --fc__official__fg: #d4d4d4;
     --fc__official__bg: #141414;
@@ -370,9 +378,21 @@ html {
     --fc__footer__bg: #404040;
     --fc__footer__copyright__bg: #141414;
     --fc__primary__fg: white;
-    --fc__primary__bg: rgba(41, 53, 87, 0.5);
-    --fc__primary--light__fg: white;
-    --fc__primary--light__bg: rgba(149, 189, 223, 0.25); }
+    --fc__primary__bg: #293557;
+    --fc__primary__link: #95a9df;
+    --fc__primary__link--hover: #face3d;
+    --fc__primary__fg--dark: white;
+    --fc__primary__bg--dark: rgba(41, 53, 87, 0.5);
+    --fc__primary__link--dark: #95a9df;
+    --fc__primary__link--dark--hover: #face3d;
+    --fc__primary--light__fg: #293557;
+    --fc__primary--light__bg: rgba(149, 189, 223, 0.25);
+    --fc__primary--light__link: #1b243b;
+    --fc__primary--light__link--hover: #141414;
+    --fc__primary--light__fg--dark: #f0eee5;
+    --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.25);
+    --fc__primary--light__link--dark: white;
+    --fc__primary--light__link--dark--hover: #face3d; }
   html .qh__t__federal-hill {
     --fc__official__fg: #d4d4d4;
     --fc__official__bg: #141414;
@@ -448,7 +468,7 @@ html {
     --fc__primary__fg--dark: white;
     --fc__primary__bg--dark: rgba(235, 82, 82, 0.15);
     --fc__primary--light__fg: #141414;
-    --fc__primary--light__bg: #eb5252;
+    --fc__primary--light__bg: rgba(235, 82, 82, 0.15);
     --fc__primary--light__fg--dark: white;
     --fc__primary--light__bg--dark: rgba(235, 82, 82, 0.5); }
   html.dark .qh__t__federal-hill {
@@ -511,7 +531,7 @@ html {
     --fc__primary--light__fg: white;
     --fc__primary--light__bg: rgba(235, 82, 82, 0.5); }
   @media (prefers-color-scheme: dark) {
-    html {
+    html:not(.light) .qh__t__scarborough {
       --fc__official__fg: #d4d4d4;
       --fc__official__bg: #141414;
       --fc__official__link: #95bddf;
@@ -567,68 +587,80 @@ html {
       --fc__footer__bg: #404040;
       --fc__footer__copyright__bg: #141414;
       --fc__primary__fg: white;
-      --fc__primary__bg: rgba(41, 53, 87, 0.5);
+      --fc__primary__bg: #293557;
+      --fc__primary__link: #95a9df;
+      --fc__primary__link--hover: #face3d;
+      --fc__primary__fg--dark: white;
+      --fc__primary__bg--dark: rgba(41, 53, 87, 0.5);
+      --fc__primary__link--dark: #95a9df;
+      --fc__primary__link--dark--hover: #face3d;
+      --fc__primary--light__fg: #293557;
+      --fc__primary--light__bg: rgba(149, 189, 223, 0.25);
+      --fc__primary--light__link: #1b243b;
+      --fc__primary--light__link--hover: #141414;
+      --fc__primary--light__fg--dark: #f0eee5;
+      --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.25);
+      --fc__primary--light__link--dark: white;
+      --fc__primary--light__link--dark--hover: #face3d; }
+    html:not(.light) .qh__t__federal-hill {
+      --fc__official__fg: #d4d4d4;
+      --fc__official__bg: #2e2e2e;
+      --fc__official__link: white;
+      --fc__official__link--hover: #eb5252;
+      --fc__official__link--focus: #eb5252;
+      --fc__header__fg: white;
+      --fc__header__bg: #141414;
+      --fc__header__link: white;
+      --fc__header__link--hover: #face3d;
+      --fc__header__social__link: #eb5252;
+      --fc__header__social__link--hover: #face3d;
+      --fc__nav-main__fg: #d4d4d4;
+      --fc__nav-main__bg: #8e3339;
+      --fc__nav-main__link: #d4d4d4;
+      --fc__nav-main__link--hover: white;
+      --fc__nav-main__link--hover__bg: #141414;
+      --fc__nav-main__link--focus: #face3d;
+      --fc__nav-main__link--active: #face3d;
+      --fc__nav-main__link__sub--hover__bg: rgba(20, 20, 20, 0.15);
+      --fc__nav-main__icon__bg: #eb5252;
+      --fc__nav-main__icon__bg--hover: #face3d;
+      --fc__nav-main__icon__fg--hover: #2e2e2e;
+      --fc__default__fg: #f0eee5;
+      --fc__default__bg: #2e2e2e;
+      --fc__default__border: rgba(255, 255, 255, 0.25);
+      --fc__default__link: #95bddf;
+      --fc__default__link--hover: #face3d;
+      --fc__default__link--focus: #95bddf;
+      --fc__default__link--visited: #bbacec;
+      --fc__default__link--active: #ff8e47;
+      --fc__default__hx__fg: #d2cbb2;
+      --fc__default__text__accent: #d4d4d4;
+      --fc__icon__word: #95bddf;
+      --fc__icon__generic: #d2cbb2;
+      --fc__icon__download: #d4d4d4;
+      --fc__nav-minor__border: #8e3339;
+      --fc__nav-minor__fg: #d4d4d4;
+      --fc__nav-minor__bg: rgba(235, 82, 82, 0.15);
+      --fc__nav-minor__link: #f0eee5;
+      --fc__nav-minor__link__bg: rgba(255, 255, 255, 0);
+      --fc__nav-minor__link--hover: white;
+      --fc__nav-minor__link--hover__bg: rgba(235, 82, 82, 0.15);
+      --fc__nav-minor__link--focus: #95bddf;
+      --fc__nav-minor__link--active: #face3d;
+      --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.15);
+      --fc__accordion__icon__fg: #141414;
+      --fc__accordion__icon__bg: #ff8e47;
+      --fc__attention-card__fg: #f0eee5;
+      --fc__attention-card__bar: #8e3339;
+      --fc__attention-card__icon: #f0eee5;
+      --fc__footer__border-top: #eb5252;
+      --fc__footer__fg: white;
+      --fc__footer__bg: #2e2e2e;
+      --fc__footer__copyright__bg: #141414;
+      --fc__primary__fg: white;
+      --fc__primary__bg: rgba(235, 82, 82, 0.15);
       --fc__primary--light__fg: white;
-      --fc__primary--light__bg: rgba(149, 189, 223, 0.25); }
-      html:not(.light) .qh__t__federal-hill {
-        --fc__official__fg: #d4d4d4;
-        --fc__official__bg: #2e2e2e;
-        --fc__official__link: white;
-        --fc__official__link--hover: #eb5252;
-        --fc__official__link--focus: #eb5252;
-        --fc__header__fg: white;
-        --fc__header__bg: #141414;
-        --fc__header__link: white;
-        --fc__header__link--hover: #face3d;
-        --fc__header__social__link: #eb5252;
-        --fc__header__social__link--hover: #face3d;
-        --fc__nav-main__fg: #d4d4d4;
-        --fc__nav-main__bg: #8e3339;
-        --fc__nav-main__link: #d4d4d4;
-        --fc__nav-main__link--hover: white;
-        --fc__nav-main__link--hover__bg: #141414;
-        --fc__nav-main__link--focus: #face3d;
-        --fc__nav-main__link--active: #face3d;
-        --fc__nav-main__link__sub--hover__bg: rgba(20, 20, 20, 0.15);
-        --fc__nav-main__icon__bg: #eb5252;
-        --fc__nav-main__icon__bg--hover: #face3d;
-        --fc__nav-main__icon__fg--hover: #2e2e2e;
-        --fc__default__fg: #f0eee5;
-        --fc__default__bg: #2e2e2e;
-        --fc__default__border: rgba(255, 255, 255, 0.25);
-        --fc__default__link: #95bddf;
-        --fc__default__link--hover: #face3d;
-        --fc__default__link--focus: #95bddf;
-        --fc__default__link--visited: #bbacec;
-        --fc__default__link--active: #ff8e47;
-        --fc__default__hx__fg: #d2cbb2;
-        --fc__default__text__accent: #d4d4d4;
-        --fc__icon__word: #95bddf;
-        --fc__icon__generic: #d2cbb2;
-        --fc__icon__download: #d4d4d4;
-        --fc__nav-minor__border: #8e3339;
-        --fc__nav-minor__fg: #d4d4d4;
-        --fc__nav-minor__bg: rgba(235, 82, 82, 0.15);
-        --fc__nav-minor__link: #f0eee5;
-        --fc__nav-minor__link__bg: rgba(255, 255, 255, 0);
-        --fc__nav-minor__link--hover: white;
-        --fc__nav-minor__link--hover__bg: rgba(235, 82, 82, 0.15);
-        --fc__nav-minor__link--focus: #95bddf;
-        --fc__nav-minor__link--active: #face3d;
-        --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.15);
-        --fc__accordion__icon__fg: #141414;
-        --fc__accordion__icon__bg: #ff8e47;
-        --fc__attention-card__fg: #f0eee5;
-        --fc__attention-card__bar: #8e3339;
-        --fc__attention-card__icon: #f0eee5;
-        --fc__footer__border-top: #eb5252;
-        --fc__footer__fg: white;
-        --fc__footer__bg: #2e2e2e;
-        --fc__footer__copyright__bg: #141414;
-        --fc__primary__fg: white;
-        --fc__primary__bg: rgba(235, 82, 82, 0.15);
-        --fc__primary--light__fg: white;
-        --fc__primary--light__bg: rgba(235, 82, 82, 0.5); } }
+      --fc__primary--light__bg: rgba(235, 82, 82, 0.5); } }
 
 html {
   -webkit-box-sizing: border-box;
@@ -692,47 +724,242 @@ nav ol {
             transition-duration: 0.01ms !important;
     scroll-behavior: auto !important; } }
 
-.qh__t__primary {
+.qh__t__primary,
+.qh__collection__primary-bg .qh__text-card {
   background-color: var(--fc__primary__bg);
   color: var(--fc__primary__fg); }
-  .qh__t__primary h1, .qh__t__primary .h1, .qh__t__primary h2, .qh__t__primary .h2, .qh__t__primary h3, .qh__t__primary .h3, .qh__t__primary h4, .qh__t__primary .h4, .qh__t__primary h5, .qh__t__primary .h5, .qh__t__primary h6, .qh__t__primary .h6 {
+  .qh__t__primary h1, .qh__t__primary .h1, .qh__t__primary h2, .qh__t__primary .h2, .qh__t__primary h3, .qh__t__primary .h3, .qh__t__primary h4, .qh__t__primary .h4, .qh__t__primary h5, .qh__t__primary .h5, .qh__t__primary h6, .qh__t__primary .h6,
+  .qh__collection__primary-bg .qh__text-card h1,
+  .qh__collection__primary-bg .qh__text-card .h1,
+  .qh__collection__primary-bg .qh__text-card h2,
+  .qh__collection__primary-bg .qh__text-card .h2,
+  .qh__collection__primary-bg .qh__text-card h3,
+  .qh__collection__primary-bg .qh__text-card .h3,
+  .qh__collection__primary-bg .qh__text-card h4,
+  .qh__collection__primary-bg .qh__text-card .h4,
+  .qh__collection__primary-bg .qh__text-card h5,
+  .qh__collection__primary-bg .qh__text-card .h5,
+  .qh__collection__primary-bg .qh__text-card h6,
+  .qh__collection__primary-bg .qh__text-card .h6 {
     color: currentColor; }
-  .qh__t__scarborough--dark .qh__t__primary,
-  .qh__t__federal-hill--dark .qh__t__primary {
+  .qh__t__primary a,
+  .qh__t__primary a:visited,
+  .qh__collection__primary-bg .qh__text-card a,
+  .qh__collection__primary-bg .qh__text-card a:visited {
+    color: var(--fc__primary__link, currentColor); }
+  .qh__t__primary a:hover,
+  .qh__t__primary a:focus,
+  .qh__t__primary a:active,
+  .qh__collection__primary-bg .qh__text-card a:hover,
+  .qh__collection__primary-bg .qh__text-card a:focus,
+  .qh__collection__primary-bg .qh__text-card a:active {
+    color: var(--fc__primary__link--hover, var(--fc__primary__link), currentColor); }
+  .qh__t__primary a:focus,
+  .qh__collection__primary-bg .qh__text-card a:focus {
+    outline-color: var(--fc__primary__link--hover, var(--fc__primary__link), currentColor); }
+  .dark .qh__t__primary, .dark
+  .qh__collection__primary-bg .qh__text-card {
     background-color: var(--fc__primary__bg--dark);
     color: var(--fc__primary__fg--dark); }
-  @media (prefers-color-theme: dark) {
-    .qh__t__primary {
+    .dark .qh__t__primary a,
+    .dark .qh__t__primary a:visited, .dark
+    .qh__collection__primary-bg .qh__text-card a,
+    .dark
+    .qh__collection__primary-bg .qh__text-card a:visited {
+      color: var(--fc__primary__link--dark, currentColor); }
+    .dark .qh__t__primary a:hover,
+    .dark .qh__t__primary a:focus,
+    .dark .qh__t__primary a:active, .dark
+    .qh__collection__primary-bg .qh__text-card a:hover,
+    .dark
+    .qh__collection__primary-bg .qh__text-card a:focus,
+    .dark
+    .qh__collection__primary-bg .qh__text-card a:active {
+      color: var(--fc__primary__link--dark--hover, var(--fc__primary__link), currentColor); }
+    .dark .qh__t__primary a:focus, .dark
+    .qh__collection__primary-bg .qh__text-card a:focus {
+      outline-color: var(--fc__primary--dark__link--hover, var(--fc__primary__link), currentColor); }
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) .qh__t__primary, html:not(.light)
+    .qh__collection__primary-bg .qh__text-card {
       background-color: var(--fc__primary__bg--dark);
-      color: var(--fc__primary__fg--dark); } }
+      color: var(--fc__primary__fg--dark); }
+      html:not(.light) .qh__t__primary a,
+      html:not(.light) .qh__t__primary a:visited, html:not(.light)
+      .qh__collection__primary-bg .qh__text-card a,
+      html:not(.light)
+      .qh__collection__primary-bg .qh__text-card a:visited {
+        color: var(--fc__primary__link--dark, currentColor); }
+      html:not(.light) .qh__t__primary a:hover,
+      html:not(.light) .qh__t__primary a:focus,
+      html:not(.light) .qh__t__primary a:active, html:not(.light)
+      .qh__collection__primary-bg .qh__text-card a:hover,
+      html:not(.light)
+      .qh__collection__primary-bg .qh__text-card a:focus,
+      html:not(.light)
+      .qh__collection__primary-bg .qh__text-card a:active {
+        color: var(--fc__primary__link--dark--hover, var(--fc__primary__link), currentColor); }
+      html:not(.light) .qh__t__primary a:focus, html:not(.light)
+      .qh__collection__primary-bg .qh__text-card a:focus {
+        outline-color: var(--fc__primary--dark__link--hover, var(--fc__primary__link), currentColor); } }
 
-.qh__t__primary--light {
+.qh__t__primary--light,
+.qh__collection__primary-light-bg .qh__text-card {
   background-color: var(--fc__primary--light__bg);
   color: var(--fc__primary--light__fg); }
-  .qh__t__primary--light h1, .qh__t__primary--light .h1, .qh__t__primary--light h2, .qh__t__primary--light .h2, .qh__t__primary--light h3, .qh__t__primary--light .h3, .qh__t__primary--light h4, .qh__t__primary--light .h4, .qh__t__primary--light h5, .qh__t__primary--light .h5, .qh__t__primary--light h6, .qh__t__primary--light .h6 {
+  .qh__t__primary--light h1, .qh__t__primary--light .h1, .qh__t__primary--light h2, .qh__t__primary--light .h2, .qh__t__primary--light h3, .qh__t__primary--light .h3, .qh__t__primary--light h4, .qh__t__primary--light .h4, .qh__t__primary--light h5, .qh__t__primary--light .h5, .qh__t__primary--light h6, .qh__t__primary--light .h6,
+  .qh__collection__primary-light-bg .qh__text-card h1,
+  .qh__collection__primary-light-bg .qh__text-card .h1,
+  .qh__collection__primary-light-bg .qh__text-card h2,
+  .qh__collection__primary-light-bg .qh__text-card .h2,
+  .qh__collection__primary-light-bg .qh__text-card h3,
+  .qh__collection__primary-light-bg .qh__text-card .h3,
+  .qh__collection__primary-light-bg .qh__text-card h4,
+  .qh__collection__primary-light-bg .qh__text-card .h4,
+  .qh__collection__primary-light-bg .qh__text-card h5,
+  .qh__collection__primary-light-bg .qh__text-card .h5,
+  .qh__collection__primary-light-bg .qh__text-card h6,
+  .qh__collection__primary-light-bg .qh__text-card .h6 {
     color: currentColor; }
-  .qh__t__scarborough--dark .qh__t__primary--light,
-  .qh__t__federal-hill--dark .qh__t__primary--light {
+  .qh__t__primary--light a,
+  .qh__t__primary--light a:visited,
+  .qh__collection__primary-light-bg .qh__text-card a,
+  .qh__collection__primary-light-bg .qh__text-card a:visited {
+    color: var(--fc__primary--light__link, currentColor); }
+  .qh__t__primary--light a:hover,
+  .qh__t__primary--light a:focus,
+  .qh__t__primary--light a:active,
+  .qh__collection__primary-light-bg .qh__text-card a:hover,
+  .qh__collection__primary-light-bg .qh__text-card a:focus,
+  .qh__collection__primary-light-bg .qh__text-card a:active {
+    color: var(--fc__primary--light__link--hover, var(--fc__primary--light__link), currentColor); }
+  .qh__t__primary--light a:focus,
+  .qh__collection__primary-light-bg .qh__text-card a:focus {
+    outline-color: var(--fc__primary--light__link--hover, var(--fc__primary--light__link), currentColor); }
+  .dark .qh__t__primary--light, .dark
+  .qh__collection__primary-light-bg .qh__text-card {
     background-color: var(--fc__primary--light__bg--dark);
     color: var(--fc__primary--light__fg--dark); }
-  @media (prefers-color-theme: dark) {
-    .qh__t__primary--light {
+    .dark .qh__t__primary--light a,
+    .dark .qh__t__primary--light a:visited, .dark
+    .qh__collection__primary-light-bg .qh__text-card a,
+    .dark
+    .qh__collection__primary-light-bg .qh__text-card a:visited {
+      color: var(--fc__primary--light--dark__link, currentColor); }
+    .dark .qh__t__primary--light a:hover,
+    .dark .qh__t__primary--light a:focus,
+    .dark .qh__t__primary--light a:active, .dark
+    .qh__collection__primary-light-bg .qh__text-card a:hover,
+    .dark
+    .qh__collection__primary-light-bg .qh__text-card a:focus,
+    .dark
+    .qh__collection__primary-light-bg .qh__text-card a:active {
+      color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor); }
+    .dark .qh__t__primary--light a:focus, .dark
+    .qh__collection__primary-light-bg .qh__text-card a:focus {
+      outline-color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor); }
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) .qh__t__primary--light, html:not(.light)
+    .qh__collection__primary-light-bg .qh__text-card {
       background-color: var(--fc__primary--light__bg--dark);
-      color: var(--fc__primary--light__fg--dark); } }
+      color: var(--fc__primary--light__fg--dark); }
+      html:not(.light) .qh__t__primary--light a,
+      html:not(.light) .qh__t__primary--light a:visited, html:not(.light)
+      .qh__collection__primary-light-bg .qh__text-card a,
+      html:not(.light)
+      .qh__collection__primary-light-bg .qh__text-card a:visited {
+        color: var(--fc__primary--light--dark__link, currentColor); }
+      html:not(.light) .qh__t__primary--light a:hover,
+      html:not(.light) .qh__t__primary--light a:focus,
+      html:not(.light) .qh__t__primary--light a:active, html:not(.light)
+      .qh__collection__primary-light-bg .qh__text-card a:hover,
+      html:not(.light)
+      .qh__collection__primary-light-bg .qh__text-card a:focus,
+      html:not(.light)
+      .qh__collection__primary-light-bg .qh__text-card a:active {
+        color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor); }
+      html:not(.light) .qh__t__primary--light a:focus, html:not(.light)
+      .qh__collection__primary-light-bg .qh__text-card a:focus {
+        outline-color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor); } }
 
-.qh__t__coffee-milk {
+.qh__t__coffee-milk,
+.qh__collection__coffee-milk-bg .qh__text-card {
   background-color: var(--c__coffee-milk--trans25);
   color: var(--c__quahog--dark); }
-  .qh__t__coffee-milk h1, .qh__t__coffee-milk .h1, .qh__t__coffee-milk h2, .qh__t__coffee-milk .h2, .qh__t__coffee-milk h3, .qh__t__coffee-milk .h3, .qh__t__coffee-milk h4, .qh__t__coffee-milk .h4, .qh__t__coffee-milk h5, .qh__t__coffee-milk .h5, .qh__t__coffee-milk h6, .qh__t__coffee-milk .h6 {
+  .qh__t__coffee-milk h1, .qh__t__coffee-milk .h1, .qh__t__coffee-milk h2, .qh__t__coffee-milk .h2, .qh__t__coffee-milk h3, .qh__t__coffee-milk .h3, .qh__t__coffee-milk h4, .qh__t__coffee-milk .h4, .qh__t__coffee-milk h5, .qh__t__coffee-milk .h5, .qh__t__coffee-milk h6, .qh__t__coffee-milk .h6,
+  .qh__collection__coffee-milk-bg .qh__text-card h1,
+  .qh__collection__coffee-milk-bg .qh__text-card .h1,
+  .qh__collection__coffee-milk-bg .qh__text-card h2,
+  .qh__collection__coffee-milk-bg .qh__text-card .h2,
+  .qh__collection__coffee-milk-bg .qh__text-card h3,
+  .qh__collection__coffee-milk-bg .qh__text-card .h3,
+  .qh__collection__coffee-milk-bg .qh__text-card h4,
+  .qh__collection__coffee-milk-bg .qh__text-card .h4,
+  .qh__collection__coffee-milk-bg .qh__text-card h5,
+  .qh__collection__coffee-milk-bg .qh__text-card .h5,
+  .qh__collection__coffee-milk-bg .qh__text-card h6,
+  .qh__collection__coffee-milk-bg .qh__text-card .h6 {
     color: currentColor; }
-  .qh__t__scarborough--dark .qh__t__coffee-milk,
-  .qh__t__federal-hill--dark .qh__t__coffee-milk {
+  .qh__t__coffee-milk a,
+  .qh__t__coffee-milk a:visited,
+  .qh__collection__coffee-milk-bg .qh__text-card a,
+  .qh__collection__coffee-milk-bg .qh__text-card a:visited {
+    color: var(--c__navy); }
+  .qh__t__coffee-milk a:hover,
+  .qh__t__coffee-milk a:focus,
+  .qh__t__coffee-milk a:active,
+  .qh__collection__coffee-milk-bg .qh__text-card a:hover,
+  .qh__collection__coffee-milk-bg .qh__text-card a:focus,
+  .qh__collection__coffee-milk-bg .qh__text-card a:active {
+    color: var(--c__quahog--darker); }
+  .qh__t__coffee-milk a:focus,
+  .qh__collection__coffee-milk-bg .qh__text-card a:focus {
+    outline-color: var(--c__navy); }
+  .dark .qh__t__coffee-milk, .dark
+  .qh__collection__coffee-milk-bg .qh__text-card {
     background-color: var(--c__coffee-milk--trans25);
     color: var(--c__coffee-milk--light); }
-  @media (prefers-color-theme: dark) {
-    .qh__t__coffee-milk {
+    .dark .qh__t__coffee-milk a,
+    .dark .qh__t__coffee-milk a:visited, .dark
+    .qh__collection__coffee-milk-bg .qh__text-card a,
+    .dark
+    .qh__collection__coffee-milk-bg .qh__text-card a:visited {
+      color: var(--c__white); }
+    .dark .qh__t__coffee-milk a:hover,
+    .dark .qh__t__coffee-milk a:focus,
+    .dark .qh__t__coffee-milk a:active, .dark
+    .qh__collection__coffee-milk-bg .qh__text-card a:hover,
+    .dark
+    .qh__collection__coffee-milk-bg .qh__text-card a:focus,
+    .dark
+    .qh__collection__coffee-milk-bg .qh__text-card a:active {
+      color: var(--fc__default__accent); }
+    .dark .qh__t__coffee-milk a:focus, .dark
+    .qh__collection__coffee-milk-bg .qh__text-card a:focus {
+      outline-color: var(--c__white); }
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) .qh__t__coffee-milk, html:not(.light)
+    .qh__collection__coffee-milk-bg .qh__text-card {
       background-color: var(--c__coffee-milk--trans25);
-      color: var(--c__coffee-milk--light); } }
+      color: var(--c__coffee-milk--light); }
+      html:not(.light) .qh__t__coffee-milk a,
+      html:not(.light) .qh__t__coffee-milk a:visited, html:not(.light)
+      .qh__collection__coffee-milk-bg .qh__text-card a,
+      html:not(.light)
+      .qh__collection__coffee-milk-bg .qh__text-card a:visited {
+        color: var(--c__white); }
+      html:not(.light) .qh__t__coffee-milk a:hover,
+      html:not(.light) .qh__t__coffee-milk a:focus,
+      html:not(.light) .qh__t__coffee-milk a:active, html:not(.light)
+      .qh__collection__coffee-milk-bg .qh__text-card a:hover,
+      html:not(.light)
+      .qh__collection__coffee-milk-bg .qh__text-card a:focus,
+      html:not(.light)
+      .qh__collection__coffee-milk-bg .qh__text-card a:active {
+        color: var(--fc__default__accent); }
+      html:not(.light) .qh__t__coffee-milk a:focus, html:not(.light)
+      .qh__collection__coffee-milk-bg .qh__text-card a:focus {
+        outline-color: var(--c__white); } }
 
 .visually-hidden:not(:focus):not(:active) {
   position: absolute !important;
@@ -820,7 +1047,7 @@ h2 {
   @supports (font-variation-settings: normal) {
     html:not(.novf) h2 {
       font-family: var(--font-serif-vf);
-      font-weight: 475; }
+      font-weight: 425; }
     html:not(.novf).wf-inactive h2 {
       font-family: Georgia, "Times New Roman", serif;
       font-variant-numeric: lining-nums;
@@ -868,7 +1095,7 @@ h3 {
   line-height: 1.1;
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
-  margin-bottom: calc(var(--body-text-spacer) * 0.5); }
+  margin-bottom: calc(var(--body-text-spacer) * 0.75); }
   .wf-inactive h3 {
     font-family: Georgia, "Times New Roman", serif;
     font-variant-numeric: lining-nums;
@@ -877,7 +1104,7 @@ h3 {
   @supports (font-variation-settings: normal) {
     html:not(.novf) h3 {
       font-family: var(--font-serif-vf);
-      font-weight: 575; }
+      font-weight: 450; }
     html:not(.novf).wf-inactive h3 {
       font-family: Georgia, "Times New Roman", serif;
       font-variant-numeric: lining-nums;
@@ -885,16 +1112,16 @@ h3 {
       letter-spacing: 0.035em; } }
   @media screen and (min-width: 50em) {
     h3 {
-      font-size: 1.625rem;
+      font-size: 1.5rem;
       line-height: 1.125; } }
   @media screen and (min-width: 62em) {
     h3 {
-      font-size: 2rem;
+      font-size: 1.75rem;
       line-height: 1.15; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     h3 {
       --font-size-min-value: 1.25;
-      --font-size-max-value: 2;
+      --font-size-max-value: 1.75;
       --font-size-scaler-value: var(--h3-scaler-value);
       font-size: var(--font-size);
       --font-lh-min-value: 1.1;
@@ -905,7 +1132,7 @@ h3 {
   @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
     h3 {
       margin-top: 1.875rem;
-      margin-bottom: 0.625rem; } }
+      margin-bottom: 0.9375rem; } }
 
 h4 {
   font-family: "Roboto Slab", var(--font-serif-fallback);
@@ -2126,7 +2353,7 @@ table {
     @supports (font-size: clamp(1rem, 2vw, 2rem)) {
       .qh__page-tite-with-image__title {
         --font-size-min: 1.25rem;
-        --font-size-max: 3.75rem;
+        --font-size-max: 4rem;
         --font-size-scaler-value: var(--h2-scaler-value);
         font-size: var(--font-size);
         --font-lh-min: 1.1;
@@ -2563,6 +2790,16 @@ table {
   margin-top: 1.5rem; }
   .qh__text-card__title {
     margin-top: 0; }
+  @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+    .qh__text-card__text p {
+      --font-size-min: 0.875rem;
+      --font-size-max: 1rem;
+      --font-size-scaler-value: var(--st-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min: 1.1;
+      --font-lh-max: 1.3;
+      --font-lh-scaler-value: var(--st-lh-scaler-value);
+      line-height: var(--line-height); } }
 
 .qh__collection__primary-bg .qh__text-card, .qh__collection__primary-light-bg .qh__text-card, .qh__collection__coffee-milk-bg .qh__text-card {
   padding: 1.5rem 1rem; }
@@ -2577,29 +2814,6 @@ table {
   .qh__collection__primary-light-bg .qh__text-card:nth-child(3n), .qh__collection__coffee-milk-bg .qh__text-card:nth-child(3n - 1),
   .qh__collection__coffee-milk-bg .qh__text-card:nth-child(3n) {
     margin-left: 1rem; } }
-
-.qh__collection__primary-bg .qh__text-card {
-  background-color: var(--fc__primary__bg);
-  color: var(--fc__primary__fg); }
-  .qh__collection__primary-bg .qh__text-card__title {
-    color: var(--fc__primary__fg); }
-
-.qh__collection__primary-light-bg .qh__text-card {
-  background-color: var(--fc__primary--light__bg);
-  color: var(--fc__primary--light__fg); }
-  .qh__collection__primary-light-bg .qh__text-card__title {
-    color: var(--fc__primary--light__fg); }
-
-.qh__collection__coffee-milk-bg .qh__text-card {
-  background-color: var(--c__coffee-milk--trans25);
-  color: var(--fc__default__fg); }
-  .qh__collection__coffee-milk-bg .qh__text-card .dark {
-    background-color: var(--c__coffee-milk--trans10);
-    color: var(--fc__default__fg); }
-  @media (prefers-color-scheme: dark) {
-    .qh__collection__coffee-milk-bg .qh__text-card html:not(.light) {
-      background-color: var(--c__coffee-milk--trans10);
-      color: var(--fc__default__fg); } }
 
 @media (max-width: 39.9375em) {
   .qh__collection__border-btwn .qh__text-card {
@@ -4125,7 +4339,7 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-top: 1.5rem;
+    margin-top: 0.75rem;
     margin-left: 0.5rem;
     min-height: 4.5rem;
     width: 4rem; }
@@ -4155,7 +4369,7 @@ body {
         min-height: 4.375rem; } }
   .qh__icon-card__content {
     color: var(--fc__attention-card__fg);
-    padding: 1.5rem 1rem;
+    padding: 0.75rem 1rem 0.75rem 0.5rem;
     width: calc(100% - 4rem); }
     .qh__icon-card__content p,
     .qh__icon-card__content ul,
@@ -4346,7 +4560,9 @@ body {
     fill: var(--fc__default__link--hover); }
 
 .qh__text-card-collection {
-  margin: 1.5rem 0; }
+  margin: 0 0 1.5rem 0; }
+  .qh__text-card-collection__title {
+    margin-top: 0; }
   @media (min-width: 40em) {
     .qh__text-card-collection__cards {
       display: -webkit-box;

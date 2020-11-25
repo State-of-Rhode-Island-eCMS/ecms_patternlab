@@ -119,26 +119,18 @@ html {
 
   // Loop again on Dark palettes only. Repetitive, but it works
   @media (prefers-color-scheme: dark) {
-    $num: 1;
     @each $key, $palette in $palettes {
       $values: map-get($palette, 'values');
       //@debug #{'key= ' + $key};
 
       // Only proceed if this is a dark palette
       @if str-index($key, "--dark") {
-        @if $num == 1 {
+        // Remove the "--dark" from the theme slug
+        &:not(.light) .qh__t__#{str-slice($key, 0, -7)} {
           @each $block, $section in $values {
             @include qh-output-color-var($block, $section, $palette);
           }
-        } @else {
-          // Remove the "--dark" from the theme slug
-          &:not(.light) .qh__t__#{str-slice($key, 0, -7)} {
-            @each $block, $section in $values {
-              @include qh-output-color-var($block, $section, $palette);
-            }
-          }
         }
-        $num: $num + 1;
       }
     }
   }

@@ -6,5 +6,20 @@
     margin-top: 0;
   }
 
-  &__content {}
+  &__text {
+    p {
+      @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+        --font-size-min: 0.875rem;
+        --font-size-max: 1rem;
+        --font-size-scaler-value: var(--st-scaler-value);
+        font-size: var(--font-size);
+
+        --font-lh-min: #{$st-lh-s};
+        --font-lh-max: #{$st-lh-l};
+        --font-lh-scaler-value: var(--st-lh-scaler-value);
+        line-height: var(--line-height);
+      }
+
+    }
+  }
 }

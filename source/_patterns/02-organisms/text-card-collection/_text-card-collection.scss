@@ -1,8 +1,10 @@
 .qh__text-card-collection {
-  margin: $general-v-spacing 0;
+  margin: 0 0 $general-v-spacing 0;
 
   // <h2>
-  &__title {}
+  &__title {
+    margin-top: 0;
+  }
 
   &__description {}
 
