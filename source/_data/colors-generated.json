@@ -78,7 +78,7 @@
   "t__scarborough__primary__fg--dark": "hsl(0, 0%, 100%)",
   "t__scarborough__primary__bg--dark": "hsla(224, 36%, 25%, 0.5)",
   "t__scarborough__primary--light__fg": "hsl(224, 37%, 17%)",
-  "t__scarborough__primary--light__bg": "hsl(208, 54%, 73%)",
+  "t__scarborough__primary--light__bg": "hsla(208, 54%, 73%, 0.25)",
   "t__scarborough__primary--light__fg--dark": "hsl(0, 0%, 100%)",
   "t__scarborough__primary--light__bg--dark": "hsla(208, 54%, 73%, 0.25)",
   "t__scarborough--dark__official__fg": "hsl(0, 0%, 83%)",

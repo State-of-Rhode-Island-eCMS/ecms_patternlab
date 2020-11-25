@@ -158,7 +158,7 @@ h2 {
   @supports (font-variation-settings: normal) {
     html:not(.novf) & {
       font-family: var(--font-serif-vf);
-      font-weight: 475;
+      font-weight: 425;
     }
     html:not(.novf).wf-inactive & {
       font-family: $font-serif-fallback;
@@ -233,7 +233,7 @@ h3 {
   @supports (font-variation-settings: normal) {
     html:not(.novf) & {
       font-family: var(--font-serif-vf);
-      font-weight: 575;
+      font-weight: 450;
     }
     html:not(.novf).wf-inactive & {
       font-family: $font-serif-fallback;
@@ -266,11 +266,11 @@ h3 {
   }
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
-  margin-bottom: calc(var(--body-text-spacer) * 0.5);
+  margin-bottom: calc(var(--body-text-spacer) * 0.75);
 
   @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
     margin-top: ($text-spacer-fallback-value * 1.5);
-    margin-bottom: ($text-spacer-fallback-value * 0.5);
+    margin-bottom: ($text-spacer-fallback-value * 0.75);
   }
 }
 

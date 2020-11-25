@@ -47,7 +47,7 @@
     flex-flow: column;
     align-items: flex-start;
     justify-content: center;
-    margin-top: $general-v-spacing;
+    margin-top: ($general-v-spacing / 2);
     margin-left: ($general-h-spacing/2);
     min-height: $card-header-min-height--sm;
     width: ($card-leftbar-width + $general-h-spacing);
@@ -89,7 +89,7 @@
 
   &__content {
     color: var(--fc__attention-card__fg);
-    padding: $general-v-spacing $general-h-spacing;
+    padding: ($general-v-spacing / 2) $general-h-spacing ($general-v-spacing / 2) ($general-h-spacing / 2);
     width: calc(100% - #{($card-leftbar-width + $general-h-spacing)});
 
     p,

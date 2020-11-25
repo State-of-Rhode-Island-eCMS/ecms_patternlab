@@ -408,7 +408,7 @@
         ],
         "primary--light": [
           { "fnName": "fg", "colorName": "navy--dark" },
-          { "fnName": "bg", "colorName": "ocean" },
+          { "fnName": "bg", "colorName": "ocean--trans25" },
           { "fnName": "fg--dark", "colorName": "white" },
           { "fnName": "bg--dark", "colorName": "ocean--trans25" }
         ]

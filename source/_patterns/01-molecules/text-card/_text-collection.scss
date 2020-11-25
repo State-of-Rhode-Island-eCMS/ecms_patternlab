@@ -6,7 +6,7 @@
   &__primary-light-bg,
   &__coffee-milk-bg {
     .qh__text-card {
-      padding: $general-v-spacing $general-h-spacing;
+      padding: $general-v-spacing ($general-h-spacing * 1.5);
     }
 
     @include breakpoint-between($bp__text-collection--2col, $bp__text-collection--3col) {
@@ -39,9 +39,10 @@
     .qh__text-card {
       background-color: var(--fc__primary--light__bg);
       color: var(--fc__primary--light__fg);
-
+    
       &__title {
         color: var(--fc__primary--light__fg);
+        margin-top: calc(var(--body-text-spacer) * 1);
       }
     }
   }
