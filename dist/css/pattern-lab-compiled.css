@@ -448,7 +448,7 @@ html {
     --fc__primary__fg--dark: white;
     --fc__primary__bg--dark: rgba(235, 82, 82, 0.15);
     --fc__primary--light__fg: #141414;
-    --fc__primary--light__bg: #eb5252;
+    --fc__primary--light__bg: rgba(235, 82, 82, 0.15);
     --fc__primary--light__fg--dark: white;
     --fc__primary--light__bg--dark: rgba(235, 82, 82, 0.5); }
   html.dark .qh__t__federal-hill {

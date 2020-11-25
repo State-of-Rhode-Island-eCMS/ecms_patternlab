@@ -450,24 +450,17 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementsByTagName("html")[0].classList.remove('light');
         document.getElementsByTagName("html")[0].classList.add('dark');
       }
-      e.blur();
     });
   }
 
   if (lightModeReset !== null && lightModeReset !== undefined) {
     lightModeReset.addEventListener('click', function(e) {
-      console.log(osLightMode);
       e.preventDefault();
       document.cookie = "lightMode=auto; max-age=31536000; path=/; samesite=strict";
 
       // Remove any current body classes.
       document.getElementsByTagName("html")[0].classList.remove('dark');
       document.getElementsByTagName("html")[0].classList.remove('light');
-
-      // Add in OS Default class.
-      //document.getElementsByTagName("html")[0].classList.add(osLightMode)
-
-      e.blur();
     });
   }
 
