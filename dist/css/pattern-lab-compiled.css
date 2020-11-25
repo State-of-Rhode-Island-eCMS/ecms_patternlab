@@ -2598,8 +2598,7 @@ table {
   background-color: var(--fc__primary--light__bg);
   color: var(--fc__primary--light__fg); }
   .qh__collection__primary-light-bg .qh__text-card__title {
-    color: var(--fc__primary--light__fg);
-    margin-top: calc(var(--body-text-spacer) * 1); }
+    color: var(--fc__primary--light__fg); }
 
 .qh__collection__coffee-milk-bg .qh__text-card {
   background-color: var(--c__coffee-milk--trans25);
