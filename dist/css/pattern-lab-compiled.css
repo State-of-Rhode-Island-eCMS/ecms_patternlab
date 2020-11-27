@@ -2785,6 +2785,22 @@ table {
   .qh__teaser-promotion__text {
     margin: 1.5rem 1rem;
     color: var(--fc__default__fg); }
+    .qh__teaser-promotion__text p,
+    .qh__teaser-promotion__text ul,
+    .qh__teaser-promotion__text li {
+      font-size: 1rem; }
+      @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+        .qh__teaser-promotion__text p,
+        .qh__teaser-promotion__text ul,
+        .qh__teaser-promotion__text li {
+          --font-size-min-value: 0.925;
+          --font-size-max-value: 1;
+          --font-size-scaler-value: var(--p-scaler-value);
+          font-size: var(--font-size);
+          --font-lh-min-value: 1.1;
+          --font-lh-max-value: 1.3;
+          --font-lh-scaler-value: var(--st-lh-scaler-value);
+          line-height: var(--line-height); } }
 
 .qh__text-card {
   margin-top: 1.5rem; }
@@ -2974,6 +2990,18 @@ table {
     @media (max-width: 49.9375em) {
       .qh__articles-latest__title .qh__articles-latest__all {
         display: none; } }
+  .qh__articles-latest .qh__teaser-article__content p {
+    font-size: 1rem; }
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      .qh__articles-latest .qh__teaser-article__content p {
+        --font-size-min-value: 0.925;
+        --font-size-max-value: 1;
+        --font-size-scaler-value: var(--p-scaler-value);
+        font-size: var(--font-size);
+        --font-lh-min-value: 1.1;
+        --font-lh-max-value: 1.3;
+        --font-lh-scaler-value: var(--st-lh-scaler-value);
+        line-height: var(--line-height); } }
   @media (min-width: 50em) {
     .qh__articles-latest__list + .qh__articles-latest__all {
       display: none; } }
@@ -4382,7 +4410,11 @@ body {
           --font-size-min-value: 0.925;
           --font-size-max-value: 1;
           --font-size-scaler-value: var(--p-scaler-value);
-          font-size: var(--font-size); } }
+          font-size: var(--font-size);
+          --font-lh-min-value: 1.1;
+          --font-lh-max-value: 1.3;
+          --font-lh-scaler-value: var(--st-lh-scaler-value);
+          line-height: var(--line-height); } }
   .qh__icon-card h3.qh__icon-card__title {
     color: var(--fc__attention-card__fg);
     display: -webkit-box;
@@ -4558,6 +4590,41 @@ body {
   .qh__file-list__link:hover .qh__file-list__item__download .qh__icon__download,
   .qh__file-list__link:focus .qh__file-list__item__download .qh__icon__download {
     fill: var(--fc__default__link--hover); }
+
+.qh-layout-section--col-size-100 .block-ecms-promotions-global {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (min-width: 50em) {
+    .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 calc(50% - 1rem);
+              flex: 1 0 calc(50% - 1rem);
+      max-width: calc(50% - 1rem);
+      margin-left: 0;
+      margin-top: 1.5rem; }
+      .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion:nth-child(2n-1), .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion:nth-child(2) {
+        margin-left: 1rem; } }
+  @media (min-width: 62em) {
+    .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 calc(33% - 1rem);
+              flex: 1 0 calc(33% - 1rem);
+      max-width: calc(33% - 1rem); }
+      .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion:nth-child(2n-1), .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion:nth-child(2) {
+        margin-left: 0; }
+      .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion:nth-child(3n-1), .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion:nth-child(3) {
+        margin-left: 1rem; } }
 
 .qh__text-card-collection {
   margin: 0 0 1.5rem 0; }
