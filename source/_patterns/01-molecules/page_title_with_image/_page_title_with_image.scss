@@ -11,18 +11,21 @@
     margin-left: -10%;
     margin-right: -10%;
     width: 120%;
+
     img {
       display: block;
       height: auto;
       max-width: 100%;
       width: 100%;
     }
-    @media screen and (min-width: $bp--small) {
+
+    @include breakpoint-up($bp--small) {
       margin-left: -5%;
       margin-right: -5%;
       width: 110%;
     }
-    @media screen and (min-width: $bp--medium) {
+
+    @include breakpoint-up($bp--medium) {
       margin-left: 0;
       margin-right: 0;
       width: 100%;
@@ -37,27 +40,40 @@
     grid-column: 1;
     grid-row: 2;
     margin-bottom: 0.25rem;
-    text-shadow: 
+    text-shadow:
       1px 1px 1px rgba(qh-get-color('quahog'), 0.95),
       1px 1px 1rem rgba(qh-get-color('quahog'), 0.5),
       -1px 1px 1rem rgba(qh-get-color('quahog'), 0.5),
       -1px -1px 1rem rgba(qh-get-color('quahog'), 0.5),
       1px -1px 1rem rgba(qh-get-color('quahog'), 0.5);
     width: 100%;
+
     @supports (font-size: clamp(1rem, 2vw, 2rem)) {
       --font-size-min: 1.25rem;
       --font-size-max: 4rem;
       --font-size-scaler-value: var(--h2-scaler-value);
       font-size: var(--font-size);
-  
+
       --font-lh-min: #{$h2-lh-s};
       --font-lh-max: #{$h2-lh-l};
       --font-lh-scaler-value: var(--h2-lh-scaler-value);
       line-height: var(--line-height);
     }
-    @media screen and (min-width: $bp--medium) {
+
+    @include breakpoint-up($bp--medium) {
       grid-row: 1;
       margin-bottom: 1rem;
+    }
+  }
+
+  // Completely different approach for IE11
+  @include onlyIE() {
+    display: block;
+
+    &__title {
+      position: absolute;
+        left: $general-h-spacing;
+        bottom: $general-h-spacing;
     }
   }
 }
