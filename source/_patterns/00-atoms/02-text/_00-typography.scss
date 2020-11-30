@@ -53,12 +53,12 @@ body {
     }
   }
 
-  @media screen and (min-width: $bp--medium) {
+  @include breakpoint-up($bp--medium) {
     font-size: $p-size-m;
     line-height: $p-lh-m;
   }
 
-  @media screen and (min-width: $bp--large) {
+  @include breakpoint-up($bp--large) {
     font-size: $p-size-l;
     line-height: $p-lh-l;
   }
@@ -75,7 +75,7 @@ body {
     word-spacing: var(--word-spacing);
   }
 
-  @media screen and (min-width: $bp--medium) {
+  @include breakpoint-up($bp--medium) {
     hyphens: none;
   }
 }
@@ -110,12 +110,12 @@ h1 {
     }
   }
 
-  @media screen and (min-width: $bp--medium) {
+  @include breakpoint-up($bp--medium) {
     font-size: $h1-size-m;
     line-height: $h1-lh-m;
   }
 
-  @media screen and (min-width: $bp--large) {
+  @include breakpoint-up($bp--large) {
     font-size: $h1-size-l;
     line-height: $h1-lh-l;
   }
@@ -132,7 +132,6 @@ h1 {
     line-height: var(--line-height);
     word-spacing: var(--word-spacing);
   }
-
   font-style: normal;
   margin-top: 0;
   margin-bottom: calc(var(--body-text-spacer) * 1);
@@ -168,12 +167,12 @@ h2 {
     }
   }
 
-  @media screen and (min-width: $bp--medium) {
+  @include breakpoint-up($bp--medium) {
     font-size: $h2-size-m;
     line-height: $h2-lh-m;
   }
 
-  @media screen and (min-width: $bp--large) {
+  @include breakpoint-up($bp--large) {
     font-size: $h2-size-l;
     line-height: $h2-lh-l;
   }
@@ -189,7 +188,6 @@ h2 {
     line-height: var(--line-height);
     word-spacing: var(--word-spacing);
   }
-
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 2);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
@@ -210,6 +208,11 @@ h2 {
       width: 1.125em;
 
       @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+        margin-top: ($text-spacer-fallback-value * 0.85);
+        margin-bottom: ($text-spacer-fallback-value * 0.85);
+      }
+
+      @include onlyIE() {
         margin-top: ($text-spacer-fallback-value * 0.85);
         margin-bottom: ($text-spacer-fallback-value * 0.85);
       }
@@ -243,12 +246,12 @@ h3 {
     }
   }
 
-  @media screen and (min-width: $bp--medium) {
+  @include breakpoint-up($bp--medium) {
     font-size: $h3-size-m;
     line-height: $h3-lh-m;
   }
 
-  @media screen and (min-width: $bp--large) {
+  @include breakpoint-up($bp--large) {
     font-size: $h3-size-l;
     line-height: $h3-lh-l;
   }
@@ -300,12 +303,12 @@ h4 {
     }
   }
 
-  @media screen and (min-width: $bp--medium) {
+  @include breakpoint-up($bp--medium) {
     font-size: $h4-size-m;
     line-height: $h4-lh-m;
   }
 
-  @media screen and (min-width: $bp--large) {
+  @include breakpoint-up($bp--large) {
     font-size: $h4-size-l;
     line-height: $h4-lh-l;
   }
@@ -321,7 +324,6 @@ h4 {
     line-height: var(--line-height);
     word-spacing: var(--word-spacing);
   }
-
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
@@ -358,12 +360,12 @@ h5 {
     }
   }
 
-  @media screen and (min-width: $bp--medium) {
+  @include breakpoint-up($bp--medium) {
     font-size: $h5-size-m;
     line-height: $h5-lh-m;
   }
 
-  @media screen and (min-width: $bp--large) {
+  @include breakpoint-up($bp--large) {
     font-size: $h5-size-l;
     line-height: $h5-lh-l;
   }
@@ -379,7 +381,6 @@ h5 {
     line-height: var(--line-height);
     word-spacing: var(--word-spacing);
   }
-
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
@@ -416,12 +417,12 @@ h6 {
     }
   }
 
-  @media screen and (min-width: $bp--medium) {
+  @include breakpoint-up($bp--medium) {
     font-size: $h6-size-m;
     line-height: $h6-lh-m;
   }
 
-  @media screen and (min-width: $bp--large) {
+  @include breakpoint-up($bp--large) {
     font-size: $h6-size-l;
     line-height: $h6-lh-l;
   }
@@ -437,7 +438,6 @@ h6 {
     line-height: var(--line-height);
     word-spacing: var(--word-spacing);
   }
-
   font-style: normal;
   margin-top: calc(var(--body-text-spacer) * 1.5);
   margin-bottom: calc(var(--body-text-spacer) * 0.5);
@@ -505,12 +505,12 @@ blockquote {
       }
     }
 
-    @media screen and (min-width: $bp--medium) {
+    @include breakpoint-up($bp--medium) {
       font-size: $bq-size-m;
       line-height: $bq-lh-m;
     }
 
-    @media screen and (min-width: $bp--large) {
+    @include breakpoint-up($bp--large) {
       font-size: $bq-size-l;
       line-height: $bq-lh-l;
     }
@@ -526,7 +526,6 @@ blockquote {
       line-height: var(--line-height);
       word-spacing: var(--word-spacing);
     }
-
     margin-left: auto;
     margin-right: auto;
     margin-top: 0.75rem;
@@ -538,6 +537,7 @@ body {
   --st-font-wght: var(--default-body-wght);
 }
 
+label,
 .small-text {
   font-family: $font-sans-static;
   font-size: $st-size-s;
@@ -563,12 +563,12 @@ body {
     }
   }
 
-  @media screen and (min-width: $bp--medium) {
+  @include breakpoint-up($bp--medium) {
     font-size: $st-size-m;
     line-height: $st-lh-m;
   }
 
-  @media screen and (min-width: $bp--large) {
+  @include breakpoint-up($bp--large) {
     font-size: $st-size-l;
     line-height: $st-lh-l;
   }
@@ -584,12 +584,10 @@ body {
     line-height: var(--line-height);
     word-spacing: var(--word-spacing);
   }
-
   font-style: normal;
 }
 
 label {
-  @extend .small-text;
   --st-font-wght: 475;
   display: block;
 }
