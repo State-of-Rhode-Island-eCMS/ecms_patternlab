@@ -9,7 +9,7 @@
     margin-top: $general-v-spacing;
   }
 
-  &--link {
+  &__link {
     display: block;
 
     // Hide external link indicator.
@@ -57,6 +57,7 @@
   &__text {
     margin: $general-v-spacing $general-h-spacing;
     color: var(--fc__default__fg);
+
     p,
     ul,
     li {
@@ -71,7 +72,6 @@
         --font-lh-max-value: #{$st-lh-l};
         --font-lh-scaler-value: var(--st-lh-scaler-value);
         line-height: var(--line-height);
-    
       }
     }
   }
