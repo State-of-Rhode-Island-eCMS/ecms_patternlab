@@ -30,8 +30,9 @@ $sidebar-row-gap: rem(36);
   &__content {
     grid-area: content;
     max-width: 89vw;
+
     @include breakpoint-up($bp__single-col-content) {
-      max-width: var(--content-max-width);
+      @include qh-content-maxwidth();
     }
   }
 
@@ -54,6 +55,7 @@ $sidebar-row-gap: rem(36);
     grid-area: sidebar-middle;
     max-width: 89vw;
     margin-top: $general-v-spacing;
+
     @include breakpoint-up($bp__single-col-content) {
       max-width: $sidebar-max;
       margin-right: $sidebar-column-gap;
@@ -64,6 +66,7 @@ $sidebar-row-gap: rem(36);
   &__sidebar-bottom {
     grid-area: sidebar-bottom;
     max-width: 89vw;
+
     @include breakpoint-up($bp__single-col-content) {
       max-width: $sidebar-max;
       margin-right: $sidebar-column-gap;
@@ -83,20 +86,18 @@ $sidebar-row-gap: rem(36);
   backdrop-filter: blur(4px);
   background-color: rgba(0,0,0,0.25);
   height: 100vh;
-  left: 0;
   opacity: 0;
   position: fixed;
-  top: 0;
+    left: 0; top: 0;
   width: 100vw;
   transition:
     opacity $transition-duration-medium $transition-timing-base 0ms,
     z-index 0ms linear $transition-duration-medium;
   z-index: -1;
-&.active {
+
+  &.active {
     background-color: rgba(0,0,0,.35);
     opacity: 1;
     z-index: z(mobile-body-overlay);
   }
 }
-
-
