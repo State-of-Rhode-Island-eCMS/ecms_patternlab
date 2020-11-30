@@ -39,6 +39,10 @@ a {
       height: 0.875em;
       vertical-align: baseline;
       width: 0.875em;
+
+      @include onlyIE() {
+        display: none;
+      }
     }
 
     &:hover::before,
@@ -83,13 +87,9 @@ a {
 
   // Utility classes
   .qh__u__no-mail &[href^="mailto:"],
-  .qh__u__no-tel &[href^="tel:"] {
-    &::before {
-      display: none;
-    }
-  }
-
+  .qh__u__no-tel &[href^="tel:"],
   .qh__u__no-external &[target="_blank"] {
+    &::before,
     &::after {
       display: none;
     }
@@ -100,7 +100,7 @@ p,
 ul {
   a {
     font-weight: calc(var(--p-font-wght) * 1.25);
-  }  
+  }
 }
 
 // Assumed to be any of class list 'visually-hidden focusable skip-link'
