@@ -11,6 +11,10 @@
     margin-right: 1rem;
     width: 4rem;
     min-height: 4.5rem;
+
+    @include onlyIE() {
+      display: block;
+    }
   }
 
   &__name {
@@ -55,7 +59,7 @@
         --font-size-max: 0.875rem;
         --font-size-scaler-value: var(--st-scaler-value);
         font-size: var(--font-size);
-    
+
         --font-lh-min: #{$st-lh-s};
         --font-lh-max: #{$st-lh-l};
         --font-lh-scaler-value: var(--st-lh-scaler-value);
@@ -100,7 +104,7 @@
         --font-size-max: 3rem;
         --font-size-scaler-value: var(--h2-scaler-value);
         font-size: var(--font-size);
-    
+
         --font-lh-min: #{$h1-lh-s};
         --font-lh-max: #{$h1-lh-l};
         --font-lh-scaler-value: var(--h1-lh-scaler-value);
@@ -144,7 +148,7 @@
         --font-size-max: 1rem;
         --font-size-scaler-value: var(--p-scaler-value);
         font-size: var(--font-size);
-    
+
         --font-lh-min: #{$p-lh-s};
         --font-lh-max: #{$p-lh-l};
         --font-lh-scaler-value: var(--p-lh-scaler-value);
