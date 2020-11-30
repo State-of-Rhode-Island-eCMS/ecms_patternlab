@@ -35,10 +35,11 @@
     }
   }
 
-  p, 
+  p,
   li {
     font-variant-numeric: lining-nums;
   }
+
   &__inner {
     @include qh-content-maxwidth();
   }
@@ -72,11 +73,19 @@
     // Four column 2 over 2 layout
     @include breakpoint-up($qh__footer-sm-bp) {
       flex: 0 0 50%;
+
+      @include onlyIE() {
+        flex: 0 1 47.5%;
+      }
     }
 
     // Four columns across layout
     @include breakpoint-up($qh__footer-lg-bp) {
       flex: 0 0 25%;
+
+      @include onlyIE() {
+        flex: 0 1 23%;
+      }
     }
   }
 
