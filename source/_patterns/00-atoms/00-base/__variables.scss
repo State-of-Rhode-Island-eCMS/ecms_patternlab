@@ -18,14 +18,10 @@ $button-h-spacing: 1.25rem;
 
 // Content max-width
 $content-max-small-screen: 93vw;
-$content-max-large-screen: 90rem;
+$content-max-large-screen: 86rem;
 
-$content-max-width: $content-max-small-screen;
-@media screen and (min-width: $bp--large) {
-  $content-max-width: $content-max-large-screen;
-}
 body {
-  --content-max-width: min(#{$content-max-small-screen}, #{$content-max-large-screen});
+  --content-max-width: Min(#{$content-max-small-screen}, #{$content-max-large-screen});
 }
 
 // Generic page gutter, column spacing, vertical spacing
