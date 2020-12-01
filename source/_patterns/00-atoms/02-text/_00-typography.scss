@@ -135,10 +135,10 @@ h1 {
   }
   font-style: normal;
   margin-top: 0;
-  margin-bottom: calc(var(--body-text-spacer) * 1);
+  margin-bottom: $text-spacer-fallback-value;
 
-  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-    margin-bottom: $text-spacer-fallback-value;
+  @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    margin-bottom: var(--body-text-spacer);
   }
 }
 
@@ -190,12 +190,12 @@ h2 {
     word-spacing: var(--word-spacing);
   }
   font-style: normal;
-  margin-top: calc(var(--body-text-spacer) * 2);
-  margin-bottom: calc(var(--body-text-spacer) * 0.5);
+  margin-top: ($text-spacer-fallback-value * 2);
+  margin-bottom: ($text-spacer-fallback-value * 0.5);
 
-  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-    margin-top: ($text-spacer-fallback-value * 2);
-    margin-bottom: ($text-spacer-fallback-value * 0.5);
+  @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    margin-top: calc(var(--body-text-spacer) * 2);
+    margin-bottom: calc(var(--body-text-spacer) * 0.5);
   }
 
   &:first-of-type,
@@ -204,18 +204,13 @@ h2 {
       content: ' ';
       display: block;
       border-bottom: solid 0.4rem var(--c__rhody-red);
-      margin-top: calc(var(--body-text-spacer) * 0.85);
-      margin-bottom: calc(var(--body-text-spacer) * 0.85);
+      margin-top: ($text-spacer-fallback-value * 0.85);
+      margin-bottom: ($text-spacer-fallback-value * 0.85);
       width: 1.125em;
 
-      @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-        margin-top: ($text-spacer-fallback-value * 0.85);
-        margin-bottom: ($text-spacer-fallback-value * 0.85);
-      }
-
-      @include onlyIE() {
-        margin-top: ($text-spacer-fallback-value * 0.85);
-        margin-bottom: ($text-spacer-fallback-value * 0.85);
+      @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+        margin-top: calc(var(--body-text-spacer) * 0.85);
+        margin-bottom: calc(var(--body-text-spacer) * 0.85);
       }
     }
   }
@@ -269,12 +264,12 @@ h3 {
     word-spacing: var(--word-spacing);
   }
   font-style: normal;
-  margin-top: calc(var(--body-text-spacer) * 1.5);
-  margin-bottom: calc(var(--body-text-spacer) * 0.75);
+  margin-top: ($text-spacer-fallback-value * 1.5);
+  margin-bottom: ($text-spacer-fallback-value * 0.75);
 
-  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-    margin-top: ($text-spacer-fallback-value * 1.5);
-    margin-bottom: ($text-spacer-fallback-value * 0.75);
+  @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    margin-top: calc(var(--body-text-spacer) * 1.5);
+    margin-bottom: calc(var(--body-text-spacer) * 0.75);
   }
 }
 
@@ -326,12 +321,12 @@ h4 {
     word-spacing: var(--word-spacing);
   }
   font-style: normal;
-  margin-top: calc(var(--body-text-spacer) * 1.5);
-  margin-bottom: calc(var(--body-text-spacer) * 0.5);
+  margin-top: ($text-spacer-fallback-value * 1.5);
+  margin-bottom: ($text-spacer-fallback-value * 0.5);
 
-  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-    margin-top: ($text-spacer-fallback-value * 1.5);
-    margin-bottom: ($text-spacer-fallback-value * 0.5);
+  @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    margin-top: calc(var(--body-text-spacer) * 1.5);
+    margin-bottom: calc(var(--body-text-spacer) * 0.5);
   }
 }
 
@@ -383,12 +378,12 @@ h5 {
     word-spacing: var(--word-spacing);
   }
   font-style: normal;
-  margin-top: calc(var(--body-text-spacer) * 1.5);
-  margin-bottom: calc(var(--body-text-spacer) * 0.5);
+  margin-top: ($text-spacer-fallback-value * 1.5);
+  margin-bottom: ($text-spacer-fallback-value * 0.5);
 
-  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-    margin-top: ($text-spacer-fallback-value * 1.5);
-    margin-bottom: ($text-spacer-fallback-value * 0.5);
+  @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    margin-top: calc(var(--body-text-spacer) * 1.5);
+    margin-bottom: calc(var(--body-text-spacer) * 0.5);
   }
 }
 
@@ -440,12 +435,12 @@ h6 {
     word-spacing: var(--word-spacing);
   }
   font-style: normal;
-  margin-top: calc(var(--body-text-spacer) * 1.5);
-  margin-bottom: calc(var(--body-text-spacer) * 0.5);
+  margin-top: ($text-spacer-fallback-value * 1.5);
+  margin-bottom: ($text-spacer-fallback-value * 0.5);
 
-  @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-    margin-top: ($text-spacer-fallback-value * 1.5);
-    margin-bottom: ($text-spacer-fallback-value * 0.5);
+  @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    margin-top: calc(var(--body-text-spacer) * 1.5);
+    margin-bottom: calc(var(--body-text-spacer) * 0.5);
   }
 }
 
