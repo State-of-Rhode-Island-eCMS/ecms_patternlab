@@ -1,0 +1,47 @@
+.block-ecms-promotions-global {
+
+  .qh-layout-section--col-size-100 & {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    justify-content: center;
+
+    @include breakpoint-up($bp--medium) {
+      .qh__teaser-promotion {
+        flex: 1 0 calc(50% - 1rem);
+        margin-left: 0;
+        margin-top: 1.5rem;
+
+        @include onlyIE() {
+          flex: 0 1 47.5%;
+        }
+
+        &:nth-child(2n-1),
+        &:nth-child(2) {
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    @include breakpoint-up($bp--large) {
+      .qh__teaser-promotion {
+        flex: 1 0 calc(33% - 1rem);
+
+        @include onlyIE() {
+          flex: 0 1 31%;
+        }
+
+        &:nth-child(2n-1),
+        &:nth-child(2) {
+          margin-left: 0;
+        }
+
+        &:nth-child(3n-1),
+        &:nth-child(3) {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+

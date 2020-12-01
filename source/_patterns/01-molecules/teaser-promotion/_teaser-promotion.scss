@@ -9,7 +9,7 @@
     margin-top: $general-v-spacing;
   }
 
-  &--link {
+  &__link {
     display: block;
 
     // Hide external link indicator.
@@ -57,5 +57,22 @@
   &__text {
     margin: $general-v-spacing $general-h-spacing;
     color: var(--fc__default__fg);
+
+    p,
+    ul,
+    li {
+      font-size: 1rem;
+      @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+        --font-size-min-value: 0.925;
+        --font-size-max-value: 1;
+        --font-size-scaler-value: var(--p-scaler-value);
+        font-size: var(--font-size);
+
+        --font-lh-min-value: #{$st-lh-s};
+        --font-lh-max-value: #{$st-lh-l};
+        --font-lh-scaler-value: var(--st-lh-scaler-value);
+        line-height: var(--line-height);
+      }
+    }
   }
 }

@@ -11,8 +11,10 @@
     justify-content: flex-start;
     margin: 0 #{- ($general-h-spacing/2)};
     max-width: unset;
+    list-style: none;
 
     > li {
+      margin: 0;
       padding: 0 ($general-h-spacing/2) $general-v-spacing;
 
       @include breakpoint-up($bp--small) {

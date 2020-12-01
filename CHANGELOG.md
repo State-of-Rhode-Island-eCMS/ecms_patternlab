@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIG-130: IE11 fixes, hotel theming.
 
 ### Deprecated
 
@@ -23,7 +24,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [0.2.7] - 2020-11-25
 ### Changed
-RIG-130: Resolve dark mode stuff, Bug fixes, typography changes
+- RIG-130: Resolve dark mode stuff, Bug fixes, typography changes
 
 ## [0.2.6] - 2020-11-24
 ### Added

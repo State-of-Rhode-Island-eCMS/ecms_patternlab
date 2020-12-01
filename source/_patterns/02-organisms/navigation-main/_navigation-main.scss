@@ -414,7 +414,9 @@ body {
   &__link[aria-expanded="true"] {
     background-color: var(--fc__nav-main__link--hover__bg);
     color: var(--fc__nav-main__link--hover);
-    padding: $nav-a-v-spacing $nav-a-h-spacing--sm ($nav-a-v-spacing * 0.75);
+    padding: ($nav-a-v-spacing * 0.75) $nav-a-h-spacing--sm $nav-a-v-spacing;
+    padding-top: $nav-a-v-spacing;
+    padding-bottom: ($nav-a-v-spacing * 0.75);
 
     .qh__icon__chevron-down {
       &__circle {
@@ -442,6 +444,11 @@ body {
   // <a>
   &__link {
     padding: ($nav-a-v-spacing * 0.75) $nav-a-h-spacing--sm $nav-a-v-spacing;
+
+    @include onlyIE() {
+      padding-left: ($nav-a-h-spacing--sm * 0.5);
+      padding-right: ($nav-a-h-spacing--sm * 0.5);
+    }
 
     &,
     &:visited {
@@ -475,8 +482,9 @@ body {
     &#{&}--current {
       color: var(--fc__nav-main__fg);
       // cursor: default;
-      font-weight: 550; // TODO: replace this with the proper font weight
-      padding: ($nav-a-v-spacing * 0.75) $nav-a-h-spacing--sm $nav-a-v-spacing;
+      font-weight: 550;
+      padding-top: ($nav-a-v-spacing * 0.75);
+      padding-bottom: $nav-a-v-spacing;
       // pointer-events: none;
 
       @include breakpoint-down($bp__show__desktop-nav) {

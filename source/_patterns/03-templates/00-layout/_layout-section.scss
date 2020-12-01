@@ -1,10 +1,9 @@
 .qh-layout-section {
+  @include qh-content-maxwidth();
   display: flex;
   flex-flow: column;
   align-items: stretch;
   justify-content: center;
-  max-width: var(--content-max-width);
-  margin: 0 auto;
 
   // Temp gutters and VR
   padding: $general-v-spacing 0;
@@ -15,28 +14,23 @@
     // One Column sizing
     &-25 {
       display: block;
-      margin: 0 auto;
       width: 25%;
     }
 
     &-50 {
       display: block;
-      margin: 0 auto;
       width: 50%;
     }
 
     &-75 {
       display: block;
-      margin: 0 auto;
       width: 75%;
     }
 
     &-100 {
       display: block;
-      margin: 0 auto;
       width: 100%;
     }
-
 
     // Two Column sizing
     &-25-75 {
@@ -268,7 +262,7 @@
           flex: 1 1 calc(50% - #{$grid-gap});
 
           @include onlyIE() {
-            width: calc(50% - #{$grid-gap/2});
+            flex: 1 1 40%;
           }
 
           &:nth-child(even) {
@@ -280,7 +274,7 @@
           flex: 1 1 calc(25% - #{$grid-gap});
 
           @include onlyIE() {
-            width: calc(25% - #{$grid-gap * 0.875});
+            flex: 1 1 20%;
           }
 
           + .qh-layout-section__col {

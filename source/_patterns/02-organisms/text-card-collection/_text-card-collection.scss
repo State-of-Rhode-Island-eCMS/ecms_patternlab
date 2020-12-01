@@ -23,9 +23,8 @@
           flex: 1 0 calc(50% - #{$grid-gap/2});
           max-width: 50%;
 
-          // TODO: Needs testing
           @include onlyIE() {
-            width: calc(50% - #{$grid-gap/2});
+            flex: 1 1 40%;
           }
         }
       }
@@ -34,9 +33,8 @@
         .qh__text-card {
           flex: 0 1 50%;
 
-          // TODO: Needs testing
           @include onlyIE() {
-            width: calc(50% - #{$grid-gap/2});
+            flex: 1 1 40%;
           }
         }
       }
@@ -51,9 +49,8 @@
           flex: 1 0 calc(33% - #{($grid-gap * 2)/3});
           max-width: 33%;
 
-          // TODO: Needs testing
           @include onlyIE() {
-            width: calc(50% - #{$grid-gap/2});
+            flex: 1 1 30%;
           }
         }
       }
@@ -62,9 +59,8 @@
         .qh__text-card {
           flex: 0 1 33%;
 
-          // TODO: Needs testing
           @include onlyIE() {
-            width: calc(33% - #{$grid-gap});
+            flex: 1 1 30%;
           }
         }
       }

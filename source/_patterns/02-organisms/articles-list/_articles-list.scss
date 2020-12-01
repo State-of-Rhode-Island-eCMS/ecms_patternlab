@@ -20,19 +20,22 @@
 
     @media (min-width: $bp--medium) {
       flex: 1 1 0;
+      display: flex;
+      flex-flow: column;
 
+      .qh__teaser-article__content {
         display: flex;
         flex-flow: column;
+        height: 100%;
+      }
 
-        .qh__teaser-article__content {
-          display: flex;
-          flex-flow: column;
-          height: 100%;
-        }
+      .qh__teaser-article__cta {
+        margin-top: auto;
+      }
+    }
 
-        .qh__teaser-article__cta {
-          margin-top: auto;
-        }
+    @include onlyIE() {
+      display: block;
     }
   }
 }
