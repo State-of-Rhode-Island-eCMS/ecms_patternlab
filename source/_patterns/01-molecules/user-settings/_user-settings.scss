@@ -5,6 +5,10 @@
   display: inline-block;
   position: relative;
 
+  .no-js & {
+    display: none;
+  }
+
   &__icon {
     display: inline-block;
     height: em(20);
