@@ -2693,6 +2693,8 @@ table {
               transform-origin: bottom left; }
     .qh__teaser-hotel__snipe sup {
       font-size: 50%; }
+    .qh__teaser-hotel__snipe p {
+      text-align: right; }
     .qh__teaser-hotel:hover .qh__teaser-hotel__snipe,
     a:hover .qh__teaser-hotel__snipe,
     a:focus .qh__teaser-hotel__snipe {
@@ -3107,6 +3109,9 @@ table {
           height: 100%; }
         .qh__articles-list__list > * .qh__teaser-article__cta {
           margin-top: auto; } }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .qh__articles-list__list > * {
+        display: block; } }
 
 .qh__global-header {
   background-color: var(--fc__official__bg);
@@ -3167,8 +3172,10 @@ table {
       -ms-flex-pack: start;
           justify-content: flex-start;
   margin: 0 -0.5rem;
-  max-width: unset; }
+  max-width: unset;
+  list-style: none; }
   .qh__hotels-grid__list > li {
+    margin: 0;
     padding: 0 0.5rem 1.5rem; }
     @media (min-width: 40em) {
       .qh__hotels-grid__list > li {
@@ -3519,7 +3526,9 @@ body {
   .qh__nav-main__item:not(.qh__nav-main__item__sub):focus-within > .qh__nav-main__link:not(.qh__nav-main__link--current):not(.qh__nav-main__link--home), .qh__nav-main__link[aria-expanded="true"] {
     background-color: var(--fc__nav-main__link--hover__bg);
     color: var(--fc__nav-main__link--hover);
-    padding: 1rem 1rem 0.75rem; }
+    padding: 0.75rem 1rem 1rem;
+    padding-top: 1rem;
+    padding-bottom: 0.75rem; }
     .qh__nav-main__item:not(.qh__nav-main__item__sub) > .qh__nav-main__link:hover .qh__icon__chevron-down__circle,
     .qh__nav-main__item:not(.qh__nav-main__item__sub) > .qh__nav-main__link:focus .qh__icon__chevron-down__circle,
     .qh__nav-main__item:not(.qh__nav-main__item__sub):hover > .qh__nav-main__link:not(.qh__nav-main__link--current):not(.qh__nav-main__link--home) .qh__icon__chevron-down__circle,
@@ -3537,6 +3546,10 @@ body {
             transform: rotate(-0.5turn); }
   .qh__nav-main__link {
     padding: 0.75rem 1rem 1rem; }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .qh__nav-main__link {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem; } }
     .qh__nav-main__link, .qh__nav-main__link:visited {
       background-color: transparent;
       color: var(--fc__nav-main__link);
@@ -3555,7 +3568,8 @@ body {
     .qh__nav-main__link.qh__nav-main__link--current {
       color: var(--fc__nav-main__fg);
       font-weight: 550;
-      padding: 0.75rem 1rem 1rem; }
+      padding-top: 0.75rem;
+      padding-bottom: 1rem; }
       @media (max-width: 61.9375em) {
         .qh__nav-main__link.qh__nav-main__link--current {
           border-left: 0.5rem solid var(--fc__nav-main__link--hover__bg); } }
