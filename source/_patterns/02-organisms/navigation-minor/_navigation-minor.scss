@@ -48,8 +48,7 @@
 
   // Interaction styles come from .qh__accordion
   &:hover,
-  &:focus,
-  &:focus-within {}
+  &:focus {}
 
   a {
     display: block;
@@ -98,6 +97,10 @@
   }
 
   // <ul>
+  .qh__accordion {
+    margin-top: 0;
+  }
+
   &__list {
     background-color: var(--fc__nav-minor__bg);
     position: relative;

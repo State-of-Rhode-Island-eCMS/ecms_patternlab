@@ -398,9 +398,8 @@ body {
   // Ideally CSS hovers are only present when JS does not load
   .no-js &__link:hover + &__list__sub,
   .no-js &__link:focus + &__list__sub,
-  &__link[aria-expanded="true"] + &__list__sub,
-  .no-js &__item:hover > &__list__sub,
-  .no-js &__item:focus-within > &__list__sub {
+  //.no-js &__item:focus-within > &__list__sub, !ACK focus-within BREAKS ie11
+  &__link[aria-expanded="true"] + &__list__sub {
     opacity: 1;
     transition: $transition-duration-medium opacity ease 0s, 0s visibility linear 0s;
     visibility: visible;
@@ -410,11 +409,10 @@ body {
   &__item:not(&__item__sub) > &__link:hover,
   &__item:not(&__item__sub) > &__link:focus,
   &__item:not(&__item__sub):hover > &__link:not(&__link--current):not(&__link--home),
-  &__item:not(&__item__sub):focus-within > &__link:not(&__link--current):not(&__link--home),
+  //&__item:not(&__item__sub):focus-within > &__link:not(&__link--current):not(&__link--home), !ACK focus-within BREAKS ie11
   &__link[aria-expanded="true"] {
     background-color: var(--fc__nav-main__link--hover__bg);
     color: var(--fc__nav-main__link--hover);
-    padding: ($nav-a-v-spacing * 0.75) $nav-a-h-spacing--sm $nav-a-v-spacing;
     padding-top: $nav-a-v-spacing;
     padding-bottom: ($nav-a-v-spacing * 0.75);
 
@@ -545,6 +543,15 @@ body {
       &:hover,
       &:focus {
         padding: em(1) !important;
+      }
+
+      @include onlyIE() {
+        padding-top: 0.5rem;
+
+        &:hover,
+        &:focus {
+          padding-top: 0.5rem !important;
+        }
       }
     }
   }
