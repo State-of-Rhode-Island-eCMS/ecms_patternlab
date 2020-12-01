@@ -49,8 +49,8 @@ function allMenuCloser() {
 
 // Add screen overlay
 function addPageOverlay() {
-  const pageOverlay = document.createElement("div");
-  let divContent = document.createTextNode(" ");
+  var pageOverlay = document.createElement("div");
+  var divContent = document.createTextNode(" ");
   pageOverlay.appendChild(divContent);
   pageOverlay.id = 'page_overlay';
   pageOverlay.classList.add('page-overlay');
