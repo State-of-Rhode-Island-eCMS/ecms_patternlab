@@ -32,10 +32,10 @@
       .qh__teaser-article__cta {
         margin-top: auto;
       }
+    }
 
-      @include onlyIE() {
-        display: block;
-      }
+    @include onlyIE() {
+      display: block;
     }
   }
 }
