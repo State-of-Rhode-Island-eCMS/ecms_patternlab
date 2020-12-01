@@ -9,7 +9,22 @@
 
 .qh__accordion {
   //border: $border-xs solid transparent;
-  margin-top: ($general-v-spacing/2);
+
+  // When any other element is on top of an accordion:
+  margin-top: $text-spacer-fallback-value;
+
+  @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    margin-top: var(--body-text-spacer);
+  }
+
+  // When two or more accordions are on top of one another:
+  & + & {
+    margin-top: ($general-v-spacing/2);
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      margin-top: calc(var(--body-text-spacer)/2);
+    }
+  }
 
   // Removing… a proper accordion group needs these styles, but none
   // of our accordions can be grouped together
@@ -98,11 +113,7 @@
     @include clearfix();
     background-color: var(--c__coffee-milk--trans10);
 
-    > div {
-      > * + * {
-        margin-top: var(--body-text-spacer);
-      }
-    }
+    // Vertical rhythm inside an accordion is handled in 00-atoms/02-text/00-typography
 
     // TODO: Transitions not firing as we want them to
     .js & {
@@ -127,6 +138,11 @@
         opacity: 1;
         transition: $transition-base 125ms;
       }
+    }
+
+    // When JS is broken and accordions are open by default
+    .no-js & {
+      padding: $nav-a-v-spacing $nav-a-h-spacing;
     }
 
     // In print, accordions are always open

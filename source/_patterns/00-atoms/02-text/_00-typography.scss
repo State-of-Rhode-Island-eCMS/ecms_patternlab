@@ -6,12 +6,13 @@ body {
 }
 
 /* following element spacing selector, just inside node content */
-.node {
+.node,
+.qh__accordion__content > div {
   > * + * {
-    margin-top: var(--body-text-spacer);
+    margin-top: $text-spacer-fallback-value;
 
-    @supports not (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-      margin-top: $text-spacer-fallback-value;
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      margin-top: var(--body-text-spacer);
     }
   }
 }
