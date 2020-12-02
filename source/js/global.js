@@ -1,5 +1,10 @@
 // Global functions
 
+// Missing forEach on NodeList for IE11
+// SCRIPT438: Object does not support property or method forEach
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
 
 // Check for mouse clicks, enter keypress (13), or spacebar keypress (32)
 // https://karlgroves.com/2014/11/24/ridiculously-easy-trick-for-keyboard-accessibility
@@ -15,15 +20,6 @@ function a11yClick(event){
     return false;
   }
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-  // If JS is loaded, change the no-js class
-  document.documentElement.classList.remove("no-js");
-  document.documentElement.classList.add("js");
-  // Add an empty element that is styled when a menu is open
-  addPageOverlay();
-});
-
 
 // Menu closer function
 function allMenuCloser() {
@@ -77,27 +73,35 @@ function activatePageOverlay() {
   pageOverlay.classList.add('active');
 }
 
+// Cookie getter
 function getCookie(name) {
 	var value = "; " + document.cookie;
 	var parts = value.split("; " + name + "=");
 	if (parts.length == 2) return parts.pop().split(";").shift();
 };
 
-
-// Expand / Collapse utility
-//
-//Minimum expected markup:
-//<div>
-//  <div>
-//    <button id="summaryId" class="js__expand-collapse" aria-expanded="false" aria-controls="targetId">See More</button>
-//  </div>
-//  <div id="targetId" aria-labelledby="summaryId" class="">Content to reveal here</div>
-//</div>
-//
-// This function ONLY toggles a show/hide class on the target and toggles aria-expanded
-// Any other functionality (like swapping the text content if true/false) needs to be in the component JS
 document.addEventListener("DOMContentLoaded", function() {
 
+  // If JS is loaded, change the no-js class
+  document.documentElement.classList.remove("no-js");
+  document.documentElement.classList.add("js");
+
+  // Add an empty element that is styled when a menu is open
+  addPageOverlay();
+
+
+  // Expand / Collapse utility
+  //
+  //Minimum expected markup:
+  //<div>
+  //  <div>
+  //    <button id="summaryId" class="js__expand-collapse" aria-expanded="false" aria-controls="targetId">See More</button>
+  //  </div>
+  //  <div id="targetId" aria-labelledby="summaryId" class="">Content to reveal here</div>
+  //</div>
+  //
+  // This function ONLY toggles a show/hide class on the target and toggles aria-expanded
+  // Any other functionality (like swapping the text content if true/false) needs to be in the component JS
   document.querySelectorAll(".js__expand-collapse").forEach(function(toggle_element) {
     toggle_element.addEventListener('click', function(event) {
       event.preventDefault();
