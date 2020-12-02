@@ -3131,6 +3131,12 @@ table {
         .qh__articles-list__list > * .qh__teaser-article__cta {
           margin-top: auto; } }
 
+.qh__content-components-block[class*='qh__t'] {
+  padding: 1.5rem 1rem; }
+  .qh__content-components-block[class*='qh__t'] figure:first-child {
+    margin: -1.5rem -1rem 1.5rem;
+    width: calc( 100% + (1rem * 2)); }
+
 .qh__global-header {
   background-color: var(--fc__official__bg);
   color: var(--fc__official__fg); }
@@ -5272,7 +5278,7 @@ body {
 .layout-builder {
   background-color: inherit; }
 
-.layout-builder-block {
+.layout-builder-block:not([class*="qh__t"]) {
   background-color: inherit; }
 
 .node-layout-builder-form {
