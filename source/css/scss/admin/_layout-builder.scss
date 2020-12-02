@@ -4,7 +4,7 @@
   background-color: inherit;
 }
 
-.layout-builder-block {
+.layout-builder-block:not([class*="qh__t"]){
   background-color: inherit;
 }
 
