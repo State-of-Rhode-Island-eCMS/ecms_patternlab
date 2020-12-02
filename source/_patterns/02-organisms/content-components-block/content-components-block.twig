@@ -1,0 +1,17 @@
+{# TODO: Figure out how to make this layout builder block editable without attributes #}
+{%
+  set classes = [
+    'qh__content-components-block',
+    bg_color_class
+  ]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2 class="qh__content-components-block__title">{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  {{ rendered_components }}
+</div>
