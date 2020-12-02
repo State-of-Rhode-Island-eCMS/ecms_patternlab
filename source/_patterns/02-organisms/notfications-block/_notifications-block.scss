@@ -2,8 +2,18 @@
   position: relative;
 
   &__wrapper {
+    //@include qh-content-maxwidth();
     background-color: var(--fc__notification__bg);
-    @include qh-content-maxwidth();
+    margin: 0 auto;
+    max-width: calc(#{$content-max-small-screen} + 1.75rem);
+
+    @include breakpoint-up($bp--xxlarge) {
+      max-width: calc(#{$content-max-large-screen} + 1.75rem);
+    }
+
+    @supports (width: Min(10px, 5px)) {
+      max-width: Min(calc(#{$content-max-small-screen} + 1.75rem), #{$content-max-large-screen});
+    }
 
     // Light colored background as a pseudo element with opacity applied
     &::before {
@@ -18,9 +28,9 @@
 
   .qh__icon__svg {
     color: var(--fc__notification__icon);
-    margin-right: $general-h-spacing;
     height: rem(32);
-    width: rem(32);
+    margin-right: 0.5em;
+    width: rem(38);
   }
 
   // <p>
