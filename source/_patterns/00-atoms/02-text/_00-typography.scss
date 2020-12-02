@@ -16,6 +16,16 @@ body {
     }
   }
 }
+/* Any time paragraphs follow something else */
+main { 
+  * + p {
+    margin-top: $text-spacer-fallback-value;
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      margin-top: var(--body-text-spacer);
+    }
+  }
+}
 
 // Defining this mixin here so things are all in one place
 @mixin qh__p {
