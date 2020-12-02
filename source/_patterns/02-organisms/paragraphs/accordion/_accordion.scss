@@ -45,7 +45,7 @@
     color: var(--fc__default__fg);
     display: block;
     --p-font-wght: 450;
-    max-width: unset;
+    max-width: none;
     outline: none;
     padding: $nav-a-v-spacing $nav-a-h-spacing;
     text-align: left;
@@ -99,7 +99,12 @@
       background-color: var(--c__coffee-milk--trans25);
 
       .qh__icon__plusminus__vert {
+        // IE 11 doesn't support CSS transforms on SVG elements
         transform: rotate(-360deg);
+
+        @include onlyIE() {
+          opacity: 0;
+        }
       }
     }
 
@@ -129,7 +134,7 @@
     }
 
     .js [aria-expanded="true"] + & {
-      max-height: unset;
+      max-height: none;
       padding: $nav-a-v-spacing $nav-a-h-spacing;
       transition: max-height 0s linear 500s, visibility 0s linear 0ms;
       visibility: visible;
@@ -148,7 +153,7 @@
     // In print, accordions are always open
     @media print {
       .js & {
-        max-height: unset;
+        max-height: none;
         overflow: visible;
         visibility: visible;
 

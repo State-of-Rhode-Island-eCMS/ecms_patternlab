@@ -106,7 +106,7 @@
         --font-lh-max-value: #{$st-lh-l};
         --font-lh-scaler-value: var(--st-lh-scaler-value);
         line-height: var(--line-height);
-    
+
       }
     }
   }
@@ -121,6 +121,7 @@
     min-height: $card-header-min-height--sm;
     margin-top: 0;
     margin-bottom: ($general-v-spacing/2);
+
     @supports (font-size: clamp(1rem, 2vw, 2rem)) {
       --font-size-min-value: 1.125;
       --font-size-max-value: 1.5;
@@ -130,6 +131,10 @@
 
     @media (min-width: $bp--large) {
       min-height: $card-header-min-height--lg;
+    }
+
+    @include onlyIE() {
+      display: block; // negate flex because test strings were overflowing
     }
   }
 }

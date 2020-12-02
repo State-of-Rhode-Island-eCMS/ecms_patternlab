@@ -33,9 +33,5 @@
         margin-top: auto;
       }
     }
-
-    @include onlyIE() {
-      display: block;
-    }
   }
 }

@@ -164,7 +164,7 @@
     .qh__nav-minor__link {
       flex: 1 0 calc(100% - #{$button-width});
       margin-left: auto;
-      min-width: calc(100% - #{$button-width});
+      max-width: calc(100% - #{$button-width});
     }
 
     .qh__accordion__button {
