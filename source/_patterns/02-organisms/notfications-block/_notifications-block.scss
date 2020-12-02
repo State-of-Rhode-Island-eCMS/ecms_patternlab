@@ -56,11 +56,11 @@
         color: var(--fc__notification__button__bg);
       }
 
-      &[aria-expanded="true"]::after {
+      &[aria-expanded="true"]::before {
         content: attr(data-text-true);
       }
 
-      &[aria-expanded="false"]::after {
+      &[aria-expanded="false"]::before {
         content: attr(data-text-false);
       }
     }
@@ -101,7 +101,7 @@
         margin-top: 0.75em;
       }
     }
-  
+
     // Expand and collapse if JS is present
     .js & {
       max-height: 0;
@@ -115,7 +115,7 @@
       }
 
       &.js__aria-expanded {
-        max-height: unset;
+        max-height: none;
         transition: max-height 0s linear 500s, visibility 0s linear 0ms;
         visibility: visible;
 
