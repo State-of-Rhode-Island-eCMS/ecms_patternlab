@@ -82,14 +82,16 @@
 
   {{ booking_info|raw }}
 
-  <figure class="hotelImageContainer">
-    <a target="_blank" href="{{ booking_url }}">{{ img }}</a>
+  <figure class="hotel-image-container">
+    {{ img }}
   </figure>
-  <h3><a target="_blank" href="{{ booking_url }}">{{ title }}</a></h3>
 
-
-  <p style="margin-bottom: 20px">
+  <p>
     {{ body }}
-    <a target="_blank" href="{{ more_info }}">Read More ›</a>
+    <a href="{{ more_info }}">Read More</a>
   </p>
+
+  {% if (booking_url) %}
+  <a class="button" href="{{ booking_url }}">Book now</a>
+  {% endif %}
 </article>

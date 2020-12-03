@@ -5194,6 +5194,10 @@ body {
   font-style: italic;
   font-variant-numeric: oldstyle-nums; }
 
+.hotel-image-container {
+  float: right;
+  width: 50%; }
+
 @media print {
   @page {
     size: letter portrait;
