@@ -4,12 +4,15 @@
   "description": "Pattern Lab node with Twig PHP Engine",
   "main": "gulpfile.js",
   "dependencies": {
+    "@babel/core": "7.12.9",
+    "@babel/preset-env": "7.12.7",
     "@pattern-lab/cli": "^5.13.1",
     "@pattern-lab/core": "^5.13.1",
     "@pattern-lab/engine-twig-php": "^5.13.1",
     "@pattern-lab/uikit-workshop": "^5.13.1",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^4.0.2",
     "gulp-hjson": "2.4.3",
@@ -27,6 +30,11 @@
     "stylelint": "^9.10.1",
     "stylelint-config-sass-guidelines": "^5.4.0",
     "stylelint-scss": "^3.6.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "keywords": [
     "Pattern Lab",

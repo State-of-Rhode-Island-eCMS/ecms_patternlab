@@ -20,9 +20,13 @@
 // Content max-width
 @mixin qh-content-maxwidth() {
   margin: 0 auto;
-  max-width: $content-max-width;
+  max-width: $content-max-small-screen;
 
-  @supports (width: min(10px, 5px)) {
+  @include breakpoint-up($bp--xxlarge) {
+    max-width: $content-max-large-screen;
+  }
+
+  @supports (width: Min(10px, 5px)) {
     max-width: var(--content-max-width);
   }
 }

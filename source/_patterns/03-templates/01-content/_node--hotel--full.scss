@@ -1,0 +1,6 @@
+.hotel-image-container {
+  @include breakpoint-up($bp--small) {
+    float: right;
+    width: 50%;
+  }
+}

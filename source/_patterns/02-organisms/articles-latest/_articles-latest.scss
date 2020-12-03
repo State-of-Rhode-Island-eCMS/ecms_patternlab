@@ -63,29 +63,30 @@
   }
 
   &__list > * {
-//     padding: 0 $general-h-spacing;
-//
-//     @media (max-width: ($bp--medium - em(1))) {
-//       & + & {
-//         padding-top: $general-v-spacing;
-//       }
-//     }
 
     @media (min-width: $bp--medium) {
       flex: 1 1 0;
+      display: flex;
+      flex-flow: column;
 
+      .qh__teaser-article__content {
         display: flex;
         flex-flow: column;
+        height: 100%;
+      }
 
-        .qh__teaser-article__content {
-          display: flex;
-          flex-flow: column;
-          height: 100%;
-        }
+      .qh__teaser-article__cta {
+        margin-top: auto;
+      }
+    }
+  }
 
-        .qh__teaser-article__cta {
-          margin-top: auto;
-        }
+  // Remove all flex column declarations
+  @include onlyIE() {
+    &__list .qh__teaser-article,
+    &__list .qh__teaser-article__header,
+    &__list .qh__teaser-article__content {
+      display: block !important;
     }
   }
 }

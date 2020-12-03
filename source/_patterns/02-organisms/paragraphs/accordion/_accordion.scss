@@ -9,7 +9,22 @@
 
 .qh__accordion {
   //border: $border-xs solid transparent;
-  margin-top: ($general-v-spacing/2);
+
+  // When any other element is on top of an accordion:
+  margin-top: $text-spacer-fallback-value;
+
+  @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    margin-top: var(--body-text-spacer);
+  }
+
+  // When two or more accordions are on top of one another:
+  & + & {
+    margin-top: ($general-v-spacing/2);
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      margin-top: calc(var(--body-text-spacer)/2);
+    }
+  }
 
   // Removing… a proper accordion group needs these styles, but none
   // of our accordions can be grouped together
@@ -30,7 +45,7 @@
     color: var(--fc__default__fg);
     display: block;
     --p-font-wght: 450;
-    max-width: unset;
+    max-width: none;
     outline: none;
     padding: $nav-a-v-spacing $nav-a-h-spacing;
     text-align: left;
@@ -84,7 +99,12 @@
       background-color: var(--c__coffee-milk--trans25);
 
       .qh__icon__plusminus__vert {
+        // IE 11 doesn't support CSS transforms on SVG elements
         transform: rotate(-360deg);
+
+        @include onlyIE() {
+          opacity: 0;
+        }
       }
     }
 
@@ -98,11 +118,7 @@
     @include clearfix();
     background-color: var(--c__coffee-milk--trans10);
 
-    > div {
-      > * + * {
-        margin-top: var(--body-text-spacer);
-      }
-    }
+    // Vertical rhythm inside an accordion is handled in 00-atoms/02-text/00-typography
 
     // TODO: Transitions not firing as we want them to
     .js & {
@@ -118,7 +134,7 @@
     }
 
     .js [aria-expanded="true"] + & {
-      max-height: unset;
+      max-height: none;
       padding: $nav-a-v-spacing $nav-a-h-spacing;
       transition: max-height 0s linear 500s, visibility 0s linear 0ms;
       visibility: visible;
@@ -129,10 +145,15 @@
       }
     }
 
+    // When JS is broken and accordions are open by default
+    .no-js & {
+      padding: $nav-a-v-spacing $nav-a-h-spacing;
+    }
+
     // In print, accordions are always open
     @media print {
       .js & {
-        max-height: unset;
+        max-height: none;
         overflow: visible;
         visibility: visible;
 

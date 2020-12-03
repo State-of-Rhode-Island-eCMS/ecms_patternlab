@@ -4,7 +4,7 @@
   background-color: inherit;
 }
 
-.layout-builder-block {
+.layout-builder-block:not([class*="qh__t"]){
   background-color: inherit;
 }
 
@@ -131,4 +131,9 @@ html #layout-builder-modal {
   .media-library-item--grid {
     background-color: var(--fc__default__bg);
   }
+}
+
+#layout-builder-modal .media-library-item__remove, 
+#layout-builder-modal .media-library-item__remove.button {
+  max-width: none;
 }

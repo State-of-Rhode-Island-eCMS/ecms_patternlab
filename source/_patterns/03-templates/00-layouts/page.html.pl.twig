@@ -63,16 +63,16 @@
 
   <main id="main-content" tabindex="-1">
     <div class="qh-layout__grid">
-      <div class="qh-layout__content">
-        {{ page.admin_links }}
-        {{ page.content }}
-      </div>
-
       {% if page.sidebar_top %}
         <div class="qh-layout__sidebar-top" role="complementary">
           {{ page.sidebar_top }}
         </div>
       {% endif %}
+
+      <div class="qh-layout__content">
+        {{ page.admin_links }}
+        {{ page.content }}
+      </div>
 
       {% if page.sidebar_middle %}
         <aside class="qh-layout__sidebar-middle" role="complementary">

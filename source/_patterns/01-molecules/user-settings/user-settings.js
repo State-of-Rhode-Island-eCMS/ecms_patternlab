@@ -10,7 +10,7 @@ function handleFontSizeSliderUpdate(e) {
 }
 
 function fontSizeSliderSet() {
-  let fontSizeModifier = getComputedStyle(document.documentElement).getPropertyValue('--fontSizeModifier');
+  var fontSizeModifier = getComputedStyle(document.documentElement).getPropertyValue('--fontSizeModifier');
   var fontSizeElement = document.getElementById('font_size_modifier')
   if (fontSizeElement !== null && fontSizeElement !== undefined) {
     fontSizeElement.setAttribute('value',fontSizeModifier.trim());
@@ -23,7 +23,7 @@ function handleLineHeightSliderUpdate(e) {
 }
 
 function lineHeightSliderSet() {
-  let lineHeightModifier = getComputedStyle(document.documentElement).getPropertyValue('--lineHeightModifier');
+  var lineHeightModifier = getComputedStyle(document.documentElement).getPropertyValue('--lineHeightModifier');
   var lineSpaceElement = document.getElementById('line_height_modifier');
   if (lineSpaceElement !== null && lineSpaceElement !== undefined) {
     lineSpaceElement.setAttribute('value',lineHeightModifier.trim());
@@ -36,7 +36,7 @@ function handleWordSpaceSliderUpdate(e) {
 }
 
 function wordSpaceSliderSet() {
-  let wordSpaceModifier = getComputedStyle(document.documentElement).getPropertyValue('--wordSpaceModifier');
+  var wordSpaceModifier = getComputedStyle(document.documentElement).getPropertyValue('--wordSpaceModifier');
   var wordSpaceElement = document.getElementById('word_space_modifier');
   if (wordSpaceElement !== null && wordSpaceElement !== undefined) {
     wordSpaceElement.setAttribute('value',wordSpaceModifier.trim());
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
   // Font size settings
-  const fontSizeSlider = document.getElementById('font_size_modifier');
+  var fontSizeSlider = document.getElementById('font_size_modifier');
   var currentFontSizeModifier = getComputedStyle(document.documentElement).getPropertyValue('--fontSizeModifier');
 
   if (fontSizeSlider !== null && fontSizeSlider !== undefined) {
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // Line-height settings
-  const lineHeightSlider = document.getElementById('line_height_modifier');
+  var lineHeightSlider = document.getElementById('line_height_modifier');
   var currentlineHeightModifier = getComputedStyle(document.documentElement).getPropertyValue('--lineHeightModifier');
 
   if (lineHeightSlider !== null && lineHeightSlider !== undefined) {
@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   // Word space settings
-  const wordSpaceSlider = document.getElementById('word_space_modifier');
+  var wordSpaceSlider = document.getElementById('word_space_modifier');
   var currentWordSpaceModifier = getComputedStyle(document.documentElement).getPropertyValue('--wordSpaceModifier');
 
   if (wordSpaceSlider !== null && wordSpaceSlider !== undefined) {

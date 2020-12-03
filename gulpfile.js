@@ -5,6 +5,7 @@
  ******************************************************/
 
 const gulp = require('gulp');
+const babel = require('gulp-babel');
 const argv = require('minimist')(process.argv.slice(2));
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
@@ -136,6 +137,9 @@ gulp.task('move-vendor', function() {
 gulp.task('build:js', () => {
   return gulp
     .src(javascriptSourcePaths)
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(concat("pattern-lab-compiled.js"))
     .pipe(minify())
     .pipe(gulp.dest('./public/js'))
