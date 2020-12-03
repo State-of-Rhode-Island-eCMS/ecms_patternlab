@@ -35,7 +35,7 @@
         flex: 0 1 50%;
       }
 
-      @include breakpoint-up($bp--xlarge) {
+      @include breakpoint-up($bp--large) {
         flex: 0 1 33%;
       }
 

@@ -132,3 +132,8 @@ html #layout-builder-modal {
     background-color: var(--fc__default__bg);
   }
 }
+
+#layout-builder-modal .media-library-item__remove, 
+#layout-builder-modal .media-library-item__remove.button {
+  max-width: none;
+}

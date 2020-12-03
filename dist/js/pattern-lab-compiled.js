@@ -1,49 +1,53 @@
-// Global functions
+"use strict";
 
+// Global functions
 // Missing forEach on NodeList for IE11
 // SCRIPT438: Object does not support property or method forEach
 if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach;
-}
-
-// Check for mouse clicks, enter keypress (13), or spacebar keypress (32)
+} // Check for mouse clicks, enter keypress (13), or spacebar keypress (32)
 // https://karlgroves.com/2014/11/24/ridiculously-easy-trick-for-keyboard-accessibility
-function a11yClick(event){
-  if(event.type === 'click') {
+
+
+function a11yClick(event) {
+  if (event.type === 'click') {
     return true;
-  } else if(event.type === 'keypress') {
+  } else if (event.type === 'keypress') {
     var code = event.charCode || event.keyCode;
-    if((code === 32) || (code === 13)) {
+
+    if (code === 32 || code === 13) {
       return true;
     }
   } else {
     return false;
   }
-}
+} // Menu closer function
 
-// Menu closer function
+
 function allMenuCloser() {
-
   // Close main nav
   var qh_toggle_btn = document.getElementById('js__toggle-nav');
+
   if (qh_toggle_btn !== null) {
     qh_toggle_btn.setAttribute('aria-expanded', 'false');
-  }
+  } // Close sidebar nav
 
-  // Close sidebar nav
+
   var qh_nav_minor = document.getElementById('js__minor-menu');
+
   if (qh_nav_minor !== null) {
     qh_nav_minor.classList.remove('qh__nav-minor--expanded');
-  }
+  } // Close settings nav
 
-  // Close settings nav
+
   var qh_usersettings_btn = document.getElementById('js__user-settings__toggle');
+
   if (qh_usersettings_btn !== null) {
     qh_usersettings_btn.setAttribute('aria-expanded', 'false');
   }
-}
+} // Add screen overlay
 
-// Add screen overlay
+
 function addPageOverlay() {
   var pageOverlay = document.createElement("div");
   var divContent = document.createTextNode(" ");
@@ -54,8 +58,7 @@ function addPageOverlay() {
 
   if (pageOverlay) {
     document.getElementsByTagName("html")[0].classList.add('touch-nav');
-
-    pageOverlay.addEventListener('click', function(e) {
+    pageOverlay.addEventListener('click', function (e) {
       e.preventDefault();
       allMenuCloser();
       deactivatePageOverlay();
@@ -71,26 +74,22 @@ function deactivatePageOverlay() {
 function activatePageOverlay() {
   var pageOverlay = document.getElementById('page_overlay');
   pageOverlay.classList.add('active');
+} // Cookie getter
+
+
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length == 2) return parts.pop().split(";").shift();
 }
 
-// Cookie getter
-function getCookie(name) {
-	var value = "; " + document.cookie;
-	var parts = value.split("; " + name + "=");
-	if (parts.length == 2) return parts.pop().split(";").shift();
-};
-
-document.addEventListener("DOMContentLoaded", function() {
-
+;
+document.addEventListener("DOMContentLoaded", function () {
   // If JS is loaded, change the no-js class
   document.documentElement.classList.remove("no-js");
-  document.documentElement.classList.add("js");
+  document.documentElement.classList.add("js"); // Add an empty element that is styled when a menu is open
 
-  // Add an empty element that is styled when a menu is open
-  addPageOverlay();
-
-
-  // Expand / Collapse utility
+  addPageOverlay(); // Expand / Collapse utility
   //
   //Minimum expected markup:
   //<div>
@@ -102,9 +101,11 @@ document.addEventListener("DOMContentLoaded", function() {
   //
   // This function ONLY toggles a show/hide class on the target and toggles aria-expanded
   // Any other functionality (like swapping the text content if true/false) needs to be in the component JS
-  document.querySelectorAll(".js__expand-collapse").forEach(function(toggle_element) {
-    toggle_element.addEventListener('click', function(event) {
+
+  document.querySelectorAll(".js__expand-collapse").forEach(function (toggle_element) {
+    toggle_element.addEventListener('click', function (event) {
       event.preventDefault();
+
       if (a11yClick(event) === true) {
         var expanded = toggle_element.getAttribute('aria-expanded');
         var target_id = toggle_element.getAttribute('aria-controls');
@@ -112,152 +113,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (expanded == 'true') {
           toggle_element.setAttribute('aria-expanded', 'false');
-          target_element.classList.remove('js__aria-expanded')
+          target_element.classList.remove('js__aria-expanded');
         } else {
           toggle_element.setAttribute('aria-expanded', 'true');
-          target_element.classList.add('js__aria-expanded')
+          target_element.classList.add('js__aria-expanded');
         }
       }
-    })
+    });
   });
-
 });
-
-window.onload = function(){
-	fontSizeSliderSet();
-	lineHeightSliderSet();
-	wordSpaceSliderSet();
-}
-
-function handleFontSizeSliderUpdate(e) {
-  document.documentElement.style.setProperty(`--fontSizeModifier`, this.value);
-  document.cookie = "fontSizeModifier="+this.value+"; max-age=31536000; path=/; samesite=strict";
-}
-
-function fontSizeSliderSet() {
-  var fontSizeModifier = getComputedStyle(document.documentElement).getPropertyValue('--fontSizeModifier');
-  var fontSizeElement = document.getElementById('font_size_modifier')
-  if (fontSizeElement !== null && fontSizeElement !== undefined) {
-    fontSizeElement.setAttribute('value',fontSizeModifier.trim());
-  }
-}
-
-function handleLineHeightSliderUpdate(e) {
-  document.documentElement.style.setProperty(`--lineHeightModifier`, this.value);
-  document.cookie = "lineHeightModifier="+this.value+"; max-age=31536000; path=/; samesite=strict";
-}
-
-function lineHeightSliderSet() {
-  var lineHeightModifier = getComputedStyle(document.documentElement).getPropertyValue('--lineHeightModifier');
-  var lineSpaceElement = document.getElementById('line_height_modifier');
-  if (lineSpaceElement !== null && lineSpaceElement !== undefined) {
-    lineSpaceElement.setAttribute('value',lineHeightModifier.trim());
-  }
-}
-
-function handleWordSpaceSliderUpdate(e) {
-  document.documentElement.style.setProperty(`--wordSpaceModifier`, this.value);
-  document.cookie = "wordSpaceModifier="+this.value+"; max-age=31536000; path=/; samesite=strict";
-}
-
-function wordSpaceSliderSet() {
-  var wordSpaceModifier = getComputedStyle(document.documentElement).getPropertyValue('--wordSpaceModifier');
-  var wordSpaceElement = document.getElementById('word_space_modifier');
-  if (wordSpaceElement !== null && wordSpaceElement !== undefined) {
-    wordSpaceElement.setAttribute('value',wordSpaceModifier.trim());
-  }
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-
-  var qh_usersettings_btn = document.getElementById('js__user-settings__toggle');
-  //console.log('qh_usersettings_btn: ' + qh_usersettings_btn);
-  if (qh_usersettings_btn !== null && qh_usersettings_btn !== undefined) {
-    //console.log('qh_usersettings_btn is not null or undefined');
-    qh_usersettings_btn.addEventListener('click', function(event) {
-      // a11yClick function restricts keypress to spacebar or enter
-      if (a11yClick(event) === true) {
-        var expanded = qh_usersettings_btn.getAttribute('aria-expanded');
-        if (expanded == 'true') {
-          qh_usersettings_btn.setAttribute('aria-expanded', 'false');
-          deactivatePageOverlay();
-        } else {
-          allMenuCloser();
-          qh_usersettings_btn.setAttribute('aria-expanded', 'true');
-          activatePageOverlay();
-        }
-      }
-    });
-  }
-
-
-  // Light mode settings
-  const lightModeToggle = document.getElementById('light_mode_switch');
-  const lightModeReset = document.getElementById('light_mode_reset');
-  const lightModeCookie = getCookie('lightMode');
-
-  // If using automatic cookie, set body class so toggle works
-
-  if (lightModeToggle !== null && lightModeToggle !== undefined) {
-
-    lightModeToggle.addEventListener('click', function(e) {
-      e.preventDefault();
-
-      // Always check the value of the custom property before determining state.
-      if (getComputedStyle(document.documentElement).getPropertyValue('--osLightMode').trim() == 'dark' && !document.getElementsByTagName("html")[0].classList.contains('light')) {
-        document.cookie = "lightMode=light; max-age=31536000; path=/; samesite=strict";
-        document.getElementsByTagName("html")[0].classList.remove('dark');
-        document.getElementsByTagName("html")[0].classList.add('light');
-      } else if( getComputedStyle(document.documentElement).getPropertyValue('--osLightMode').trim() == 'light' && document.getElementsByTagName("html")[0].classList.contains('dark')) {
-        document.cookie = "lightMode=dark; max-age=31536000; path=/; samesite=strict";
-        document.getElementsByTagName("html")[0].classList.remove('dark');
-        document.getElementsByTagName("html")[0].classList.add('light');
-      } else {
-        // set a cookie to save the setting
-        document.cookie = "lightMode=dark; max-age=31536000; path=/; samesite=strict";
-        document.getElementsByTagName("html")[0].classList.remove('light');
-        document.getElementsByTagName("html")[0].classList.add('dark');
-      }
-    });
-  }
-
-  if (lightModeReset !== null && lightModeReset !== undefined) {
-    lightModeReset.addEventListener('click', function(e) {
-      e.preventDefault();
-      document.cookie = "lightMode=auto; max-age=31536000; path=/; samesite=strict";
-
-      // Remove any current body classes.
-      document.getElementsByTagName("html")[0].classList.remove('dark');
-      document.getElementsByTagName("html")[0].classList.remove('light');
-    });
-  }
-
-
-  // Font size settings
-  var fontSizeSlider = document.getElementById('font_size_modifier');
-  var currentFontSizeModifier = getComputedStyle(document.documentElement).getPropertyValue('--fontSizeModifier');
-
-  if (fontSizeSlider !== null && fontSizeSlider !== undefined) {
-    fontSizeSlider.addEventListener('change', handleFontSizeSliderUpdate);
-  }
-
-  // Line-height settings
-  var lineHeightSlider = document.getElementById('line_height_modifier');
-  var currentlineHeightModifier = getComputedStyle(document.documentElement).getPropertyValue('--lineHeightModifier');
-
-  if (lineHeightSlider !== null && lineHeightSlider !== undefined) {
-    lineHeightSlider.addEventListener('change', handleLineHeightSliderUpdate);
-  }
-
-  // Word space settings
-  var wordSpaceSlider = document.getElementById('word_space_modifier');
-  var currentWordSpaceModifier = getComputedStyle(document.documentElement).getPropertyValue('--wordSpaceModifier');
-
-  if (wordSpaceSlider !== null && wordSpaceSlider !== undefined) {
-    wordSpaceSlider.addEventListener('change', handleWordSpaceSliderUpdate);
-  }
-
-});
+"use strict";
 
 // There are custom properties that track what breakpoint the site is using
 function getQhNavState() {
@@ -274,17 +139,14 @@ function getQhNavState() {
   //
   var qh_body = document.getElementsByTagName('body')[0];
   return getComputedStyle(qh_body).getPropertyValue("--nav-state");
-}
-
-
-// Mobile: Move the Search component into the Navigation drawer
+} // Mobile: Move the Search component into the Navigation drawer
 // Benefit of insertBefore is that it moves the element, not a copy of the element
+
+
 function moveSearchIntoNav(direction) {
   var qh_search = document.getElementById('js__site-search');
   var qh_header = document.getElementById('js__search-social');
-  var qh_mainnav = document.getElementById('js__primary-menu');
-
-  //console.log('moveSearchIntoNav fired');
+  var qh_mainnav = document.getElementById('js__primary-menu'); //console.log('moveSearchIntoNav fired');
 
   if (qh_search !== null && qh_search !== undefined) {
     // Which direction is this going?
@@ -293,34 +155,33 @@ function moveSearchIntoNav(direction) {
       if (qh_mainnav !== null && qh_mainnav !== undefined) {
         // Create a new <li>
         var qh_new_li = document.createElement('li');
-        qh_new_li.classList.add('qh__nav-main__item__search');
-        // Add the HTML of the search inside of it
-        qh_new_li.appendChild(qh_search);
-        // insert before the first child
+        qh_new_li.classList.add('qh__nav-main__item__search'); // Add the HTML of the search inside of it
+
+        qh_new_li.appendChild(qh_search); // insert before the first child
+
         qh_mainnav.insertBefore(qh_new_li, qh_mainnav.firstChild);
       }
     } else {
       // Move from nav drawer to header
       if (qh_header !== null && qh_mainnav !== undefined) {
         // Append search to the header container
-        qh_header.appendChild(qh_search);
-        // Grab the previous search LI we created
+        qh_header.appendChild(qh_search); // Grab the previous search LI we created
+
         var qh_prev_li = document.getElementsByClassName('qh__nav-main__item__search');
+
         if (qh_prev_li[0] !== null && qh_prev_li[0] !== undefined) {
           qh_prev_li[0].parentNode.removeChild(qh_prev_li[0]);
         }
       }
     }
   }
-}
+} // Mobile: Move the Social List component into the Navigation drawer
 
-// Mobile: Move the Social List component into the Navigation drawer
+
 function moveSocialIntoNav(direction) {
   var qh_social = document.getElementById('js__social-links');
   var qh_header = document.getElementById('js__search-social');
-  var qh_mainnav = document.getElementById('js__primary-menu');
-
-  //console.log('moveSocialIntoNav fired');
+  var qh_mainnav = document.getElementById('js__primary-menu'); //console.log('moveSocialIntoNav fired');
 
   if (qh_social !== null && qh_social !== undefined) {
     // Which direction is this going?
@@ -329,19 +190,20 @@ function moveSocialIntoNav(direction) {
       if (qh_mainnav !== null && qh_mainnav !== undefined) {
         // Create a new <li>
         var qh_new_li = document.createElement('li');
-        qh_new_li.classList.add('qh__nav-main__item__social');
-        // Add the HTML of the social list inside of it
-        qh_new_li.appendChild(qh_social);
-        // insert after the last child
+        qh_new_li.classList.add('qh__nav-main__item__social'); // Add the HTML of the social list inside of it
+
+        qh_new_li.appendChild(qh_social); // insert after the last child
+
         qh_mainnav.insertBefore(qh_new_li, qh_mainnav.lastChild.nextSibling);
       }
     } else {
       // Move from nav drawer to header
       if (qh_header !== null && qh_header !== undefined) {
         // Append search to the header container
-        qh_header.appendChild(qh_social);
-        // Grab the previous search LI we created
+        qh_header.appendChild(qh_social); // Grab the previous search LI we created
+
         var qh_prev_li = document.getElementsByClassName('qh__nav-main__item__social');
+
         if (qh_prev_li[0] !== null && qh_prev_li[0] !== undefined) {
           qh_prev_li[0].parentNode.removeChild(qh_prev_li[0]);
         }
@@ -352,6 +214,7 @@ function moveSocialIntoNav(direction) {
 
 function moveSearchAndSocial() {
   var qh_viewport_again = getQhNavState();
+
   if (qh_viewport_again.trim() !== qh_viewport.trim()) {
     if (qh_viewport_again.trim() === 'js-mobile') {
       //console.log('toNav – qh_viewport= ' + qh_viewport);
@@ -363,41 +226,38 @@ function moveSearchAndSocial() {
       //console.log('qh_viewport_again= ' + qh_viewport_again);
       moveSocialIntoNav('fromNav');
       moveSearchIntoNav('fromNav');
-    }
-    // The two are different, reset the global variable
+    } // The two are different, reset the global variable
+
+
     window.qh_viewport = qh_viewport_again;
   }
 }
 
-
-document.addEventListener('DOMContentLoaded', function() {
-
+document.addEventListener('DOMContentLoaded', function () {
   // Declare the viewport state globally
-  window.qh_viewport = '';
+  window.qh_viewport = ''; // Call on page ready
 
-  // Call on page ready
-  moveSearchAndSocial();
-
-  // Call again on resize or orientation change
+  moveSearchAndSocial(); // Call again on resize or orientation change
   // With a debounced window resize handler
+
   var qh_window_timeout = false;
-  window.addEventListener('resize', function() {
+  window.addEventListener('resize', function () {
     clearTimeout(qh_window_timeout);
     qh_window_timeout = setTimeout(moveSearchAndSocial, 250);
   });
-  window.addEventListener('orientationchange', moveSearchAndSocial);
-
-
-  // Toggle button for mobile menu
+  window.addEventListener('orientationchange', moveSearchAndSocial); // Toggle button for mobile menu
   // Activates/deactivates page overlay
   // Also open/close off canvas menu
   // NOT globalized because of page overlay actions
+
   var qh_toggle_btn = document.getElementById('js__toggle-nav');
+
   if (qh_toggle_btn !== null && qh_toggle_btn !== undefined) {
-    qh_toggle_btn.addEventListener('click', function(event) {
+    qh_toggle_btn.addEventListener('click', function (event) {
       // a11yClick function restricts keypress to spacebar or enter
       if (a11yClick(event) === true) {
         var expanded = qh_toggle_btn.getAttribute('aria-expanded');
+
         if (expanded == 'true') {
           qh_toggle_btn.setAttribute('aria-expanded', 'false');
           qh_toggle_btn.parentElement.classList.remove('open');
@@ -410,27 +270,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     });
-  }
-
-
-  // Listen to mouse press, spacebar key press, and enter key press on Drop Down menu parents
+  } // Listen to mouse press, spacebar key press, and enter key press on Drop Down menu parents
   // Toggle the value of aria-expanded but also remove the content of href on parent
+
+
   var qh_dd_btns = document.querySelectorAll('.js__qh-dd-toggle');
+
   if (qh_dd_btns !== null && qh_dd_btns !== undefined) {
     //console.log('qh_dd_btns is not null or undefined');
-    qh_dd_btns.forEach(function(toggle_element) {
+    qh_dd_btns.forEach(function (toggle_element) {
       // Remove the contents of the href from this parent button
       toggle_element.setAttribute('href', '#');
-      toggle_element.addEventListener('click', function(event) {
+      toggle_element.addEventListener('click', function (event) {
         // a11yClick function restricts keypress to spacebar or enter
         if (a11yClick(event) === true) {
           event.preventDefault();
-          var expanded = toggle_element.getAttribute('aria-expanded');
-          // Close all
-          qh_dd_btns.forEach(function(btn) {
+          var expanded = toggle_element.getAttribute('aria-expanded'); // Close all
+
+          qh_dd_btns.forEach(function (btn) {
             btn.setAttribute('aria-expanded', 'false');
-          });
-          // Open the one that was pressed
+          }); // Open the one that was pressed
+
           if (expanded == 'false') {
             toggle_element.setAttribute('aria-expanded', 'true');
           }
@@ -438,21 +298,22 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
-
 });
+"use strict";
 
-document.addEventListener('DOMContentLoaded', function() {
-
+document.addEventListener('DOMContentLoaded', function () {
   // Toggle button for mobile menu
   // Different than the global in that we toggle a class on the parent
   // Also needs to hook into global Page Overlay actions
   var qh_toggle_btn = document.getElementById('js__minor-toggle');
   var qh_nav_minor = document.getElementById('js__minor-menu');
+
   if (qh_toggle_btn !== null && qh_toggle_btn !== undefined) {
-    qh_toggle_btn.addEventListener('click', function(event) {
+    qh_toggle_btn.addEventListener('click', function (event) {
       // a11yClick function restricts keypress to spacebar or enter
       if (a11yClick(event) === true) {
         event.preventDefault();
+
         if (qh_nav_minor.classList.contains('qh__nav-minor--expanded')) {
           qh_nav_minor.classList.remove('qh__nav-minor--expanded');
           deactivatePageOverlay();
@@ -465,22 +326,24 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+"use strict";
 
-document.addEventListener("DOMContentLoaded", function() {
-
+document.addEventListener("DOMContentLoaded", function () {
   // Hide notifications based on cookie value.
   var notificationCookie = getCookie('siteNotifications');
+
   if (notificationCookie !== null && notificationCookie !== undefined) {
     if (notificationCookie === 'hidden') {
       document.getElementById('summary-notifications').setAttribute('aria-expanded', 'false');
       document.getElementById('details-notifications').classList.remove('js__aria-expanded');
     }
-  }
+  } // Add logic to set cookie values based on state of button.
 
-  // Add logic to set cookie values based on state of button.
-  const notificationsToggle = document.getElementById('summary-notifications');
+
+  var notificationsToggle = document.getElementById('summary-notifications');
+
   if (notificationsToggle !== null && notificationsToggle !== undefined) {
-    notificationsToggle.addEventListener('click', function(event) {
+    notificationsToggle.addEventListener('click', function (event) {
       if (a11yClick(event) === true) {
         var expanded = notificationsToggle.getAttribute('aria-expanded');
 
@@ -490,7 +353,138 @@ document.addEventListener("DOMContentLoaded", function() {
           document.cookie = "siteNotifications=hidden; max-age=31536000; path=/; samesite=strict";
         }
       }
-    })
+    });
   }
 });
+"use strict";
 
+window.onload = function () {
+  fontSizeSliderSet();
+  lineHeightSliderSet();
+  wordSpaceSliderSet();
+};
+
+function handleFontSizeSliderUpdate(e) {
+  document.documentElement.style.setProperty("--fontSizeModifier", this.value);
+  document.cookie = "fontSizeModifier=" + this.value + "; max-age=31536000; path=/; samesite=strict";
+}
+
+function fontSizeSliderSet() {
+  var fontSizeModifier = getComputedStyle(document.documentElement).getPropertyValue('--fontSizeModifier');
+  var fontSizeElement = document.getElementById('font_size_modifier');
+
+  if (fontSizeElement !== null && fontSizeElement !== undefined) {
+    fontSizeElement.setAttribute('value', fontSizeModifier.trim());
+  }
+}
+
+function handleLineHeightSliderUpdate(e) {
+  document.documentElement.style.setProperty("--lineHeightModifier", this.value);
+  document.cookie = "lineHeightModifier=" + this.value + "; max-age=31536000; path=/; samesite=strict";
+}
+
+function lineHeightSliderSet() {
+  var lineHeightModifier = getComputedStyle(document.documentElement).getPropertyValue('--lineHeightModifier');
+  var lineSpaceElement = document.getElementById('line_height_modifier');
+
+  if (lineSpaceElement !== null && lineSpaceElement !== undefined) {
+    lineSpaceElement.setAttribute('value', lineHeightModifier.trim());
+  }
+}
+
+function handleWordSpaceSliderUpdate(e) {
+  document.documentElement.style.setProperty("--wordSpaceModifier", this.value);
+  document.cookie = "wordSpaceModifier=" + this.value + "; max-age=31536000; path=/; samesite=strict";
+}
+
+function wordSpaceSliderSet() {
+  var wordSpaceModifier = getComputedStyle(document.documentElement).getPropertyValue('--wordSpaceModifier');
+  var wordSpaceElement = document.getElementById('word_space_modifier');
+
+  if (wordSpaceElement !== null && wordSpaceElement !== undefined) {
+    wordSpaceElement.setAttribute('value', wordSpaceModifier.trim());
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  var qh_usersettings_btn = document.getElementById('js__user-settings__toggle'); //console.log('qh_usersettings_btn: ' + qh_usersettings_btn);
+
+  if (qh_usersettings_btn !== null && qh_usersettings_btn !== undefined) {
+    //console.log('qh_usersettings_btn is not null or undefined');
+    qh_usersettings_btn.addEventListener('click', function (event) {
+      // a11yClick function restricts keypress to spacebar or enter
+      if (a11yClick(event) === true) {
+        var expanded = qh_usersettings_btn.getAttribute('aria-expanded');
+
+        if (expanded == 'true') {
+          qh_usersettings_btn.setAttribute('aria-expanded', 'false');
+          deactivatePageOverlay();
+        } else {
+          allMenuCloser();
+          qh_usersettings_btn.setAttribute('aria-expanded', 'true');
+          activatePageOverlay();
+        }
+      }
+    });
+  } // Light mode settings
+
+
+  var lightModeToggle = document.getElementById('light_mode_switch');
+  var lightModeReset = document.getElementById('light_mode_reset');
+  var lightModeCookie = getCookie('lightMode'); // If using automatic cookie, set body class so toggle works
+
+  if (lightModeToggle !== null && lightModeToggle !== undefined) {
+    lightModeToggle.addEventListener('click', function (e) {
+      e.preventDefault(); // Always check the value of the custom property before determining state.
+
+      if (getComputedStyle(document.documentElement).getPropertyValue('--osLightMode').trim() == 'dark' && !document.getElementsByTagName("html")[0].classList.contains('light')) {
+        document.cookie = "lightMode=light; max-age=31536000; path=/; samesite=strict";
+        document.getElementsByTagName("html")[0].classList.remove('dark');
+        document.getElementsByTagName("html")[0].classList.add('light');
+      } else if (getComputedStyle(document.documentElement).getPropertyValue('--osLightMode').trim() == 'light' && document.getElementsByTagName("html")[0].classList.contains('dark')) {
+        document.cookie = "lightMode=dark; max-age=31536000; path=/; samesite=strict";
+        document.getElementsByTagName("html")[0].classList.remove('dark');
+        document.getElementsByTagName("html")[0].classList.add('light');
+      } else {
+        // set a cookie to save the setting
+        document.cookie = "lightMode=dark; max-age=31536000; path=/; samesite=strict";
+        document.getElementsByTagName("html")[0].classList.remove('light');
+        document.getElementsByTagName("html")[0].classList.add('dark');
+      }
+    });
+  }
+
+  if (lightModeReset !== null && lightModeReset !== undefined) {
+    lightModeReset.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.cookie = "lightMode=auto; max-age=31536000; path=/; samesite=strict"; // Remove any current body classes.
+
+      document.getElementsByTagName("html")[0].classList.remove('dark');
+      document.getElementsByTagName("html")[0].classList.remove('light');
+    });
+  } // Font size settings
+
+
+  var fontSizeSlider = document.getElementById('font_size_modifier');
+  var currentFontSizeModifier = getComputedStyle(document.documentElement).getPropertyValue('--fontSizeModifier');
+
+  if (fontSizeSlider !== null && fontSizeSlider !== undefined) {
+    fontSizeSlider.addEventListener('change', handleFontSizeSliderUpdate);
+  } // Line-height settings
+
+
+  var lineHeightSlider = document.getElementById('line_height_modifier');
+  var currentlineHeightModifier = getComputedStyle(document.documentElement).getPropertyValue('--lineHeightModifier');
+
+  if (lineHeightSlider !== null && lineHeightSlider !== undefined) {
+    lineHeightSlider.addEventListener('change', handleLineHeightSliderUpdate);
+  } // Word space settings
+
+
+  var wordSpaceSlider = document.getElementById('word_space_modifier');
+  var currentWordSpaceModifier = getComputedStyle(document.documentElement).getPropertyValue('--wordSpaceModifier');
+
+  if (wordSpaceSlider !== null && wordSpaceSlider !== undefined) {
+    wordSpaceSlider.addEventListener('change', handleWordSpaceSliderUpdate);
+  }
+});
