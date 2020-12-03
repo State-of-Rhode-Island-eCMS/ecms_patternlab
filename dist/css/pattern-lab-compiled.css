@@ -3275,7 +3275,6 @@ body {
     .qh__nav-main {
       display: none; } }
   .qh__nav-main a {
-    display: block;
     -webkit-transition: all 250ms ease;
     transition: all 250ms ease; }
   .qh__nav-main__wrapper {
@@ -3540,7 +3539,8 @@ body {
             align-items: center;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
-            justify-content: flex-start; }
+            justify-content: flex-start;
+    height: 100%; }
     @media (max-width: 61.9375em) {
       .qh__nav-main__has-children .qh__nav-main__link {
         -webkit-box-pack: justify;
@@ -3602,13 +3602,24 @@ body {
     .qh__nav-main__link, .qh__nav-main__link:visited {
       background-color: transparent;
       color: var(--fc__nav-main__link);
+      display: block;
       font-size: clamp(0.925rem, 1.5vw, 1rem);
       font-weight: 450;
       line-height: clamp(1.2rem, 3vw, 1.3rem);
       text-decoration: none; }
       @media (min-width: 62em) {
         .qh__nav-main__link, .qh__nav-main__link:visited {
-          border-top: 0.25rem solid var(--fc__nav-main__bg); } }
+          border-top: 0.25rem solid var(--fc__nav-main__bg);
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          height: 100%; } }
     .qh__nav-main__link:focus {
       outline-color: var(--fc__nav-main__link--focus);
       outline-offset: -2px; }
