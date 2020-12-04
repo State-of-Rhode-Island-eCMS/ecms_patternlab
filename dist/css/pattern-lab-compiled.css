@@ -2737,9 +2737,43 @@ table {
   .qh__teaser-hotel__title {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
-            flex: 0 0 100%; }
+            flex: 0 0 100%;
+    font-size: 1.25rem; }
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      .qh__teaser-hotel__title {
+        --font-size-min-value: 1.25;
+        --font-size-max-value: 1.5;
+        --font-size-scaler-value: var(--h4-scaler-value);
+        font-size: var(--font-size);
+        --font-lh-min-value: 1.1;
+        --font-lh-max-value: 1.3;
+        --font-lh-scaler-value: var(--h4-lh-scaler-value);
+        line-height: var(--line-height); } }
+  .qh__teaser-hotel__location {
+    font-size: 1rem; }
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      .qh__teaser-hotel__location {
+        --font-size-min-value: 0.925;
+        --font-size-max-value: 1;
+        --font-size-scaler-value: var(--p-scaler-value);
+        font-size: var(--font-size);
+        --font-lh-min-value: 1.1;
+        --font-lh-max-value: 1.3;
+        --font-lh-scaler-value: var(--st-lh-scaler-value);
+        line-height: var(--line-height); } }
   .qh__teaser-hotel__cta {
-    margin-left: auto; }
+    margin-left: auto;
+    font-size: 1rem; }
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      .qh__teaser-hotel__cta {
+        --font-size-min-value: 0.925;
+        --font-size-max-value: 1;
+        --font-size-scaler-value: var(--p-scaler-value);
+        font-size: var(--font-size);
+        --font-lh-min-value: 1.1;
+        --font-lh-max-value: 1.3;
+        --font-lh-scaler-value: var(--st-lh-scaler-value);
+        line-height: var(--line-height); } }
   .qh__teaser-hotel__link {
     display: block; }
     .qh__teaser-hotel__link::before {
@@ -3253,19 +3287,7 @@ table {
               flex: 1 0 auto; }
     .qh__hotels-grid__list > li .qh__teaser-hotel__location,
     .qh__hotels-grid__list > li .qh__teaser-hotel__cta {
-      margin-top: auto;
-      font-size: 1rem; }
-      @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-        .qh__hotels-grid__list > li .qh__teaser-hotel__location,
-        .qh__hotels-grid__list > li .qh__teaser-hotel__cta {
-          --font-size-min-value: 0.925;
-          --font-size-max-value: 1;
-          --font-size-scaler-value: var(--p-scaler-value);
-          font-size: var(--font-size);
-          --font-lh-min-value: 1.1;
-          --font-lh-max-value: 1.3;
-          --font-lh-scaler-value: var(--st-lh-scaler-value);
-          line-height: var(--line-height); } }
+      margin-top: auto; }
 
 .dialog-off-canvas-main-canvas {
   position: relative; }
