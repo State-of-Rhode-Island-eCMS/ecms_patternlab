@@ -36,6 +36,13 @@
     <script type="text/javascript">
   		(function() {
   			document.documentElement.className += " wf-inactive"; 
+
+  			// Optimization for Notifications
+  			if(sessionStorage.getItem('siteNotificationsHidden')) {
+  				document.documentElement.classList.add("notifications-hidden");
+  			}
+
+
 				const cookies = document.cookie.split(';');
 
 				var lightSetting = false;

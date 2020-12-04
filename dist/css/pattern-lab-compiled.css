@@ -3926,6 +3926,8 @@ body {
   .qh__notifications-block__content {
     color: var(--fc__notification__fg);
     padding: 0 1rem; }
+    .notifications-hidden .qh__notifications-block__content {
+      display: none; }
     .qh__notifications-block__content a,
     .qh__notifications-block__content a:visited {
       color: var(--fc__notification__link, var(--fc__defauilt__link)); }

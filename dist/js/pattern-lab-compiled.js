@@ -256,33 +256,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 "use strict";
 
-document.addEventListener('DOMContentLoaded', function () {
-  // Toggle button for mobile menu
-  // Different than the global in that we toggle a class on the parent
-  // Also needs to hook into global Page Overlay actions
-  var qh_toggle_btn = document.getElementById('js__minor-toggle');
-  var qh_nav_minor = document.getElementById('js__minor-menu');
-
-  if (qh_toggle_btn !== null && qh_toggle_btn !== undefined) {
-    qh_toggle_btn.addEventListener('click', function (event) {
-      // a11yClick function restricts keypress to spacebar or enter
-      if (a11yClick(event) === true) {
-        event.preventDefault();
-
-        if (qh_nav_minor.classList.contains('qh__nav-minor--expanded')) {
-          qh_nav_minor.classList.remove('qh__nav-minor--expanded');
-          deactivatePageOverlay();
-        } else {
-          allMenuCloser();
-          activatePageOverlay();
-          qh_nav_minor.classList.add('qh__nav-minor--expanded');
-        }
-      }
-    });
-  }
-});
-"use strict";
-
 // There are custom properties that track what breakpoint the site is using
 function getQhNavState() {
   // NOTE: Strings from CSS get returned exactly as written
@@ -460,29 +433,54 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 "use strict";
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Hide notifications based on cookie value.
-  var notificationCookie = getCookie('siteNotifications');
+// Hide notifications based on sessionStorage value.
+if (sessionStorage.getItem('siteNotificationsHidden')) {
+  document.getElementById('summary-notifications').setAttribute('aria-expanded', 'false');
+  document.getElementById('details-notifications').classList.remove('js__aria-expanded');
+} // Add logic to set cookie values based on state of button.
 
-  if (notificationCookie !== null && notificationCookie !== undefined) {
-    if (notificationCookie === 'hidden') {
-      document.getElementById('summary-notifications').setAttribute('aria-expanded', 'false');
-      document.getElementById('details-notifications').classList.remove('js__aria-expanded');
+
+var notificationsToggle = document.getElementById('summary-notifications');
+
+if (notificationsToggle !== null && notificationsToggle !== undefined) {
+  notificationsToggle.addEventListener('click', function (event) {
+    if (a11yClick(event) === true) {
+      var expanded = notificationsToggle.getAttribute('aria-expanded');
+
+      if (expanded == 'true') {
+        // Optimization for Repeat Views
+        sessionStorage.setItem('siteNotificationsHidden', true);
+        document.documentElement.classList.add("notifications-hidden");
+      } else {
+        // Optimization for Repeat Views
+        sessionStorage.removeItem('siteNotificationsHidden');
+        document.documentElement.classList.remove("notifications-hidden");
+      }
     }
-  } // Add logic to set cookie values based on state of button.
+  });
+}
+"use strict";
 
+document.addEventListener('DOMContentLoaded', function () {
+  // Toggle button for mobile menu
+  // Different than the global in that we toggle a class on the parent
+  // Also needs to hook into global Page Overlay actions
+  var qh_toggle_btn = document.getElementById('js__minor-toggle');
+  var qh_nav_minor = document.getElementById('js__minor-menu');
 
-  var notificationsToggle = document.getElementById('summary-notifications');
-
-  if (notificationsToggle !== null && notificationsToggle !== undefined) {
-    notificationsToggle.addEventListener('click', function (event) {
+  if (qh_toggle_btn !== null && qh_toggle_btn !== undefined) {
+    qh_toggle_btn.addEventListener('click', function (event) {
+      // a11yClick function restricts keypress to spacebar or enter
       if (a11yClick(event) === true) {
-        var expanded = notificationsToggle.getAttribute('aria-expanded');
+        event.preventDefault();
 
-        if (expanded == 'true') {
-          document.cookie = "siteNotifications=display; max-age=31536000; path=/; samesite=strict";
+        if (qh_nav_minor.classList.contains('qh__nav-minor--expanded')) {
+          qh_nav_minor.classList.remove('qh__nav-minor--expanded');
+          deactivatePageOverlay();
         } else {
-          document.cookie = "siteNotifications=hidden; max-age=31536000; path=/; samesite=strict";
+          allMenuCloser();
+          activatePageOverlay();
+          qh_nav_minor.classList.add('qh__nav-minor--expanded');
         }
       }
     });
