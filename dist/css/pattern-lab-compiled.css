@@ -199,7 +199,7 @@ html {
   --c__white--trans33: rgba(255, 255, 255, 0.33);
   --c__white--trans25: rgba(255, 255, 255, 0.25);
   --c__white--trans15: rgba(255, 255, 255, 0.15);
-  --c__transparent: rgba(255, 255, 255, 0);
+  --c__transparent: transparent;
   --c__quahog--darker: #141414;
   --c__quahog--dark--trans33: rgba(20, 20, 20, 0.33);
   --c__quahog--dark--trans25: rgba(20, 20, 20, 0.25);
@@ -281,7 +281,7 @@ html {
   --fc__nav-minor__fg: #141414;
   --fc__nav-minor__bg: rgba(149, 189, 223, 0.25);
   --fc__nav-minor__link: #293557;
-  --fc__nav-minor__link__bg: rgba(255, 255, 255, 0);
+  --fc__nav-minor__link__bg: transparent;
   --fc__nav-minor__link--hover: #1b243b;
   --fc__nav-minor__link--hover__bg: rgba(149, 189, 223, 0.25);
   --fc__nav-minor__link--focus: #ff8e47;
@@ -362,7 +362,7 @@ html {
     --fc__nav-minor__fg: #d4d4d4;
     --fc__nav-minor__bg: rgba(41, 53, 87, 0.5);
     --fc__nav-minor__link: #f0eee5;
-    --fc__nav-minor__link__bg: rgba(255, 255, 255, 0);
+    --fc__nav-minor__link__bg: transparent;
     --fc__nav-minor__link--hover: white;
     --fc__nav-minor__link--hover__bg: #2e2e2e;
     --fc__nav-minor__link--focus: #face3d;
@@ -442,7 +442,7 @@ html {
     --fc__nav-minor__fg: #141414;
     --fc__nav-minor__bg: rgba(235, 82, 82, 0.15);
     --fc__nav-minor__link: #404040;
-    --fc__nav-minor__link__bg: rgba(255, 255, 255, 0);
+    --fc__nav-minor__link__bg: transparent;
     --fc__nav-minor__link--hover: #141414;
     --fc__nav-minor__link--hover__bg: rgba(235, 82, 82, 0.15);
     --fc__nav-minor__link--focus: #eb5252;
@@ -511,7 +511,7 @@ html {
     --fc__nav-minor__fg: #d4d4d4;
     --fc__nav-minor__bg: rgba(235, 82, 82, 0.15);
     --fc__nav-minor__link: #f0eee5;
-    --fc__nav-minor__link__bg: rgba(255, 255, 255, 0);
+    --fc__nav-minor__link__bg: transparent;
     --fc__nav-minor__link--hover: white;
     --fc__nav-minor__link--hover__bg: rgba(235, 82, 82, 0.15);
     --fc__nav-minor__link--focus: #95bddf;
@@ -571,7 +571,7 @@ html {
       --fc__nav-minor__fg: #d4d4d4;
       --fc__nav-minor__bg: rgba(41, 53, 87, 0.5);
       --fc__nav-minor__link: #f0eee5;
-      --fc__nav-minor__link__bg: rgba(255, 255, 255, 0);
+      --fc__nav-minor__link__bg: transparent;
       --fc__nav-minor__link--hover: white;
       --fc__nav-minor__link--hover__bg: #2e2e2e;
       --fc__nav-minor__link--focus: #face3d;
@@ -642,7 +642,7 @@ html {
       --fc__nav-minor__fg: #d4d4d4;
       --fc__nav-minor__bg: rgba(235, 82, 82, 0.15);
       --fc__nav-minor__link: #f0eee5;
-      --fc__nav-minor__link__bg: rgba(255, 255, 255, 0);
+      --fc__nav-minor__link__bg: transparent;
       --fc__nav-minor__link--hover: white;
       --fc__nav-minor__link--hover__bg: rgba(235, 82, 82, 0.15);
       --fc__nav-minor__link--focus: #95bddf;
