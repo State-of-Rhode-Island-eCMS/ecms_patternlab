@@ -44,7 +44,7 @@
     "transparent": {
       "name": "White 100% transparent",
       "hue": "transparent",
-      "hsl": "hsla(0, 0, 100%, 0)",
+      "hsl": "transparent",
       "needs": "dark-text"
     },
     #
