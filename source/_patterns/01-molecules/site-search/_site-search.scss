@@ -10,6 +10,7 @@
   // <input>
   &__query {
     max-width: 12rem;
+    min-width: 0;
   }
 
   // <button>
@@ -17,6 +18,7 @@
     background-color: var(--fc__default__accent);
     color: var(--fc__default__accent__fg);
     padding: 0.125rem;
+    min-width: rem(48);
 
     .qh__icon {}
   }
