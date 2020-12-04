@@ -6,7 +6,7 @@
   @include breakpoint-up($bp__single-col-content) {
     position: relative;
     top: auto;
-    z-index: unset;
+    z-index: z(side-nav-menu);
   }
 }
 

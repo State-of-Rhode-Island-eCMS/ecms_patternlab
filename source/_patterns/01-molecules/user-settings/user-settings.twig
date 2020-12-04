@@ -11,7 +11,7 @@
       {{ language_switcher }}
     </li>
     {% endif %}
-    <li class="settings__lightmode">
+    <li id="qh-lightmode" class="settings__lightmode">
       <label class="qh__settings-menu__label">{{ "Color scheme"|t }}:</label>
       <span class="visually-hidden">Change the visual color theme between light or dark modes</span>
       <div class="qh__settings-menu__boolean">
@@ -19,7 +19,7 @@
         <button id="light_mode_reset" class="small-text qh__u__btn-as-text toggle-lightmode auto">{{ "Use system preference"|t }}</button>
       </div>
     </li>
-    <li class="settings__fontsize">
+    <li id="qh-fontsize" class="settings__fontsize">
       <label class="qh__settings-menu__label" for="font_size_modifier">{{ "Font size"|t }}:</label>
       <span class="visually-hidden">{{ "Adjust the font size from the system default to a larger size"|t }}</span>
       <div class="qh__settings-menu__slider">
@@ -30,7 +30,7 @@
         <div class="small-text settings__fontsize--value high" aria-hidden="true">{{ "Larger"|t }}</div>
       </div>
     </li>
-    <li class="settings__lineheight">
+    <li id="qh-lineheight" class="settings__lineheight">
       <label class="qh__settings-menu__label" for="line_height_modifier">{{ "Line spacing"|t }}:</label>
       <span class="visually-hidden">{{ "Adjust the space between lines of text from the system default to a larger size"|t }}</span>
       <div class="qh__settings-menu__slider">
@@ -41,7 +41,7 @@
         <div class="small-text settings__lineheight--value high" aria-hidden="true">{{ "More"|t }}</div>
       </div>
     </li>
-    <li class="settings__wordspace">
+    <li id="qh-wordspace" class="settings__wordspace">
       <label class="qh__settings-menu__label" for="word_space_modifier">{{ "Word spacing"|t }}:</label>
       <span class="visually-hidden">{{ "Adjust the space between words from the system default to a larger size"|t }}</span>
       <div class="qh__settings-menu__slider">
