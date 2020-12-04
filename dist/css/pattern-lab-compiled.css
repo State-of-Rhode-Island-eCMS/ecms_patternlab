@@ -2710,6 +2710,7 @@ table {
     .qh__teaser-hotel__snipe sup {
       font-size: 50%; }
     .qh__teaser-hotel__snipe p {
+      margin-top: 0;
       text-align: right; }
     .qh__teaser-hotel:hover .qh__teaser-hotel__snipe,
     a:hover .qh__teaser-hotel__snipe,
