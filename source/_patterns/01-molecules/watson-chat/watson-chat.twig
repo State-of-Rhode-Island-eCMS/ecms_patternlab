@@ -68,16 +68,16 @@
     opacity: 1;
     visibility: visible;
   }
-  .chatLauncher.open + .watson-chat-dismiss::after {
-    content: 'Dismiss';
+  [lang="en"] .chatLauncher.open + .watson-chat-dismiss::before {
+    content: 'Dismiss ';
   }
   .chatLauncher.closed + .watson-chat-dismiss {
     bottom: 1.5rem;
     opacity: 1;
     visibility: visible;
   }
-  .chatLauncher.closed + .watson-chat-dismiss::after {
-    content: 'Open Chat';
+  [lang="en"] .chatLauncher.closed + .watson-chat-dismiss::before {
+    content: 'Open ';
   }
 </style>
 <button type="button" class="chatLauncher" id="watson">
@@ -87,7 +87,6 @@
   </div>
 </button>
 <script>
-
 
   window.watsonAssistantChatOptions = {
     integrationID: "62e720b6-038e-48e9-a56d-c7286949ccfa", // The ID of this integration.
@@ -134,6 +133,7 @@
         var closer = document.createElement('button');
         closer.setAttribute('type', 'button');
         closer.setAttribute('class', 'watson-chat-dismiss');
+        closer.innerHTML = 'Chat';
         // Insert the element before our target element
         watson.parentNode.insertBefore(closer, watson.nextSibling);
 
