@@ -124,6 +124,15 @@
     display: grid;
     grid-template-columns: 4fr 5fr;
     padding: 0.5rem 1.5vw;
+
+    @include onlyIE() {
+      button:first-child {
+        grid-column: 1;
+      }
+      button:last-child {
+        grid-column: 2;
+      }
+    }
   }
 
   button.toggle-lightmode {
