@@ -5240,7 +5240,8 @@ body {
 @media (min-width: 40em) {
   .hotel-image-container {
     float: right;
-    width: 50%; } }
+    margin-left: 2%;
+    width: 49%; } }
 
 .publish-date {
   font-style: italic;
