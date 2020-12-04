@@ -48,7 +48,10 @@
       font-size: 50%;
     }
 
-    p { text-align: right;}
+    p { 
+      margin-top: 0;
+      text-align: right;
+    }
 
     // Hover effects on snipe
     .qh__teaser-hotel:hover &,
@@ -72,15 +75,52 @@
   // <h3>
   &__title {
     flex: 0 0 100%;
-  }
+    font-size: 1.25rem;
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      --font-size-min-value: 1.25;
+      --font-size-max-value: 1.5;
+      --font-size-scaler-value: var(--h4-scaler-value);
+      font-size: var(--font-size);
+
+      --font-lh-min-value: #{$h4-lh-s};
+      --font-lh-max-value: #{$h4-lh-l};
+      --font-lh-scaler-value: var(--h4-lh-scaler-value);
+      line-height: var(--line-height);
+    }
+}
 
   // <p>
-  &__location {}
+  &__location {
+    font-size: 1rem;
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      --font-size-min-value: 0.925;
+      --font-size-max-value: 1;
+      --font-size-scaler-value: var(--p-scaler-value);
+      font-size: var(--font-size);
+
+      --font-lh-min-value: #{$st-lh-s};
+      --font-lh-max-value: #{$st-lh-l};
+      --font-lh-scaler-value: var(--st-lh-scaler-value);
+      line-height: var(--line-height);
+    }
+  }
 
   // <p>
   &__cta {
     margin-left: auto;
-  }
+    font-size: 1rem;
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      --font-size-min-value: 0.925;
+      --font-size-max-value: 1;
+      --font-size-scaler-value: var(--p-scaler-value);
+      font-size: var(--font-size);
+
+      --font-lh-min-value: #{$st-lh-s};
+      --font-lh-max-value: #{$st-lh-l};
+      --font-lh-scaler-value: var(--st-lh-scaler-value);
+      line-height: var(--line-height);
+    }
+}
 
   &__link {
     display: block;

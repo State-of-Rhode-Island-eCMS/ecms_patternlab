@@ -1,7 +1,17 @@
 window.onload = function(){
-	fontSizeSliderSet();
-	lineHeightSliderSet();
-	wordSpaceSliderSet();
+	var vfSupport = false;
+  var vfSupport = "CSS" in window && "supports" in CSS && CSS.supports("(font-variation-settings: normal)");
+
+  if (vfSupport === true) {
+    fontSizeSliderSet();
+  	lineHeightSliderSet();
+  	wordSpaceSliderSet();
+  } else {
+    document.getElementById('qh-lightmode').style.display = 'none';
+    document.getElementById('qh-fontsize').style.display = 'none';
+    document.getElementById('qh-lineheight').style.display = 'none';
+    document.getElementById('qh-wordspace').style.display = 'none';
+  }
 }
 
 function handleFontSizeSliderUpdate(e) {
@@ -11,7 +21,7 @@ function handleFontSizeSliderUpdate(e) {
 
 function fontSizeSliderSet() {
   var fontSizeModifier = getComputedStyle(document.documentElement).getPropertyValue('--fontSizeModifier');
-  var fontSizeElement = document.getElementById('font_size_modifier')
+  var fontSizeElement = document.getElementById('font_size_modifier');
   if (fontSizeElement !== null && fontSizeElement !== undefined) {
     fontSizeElement.setAttribute('value',fontSizeModifier.trim());
   }

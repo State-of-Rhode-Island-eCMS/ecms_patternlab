@@ -82,6 +82,10 @@
 
   {{ booking_info|raw }}
 
+  {% if (booking_url) %}
+  <p><a class="button" href="{{ booking_url }}">Book now</a></p>
+  {% endif %}
+
   <figure class="hotel-image-container">
     {{ img }}
   </figure>
@@ -90,8 +94,4 @@
     {{ body }}
     <a href="{{ more_info }}">Read More</a>
   </p>
-
-  {% if (booking_url) %}
-  <a class="button" href="{{ booking_url }}">Book now</a>
-  {% endif %}
 </article>

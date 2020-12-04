@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIG-130: IE11 fixes, theme tweaks, user dashboard styles.
 
 ### Deprecated
 

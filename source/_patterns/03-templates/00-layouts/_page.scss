@@ -24,6 +24,12 @@ $sidebar-row-gap: rem(36);
       grid-template-columns: minmax($sidebar-min, 22rem) minmax(0, 1fr);
       grid-template-rows: min-content min-content 1fr;
       padding-left: 0;
+      .path-user & {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 93vw;
+      }
     }
   }
 
@@ -33,6 +39,9 @@ $sidebar-row-gap: rem(36);
 
     @include breakpoint-up($bp__single-col-content) {
       @include qh-content-maxwidth();
+      .path-user & {
+        max-width: none;
+      }
     }
   }
 

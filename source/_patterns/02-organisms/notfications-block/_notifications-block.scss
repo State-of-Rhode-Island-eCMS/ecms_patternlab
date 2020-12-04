@@ -80,6 +80,9 @@
     color:  var(--fc__notification__fg);
     padding: 0 $general-h-spacing;
 
+    .notifications-hidden & {
+      display: none;
+    }
     // Restyle all anchors in case this bg color can not support the default colors
     a,
     a:visited {

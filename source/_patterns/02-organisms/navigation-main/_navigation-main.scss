@@ -24,7 +24,7 @@ body {
   }
 
   a {
-    display: block;
+    //display: block;
     transition: $transition-base;
   }
 
@@ -358,7 +358,7 @@ body {
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-start;
-
+    height: 100%;
     @include breakpoint-down($bp__show__desktop-nav) {
       justify-content: space-between;
     }
@@ -452,6 +452,7 @@ body {
     &:visited {
       background-color: transparent;
       color: var(--fc__nav-main__link);
+      display: block;
       font-size: clamp(0.925rem, 1.5vw, 1rem);
       font-weight: 450;
       line-height: clamp(1.2rem, 3vw, 1.3rem);
@@ -459,6 +460,10 @@ body {
 
       @include breakpoint-up($bp__show__desktop-nav) {
         border-top: ($nav-a-v-spacing * 0.25) solid var(--fc__nav-main__bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
       }
     }
 
