@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIG-130: Publication list and teaser theming, Wickaboxet theme.
 
 ### Changed
 
