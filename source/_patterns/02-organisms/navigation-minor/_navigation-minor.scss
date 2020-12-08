@@ -167,6 +167,10 @@
       max-width: calc(100% - #{$button-width});
     }
 
+    .qh__nav-minor__list__sub .qh__nav-minor__link {
+      max-width: none;
+    }
+
     .qh__accordion__button {
       display: block;
       flex: 0 0 $icon-dimension;
@@ -229,8 +233,8 @@
       text-decoration: none;
     }
 
-    &:not(&--current):hover,
-    &:not(&--current):focus {
+    &:not(.qh__nav-minor__link--current):hover,
+    &:not(.qh__nav-minor__link--current):focus {
       background-color: var(--fc__nav-minor__link--hover__bg);
       color: var(--fc__nav-minor__link--hover);
     }

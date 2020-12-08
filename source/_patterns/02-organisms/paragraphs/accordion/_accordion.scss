@@ -71,12 +71,12 @@
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
       pointer-events: none;
     }
 
     .qh__icon {
-      margin: -0.5em -0.5em -0.5em $nav-a-h-spacing;
+      margin: -0.5em ($nav-a-h-spacing/2) -0.5em -0.5em;
       min-width: $icon-dimension;
 
       &__plusminus {

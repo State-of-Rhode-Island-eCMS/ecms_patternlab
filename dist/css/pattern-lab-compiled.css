@@ -224,6 +224,7 @@ html {
   --c__calamari: #ff8e47;
   --c__hope-gold: #face3d;
   --c__green-animals: #59bf45;
+  --c__green-animals--dark: #307e20;
   --c__green-animals--trans15: rgba(89, 191, 69, 0.15);
   --c__ocean--bright: #7affd3;
   --c__ocean: #95bddf;
@@ -267,7 +268,7 @@ html {
   --fc__default__violator: #ff8e47;
   --fc__default__accent: #face3d;
   --fc__default__accent__fg: #2e2e2e;
-  --fc__default__text__accent: #6e6e6e;
+  --fc__default__text-accent: #6e6e6e;
   --fc__default__button__bg: #293557;
   --fc__default__button__fg: #face3d;
   --fc__default__button--hover__bg: #1b243b;
@@ -354,7 +355,7 @@ html {
     --fc__default__link--visited: #bbacec;
     --fc__default__link--active: #ff8e47;
     --fc__default__hx__fg: #d2cbb2;
-    --fc__default__text__accent: #d4d4d4;
+    --fc__default__text-accent: #d4d4d4;
     --fc__icon__word: #95bddf;
     --fc__icon__generic: #d2cbb2;
     --fc__icon__download: #d4d4d4;
@@ -428,7 +429,7 @@ html {
     --fc__default__hx__fg: #6e6e6e;
     --fc__default__violator: #95bddf;
     --fc__default__accent: #face3d;
-    --fc__default__text__accent: #6e6e6e;
+    --fc__default__text-accent: #6e6e6e;
     --fc__default__button__bg: #eb5252;
     --fc__default__button__fg: #2e2e2e;
     --fc__default__button--hover__bg: #8e3339;
@@ -503,7 +504,7 @@ html {
     --fc__default__link--visited: #bbacec;
     --fc__default__link--active: #ff8e47;
     --fc__default__hx__fg: #d2cbb2;
-    --fc__default__text__accent: #d4d4d4;
+    --fc__default__text-accent: #d4d4d4;
     --fc__icon__word: #95bddf;
     --fc__icon__generic: #d2cbb2;
     --fc__icon__download: #d4d4d4;
@@ -530,6 +531,64 @@ html {
     --fc__primary__bg: rgba(235, 82, 82, 0.15);
     --fc__primary--light__fg: white;
     --fc__primary--light__bg: rgba(235, 82, 82, 0.5); }
+  html .qh__t__wickaboxet {
+    --fc__official__fg: #f0eee5;
+    --fc__official__bg: #141414;
+    --fc__official__link: #95bddf;
+    --fc__official__link--hover: #59bf45;
+    --fc__official__link--focus: #59bf45;
+    --fc__header__fg: white;
+    --fc__header__bg: #307e20;
+    --fc__header__link: white;
+    --fc__header__link--hover: #face3d;
+    --fc__header__social__link: white;
+    --fc__header__social__link--hover: #face3d;
+    --fc__nav-main__fg: #404040;
+    --fc__nav-main__bg: #59bf45;
+    --fc__nav-main__link: #141414;
+    --fc__nav-main__link--hover: #307e20;
+    --fc__nav-main__link--hover__bg: white;
+    --fc__nav-main__link--focus: #141414;
+    --fc__nav-main__link--active: #1440b8;
+    --fc__nav-main__link__sub--hover__bg: rgba(89, 191, 69, 0.15);
+    --fc__nav-main__icon__bg: white;
+    --fc__nav-main__icon__fg: #141414;
+    --fc__nav-main__icon__bg--hover: #307e20;
+    --fc__nav-main__icon__fg--hover: white;
+    --fc__default__link--active: #59bf45;
+    --fc__default__hx__fg: #307e20;
+    --fc__default__text-accent: #6e6e6e;
+    --fc__default__button__bg: #59bf45;
+    --fc__default__button__fg: #141414;
+    --fc__default__button--hover__bg: #307e20;
+    --fc__default__button--hover__fg: white;
+    --fc__icon__word: #95bddf;
+    --fc__icon__generic: #d4d4d4;
+    --fc__nav-minor__border: #59bf45;
+    --fc__nav-minor__bg: rgba(89, 191, 69, 0.15);
+    --fc__nav-minor__link--hover: #1440b8;
+    --fc__nav-minor__link--hover__bg: rgba(89, 191, 69, 0.15);
+    --fc__nav-minor__link--focus: #face3d;
+    --fc__attention-card__fg: #2e2e2e;
+    --fc__attention-card__bar: #307e20;
+    --fc__attention-card__icon: #f2f2f2;
+    --fc__footer__border-top: #59bf45;
+    --fc__primary__fg: #293557;
+    --fc__primary__bg: #59bf45;
+    --fc__primary__link: #1b243b;
+    --fc__primary__link--hover: #141414;
+    --fc__primary__fg--dark: white;
+    --fc__primary__bg--dark: #307e20;
+    --fc__primary__link--dark: white;
+    --fc__primary__link--dark--hover: #face3d;
+    --fc__primary--light__fg: #293557;
+    --fc__primary--light__bg: rgba(89, 191, 69, 0.15);
+    --fc__primary--light__link: #1b243b;
+    --fc__primary--light__link--hover: #141414;
+    --fc__primary--light__fg--dark: #f0eee5;
+    --fc__primary--light__bg--dark: rgba(89, 191, 69, 0.15);
+    --fc__primary--light__link--dark: white;
+    --fc__primary--light__link--dark--hover: #face3d; }
   @media (prefers-color-scheme: dark) {
     html:not(.light) .qh__t__scarborough {
       --fc__official__fg: #d4d4d4;
@@ -563,7 +622,7 @@ html {
       --fc__default__link--visited: #bbacec;
       --fc__default__link--active: #ff8e47;
       --fc__default__hx__fg: #d2cbb2;
-      --fc__default__text__accent: #d4d4d4;
+      --fc__default__text-accent: #d4d4d4;
       --fc__icon__word: #95bddf;
       --fc__icon__generic: #d2cbb2;
       --fc__icon__download: #d4d4d4;
@@ -634,7 +693,7 @@ html {
       --fc__default__link--visited: #bbacec;
       --fc__default__link--active: #ff8e47;
       --fc__default__hx__fg: #d2cbb2;
-      --fc__default__text__accent: #d4d4d4;
+      --fc__default__text-accent: #d4d4d4;
       --fc__icon__word: #95bddf;
       --fc__icon__generic: #d2cbb2;
       --fc__icon__download: #d4d4d4;
@@ -911,7 +970,7 @@ nav ol {
   .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):hover,
   .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):focus,
   .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):active {
-    color: var(--c__quahog--darker); }
+    color: var(--c__quahog--medium); }
   .qh__t__coffee-milk a:not(.qh__btn):focus,
   .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):focus {
     outline-color: var(--c__navy); }
@@ -994,6 +1053,9 @@ main * + p {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: var(--fc__default__hx__fg); }
+
+h2 {
+  color: var(--fc__default__text-accent); }
 
 h1 {
   font-family: "Roboto Slab", var(--font-serif-fallback);
@@ -1088,7 +1150,7 @@ h2 {
   h2:first-of-type::after, h2.emphasis::after {
     content: ' ';
     display: block;
-    border-bottom: solid 0.4rem var(--c__rhody-red);
+    border-bottom: solid 0.4rem var(--fc__default__violator);
     margin-top: 1.0625rem;
     margin-bottom: 1.0625rem;
     width: 1.125em; }
@@ -1641,7 +1703,7 @@ dl {
     ol dd::marker,
     dl li::marker,
     dl dd::marker {
-      color: var(--fc__default__text__accent);
+      color: var(--fc__default__text-accent);
       font-size: 0.875em; }
     ul li + li,
     ul dd + li,
@@ -2041,7 +2103,7 @@ button,
   opacity: 0.6;
   pointer-events: none; }
 
-.qh__btn:not(.qh__btn--disabled) {
+.qh__btn:not(.qh__btn--disabled):not(.qh__btn:disabled) {
   cursor: pointer; }
 
 .qh__btn button.qh__btn, .qh__btn[type="button"], .qh__btn[type="reset"], .qh__btn[type="submit"] {
@@ -3832,6 +3894,8 @@ body {
               flex: 1 0 calc(100% - 2.75rem);
       margin-left: auto;
       max-width: calc(100% - 2.75rem); }
+    .qh__nav-minor__has-children .qh__nav-minor__list__sub .qh__nav-minor__link {
+      max-width: none; }
     .qh__nav-minor__has-children .qh__accordion__button {
       display: block;
       -webkit-box-flex: 0;
@@ -3863,7 +3927,7 @@ body {
     background-color: var(--fc__nav-minor__link__bg);
     color: var(--fc__nav-minor__link);
     text-decoration: none; }
-  .qh__nav-minor .qh__accordion__button :hover, .qh__nav-minor .qh__accordion__button :focus, .qh__nav-minor__link :hover, .qh__nav-minor__link :focus {
+  .qh__nav-minor .qh__accordion__button:not(.qh__nav-minor__link--current):hover, .qh__nav-minor .qh__accordion__button:not(.qh__nav-minor__link--current):focus, .qh__nav-minor__link:not(.qh__nav-minor__link--current):hover, .qh__nav-minor__link:not(.qh__nav-minor__link--current):focus {
     background-color: var(--fc__nav-minor__link--hover__bg);
     color: var(--fc__nav-minor__link--hover); }
   .qh__nav-minor .qh__accordion__button:focus, .qh__nav-minor__link:focus {
@@ -4346,12 +4410,12 @@ body {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
       pointer-events: none; }
     .qh__accordion__button .qh__icon {
-      margin: -0.5em -0.5em -0.5em 1.5rem;
+      margin: -0.5em 0.75rem -0.5em -0.5em;
       min-width: 2.75rem; }
       .qh__accordion__button .qh__icon__plusminus__circle {
         fill: var(--fc__accordion__icon__bg); }
@@ -4628,6 +4692,12 @@ body {
 .qh__file-list .qh__icon__download__path {
   fill: var(--fc__icon__download); }
 
+.qh__file-list .qh__icon__extlink__path {
+  fill: var(--fc__icon__download); }
+
+.qh__file-list .qh__icon__globe__path {
+  fill: var(--fc__icon__word); }
+
 .qh__file-list__inner {
   padding: 1.5rem 1rem; }
 
@@ -4726,6 +4796,8 @@ body {
   text-decoration: none;
   -webkit-transition: all 250ms ease;
   transition: all 250ms ease; }
+  .qh__file-list__link::after {
+    content: none !important; }
   .qh__file-list__link, .qh__file-list__link:visited {
     background-color: transparent; }
   .qh__file-list__link:hover, .qh__file-list__link:focus {
@@ -4745,7 +4817,9 @@ body {
   -webkit-transform: translateY(3px);
           transform: translateY(3px); }
   .qh__file-list__link:hover .qh__file-list__item__download .qh__icon__download,
-  .qh__file-list__link:focus .qh__file-list__item__download .qh__icon__download {
+  .qh__file-list__link:hover .qh__file-list__item__download .qh__icon__extlink,
+  .qh__file-list__link:focus .qh__file-list__item__download .qh__icon__download,
+  .qh__file-list__link:focus .qh__file-list__item__download .qh__icon__extlink {
     fill: var(--fc__default__link--hover); }
 
 .qh-layout-section--col-size-100 .block-ecms-promotions-global {

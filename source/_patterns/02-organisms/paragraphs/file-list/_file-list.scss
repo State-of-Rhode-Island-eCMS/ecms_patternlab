@@ -21,6 +21,14 @@
     fill: var(--fc__icon__download);
   }
 
+  .qh__icon__extlink__path {
+    fill: var(--fc__icon__download);
+  }
+
+  .qh__icon__globe__path {
+    fill: var(--fc__icon__word);
+  }
+
   &__inner {
     padding: $general-v-spacing $general-h-spacing;
   }
@@ -78,6 +86,11 @@
     text-decoration: none;
     transition: $transition-base;
 
+    // Hide external link
+    &::after {
+      content: none !important;
+    }
+
     &,
     &:visited {
       background-color: transparent;
@@ -104,7 +117,8 @@
   &__link:focus &__item__download {
     transform: translateY(3px);
 
-    .qh__icon__download {
+    .qh__icon__download,
+    .qh__icon__extlink {
       fill: var(--fc__default__link--hover);
     }
   }
