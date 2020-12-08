@@ -199,7 +199,7 @@ html {
   --c__white--trans33: rgba(255, 255, 255, 0.33);
   --c__white--trans25: rgba(255, 255, 255, 0.25);
   --c__white--trans15: rgba(255, 255, 255, 0.15);
-  --c__transparent: transparent;
+  --c__transparent: rgba(255, 255, 255, 0);
   --c__quahog--darker: #141414;
   --c__quahog--dark--trans33: rgba(20, 20, 20, 0.33);
   --c__quahog--dark--trans25: rgba(20, 20, 20, 0.25);
@@ -224,7 +224,6 @@ html {
   --c__calamari: #ff8e47;
   --c__hope-gold: #face3d;
   --c__green-animals: #59bf45;
-  --c__green-animals--dark: #307e20;
   --c__green-animals--trans15: rgba(89, 191, 69, 0.15);
   --c__ocean--bright: #7affd3;
   --c__ocean: #95bddf;
@@ -268,7 +267,7 @@ html {
   --fc__default__violator: #ff8e47;
   --fc__default__accent: #face3d;
   --fc__default__accent__fg: #2e2e2e;
-  --fc__default__text-accent: #6e6e6e;
+  --fc__default__text__accent: #6e6e6e;
   --fc__default__button__bg: #293557;
   --fc__default__button__fg: #face3d;
   --fc__default__button--hover__bg: #1b243b;
@@ -282,7 +281,7 @@ html {
   --fc__nav-minor__fg: #141414;
   --fc__nav-minor__bg: rgba(149, 189, 223, 0.25);
   --fc__nav-minor__link: #293557;
-  --fc__nav-minor__link__bg: transparent;
+  --fc__nav-minor__link__bg: rgba(255, 255, 255, 0);
   --fc__nav-minor__link--hover: #1b243b;
   --fc__nav-minor__link--hover__bg: rgba(149, 189, 223, 0.25);
   --fc__nav-minor__link--focus: #ff8e47;
@@ -355,7 +354,7 @@ html {
     --fc__default__link--visited: #bbacec;
     --fc__default__link--active: #ff8e47;
     --fc__default__hx__fg: #d2cbb2;
-    --fc__default__text-accent: #d4d4d4;
+    --fc__default__text__accent: #d4d4d4;
     --fc__icon__word: #95bddf;
     --fc__icon__generic: #d2cbb2;
     --fc__icon__download: #d4d4d4;
@@ -363,7 +362,7 @@ html {
     --fc__nav-minor__fg: #d4d4d4;
     --fc__nav-minor__bg: rgba(41, 53, 87, 0.5);
     --fc__nav-minor__link: #f0eee5;
-    --fc__nav-minor__link__bg: transparent;
+    --fc__nav-minor__link__bg: rgba(255, 255, 255, 0);
     --fc__nav-minor__link--hover: white;
     --fc__nav-minor__link--hover__bg: #2e2e2e;
     --fc__nav-minor__link--focus: #face3d;
@@ -429,7 +428,7 @@ html {
     --fc__default__hx__fg: #6e6e6e;
     --fc__default__violator: #95bddf;
     --fc__default__accent: #face3d;
-    --fc__default__text-accent: #6e6e6e;
+    --fc__default__text__accent: #6e6e6e;
     --fc__default__button__bg: #eb5252;
     --fc__default__button__fg: #2e2e2e;
     --fc__default__button--hover__bg: #8e3339;
@@ -443,7 +442,7 @@ html {
     --fc__nav-minor__fg: #141414;
     --fc__nav-minor__bg: rgba(235, 82, 82, 0.15);
     --fc__nav-minor__link: #404040;
-    --fc__nav-minor__link__bg: transparent;
+    --fc__nav-minor__link__bg: rgba(255, 255, 255, 0);
     --fc__nav-minor__link--hover: #141414;
     --fc__nav-minor__link--hover__bg: rgba(235, 82, 82, 0.15);
     --fc__nav-minor__link--focus: #eb5252;
@@ -504,7 +503,7 @@ html {
     --fc__default__link--visited: #bbacec;
     --fc__default__link--active: #ff8e47;
     --fc__default__hx__fg: #d2cbb2;
-    --fc__default__text-accent: #d4d4d4;
+    --fc__default__text__accent: #d4d4d4;
     --fc__icon__word: #95bddf;
     --fc__icon__generic: #d2cbb2;
     --fc__icon__download: #d4d4d4;
@@ -512,7 +511,7 @@ html {
     --fc__nav-minor__fg: #d4d4d4;
     --fc__nav-minor__bg: rgba(235, 82, 82, 0.15);
     --fc__nav-minor__link: #f0eee5;
-    --fc__nav-minor__link__bg: transparent;
+    --fc__nav-minor__link__bg: rgba(255, 255, 255, 0);
     --fc__nav-minor__link--hover: white;
     --fc__nav-minor__link--hover__bg: rgba(235, 82, 82, 0.15);
     --fc__nav-minor__link--focus: #95bddf;
@@ -531,64 +530,6 @@ html {
     --fc__primary__bg: rgba(235, 82, 82, 0.15);
     --fc__primary--light__fg: white;
     --fc__primary--light__bg: rgba(235, 82, 82, 0.5); }
-  html .qh__t__wickaboxet {
-    --fc__official__fg: #f0eee5;
-    --fc__official__bg: #141414;
-    --fc__official__link: #95bddf;
-    --fc__official__link--hover: #59bf45;
-    --fc__official__link--focus: #59bf45;
-    --fc__header__fg: white;
-    --fc__header__bg: #307e20;
-    --fc__header__link: white;
-    --fc__header__link--hover: #face3d;
-    --fc__header__social__link: white;
-    --fc__header__social__link--hover: #face3d;
-    --fc__nav-main__fg: #404040;
-    --fc__nav-main__bg: #59bf45;
-    --fc__nav-main__link: #141414;
-    --fc__nav-main__link--hover: #307e20;
-    --fc__nav-main__link--hover__bg: white;
-    --fc__nav-main__link--focus: #141414;
-    --fc__nav-main__link--active: #1440b8;
-    --fc__nav-main__link__sub--hover__bg: rgba(89, 191, 69, 0.15);
-    --fc__nav-main__icon__bg: white;
-    --fc__nav-main__icon__fg: #141414;
-    --fc__nav-main__icon__bg--hover: #307e20;
-    --fc__nav-main__icon__fg--hover: white;
-    --fc__default__link--active: #59bf45;
-    --fc__default__hx__fg: #307e20;
-    --fc__default__text-accent: #6e6e6e;
-    --fc__default__button__bg: #59bf45;
-    --fc__default__button__fg: #141414;
-    --fc__default__button--hover__bg: #307e20;
-    --fc__default__button--hover__fg: white;
-    --fc__icon__word: #95bddf;
-    --fc__icon__generic: #d4d4d4;
-    --fc__nav-minor__border: #59bf45;
-    --fc__nav-minor__bg: rgba(89, 191, 69, 0.15);
-    --fc__nav-minor__link--hover: #1440b8;
-    --fc__nav-minor__link--hover__bg: rgba(89, 191, 69, 0.15);
-    --fc__nav-minor__link--focus: #face3d;
-    --fc__attention-card__fg: #2e2e2e;
-    --fc__attention-card__bar: #307e20;
-    --fc__attention-card__icon: #f2f2f2;
-    --fc__footer__border-top: #59bf45;
-    --fc__primary__fg: #293557;
-    --fc__primary__bg: #59bf45;
-    --fc__primary__link: #1b243b;
-    --fc__primary__link--hover: #141414;
-    --fc__primary__fg--dark: white;
-    --fc__primary__bg--dark: #307e20;
-    --fc__primary__link--dark: white;
-    --fc__primary__link--dark--hover: #face3d;
-    --fc__primary--light__fg: #293557;
-    --fc__primary--light__bg: rgba(89, 191, 69, 0.15);
-    --fc__primary--light__link: #1b243b;
-    --fc__primary--light__link--hover: #141414;
-    --fc__primary--light__fg--dark: #f0eee5;
-    --fc__primary--light__bg--dark: rgba(89, 191, 69, 0.15);
-    --fc__primary--light__link--dark: white;
-    --fc__primary--light__link--dark--hover: #face3d; }
   @media (prefers-color-scheme: dark) {
     html:not(.light) .qh__t__scarborough {
       --fc__official__fg: #d4d4d4;
@@ -622,7 +563,7 @@ html {
       --fc__default__link--visited: #bbacec;
       --fc__default__link--active: #ff8e47;
       --fc__default__hx__fg: #d2cbb2;
-      --fc__default__text-accent: #d4d4d4;
+      --fc__default__text__accent: #d4d4d4;
       --fc__icon__word: #95bddf;
       --fc__icon__generic: #d2cbb2;
       --fc__icon__download: #d4d4d4;
@@ -630,7 +571,7 @@ html {
       --fc__nav-minor__fg: #d4d4d4;
       --fc__nav-minor__bg: rgba(41, 53, 87, 0.5);
       --fc__nav-minor__link: #f0eee5;
-      --fc__nav-minor__link__bg: transparent;
+      --fc__nav-minor__link__bg: rgba(255, 255, 255, 0);
       --fc__nav-minor__link--hover: white;
       --fc__nav-minor__link--hover__bg: #2e2e2e;
       --fc__nav-minor__link--focus: #face3d;
@@ -693,7 +634,7 @@ html {
       --fc__default__link--visited: #bbacec;
       --fc__default__link--active: #ff8e47;
       --fc__default__hx__fg: #d2cbb2;
-      --fc__default__text-accent: #d4d4d4;
+      --fc__default__text__accent: #d4d4d4;
       --fc__icon__word: #95bddf;
       --fc__icon__generic: #d2cbb2;
       --fc__icon__download: #d4d4d4;
@@ -701,7 +642,7 @@ html {
       --fc__nav-minor__fg: #d4d4d4;
       --fc__nav-minor__bg: rgba(235, 82, 82, 0.15);
       --fc__nav-minor__link: #f0eee5;
-      --fc__nav-minor__link__bg: transparent;
+      --fc__nav-minor__link__bg: rgba(255, 255, 255, 0);
       --fc__nav-minor__link--hover: white;
       --fc__nav-minor__link--hover__bg: rgba(235, 82, 82, 0.15);
       --fc__nav-minor__link--focus: #95bddf;
@@ -2522,7 +2463,7 @@ table {
             justify-content: center;
     margin-left: -0.5rem;
     margin-right: 1rem;
-    width: 4rem;
+    width: 5rem;
     min-height: 4.5rem; }
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       .qh__site-branding__logo {
