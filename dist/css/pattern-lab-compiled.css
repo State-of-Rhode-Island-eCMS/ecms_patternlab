@@ -3964,6 +3964,9 @@ body {
 
 .qh__notifications-block {
   position: relative; }
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) .qh__notifications-block {
+      opacity: .9; } }
   .qh__notifications-block__wrapper {
     background-color: var(--fc__notification__bg);
     margin: 0 auto;
