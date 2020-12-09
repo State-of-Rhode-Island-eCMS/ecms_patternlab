@@ -1,0 +1,67 @@
+.qh__gallery {
+
+  // Controls wrapper. Contains prev/next buttons and radio navigaiton
+  &__controls {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $general-v-spacing;
+
+    .qh__gallery__button--prev {
+      order: 0;
+    }
+
+    .qh__gallery__nav {
+      order: 1;
+    }
+
+    .qh__gallery__button--next {
+      order: 2;
+    }
+  }
+
+  &__button {
+    display: block;
+    width: rem(44);
+    height: rem(44);
+  }
+
+  &__nav {
+    display: flex;
+
+    &-radio {
+      display: block;
+      height: rem(18);
+      width: rem(18);
+      border: 1px solid;
+      border-radius: rem(9);
+
+      margin: 0 rem(5);
+
+      &.tns-nav-active {
+        background-color: red;
+      }
+    }
+  }
+
+  &__slider {
+
+    // Gallery items or slides.
+    // These will be media items.
+    > figure {
+      position: relative;
+
+      // Override base caption styles
+      figcaption {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: ($general-v-spacing * 1) ($general-h-spacing * 2);
+        color: #FFF;
+      }
+    }
+  }
+}
