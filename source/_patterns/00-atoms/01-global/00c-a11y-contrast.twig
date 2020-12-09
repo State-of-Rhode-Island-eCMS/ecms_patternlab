@@ -1,0 +1,115 @@
+<style>
+  table th {
+    background-color: var(--fc__default__bg);
+    color: var(--fc__default__fg);
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+  table thead th span {
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+  }
+  table thead {
+    position: sticky;
+    top: 0;
+  }
+  table tbody th {
+    position: sticky;
+    left: 0;
+  }
+  table tbody td,
+  table tbody td div {
+    padding: 0.5rem;
+    text-align: center;
+  }
+  table tbody td, small {
+    font-size: 0.875rem;
+  }
+  .light-text {
+    color: var(--c__white);
+  }
+  .dark-text {
+    color: var(--c__quahog--dark);
+  }
+</style>
+
+<script>
+  function round2places(number) {
+    return (Math.round(number * 100) / 100).toFixed(2);
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+
+    document.querySelectorAll("#palette-color-contrast tbody td").forEach(function(col) {
+      var foreground = col.getAttribute('data-fore');
+      var background = col.getAttribute('data-back');
+      var target = col.querySelector('div');
+      var message = '';
+      // For now, transparent colors should be skipped
+      if ( chroma.valid(foreground) && chroma.valid(background) ) {
+        var ccr = chroma.contrast(foreground, background);
+
+        if (ccr > 7.0) {
+          message = '👑';
+        }
+        if (ccr > 4.5) {
+          message = message + '✅ ';
+        }
+        if (ccr < 4.5 && ccr > 3.0) {
+          message = message + '🟡 ';
+        }
+        if (ccr < 3.0) {
+          message = '🚫';
+        }
+        // Change the foreground color if this is a dark color
+        if ( chroma.contrast(foreground, '#000') < 4.5 ) {
+          col.setAttribute('class', 'light-text');
+        } else {
+          col.setAttribute('class', 'dark-text');
+        }
+        // Add the results to the column
+        target.innerHTML = message + '<br><small><b>' + round2places(ccr) + '</b></small>';
+      }
+    });
+  });
+</script>
+
+<table id="palette-color-contrast">
+  <colgroup>
+    <col>
+  {% for key, color in colors|reverse %}
+    {% if key != 'transparent' %}
+    <col style="background-color: var(--c__{{ key }})">
+    {% endif %}
+  {% endfor %}
+  </colgroup>
+  <thead>
+    <tr>
+      <th></th>
+      {% for key, color in colors|reverse %}
+        {% if key != 'transparent' %}
+      <th scope="col"><span>{{ key }}</span></th>
+        {% endif %}
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for key, color in colors|reverse %}
+      <tr>
+        {% for innerKey, innerColor in colors|reverse %}
+          {% if key != 'transparent' %}
+            {% if loop.first %}
+        <th scope="row"><b>{{ key }}</b></th>
+            {% endif %}
+            {% if color.hsl == innerColor.hsl %}
+        <td scope="col" style="background-color: var(--fc__default__fg)"></td>
+            {% else %}
+        <td scope="col" data-fore="{{ color.hsl }}" data-fore-name="{{ key }}" data-back="{{ innerColor.hsl }}" data-back-name="{{ innerKey }}"> <div style="background-color: var(--c__{{ key }})"></div></td>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </tr>
+    {% endfor %}
+    </tr>
+  </tbody>
+</table>
