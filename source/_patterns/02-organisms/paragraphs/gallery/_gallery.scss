@@ -64,4 +64,8 @@
       }
     }
   }
+
+  button {
+    @include qh-button-reset();
+  }
 }
