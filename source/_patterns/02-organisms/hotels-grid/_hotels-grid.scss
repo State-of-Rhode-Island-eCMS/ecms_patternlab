@@ -30,6 +30,7 @@
     > li {
       margin: 0;
       padding: 0 ($general-h-spacing/2) $general-v-spacing;
+      flex: 0 1 100%;
 
       @include breakpoint-up($bp--small) {
         flex: 0 1 50%;
