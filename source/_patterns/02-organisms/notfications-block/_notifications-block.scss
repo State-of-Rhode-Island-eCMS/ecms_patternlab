@@ -1,6 +1,13 @@
 .qh__notifications-block {
   position: relative;
 
+  // If dark mode, dim slightly
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) & {
+      opacity: .9;
+    }
+  }
+
   &__wrapper {
     //@include qh-content-maxwidth();
     background-color: var(--fc__notification__bg);

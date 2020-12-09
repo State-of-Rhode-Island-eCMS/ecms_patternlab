@@ -72,12 +72,12 @@
 //
 // [second loop on only "--dark" themes]
 //   @media (prefers-color-scheme: dark) {
-//     html {
+//     html:not(.light) {
 //       [first color theme without a class around it]
 //     }
 //
 //     [theme-slug has "--dark" removed]
-//     html .qh__t__[theme-slug] {
+//     html:not(.light) .qh__t__[theme-slug] {
 //       [colors vars…]
 //     }
 //   }
