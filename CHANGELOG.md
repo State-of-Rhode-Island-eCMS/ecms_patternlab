@@ -10,8 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-### Added
-- RIG-130: Card paragraph, a11y table, dark mode Wickaboxet, grid tweaks.
 
 ### Changed
 
@@ -22,6 +20,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.3.2] - 2020-12-10
+### Added
+- RIG-130: Card paragraph, a11y table, dark mode Wickaboxet, grid tweaks.
 
 ## [0.3.1] - 2020-12-08
 ### Added
@@ -117,7 +119,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.1...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.2...HEAD
+[0.3.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.1...0.3.2
 [0.3.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.0...0.3.1
 [0.3.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.2.9...0.3.0
 [0.2.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.2.8...0.2.9
