@@ -1,6 +1,6 @@
 .qh__content-components-block {
   // Add padding to block when there is a background color.
-  &[class*='qh__t'] {
+  &[class*='qh__tc'] {
     padding: $general-v-spacing $general-h-spacing;
 
     // Remove padding when a figure is first.
