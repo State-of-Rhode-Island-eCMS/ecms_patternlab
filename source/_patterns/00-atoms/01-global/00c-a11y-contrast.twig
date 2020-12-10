@@ -22,8 +22,11 @@
     padding: 0.5rem;
     text-align: center;
   }
-  table tbody td, small {
+  table tbody td small {
     font-size: 0.875rem;
+  }
+  table tbody td small span {
+    border: 1px solid;
   }
   .light-text {
     color: var(--c__white);
@@ -36,6 +39,38 @@
 <script>
   function round2places(number) {
     return (Math.round(number * 100) / 100).toFixed(2);
+  }
+
+  function RGBAtoRGB(frontRGBA, backgroundRGB){
+    // Chroma.js is required
+
+    // Convert RGBA/RGB to single channels
+    frontRGBA = chroma(frontRGBA).rgba(false);
+    backgroundRGB = chroma(backgroundRGB).rgb(false);
+    var fr = frontRGBA[0];
+    var fg = frontRGBA[1];
+    var fb = frontRGBA[2];
+    var fa = frontRGBA[3];
+    var br = backgroundRGB[0];
+    var bg = backgroundRGB[1];
+    var bb = backgroundRGB[2];
+
+    //normalise the alpha channel across the foreground and background.
+    var r = ((1 - fa) * br) + (fa * fr);
+    var g = ((1 - fa) * bg) + (fa * fg);
+    var b = ((1 - fa) * bb) + (fa * fb);
+
+    //just check that we don't end up with a value greater than 255 for any channel.
+    r = (r > 255) ? 255 : r;
+    g = (g > 255) ? 255 : g;
+    b = (b > 255) ? 255 : b;
+
+    // Set all values to whole numbers
+    r = Math.round(r);
+    g = Math.round(g);
+    b = Math.round(b);
+
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
   }
 
   function setMessage(ccr) {
@@ -104,14 +139,18 @@
         // Calculate the true color of the BG first against what is behind it
         if ( chroma(background).alpha() < 1 && chroma(foreground).alpha() == 1 ) {
           if (lightmode) {
-            background = chroma.mix(background, '#fff', 1, 'lab').css();
+            //background = chroma.mix(background, '#fff', 0.5, 'lab').css();
+            background = RGBAtoRGB(background, '#fff');
           } else {
-            background = chroma.mix(background, '#2e2e2e', 1, 'lab').css();
+            //background = chroma.mix(background, '#2e2e2e', 0.5, 'lab').css();
+            background = RGBAtoRGB(background, '#2e2e2e');
           }
         }
         // Calculate how the BG and FG mix together
         if ( chroma(foreground).alpha() < 1 && chroma(background).alpha() == 1 ) {
-          foreground = chroma.mix(foreground, background, 1, 'lab').css();
+          //foreground = chroma.mix(foreground, background, 0.5, 'lab').css();
+          foreground = RGBAtoRGB(foreground, background);
+          //console.log(foreground);
         }
 
         // Now get the contrast
@@ -127,7 +166,7 @@
             col.setAttribute('class', 'dark-text');
           }
           // Add the results to the column
-          div.innerHTML = message + '<br><small><b>' + round2places(ccr) + '</b><br><span style="background-color:' + background + '; color:' + foreground + '"><b>composite</b></span></small>';
+          div.innerHTML = message + '<br><small><b>' + round2places(ccr) + '</b><br><span style="border-color:' + background + '; color:' + background + '; background-color:' + foreground + '"><b>composite</b></span></small>';
           div.style.backgroundColor = chroma(originalFore).css();
         }
       }
