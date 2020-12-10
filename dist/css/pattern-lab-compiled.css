@@ -224,8 +224,8 @@ html {
   --c__calamari: #ff8e47;
   --c__hope-gold: #face3d;
   --c__green-animals: #59bf45;
-  --c__green-animals--dark: #307e20;
-  --c__green-animals--trans15: rgba(89, 191, 69, 0.15);
+  --c__green-animals--dark: #2e7a1f;
+  --c__green-animals--trans15: rgba(89, 191, 69, 0.14);
   --c__ocean--bright: #7affd3;
   --c__ocean: #95bddf;
   --c__ocean--trans25: rgba(149, 189, 223, 0.25);
@@ -250,7 +250,7 @@ html {
   --fc__nav-main__link--hover: #293557;
   --fc__nav-main__link--hover__bg: white;
   --fc__nav-main__link--focus: #face3d;
-  --fc__nav-main__link--active: #face3d;
+  --fc__nav-main__link--active: #ff8e47;
   --fc__nav-main__link__sub--hover__bg: rgba(149, 189, 223, 0.25);
   --fc__nav-main__icon__bg: white;
   --fc__nav-main__icon__fg: #293557;
@@ -265,8 +265,8 @@ html {
   --fc__default__link--visited: #5c55be;
   --fc__default__link--active: #ff8e47;
   --fc__default__hx__fg: #6e6e6e;
-  --fc__default__violator: #ff8e47;
-  --fc__default__accent: #face3d;
+  --fc__default__violator: #face3d;
+  --fc__default__accent: #ff8e47;
   --fc__default__accent__fg: #2e2e2e;
   --fc__default__text-accent: #6e6e6e;
   --fc__default__button__bg: #293557;
@@ -289,12 +289,12 @@ html {
   --fc__nav-minor__link--active: #ff8e47;
   --fc__nav-minor__sub__bg: rgba(255, 255, 255, 0.25);
   --fc__notification__fg: #1b243b;
-  --fc__notification__bg: #face3d;
+  --fc__notification__bg: #ff8e47;
   --fc__notification__icon: #293557;
   --fc__notification__link: #1b243b;
-  --fc__notification__link--hover: #476cd1;
+  --fc__notification__link--hover: #1440b8;
   --fc__notification__link--focus: #1b243b;
-  --fc__notification__link--active: #ff8e47;
+  --fc__notification__link--active: #476cd1;
   --fc__notification__button__fg: #293557;
   --fc__notification__button__bg: white;
   --fc__notification__border: rgba(20, 20, 20, 0.33);
@@ -427,7 +427,7 @@ html {
     --fc__default__link--visited: #5c55be;
     --fc__default__link--active: #ff8e47;
     --fc__default__hx__fg: #6e6e6e;
-    --fc__default__violator: #95bddf;
+    --fc__default__violator: #ff8e47;
     --fc__default__accent: #face3d;
     --fc__default__text-accent: #6e6e6e;
     --fc__default__button__bg: #eb5252;
@@ -459,19 +459,29 @@ html {
     --fc__notification__button__fg: #293557;
     --fc__notification__button__bg: white;
     --fc__notification__border: rgba(41, 53, 87, 0.5);
+    --fc__accordion__icon__fg: #2e2e2e;
+    --fc__accordion__icon__bg: #eb5252;
     --fc__attention-card__fg: #141414;
     --fc__attention-card__bar: #eb5252;
     --fc__attention-card__icon: white;
     --fc__footer__border-top: #eb5252;
     --fc__footer__bg: #404040;
-    --fc__primary__fg: white;
+    --fc__primary__fg: #d2cbb2;
     --fc__primary__bg: #8e3339;
-    --fc__primary__fg--dark: white;
-    --fc__primary__bg--dark: rgba(235, 82, 82, 0.15);
-    --fc__primary--light__fg: #141414;
+    --fc__primary__link: #f0eee5;
+    --fc__primary__link--hover: #face3d;
+    --fc__primary__fg--dark: #f0eee5;
+    --fc__primary__bg--dark: rgba(235, 82, 82, 0.5);
+    --fc__primary__link--dark: white;
+    --fc__primary__link--dark--hover: #face3d;
+    --fc__primary--light__fg: #404040;
     --fc__primary--light__bg: rgba(235, 82, 82, 0.15);
-    --fc__primary--light__fg--dark: white;
-    --fc__primary--light__bg--dark: rgba(235, 82, 82, 0.5); }
+    --fc__primary--light__link: #2e2e2e;
+    --fc__primary--light__link--hover: #1440b8;
+    --fc__primary--light__fg--dark: #f0eee5;
+    --fc__primary--light__bg--dark: rgba(235, 82, 82, 0.15);
+    --fc__primary--light__link--dark: #d2cbb2;
+    --fc__primary--light__link--dark--hover: #face3d; }
   html.dark .qh__t__federal-hill {
     --fc__official__fg: #d4d4d4;
     --fc__official__bg: #2e2e2e;
@@ -518,27 +528,20 @@ html {
     --fc__nav-minor__link--focus: #95bddf;
     --fc__nav-minor__link--active: #face3d;
     --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.15);
-    --fc__accordion__icon__fg: #141414;
-    --fc__accordion__icon__bg: #ff8e47;
     --fc__attention-card__fg: #f0eee5;
     --fc__attention-card__bar: #8e3339;
     --fc__attention-card__icon: #f0eee5;
-    --fc__footer__border-top: #eb5252;
-    --fc__footer__fg: white;
-    --fc__footer__bg: #2e2e2e;
-    --fc__footer__copyright__bg: #141414;
-    --fc__primary__fg: white;
-    --fc__primary__bg: rgba(235, 82, 82, 0.15);
-    --fc__primary--light__fg: white;
-    --fc__primary--light__bg: rgba(235, 82, 82, 0.5); }
+    --fc__footer__border-top: #8e3339;
+    --fc__primary__bg: rgba(235, 82, 82, 0.5);
+    --fc__primary--light__bg: rgba(235, 82, 82, 0.15); }
   html .qh__t__wickaboxet {
     --fc__official__fg: #f0eee5;
     --fc__official__bg: #141414;
-    --fc__official__link: #95bddf;
+    --fc__official__link: white;
     --fc__official__link--hover: #59bf45;
     --fc__official__link--focus: #59bf45;
     --fc__header__fg: white;
-    --fc__header__bg: #307e20;
+    --fc__header__bg: #2e7a1f;
     --fc__header__link: white;
     --fc__header__link--hover: #face3d;
     --fc__header__social__link: white;
@@ -546,49 +549,111 @@ html {
     --fc__nav-main__fg: #404040;
     --fc__nav-main__bg: #59bf45;
     --fc__nav-main__link: #141414;
-    --fc__nav-main__link--hover: #307e20;
+    --fc__nav-main__link--hover: #2e7a1f;
     --fc__nav-main__link--hover__bg: white;
     --fc__nav-main__link--focus: #141414;
     --fc__nav-main__link--active: #1440b8;
-    --fc__nav-main__link__sub--hover__bg: rgba(89, 191, 69, 0.15);
+    --fc__nav-main__link__sub--hover__bg: rgba(89, 191, 69, 0.14);
     --fc__nav-main__icon__bg: white;
     --fc__nav-main__icon__fg: #141414;
-    --fc__nav-main__icon__bg--hover: #307e20;
+    --fc__nav-main__icon__bg--hover: #2e7a1f;
     --fc__nav-main__icon__fg--hover: white;
     --fc__default__link--active: #59bf45;
-    --fc__default__hx__fg: #307e20;
+    --fc__default__hx__fg: #2e7a1f;
+    --fc__default__violator: #ff8e47;
+    --fc__default__accent: #face3d;
+    --fc__default__accent__fg: #2e2e2e;
     --fc__default__text-accent: #6e6e6e;
     --fc__default__button__bg: #59bf45;
     --fc__default__button__fg: #141414;
-    --fc__default__button--hover__bg: #307e20;
+    --fc__default__button--hover__bg: #2e7a1f;
     --fc__default__button--hover__fg: white;
     --fc__icon__word: #95bddf;
     --fc__icon__generic: #d4d4d4;
     --fc__nav-minor__border: #59bf45;
-    --fc__nav-minor__bg: rgba(89, 191, 69, 0.15);
+    --fc__nav-minor__bg: rgba(89, 191, 69, 0.14);
     --fc__nav-minor__link--hover: #1440b8;
-    --fc__nav-minor__link--hover__bg: rgba(89, 191, 69, 0.15);
+    --fc__nav-minor__link--hover__bg: rgba(89, 191, 69, 0.14);
     --fc__nav-minor__link--focus: #face3d;
+    --fc__notification__fg: #2e2e2e;
+    --fc__notification__bg: #face3d;
+    --fc__notification__icon: #404040;
+    --fc__notification__link: #2e2e2e;
+    --fc__notification__link--hover: #1440b8;
+    --fc__notification__link--active: #2e7a1f;
+    --fc__notification__button__fg: #2e7a1f;
+    --fc__accordion__icon__fg: #141414;
+    --fc__accordion__icon__bg: #59bf45;
     --fc__attention-card__fg: #2e2e2e;
-    --fc__attention-card__bar: #307e20;
+    --fc__attention-card__bar: #59bf45;
     --fc__attention-card__icon: #f2f2f2;
     --fc__footer__border-top: #59bf45;
-    --fc__primary__fg: #293557;
+    --fc__footer__bg: #2e2e2e;
+    --fc__primary__fg: #2e2e2e;
     --fc__primary__bg: #59bf45;
     --fc__primary__link: #1b243b;
     --fc__primary__link--hover: #141414;
-    --fc__primary__fg--dark: white;
-    --fc__primary__bg--dark: #307e20;
+    --fc__primary__fg--dark: #f0eee5;
+    --fc__primary__bg--dark: #2e7a1f;
     --fc__primary__link--dark: white;
     --fc__primary__link--dark--hover: #face3d;
     --fc__primary--light__fg: #293557;
-    --fc__primary--light__bg: rgba(89, 191, 69, 0.15);
-    --fc__primary--light__link: #1b243b;
+    --fc__primary--light__bg: rgba(89, 191, 69, 0.14);
+    --fc__primary--light__link: #2e7a1f;
     --fc__primary--light__link--hover: #141414;
     --fc__primary--light__fg--dark: #f0eee5;
-    --fc__primary--light__bg--dark: rgba(89, 191, 69, 0.15);
+    --fc__primary--light__bg--dark: rgba(89, 191, 69, 0.14);
     --fc__primary--light__link--dark: white;
     --fc__primary--light__link--dark--hover: #face3d; }
+  html.dark .qh__t__wickaboxet {
+    --fc__official__bg: #141414;
+    --fc__header__fg: #f0eee5;
+    --fc__header__bg: rgba(89, 191, 69, 0.14);
+    --fc__header__link: #f0eee5;
+    --fc__header__link--hover: white;
+    --fc__header__social__link: #59bf45;
+    --fc__header__social__link--hover: white;
+    --fc__nav-main__fg: #f0eee5;
+    --fc__nav-main__bg: #2e7a1f;
+    --fc__nav-main__link: white;
+    --fc__nav-main__link--hover: #59bf45;
+    --fc__nav-main__link--hover__bg: #2e2e2e;
+    --fc__nav-main__link--focus: #f0eee5;
+    --fc__nav-main__link--active: #face3d;
+    --fc__nav-main__link__sub--hover__bg: rgba(89, 191, 69, 0.14);
+    --fc__nav-main__icon__bg: white;
+    --fc__nav-main__icon__fg: #141414;
+    --fc__nav-main__icon__bg--hover: #2e7a1f;
+    --fc__nav-main__icon__fg--hover: white;
+    --fc__default__fg: #f0eee5;
+    --fc__default__bg: #2e2e2e;
+    --fc__default__border: rgba(255, 255, 255, 0.25);
+    --fc__default__link: #95bddf;
+    --fc__default__link--hover: #face3d;
+    --fc__default__link--focus: #95bddf;
+    --fc__default__link--visited: #bbacec;
+    --fc__default__link--active: #ff8e47;
+    --fc__default__hx__fg: #59bf45;
+    --fc__default__violator: #ff8e47;
+    --fc__default__accent: #face3d;
+    --fc__default__accent__fg: #2e2e2e;
+    --fc__default__text-accent: white;
+    --fc__nav-minor__border: #59bf45;
+    --fc__nav-minor__fg: #d2cbb2;
+    --fc__nav-minor__bg: rgba(89, 191, 69, 0.14);
+    --fc__nav-minor__link: #f0eee5;
+    --fc__nav-minor__link--hover: white;
+    --fc__nav-minor__link--hover__bg: rgba(89, 191, 69, 0.14);
+    --fc__nav-minor__link--focus: #face3d;
+    --fc__nav-minor__link--active: #face3d;
+    --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.25);
+    --fc__notification__bg: #face3d;
+    --fc__attention-card__fg: #f0eee5;
+    --fc__attention-card__bar: #2e7a1f;
+    --fc__attention-card__icon: #f2f2f2;
+    --fc__footer__bg: #2e2e2e;
+    --fc__primary__bg: #2e7a1f;
+    --fc__primary--light__bg: rgba(89, 191, 69, 0.14); }
   @media (prefers-color-scheme: dark) {
     html:not(.light) .qh__t__scarborough {
       --fc__official__fg: #d4d4d4;
@@ -707,19 +772,61 @@ html {
       --fc__nav-minor__link--focus: #95bddf;
       --fc__nav-minor__link--active: #face3d;
       --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.15);
-      --fc__accordion__icon__fg: #141414;
-      --fc__accordion__icon__bg: #ff8e47;
       --fc__attention-card__fg: #f0eee5;
       --fc__attention-card__bar: #8e3339;
       --fc__attention-card__icon: #f0eee5;
-      --fc__footer__border-top: #eb5252;
-      --fc__footer__fg: white;
+      --fc__footer__border-top: #8e3339;
+      --fc__primary__bg: rgba(235, 82, 82, 0.5);
+      --fc__primary--light__bg: rgba(235, 82, 82, 0.15); }
+    html:not(.light) .qh__t__wickaboxet {
+      --fc__official__bg: #141414;
+      --fc__header__fg: #f0eee5;
+      --fc__header__bg: rgba(89, 191, 69, 0.14);
+      --fc__header__link: #f0eee5;
+      --fc__header__link--hover: white;
+      --fc__header__social__link: #59bf45;
+      --fc__header__social__link--hover: white;
+      --fc__nav-main__fg: #f0eee5;
+      --fc__nav-main__bg: #2e7a1f;
+      --fc__nav-main__link: white;
+      --fc__nav-main__link--hover: #59bf45;
+      --fc__nav-main__link--hover__bg: #2e2e2e;
+      --fc__nav-main__link--focus: #f0eee5;
+      --fc__nav-main__link--active: #face3d;
+      --fc__nav-main__link__sub--hover__bg: rgba(89, 191, 69, 0.14);
+      --fc__nav-main__icon__bg: white;
+      --fc__nav-main__icon__fg: #141414;
+      --fc__nav-main__icon__bg--hover: #2e7a1f;
+      --fc__nav-main__icon__fg--hover: white;
+      --fc__default__fg: #f0eee5;
+      --fc__default__bg: #2e2e2e;
+      --fc__default__border: rgba(255, 255, 255, 0.25);
+      --fc__default__link: #95bddf;
+      --fc__default__link--hover: #face3d;
+      --fc__default__link--focus: #95bddf;
+      --fc__default__link--visited: #bbacec;
+      --fc__default__link--active: #ff8e47;
+      --fc__default__hx__fg: #59bf45;
+      --fc__default__violator: #ff8e47;
+      --fc__default__accent: #face3d;
+      --fc__default__accent__fg: #2e2e2e;
+      --fc__default__text-accent: white;
+      --fc__nav-minor__border: #59bf45;
+      --fc__nav-minor__fg: #d2cbb2;
+      --fc__nav-minor__bg: rgba(89, 191, 69, 0.14);
+      --fc__nav-minor__link: #f0eee5;
+      --fc__nav-minor__link--hover: white;
+      --fc__nav-minor__link--hover__bg: rgba(89, 191, 69, 0.14);
+      --fc__nav-minor__link--focus: #face3d;
+      --fc__nav-minor__link--active: #face3d;
+      --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.25);
+      --fc__notification__bg: #face3d;
+      --fc__attention-card__fg: #f0eee5;
+      --fc__attention-card__bar: #2e7a1f;
+      --fc__attention-card__icon: #f2f2f2;
       --fc__footer__bg: #2e2e2e;
-      --fc__footer__copyright__bg: #141414;
-      --fc__primary__fg: white;
-      --fc__primary__bg: rgba(235, 82, 82, 0.15);
-      --fc__primary--light__fg: white;
-      --fc__primary--light__bg: rgba(235, 82, 82, 0.5); } }
+      --fc__primary__bg: #2e7a1f;
+      --fc__primary--light__bg: rgba(89, 191, 69, 0.14); } }
 
 html {
   -webkit-box-sizing: border-box;
@@ -941,8 +1048,89 @@ nav ol {
       .qh__collection__primary-light-bg .qh__text-card a:not(.qh__btn):focus {
         outline-color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor); } }
 
+.qh__tc__primary {
+  background-color: var(--fc__primary__bg);
+  color: var(--fc__primary__fg); }
+  .qh__tc__primary h1, .qh__tc__primary .h1, .qh__tc__primary h2, .qh__tc__primary .h2, .qh__tc__primary h3, .qh__tc__primary .h3, .qh__tc__primary h4, .qh__tc__primary .h4, .qh__tc__primary h5, .qh__tc__primary .h5, .qh__tc__primary h6, .qh__tc__primary .h6 {
+    color: currentColor; }
+  .qh__tc__primary a:not(.qh__btn),
+  .qh__tc__primary a:not(.qh__btn):visited {
+    color: var(--fc__primary__link, currentColor); }
+  .qh__tc__primary a:not(.qh__btn):hover,
+  .qh__tc__primary a:not(.qh__btn):focus,
+  .qh__tc__primary a:not(.qh__btn):active {
+    color: var(--fc__primary__link--hover, var(--fc__primary__link), currentColor); }
+  .qh__tc__primary a:not(.qh__btn):focus {
+    outline-color: var(--fc__primary__link--hover, var(--fc__primary__link), currentColor); }
+  .dark .qh__tc__primary {
+    background-color: var(--fc__primary__bg--dark);
+    color: var(--fc__primary__fg--dark); }
+    .dark .qh__tc__primary a:not(.qh__btn),
+    .dark .qh__tc__primary a:not(.qh__btn):visited {
+      color: var(--fc__primary__link--dark, currentColor); }
+    .dark .qh__tc__primary a:not(.qh__btn):hover,
+    .dark .qh__tc__primary a:not(.qh__btn):focus,
+    .dark .qh__tc__primary a:not(.qh__btn):active {
+      color: var(--fc__primary__link--dark--hover, var(--fc__primary__link), currentColor); }
+    .dark .qh__tc__primary a:not(.qh__btn):focus {
+      outline-color: var(--fc__primary--dark__link--hover, var(--fc__primary__link), currentColor); }
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) .qh__tc__primary {
+      background-color: var(--fc__primary__bg--dark);
+      color: var(--fc__primary__fg--dark); }
+      html:not(.light) .qh__tc__primary a:not(.qh__btn),
+      html:not(.light) .qh__tc__primary a:not(.qh__btn):visited {
+        color: var(--fc__primary__link--dark, currentColor); }
+      html:not(.light) .qh__tc__primary a:not(.qh__btn):hover,
+      html:not(.light) .qh__tc__primary a:not(.qh__btn):focus,
+      html:not(.light) .qh__tc__primary a:not(.qh__btn):active {
+        color: var(--fc__primary__link--dark--hover, var(--fc__primary__link), currentColor); }
+      html:not(.light) .qh__tc__primary a:not(.qh__btn):focus {
+        outline-color: var(--fc__primary--dark__link--hover, var(--fc__primary__link), currentColor); } }
+
+.qh__tc__primary--light {
+  background-color: var(--fc__primary--light__bg);
+  color: var(--fc__primary--light__fg); }
+  .qh__tc__primary--light h1, .qh__tc__primary--light .h1, .qh__tc__primary--light h2, .qh__tc__primary--light .h2, .qh__tc__primary--light h3, .qh__tc__primary--light .h3, .qh__tc__primary--light h4, .qh__tc__primary--light .h4, .qh__tc__primary--light h5, .qh__tc__primary--light .h5, .qh__tc__primary--light h6, .qh__tc__primary--light .h6 {
+    color: currentColor; }
+  .qh__tc__primary--light a:not(.qh__btn),
+  .qh__tc__primary--light a:not(.qh__btn):visited {
+    color: var(--fc__primary--light__link, currentColor); }
+  .qh__tc__primary--light a:not(.qh__btn):hover,
+  .qh__tc__primary--light a:not(.qh__btn):focus,
+  .qh__tc__primary--light a:not(.qh__btn):active {
+    color: var(--fc__primary--light__link--hover, var(--fc__primary--light__link), currentColor); }
+  .qh__tc__primary--light a:not(.qh__btn):focus {
+    outline-color: var(--fc__primary--light__link--hover, var(--fc__primary--light__link), currentColor); }
+  .dark .qh__tc__primary--light {
+    background-color: var(--fc__primary--light__bg--dark);
+    color: var(--fc__primary--light__fg--dark); }
+    .dark .qh__tc__primary--light a:not(.qh__btn),
+    .dark .qh__tc__primary--light a:not(.qh__btn):visited {
+      color: var(--fc__primary--light--dark__link, currentColor); }
+    .dark .qh__tc__primary--light a:not(.qh__btn):hover,
+    .dark .qh__tc__primary--light a:not(.qh__btn):focus,
+    .dark .qh__tc__primary--light a:not(.qh__btn):active {
+      color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor); }
+    .dark .qh__tc__primary--light a:not(.qh__btn):focus {
+      outline-color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor); }
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) .qh__tc__primary--light {
+      background-color: var(--fc__primary--light__bg--dark);
+      color: var(--fc__primary--light__fg--dark); }
+      html:not(.light) .qh__tc__primary--light a:not(.qh__btn),
+      html:not(.light) .qh__tc__primary--light a:not(.qh__btn):visited {
+        color: var(--fc__primary--light--dark__link, currentColor); }
+      html:not(.light) .qh__tc__primary--light a:not(.qh__btn):hover,
+      html:not(.light) .qh__tc__primary--light a:not(.qh__btn):focus,
+      html:not(.light) .qh__tc__primary--light a:not(.qh__btn):active {
+        color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor); }
+      html:not(.light) .qh__tc__primary--light a:not(.qh__btn):focus {
+        outline-color: var(--fc__primary--light__link--dark--hover, var(--fc__primary--light__link--dark), currentColor); } }
+
 .qh__t__coffee-milk,
-.qh__collection__coffee-milk-bg .qh__text-card {
+.qh__collection__coffee-milk-bg .qh__text-card,
+.qh__tc__coffee-milk {
   background-color: var(--c__coffee-milk--trans25);
   color: var(--c__quahog--dark); }
   .qh__t__coffee-milk h1, .qh__t__coffee-milk .h1, .qh__t__coffee-milk h2, .qh__t__coffee-milk .h2, .qh__t__coffee-milk h3, .qh__t__coffee-milk .h3, .qh__t__coffee-milk h4, .qh__t__coffee-milk .h4, .qh__t__coffee-milk h5, .qh__t__coffee-milk .h5, .qh__t__coffee-milk h6, .qh__t__coffee-milk .h6,
@@ -957,32 +1145,54 @@ nav ol {
   .qh__collection__coffee-milk-bg .qh__text-card h5,
   .qh__collection__coffee-milk-bg .qh__text-card .h5,
   .qh__collection__coffee-milk-bg .qh__text-card h6,
-  .qh__collection__coffee-milk-bg .qh__text-card .h6 {
+  .qh__collection__coffee-milk-bg .qh__text-card .h6,
+  .qh__tc__coffee-milk h1,
+  .qh__tc__coffee-milk .h1,
+  .qh__tc__coffee-milk h2,
+  .qh__tc__coffee-milk .h2,
+  .qh__tc__coffee-milk h3,
+  .qh__tc__coffee-milk .h3,
+  .qh__tc__coffee-milk h4,
+  .qh__tc__coffee-milk .h4,
+  .qh__tc__coffee-milk h5,
+  .qh__tc__coffee-milk .h5,
+  .qh__tc__coffee-milk h6,
+  .qh__tc__coffee-milk .h6 {
     color: currentColor; }
   .qh__t__coffee-milk a:not(.qh__btn),
   .qh__t__coffee-milk a:not(.qh__btn):visited,
   .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn),
-  .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):visited {
+  .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):visited,
+  .qh__tc__coffee-milk a:not(.qh__btn),
+  .qh__tc__coffee-milk a:not(.qh__btn):visited {
     color: var(--c__navy); }
   .qh__t__coffee-milk a:not(.qh__btn):hover,
   .qh__t__coffee-milk a:not(.qh__btn):focus,
   .qh__t__coffee-milk a:not(.qh__btn):active,
   .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):hover,
   .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):focus,
-  .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):active {
+  .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):active,
+  .qh__tc__coffee-milk a:not(.qh__btn):hover,
+  .qh__tc__coffee-milk a:not(.qh__btn):focus,
+  .qh__tc__coffee-milk a:not(.qh__btn):active {
     color: var(--c__quahog--medium); }
   .qh__t__coffee-milk a:not(.qh__btn):focus,
-  .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):focus {
+  .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):focus,
+  .qh__tc__coffee-milk a:not(.qh__btn):focus {
     outline-color: var(--c__navy); }
   .dark .qh__t__coffee-milk, .dark
-  .qh__collection__coffee-milk-bg .qh__text-card {
+  .qh__collection__coffee-milk-bg .qh__text-card, .dark
+  .qh__tc__coffee-milk {
     background-color: var(--c__coffee-milk--trans25);
     color: var(--c__coffee-milk--light); }
     .dark .qh__t__coffee-milk a:not(.qh__btn),
     .dark .qh__t__coffee-milk a:not(.qh__btn):visited, .dark
     .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn),
     .dark
-    .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):visited {
+    .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):visited, .dark
+    .qh__tc__coffee-milk a:not(.qh__btn),
+    .dark
+    .qh__tc__coffee-milk a:not(.qh__btn):visited {
       color: var(--c__white); }
     .dark .qh__t__coffee-milk a:not(.qh__btn):hover,
     .dark .qh__t__coffee-milk a:not(.qh__btn):focus,
@@ -991,21 +1201,31 @@ nav ol {
     .dark
     .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):focus,
     .dark
-    .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):active {
+    .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):active, .dark
+    .qh__tc__coffee-milk a:not(.qh__btn):hover,
+    .dark
+    .qh__tc__coffee-milk a:not(.qh__btn):focus,
+    .dark
+    .qh__tc__coffee-milk a:not(.qh__btn):active {
       color: var(--fc__default__accent); }
     .dark .qh__t__coffee-milk a:not(.qh__btn):focus, .dark
-    .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):focus {
+    .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):focus, .dark
+    .qh__tc__coffee-milk a:not(.qh__btn):focus {
       outline-color: var(--c__white); }
   @media (prefers-color-scheme: dark) {
     html:not(.light) .qh__t__coffee-milk, html:not(.light)
-    .qh__collection__coffee-milk-bg .qh__text-card {
+    .qh__collection__coffee-milk-bg .qh__text-card, html:not(.light)
+    .qh__tc__coffee-milk {
       background-color: var(--c__coffee-milk--trans25);
       color: var(--c__coffee-milk--light); }
       html:not(.light) .qh__t__coffee-milk a:not(.qh__btn),
       html:not(.light) .qh__t__coffee-milk a:not(.qh__btn):visited, html:not(.light)
       .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn),
       html:not(.light)
-      .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):visited {
+      .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):visited, html:not(.light)
+      .qh__tc__coffee-milk a:not(.qh__btn),
+      html:not(.light)
+      .qh__tc__coffee-milk a:not(.qh__btn):visited {
         color: var(--c__white); }
       html:not(.light) .qh__t__coffee-milk a:not(.qh__btn):hover,
       html:not(.light) .qh__t__coffee-milk a:not(.qh__btn):focus,
@@ -1014,10 +1234,16 @@ nav ol {
       html:not(.light)
       .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):focus,
       html:not(.light)
-      .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):active {
+      .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):active, html:not(.light)
+      .qh__tc__coffee-milk a:not(.qh__btn):hover,
+      html:not(.light)
+      .qh__tc__coffee-milk a:not(.qh__btn):focus,
+      html:not(.light)
+      .qh__tc__coffee-milk a:not(.qh__btn):active {
         color: var(--fc__default__accent); }
       html:not(.light) .qh__t__coffee-milk a:not(.qh__btn):focus, html:not(.light)
-      .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):focus {
+      .qh__collection__coffee-milk-bg .qh__text-card a:not(.qh__btn):focus, html:not(.light)
+      .qh__tc__coffee-milk a:not(.qh__btn):focus {
         outline-color: var(--c__white); } }
 
 .visually-hidden:not(:focus):not(:active) {
@@ -3237,9 +3463,9 @@ table {
         .qh__articles-list__list > * .qh__teaser-article__cta {
           margin-top: auto; } }
 
-.qh__content-components-block[class*='qh__t'] {
+.qh__content-components-block[class*='qh__tc'] {
   padding: 1.5rem 1rem; }
-  .qh__content-components-block[class*='qh__t'] figure:first-child {
+  .qh__content-components-block[class*='qh__tc'] figure:first-child {
     margin: -1.5rem -1rem 1.5rem;
     width: calc( 100% + (1rem * 2)); }
 
@@ -4670,6 +4896,12 @@ body {
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       .qh__icon-card h3.qh__icon-card__title {
         display: block; } }
+
+.qh__card[class*='qh__tc'] {
+  padding: 1.5rem 1rem; }
+  .qh__card[class*='qh__tc'] figure:first-child {
+    margin: -1.5rem -1rem 1.5rem;
+    width: calc( 100% + (1rem * 2)); }
 
 .qh__paragraph__column-container {
   display: -ms-grid;
