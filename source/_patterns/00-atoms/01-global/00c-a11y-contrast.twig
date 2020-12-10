@@ -38,37 +38,98 @@
     return (Math.round(number * 100) / 100).toFixed(2);
   }
 
+  function setMessage(ccr) {
+    var message = '';
+    if (ccr > 7.0) {
+      message = '👑';
+    }
+    if (ccr > 4.5) {
+      message = message + '✅';
+    }
+    if (ccr < 4.5 && ccr > 3.0) {
+      message = '🟡';
+    }
+    if (ccr < 3.0) {
+      message = '🚫';
+    }
+    return message;
+  }
+
   document.addEventListener("DOMContentLoaded", function() {
 
     document.querySelectorAll("#palette-color-contrast tbody td").forEach(function(col) {
       var foreground = col.getAttribute('data-fore');
       var background = col.getAttribute('data-back');
-      var target = col.querySelector('div');
+      var div = col.querySelector('div');
       var message = '';
-      // For now, transparent colors should be skipped
-      if ( chroma.valid(foreground) && chroma.valid(background) ) {
+      var ccr = null;
+
+      // Skip transparent colors
+      if (
+        chroma.valid(foreground) &&
+        chroma.valid(background) &&
+        chroma(foreground).alpha() == 1 &&
+        chroma(background).alpha() == 1
+      ) {
         var ccr = chroma.contrast(foreground, background);
 
-        if (ccr > 7.0) {
-          message = '👑';
+        if ( ccr !== null ) {
+          message = setMessage(ccr);
+
+          // Change the foreground color if this is a dark color
+          if ( chroma.contrast(foreground, '#000') < 4.5 ) {
+            col.setAttribute('class', 'light-text');
+          } else {
+            col.setAttribute('class', 'dark-text');
+          }
+          // Add the results to the column
+          div.innerHTML = message + '<br><small><b>' + round2places(ccr) + '</b></small>';
         }
-        if (ccr > 4.5) {
-          message = message + '✅ ';
+      }
+      // Handle transparent colors
+      if (
+        chroma.valid(foreground) &&
+        chroma.valid(background) &&
+        (chroma(foreground).alpha() < 1 || chroma(background).alpha() < 1)
+      ) {
+        // Grab the color mode
+        var qh_html = document.getElementsByTagName('html')[0];
+        var lightmode = qh_html.classList.contains('light');
+        var originalFore = foreground;
+        var originalBack = background;
+
+        // Transparent colors will shift depending on the background they are on.
+        // Right now, dark mode uses quahog--dark #2e2e2e as the BG color
+
+        // Calculate the true color of the BG first against what is behind it
+        if ( chroma(background).alpha() < 1 && chroma(foreground).alpha() == 1 ) {
+          if (lightmode) {
+            background = chroma.mix(background, '#fff', 1, 'lab').css();
+          } else {
+            background = chroma.mix(background, '#2e2e2e', 1, 'lab').css();
+          }
         }
-        if (ccr < 4.5 && ccr > 3.0) {
-          message = message + '🟡 ';
+        // Calculate how the BG and FG mix together
+        if ( chroma(foreground).alpha() < 1 && chroma(background).alpha() == 1 ) {
+          foreground = chroma.mix(foreground, background, 1, 'lab').css();
         }
-        if (ccr < 3.0) {
-          message = '🚫';
+
+        // Now get the contrast
+        var ccr = chroma.contrast(foreground, background);
+
+        if ( ccr !== null ) {
+          message = setMessage(ccr);
+
+          // Change the foreground color if this is a dark color
+          if ( chroma.contrast(foreground, '#000') < 4.5 ) {
+            col.setAttribute('class', 'light-text');
+          } else {
+            col.setAttribute('class', 'dark-text');
+          }
+          // Add the results to the column
+          div.innerHTML = message + '<br><small><b>' + round2places(ccr) + '</b><br><span style="background-color:' + background + '; color:' + foreground + '"><b>composite</b></span></small>';
+          div.style.backgroundColor = chroma(originalFore).css();
         }
-        // Change the foreground color if this is a dark color
-        if ( chroma.contrast(foreground, '#000') < 4.5 ) {
-          col.setAttribute('class', 'light-text');
-        } else {
-          col.setAttribute('class', 'dark-text');
-        }
-        // Add the results to the column
-        target.innerHTML = message + '<br><small><b>' + round2places(ccr) + '</b></small>';
       }
     });
   });
