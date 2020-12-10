@@ -1,0 +1,12 @@
+.qh__card {
+  // Add padding to block when there is a background color.
+  &[class*='qh__tc'] {
+    padding: $general-v-spacing $general-h-spacing;
+
+    // Remove padding when a figure is first.
+    figure:first-child {
+      margin: ($general-v-spacing * -1) ($general-h-spacing * -1) $general-v-spacing;
+      width: calc( 100% + (#{$general-h-spacing} * 2));
+    }
+  }
+}
