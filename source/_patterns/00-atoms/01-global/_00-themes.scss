@@ -1,10 +1,7 @@
 // Mini-themes: Author selected row/column color overrides
 
 // Grouping styles here for Text Card Themes, which use a different class structure
-
-// Primary
-.qh__t__primary,
-.qh__collection__primary-bg .qh__text-card {
+@mixin qh-primary-theme {
   background-color: var(--fc__primary__bg);
   color: var(--fc__primary__fg);
 
@@ -70,9 +67,7 @@
   }
 }
 
-// Primary Light
-.qh__t__primary--light,
-.qh__collection__primary-light-bg .qh__text-card {
+@mixin qh-primary-light-theme {
   background-color: var(--fc__primary--light__bg);
   color: var(--fc__primary--light__fg);
 
@@ -138,9 +133,32 @@
   }
 }
 
+// Primary
+.qh__t__primary,
+.qh__collection__primary-bg .qh__text-card {
+  @include qh-primary-theme;
+}
+
+// Primary Light
+.qh__t__primary--light,
+.qh__collection__primary-light-bg .qh__text-card {
+  @include qh-primary-light-theme;
+}
+
+// Declare them again… hate the repetitiveness of it, but we are combating inheritance here
+.qh__tc__primary {
+  @include qh-primary-theme;
+}
+
+.qh__tc__primary--light {
+  @include qh-primary-light-theme;
+}
+
+
 // Coffee Milk
 .qh__t__coffee-milk,
-.qh__collection__coffee-milk-bg .qh__text-card {
+.qh__collection__coffee-milk-bg .qh__text-card,
+.qh__tc__coffee-milk {
   background-color: var(--c__coffee-milk--trans25);
   color: var(--c__quahog--dark);
 
