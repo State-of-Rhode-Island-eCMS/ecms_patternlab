@@ -10,6 +10,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+### Added
+- RIG-130: Card paragraph, a11y table, dark mode Wickaboxet, grid tweaks.
 
 ### Changed
 
