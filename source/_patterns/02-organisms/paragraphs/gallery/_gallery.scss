@@ -25,6 +25,9 @@
     display: block;
     width: rem(44);
     height: rem(44);
+    color: var(--fc__default__fg);
+    background: transparent;
+    padding: 0;
   }
 
   &__nav {
@@ -34,13 +37,21 @@
       display: block;
       height: rem(18);
       width: rem(18);
-      border: 1px solid;
+      border: 1px solid var(--fc__default__fg);
       border-radius: rem(9);
+      padding: 0;
 
       margin: 0 rem(5);
 
+      &:hover,
+      &:focus,
+      &:active {
+        border: 1px solid var(--fc__default__fg);
+        background-color: var(--fc__default__accent);
+      }
+
       &.tns-nav-active {
-        background-color: red;
+        background-color: var(--fc__default__link);
       }
     }
   }
@@ -60,7 +71,7 @@
         bottom: 0;
         left: 0;
         padding: ($general-v-spacing * 1) ($general-h-spacing * 2);
-        color: #FFF;
+        color: var(--c__white);
       }
     }
   }
