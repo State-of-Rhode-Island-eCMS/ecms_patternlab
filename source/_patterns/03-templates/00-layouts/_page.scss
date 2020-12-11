@@ -21,7 +21,7 @@ $sidebar-row-gap: rem(36);
         'sidebar-top content'
         'sidebar-middle content'
         'sidebar-bottom content';
-      grid-template-columns: minmax($sidebar-min, 22rem) minmax(0, 1fr);
+      grid-template-columns: minmax($sidebar-min, 18rem) minmax(0, 1fr);
       grid-template-rows: min-content min-content 1fr;
       padding-left: 0;
       .path-user & {
@@ -34,6 +34,10 @@ $sidebar-row-gap: rem(36);
         width: 100%;
       }
     }
+    @include breakpoint-up($bp--xlarge) {
+      grid-template-columns: minmax($sidebar-min, 22rem) minmax(0, 1fr);
+    }
+
   }
 
   &__content {
