@@ -4762,6 +4762,9 @@ body {
 .qh__icon-card {
   background-color: var(--fc__default__bg);
   color: var(--fc__default__fg);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5422,7 +5425,13 @@ body {
   .qh-layout-section__col {
     margin-bottom: 1.5rem; }
     .qh-layout-section__col .block:first-child:last-child {
-      height: 100%; }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 100%;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 100%;
+              flex: 0 0 100%; }
     .qh-layout-section__col > * + * {
       margin-top: 1.5rem; }
   .qh-layout-section--full-width {
