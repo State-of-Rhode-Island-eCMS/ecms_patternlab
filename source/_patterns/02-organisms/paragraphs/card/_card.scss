@@ -9,4 +9,7 @@
       width: calc( 100% + (#{$general-h-spacing} * 2));
     }
   }
+  &__title {
+    margin-top: 0;
+  }
 }

@@ -77,8 +77,8 @@
     flex: 0 0 100%;
     font-size: 1.25rem;
     @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-      --font-size-min-value: 1.25;
-      --font-size-max-value: 1.5;
+      --font-size-min-value: 1.125;
+      --font-size-max-value: 1.25;
       --font-size-scaler-value: var(--h4-scaler-value);
       font-size: var(--font-size);
 
