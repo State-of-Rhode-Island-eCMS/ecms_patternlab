@@ -2962,8 +2962,11 @@ table {
   background-color: var(--fc__default__bg);
   border: 0.0625rem solid var(--fc__default__border);
   margin-bottom: 1.5rem;
-  padding: 1.5rem 1rem;
+  padding: 0.75rem 0.5rem;
   position: relative; }
+  @media (min-width: 50em) {
+    .qh__teaser-hotel {
+      padding: 1.5rem 1rem; } }
   .qh__teaser-hotel__image-wrap a {
     display: block;
     overflow: hidden;
@@ -3029,8 +3032,8 @@ table {
     font-size: 1.25rem; }
     @supports (font-size: clamp(1rem, 2vw, 2rem)) {
       .qh__teaser-hotel__title {
-        --font-size-min-value: 1.25;
-        --font-size-max-value: 1.5;
+        --font-size-min-value: 1.125;
+        --font-size-max-value: 1.25;
         --font-size-scaler-value: var(--h4-scaler-value);
         font-size: var(--font-size);
         --font-lh-min-value: 1.1;
@@ -4762,6 +4765,9 @@ body {
 .qh__icon-card {
   background-color: var(--fc__default__bg);
   color: var(--fc__default__fg);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4902,6 +4908,9 @@ body {
   .qh__card[class*='qh__tc'] figure:first-child {
     margin: -1.5rem -1rem 1.5rem;
     width: calc( 100% + (1rem * 2)); }
+
+.qh__card__title {
+  margin-top: 0; }
 
 .qh__paragraph__column-container {
   display: -ms-grid;
@@ -5074,36 +5083,40 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
-  @media (min-width: 50em) {
-    .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(50% - 1rem);
-              flex: 0 1 calc(50% - 1rem);
-      margin-left: 0;
-      margin-top: 1.5rem; } }
+  .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%; }
+    @media (min-width: 50em) {
+      .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 calc(50% - 1rem);
+                flex: 0 1 calc(50% - 1rem);
+        margin-left: 0;
+        margin-top: 1.5rem; } }
   @media all and (min-width: 50em) and (-ms-high-contrast: none), (min-width: 50em) and (-ms-high-contrast: active) {
     .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion {
       -webkit-box-flex: 0;
           -ms-flex: 0 1 47.5%;
               flex: 0 1 47.5%; } }
-  @media (min-width: 50em) {
-      .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion:nth-child(2n-1), .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion:nth-child(2) {
-        margin-left: 1rem; } }
-  @media (min-width: 62em) {
-    .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion {
-      -webkit-box-flex: 0;
-          -ms-flex: 0 1 calc(33% - 0.5rem);
-              flex: 0 1 calc(33% - 0.5rem); } }
+    @media (min-width: 50em) {
+        .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion:nth-child(2n) {
+          margin-left: 1rem; } }
+    @media (min-width: 62em) {
+      .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 calc(33% - 0.5rem);
+                flex: 0 1 calc(33% - 0.5rem); } }
   @media all and (min-width: 62em) and (-ms-high-contrast: none), (min-width: 62em) and (-ms-high-contrast: active) {
     .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion {
       -webkit-box-flex: 0;
           -ms-flex: 0 1 31%;
               flex: 0 1 31%; } }
-  @media (min-width: 62em) {
-      .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion:nth-child(2n-1), .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion:nth-child(2) {
-        margin-left: 0; }
-      .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion:nth-child(3n-1), .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion:nth-child(3) {
-        margin-left: 1rem; } }
+    @media (min-width: 62em) {
+        .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion:nth-child(2n) {
+          margin-left: 0; }
+        .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion:nth-child(3n-1), .qh-layout-section--col-size-100 .block-ecms-promotions-global .qh__teaser-promotion:nth-child(3n) {
+          margin-left: 1rem; } }
 
 .qh__text-card-collection {
   margin: 0 0 1.5rem 0; }
@@ -5422,7 +5435,13 @@ body {
   .qh-layout-section__col {
     margin-bottom: 1.5rem; }
     .qh-layout-section__col .block:first-child:last-child {
-      height: 100%; }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: 100%;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 100%;
+              flex: 0 0 100%; }
     .qh-layout-section__col > * + * {
       margin-top: 1.5rem; }
   .qh-layout-section--full-width {
@@ -5462,8 +5481,8 @@ body {
   @media (min-width: 50em) {
     .qh-layout__grid {
           grid-template-areas: 'sidebar-top content' 'sidebar-middle content' 'sidebar-bottom content';
-      -ms-grid-columns: minmax(12.5rem, 22rem) minmax(0, 1fr);
-      grid-template-columns: minmax(12.5rem, 22rem) minmax(0, 1fr);
+      -ms-grid-columns: minmax(12.5rem, 18rem) minmax(0, 1fr);
+      grid-template-columns: minmax(12.5rem, 18rem) minmax(0, 1fr);
       -ms-grid-rows: min-content min-content 1fr;
       grid-template-rows: -webkit-min-content -webkit-min-content 1fr;
       grid-template-rows: min-content min-content 1fr;
@@ -5472,7 +5491,13 @@ body {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        max-width: 93vw; } }
+        max-width: 93vw; }
+      .qh-layout__grid .qh-layout__content {
+        width: 100%; } }
+  @media (min-width: 75em) {
+    .qh-layout__grid {
+      -ms-grid-columns: minmax(12.5rem, 22rem) minmax(0, 1fr);
+          grid-template-columns: minmax(12.5rem, 22rem) minmax(0, 1fr); } }
 
 .qh-layout__content {
   -ms-grid-row: 2;

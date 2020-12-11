@@ -290,7 +290,9 @@
     margin-bottom: $general-v-spacing;
 
     .block:first-child:last-child {
+      display: flex;
       height: 100%;
+      flex: 0 0 100%;
     }
 
     > * + * {
