@@ -20,6 +20,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+- RIG-180: Removed the raw twig filter from the footer.
 
 ## [0.3.4] - 2020-12-11
 - RIG-130: Heading max size tweaks.
