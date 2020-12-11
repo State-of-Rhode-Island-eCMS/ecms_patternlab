@@ -31,11 +31,11 @@ body {
   --p-size-m: 1.125rem;
   --p-size-l: 1.25rem;
   --h1-size-s: 2rem;
-  --h1-size-m: 3.75rem;
-  --h1-size-l: 4.75rem;
+  --h1-size-m: 3rem;
+  --h1-size-l: 3.75rem;
   --h2-size-s: 1.5rem;
   --h2-size-m: 2.25rem;
-  --h2-size-l: 3rem;
+  --h2-size-l: 2.75rem;
   --h3-size-s: 1.25rem;
   --h3-size-m: 1.5rem;
   --h3-size-l: 1.75rem;
@@ -1307,16 +1307,16 @@ h1 {
       letter-spacing: 0.035em; } }
   @media (min-width: 50em) {
     h1 {
-      font-size: 3.75rem;
+      font-size: 3rem;
       line-height: 1.075; } }
   @media (min-width: 62em) {
     h1 {
-      font-size: 4.75rem;
+      font-size: 3.75rem;
       line-height: 1.1; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     h1 {
       --font-size-min-value: 2;
-      --font-size-max-value: 4.75;
+      --font-size-max-value: 3.75;
       --font-size-scaler-value: var(--h1-scaler-value);
       font-size: var(--font-size);
       --font-lh-min-value: 1.05;
@@ -1356,12 +1356,12 @@ h2 {
       line-height: 1.125; } }
   @media (min-width: 62em) {
     h2 {
-      font-size: 3rem;
+      font-size: 2.75rem;
       line-height: 1.15; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     h2 {
       --font-size-min-value: 1.5;
-      --font-size-max-value: 3;
+      --font-size-max-value: 2.75;
       --font-size-scaler-value: var(--h2-scaler-value);
       font-size: var(--font-size);
       --font-lh-min-value: 1.1;
