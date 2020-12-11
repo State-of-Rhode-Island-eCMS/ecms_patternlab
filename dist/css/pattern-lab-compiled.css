@@ -2962,8 +2962,11 @@ table {
   background-color: var(--fc__default__bg);
   border: 0.0625rem solid var(--fc__default__border);
   margin-bottom: 1.5rem;
-  padding: 1.5rem 1rem;
+  padding: 0.75rem 0.5rem;
   position: relative; }
+  @media (min-width: 50em) {
+    .qh__teaser-hotel {
+      padding: 1.5rem 1rem; } }
   .qh__teaser-hotel__image-wrap a {
     display: block;
     overflow: hidden;

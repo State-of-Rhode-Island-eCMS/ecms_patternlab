@@ -2,8 +2,11 @@
   background-color: var(--fc__default__bg);
   border: $border-xs solid var(--fc__default__border);
   margin-bottom: $general-v-spacing;
-  padding: $general-v-spacing $general-h-spacing;
+  padding: ($general-v-spacing / 2) ($general-h-spacing / 2);
   position: relative;
+  @include breakpoint-up($bp--medium) {
+    padding: $general-v-spacing $general-h-spacing;
+  }
 
   &__image-wrap {
 
