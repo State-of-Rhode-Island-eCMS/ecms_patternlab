@@ -21,6 +21,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.3.4] - 2020-12-11
+- RIG-130: Heading max size tweaks.
+
 ## [0.3.3] - 2020-12-11
 ### Added
 - RIG-130: Icon, hotels, sidebar, home page tweaks.
@@ -123,7 +126,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.3...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.4...HEAD
+[0.3.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.3...0.3.4
 [0.3.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.2...0.3.3
 [0.3.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.1...0.3.2
 [0.3.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.0...0.3.1
