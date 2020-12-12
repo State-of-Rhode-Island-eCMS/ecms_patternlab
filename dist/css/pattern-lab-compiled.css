@@ -3969,9 +3969,7 @@ body {
         background-color: var(--fc__nav-main__link__sub--hover__bg); }
     .qh__nav-main__link__sub.qh__nav-main__link--current {
       background-color: var(--fc__nav-main__link__sub--hover__bg);
-      cursor: default;
-      padding: 0.625rem 1rem;
-      pointer-events: none; }
+      padding: 0.625rem 1rem; }
     @media (min-width: 62em) {
       .qh__nav-main__wrapper > .qh__nav-main__link--home {
         display: none;

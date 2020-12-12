@@ -511,9 +511,9 @@ body {
 
     &__sub#{&}--current {
       background-color: var(--fc__nav-main__link__sub--hover__bg);
-      cursor: default;
+      //cursor: default;
       padding: $nav-a-v-spacing--sm $nav-a-h-spacing--sm;
-      pointer-events: none;
+      //pointer-events: none;
     }
 
     // Exceptions
