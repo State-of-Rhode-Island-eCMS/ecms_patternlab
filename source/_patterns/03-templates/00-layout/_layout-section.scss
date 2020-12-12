@@ -293,6 +293,9 @@
       display: flex;
       height: 100%;
       flex: 0 0 100%;
+      &.block-ecms-promotions-global {
+        flex-direction: column;
+      }
     }
 
     > * + * {
