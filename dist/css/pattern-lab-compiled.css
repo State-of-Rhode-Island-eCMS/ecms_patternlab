@@ -2876,6 +2876,9 @@ table {
   max-width: 12rem;
   min-width: 0; }
 
+.qh__site-search label + input[type="text"].qh__site-search__query {
+  margin-top: 0; }
+
 .qh__site-search__submit {
   background-color: var(--fc__default__accent);
   color: var(--fc__default__accent__fg);
@@ -4094,7 +4097,7 @@ body {
     position: relative;
     overflow: visible; }
     @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-      .qh__nav-minor__list > .qh__nav-minor__item:first-child a {
+      .qh__nav-minor > .qh__nav-minor__list > .qh__nav-minor__item:first-child a {
         font-size: clamp(1rem, 1.5vw, 1.125rem); } }
     .qh__nav-minor__item:not(.qh__nav-minor__item__sub) + .qh__nav-minor__item:not(.qh__nav-minor__item__sub)::before {
       border-top: 0.125rem solid var(--fc__default__bg);

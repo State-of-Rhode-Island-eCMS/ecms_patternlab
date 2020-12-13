@@ -131,7 +131,7 @@
     position: relative;
     overflow: visible;
 
-    .qh__nav-minor__list > &:first-child {
+    .qh__nav-minor > .qh__nav-minor__list > &:first-child {
       a {
         @supports (font-size: clamp(1rem, 2vw, 2rem)) {
           font-size: clamp(1rem, 1.5vw, 1.125rem);

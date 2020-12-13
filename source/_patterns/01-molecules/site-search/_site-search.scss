@@ -12,7 +12,10 @@
     max-width: 12rem;
     min-width: 0;
   }
-
+  // needed a bit more specificity for the site search form in the header
+  label + input[type="text"].qh__site-search__query {
+    margin-top: 0;
+  }
   // <button>
   &__submit {
     background-color: var(--fc__default__accent);
