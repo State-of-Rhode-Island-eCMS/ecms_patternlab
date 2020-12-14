@@ -5448,6 +5448,11 @@ body {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; }
+      .qh-layout-section--col-size-100 .qh-layout-section__col .block:first-child:last-child.block-ecms-promotions-global {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row; }
     .qh-layout-section__col > * + * {
       margin-top: 1.5rem; }
   .qh-layout-section--full-width {
