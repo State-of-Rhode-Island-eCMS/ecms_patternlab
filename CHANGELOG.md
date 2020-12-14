@@ -18,6 +18,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- RIG-130: Fixed notification banner for anon users.
 
 ### Security
 
