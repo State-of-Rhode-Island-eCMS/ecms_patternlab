@@ -1,13 +1,11 @@
-// Hide notifications based on cookie value.
-var notificationCookie = getCookie('siteNotifications');
-if (notificationCookie !== null && notificationCookie !== undefined) {
-  if (notificationCookie === 'hidden') {
-    var summaryElement = document.getElementById('summary-notifications');
-    var detailsElement = document.getElementById('details-notifications');
-    if (summaryElement !== null && summaryElement !== undefined) {
-      summaryElement.setAttribute('aria-expanded', 'false');
-      detailsElement.classList.remove('js__aria-expanded');
-    }
+// Check if notifications should be hidden.
+if(sessionStorage.getItem('siteNotificationsHidden')) {
+  var summaryElement = document.getElementById('summary-notifications');
+  var detailsElement = document.getElementById('details-notifications');
+
+  if (summaryElement !== null && summaryElement !== undefined) {
+    summaryElement.setAttribute('aria-expanded', 'false');
+    detailsElement.classList.remove('js__aria-expanded');
   }
 }
 
@@ -30,4 +28,3 @@ if (notificationsToggle !== null && notificationsToggle !== undefined) {
     }
   })
 }
-

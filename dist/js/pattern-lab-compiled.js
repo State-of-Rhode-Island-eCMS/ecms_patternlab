@@ -266,33 +266,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 "use strict";
 
-document.addEventListener('DOMContentLoaded', function () {
-  // Toggle button for mobile menu
-  // Different than the global in that we toggle a class on the parent
-  // Also needs to hook into global Page Overlay actions
-  var qh_toggle_btn = document.getElementById('js__minor-toggle');
-  var qh_nav_minor = document.getElementById('js__minor-menu');
-
-  if (qh_toggle_btn !== null && qh_toggle_btn !== undefined) {
-    qh_toggle_btn.addEventListener('click', function (event) {
-      // a11yClick function restricts keypress to spacebar or enter
-      if (a11yClick(event) === true) {
-        event.preventDefault();
-
-        if (qh_nav_minor.classList.contains('qh__nav-minor--expanded')) {
-          qh_nav_minor.classList.remove('qh__nav-minor--expanded');
-          deactivatePageOverlay();
-        } else {
-          allMenuCloser();
-          activatePageOverlay();
-          qh_nav_minor.classList.add('qh__nav-minor--expanded');
-        }
-      }
-    });
-  }
-});
-"use strict";
-
 // There are custom properties that track what breakpoint the site is using
 function getQhNavState() {
   // NOTE: Strings from CSS get returned exactly as written
@@ -470,18 +443,41 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 "use strict";
 
-// Hide notifications based on cookie value.
-var notificationCookie = getCookie('siteNotifications');
+document.addEventListener('DOMContentLoaded', function () {
+  // Toggle button for mobile menu
+  // Different than the global in that we toggle a class on the parent
+  // Also needs to hook into global Page Overlay actions
+  var qh_toggle_btn = document.getElementById('js__minor-toggle');
+  var qh_nav_minor = document.getElementById('js__minor-menu');
 
-if (notificationCookie !== null && notificationCookie !== undefined) {
-  if (notificationCookie === 'hidden') {
-    var summaryElement = document.getElementById('summary-notifications');
-    var detailsElement = document.getElementById('details-notifications');
+  if (qh_toggle_btn !== null && qh_toggle_btn !== undefined) {
+    qh_toggle_btn.addEventListener('click', function (event) {
+      // a11yClick function restricts keypress to spacebar or enter
+      if (a11yClick(event) === true) {
+        event.preventDefault();
 
-    if (summaryElement !== null && summaryElement !== undefined) {
-      summaryElement.setAttribute('aria-expanded', 'false');
-      detailsElement.classList.remove('js__aria-expanded');
-    }
+        if (qh_nav_minor.classList.contains('qh__nav-minor--expanded')) {
+          qh_nav_minor.classList.remove('qh__nav-minor--expanded');
+          deactivatePageOverlay();
+        } else {
+          allMenuCloser();
+          activatePageOverlay();
+          qh_nav_minor.classList.add('qh__nav-minor--expanded');
+        }
+      }
+    });
+  }
+});
+"use strict";
+
+// Check if notifications should be hidden.
+if (sessionStorage.getItem('siteNotificationsHidden')) {
+  var summaryElement = document.getElementById('summary-notifications');
+  var detailsElement = document.getElementById('details-notifications');
+
+  if (summaryElement !== null && summaryElement !== undefined) {
+    summaryElement.setAttribute('aria-expanded', 'false');
+    detailsElement.classList.remove('js__aria-expanded');
   }
 } // Add logic to set cookie values based on state of button.
 
