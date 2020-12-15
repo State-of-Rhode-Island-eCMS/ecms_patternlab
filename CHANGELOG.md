@@ -10,7 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIG-130: Added show/hide functionality for lang label.
 
 ### Changed
 
@@ -21,6 +20,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.3.8] - 2020-12-15
+### Added
+- RIG-130: Added show/hide functionality for lang label.
 
 ## [0.3.7] - 2020-12-14
 ### Fixed
@@ -142,7 +145,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.7...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.8...HEAD
+[0.3.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.7...0.3.8
 [0.3.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.6...0.3.7
 [0.3.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.5...0.3.6
 [0.3.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.4...0.3.5
