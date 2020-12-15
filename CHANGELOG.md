@@ -10,7 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIG-130: Add support for exposed audience form in publication list.
 
 ### Changed
 
@@ -21,6 +20,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.3.9] - 2020-12-16
+### Added
+- RIG-130: Add support for exposed audience form in publication list.
 
 ## [0.3.8] - 2020-12-15
 ### Added
@@ -146,7 +149,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.8...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.9...HEAD
+[0.3.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.8...0.3.9
 [0.3.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.7...0.3.8
 [0.3.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.6...0.3.7
 [0.3.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.5...0.3.6
