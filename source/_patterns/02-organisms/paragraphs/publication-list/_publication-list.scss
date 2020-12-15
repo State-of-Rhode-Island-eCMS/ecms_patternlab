@@ -1,0 +1,18 @@
+.qh__publications-list {
+  > form {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+
+    > .form-item {
+      float: left;
+      min-width: 66%;
+      margin-bottom: 0;
+    }
+
+    .form-submit {
+      max-height: rem(48);
+      margin-left: $general-v-spacing;
+    }
+  }
+}
