@@ -7,6 +7,10 @@
       </div>
     {% endif %}
 
+    {% if audience_form %}
+      {{ audience_form }}
+    {% endif %}
+
     {% for publication in publications %}
       {% for type, languages in publication %}
         <h3>{{ type }}</h2>

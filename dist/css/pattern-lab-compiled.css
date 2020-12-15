@@ -5070,6 +5070,23 @@ body {
   .qh__file-list__link:focus .qh__file-list__item__download .qh__icon__extlink {
     fill: var(--fc__default__link--hover); }
 
+.qh__publications-list > form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+  .qh__publications-list > form > .form-item {
+    float: left;
+    min-width: 66%;
+    margin-bottom: 0; }
+  .qh__publications-list > form .form-submit {
+    max-height: 3rem;
+    margin-left: 1.5rem; }
+
 .qh-layout-section--col-size-100 .block-ecms-promotions-global {
   display: -webkit-box;
   display: -ms-flexbox;
