@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIG-130: Added show/hide functionality for lang label.
 
 ### Changed
 

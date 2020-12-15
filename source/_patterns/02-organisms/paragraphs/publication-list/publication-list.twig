@@ -12,7 +12,10 @@
         <h3>{{ type }}</h2>
 
         {% for language, nodes in languages %}
-          <h4>{{ language }}</h3>
+
+          {% if lang_label %}
+            <h4>{{ language }}</h3>
+          {% endif %}
 
           <div class="qh__file-list">
             {{ nodes}}
