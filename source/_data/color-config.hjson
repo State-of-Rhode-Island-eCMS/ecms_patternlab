@@ -220,7 +220,7 @@
     #
     "ocean--bright": {
       "name": "Ocean State bright",
-      "hue": "light blue green",
+      "hue": "bright blue green",
       "hsl": "hsl(160, 100%, 74%)",
       "needs": "dark-text"
     },
@@ -230,10 +230,22 @@
       "hsl": "hsl(208, 54%, 73%)",
       "needs": "dark-text"
     },
+    "ocean--light": {
+      "name": "Ocean State light",
+      "hue": "light blue",
+      "hsl": "hsl(208, 58%, 92%)",
+      "needs": "dark-text"
+    },
     "ocean--trans25": {
       "name": "Ocean State 25% transparent",
       "hue": "medium blue",
       "hsl": "hsla(208, 54%, 73%, 0.25)",
+      "needs": "dark-text"
+    },
+    "ocean--trans10": {
+      "name": "Ocean State 10% transparent",
+      "hue": "light blue",
+      "hsl": "hsla(208, 54%, 73%, 0.1)",
       "needs": "dark-text"
     },
     #
@@ -984,15 +996,15 @@
           { "fnName": "sub__bg", "colorName": "quahog--dark--trans25" }
         ],
         "notification": [
-          #{ "fnName": "fg", "colorName": "quahog--dark" },
+          { "fnName": "fg", "colorName": "quahog--dark" },
           { "fnName": "bg", "colorName": "hope-gold" },
-          #{ "fnName": "icon", "colorName": "navy" },
-          #{ "fnName": "link", "colorName": "navy--dark" },
-          #{ "fnName": "link--hover", "colorName": "navy--sat-lgt" },
+          { "fnName": "icon", "colorName": "quahog" },
+          { "fnName": "link", "colorName": "quahog--dark" },
+          { "fnName": "link--hover", "colorName": "navy--sat" },
           #{ "fnName": "link--focus", "colorName": "navy--dark" },
-          #{ "fnName": "link--active", "colorName": "calamari" },
+          { "fnName": "link--active", "colorName": "green-animals--dark" },
           # Hover will always reverse these button colors
-          #{ "fnName": "button__fg", "colorName": "navy" },
+          { "fnName": "button__fg", "colorName": "green-animals--dark" },
           #{ "fnName": "button__bg", "colorName": "white" },
           #{ "fnName": "border", "colorName": "quahog--dark--trans33" }
         ],
@@ -1018,6 +1030,163 @@
           { "fnName": "bg", "colorName": "green-animals--trans15" },
           #{ "fnName": "link", "colorName": "white" },
           #{ "fnName": "link", "colorName": "hope-gold" }
+        ]
+      }
+    },
+    #
+    # Block Island theme: very light and subdued use of color and yellow highlights
+    #
+    # Commented out colors are the same as the default Scarborough theme
+    #
+    "block-island": {
+      "humanName": "Block Island Lighthouse",
+      "values": {
+        "official": [
+          { "fnName": "fg", "colorName": "quahog--light" },
+          { "fnName": "bg", "colorName": "quahog" },
+          { "fnName": "link", "colorName": "white" },
+          { "fnName": "link--hover", "colorName": "hope-gold" },
+          { "fnName": "link--focus", "colorName": "hope-gold" }
+        ],
+        "header": [
+          { "fnName": "fg", "colorName": "quahog" },
+          { "fnName": "bg", "colorName": "ocean--trans10" }, # equivalent to #f4f8fc
+          { "fnName": "link", "colorName": "navy" },
+          { "fnName": "link--hover", "colorName": "quahog--medium" },
+          { "fnName": "social__link", "colorName": "quahog--medium" },
+          # Hover should use the accent or violator color
+          { "fnName": "social__link--hover", "colorName": "navy" }
+          # Search button uses default accent as the BG color and accent__fg as the FG
+        ],
+        "nav-main": [
+          { "fnName": "fg", "colorName": "navy" },
+          { "fnName": "bg", "colorName": "ocean--light" },
+          { "fnName": "link", "colorName": "navy" },
+          { "fnName": "link--hover", "colorName": "quahog--darker" },
+          # Hover bg used for bg of link AND for border top of current parent
+          # Should be the same color as the Header BG to look like a notch
+          #{ "fnName": "link--hover__bg", "colorName": "white" },
+          #{ "fnName": "link--focus", "colorName": "hope-gold" },
+          #{ "fnName": "link--active", "colorName": "calamari" },
+          #{ "fnName": "link__sub--hover__bg", "colorName": "ocean--trans10" },
+          #{ "fnName": "icon__bg", "colorName": "white" },
+          #{ "fnName": "icon__fg", "colorName": "navy" },
+          #{ "fnName": "icon__bg--hover", "colorName": "ocean" },
+          #{ "fnName": "icon__fg--hover", "colorName": "navy" }
+        ],
+        "default": [
+          #{ "fnName": "fg", "colorName": "quahog" },
+          #{ "fnName": "bg", "colorName": "white" },
+          #{ "fnName": "border", "colorName": "quahog--dark--trans15" },
+          #{ "fnName": "link", "colorName": "navy--sat" },
+          #{ "fnName": "link--hover", "colorName": "navy--sat-lgt" },
+          #{ "fnName": "link--focus", "colorName": "navy" },
+          #{ "fnName": "link--visited", "colorName": "navy--warm" },
+          { "fnName": "link--active", "colorName": "rhody-red" },
+          { "fnName": "hx__fg", "colorName": "navy--sat-lgt" },
+          { "fnName": "violator", "colorName": "rhody-red" },
+          # Accent pair, bg and fg
+          { "fnName": "accent", "colorName": "hope-gold" },
+          { "fnName": "accent__fg", "colorName": "navy--dark" },
+          # text-accent currently used for bullet mark color
+          #{ "fnName": "text-accent", "colorName": "quahog--medium" },
+          #{ "fnName": "button__bg", "colorName": "navy" },
+          #{ "fnName": "button__fg", "colorName": "hope-gold" },
+          #{ "fnName": "button--hover__bg", "colorName": "navy--dark" },
+          #{ "fnName": "button--hover__fg", "colorName": "ocean" }
+        ],
+        #
+        # System icons used throughout
+        #
+        "icon": [
+          #{ "fnName": "pdf", "colorName": "rhody-red" },
+          #{ "fnName": "word", "colorName": "navy" },
+          #{ "fnName": "excel", "colorName": "green-animals" },
+          #{ "fnName": "generic", "colorName": "ocean" },
+          #{ "fnName": "download", "colorName": "quahog--medium" }
+        ],
+        #
+        # Left sidebar navigation component
+        #
+        "nav-minor": [
+          { "fnName": "border", "colorName": "ocean--light" },
+          { "fnName": "fg", "colorName": "quahog" },
+          { "fnName": "bg", "colorName": "ocean--trans10" },
+          { "fnName": "link", "colorName": "navy" },
+          #{ "fnName": "link__bg", "colorName": "transparent" },
+          #{ "fnName": "link--hover", "colorName": "navy--dark" },
+          { "fnName": "link--hover__bg", "colorName": "ocean--trans10" },
+          { "fnName": "link--focus", "colorName": "rhody-red" },
+          { "fnName": "link--active", "colorName": "rhody-red" },
+          #{ "fnName": "sub__bg", "colorName": "white--trans25" }
+        ],
+        #
+        # Site Notifications component
+        #
+        "notification": [
+          { "fnName": "fg", "colorName": "navy" },
+          { "fnName": "bg", "colorName": "hope-gold" },
+          { "fnName": "icon", "colorName": "navy" },
+          { "fnName": "link", "colorName": "navy--dark" },
+          { "fnName": "link--hover", "colorName": "navy--sat" },
+          { "fnName": "link--focus", "colorName": "navy--dark" },
+          { "fnName": "link--active", "colorName": "quahog" },
+          # Hover will always reverse these button colors
+          { "fnName": "button__fg", "colorName": "navy" },
+          { "fnName": "button__bg", "colorName": "white" },
+          { "fnName": "border", "colorName": "quahog--dark--trans33" }
+        ],
+        #
+        # Only the icon foreground and background is colorable
+        # Other colors are consistently coffee-milk
+        #
+        "accordion": [
+          { "fnName": "icon__fg", "colorName": "hope-gold" },
+          { "fnName": "icon__bg", "colorName": "navy" }
+        ],
+        #
+        # Do not use transparent colors for "bar" and "fg"
+        # "bar" is applied to the background shape behind the icon as well,
+        # and we will see transparent colors multiply over eachother
+        #
+        "attention-card": [
+          { "fnName": "fg", "colorName": "navy" },
+          { "fnName": "bar", "colorName": "ocean--light" },
+          { "fnName": "icon", "colorName": "navy" }
+        ],
+        #
+        # Consistent from theme to theme.
+        # Always grays with a pop of color only in the "border-top"
+        #
+        "footer": [
+          { "fnName": "border-top", "colorName": "ocean--trans25" },
+          { "fnName": "fg", "colorName": "quahog" },
+          { "fnName": "bg", "colorName": "ocean--light" },
+          { "fnName": "copyright__bg", "colorName": "ocean--light" }
+        ],
+        #
+        # These sub-themes need to provide the light and dark variations
+        # In dark theme definitions, they need only contain the dark theme colors
+        #
+        "primary": [
+          { "fnName": "fg", "colorName": "navy" },
+          { "fnName": "bg", "colorName": "ocean--trans25" }, # equivalent to #e5eff7
+          { "fnName": "link", "colorName": "navy--sat" },
+          { "fnName": "link--hover", "colorName": "navy--dark" },
+          #{ "fnName": "fg--dark", "colorName": "white" },
+          #{ "fnName": "bg--dark", "colorName": "navy--trans50" },
+          #{ "fnName": "link--dark", "colorName": "navy--light" },
+          #{ "fnName": "link--dark--hover", "colorName": "hope-gold" }
+        ],
+        "primary--light": [
+          { "fnName": "fg", "colorName": "navy" },
+          { "fnName": "bg", "colorName": "ocean--trans10" },
+          { "fnName": "link", "colorName": "navy--sat" },
+          { "fnName": "link--hover", "colorName": "navy--dark" },
+          #{ "fnName": "fg--dark", "colorName": "coffee-milk--light" },
+          #{ "fnName": "bg--dark", "colorName": "ocean--trans25" },
+          #{ "fnName": "link--dark", "colorName": "white" },
+          #{ "fnName": "link--dark--hover", "colorName": "hope-gold" }
         ]
       }
     } # end theme
