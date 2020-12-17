@@ -57,6 +57,15 @@
   }
 
   &__slider {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease 1s; // TODO: This isn't working but at least it hides it before having it pop in.
+
+    // Prevent flash of unstyled content
+    &.tns-slider {
+      visibility: visible;
+      opacity: 1;
+    }
 
     // Gallery items or slides.
     // These will be media items.

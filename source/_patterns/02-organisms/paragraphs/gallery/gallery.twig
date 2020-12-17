@@ -46,11 +46,11 @@
 
 <div class="qh__gallery">
 
-  <div class="qh__gallery__slider" id="qh__gallery__slider">
+  <div class="qh__gallery__slider" data-pid="{{ pid }}">
     {{ content }}
   </div>
 
-  <div class="qh__gallery__controls" aria-label="Gallery navigation">
+  <div class="qh__gallery__controls" id="qh__gallery__controls-{{ pid }}" aria-label="Gallery navigation">
     <button class="qh__gallery__button qh__gallery__button--prev" data-controls="prev" aria-controls="qh__gallery__slider">
       <span class="qh__icon">
         {% include ('@icons/chevron-left.svg') %}
@@ -65,7 +65,7 @@
       <span class="visually-hidden">Next</span>
     </button>
 
-    <div class="qh__gallery__nav">
+    <div class="qh__gallery__nav" id="qh__gallery__nav-{{ pid }}">
       {% for slide in slides_raw %}
         <a class="qh__gallery__nav-radio"><span class="visually-hidden">Slide {{ loop.index }}</span></a>
       {% endfor %}

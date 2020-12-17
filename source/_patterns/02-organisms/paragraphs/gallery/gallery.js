@@ -1,27 +1,15 @@
-// document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
+  var sliders = document.querySelectorAll('.qh__gallery__slider');
+  _forEach(sliders, function (index, value) {
 
-//   var slider = tns({
-//     container: '.qh__gallery__slider',
-//     items: 1,
-//     controlsContainer: ".qh__gallery__controls",
-//     navContainer: ".qh__gallery__nav",
-//     mouseDrag: true,
-//     loop: true,
-//   });
-// });
-
-
-var checkReadyState = setInterval(() => {
-  if (document.readyState === "complete") {
-    clearInterval(checkReadyState);
-
-    var slider = tns({
-      container: '.qh__gallery__slider',
+    let pid = value.dataset.pid;
+    let slider = tns({
+      container: value,
       items: 1,
-      controlsContainer: ".qh__gallery__controls",
-      navContainer: ".qh__gallery__nav",
+      controlsContainer: "#qh__gallery__controls-" + pid,
+      navContainer: "#qh__gallery__nav-" + pid,
       mouseDrag: true,
       loop: true,
     });
-  }
-}, 100);
+  });
+});
