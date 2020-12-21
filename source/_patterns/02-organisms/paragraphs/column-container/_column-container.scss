@@ -1,9 +1,17 @@
 .qh__paragraph__column-container {
-  display: grid;
-  column-gap: $general-h-spacing;
-  row-gap: $general-v-spacing;
-
-  @media (min-width: $bp--medium) {
-    grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    flex: 0 0 100%;
+    @media (min-width: $bp--medium) {
+      flex: 0 0 49%;
+      margin-bottom: 1rem;
+      @include onlyIE() {
+        width: 49%;
+      }
+      &:nth-child(2n-1) {
+        margin-right: 2%;
+      }
+    }
   }
 }
