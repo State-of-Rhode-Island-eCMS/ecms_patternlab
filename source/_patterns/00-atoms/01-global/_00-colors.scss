@@ -65,7 +65,7 @@
 //   }
 //
 //   [in the loop, theme-slug has "--dark" removed]
-//   html .qh__t__[theme-slug].dark {
+//   html.dark .qh__t__[theme-slug] {
 //     [colors vars…]
 //   }
 // [end first loop]
@@ -75,11 +75,11 @@
 //     html:not(.light) {
 //       [first color theme without a class around it]
 //     }
+//   }
 //
-//     [theme-slug has "--dark" removed]
-//     html:not(.light) .qh__t__[theme-slug] {
-//       [colors vars…]
-//     }
+//   [theme-slug has "--dark" removed]
+//   html:not(.light) .qh__t__[theme-slug] {
+//     [colors vars…]
 //   }
 // [end second loop]
 
@@ -99,18 +99,31 @@ html {
     $values: map-get($palette, 'values');
     @if $num == 1 {
       // First palette of colors is the default — no theme class around them
+      // This is our default light theme with fallback color declarations
       @each $block, $section in $values {
         @include qh-output-color-var($block, $section, $palette);
       }
     } @else {
-      $classString: '.qh__t__#{$key}';
-      @if str-index($key, "--dark") {
-        $newKey: str-slice($key, 0, -7);
-        $classString: '&.dark .qh__t__#{$newKey}';
-      }
-      #{$classString} {
-        @each $block, $section in $values {
-          @include qh-output-color-var($block, $section, $palette);
+      // First time we encounter a dark theme, which will be the second time through this loop
+      @if $num == 2 {
+        // Output colors without surrounding them with a class name
+        // This is our default dark theme with fallback color declarations
+        &.dark {
+          @each $block, $section in $values {
+            @include qh-output-color-var($block, $section, $palette);
+          }
+        }
+      } @else {
+        $classString: '.qh__t__#{$key}';
+        // Remove the "--dark" modifier
+        @if str-index($key, "--dark") {
+          $newKey: str-slice($key, 0, -7);
+          $classString: '&.dark .qh__t__#{$newKey}';
+        }
+        #{$classString} {
+          @each $block, $section in $values {
+            @include qh-output-color-var($block, $section, $palette);
+          }
         }
       }
     }
@@ -119,18 +132,30 @@ html {
 
   // Loop again on Dark palettes only. Repetitive, but it works
   @media (prefers-color-scheme: dark) {
+    $darknum: 1;
     @each $key, $palette in $palettes {
       $values: map-get($palette, 'values');
       //@debug #{'key= ' + $key};
 
       // Only proceed if this is a dark palette
       @if str-index($key, "--dark") {
-        // Remove the "--dark" from the theme slug
-        &:not(.light) .qh__t__#{str-slice($key, 0, -7)} {
-          @each $block, $section in $values {
-            @include qh-output-color-var($block, $section, $palette);
+        @if $darknum == 1 {
+          // First time around the loop has no class
+          &:not(.light) {
+            // This is our default dark theme with fallback color declarations (again)
+            @each $block, $section in $values {
+              @include qh-output-color-var($block, $section, $palette);
+            }
+          }
+        } @else {
+          // Remove the "--dark" from the theme slug
+          &:not(.light) .qh__t__#{str-slice($key, 0, -7)} {
+            @each $block, $section in $values {
+              @include qh-output-color-var($block, $section, $palette);
+            }
           }
         }
+        $darknum: $darknum + 1;
       }
     }
   }
