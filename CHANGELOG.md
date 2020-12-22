@@ -21,6 +21,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.4.0] - 2020-12-22
+### Fixed
+- RIG-130: IE11 flexbox support.
+
 ## [0.3.9] - 2020-12-16
 ### Added
 - RIG-130: Add support for exposed audience form in publication list.
@@ -149,7 +153,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.9...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.0...HEAD
+[0.4.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.9...0.4.0
 [0.3.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.8...0.3.9
 [0.3.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.7...0.3.8
 [0.3.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.6...0.3.7
