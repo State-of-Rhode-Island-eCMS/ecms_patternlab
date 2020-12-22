@@ -55,6 +55,7 @@
   font-style: normal;
   font-stretch: normal;
   src: url('../fonts/work-sans-vf/RobotoSlab-subset.woff2') format('woff2 supports variations'), url('../fonts/roboto-slab-vf/RobotoSlab-subset.woff2') format('woff2-variations');
+  font-display: swap;
 }
 
 @font-face {
@@ -63,6 +64,7 @@
   font-style: normal;
   font-stretch: normal;
   src: url('../fonts/work-sans-vf/WorkSans-Roman-subset.woff2') format('woff2 supports variations'), url('../fonts/work-sans-vf/WorkSans-Roman-subset.woff2') format('woff2-variations');
+  font-display: swap;
 }
 
 @font-face {
