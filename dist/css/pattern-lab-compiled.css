@@ -5070,6 +5070,84 @@ body {
   .qh__file-list__link:focus .qh__file-list__item__download .qh__icon__extlink {
     fill: var(--fc__default__link--hover); }
 
+.qh__gallery__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.5rem; }
+  .qh__gallery__controls .qh__gallery__button--prev {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0; }
+  .qh__gallery__controls .qh__gallery__nav {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
+  .qh__gallery__controls .qh__gallery__button--next {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
+
+.qh__gallery__button {
+  display: block;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: var(--fc__default__fg);
+  background: transparent;
+  padding: 0; }
+
+.qh__gallery__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .qh__gallery__nav-radio {
+    display: block;
+    height: 1.125rem;
+    width: 1.125rem;
+    border: 1px solid var(--fc__default__fg);
+    border-radius: 0.5625rem;
+    padding: 0;
+    margin: 0 0.3125rem; }
+    .qh__gallery__nav-radio:hover, .qh__gallery__nav-radio:focus, .qh__gallery__nav-radio:active {
+      border: 1px solid var(--fc__default__fg);
+      background-color: var(--fc__default__accent); }
+    .qh__gallery__nav-radio.tns-nav-active {
+      background-color: var(--fc__default__link); }
+
+.qh__gallery__slider {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 1s ease 1s;
+  transition: opacity 1s ease 1s; }
+  .qh__gallery__slider.tns-slider {
+    visibility: visible;
+    opacity: 1; }
+  .qh__gallery__slider > figure {
+    position: relative; }
+    .qh__gallery__slider > figure figcaption {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 1.5rem 2rem;
+      color: var(--c__white); }
+
+.qh__gallery button {
+  border: 0;
+  margin: 0;
+  -webkit-appearance: none; }
+  .qh__gallery button::-moz-focus-inner {
+    border: 0; }
+
 .qh__publications-list > form {
   display: -webkit-box;
   display: -ms-flexbox;
