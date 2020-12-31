@@ -1,6 +1,10 @@
 <div class="qh__file-list">
   <div class="qh__file-list__inner">
-    {{ list_title }}
+
+    {% if list_title %}
+      <h3>{{ list_title }}</h3>
+    {% endif %}
+
     <section class="qh__file-list__list" role="list">
       {{ files }}
     </section>
