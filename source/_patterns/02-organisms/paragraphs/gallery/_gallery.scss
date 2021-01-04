@@ -1,0 +1,91 @@
+.qh__gallery {
+
+  // Controls wrapper. Contains prev/next buttons and radio navigaiton
+  &__controls {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $general-v-spacing;
+
+    .qh__gallery__button--prev {
+      order: 0;
+    }
+
+    .qh__gallery__nav {
+      order: 1;
+    }
+
+    .qh__gallery__button--next {
+      order: 2;
+    }
+  }
+
+  &__button {
+    display: block;
+    width: rem(44);
+    height: rem(44);
+    color: var(--fc__default__fg);
+    background: transparent;
+    padding: 0;
+  }
+
+  &__nav {
+    display: flex;
+
+    &-radio {
+      display: block;
+      height: rem(18);
+      width: rem(18);
+      border: 1px solid var(--fc__default__fg);
+      border-radius: rem(9);
+      padding: 0;
+
+      margin: 0 rem(5);
+
+      &:hover,
+      &:focus,
+      &:active {
+        border: 1px solid var(--fc__default__fg);
+        background-color: var(--fc__default__accent);
+      }
+
+      &.tns-nav-active {
+        background-color: var(--fc__default__link);
+      }
+    }
+  }
+
+  &__slider {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease 1s; // TODO: This isn't working but at least it hides it before having it pop in.
+
+    // Prevent flash of unstyled content
+    &.tns-slider {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    // Gallery items or slides.
+    // These will be media items.
+    > figure {
+      position: relative;
+
+      // Override base caption styles
+      figcaption {
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: ($general-v-spacing * 1) ($general-h-spacing * 2);
+        color: var(--c__white);
+      }
+    }
+  }
+
+  button {
+    @include qh-button-reset();
+  }
+}

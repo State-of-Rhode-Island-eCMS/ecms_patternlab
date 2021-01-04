@@ -73,6 +73,14 @@ function activatePageOverlay() {
   pageOverlay.classList.add('active');
 }
 
+// forEach function from Todd Motto's  blog: https://toddmotto.com/ditch-the-array-foreach-call-nodelist-hack/
+var _forEach = function (array, callback, scope) {
+  for (var i = 0; i < array.length; i++) {
+    callback.call(scope, i, array[i]); // passes back stuff we need
+  }
+};
+
+
 // Cookie getter
 function getCookie(name) {
 	var value = "; " + document.cookie;

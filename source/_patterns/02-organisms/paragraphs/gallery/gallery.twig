@@ -1,0 +1,74 @@
+{# <div class="qh__gallery">
+
+  <div class="qh__gallery__slider" id="qh__gallery__slider">
+    <figure class="qh__media-item qh__media-img large">
+      <img src="/images/sample/landscape-16x9-mountains.jpg" alt="">
+      <figcaption>2019 LASA Grant Awardees Announced Local Agriculture and Seafood Act (LASA) grants support the growth, development, and marketing of local food and seafood in Rhode Island</figcaption>
+    </figure>
+    <figure class="qh__media-item qh__media-img large">
+      <img src="/images/sample/landscape-16x9-mountains.jpg" alt="">
+      <figcaption>2020 LASA Grant Awardees Announced Local Agriculture and Seafood Act (LASA) grants support the growth, development, and marketing of local food and seafood in Rhode Island</figcaption>
+    </figure>
+    <figure class="qh__media-item qh__media-img large">
+      <img src="/images/sample/landscape-16x9-mountains.jpg" alt="">
+      <figcaption>2021 LASA Grant Awardees Announced Local Agriculture and Seafood Act (LASA) grants support the growth, development, and marketing of local food and seafood in Rhode Island</figcaption>
+    </figure>
+    <figure class="qh__media-item qh__media-img large">
+      <img src="/images/sample/landscape-16x9-mountains.jpg" alt="">
+      <figcaption>2022 LASA Grant Awardees Announced Local Agriculture and Seafood Act (LASA) grants support the growth, development, and marketing of local food and seafood in Rhode Island</figcaption>
+    </figure>
+  </div>
+
+  <div class="qh__gallery__controls" aria-label="Gallery navigation">
+    <button class="qh__gallery__button qh__gallery__button--prev" data-controls="prev" aria-controls="qh__gallery__slider">
+      <span class="qh__icon">
+        {% include ('@icons/chevron-left.svg') %}
+      </span>
+      <span class="visually-hidden">Prev</span>
+    </button>
+
+    <button class="qh__gallery__button qh__gallery__button--next" data-controls="next" aria-controls="qh__gallery__slider">
+      <span class="qh__icon">
+        {% include ('@icons/chevron-right.svg') %}
+      </span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+    <div class="qh__gallery__nav">
+      <a class="qh__gallery__nav-radio"><span class="visually-hidden">Slide 1</span></a>
+      <a class="qh__gallery__nav-radio"><span class="visually-hidden">Slide 2</span></a>
+      <a class="qh__gallery__nav-radio"><span class="visually-hidden">Slide 3</span></a>
+      <a class="qh__gallery__nav-radio"><span class="visually-hidden">Slide 4</span></a>
+    </div>
+  </div>
+</div> #}
+
+
+<div class="qh__gallery">
+
+  <div class="qh__gallery__slider" data-pid="{{ pid }}">
+    {{ content }}
+  </div>
+
+  <div class="qh__gallery__controls" id="qh__gallery__controls-{{ pid }}" aria-label="Gallery navigation">
+    <button class="qh__gallery__button qh__gallery__button--prev" data-controls="prev" aria-controls="qh__gallery__slider">
+      <span class="qh__icon">
+        {% include ('@icons/chevron-left.svg') %}
+      </span>
+      <span class="visually-hidden">Prev</span>
+    </button>
+
+    <button class="qh__gallery__button qh__gallery__button--next" data-controls="next" aria-controls="qh__gallery__slider">
+      <span class="qh__icon">
+        {% include ('@icons/chevron-right.svg') %}
+      </span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+    <div class="qh__gallery__nav" id="qh__gallery__nav-{{ pid }}">
+      {% for slide in slides_raw %}
+        <a class="qh__gallery__nav-radio"><span class="visually-hidden">Slide {{ loop.index }}</span></a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
