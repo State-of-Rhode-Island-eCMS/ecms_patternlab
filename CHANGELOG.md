@@ -10,6 +10,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIG-130: Add tiny slider js library.
+- RIG-130: Added gallery component.
 
 ### Changed
 
