@@ -10,8 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIG-130: Add tiny slider js library.
-- RIG-130: Added gallery component.
 
 ### Changed
 
@@ -22,6 +20,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.4.1] - 2021-01-05
+### Added
+- RIG-130: Add tiny slider js library.
+- RIG-130: Added gallery component.
 
 ## [0.4.0] - 2020-12-22
 ### Fixed
@@ -155,7 +158,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.0...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.1...HEAD
+[0.4.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.0...0.4.1
 [0.4.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.9...0.4.0
 [0.3.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.8...0.3.9
 [0.3.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.7...0.3.8
