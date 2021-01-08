@@ -7,9 +7,14 @@
     </div>
   {% endif %}
 
-  <div class="qh__articles-list__list">
-    {{ rows }}
-  </div>
+  {% if rows %}
+    <div class="qh__articles-list__list">
+      {% for row in rows %}
+        {{- row.content -}}
+      {% endfor %}
+    </div>
+  {% endif %}
+
   {% if pager %}
     {{ pager }}
   {% endif %}
