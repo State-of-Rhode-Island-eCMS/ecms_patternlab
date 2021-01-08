@@ -18,6 +18,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- RIG-195: Fixed reoccurring attributes error message appearing in search.
 
 ### Security
 
