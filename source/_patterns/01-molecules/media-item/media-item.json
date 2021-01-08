@@ -1,5 +1,5 @@
 {
-	"type" : "img",
+  "type" : "img",
   "img" : "<img src='../../images/sample/landscape-16x9-mountains.jpg' />",
   "alt": "photo of some beautiful mountains",
   "caption": "some beautiful mountains",
