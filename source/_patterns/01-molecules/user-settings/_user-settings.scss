@@ -17,6 +17,7 @@
     width: em(20);
   }
 
+  // <button>
   &__toggle {
     display: inline-block;
     padding: 0.15rem 0.25rem;
@@ -33,10 +34,6 @@
     &:hover,
     &:focus {
       text-decoration: underline;
-    }
-
-    &:focus {
-      outline-color: transparent;
     }
 
     &:active {
@@ -71,6 +68,14 @@
     visibility: hidden;
     word-spacing: 0;
     z-index: z(drop-down-menu);
+
+    &::before {
+      background-color: var(--fc__header__bg);
+      content: '';
+      position: absolute;
+      @include qh-inset-supports(0);
+      z-index: -1;
+    }
 
     [aria-expanded="true"] + & {
        opacity: 1;
