@@ -215,14 +215,44 @@
       "hsl": "hsla(110, 49%, 51%, 0.14)",
       "needs": "dark-text"
     },
-    #
-    # Ocean
-    #
-    "ocean--bright": {
-      "name": "Ocean State bright",
+    "cliff-walk--darkest": {
+      "name": "Cliff Walk darkest",
+      "hue": "dark blue green",
+      "hsl": "hsl(160, 75%, 30%)",
+      "needs": "light-text"
+    },
+    "cliff-walk--dark": {
+      "name": "Cliff Walk dark",
+      "hue": "blue green",
+      "hsl": "hsl(160, 85%, 60%)",
+      "needs": "dark-text"
+    },
+    "cliff-walk--dark--trans25": {
+      "name": "Cliff Walk 33% transparent",
+      "hue": "blue green",
+      "hsl": "hsla(160, 85%, 60%, 0.25)",
+      "needs": "dark-text"
+    },
+    "cliff-walk": {
+      "name": "Cliff Walk",
       "hue": "bright blue green",
       "hsl": "hsl(160, 100%, 74%)",
       "needs": "dark-text"
+    },
+    "cliff-walk--light": {
+      "name": "Cliff Walk light",
+      "hue": "light blue green",
+      "hsl": "hsl(160, 75%, 88%)",
+      "needs": "dark-text"
+    },
+    #
+    # Ocean
+    #
+    "ocean--dark": {
+      "name": "Ocean State 25% transparent layered over #2e2e2e",
+      "hue": "medium blue",
+      "hsl": "hsl(208, 12%, 32%)",
+      "needs": "light-text"
     },
     "ocean": {
       "name": "Ocean State",
@@ -235,12 +265,6 @@
       "hue": "light blue",
       "hsl": "hsl(208, 58%, 92%)",
       "needs": "dark-text"
-    },
-    "ocean--dark": {
-      "name": "Ocean State 25% transparent layered over #2e2e2e",
-      "hue": "medium blue",
-      "hsl": "hsl(208, 12%, 32%)",
-      "needs": "light-text"
     },
     "ocean--trans25": {
       "name": "Ocean State 25% transparent",
@@ -344,7 +368,7 @@
           # Accent pair, bg and fg
           { "fnName": "accent", "colorName": "calamari" },
           { "fnName": "accent__fg", "colorName": "quahog--dark" },
-          # text-accent currently used for bullet mark color
+          # text-accent currently used for bullet mark color & H2
           { "fnName": "text-accent", "colorName": "quahog--medium" },
           { "fnName": "button__bg", "colorName": "navy" },
           { "fnName": "button__fg", "colorName": "hope-gold" },
@@ -617,7 +641,7 @@
           # Accent pair, bg and fg
           { "fnName": "accent", "colorName": "hope-gold" },
           { "fnName": "accent__fg", "colorName": "quahog--dark" },
-          # text-accent currently used for bullet mark color
+          # text-accent currently used for bullet mark color & H2
           #{ "fnName": "text-accent", "colorName": "quahog--medium" },
           { "fnName": "button__bg", "colorName": "rhody-red" },
           { "fnName": "button__fg", "colorName": "quahog--dark" },
@@ -1105,7 +1129,7 @@
           # Accent pair, bg and fg
           { "fnName": "accent", "colorName": "hope-gold" },
           { "fnName": "accent__fg", "colorName": "navy--dark" },
-          # text-accent currently used for bullet mark color
+          # text-accent currently used for bullet mark color & H2
           #{ "fnName": "text-accent", "colorName": "quahog--medium" },
           #{ "fnName": "button__bg", "colorName": "navy" },
           #{ "fnName": "button__fg", "colorName": "hope-gold" },
@@ -1235,7 +1259,7 @@
           # Accent pair, bg and fg
           #{ "fnName": "accent", "colorName": "hope-gold" },
           #{ "fnName": "accent__fg", "colorName": "navy--dark" },
-          # text-accent currently used for bullet mark color
+          # text-accent currently used for bullet mark color & H2
           #{ "fnName": "text-accent", "colorName": "quahog--medium" },
           #{ "fnName": "button__bg", "colorName": "navy" },
           #{ "fnName": "button__fg", "colorName": "hope-gold" },
@@ -1300,6 +1324,136 @@
           { "fnName": "bg--dark", "colorName": "ocean--trans10" },
           { "fnName": "link--dark", "colorName": "white" },
           { "fnName": "link--dark--hover", "colorName": "hope-gold" }
+        ]
+      }
+    },
+    #
+    # Blue Shutters Beach theme: light with a bright teal and yellow highlights
+    #
+    # Commented out colors are the same as the default Scarborough theme
+    #
+    "blue-shutters": {
+      "humanName": "Blue Shutters Beach",
+      "values": {
+        "official": [
+          { "fnName": "fg", "colorName": "quahog" },
+          { "fnName": "bg", "colorName": "white--trans25" },
+          { "fnName": "link", "colorName": "quahog" },
+          { "fnName": "link--hover", "colorName": "quahog--darker" },
+          { "fnName": "link--focus", "colorName": "quahog--darker" }
+        ],
+        "header": [
+          { "fnName": "fg", "colorName": "ocean--dark" },
+          { "fnName": "bg", "colorName": "cliff-walk" },
+          { "fnName": "link", "colorName": "ocean--dark" },
+          { "fnName": "link--hover", "colorName": "quahog--darker" },
+          { "fnName": "social__link", "colorName": "ocean--dark" },
+          { "fnName": "social__link--hover", "colorName": "quahog--darker" }
+        ],
+        "nav-main": [
+          { "fnName": "fg", "colorName": "quahog--dark" },
+          { "fnName": "bg", "colorName": "cliff-walk--dark" },
+          { "fnName": "link", "colorName": "quahog--dark" },
+          { "fnName": "link--hover", "colorName": "navy" },
+          # Hover bg used for bg of link AND for border top of current parent
+          # Should be the same color as the Header BG to look like a notch
+          { "fnName": "link--hover__bg", "colorName": "cliff-walk" },
+          { "fnName": "link--focus", "colorName": "navy" },
+          { "fnName": "link--active", "colorName": "navy" },
+          { "fnName": "link__sub--hover__bg", "colorName": "white--trans25" },
+          { "fnName": "icon__bg", "colorName": "cliff-walk" },
+          { "fnName": "icon__fg", "colorName": "quahog--dark" },
+          { "fnName": "icon__bg--hover", "colorName": "white" },
+          { "fnName": "icon__fg--hover", "colorName": "quahog--dark" }
+        ],
+        "default": [
+          #{ "fnName": "fg", "colorName": "quahog" },
+          #{ "fnName": "bg", "colorName": "white" },
+          #{ "fnName": "border", "colorName": "quahog--dark--trans15" },
+          #{ "fnName": "link", "colorName": "navy--sat" },
+          #{ "fnName": "link--hover", "colorName": "navy--sat-lgt" },
+          #{ "fnName": "link--focus", "colorName": "navy" },
+          #{ "fnName": "link--visited", "colorName": "navy--warm" },
+          #{ "fnName": "link--active", "colorName": "calamari" },
+          #{ "fnName": "hx__fg", "colorName": "quahog--medium" },
+          { "fnName": "violator", "colorName": "calamari" },
+          # Accent pair, bg and fg
+          { "fnName": "accent", "colorName": "hope-gold" },
+          { "fnName": "accent__fg", "colorName": "navy" },
+          # text-accent currently used for bullet mark color & H2
+          { "fnName": "text-accent", "colorName": "cliff-walk--darkest" },
+          { "fnName": "button__bg", "colorName": "cliff-walk" },
+          { "fnName": "button__fg", "colorName": "ocean--dark" },
+          { "fnName": "button--hover__bg", "colorName": "cliff-walk--dark" },
+          { "fnName": "button--hover__fg", "colorName": "quahog--darker" }
+        ],
+        "icon": [
+          #{ "fnName": "pdf", "colorName": "rhody-red" },
+          #{ "fnName": "word", "colorName": "navy" },
+          #{ "fnName": "excel", "colorName": "green-animals" },
+          #{ "fnName": "generic", "colorName": "quahog--medium" },
+          #{ "fnName": "download", "colorName": "quahog--medium" }
+        ],
+        "nav-minor": [
+          { "fnName": "border", "colorName": "cliff-walk" },
+          { "fnName": "fg", "colorName": "quahog--dark" },
+          { "fnName": "bg", "colorName": "cliff-walk--dark--trans25" },
+          #{ "fnName": "link", "colorName": "navy" },
+          #{ "fnName": "link__bg", "colorName": "transparent" },
+          #{ "fnName": "link--hover", "colorName": "navy--dark" },
+          { "fnName": "link--hover__bg", "colorName": "white--trans25" },
+          { "fnName": "link--focus", "colorName": "navy" },
+          { "fnName": "link--active", "colorName": "navy--sat" },
+          #{ "fnName": "sub__bg", "colorName": "white--trans25" }
+        ],
+        "notification": [
+          { "fnName": "fg", "colorName": "quahog" },
+          { "fnName": "bg", "colorName": "hope-gold" },
+          { "fnName": "icon", "colorName": "quahog" },
+          { "fnName": "link", "colorName": "quahog--dark" },
+          #{ "fnName": "link--hover", "colorName": "navy--sat" },
+          #{ "fnName": "link--focus", "colorName": "navy--dark" },
+          #{ "fnName": "link--active", "colorName": "navy--sat-lgt" },
+          # Hover will always reverse these button colors
+          { "fnName": "button__fg", "colorName": "quahog" },
+          { "fnName": "button__bg", "colorName": "white" },
+          #{ "fnName": "border", "colorName": "quahog--dark--trans33" }
+        ],
+        "accordion": [
+          { "fnName": "icon__fg", "colorName": "quahog--dark" },
+          { "fnName": "icon__bg", "colorName": "cliff-walk" }
+        ],
+        "attention-card": [
+          { "fnName": "fg", "colorName": "ocean--dark" },
+          { "fnName": "bar", "colorName": "cliff-walk" },
+          { "fnName": "icon", "colorName": "navy" }
+        ],
+        "footer": [
+          { "fnName": "border-top", "colorName": "cliff-walk" },
+          { "fnName": "fg", "colorName": "ocean--dark" },
+          { "fnName": "bg", "colorName": "cliff-walk--dark--trans25" },
+          { "fnName": "copyright__bg", "colorName": "transparent" }
+        ],
+        "primary": [
+          { "fnName": "fg", "colorName": "quahog--light" },
+          { "fnName": "bg", "colorName": "ocean--dark" },
+          { "fnName": "link", "colorName": "cliff-walk--light" },
+          { "fnName": "link--hover", "colorName": "white" },
+          #{ "fnName": "fg--dark", "colorName": "white" },
+          #{ "fnName": "bg--dark", "colorName": "navy--trans50" },
+          #{ "fnName": "link--dark", "colorName": "navy--light" },
+          #{ "fnName": "link--dark--hover", "colorName": "hope-gold" }
+
+        ],
+        "primary--light": [
+          { "fnName": "fg", "colorName": "ocean--dark" },
+          { "fnName": "bg", "colorName": "cliff-walk--dark--trans25" },
+          { "fnName": "link", "colorName": "navy" },
+          { "fnName": "link--hover", "colorName": "quahog--dark" },
+          #{ "fnName": "fg--dark", "colorName": "coffee-milk--light" },
+          #{ "fnName": "bg--dark", "colorName": "ocean--trans25" },
+          #{ "fnName": "link--dark", "colorName": "white" },
+          #{ "fnName": "link--dark--hover", "colorName": "hope-gold" }
         ]
       }
     } # end theme
