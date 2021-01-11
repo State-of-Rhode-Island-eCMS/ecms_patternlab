@@ -18,9 +18,13 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
-- RIG-195: Fixed reoccurring attributes error message appearing in search.
 
 ### Security
+
+## [0.4.2] - 2021-01-11
+### Fixed
+- RIG-195: Fixed reoccurring attributes error message appearing in search.
+- RIG-221: General log cleanup.
 
 ## [0.4.1] - 2021-01-05
 ### Added
@@ -159,7 +163,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.1...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.2...HEAD
+[0.4.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.1...0.4.2
 [0.4.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.0...0.4.1
 [0.4.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.9...0.4.0
 [0.3.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.8...0.3.9
