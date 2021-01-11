@@ -20,7 +20,7 @@
  */
 #}
 <article class="qh__file-list__item">
-  <a href="{{ file_url }}" class="qh__file-list__link" download>
+  <a href="{{ file_url }}" class="qh__file-list__link" {{ link_behavior and link_behavior == "new_tab" ? "target='_blank'" : "download" }}>
     <div class="qh__file-list__item__icon">
       <span class="qh__icon" aria-hidden="true">
         {% include ('@icons/' ~ file_type_icon ~ '.svg') %}

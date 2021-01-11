@@ -1,23 +1,23 @@
 {
   "articles_latest": {
-    "title": 'Latest Press Releases',
+    "title": "Latest Press Releases",
     "1": {
-      "title": 'Small Game Hunting Season Opens October 17 October 8, 2020',
-      "date": 'October 8, 2020',
+      "title": "Small Game Hunting Season Opens October 17 October 8, 2020",
+      "date": "October 8, 2020",
       "excerpt": "PROVIDENCE - The Rhode Island Department of Environmental Management (DEM) announces that small game hunting season opens this month. The season for pheasant, cottontail rabbit, gray squirrel, bobwhite quail, red and gray fox opens Saturday, October 17 – Saturday, February 28, 2021. DEM’s…",
-      "url": '#'
+      "url": "#"
     },
     "2": {
-      "title": 'State Agencies Work to Improve Weekapaug Public Access October 6, 2020',
-      "date": 'October 6, 2020',
+      "title": "State Agencies Work to Improve Weekapaug Public Access October 6, 2020",
+      "date": "October 6, 2020",
       "excerpt": "WAKEFIELD – The Rhode Island Coastal Resources Management Council (CRMC) and the Rhode Island Department of Environmental Management (DEM) are improving public access along the Weekapaug Breachway in Westerly, following concerns voiced by local residents and other Rhode Islanders. This summer,…",
-      "url": '#'
+      "url": "#"
     },
     "3": {
-      "title": 'DEM Stocking Local Waters with Trout Next Week for Fall Fishing Season October 2, 2020',
-      "date": 'October 2, 2020',
+      "title": "DEM Stocking Local Waters with Trout Next Week for Fall Fishing Season October 2, 2020",
+      "date": "October 2, 2020",
       "excerpt": "PROVIDENCE – The Department of Environmental Management (DEM) will begin stocking trout in freshwaters across Rhode Island next week for the fall fishing season – a popular time for recreational fishing. The following waters will be stocked with trout beginning Tuesday, October 6: •…",
-      "url": '#'
+      "url": "#"
     }
   }
 }

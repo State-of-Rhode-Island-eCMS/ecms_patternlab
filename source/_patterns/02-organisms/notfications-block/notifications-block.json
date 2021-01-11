@@ -1,3 +1,3 @@
 {
-  "content" : '<article class="qh__teaser-notification"><p class="qh__teaser-notification__excerpt">Global — This is a global notification. It is the first of it’s kind. <a href="#">It even has a link</a>!</p></article>'
+  "content" : "<article class='qh__teaser-notification'><p class='qh__teaser-notification__excerpt'>Global — This is a global notification. It is the first of it’s kind. <a href='#'>It even has a link</a>!</p></article>"
 }
