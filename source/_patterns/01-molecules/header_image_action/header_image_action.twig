@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Theme override to display the header, image, and action component.
+ *
+ * Available variables:
+ *
+ *
+ * - title: page title
+ * - img: responsive img tag
+ * - alt: [string] or [none]
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ *
+ * @see template_preprocess_page()
+ */
+#}
+<div {{ attributes.addClass('qh__header-image-action', 'qh__header-image-action--has-overlay' ) }}>
+  {# <figure class="qh__header-image-action__image">{{ img }}</figure> #}
+  {{ img }}
+  {{ title_prefix }}
+
+  <div class="qh__header-image-action__overlay">
+      <div class="qh__header-image-action__overlay-inner qh__tc__primary">
+        <h2 class="qh__header-image-action__overlay-title">{{ title }}</h2>
+        <p>We protect, restore, and promote the beautiful environment of Rhode Island — from Narragansett Bay to Hope Valley. We are the central agency devoted to permitting and licensing recreational and commercial activities that affect our natural resources.</p>
+        <a href="#" class="qh__btn qh__header-image-action__link">Permits & Licenses</a>
+      </div>
+  </div>
+
+  {# <h1 class="qh__header-image-action__title">Alertas y Recomendaciones</h1> #}
+
+  {{ title_suffix }}
+</div>
