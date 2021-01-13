@@ -228,10 +228,15 @@ html {
   --c__green-animals: #59bf45;
   --c__green-animals--dark: #2e7a1f;
   --c__green-animals--trans15: rgba(89, 191, 69, 0.14);
-  --c__ocean--bright: #7affd3;
+  --c__cliff-walk--darkest: #138660;
+  --c__cliff-walk--darkest--trans15: rgba(19, 134, 96, 0.15);
+  --c__cliff-walk--dark: #42f0b6;
+  --c__cliff-walk--dark--trans25: rgba(66, 240, 182, 0.25);
+  --c__cliff-walk: #7affd3;
+  --c__cliff-walk--light: #c9f7e8;
+  --c__ocean--dark: #48525b;
   --c__ocean: #95bddf;
   --c__ocean--light: #dfebf6;
-  --c__ocean--dark: #48525b;
   --c__ocean--trans25: rgba(149, 189, 223, 0.25);
   --c__ocean--trans10: rgba(149, 189, 223, 0.1);
   --c__coffee-milk: #d2cbb2;
@@ -374,6 +379,7 @@ html {
     --fc__nav-minor__link--focus: #face3d;
     --fc__nav-minor__link--active: #face3d;
     --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.33);
+    --fc__notification__bg: #ff8e47;
     --fc__accordion__icon__fg: #141414;
     --fc__accordion__icon__bg: #ff8e47;
     --fc__attention-card__fg: #f0eee5;
@@ -566,6 +572,7 @@ html {
     --fc__default__hx__fg: #59bf45;
     --fc__default__text-accent: white;
     --fc__nav-minor__fg: #d2cbb2;
+    --fc__nav-minor__bg: rgba(89, 191, 69, 0.14);
     --fc__nav-minor__link: #f0eee5;
     --fc__nav-minor__link--hover: white;
     --fc__nav-minor__link--active: #face3d;
@@ -691,6 +698,120 @@ html {
     --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.1);
     --fc__primary--light__link--dark: white;
     --fc__primary--light__link--dark--hover: #face3d; }
+  html .qh__t__blue-shutters {
+    --fc__official__fg: #404040;
+    --fc__official__bg: rgba(255, 255, 255, 0.25);
+    --fc__official__link: #404040;
+    --fc__official__link--hover: #141414;
+    --fc__official__link--focus: #141414;
+    --fc__header__fg: #48525b;
+    --fc__header__bg: #7affd3;
+    --fc__header__link: #48525b;
+    --fc__header__link--hover: #141414;
+    --fc__header__social__link: #48525b;
+    --fc__header__social__link--hover: #141414;
+    --fc__nav-main__fg: #2e2e2e;
+    --fc__nav-main__bg: #42f0b6;
+    --fc__nav-main__link: #2e2e2e;
+    --fc__nav-main__link--hover: #293557;
+    --fc__nav-main__link--hover__bg: #7affd3;
+    --fc__nav-main__link--focus: #293557;
+    --fc__nav-main__link--active: #293557;
+    --fc__nav-main__link__sub--hover__bg: rgba(255, 255, 255, 0.25);
+    --fc__nav-main__icon__bg: #7affd3;
+    --fc__nav-main__icon__fg: #2e2e2e;
+    --fc__nav-main__icon__bg--hover: white;
+    --fc__nav-main__icon__fg--hover: #2e2e2e;
+    --fc__default__violator: #ff8e47;
+    --fc__default__accent: #face3d;
+    --fc__default__accent__fg: #293557;
+    --fc__default__text-accent: #138660;
+    --fc__default__button__bg: #7affd3;
+    --fc__default__button__fg: #48525b;
+    --fc__default__button--hover__bg: #42f0b6;
+    --fc__default__button--hover__fg: #141414;
+    --fc__nav-minor__border: #7affd3;
+    --fc__nav-minor__fg: #2e2e2e;
+    --fc__nav-minor__bg: rgba(66, 240, 182, 0.25);
+    --fc__nav-minor__link--hover__bg: rgba(255, 255, 255, 0.25);
+    --fc__nav-minor__link--focus: #293557;
+    --fc__nav-minor__link--active: #1440b8;
+    --fc__notification__fg: #404040;
+    --fc__notification__bg: #face3d;
+    --fc__notification__icon: #404040;
+    --fc__notification__link: #2e2e2e;
+    --fc__notification__button__fg: #404040;
+    --fc__notification__button__bg: white;
+    --fc__accordion__icon__fg: #2e2e2e;
+    --fc__accordion__icon__bg: #7affd3;
+    --fc__attention-card__fg: #48525b;
+    --fc__attention-card__bar: #7affd3;
+    --fc__attention-card__icon: #293557;
+    --fc__footer__border-top: #42f0b6;
+    --fc__footer__fg: #48525b;
+    --fc__footer__bg: #7affd3;
+    --fc__footer__copyright__bg: transparent;
+    --fc__primary__fg: #d4d4d4;
+    --fc__primary__bg: #48525b;
+    --fc__primary__link: #c9f7e8;
+    --fc__primary__link--hover: white;
+    --fc__primary__fg--dark: #f0eee5;
+    --fc__primary__bg--dark: #138660;
+    --fc__primary__link--dark: white;
+    --fc__primary__link--dark--hover: #face3d;
+    --fc__primary--light__fg: #48525b;
+    --fc__primary--light__bg: #c9f7e8;
+    --fc__primary--light__link: #293557;
+    --fc__primary--light__link--hover: #2e2e2e;
+    --fc__primary--light__fg--dark: #dfebf6;
+    --fc__primary--light__bg--dark: rgba(19, 134, 96, 0.15);
+    --fc__primary--light__link--dark: white;
+    --fc__primary--light__link--dark--hover: #face3d; }
+  html.dark .qh__t__blue-shutters {
+    --fc__official__fg: white;
+    --fc__official__bg: rgba(66, 240, 182, 0.25);
+    --fc__official__link: white;
+    --fc__official__link--hover: #7affd3;
+    --fc__official__link--focus: #7affd3;
+    --fc__header__fg: #c9f7e8;
+    --fc__header__bg: rgba(66, 240, 182, 0.25);
+    --fc__header__link: #c9f7e8;
+    --fc__header__link--hover: #d4d4d4;
+    --fc__header__social__link: #7affd3;
+    --fc__header__social__link--hover: #d4d4d4;
+    --fc__nav-main__bg: #42f0b6;
+    --fc__default__fg: #f0eee5;
+    --fc__default__bg: #2e2e2e;
+    --fc__default__border: rgba(255, 255, 255, 0.25);
+    --fc__default__link: #95bddf;
+    --fc__default__link--hover: #face3d;
+    --fc__default__link--focus: #95bddf;
+    --fc__default__link--visited: #bbacec;
+    --fc__default__link--active: #ff8e47;
+    --fc__default__hx__fg: #d2cbb2;
+    --fc__default__text-accent: #42f0b6;
+    --fc__default__button__bg: #42f0b6;
+    --fc__default__button__fg: #141414;
+    --fc__default__button--hover__bg: #7affd3;
+    --fc__default__button--hover__fg: #48525b;
+    --fc__nav-minor__border: #138660;
+    --fc__nav-minor__fg: #d4d4d4;
+    --fc__nav-minor__bg: rgba(66, 240, 182, 0.25);
+    --fc__nav-minor__link: #d4d4d4;
+    --fc__nav-minor__link--hover: white;
+    --fc__nav-minor__link--hover__bg: rgba(255, 255, 255, 0.15);
+    --fc__nav-minor__link--focus: #face3d;
+    --fc__nav-minor__sub__bg: rgba(255, 255, 255, 0.15);
+    --fc__notification__bg: #face3d;
+    --fc__accordion__icon__bg: #42f0b6;
+    --fc__attention-card__fg: #f0eee5;
+    --fc__attention-card__bar: #138660;
+    --fc__attention-card__icon: #c9f7e8;
+    --fc__footer__border-top: #138660;
+    --fc__footer__fg: white;
+    --fc__footer__bg: rgba(19, 134, 96, 0.15);
+    --fc__primary__bg: #138660;
+    --fc__primary--light__bg: rgba(19, 134, 96, 0.15); }
   @media (prefers-color-scheme: dark) {
     html:not(.light) {
       --fc__official__fg: #d4d4d4;
@@ -738,6 +859,7 @@ html {
       --fc__nav-minor__link--focus: #face3d;
       --fc__nav-minor__link--active: #face3d;
       --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.33);
+      --fc__notification__bg: #ff8e47;
       --fc__accordion__icon__fg: #141414;
       --fc__accordion__icon__bg: #ff8e47;
       --fc__attention-card__fg: #f0eee5;
@@ -816,6 +938,7 @@ html {
       --fc__default__hx__fg: #59bf45;
       --fc__default__text-accent: white;
       --fc__nav-minor__fg: #d2cbb2;
+      --fc__nav-minor__bg: rgba(89, 191, 69, 0.14);
       --fc__nav-minor__link: #f0eee5;
       --fc__nav-minor__link--hover: white;
       --fc__nav-minor__link--active: #face3d;
@@ -875,7 +998,52 @@ html {
       --fc__primary--light__fg--dark: #d4d4d4;
       --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.1);
       --fc__primary--light__link--dark: white;
-      --fc__primary--light__link--dark--hover: #face3d; } }
+      --fc__primary--light__link--dark--hover: #face3d; }
+    html:not(.light) .qh__t__blue-shutters {
+      --fc__official__fg: white;
+      --fc__official__bg: rgba(66, 240, 182, 0.25);
+      --fc__official__link: white;
+      --fc__official__link--hover: #7affd3;
+      --fc__official__link--focus: #7affd3;
+      --fc__header__fg: #c9f7e8;
+      --fc__header__bg: rgba(66, 240, 182, 0.25);
+      --fc__header__link: #c9f7e8;
+      --fc__header__link--hover: #d4d4d4;
+      --fc__header__social__link: #7affd3;
+      --fc__header__social__link--hover: #d4d4d4;
+      --fc__nav-main__bg: #42f0b6;
+      --fc__default__fg: #f0eee5;
+      --fc__default__bg: #2e2e2e;
+      --fc__default__border: rgba(255, 255, 255, 0.25);
+      --fc__default__link: #95bddf;
+      --fc__default__link--hover: #face3d;
+      --fc__default__link--focus: #95bddf;
+      --fc__default__link--visited: #bbacec;
+      --fc__default__link--active: #ff8e47;
+      --fc__default__hx__fg: #d2cbb2;
+      --fc__default__text-accent: #42f0b6;
+      --fc__default__button__bg: #42f0b6;
+      --fc__default__button__fg: #141414;
+      --fc__default__button--hover__bg: #7affd3;
+      --fc__default__button--hover__fg: #48525b;
+      --fc__nav-minor__border: #138660;
+      --fc__nav-minor__fg: #d4d4d4;
+      --fc__nav-minor__bg: rgba(66, 240, 182, 0.25);
+      --fc__nav-minor__link: #d4d4d4;
+      --fc__nav-minor__link--hover: white;
+      --fc__nav-minor__link--hover__bg: rgba(255, 255, 255, 0.15);
+      --fc__nav-minor__link--focus: #face3d;
+      --fc__nav-minor__sub__bg: rgba(255, 255, 255, 0.15);
+      --fc__notification__bg: #face3d;
+      --fc__accordion__icon__bg: #42f0b6;
+      --fc__attention-card__fg: #f0eee5;
+      --fc__attention-card__bar: #138660;
+      --fc__attention-card__icon: #c9f7e8;
+      --fc__footer__border-top: #138660;
+      --fc__footer__fg: white;
+      --fc__footer__bg: rgba(19, 134, 96, 0.15);
+      --fc__primary__bg: #138660;
+      --fc__primary--light__bg: rgba(19, 134, 96, 0.15); } }
 
 html {
   -webkit-box-sizing: border-box;
@@ -3315,8 +3483,6 @@ table {
       text-decoration: none; }
     .qh__settings-menu__toggle:hover, .qh__settings-menu__toggle:focus {
       text-decoration: underline; }
-    .qh__settings-menu__toggle:focus {
-      outline-color: transparent; }
     .qh__settings-menu__toggle:active {
       text-decoration: underline; }
     @media (pointer: coarse) {
@@ -3343,6 +3509,18 @@ table {
     visibility: hidden;
     word-spacing: 0;
     z-index: 500; }
+    .qh__settings-menu__list::before {
+      background-color: var(--fc__header__bg);
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1; }
+      @supports (inset: 0) {
+        .qh__settings-menu__list::before {
+          inset: 0; } }
     [aria-expanded="true"] + .qh__settings-menu__list {
       opacity: 1;
       -webkit-transition: opacity 250ms ease 0ms, visibility 0ms linear 250ms;
