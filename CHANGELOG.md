@@ -21,6 +21,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.4.3] - 2021-01-15
+### Added
+- RIG-223: Added theming for header, image, and action.
+- RIG-128: Added blue shutters beach theme.
+
 ## [0.4.2] - 2021-01-11
 ### Fixed
 - RIG-195: Fixed reoccurring attributes error message appearing in search.
@@ -163,7 +168,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.2...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.3...HEAD
+[0.4.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.2...0.4.3
 [0.4.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.1...0.4.2
 [0.4.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.0...0.4.1
 [0.4.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.3.9...0.4.0
