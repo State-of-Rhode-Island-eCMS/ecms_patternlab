@@ -2,7 +2,7 @@
 	{% for slug, palette in palettes %}
 	  <li>
       <div class="sg-swatch sg-palette"
-			  style="background-image: linear-gradient(to right
+			  style="min-width: 254px; {% if slug ends with '--dark' %}background-color: var(--c__quahog--dark);{% endif %} background-image: linear-gradient(to right
     {%- set num = 0 -%}
     {# Loop through once just to get our total number #}
     {%- for section, definitions in palette.values -%}

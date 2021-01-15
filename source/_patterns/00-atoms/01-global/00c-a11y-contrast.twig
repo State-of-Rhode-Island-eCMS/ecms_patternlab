@@ -195,9 +195,10 @@
   </thead>
   <tbody>
     {% for key, color in colors|reverse %}
+      {% if key != 'transparent' %}
       <tr>
         {% for innerKey, innerColor in colors|reverse %}
-          {% if key != 'transparent' %}
+          {% if innerKey != 'transparent' %}
             {% if loop.first %}
         <th scope="row"><b>{{ key }}</b></th>
             {% endif %}
@@ -209,6 +210,7 @@
           {% endif %}
         {% endfor %}
       </tr>
+      {% endif %}
     {% endfor %}
     </tr>
   </tbody>
