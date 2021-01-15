@@ -1,0 +1,196 @@
+$hia-gutter--xlarge: calc((100vw - #{$content-max-small-screen}) / 2);
+$hia-gutter--xxlarge: calc((100vw - #{$content-max-large-screen}) / 2);
+
+.qh__header-image-action {
+  background-color: var(--fc__default__fg);
+  display: grid;
+  overflow: hidden;
+  position: relative;
+
+  /*
+   * Main Wrapper modifiers
+   */
+  &--has-overlay {
+    @include breakpoint-up($bp--xlarge) {
+      grid-template-rows: 4rem 1fr 4rem;
+      grid-template-columns: 2rem 1fr 2rem;
+
+      // For full width section use max content area as gutter.
+      .qh-layout-section--full-width & {
+        grid-template-columns: $hia-gutter--xlarge 1fr $hia-gutter--xlarge;
+
+        @include breakpoint-up($bp--xxlarge) {
+          grid-template-columns: $hia-gutter--xxlarge 1fr $hia-gutter--xxlarge;
+        }
+      }
+    }
+  }
+
+  &--title-only {
+    grid-template-rows: 1rem 1fr 1rem;
+    grid-template-columns: 2rem 1fr 2rem;
+
+    // For full width section use max content area as gutter.
+    .qh-layout-section--full-width & {
+      grid-template-columns: $hia-gutter--xlarge 1fr $hia-gutter--xlarge;
+
+      @include breakpoint-up($bp--xxlarge) {
+        grid-template-columns: $hia-gutter--xxlarge 1fr $hia-gutter--xxlarge;
+      }
+    }
+  }
+
+  /*
+   * Shared image styles for both overlay and title only display.
+   */
+  // figure
+  &__image {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 3;
+    max-height: 90vh;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  /*
+   * Overlay specific components:
+   */
+
+   // Overlay class handles the grid placement and centers the child vertically.
+  &__overlay {
+    grid-row: 4 / span 3; // On mobile we add an additional row so that the overlay drops below the image.
+    grid-column: 1 / span 3;
+
+    @include breakpoint-up($bp--xlarge) {
+      grid-column: 2 / span 1;
+      grid-row: 2 / span 1;
+      display: flex;
+      align-items: center;
+    }
+
+    &--text-right {
+      justify-content: flex-end;
+    }
+
+    // Creates the box effect which inherits height from it's content.
+    &-inner {
+      background-color: transparent;
+      padding: $general-v-spacing $general-h-spacing;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: '';
+        position: absolute;
+        @include qh-inset-supports(0);
+        opacity: 0.75;
+        z-index: -1;
+      }
+
+      // Themes
+      &.qh__tc__primary {
+        color: var(--fc__primary__fg);
+
+        &::before {
+          background-color: var(--fc__primary__bg);
+        }
+
+        // If a button is present, it will likely be primary color over primary color
+        // Let's flip them
+        .qh__btn,
+        .qh__btn:visited {
+          background-color: var(--fc__default__button__fg);
+          color: var(--fc__default__button__bg);
+        }
+
+        .qh__btn:hover,
+        .qh__btn:focus {
+          background-color: var(--fc__default__button--hover__fg);
+          color: var(--fc__default__button--hover__bg);
+        }
+      }
+
+      &.qh__tc__primary--light {
+        color: var(--fc__default__fg);
+
+        &::before {
+          background-color: var(--fc__default__bg);
+        }
+      }
+
+      @include breakpoint-up($bp--xlarge) {
+        max-width: 600px; // Update this to control how wide the overlay box is.
+      }
+    }
+
+    // Add underline effect.
+    h1 {
+      &::after {
+        content: ' ';
+        display: block;
+        border-bottom: solid 0.4rem var(--fc__default__violator);
+        margin-top: ($text-spacer-fallback-value * 0.85);
+        margin-bottom: ($text-spacer-fallback-value * 0.85);
+        width: 1.125em;
+
+        @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+          margin-top: calc(var(--body-text-spacer) * 0.85);
+          margin-bottom: calc(var(--body-text-spacer) * 0.85);
+        }
+      }
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+  }
+
+  &__link {
+    margin-top: $general-v-spacing;
+  }
+
+  /*
+   * Title only / No overlay:
+   */
+  &__title {
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    align-self: end;
+    color: var(--c__white);
+    margin-bottom: 0;
+    text-shadow:
+      1px 1px 1px rgba(qh-get-color('quahog'), 0.95),
+      1px 1px 1rem rgba(qh-get-color('quahog'), 0.5),
+      -1px 1px 1rem rgba(qh-get-color('quahog'), 0.5),
+      -1px -1px 1rem rgba(qh-get-color('quahog'), 0.5),
+      1px -1px 1rem rgba(qh-get-color('quahog'), 0.5);
+    width: 100%;
+
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      --font-size-min: 1.25rem;
+      --font-size-max: 4rem;
+      --font-size-scaler-value: var(--h2-scaler-value);
+      font-size: var(--font-size);
+
+      --font-lh-min: #{$h2-lh-s};
+      --font-lh-max: #{$h2-lh-l};
+      --font-lh-scaler-value: var(--h2-lh-scaler-value);
+      line-height: var(--line-height);
+    }
+  }
+
+  // Completely different approach for IE11
+  // @include onlyIE() {
+  //   display: block;
+
+  //   &__title {
+  //     position: absolute;
+  //       left: $general-h-spacing;
+  //       bottom: $general-h-spacing;
+  //   }
+  // }
+}

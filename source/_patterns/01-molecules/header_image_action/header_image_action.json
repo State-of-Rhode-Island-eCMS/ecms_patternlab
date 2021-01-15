@@ -1,0 +1,12 @@
+{
+  "img" : "<img src='../../images/sample/landscape-16x9-mountains.jpg' />",
+  "title": "Welcome to DEM",
+  "page_title_enabled": 0,
+  "text": "<p>We protect, restore, and promote the beautiful environment of Rhode Island — from Narragansett Bay to Hope Valley. We are the central agency devoted to permitting and licensing recreational and commercial activities that affect our natural resources.</p>",
+  "text_position_class": "qh__header-image-action__overlay--text-right",
+  "link_title": "Permits & Licenses",
+  "link_url": "#",
+  "enable_overlay": 1,
+  "hia_modifier_class": "qh__header-image-action--has-overlay",
+  "bg_color_class": "qh__tc__primary--light"
+}
