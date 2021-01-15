@@ -47,13 +47,12 @@ $hia-gutter--xxlarge: calc((100vw - #{$content-max-large-screen}) / 2);
   &__image {
     grid-column: 1 / span 3;
     grid-row: 1 / span 3;
+    max-height: 90vh;
 
     img {
-      position: absolute;
       height: 100%;
       object-fit: cover;
       width: 100%;
-      z-index: 1;
     }
   }
 
@@ -65,8 +64,6 @@ $hia-gutter--xxlarge: calc((100vw - #{$content-max-large-screen}) / 2);
   &__overlay {
     grid-row: 4 / span 3; // On mobile we add an additional row so that the overlay drops below the image.
     grid-column: 1 / span 3;
-    position: relative;
-    z-index: 1;
 
     @include breakpoint-up($bp--xlarge) {
       grid-column: 2 / span 1;
