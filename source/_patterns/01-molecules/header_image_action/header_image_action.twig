@@ -6,14 +6,20 @@
  * Available variables:
  *
  *
- * - title: page title
+ * - title: Title of the block
  * - img: responsive img tag
- * - alt: [string] or [none]
  * - title_prefix: Additional output populated by modules, intended to be
  *   displayed in front of the main title tag that appears in the template.
  * - title_suffix: Additional output populated by modules, intended to be
  *   displayed after the main title tag that appears in the template.
- *
+ * - page_title_enabled: Determines if the title should be h1 or h2.
+ * - text: The optional body copy. Enables the overlay.
+ * - text_position_class: Determines if the overlay appears on left or right.
+ * - link_title: Link field title.
+ * - link_url: Link field URL.
+ * - enable_overlay: A boolean value that determines whether or not to show overlay.
+ * - hia_modifier_class: A class that lets CSS know whether overlay in on or not.
+ * - bg_color_class: The background color of the overlay.
  *
  * @see template_preprocess_page()
  */
@@ -34,7 +40,11 @@
     <div class="qh__header-image-action__overlay {{ text_position_class }}">
       <div class="qh__header-image-action__overlay-inner {{ bg_color_class }}">
 
-        <h2 class="qh__header-image-action__overlay-title">{{ title }}</h2>
+        {% if page_title_enabled %}
+          <h1 class="qh__header-image-action__overlay-title">{{ title }}</h1>
+        {% else %}
+          <h2 class="qh__header-image-action__overlay-title">{{ title }}</h2>
+        {% endif %}
 
         {{ text }}
 
@@ -45,7 +55,13 @@
       </div>
     </div>
   {% else %}
-    <h1 class="qh__header-image-action__title">{{ title }}</h1>
+
+    {% if page_title_enabled %}
+      <h1 class="qh__header-image-action__title ">{{ title }}</h1>
+    {% else %}
+      <h2 class="qh__header-image-action__title qh__no-decoration">{{ title }}</h2>
+    {% endif %}
+
   {% endif %}
 
   {{ title_suffix }}
