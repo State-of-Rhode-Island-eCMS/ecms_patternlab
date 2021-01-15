@@ -18,20 +18,35 @@
  * @see template_preprocess_page()
  */
 #}
-<div {{ attributes.addClass('qh__header-image-action', 'qh__header-image-action--has-overlay' ) }}>
-  {# <figure class="qh__header-image-action__image">{{ img }}</figure> #}
-  {{ img }}
+
+{%
+  set classes = [
+    'qh__header-image-action',
+    hia_modifier_class
+  ]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+  <figure class="qh__header-image-action__image">{{ img }}</figure>
   {{ title_prefix }}
 
-  <div class="qh__header-image-action__overlay">
-      <div class="qh__header-image-action__overlay-inner qh__tc__primary">
-        <h2 class="qh__header-image-action__overlay-title">{{ title }}</h2>
-        <p>We protect, restore, and promote the beautiful environment of Rhode Island — from Narragansett Bay to Hope Valley. We are the central agency devoted to permitting and licensing recreational and commercial activities that affect our natural resources.</p>
-        <a href="#" class="qh__btn qh__header-image-action__link">Permits & Licenses</a>
-      </div>
-  </div>
+  {% if enable_overlay %}
+    <div class="qh__header-image-action__overlay {{ text_position_class }}">
+      <div class="qh__header-image-action__overlay-inner {{ bg_color_class }}">
 
-  {# <h1 class="qh__header-image-action__title">Alertas y Recomendaciones</h1> #}
+        <h2 class="qh__header-image-action__overlay-title">{{ title }}</h2>
+
+        {{ text }}
+
+        {% if link_url and link_title %}
+           <a href="{{ link_url }}" class="qh__btn qh__header-image-action__link"> {{ link_title }}</a>
+        {% endif %}
+
+      </div>
+    </div>
+  {% else %}
+    <h1 class="qh__header-image-action__title">{{ title }}</h1>
+  {% endif %}
 
   {{ title_suffix }}
 </div>
