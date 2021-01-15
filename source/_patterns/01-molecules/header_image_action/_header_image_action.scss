@@ -2,7 +2,7 @@ $hia-gutter--xlarge: calc((100vw - #{$content-max-small-screen}) / 2);
 $hia-gutter--xxlarge: calc((100vw - #{$content-max-large-screen}) / 2);
 
 .qh__header-image-action {
-  background-color: var(--c__quahog);
+  background-color: var(--fc__default__fg);
   display: grid;
   overflow: hidden;
   position: relative;
@@ -43,15 +43,17 @@ $hia-gutter--xxlarge: calc((100vw - #{$content-max-large-screen}) / 2);
   /*
    * Shared image styles for both overlay and title only display.
    */
+  // figure
   &__image {
     grid-column: 1 / span 3;
     grid-row: 1 / span 3;
 
     img {
-      width: 100%;
+      position: absolute;
       height: 100%;
-      display: block;
       object-fit: cover;
+      width: 100%;
+      z-index: 1;
     }
   }
 
@@ -63,6 +65,8 @@ $hia-gutter--xxlarge: calc((100vw - #{$content-max-large-screen}) / 2);
   &__overlay {
     grid-row: 4 / span 3; // On mobile we add an additional row so that the overlay drops below the image.
     grid-column: 1 / span 3;
+    position: relative;
+    z-index: 1;
 
     @include breakpoint-up($bp--xlarge) {
       grid-column: 2 / span 1;
@@ -77,7 +81,49 @@ $hia-gutter--xxlarge: calc((100vw - #{$content-max-large-screen}) / 2);
 
     // Creates the box effect which inherits height from it's content.
     &-inner {
+      background-color: transparent;
       padding: $general-v-spacing $general-h-spacing;
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: '';
+        position: absolute;
+        @include qh-inset-supports(0);
+        opacity: 0.75;
+        z-index: -1;
+      }
+
+      // Themes
+      &.qh__tc__primary {
+        color: var(--fc__primary__fg);
+
+        &::before {
+          background-color: var(--fc__primary__bg);
+        }
+
+        // If a button is present, it will likely be primary color over primary color
+        // Let's flip them
+        .qh__btn,
+        .qh__btn:visited {
+          background-color: var(--fc__default__button__fg);
+          color: var(--fc__default__button__bg);
+        }
+
+        .qh__btn:hover,
+        .qh__btn:focus {
+          background-color: var(--fc__default__button--hover__fg);
+          color: var(--fc__default__button--hover__bg);
+        }
+      }
+
+      &.qh__tc__primary--light {
+        color: var(--fc__default__fg);
+
+        &::before {
+          background-color: var(--fc__default__bg);
+        }
+      }
 
       @include breakpoint-up($bp--xlarge) {
         max-width: 600px; // Update this to control how wide the overlay box is.
