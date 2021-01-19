@@ -9,9 +9,15 @@
 
   {% if rows %}
     <div class="qh__articles-list__list">
-      {% for row in rows %}
-        {{- row.content -}}
-      {% endfor %}
+
+      {% if rows_loop %}
+        {% for row in rows %}
+          {{- row.content -}}
+        {% endfor %}
+      {% else %}
+        {{ rows }}
+      {% endif %}
+
     </div>
   {% endif %}
 
