@@ -18,9 +18,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
-- RIG-242: Fixed article listing to work with views-view and views-unformatted.
 
 ### Security
+
+## [0.4.4] - 2021-01-19
+### Fixed
+- RIG-242: Fixed article listing to work with views-view and views-unformatted.
 
 ## [0.4.3] - 2021-01-15
 ### Added
@@ -169,7 +172,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.3...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.4...HEAD
+[0.4.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.3...0.4.4
 [0.4.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.2...0.4.3
 [0.4.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.1...0.4.2
 [0.4.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.0...0.4.1
