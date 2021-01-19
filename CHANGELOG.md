@@ -18,6 +18,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- RIG-242: Fixed article listing to work with views-view and views-unformatted.
 
 ### Security
 
