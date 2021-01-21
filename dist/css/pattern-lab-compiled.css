@@ -5880,7 +5880,11 @@ body {
       height: 100%;
       -webkit-box-flex: 0;
           -ms-flex: 0 0 100%;
-              flex: 0 0 100%; }
+              flex: 0 0 100%;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
       .qh-layout-section__col .block:first-child:last-child.block-ecms-promotions-global {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
