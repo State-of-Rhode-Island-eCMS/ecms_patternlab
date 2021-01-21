@@ -20,26 +20,35 @@
  * @see template_preprocess_page()
  */
 #}
-{% set default_logo = 'true' %}
+{% set default_logo = TRUE %}
 {% if (header_preprocess_values.site_logo != '/profiles/contrib/ecms_profile/ecms_base/themes/custom/ecms/logo.svg') %}
-  {% set default_logo = 'false' %}
+  {% set default_logo = FALSE %}
+{% endif %}
+
+{% set logo_only = FALSE %}
+{% if header_preprocess_values.logo_only %}
+  {% set logo_only = TRUE %}
 {% endif %}
 
 <div class="qh__site-branding">
   <a href="{{ front_page }}" class="qh__site-branding__logo" aria-hidden="true">
-    {% if (default_logo == 'false') %}
-      <img src="{{ header_preprocess_values.site_logo }}" alt="{{ header_preprocess_values.main_line }} logo" />
+    {% if (default_logo == FALSE) %}
+      <img src="{{ header_preprocess_values.site_logo }}" alt="{{ header_preprocess_values.site_name }} logo" />
     {% else %}
       {% include ('@icons/default-logo.svg') %}
     {% endif %}
   </a>
-  <a href="{{ front_page }}" rel="home" class="qh__site-branding__name">
-    {% if (header_preprocess_values.top_line) %}
-      <span class="qh__site-branding__name__top-line">{{ header_preprocess_values.top_line }}</span>
-    {% endif %}
-    <span class="qh__site-branding__name__main-line">{{ header_preprocess_values.main_line }}</span>
-    {% if (header_preprocess_values.bottom_line) %}
-      <span class="qh__site-branding__name__bottom-line">{{ header_preprocess_values.bottom_line }}</span>
-    {% endif %}
-  </a>
+
+  {% if logo_only == FALSE %}
+    <a href="{{ front_page }}" rel="home" class="qh__site-branding__name">
+      {% if (header_preprocess_values.top_line) %}
+        <span class="qh__site-branding__name__top-line">{{ header_preprocess_values.top_line }}</span>
+      {% endif %}
+      <span class="qh__site-branding__name__main-line">{{ header_preprocess_values.main_line }}</span>
+      {% if (header_preprocess_values.bottom_line) %}
+        <span class="qh__site-branding__name__bottom-line">{{ header_preprocess_values.bottom_line }}</span>
+      {% endif %}
+    </a>
+  {% endif %}
+
 </div>
