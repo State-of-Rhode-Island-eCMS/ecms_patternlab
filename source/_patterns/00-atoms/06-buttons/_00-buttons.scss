@@ -33,14 +33,6 @@ button,
     white-space: nowrap;
   }
 
-  & + & {
-    margin-top: ($text-spacer-fallback-value * 0.75);
-
-    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-      margin-top: calc(var(--body-text-spacer) * 0.75);
-    }
-  }
-
   // Primary color theme (highlight, more colorful)
   // :visited on a <button> is not a thing but most of the time these may be <a>s
   &,
@@ -92,6 +84,34 @@ button,
     &:focus {
       background-color: var(--fc__default__fg);
       color: var(--fc__default__bg);
+    }
+
+    html:not(.light) {
+      &,
+      &:visited {
+        background-color: var(--fc__primary--light__bg--dark);
+        color: var(--fc__primary--light__fg--dark);
+      }
+
+      &:hover,
+      &:focus {
+        background-color: var(--fc__default__fg--dark);
+        color: var(--fc__default__bg--dark);
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      &,
+      &:visited {
+        background-color: var(--fc__primary--light__bg--dark);
+        color: var(--fc__primary--light__fg--dark);
+      }
+
+      &:hover,
+      &:focus {
+        background-color: var(--fc__default__fg--dark);
+        color: var(--fc__default__bg--dark);
+      }
     }
   }
 
