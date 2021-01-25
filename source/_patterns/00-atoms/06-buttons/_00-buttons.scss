@@ -27,7 +27,19 @@ button,
   transition: $transition-base;
   user-select: none;
   vertical-align: middle;
-  white-space: nowrap;
+
+  // Small screens can break onto two lines… larger can not
+  @include breakpoint-up($bp--small) {
+    white-space: nowrap;
+  }
+
+  & + & {
+    margin-top: ($text-spacer-fallback-value * 0.75);
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      margin-top: calc(var(--body-text-spacer) * 0.75);
+    }
+  }
 
   // Primary color theme (highlight, more colorful)
   // :visited on a <button> is not a thing but most of the time these may be <a>s

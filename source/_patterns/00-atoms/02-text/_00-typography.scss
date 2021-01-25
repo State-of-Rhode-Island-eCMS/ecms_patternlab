@@ -7,7 +7,9 @@ body {
 
 /* following element spacing selector, just inside node content */
 .node,
-.qh__accordion__content > div {
+.qh__accordion__content > div,
+.qh__step-by-step__content
+ {
   > * + * {
     margin-top: $text-spacer-fallback-value;
 
@@ -213,9 +215,8 @@ h2 {
     margin-bottom: calc(var(--body-text-spacer) * 0.5);
   }
 
-  &:first-of-type,
-  &.emphasis,
-  &:not(.qh__no-decoration) {
+  &:first-of-type:not(.qh__no-decoration),
+  &.emphasis {
     &::after {
       content: ' ';
       display: block;
