@@ -1,0 +1,15 @@
+{% if list_start %}
+  <ol class="qh__numbered-step">
+{% endif %}
+
+<li class="qh__numbered-step__item">
+  <h2 class="qh__numbered-step__title qh__no-decoration">{{ title }}</h2>
+
+  <div class="qh__numbered-step__content">
+    {{ rendered_components }}
+  </div>
+</li>
+
+{% if list_end %}
+  </ol>
+{% endif %}
