@@ -3248,13 +3248,16 @@ table {
   opacity: 0.67; }
 
 .qh__site-branding {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 1.5rem 1rem 1.5rem 0; }
+  margin: 1.5rem 0; }
+  .qh__site-branding__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .qh__site-branding__link, .qh__site-branding__link:visited {
+      text-decoration: none; }
   .qh__site-branding__logo {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3266,17 +3269,25 @@ table {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-left: -0.5rem;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
     width: 5rem;
     min-height: 4.5rem; }
+    .qh__site-branding__logo.--wide {
+      margin: 0 auto;
+      max-width: 26.25em;
+      width: auto; }
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       .qh__site-branding__logo {
         display: block; } }
+    @media (min-width: 40em) {
+      .qh__site-branding__logo {
+        margin-left: -0.5rem;
+        margin-right: 1rem; }
+        .qh__site-branding__logo.--wide {
+          margin-left: 0;
+          margin-right: 0; } }
   .qh__site-branding__name {
     display: block; }
-    .qh__site-branding__name, .qh__site-branding__name:visited {
-      text-decoration: none; }
     .qh__site-branding__name__top-line {
       font-family: "Work Sans", var(--font-sans-fallback);
       font-weight: normal;
@@ -3297,11 +3308,11 @@ table {
           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
           font-weight: normal;
           letter-spacing: 0.035em; } }
-      @media screen and (min-width: 50em) {
+      @media (min-width: 50em) {
         .qh__site-branding__name__top-line {
           font-size: 0.8125rem;
           line-height: 1.2; } }
-      @media screen and (min-width: 62em) {
+      @media (min-width: 62em) {
         .qh__site-branding__name__top-line {
           font-size: 0.875rem;
           line-height: 1.3; } }
@@ -3334,11 +3345,11 @@ table {
           font-family: Georgia, "Times New Roman", serif;
           font-weight: normal;
           letter-spacing: 0.035em; } }
-      @media screen and (min-width: 50em) {
+      @media (min-width: 50em) {
         .qh__site-branding__name__main-line {
           font-size: 2.5rem;
           line-height: 1.075; } }
-      @media screen and (min-width: 62em) {
+      @media (min-width: 62em) {
         .qh__site-branding__name__main-line {
           font-size: 3rem;
           line-height: 1.1; } }
@@ -3370,11 +3381,11 @@ table {
           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
           font-weight: normal;
           letter-spacing: 0.035em; } }
-      @media screen and (min-width: 50em) {
+      @media (min-width: 50em) {
         .qh__site-branding__name__bottom-line {
           font-size: 0.875rem;
           line-height: 1.2; } }
-      @media screen and (min-width: 62em) {
+      @media (min-width: 62em) {
         .qh__site-branding__name__bottom-line {
           font-size: 1rem;
           line-height: 1.45; } }
@@ -5004,15 +5015,16 @@ body {
     @supports (width: Min(10px, 5px)) {
       .qh__page-header__wrapper {
         max-width: var(--content-max-width); } }
-    .qh__page-header__wrapper .qh__site-branding {
-      -webkit-box-flex: 1;
-          -ms-flex: 1 1 66%;
-              flex: 1 1 66%; }
-      @media (min-width: 62em) {
-        .qh__page-header__wrapper .qh__site-branding {
-          -webkit-box-flex: 1;
-              -ms-flex: 1 1 auto;
-                  flex: 1 1 auto; } }
+    @media (min-width: 40em) {
+      .qh__page-header__wrapper .qh__site-branding {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 66%;
+                flex: 1 1 66%; } }
+    @media (min-width: 62em) {
+      .qh__page-header__wrapper .qh__site-branding {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto; } }
     .qh__page-header__wrapper a, .qh__page-header__wrapper a:visited {
       color: var(--fc__header__link); }
     .qh__page-header__wrapper a:hover, .qh__page-header__wrapper a:focus, .qh__page-header__wrapper a:active {
