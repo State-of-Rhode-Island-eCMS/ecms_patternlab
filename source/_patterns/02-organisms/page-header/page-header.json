@@ -1,7 +1,17 @@
 {
   "header_preprocess_values": {
+    "site_logo": "../../images/sample/agency-logo.png",
+    "site_name": "Default site name from Pattern Lab",
     "top_line": "State of Rhode Island",
     "main_line": "Department Name",
-    "bottom_line": "Department Name Third Line"
+    "bottom_line": "Optional Third Line"
+  },
+  "header_preprocess_values_widelogo": {
+    "site_logo": "../../images/sample/wide-logo-white.png",
+    "site_name": "Default site name from Pattern Lab",
+    "logo_only": "Yup",
+    "top_line": "State of Rhode Island",
+    "main_line": "Department Name",
+    "bottom_line": "Optional Third Line"
   }
 }

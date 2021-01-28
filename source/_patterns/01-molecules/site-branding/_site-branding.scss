@@ -1,29 +1,47 @@
 .qh__site-branding {
-  display: flex;
-  align-items: center;
-  margin: $general-v-spacing $general-h-spacing $general-v-spacing 0;
+  margin: $general-v-spacing 0;
 
-  &__logo {
+  &__link {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: -0.5rem;
-    margin-right: 1rem;
-    width: 5rem;
-    min-height: 4.5rem;
-
-    @include onlyIE() {
-      display: block;
-    }
-  }
-
-  &__name {
-    display: block;
+    align-items: center;
 
     &,
     &:visited {
       text-decoration: none;
     }
+  }
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 0.5rem;
+    width: 5rem;
+    min-height: 4.5rem;
+
+    &.--wide {
+      margin: 0 auto;
+      max-width: em(420);
+      width: auto;
+    }
+
+    @include onlyIE() {
+      display: block;
+    }
+
+    @include breakpoint-up($bp--small) {
+      margin-left: -0.5rem;
+      margin-right: 1rem;
+
+      &.--wide {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__name {
+    display: block;
 
     &__top-line {
       font-family: $font-sans-static;
@@ -46,11 +64,11 @@
           letter-spacing: 0.035em;
         }
       }
-      @media screen and (min-width: $bp--medium) {
+      @include breakpoint-up($bp--medium) {
         font-size: 0.8125rem;
         line-height: $st-lh-m;
       }
-      @media screen and (min-width: $bp--large) {
+      @include breakpoint-up($bp--large) {
         font-size: 0.875rem;
         line-height: $st-lh-l;
       }
@@ -91,11 +109,11 @@
           letter-spacing: 0.035em;
         }
       }
-      @media screen and (min-width: $bp--medium) {
+      @include breakpoint-up($bp--medium) {
         font-size: 2.5rem;
         line-height: $h1-lh-m;
       }
-      @media screen and (min-width: $bp--large) {
+      @include breakpoint-up($bp--large) {
         font-size: 3rem;
         line-height: $h1-lh-l;
       }
@@ -135,11 +153,11 @@
           letter-spacing: 0.035em;
         }
       }
-      @media screen and (min-width: $bp--medium) {
+      @include breakpoint-up($bp--medium) {
         font-size: 0.875rem;
         line-height: $st-lh-m;
       }
-      @media screen and (min-width: $bp--large) {
+      @include breakpoint-up($bp--large) {
         font-size: 1rem;
         line-height: $p-lh-l;
       }

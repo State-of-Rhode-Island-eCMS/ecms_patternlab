@@ -10,7 +10,9 @@
     align-items: center;
 
     .qh__site-branding {
-      flex: 1 1 66%;
+      @include breakpoint-up($bp--small) {
+        flex: 1 1 66%;
+      }
 
       @include breakpoint-up($bp--large) {
         flex: 1 1 auto;

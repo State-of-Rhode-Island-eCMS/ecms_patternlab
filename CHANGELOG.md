@@ -10,7 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIG-239: Added logo only functionality to site branding.
+- RIG-239: Themed logo only functionality.
 - RIG-238: Numbered step theming.
 
 ### Changed
@@ -22,6 +22,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.4.5] - 2021-01-21
+### Added
+- RIG-239: Added logo only functionality to site branding.
 
 ## [0.4.4] - 2021-01-19
 ### Fixed
@@ -174,7 +178,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.4...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.5...HEAD
+[0.4.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.4...0.4.5
 [0.4.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.3...0.4.4
 [0.4.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.2...0.4.3
 [0.4.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.1...0.4.2
