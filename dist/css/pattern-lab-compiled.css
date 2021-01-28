@@ -1480,11 +1480,13 @@ body {
 
 /* following element spacing selector, just inside node content */
 .node > * + *,
-.qh__accordion__content > div > * + * {
+.qh__accordion__content > div > * + *,
+.qh__numbered-step__content > * + * {
   margin-top: 1.25rem; }
   @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
     .node > * + *,
-    .qh__accordion__content > div > * + * {
+    .qh__accordion__content > div > * + *,
+    .qh__numbered-step__content > * + * {
       margin-top: var(--body-text-spacer); } }
 
 /* Any time paragraphs follow something else */
@@ -1590,7 +1592,7 @@ h2 {
     h2 {
       margin-top: calc(var(--body-text-spacer) * 2);
       margin-bottom: calc(var(--body-text-spacer) * 0.5); } }
-  h2:first-of-type::after, h2.emphasis::after, h2:not(.qh__no-decoration)::after {
+  h2:first-of-type:not(.qh__no-decoration)::after, h2.emphasis::after {
     content: ' ';
     display: block;
     border-bottom: solid 0.4rem var(--fc__default__violator);
@@ -1598,7 +1600,7 @@ h2 {
     margin-bottom: 1.0625rem;
     width: 1.125em; }
     @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-      h2:first-of-type::after, h2.emphasis::after, h2:not(.qh__no-decoration)::after {
+      h2:first-of-type:not(.qh__no-decoration)::after, h2.emphasis::after {
         margin-top: calc(var(--body-text-spacer) * 0.85);
         margin-bottom: calc(var(--body-text-spacer) * 0.85); } }
 
@@ -2490,8 +2492,12 @@ button,
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  vertical-align: middle;
-  white-space: nowrap; }
+  vertical-align: middle; }
+  @media (min-width: 40em) {
+    button,
+    .qh__btn,
+    .button {
+      white-space: nowrap; } }
   button, button:visited,
   .qh__btn,
   .qh__btn:visited,
@@ -2534,6 +2540,22 @@ button,
 .qh__btn--secondary:hover, .qh__btn--secondary:focus {
   background-color: var(--fc__default__fg);
   color: var(--fc__default__bg); }
+
+.qh__btn--secondary html:not(.light), .qh__btn--secondary html:not(.light):visited {
+  background-color: var(--fc__primary--light__bg--dark);
+  color: var(--fc__primary--light__fg--dark); }
+
+.qh__btn--secondary html:not(.light):hover, .qh__btn--secondary html:not(.light):focus {
+  background-color: var(--fc__default__fg--dark);
+  color: var(--fc__default__bg--dark); }
+
+@media (prefers-color-scheme: dark) {
+  .qh__btn--secondary, .qh__btn--secondary:visited {
+    background-color: var(--fc__primary--light__bg--dark);
+    color: var(--fc__primary--light__fg--dark); }
+  .qh__btn--secondary:hover, .qh__btn--secondary:focus {
+    background-color: var(--fc__default__fg--dark);
+    color: var(--fc__default__bg--dark); } }
 
 .qh__btn--small {
   font-size: 0.875rem;
@@ -2989,6 +3011,130 @@ table {
   background-color: var(--fc__primary--light__bg--dark);
   margin-top: 0;
   padding: 0.5rem 0.75rem; }
+
+.qh__numbered-step {
+  list-style-type: none;
+  margin: 0;
+  padding: 1rem 1rem 1rem 0; }
+  .qh__numbered-step__item {
+    counter-increment: customlistcounter;
+    margin-left: 5rem;
+    padding: 0.75em 0;
+    position: relative;
+    z-index: 1; }
+    .qh__numbered-step__item::before {
+      color: var(--fc__default__hx__fg);
+      content: counter(customlistcounter);
+      font-size: 2.5rem;
+      font-variant-numeric: tabular-nums;
+      font-weight: 225;
+      letter-spacing: -0.0625em;
+      position: absolute;
+      top: 1rem;
+      left: -5rem;
+      text-align: center;
+      width: 5rem;
+      z-index: 4; }
+    .qh__numbered-step__item::after {
+      background-color: var(--fc__nav-minor__border);
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -2.5rem;
+      bottom: -0.5rem;
+      margin-left: -1px;
+      width: 2px;
+      z-index: 1; }
+    .qh__numbered-step__item:last-child::after {
+      display: none; }
+  .qh__numbered-step__title {
+    border-bottom: 1px solid var(--fc__nav-minor__border);
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 0.625rem;
+    padding-bottom: 0.25em; }
+    .qh__numbered-step__title::before, .qh__numbered-step__title::after {
+      border-radius: 50%;
+      content: '';
+      height: 3.75rem;
+      position: absolute;
+      top: 1.1875rem;
+      left: -2.5rem;
+      -webkit-transform: translate(-50%, -38%);
+              transform: translate(-50%, -38%);
+      width: 3.75rem; }
+    .qh__numbered-step__title::after {
+      background-color: var(--fc__default__bg);
+      z-index: 2; }
+    .qh__numbered-step__title::before {
+      background-color: var(--fc__nav-minor__bg);
+      z-index: 3; }
+  @media (min-width: 40em) {
+    .qh__numbered-step {
+      padding: 1.5rem 1rem 1.5rem 0; }
+      .qh__numbered-step__item {
+        margin-left: 7rem;
+        padding: 1.5em 0; }
+        .qh__numbered-step__item::before {
+          font-size: 3.25rem;
+          font-weight: 200;
+          top: 2.25rem;
+          left: -7rem;
+          width: 7rem; }
+        .qh__numbered-step__item::after {
+          left: -3.5rem;
+          margin-left: -2px;
+          width: 4px; }
+      .qh__numbered-step__title::before, .qh__numbered-step__title::after {
+        height: 5.25rem;
+        top: 2.25rem;
+        left: -3.5rem;
+        width: 5.25rem; } }
+  @media (min-width: 50em) {
+    .qh__numbered-step {
+      padding: 2rem 1rem 2rem 0; }
+      .qh__numbered-step__item {
+        margin-left: 8rem;
+        padding: 1.5em 0; }
+        .qh__numbered-step__item::before {
+          font-size: 4rem;
+          font-weight: 175;
+          top: 2rem;
+          left: -8rem;
+          width: 8rem; }
+        .qh__numbered-step__item::after {
+          left: -4rem; }
+      .qh__numbered-step__title {
+        border-bottom-width: 2px; }
+        .qh__numbered-step__title::before, .qh__numbered-step__title::after {
+          height: 6rem;
+          top: 2rem;
+          left: -4rem;
+          width: 6rem; } }
+  @media (min-width: 62em) {
+    .qh__numbered-step__item {
+      margin-left: 10rem; }
+      .qh__numbered-step__item::before {
+        font-size: 4.5rem;
+        top: 2.5rem;
+        left: -10rem;
+        width: 10rem; }
+      .qh__numbered-step__item::after {
+        left: -5rem;
+        margin-left: -3px;
+        width: 6px; }
+    .qh__numbered-step__title::before, .qh__numbered-step__title::after {
+      height: 7.5rem;
+      top: 2.5rem;
+      left: -5rem;
+      width: 7.5rem; } }
+  .qh__numbered-step__content {
+    margin-top: 1.875rem; }
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      .qh__numbered-step__content {
+        margin-top: calc(var(--body-text-spacer) * 1.5); } }
+    .qh__numbered-step__content:first-child {
+      margin-top: 0; }
 
 .qh__page-tite-with-image {
   background-color: var(--c__quahog);

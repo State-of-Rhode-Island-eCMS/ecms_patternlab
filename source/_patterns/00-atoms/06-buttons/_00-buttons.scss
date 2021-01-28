@@ -27,7 +27,11 @@ button,
   transition: $transition-base;
   user-select: none;
   vertical-align: middle;
-  white-space: nowrap;
+
+  // Small screens can break onto two lines… larger can not
+  @include breakpoint-up($bp--small) {
+    white-space: nowrap;
+  }
 
   // Primary color theme (highlight, more colorful)
   // :visited on a <button> is not a thing but most of the time these may be <a>s
@@ -80,6 +84,34 @@ button,
     &:focus {
       background-color: var(--fc__default__fg);
       color: var(--fc__default__bg);
+    }
+
+    html:not(.light) {
+      &,
+      &:visited {
+        background-color: var(--fc__primary--light__bg--dark);
+        color: var(--fc__primary--light__fg--dark);
+      }
+
+      &:hover,
+      &:focus {
+        background-color: var(--fc__default__fg--dark);
+        color: var(--fc__default__bg--dark);
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      &,
+      &:visited {
+        background-color: var(--fc__primary--light__bg--dark);
+        color: var(--fc__primary--light__fg--dark);
+      }
+
+      &:hover,
+      &:focus {
+        background-color: var(--fc__default__fg--dark);
+        color: var(--fc__default__bg--dark);
+      }
     }
   }
 

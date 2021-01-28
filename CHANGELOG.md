@@ -11,6 +11,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 ### Added
 - RIG-239: Added logo only functionality to site branding.
+- RIG-238: Numbered step theming.
 
 ### Changed
 
