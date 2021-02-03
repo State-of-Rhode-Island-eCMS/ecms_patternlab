@@ -183,7 +183,8 @@ body {
   /* default: 400 */
   font-style: italic;
   font-stretch: normal;
-  src: url("../fonts/work-sans-vf/WorkSans-Italic-subset.woff2") format("woff2 supports variations"), url("../fonts/work-sans-vf/WorkSans-Italic-subset.woff2") format("woff2-variations"); }
+  src: url("../fonts/work-sans-vf/WorkSans-Italic-subset.woff2") format("woff2 supports variations"), url("../fonts/work-sans-vf/WorkSans-Italic-subset.woff2") format("woff2-variations");
+  font-display: swap; }
 
 body {
   --font-sans-fallback: Helvetica Neue, Helvetica, Arial, sans-serif;
