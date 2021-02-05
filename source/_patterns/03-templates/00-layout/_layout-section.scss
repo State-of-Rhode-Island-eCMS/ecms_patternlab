@@ -288,6 +288,7 @@
   // Column elements
   &__col {
     margin-bottom: $general-v-spacing;
+    overflow: auto;
 
     .block:first-child:last-child {
       display: flex;
