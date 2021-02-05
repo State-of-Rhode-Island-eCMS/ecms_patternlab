@@ -1,0 +1,57 @@
+.qh__single-event {
+
+  &__header {
+    margin-bottom: ($text-spacer-fallback-value * 1.5);
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      margin-bottom: calc(var(--body-text-spacer) * 1.5);
+    }
+  }
+
+  &__meta {
+    margin-top: ($text-spacer-fallback-value * 1);
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      margin-top: calc(var(--body-text-spacer) * 1);
+    }
+
+    &__label {
+      letter-spacing: $kerning-base;
+      text-transform: uppercase;
+
+      .wf-inactive & {
+        font-weight: bold;
+      }
+
+      @supports (font-variation-settings: normal) {
+        html:not(.novf) & {
+          font-weight: 625;
+        }
+        html:not(.novf).wf-inactive & {
+          font-weight: normal;
+        }
+      }
+    }
+
+    time {
+      // Numbers in dates look better as non-oldstyle in this context
+      @supports (font-variation-settings: normal) {
+        font-variant-numeric: proportional-nums;
+      }
+    }
+
+    &__address {}
+
+    &__url {}
+  }
+
+  &__content {
+    margin-bottom: ($text-spacer-fallback-value * 1.5);
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      margin-bottom: calc(var(--body-text-spacer) * 1.5);
+    }
+  }
+
+  &__footer {}
+}
