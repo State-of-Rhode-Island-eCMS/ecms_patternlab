@@ -1,0 +1,64 @@
+.qh__events-latest {
+  padding: $general-v-spacing 0;
+
+  // <h2>
+  &__title {
+    margin: 0;
+    padding-bottom: $general-v-spacing;
+    position: relative;
+  }
+
+  // <h2> <a>
+  &__title &__all {
+    font-size: 50%;
+    position: absolute;
+      top: 0.5em; right: 0;
+
+    @include breakpoint-down($bp--medium) {
+      display: none;
+    }
+  }
+
+  // <p>
+  .qh__teaser-events__content {
+    p {
+      font-size: 1rem;
+      @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+        --font-size-min-value: 0.925;
+        --font-size-max-value: 1;
+        --font-size-scaler-value: var(--p-scaler-value);
+        font-size: var(--font-size);
+
+        --font-lh-min-value: #{$st-lh-s};
+        --font-lh-max-value: #{$st-lh-l};
+        --font-lh-scaler-value: var(--st-lh-scaler-value);
+        line-height: var(--line-height);
+      }
+    }
+  }
+
+
+  &__list + &__all {
+
+    @include breakpoint-up($bp--medium) {
+      display: none;
+    }
+  }
+
+  // <ul>
+  &__list {
+    .qh__teaser-events {
+      padding-left: $general-h-spacing;
+      padding-right: $general-h-spacing;
+    }
+  }
+
+  // Remove all flex column declarations
+  @include onlyIE() {
+    &__list .qh__teaser-events,
+    &__list .qh__teaser-events__header,
+    &__list .qh__teaser-events__content {
+      display: block !important;
+    }
+  }
+}

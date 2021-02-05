@@ -1,0 +1,63 @@
+{#
+/**
+ * @file
+ * Theme override to display a event teaser.
+ *
+ * Available variables:
+ * - title: Title of event
+ * - url: Url path to event node
+ * - location: Location of event
+ * - rrule: A formatted rrule string
+ * - month: Month of event in human readable text
+ * - datetime_month_format: Month in HTML datetime format
+ * - start_date: Start date of event in human readable text
+ * - datetime_startdate_format: Start date in HTML datetime format
+ * - end_date: End date of event in human readable text
+ * - datetime_enddate_format: End date in HTML datetime format
+ * - start_time: Start time of event in human readable text
+ * - datetime_starttime_format: Start time in HTML datetime format
+ * - end_time: End time of event in human readable text
+ * - datetime_endtime_format: End time in HTML datetime format
+ *
+ * @ingroup themeable
+ */
+#}
+
+<article class="qh__teaser-event">
+  <div class="qh__teaser-event__date">
+    <time datetime="{{ datetime_month_format }}">
+      <span class="small-text">{{ month }}</span>
+
+      <time datetime="{{ datetime_startdate_format }}" class="qh__teaser-event__start-date">{{ start_date }}</time>
+
+      {% if start_date != end_date %}
+       <time datetime="{{ datetime_enddate_format }}" class="qh__teaser-event__end-date">{{ end_date }}</time>
+      {% endif %}
+    </time>
+  </div>
+
+  <div class="qh__teaser-event__content">
+    <h3 class="qh__teaser-event__title">
+      <a class="qh__teaser-event__link" href="{{ url }}">{{ title }}</a>
+    </h3>
+
+    {% if location|default %}
+      <p class="qh__teaser-event__location small-text"><strong>{{ "Location:"|t }}</strong> {{ location }}</p>
+    {% endif %}
+
+    {% if start_time|default or rrule|default %}
+      <p class="qh__teaser-event__time small-text {{ time and rrule ? 'qh__teaser-event__time--separator' }}">
+
+        <time datetime="{{ datetime_starttime_format }}" class="qh__teaser-event__start-time small-text">{{ start_time }}</time>
+
+        {% if start_time != end_time %}
+          <time datetime="{{ datetime_endtime_format }}" class="qh__teaser-event__end-time small-text">{{ end_time }}</time>
+        {% endif %}
+
+        {% if rrule %}
+          <span class="qh__teaser-event__time-rrule" data-rrule="{{ rrule }}"></span>
+        {% endif %}
+      </p>
+    {% endif %}
+  </div>
+</article>
