@@ -1,0 +1,134 @@
+.qh__teaser-event {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: $general-v-spacing;
+
+
+  /*
+   * Date styles
+   */
+  &__date {
+    min-width: rem(150);
+    height: rem(80);
+    background-color: var(--fc__primary--light__bg);
+    border-top: rem(4) var(--fc__primary--light__link) solid;
+    color: var(--fc__primary--light__fg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: $general-h-spacing;
+
+    > time {
+      // Month
+      > span {
+        display: block;
+        text-transform: uppercase;
+        font-weight: 450 !important; // Overrides small-text
+        line-height: 1;
+        margin-bottom: calc(var(--body-text-spacer) * 0.25);
+      }
+
+      // Day(s)
+      time {
+        font-weight: 450;
+        @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+          --font-size-min-value: #{$h3-size-s-value};
+          --font-size-max-value: #{$h3-size-l-value};
+          --font-size-scaler-value: var(--h3-scaler-value);
+          font-size: var(--font-size);
+          --font-lh-min-value: #{$h3-lh-s};
+          --font-lh-max-value: #{$h3-lh-l};
+          --font-lh-scaler-value: var(--h3-lh-scaler-value);
+          line-height: var(--line-height);
+          word-spacing: var(--word-spacing);
+        }
+      }
+    }
+  }
+
+  &__end-date,
+  &__end-time {
+    &::before {
+      content: '- ';
+    }
+  }
+
+  /*
+   * Content styles
+   */
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    --font-size-min-value: 1.125;
+    --font-size-max-value: 1.5;
+    --font-size-scaler-value: var(--h3-scaler-value);
+    font-size: var(--font-size);
+    margin-top: 0;
+    margin-bottom: calc(var(--body-text-spacer) * 0.25);
+
+    > a {
+      text-decoration: none;
+    }
+  }
+
+  &__location {
+    margin-bottom: rem(2);
+  }
+
+  &__time-rrule {
+    &::before {
+      content: '/ ';
+    }
+  }
+
+  &__cta {
+    display: inline-block;
+    padding-top: ($general-v-spacing/2);
+
+    &::after {
+      color: var(--fc__default__link);
+      content: ' >';
+      display: inline-block;
+      transition: $transition-base;
+      transform: translateX(0);
+    }
+  }
+
+  // <a> with "Read article"
+  &__cta &__link {
+    color: var(--fc__primary--light__link);
+
+    // Do we want this effect? The whole article card is now clickable
+    // and sighted keyboard users still can target the two links within
+    // From https://inclusive-components.design/cards/
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      @include qh-inset-supports(0);
+      overflow: visible;
+    }
+  }
+
+  // Because we are using the above method, a:hover will not affect children.
+  // Therefore, we can not color the Headline when the Read More link is hovered.
+  // Therefore therefore, we use a hover on the <article> element
+  // Hover ONLY because keyboard focus still works as expected
+  &:hover &__title a {
+    color: var(--fc__primary--light__link--hover);
+  }
+
+  &:hover &__cta::after {
+    color: var(--fc__primary--light__link--hover);
+    transform: translateX(4px);
+  }
+
+  p {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "title": "Farmers Market",
+  "url": "#",
+  "location": "Fishermans Memorial State Park, Narrangansett",
+  "rrule": "FREQ=WEEKLY;WKST=SU;UNTIL=20210508T035959Z;BYDAY=FR",
+  "month": "February",
+  "datetime_month_format": "2021-02",
+  "start_date": "5",
+  "datetime_startdate_format": "2021-02-05",
+  "end_date": "5",
+  "datetime_enddate_format": "2021-02-05",
+  "start_time": "9:00am",
+  "datetime_starttime_format": "09:00:00",
+  "end_time": "1:00pm",
+  "datetime_endtime_format": "13:00:00"
+}

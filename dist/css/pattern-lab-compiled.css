@@ -2064,6 +2064,10 @@ label {
   --st-font-wght: 475;
   display: block; }
 
+/* using this for global text styles */
+body {
+  word-break: break-word; }
+
 a {
   color: var(--fc__default__link);
   text-decoration: underline;
@@ -3493,6 +3497,117 @@ table {
     -webkit-transform: translateX(4px);
             transform: translateX(4px); }
 
+.qh__teaser-event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  margin-bottom: 1.5rem;
+  /*
+   * Date styles
+   */
+  /*
+   * Content styles
+   */ }
+  .qh__teaser-event__date {
+    min-width: 9.375rem;
+    height: 5rem;
+    background-color: var(--fc__primary--light__bg);
+    border-top: 0.25rem var(--fc__primary--light__link) solid;
+    color: var(--fc__primary--light__fg);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    margin-right: 1rem; }
+    .qh__teaser-event__date > time > span {
+      display: block;
+      text-transform: uppercase;
+      font-weight: 450 !important;
+      line-height: 1;
+      margin-bottom: calc(var(--body-text-spacer) * 0.25); }
+    .qh__teaser-event__date > time time {
+      font-weight: 450; }
+      @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+        .qh__teaser-event__date > time time {
+          --font-size-min-value: 1.25;
+          --font-size-max-value: 1.75;
+          --font-size-scaler-value: var(--h3-scaler-value);
+          font-size: var(--font-size);
+          --font-lh-min-value: 1.1;
+          --font-lh-max-value: 1.15;
+          --font-lh-scaler-value: var(--h3-lh-scaler-value);
+          line-height: var(--line-height);
+          word-spacing: var(--word-spacing); } }
+  .qh__teaser-event__end-date::before, .qh__teaser-event__end-time::before {
+    content: '- '; }
+  .qh__teaser-event__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .qh__teaser-event__title {
+    --font-size-min-value: 1.125;
+    --font-size-max-value: 1.5;
+    --font-size-scaler-value: var(--h3-scaler-value);
+    font-size: var(--font-size);
+    margin-top: 0;
+    margin-bottom: calc(var(--body-text-spacer) * 0.25); }
+    .qh__teaser-event__title > a {
+      text-decoration: none; }
+  .qh__teaser-event__location {
+    margin-bottom: 0.125rem; }
+  .qh__teaser-event__time-rrule::before {
+    content: '/ '; }
+  .qh__teaser-event__cta {
+    display: inline-block;
+    padding-top: 0.75rem; }
+    .qh__teaser-event__cta::after {
+      color: var(--fc__default__link);
+      content: ' >';
+      display: inline-block;
+      -webkit-transition: all 250ms ease;
+      transition: all 250ms ease;
+      -webkit-transform: translateX(0);
+              transform: translateX(0); }
+  .qh__teaser-event__cta .qh__teaser-event__link {
+    color: var(--fc__primary--light__link); }
+    .qh__teaser-event__cta .qh__teaser-event__link::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: visible; }
+      @supports (inset: 0) {
+        .qh__teaser-event__cta .qh__teaser-event__link::before {
+          inset: 0; } }
+  .qh__teaser-event:hover .qh__teaser-event__title a {
+    color: var(--fc__primary--light__link--hover); }
+  .qh__teaser-event:hover .qh__teaser-event__cta::after {
+    color: var(--fc__primary--light__link--hover);
+    -webkit-transform: translateX(4px);
+            transform: translateX(4px); }
+  .qh__teaser-event p {
+    margin-top: 0; }
+
 .qh__teaser-hotel {
   background-color: var(--fc__default__bg);
   border: 0.0625rem solid var(--fc__default__border);
@@ -4016,6 +4131,56 @@ table {
   .qh__content-components-block[class*='qh__tc'] figure:first-child {
     margin: -1.5rem -1rem 1.5rem;
     width: calc( 100% + (1rem * 2)); }
+
+.qh__events-list {
+  padding: 1.5rem 0; }
+  .qh__events-list__title {
+    margin: 0;
+    padding-bottom: 1.5rem; }
+  .qh__events-list__list {
+    margin: 0 -1rem; }
+  .qh__events-list__list > * {
+    padding: 0 1rem; }
+    .qh__events-list__list > * + * {
+      margin-top: 1.5rem; }
+
+.qh__events-latest {
+  padding: 1.5rem 0; }
+  .qh__events-latest__title {
+    margin: 0;
+    padding-bottom: 1.5rem;
+    position: relative; }
+  .qh__events-latest__title .qh__events-latest__all {
+    font-size: 50%;
+    position: absolute;
+    top: 0.5em;
+    right: 0; }
+    @media (max-width: 49.9375em) {
+      .qh__events-latest__title .qh__events-latest__all {
+        display: none; } }
+  .qh__events-latest .qh__teaser-events__content p {
+    font-size: 1rem; }
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      .qh__events-latest .qh__teaser-events__content p {
+        --font-size-min-value: 0.925;
+        --font-size-max-value: 1;
+        --font-size-scaler-value: var(--p-scaler-value);
+        font-size: var(--font-size);
+        --font-lh-min-value: 1.1;
+        --font-lh-max-value: 1.3;
+        --font-lh-scaler-value: var(--st-lh-scaler-value);
+        line-height: var(--line-height); } }
+  @media (min-width: 50em) {
+    .qh__events-latest__list + .qh__events-latest__all {
+      display: none; } }
+  .qh__events-latest__list .qh__teaser-events {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .qh__events-latest__list .qh__teaser-events,
+    .qh__events-latest__list .qh__teaser-events__header,
+    .qh__events-latest__list .qh__teaser-events__content {
+      display: block !important; } }
 
 .qh__global-header {
   background-color: var(--fc__official__bg);
@@ -6031,7 +6196,8 @@ body {
       .qh-layout-section--col-size-25-repeat .qh-layout-section__col + .qh-layout-section__col {
         margin-left: 1.5rem; } }
   .qh-layout-section__col {
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1.5rem;
+    overflow: auto; }
     .qh-layout-section__col .block:first-child:last-child {
       display: -webkit-box;
       display: -ms-flexbox;
