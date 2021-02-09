@@ -1,0 +1,94 @@
+<article class="qh__single-event">
+  <header class="qh__single-event__header">
+    <h1 class="qh__h2">{{ title }}</h1>
+
+    <figure class="qh__single-event__image">
+      {{ img|raw }}
+    </figure>
+
+    <div class="qh__single-event__meta">
+      <p>
+        <span class="small-text qh__single-event__meta__label">Date: </span>
+
+        {% if start_date == end_date and allday %}
+          <!-- If a start date and all day -->
+          {{ "All day"|t }} <time datetime="{{ datetime_startdate_format }}">{{ start_date }}</time>
+
+        {% elseif start_date != end_date and allday %}
+          <!-- If a start date and end date with all day -->
+          {{ "All day from"|t }} <time datetime="{{ datetime_startdate_format }}">{{ start_date }}</time> {{ "to"|t }} <time datetime="{{ datetime_enddate_format }}">{{ end_date }}</time>
+
+        {% elseif start_date == end_date and start_time == end_time %}
+          <!-- If a start date, start time -->
+          <time datetime="{{ datetime_starttime_format }}"><time datetime="{{ datetime_startdate_format }}">{{ start_date }}</time> — <time datetime="{{ datetime_starttime_format }}">{{ start_time}}</time>
+
+        {% elseif start_date == end_date and start_time|default %}
+          <!-- If a start date, start time, end time -->
+          <time datetime="{{ datetime_starttime_format }}"><time datetime="{{ datetime_startdate_format }}">{{ start_date }}</time> — <time datetime="{{ datetime_starttime_format }}">{{ start_time}}</time> {{ "to"|t }} <time datetime="{{ datetime_endtime_format }}">{{ end_time }}</time>
+
+        {% elseif start_date != end_date and start_time|default %}
+          <!-- If a start date, start time, end date, and end time -->
+          <time datetime="{{ datetime_starttime_format }}">{{ "Starting at"|t }} {{ start_time }}</time>, <time datetime="{{ datetime_startdate_format }}">{{ start_date }}</time> {{ "until"|t }} <time datetime="{{ datetime_enddate_format }}">{{ end_time }}</time>, <time datetime="{{ datetime_enddate_format }}">{{ end_date }}</time>
+
+        {% else %}
+           <!-- Shouldn't get here but adding it as safe default -->
+          <time datetime="{{ datetime_starttime_format }}"><time datetime="{{ datetime_startdate_format }}">{{ start_date }}</time>- <time datetime="{{ datetime_starttime_format }}">{{ start_time}}</time>
+        {% endif  %}
+      </p>
+
+      <!-- If location -->
+      {% if location|default %}
+        <p>
+          <span class="small-text qh__single-event__meta__label">Location: </span>
+          <span class="qh__single-event__meta__address">{{ location }}</span>
+        </p>
+      {% endif %}
+
+      <!-- If Virtual Meeting URL present (new field) -->
+      {% if virtual_link_url %}
+        <p>
+          <span class="small-text qh__single-event__meta__label">Virtual Meeting: </span>
+          <a class="qh__single-event__meta__url" href="{{ virtual_link_url }}">{{ virtual_link_url }}</a>
+        </p>
+      {% endif %}
+
+      <!-- If Registration Required URL present (new field) -->
+      {% if registration_link_url %}
+        <p>
+          <span class="small-text qh__single-event__meta__label">Registration: </span>
+          <a class="qh__single-event__meta__url" href="{{ registration_link_url }}">{{ registration_link_url }}</a>
+        </p>
+      {% endif %}
+    </div>
+  </header>
+
+  {% if description|default  %}
+    <div class="qh__single-event__content">
+      <!-- Description -->
+      {{ description }}
+    </div>
+  {% endif %}
+
+  <!-- Only if Contact or Event Type has data -->
+  {% if event_type|default or contact|default %}
+
+    <footer class="qh__single-event__footer">
+      <!-- If Event Type -->
+      {% if event_type|default %}
+        <p>
+          <span class="small-text qh__single-event__meta__label">Event Type: </span>
+          {{ event_type }}
+        </p>
+      {% endif %}
+
+      <!-- If Contact -->
+      {% if contact|default %}
+        <p>
+          <span class="small-text qh__single-event__meta__label">Contact: </span>
+          {{ contact }}
+        </p>
+      {% endif %}
+
+    </footer>
+  {% endif %}
+</article>
