@@ -10,6 +10,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIG-188: Theme event full display.
+- RIG-253: Theme events latest view.
+- RIG-252: Theme events listing view.
 
 ### Changed
 
