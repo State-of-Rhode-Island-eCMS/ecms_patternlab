@@ -2,9 +2,11 @@
   <header class="qh__single-event__header">
     <h1 class="qh__h2">{{ title }}</h1>
 
-    <figure class="qh__single-event__image">
-      {{ img|raw }}
-    </figure>
+    {% if img|default %}
+      <figure class="qh__single-event__image">
+        {{ img|raw }}
+      </figure>
+    {% endif %}
 
     <div class="qh__single-event__meta">
       <p>
