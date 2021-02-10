@@ -24,7 +24,6 @@
       font-size: 87.5%; // about 16px
       font-style: italic;
       font-variant-numeric: oldstyle-nums;
-
     }
   }
 
@@ -34,7 +33,9 @@
   }
 
   // <p>
-  &__excerpt {}
+  &__excerpt {
+    transition: $transition-base;
+  }
 
   // <p>
   &__cta {
@@ -71,6 +72,10 @@
   // Hover ONLY because keyboard focus still works as expected
   &:hover &__title a {
     color: var(--fc__default__link--hover);
+  }
+
+  &:hover &__excerpt {
+    opacity: 0.8;
   }
 
   &:hover &__cta::after {
