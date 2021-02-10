@@ -1,0 +1,39 @@
+{#
+  This small pattern renders a "Read [thing]" link followed by a chevron character ">"
+
+  A class of "qh__cta" is required on a parent element
+  This is because:
+  • Hover on the parent should change the color of a title and the Read more link
+  • Optionally, hover on the parent changes the opacity of the excerpt content
+  • Hover on the parent should move the chevron a few pixels to the right
+
+  Why use hover on a parent?
+  • The CTA link itself uses absolute positioning to make it cover the parent
+  • Any hover effects on this CTA link will not affect siblings or parents
+
+  Sample complete markup using an article teaser:
+  <article class="qh__teaser-article qh__cta">
+    <h2 class="qh__teaser-article__title">Headline</h2>
+    <p class="qh__teaser-article__excerpt">Stuff</p>
+
+    <p class="qh__cta__content">
+      <a href="#" class="qh__cta__link">Read Speech</a>
+    </p>
+  </article>
+
+  To use in another template:
+  {% include "@molecules/cta-read-more/cta-read-more.twig" with {
+    cta_read_text: "Read Something",
+    cta_url: {{ url }}
+  }
+  %}
+#}
+<p class="qh__cta__content">
+  <a class="qh__cta__link" href="{{ cta_url }}">
+  {%- if cta_read_text -%}
+    {{ cta_read_text }}
+  {%- else -%}
+    Read article
+  {%- endif -%}
+  </a>
+</p>
