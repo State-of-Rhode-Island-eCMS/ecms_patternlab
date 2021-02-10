@@ -1,0 +1,27 @@
+.qh__speeches {
+
+  // h1
+  &__title {}
+
+  // ul
+  &__list {
+    padding-top: $text-spacer-fallback-value;
+    padding-bottom: $text-spacer-fallback-value;
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      padding-top: var(--body-text-spacer);
+      padding-bottom: var(--body-text-spacer);
+    }
+  }
+
+  // li
+  &__item {}
+
+  &__item + &__item {
+    padding-top: $text-spacer-fallback-value;
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      padding-top: var(--body-text-spacer);
+    }
+  }
+}
