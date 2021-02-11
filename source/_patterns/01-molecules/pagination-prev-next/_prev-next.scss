@@ -1,10 +1,10 @@
 .qh__prevnext {
   border-top: $border-xs solid var(--fc__default__border);
   border-bottom: $border-xs solid var(--fc__default__border);
-  margin-top: $text-spacer-fallback-value;
+  margin-top: ($text-spacer-fallback-value * 2);
 
   @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-    margin-top: var(--body-text-spacer);
+    margin-top: calc(var(--body-text-spacer) * 2);
   }
 
   &__list {
@@ -28,7 +28,7 @@
     position: relative;
 
     @include breakpoint-up($bp--small) {
-      flex: 1 0 49%;
+      flex: 0 1 48.5%;
     }
   }
 
@@ -43,8 +43,8 @@
     }
   }
 
-  &__prev,
-  &__next {
+  &__prev:not(:empty),
+  &__next:not(:empty) {
 
     // Create visual chevrons with CSS
     @include breakpoint-up($bp--medium) {
@@ -62,7 +62,7 @@
     }
   }
 
-  &__prev {
+  &__prev:not(:empty) {
 
     @include breakpoint-up($bp--medium) {
       padding-left: 1.5em;
@@ -79,7 +79,7 @@
     }
   }
 
-  &__next {
+  &__next:not(:empty) {
     @include breakpoint-up($bp--medium) {
       padding-right: 1.5em;
 
