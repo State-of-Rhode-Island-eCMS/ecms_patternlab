@@ -1,0 +1,16 @@
+<nav class="qh__prevnext" aria-label="Events">
+  <ul class="qh__prevnext__list">
+    {%- if prev_url -%}
+    <li class="qh__prevnext__item qh__prevnext__prev"><a class="qh__prevnext__link" href="{{ prev_url }}">
+      <span class="small-text qh__prevnext__label">Previous</span>
+      <span class="qh__prevnext__title">{{ prev_title }}</span>
+    </a></li>
+    {%- endif -%}
+    {%- if next_url -%}
+    <li class="qh__prevnext__item qh__prevnext__next"><a class="qh__prevnext__link" href="{{ next_url }}">
+      <span class="small-text qh__prevnext__label">Next</span>
+      <span class="qh__prevnext__title">{{ next_title }}</span>
+    </a></li>
+    {%- endif -%}
+  </ul>
+</nav>
