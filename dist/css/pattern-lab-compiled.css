@@ -6426,6 +6426,9 @@ body {
     margin-left: 2%;
     width: 49%; } }
 
+.qh__teaser-speech:hover .qh__teaser-speech__title a {
+  color: var(--fc__default__link--hover); }
+
 .publish-date {
   font-style: italic;
   font-variant-numeric: oldstyle-nums; }
