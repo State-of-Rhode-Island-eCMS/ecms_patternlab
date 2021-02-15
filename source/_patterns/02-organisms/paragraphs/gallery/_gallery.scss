@@ -1,12 +1,17 @@
 .qh__gallery {
 
-  // Controls wrapper. Contains prev/next buttons and radio navigaiton
+  // Controls wrapper. Contains prev/next buttons and radio navigation
   &__controls {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     margin-top: $general-v-spacing;
+
+    &:focus {
+      outline: 2px solid var(--fc__default__link--focus);
+      outline-offset: -2px;
+    }
 
     .qh__gallery__button--prev {
       order: 0;
@@ -57,14 +62,18 @@
   }
 
   &__slider {
+    display: flex;
+    align-items: stretch;
+    flex-flow: row nowrap;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 1s ease 1s; // TODO: This isn't working but at least it hides it before having it pop in.
+    //transition: opacity 1s ease 0s, visibility 0s linear 0s; // TODO: This isn't working but at least it hides it before having it pop in.
 
     // Prevent flash of unstyled content
     &.tns-slider {
       visibility: visible;
       opacity: 1;
+      //transition: opacity 1s ease 0s, visibility 0s linear 1s
     }
 
     // Gallery items or slides.
@@ -73,14 +82,35 @@
       position: relative;
 
       // Override base caption styles
+
+      // Options:
+      // 1. Recolor background based on light mode/dark mode (use a ::before element to give it opacity)
+      // 2. Hardcode the colors of links over a dark background, which means we DO NOT use functional colors
+      // Went with option 2 right now
       figcaption {
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: var(--c__quahog--dark);
+        height: 100%;
         width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
         padding: ($general-v-spacing * 1) ($general-h-spacing * 2);
         color: var(--c__white);
+
+        a,
+        a:visited {
+          color: var(--c__ocean);
+        }
+
+        a:hover,
+        a:focus {
+          color: var(--fc__default__accent);
+        }
+
+        @include breakpoint-up($bp--small) {
+          background-color: hsla(0, 0%, 18%, 0.75);
+          height: auto;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
       }
     }
   }
