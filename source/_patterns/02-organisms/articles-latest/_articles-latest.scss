@@ -47,8 +47,6 @@
 
   // <ul>
   &__list {
-    margin: 0 #{- $general-h-spacing};
-
     .qh__teaser-article {
       padding-right: $general-h-spacing * 2;
     }

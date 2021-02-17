@@ -4098,25 +4098,23 @@ table {
   @media (min-width: 50em) {
     .qh__articles-latest__list + .qh__articles-latest__all {
       display: none; } }
-  .qh__articles-latest__list {
-    margin: 0 -1rem; }
-    .qh__articles-latest__list .qh__teaser-article {
-      padding-right: 2rem; }
-    @media (min-width: 50em) {
-      .qh__articles-latest__list {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-flow: row nowrap;
-                flex-flow: row nowrap;
-        -webkit-box-align: stretch;
-            -ms-flex-align: stretch;
-                align-items: stretch;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center; } }
+  .qh__articles-latest__list .qh__teaser-article {
+    padding-right: 2rem; }
+  @media (min-width: 50em) {
+    .qh__articles-latest__list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
   @media (min-width: 50em) {
     .qh__articles-latest__list > * {
       -webkit-box-flex: 1;
