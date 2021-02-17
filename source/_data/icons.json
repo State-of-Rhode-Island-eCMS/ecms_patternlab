@@ -1,0 +1,85 @@
+{
+  "icons": {
+    "Bell": {
+      "filename": "alarm-bell.svg"
+    },
+    "Chevron down": {
+      "filename": "chevron-down.svg"
+    },
+    "Chevron left": {
+      "filename": "chevron-left.svg"
+    },
+    "Chevron right": {
+      "filename": "chevron-right.svg"
+    },
+    "Cog": {
+      "filename": "cog.svg"
+    },
+    "Default logo": {
+      "filename": "default-logo.svg"
+    },
+    "Download": {
+      "filename": "download.svg"
+    },
+    "Feed": {
+      "filename": "feed.svg"
+    },
+    "File Excel": {
+      "filename": "file-excel.svg"
+    },
+    "File generic": {
+      "filename": "file-generic.svg"
+    },
+    "File pdf": {
+      "filename": "file-pdf.svg"
+    },
+    "File powerpoint": {
+      "filename": "file-powerpoint.svg"
+    },
+    "File word": {
+      "filename": "file-word.svg"
+    },
+    "Globe": {
+      "filename": "globe.svg"
+    },
+    "Guillemot left": {
+      "filename": "guillemot-left.svg"
+    },
+    "Guillemot right": {
+      "filename": "guillemot-right.svg"
+    },
+    "Home": {
+      "filename": "home.svg"
+    },
+    "Link external": {
+      "filename": "link-external.svg"
+    },
+    "Maple leaf": {
+      "filename": "maple-leaf.svg"
+    },
+    "Plus": {
+      "filename": "plus-minus.svg"
+    },
+    "Ri state seal": {
+      "filename": "ri-state-seal.svg"
+    },
+    "Search glass": {
+      "filename": "search-glass.svg"
+    },
+    "Social Facebook": {
+      "filename": "social-facebook.svg"
+    },
+    "Social Instagram": {
+      "filename": "social-instagram.svg"
+    },
+    "Social LinkedIn": {
+      "filename": "social-linkedin.svg"
+    },
+    "Social Twitter": {
+      "filename": "social-twitter.svg"
+    },
+    "Social YouTube": {
+      "filename": "social-youtube.svg"
+    }
+  }
+}
