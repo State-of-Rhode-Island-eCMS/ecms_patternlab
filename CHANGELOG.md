@@ -10,8 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIG-254: Added icon button theming.
-- RIG-254: Added accent button style.
 
 ### Changed
 
@@ -22,6 +20,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.4.8] - 2021-02-17
+### Added
+- RIG-254: Added icon button theming.
+- RIG-254: Added accent button style.
 
 ## [0.4.7] - 2021-02-12
 ### Added
@@ -189,7 +192,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.7...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.8...HEAD
+[0.4.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.7...0.4.8
 [0.4.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.6...0.4.7
 [0.4.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.5...0.4.6
 [0.4.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.4...0.4.5
