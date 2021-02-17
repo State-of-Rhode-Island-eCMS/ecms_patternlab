@@ -5805,6 +5805,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 1.5rem; }
+  .qh__gallery__controls:focus {
+    outline: 2px solid var(--fc__default__link--focus);
+    outline-offset: -2px; }
   .qh__gallery__controls .qh__gallery__button--prev {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
@@ -5845,23 +5848,42 @@ body {
       background-color: var(--fc__default__link); }
 
 .qh__gallery__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 1s ease 1s;
-  transition: opacity 1s ease 1s; }
+  visibility: hidden; }
   .qh__gallery__slider.tns-slider {
     visibility: visible;
     opacity: 1; }
   .qh__gallery__slider > figure {
     position: relative; }
     .qh__gallery__slider > figure figcaption {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: var(--c__quahog--dark);
+      height: 100%;
       width: 100%;
-      position: absolute;
-      bottom: 0;
-      left: 0;
       padding: 1.5rem 2rem;
       color: var(--c__white); }
+      .qh__gallery__slider > figure figcaption a,
+      .qh__gallery__slider > figure figcaption a:visited {
+        color: var(--c__ocean); }
+      .qh__gallery__slider > figure figcaption a:hover,
+      .qh__gallery__slider > figure figcaption a:focus {
+        color: var(--fc__default__accent); }
+      @media (min-width: 40em) {
+        .qh__gallery__slider > figure figcaption {
+          background-color: rgba(46, 46, 46, 0.75);
+          height: auto;
+          position: absolute;
+          bottom: 0;
+          left: 0; } }
 
 .qh__gallery button {
   border: 0;
@@ -6636,9 +6658,6 @@ html #layout-builder-modal {
 #layout-builder-modal .media-library-item__remove,
 #layout-builder-modal .media-library-item__remove.button {
   max-width: none; }
-
-#drupal-off-canvas *:not(div), #drupal-off-canvas *:not(svg *), #drupal-off-canvas *:after, #drupal-off-canvas *:before {
-  all: "" !important; }
 
 .toolbar-tray ul {
   max-width: initial;
