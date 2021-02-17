@@ -50,8 +50,7 @@
     margin: 0 #{- $general-h-spacing};
 
     .qh__teaser-article {
-      padding-left: $general-h-spacing;
-      padding-right: $general-h-spacing;
+      padding-right: $general-h-spacing * 2;
     }
 
     @media (min-width: $bp--medium) {

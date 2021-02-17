@@ -70,6 +70,21 @@ button,
 }
 
 .qh__btn {
+  // Uses the default accent colors. Inverses on hover.
+  &--accent {
+
+    &,
+    &:visited {
+      background-color: var(--fc__default__accent);
+      color: var(--fc__default__accent__fg);
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--fc__default__fg);
+      color: var(--fc__default__accent);
+    }
+  }
 
   // More subdued color theme based on primary--light
   &--secondary {
@@ -101,16 +116,18 @@ button,
     }
 
     @media (prefers-color-scheme: dark) {
-      &,
-      &:visited {
-        background-color: var(--fc__primary--light__bg--dark);
-        color: var(--fc__primary--light__fg--dark);
-      }
+      html:not(.light) {
+        &,
+        &:visited {
+          background-color: var(--fc__primary--light__bg--dark);
+          color: var(--fc__primary--light__fg--dark);
+        }
 
-      &:hover,
-      &:focus {
-        background-color: var(--fc__default__fg--dark);
-        color: var(--fc__default__bg--dark);
+        &:hover,
+        &:focus {
+          background-color: var(--fc__default__fg--dark);
+          color: var(--fc__default__bg--dark);
+        }
       }
     }
   }
@@ -118,6 +135,48 @@ button,
   &--small {
     font-size: rem(14);
     padding: ($button-v-spacing / 2) ($button-h-spacing / 2);
+  }
+
+  // Button with SVG
+  // SVG should appear first and then text. Do not include wrapper around SVG.
+  &--icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $h3-size-s;
+    line-height: $h3-lh-s;
+
+    @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+      --font-size-min-value: #{$h3-size-s-value};
+      --font-size-max-value: #{$h3-size-l-value};
+      --font-size-scaler-value: var(--h3-scaler-value);
+      font-size: var(--font-size);
+      --font-lh-min-value: #{$h3-lh-s};
+      --font-lh-max-value: #{$h3-lh-l};
+      --font-lh-scaler-value: var(--h3-lh-scaler-value);
+      line-height: var(--line-height);
+      word-spacing: var(--word-spacing);
+    }
+
+    @include breakpoint-between($bp--small, $bp--large) {
+      flex-direction: column;
+    }
+
+    &::after {
+      content: none !important;
+    }
+
+    > svg {
+      min-width: 6rem;
+      width: 6rem;
+      height: 6rem;
+      position: relative;
+      left: -.75rem;
+
+      @include breakpoint-between($bp--small, $bp--large) {
+        left: 0;
+      }
+    }
   }
 
   &:disabled,
