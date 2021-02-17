@@ -18,9 +18,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
-- RIG-130: Fix article latest overflow.
 
 ### Security
+
+## [0.4.9] - 2021-02-17
+### Fixed
+- RIG-130: Fix article latest overflow.
 
 ## [0.4.8] - 2021-02-17
 ### Added
@@ -193,7 +196,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.8...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.9...HEAD
+[0.4.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.8...0.4.9
 [0.4.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.7...0.4.8
 [0.4.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.6...0.4.7
 [0.4.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.5...0.4.6
