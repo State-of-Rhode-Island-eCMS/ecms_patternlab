@@ -10,6 +10,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIG-260: Theme speech full display.
+- RIG-260: Theme speeches latest view.
+- RIG-260: Theme speeches listing view.
 
 ### Changed
 

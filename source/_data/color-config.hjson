@@ -10,7 +10,7 @@
 #
 # color-slug  -> The machine name of the color, i.e. "white"
 # "name"      -> Human readable name
-# "hue"       -> HOw would the color be described? Useful for named colors like "Calamari"
+# "hue"       -> How would the color be described? Useful for named colors like "Calamari"
 # "hsl"       -> The programmatic color value using the HSL colorspace
 # "needs"     -> Accessibility-wise, what color text would this background color support?
 #             -> Not perfect, but a decent startng place for accessibility
