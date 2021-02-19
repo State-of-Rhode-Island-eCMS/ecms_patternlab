@@ -1,38 +1,39 @@
 <div class="qh__speeches">
-  <h1 class="qh__speeches__title">The Governor’s Speeches</h1>
+  <h1 class="qh__speeches__title">{{ title }}</h1>
 
-  <ul class="qh-u__list-reset qh__speeches__list" role="list">
-    <li class="qh__speeches__item">
-      {% include "@molecules/teaser-speech/teaser-speech.twig" with {
-          title: "State of the State Address",
-          url: "#",
-          machine_date: '2020-01-14T17:00-05:00',
-          date: 'January 14, 2020',
-          excerpt: "Speaker Mattiello, Senate President Ruggerio, members of the House and Senate; members of the Judiciary; my Cabinet, my wonderful family; and my fellow Rhode Islanders. Thank you for trusting me to deliver results for our great state. Tonight, I stand before you truly optimistic about our future. In the past few years, we’ve dug our way out of a deep economic hole and are preparing Rhode Islanders for success in a fast-changing economy. Right now in Rhode Island, we have more than half a million jobs. That’s more jobs than at any time ever in our state’s history. Unemployment is at its lowest point in three decades."
-        }
-      %}
-    </li>
-    <li class="qh__speeches__item">
-      {% include "@molecules/teaser-speech/teaser-speech.twig" with {
-          title: "State of the State Address",
-          url: "#",
-          machine_date: '2019-01-15T17:00-05:00',
-          date: 'January 15, 2019',
-          excerpt: "Good evening, Speaker Mattiello, Senate President Ruggerio, members of the House and Senate; members of the Judiciary, my family -- and most especially -- my fellow Rhode Islanders. It's an honor to join you at the start of a new year and with so much at stake for Rhode Island and our nation. I'm humbled by the opportunity to continue serving as your Governor. My family and I are deeply grateful for your trust. When we began our work together four years ago, Rhode Island was stuck -- and everybody knew it. Our unemployment rate was among the nation's highest, schools were crumbling, and our roads were ranked the worst in the country. Rhode Island is a small and connected state so we all knew someone who was out of work. The struggle was everywhere you looked."
-        }
-      %}
-    </li>
-    <li class="qh__speeches__item">
-      {% include "@molecules/teaser-speech/teaser-speech.twig" with {
-          title: "Inaugural Address",
-          url: "#",
-          machine_date: '2019-01-01T17:00-05:00',
-          date: 'January 1, 2019',
-          excerpt: "My fellow Rhode Islanders, Speaker Mattiello, President Ruggerio, elected leaders, distinguished guests, my supportive and loving family: I am humbled that you've again placed your trust in me. Together we'll continue bringing the change that will set us on a path for enduring success. Four years ago, I stood here before you and we faced a very different Rhode Island than we do today. The foundation of our economy had eroded. Our unemployment rate was among the highest in the nation. Our roads, bridges and schools were crumbling, and we didn't even have a plan to fix them."
-        }
-      %}
-    </li>
-  </ul>
+  {% if exposed %}
+    <div class="view-filters">
+      {{ exposed }}
+    </div>
+  {% endif %}
 
-    <!-- Pager? -->
+  {% if rows %}
+    <ul class="qh-u__list-reset qh__speeches__list" role="list">
+      {% if rows_loop %}
+        {% for row in rows %}
+          <li class="qh__speeches__item">
+            {{- row.content -}}
+          </li>
+        {% endfor %}
+      {% else %}
+        <li class="qh__speeches__item">
+          {{ rows }}
+        </li>
+      {% endif %}
+    </ul>
+  {% endif %}
+
+  {% if pager %}
+    {{ pager }}
+  {% endif %}
+  {% if more %}
+    {{ more }}
+  {% endif %}
+  {% if feed_icons %}
+    <div class="feed-icons">
+      {{ feed_icons }}
+    </div>
+  {% endif %}
+
+  <!-- Pager? -->
 </div>

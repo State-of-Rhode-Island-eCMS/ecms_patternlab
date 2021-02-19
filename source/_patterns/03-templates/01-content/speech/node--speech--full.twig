@@ -1,0 +1,21 @@
+<article class="qh__single-speech">
+  <header class="qh__single-speech__header">
+    <h1 class="qh__single-speech__title">{{ title }}</h1>
+    <p class="qh__emphasis qh__single-speech__date"><time datetime="W3C date format">{{ date }}</time></p>
+  </header>
+
+  <div class="qh__single-speech__content node">
+    {{ body }}
+  </div>
+
+  {# TODO: Hook up prev-next variables #}
+  {# <footer class="qh__single-speech__footer">
+
+    {% include "@molecules/pagination-prev-next/prev-next.twig" with {
+        "prev_url": "#",
+        "prev_title": "State of the State Address"
+      }
+    %}
+
+  </footer> #}
+</article>
