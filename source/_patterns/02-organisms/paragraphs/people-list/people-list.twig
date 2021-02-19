@@ -1,0 +1,55 @@
+<section class="qh__people-list">
+  <header class="qh__people-list__header">
+    <h1 class="qh__people-list__title">{{ department.taxonomyTitle }}</h1>
+    <p class="qh__people-list__contact__label">
+      <strong>Main Contact(s):</strong>
+    </p>
+    <ul class="qh-u__list-reset qh__people-list__contact" role="list">
+      <li><span class="qh__people-list__contact__phone">
+        <a href="tel:1+{{ department.phoneSlug }}">{{ department.phonePretty }}</a></span>
+      </li>
+      <!-- A general email will be optional -->
+      <li><span class="qh__people-list__contact__email">
+        <a href="mailto:{{ department.email }}">{{ department.email }}</a></span>
+      </li>
+    </ul>
+  </header>
+  <ul class="qh-u__list-reset qh__people-list__list" role="list">
+    <li class="qh__people-list__item">
+      {% include "@molecules/teaser-person/teaser-person.twig" with {
+         "person": {
+           "firstName": "Allison",
+           "lastName": "Archambault",
+           "title": "Senior Air Quality Specialist, Climate Change & Mobile Sources Programs (RGGI, GHG Inventory)",
+           "email": "Allison.Archambault@dem.ri.gov",
+           "extension": "72035"
+         }
+       }
+     %}
+    </li>
+    <li class="qh__people-list__item">
+      {% include "@molecules/teaser-person/teaser-person.twig" with {
+         "person": {
+           "firstName": "Madeline",
+           "lastName": "Haines",
+           "title": "Air Quality Specialist, Climate Change & Mobile Sources Programs (Inspection & Maintenance (I/M) Program & Diesel Emissions Reduction Act (DERA)",
+           "email": "Madeline.Haines@dem.ri.gov",
+           "extension": "77033"
+         }
+       }
+     %}
+    </li>
+    <li class="qh__people-list__item">
+      {% include "@molecules/teaser-person/teaser-person.twig" with {
+         "person": {
+           "firstName": "Taylor",
+           "lastName": "Ryan",
+           "title": "Air Quality Specialist",
+           "email": "Taylor.Ryan@dem.ri.gov",
+           "extension": "77012"
+         }
+       }
+     %}
+    </li>
+  </ul>
+</section>
