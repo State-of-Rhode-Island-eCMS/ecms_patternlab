@@ -1,0 +1,39 @@
+.qh__teaser-person {
+
+  // <p>
+  &__name {
+
+    strong {
+      display: block;
+      font-size: 112.5%;
+    }
+  }
+
+  // <span>
+  &__title {
+    display: block;
+    // Matching the indent of the email and phone icons, which is
+    // a width of 0.875em and a margin right of 0.25em = 1.125em
+    margin-left: 1.125em;
+  }
+
+  // <ul>
+  &__contact {}
+
+  // <span>
+  &__phone {}
+
+  // <span>
+  &__email {}
+
+  // Spacing
+  &__name strong,
+  &__title,
+  &__contact li {
+    margin-bottom: ($text-spacer-fallback-value/2);
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      margin-bottom: calc(var(--body-text-spacer)/2);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<article class="qh__teaser-person">
+  <p class="qh__teaser-person__name">
+    <strong>{{ person.firstName }} {{ person.lastName }}</strong>
+    <span class="qh__teaser-person__title">{{ person.title }}</span>
+  </p>
+  <ul class="qh-u__list-reset qh__teaser-person__contact" role="list">
+    <li><span class="qh__teaser-person__contact__phone">
+      <a href="tel:1+{{ department.phoneSlug }},{{ person.extension }}">{{ department.phonePretty }} ext. {{ person.extension }}</a></span>
+    </li>
+    <li><span class="qh__teaser-person__contact__email">
+      <a href="mailto:{{ person.email }}">{{ person.email }}</a></span>
+    </li>
+  </ul>
+</article>
