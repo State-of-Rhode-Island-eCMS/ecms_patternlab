@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIG-266: Theme google translator block and wire up global header region.
 
 ### Changed
 

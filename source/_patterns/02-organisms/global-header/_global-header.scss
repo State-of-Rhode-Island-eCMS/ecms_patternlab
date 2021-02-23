@@ -12,10 +12,32 @@
     justify-content: space-between;
     align-items: center;
     padding: ($general-v-spacing/2) $general-h-spacing;
+
+    &--multiple-region {
+      @include breakpoint-down($bp--small) {
+        margin: 0;
+        flex-direction: column;
+        align-items: flex-start;
+
+        > p {
+          margin-bottom: rem(5);
+        }
+      }
+    }
+  }
+
+  // <p>
+  &__tagline {}
+
+  // <p><a role="button'>
+  &__settings {
+    display: flex;
+    flex-flow: row nowrap;
   }
 
   a,
   .qh__settings-menu__toggle {
+    text-decoration: none;
 
     &,
     &:visited {
@@ -25,6 +47,7 @@
     &:hover,
     &:focus {
       color: var(--fc__official__link--hover);
+      text-decoration: underline;
     }
 
     &:focus {
@@ -37,7 +60,8 @@
   }
 
   p,
-  .qh__settings-menu__toggle {
+  .qh__settings-menu__toggle,
+  .google-translator-switch {
     font-size: 87.5%;
     font-weight: 375;
 
@@ -46,10 +70,4 @@
       margin-top: 0;
     }
   }
-
-  // <p>
-  &__tagline {}
-
-  // <p><a role="button'>
-  &__settings {}
 }
