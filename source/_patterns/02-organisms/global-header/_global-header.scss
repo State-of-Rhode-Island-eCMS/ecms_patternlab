@@ -13,13 +13,15 @@
     align-items: center;
     padding: ($general-v-spacing/2) $general-h-spacing;
 
-    @include breakpoint-down($bp--small) {
-      margin: 0;
-      flex-direction: column;
-      align-items: flex-start;
+    &--multiple-region {
+      @include breakpoint-down($bp--small) {
+        margin: 0;
+        flex-direction: column;
+        align-items: flex-start;
 
-      > p {
-        margin-bottom: rem(5);
+        > p {
+          margin-bottom: rem(5);
+        }
       }
     }
   }
