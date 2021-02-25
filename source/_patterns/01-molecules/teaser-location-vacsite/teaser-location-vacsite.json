@@ -1,0 +1,9 @@
+{
+  "title": "Vaccination Site Name",
+  "distance": "3.51 miles",
+  "address": "VacSite Name<br />123 Main St.<br />CityName, RI 02345",
+  "phone": "(401) 555-1234",
+  "type": "Healthcare facility",
+  "alt_read_text": "Directions & Scheduling",
+  "url": "#"
+}

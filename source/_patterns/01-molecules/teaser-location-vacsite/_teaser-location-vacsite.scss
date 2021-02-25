@@ -1,0 +1,84 @@
+.qh__teaser-location-vacsite {
+  padding-bottom: $general-v-spacing;
+  position: relative;
+  z-index: 1;
+
+  // <header>
+  &__header {
+    padding-bottom: ($general-v-spacing/3);
+  }
+
+  &__title {
+    margin: 0;
+
+    a,
+    a:visited {
+      text-decoration: none;
+    }
+  }
+
+  &__distance {
+    font-style: italic;
+    font-variant-numeric: oldstyle-nums;
+  }
+
+  // <div> wrapper
+  &__content {
+    padding-bottom: $general-v-spacing;
+    width: 100%;
+    @media (min-width: $bp--medium) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__col {
+      flex: 1 1 0;
+      &:last-child {
+        align-self: center;
+        @media (min-width: $bp--medium) {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  // <p>
+  &__excerpt {}
+
+  // <p>
+  &__cta {
+    display: inline-block;
+    padding-top: ($general-v-spacing/2);
+    @media (min-width: $bp--medium) {
+      padding-top: 0;
+    }
+}
+
+  // <a> with "Read article"
+  &__cta &__link {
+
+    // Do we want this effect? The whole article card is now clickable
+    // and sighted keyboard users still can target the two links within
+    // From https://inclusive-components.design/cards/
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      @include qh-inset-supports(0);
+      overflow: visible;
+    }
+  }
+
+  // Because we are using the above method, a:hover will not affect children.
+  // Therefore, we can not color the Headline when the Read More link is hovered.
+  // Therefore therefore, we use a hover on the <article> element
+  // Hover ONLY because keyboard focus still works as expected
+  &:hover &__title a {
+    color: var(--fc__default__link--hover);
+  }
+
+  &:hover &__cta::after {
+    color: var(--fc__default__link--hover);
+    transform: translateX(4px);
+  }
+}

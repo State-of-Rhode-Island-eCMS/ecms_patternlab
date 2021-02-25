@@ -1,0 +1,37 @@
+<article class="qh__teaser-location-vacsite">
+  <header class="qh__teaser-location-vacsite__header">
+    <h3 class="qh__teaser-location-vacsite__title">
+      <a class="qh__teaser-location-vacsite__link" href="{{ url }}">{{ title }}</a>
+    </h3>
+    <p class="qh__teaser-location-vacsite__distance">{{ distance }}</p>
+  </header>
+  {# If statement here of some kind? So the template using this teaser can specify whether or not to use an excerpt #}
+  <div class="qh__teaser-location-vacsite__content">
+    <div class="qh__teaser-location-vacsite__content__col">
+      {% if address %}
+        <div class="qh__teaser-location-vacsite__address">{{ address }}</div>
+      {% endif %}
+      {% if (phone|striptags|length > 10) %}
+        <p class="qh__teaser-location-vacsite__phone">
+          {{ phone }}
+        </p>
+      {% endif %}
+    </div>
+    <div class="qh__teaser-location-vacsite__content__col">
+      {% if type %}
+        <p class="qh__teaser-location-vacsite__type">
+          {{ 'Location type'|t }}: {{ type }}
+        </p>
+      {% endif %}
+    </div>
+    <div class="qh__teaser-location-vacsite__content__col">
+      <p class="qh__teaser-location-vacsite__cta">
+        {% if alt_read_text %}
+          <a class="qh__teaser-location-vacsite__link button" href="{{ url }}">{{ alt_read_text }}</a>
+        {% else %}
+          <a class="qh__teaser-location-vacsite__link button" href="{{ url }}">Read article</a>
+        {% endif %}
+      </p>
+    </div>
+  </div>
+</article>

@@ -3927,6 +3927,71 @@ table {
         .qh__teaser-hotel__link::before {
           inset: 0; } }
 
+.qh__teaser-location-vacsite {
+  padding-bottom: 1.5rem;
+  position: relative;
+  z-index: 1; }
+  .qh__teaser-location-vacsite__header {
+    padding-bottom: 0.5rem; }
+  .qh__teaser-location-vacsite__title {
+    margin: 0; }
+    .qh__teaser-location-vacsite__title a,
+    .qh__teaser-location-vacsite__title a:visited {
+      text-decoration: none; }
+  .qh__teaser-location-vacsite__distance {
+    font-style: italic;
+    font-variant-numeric: oldstyle-nums; }
+  .qh__teaser-location-vacsite__content {
+    padding-bottom: 1.5rem;
+    width: 100%; }
+    @media (min-width: 50em) {
+      .qh__teaser-location-vacsite__content {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
+    .qh__teaser-location-vacsite__content__col {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 1 0px;
+              flex: 1 1 0; }
+      .qh__teaser-location-vacsite__content__col:last-child {
+        -ms-flex-item-align: center;
+            -ms-grid-row-align: center;
+            align-self: center; }
+        @media (min-width: 50em) {
+          .qh__teaser-location-vacsite__content__col:last-child {
+            text-align: right; } }
+  .qh__teaser-location-vacsite__cta {
+    display: inline-block;
+    padding-top: 0.75rem; }
+    @media (min-width: 50em) {
+      .qh__teaser-location-vacsite__cta {
+        padding-top: 0; } }
+  .qh__teaser-location-vacsite__cta .qh__teaser-location-vacsite__link::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: visible; }
+    @supports (inset: 0) {
+      .qh__teaser-location-vacsite__cta .qh__teaser-location-vacsite__link::before {
+        inset: 0; } }
+  .qh__teaser-location-vacsite:hover .qh__teaser-location-vacsite__title a {
+    color: var(--fc__default__link--hover); }
+  .qh__teaser-location-vacsite:hover .qh__teaser-location-vacsite__cta::after {
+    color: var(--fc__default__link--hover);
+    -webkit-transform: translateX(4px);
+            transform: translateX(4px); }
+
 .qh__teaser-notification {
   padding: 0.75rem 0;
   border-top: 0.0625rem solid var(--fc__notification__border); }
@@ -4616,6 +4681,30 @@ table {
     .qh__hotels-grid__list > li .qh__teaser-hotel__location,
     .qh__hotels-grid__list > li .qh__teaser-hotel__cta {
       margin-top: auto; }
+
+.qh__locations-vacsites-list {
+  padding: 1.5rem 0; }
+  .qh__locations-vacsites-list__title {
+    margin: 0;
+    padding-bottom: 1.5rem; }
+  .qh__locations-vacsites-list__list > * {
+    padding: 0 1rem; }
+    .qh__locations-vacsites-list__list > * + * {
+      margin-top: 1.5rem; }
+    @media (min-width: 50em) {
+      .qh__locations-vacsites-list__list > * {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 0px;
+                flex: 1 1 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column;
+                flex-flow: column; }
+        .qh__locations-vacsites-list__list > * .qh__teaser-location-vacsite__cta {
+          margin-top: auto; } }
 
 .dialog-off-canvas-main-canvas {
   position: relative; }
