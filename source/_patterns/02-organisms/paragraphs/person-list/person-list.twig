@@ -1,0 +1,32 @@
+<section class="qh__person-list">
+  {% if list_mode == 'term-list' %}
+    {# Specific category person listing #}
+    <header class="qh__person-list__header">
+      <h2 class="qh__person-list__title">{{ person_listing.term_name }}</h1>
+    </header>
+
+    {% if person_listing.persons %}
+      <ul class="qh-u__list-reset qh__person-list__list" role="list">
+        {{ person_listing.persons }}
+      </ul>
+    {% endif %}
+
+    {% if person_listing.child_terms %}
+      {% for child_term_name, child_term_persons in person_listing.child_terms %}
+        <header class="qh__person-list__header">
+          <h3 class="qh__person-list__title">{{ child_term_name }}</h1>
+        </header>
+
+        <ul class="qh-u__list-reset qh__person-list__list" role="list">
+          {{ child_term_persons }}
+        </ul>
+      {% endfor %}
+    {% endif %}
+
+  {% else %}
+    {# Complete person listing #}
+    <ul class="qh-u__list-reset qh__person-list__list qh__person-list__list--full" role="list">
+      {{ person_listing }}
+    </ul>
+  {% endif %}
+</section>

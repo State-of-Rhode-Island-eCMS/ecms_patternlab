@@ -1,5 +1,5 @@
 
-.qh__people-list {
+.qh__person-list {
 
   &__header {
     padding-bottom: ($text-spacer-fallback-value);
@@ -32,6 +32,7 @@
   &__item {
    padding-top: ($text-spacer-fallback-value);
    padding-bottom: ($text-spacer-fallback-value);
+   max-width: 100%;
 
     @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
       padding-top: calc(var(--body-text-spacer));

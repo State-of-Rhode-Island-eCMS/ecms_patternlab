@@ -1,13 +1,10 @@
 {
-  "department": {
-    "phoneSlug": "401-222-2808",
-    "phonePretty": "(401) 222-2808"
-  },
-  "person": {
-    "firstName": "Allison",
-    "lastName": "Archambault",
-    "title": "Senior Air Quality Specialist, Climate Change & Mobile Sources Programs (RGGI, GHG Inventory)",
-    "email": "Allison.Archambault@dem.ri.gov",
-    "extension": "72035"
-  }
+
+  "first_name": "Allison",
+  "last_name": "Archambault",
+  "job_title": "Senior Air Quality Specialist, Climate Change & Mobile Sources Programs (RGGI, GHG Inventory)",
+  "email": "Allison.Archambault@dem.ri.gov",
+  "phone": "502-123-4567",
+  "extension": "72035",
+  "categories": "Department of Health"
 }

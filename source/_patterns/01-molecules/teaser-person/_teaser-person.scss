@@ -1,6 +1,48 @@
 .qh__teaser-person {
+  &__meta {
+    // For full listings we turn on flex and display person data in rows.
+    .qh__person-list__list--full & {
 
-  // <p>
+      // Show category
+      .qh__teaser-person__category {
+        display: block;
+        font-weight: 500;
+        margin-top: ($text-spacer-fallback-value/2);
+      }
+
+      @include breakpoint-up($bp--large) {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: baseline;
+
+        // Force equal width columns
+        > * {
+          flex: 1 1 0px;
+        }
+
+        // phone, email
+        > span {
+          margin-top: 0;
+          padding-left: $general-h-spacing;
+        }
+
+        // Meta text sizing on larger screens
+        span,
+        a {
+          font-size: 1rem;
+          @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+            --font-size-min-value: 0.925;
+            --font-size-max-value: 1;
+            --font-size-scaler-value: var(--p-scaler-value);
+            font-size: var(--font-size);
+          }
+        }
+      }
+    }
+  }
+
+  // <div>
   &__name {
 
     strong {
@@ -9,27 +51,35 @@
     }
   }
 
-  // <span>
-  &__title {
-    display: block;
+  // <div>
+  &__job-details {
     // Matching the indent of the email and phone icons, which is
     // a width of 0.875em and a margin right of 0.25em = 1.125em
     margin-left: 1.125em;
+  }
+
+  // Hide category unless in a full listing
+  // <span>
+  &__category {
+    display: none;
   }
 
   // <ul>
   &__contact {}
 
   // <span>
-  &__phone {}
-
-  // <span>
-  &__email {}
+  &__phone,
+  &__email {
+    word-break: break-all;
+    display: block;
+  }
 
   // Spacing
   &__name strong,
   &__title,
-  &__contact li {
+  &__job-details,
+  &__phone,
+  &__email {
     margin-bottom: ($text-spacer-fallback-value/2);
 
     @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {

@@ -1,14 +1,28 @@
-<article class="qh__teaser-person">
-  <p class="qh__teaser-person__name">
-    <strong>{{ person.firstName }} {{ person.lastName }}</strong>
-    <span class="qh__teaser-person__title">{{ person.title }}</span>
-  </p>
-  <ul class="qh-u__list-reset qh__teaser-person__contact" role="list">
-    <li><span class="qh__teaser-person__contact__phone">
-      <a href="tel:1+{{ department.phoneSlug }},{{ person.extension }}">{{ department.phonePretty }} ext. {{ person.extension }}</a></span>
-    </li>
-    <li><span class="qh__teaser-person__contact__email">
-      <a href="mailto:{{ person.email }}">{{ person.email }}</a></span>
-    </li>
-  </ul>
-</article>
+<li class="qh__person-list__item">
+  <article class="qh__teaser-person">
+
+    <div class="qh__teaser-person__name">
+      <strong>{{ last_name }}, {{ first_name }}</strong>
+    </div>
+
+    <div class="qh__teaser-person__meta">
+      <div class="qh__teaser-person__job-details">
+        <span class="qh__teaser-person__title">{{ job_title }}</span>
+        <span class="qh__teaser-person__category">{{ categories }}</span>
+      </div>
+
+      {% if phone %}
+        <span class="qh__teaser-person__phone">
+          <a href="tel:1+{{ phone }}{{ extension ? 'p' ~ extension }}">{{ phone }}{{ extension ? ' ext. ' ~ extension}}</a>
+        </span>
+      {% endif %}
+
+      {% if email %}
+        <span class="qh__teaser-person__email">
+          <a href="mailto:{{ email }}">{{ email }}</a></span>
+        </span>
+      {% endif %}
+    </div>
+
+  </article>
+</li>
