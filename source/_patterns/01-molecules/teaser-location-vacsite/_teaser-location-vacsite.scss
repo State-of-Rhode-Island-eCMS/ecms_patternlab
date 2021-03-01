@@ -52,7 +52,14 @@
     @media (min-width: $bp--medium) {
       padding-top: 0;
     }
-}
+  }
+
+  &__link {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: -0.5rem;  
+  }
 
   // <a> with "Read article"
   &__cta &__link {

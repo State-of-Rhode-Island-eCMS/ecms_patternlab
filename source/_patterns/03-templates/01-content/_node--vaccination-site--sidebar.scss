@@ -1,0 +1,15 @@
+.vaccination-site-sidebar {
+  padding: 1rem;
+  h4 {
+    margin-top: 0;
+  }
+  &__link {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: -0.5rem;
+  }
+  .field--type-geofield {
+    margin: 1rem -1rem -1rem -1rem;
+  }
+}

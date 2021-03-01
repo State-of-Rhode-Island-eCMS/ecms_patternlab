@@ -3,7 +3,9 @@
     <h3 class="qh__teaser-location-vacsite__title">
       <a class="qh__teaser-location-vacsite__link" href="{{ url }}">{{ title }}</a>
     </h3>
-    <p class="qh__teaser-location-vacsite__distance">{{ distance }}</p>
+    {% if distance %}
+      <p class="qh__teaser-location-vacsite__link qh__teaser-location-vacsite__distance"><span class="qh__icon">{% include ('@icons/map-marker.svg') %}</span> {{ distance }}</p>
+    {% endif %}
   </header>
   {# If statement here of some kind? So the template using this teaser can specify whether or not to use an excerpt #}
   <div class="qh__teaser-location-vacsite__content">
@@ -20,7 +22,12 @@
     <div class="qh__teaser-location-vacsite__content__col">
       {% if type %}
         <p class="qh__teaser-location-vacsite__type">
-          {{ 'Location type'|t }}: {{ type }}
+          {{ 'Type'|t }}: {{ type }}
+        </p>
+      {% endif %}
+      {% if vaccines %}
+        <p class="qh__teaser-location-vacsite__vaccines">
+          {{ 'Vaccines offered'|t }}: {{ vaccines }}
         </p>
       {% endif %}
     </div>

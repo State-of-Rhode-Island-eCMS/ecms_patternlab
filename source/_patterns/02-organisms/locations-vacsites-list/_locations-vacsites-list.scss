@@ -15,7 +15,9 @@
     padding: 0 $general-h-spacing;
 
     + * {
+      border-top: solid 1px var(--c__quahog--light);
       margin-top: $general-v-spacing;
+      padding-top: $general-v-spacing;
     }
 
     @media (min-width: $bp--medium) {
@@ -27,5 +29,17 @@
         margin-top: auto;
       }
     }
+  }
+}
+
+.qh__locations-vacsites-filters {
+  [data-drupal-selector="edit-field-geofield-proximity"] {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  input[type="submit"].form-submit {
+    clear: both;
   }
 }
