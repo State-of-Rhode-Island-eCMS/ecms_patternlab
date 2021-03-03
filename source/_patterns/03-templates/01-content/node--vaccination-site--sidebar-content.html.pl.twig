@@ -73,39 +73,39 @@
 
 <div class="vaccination-site-sidebar qh__tc__primary--light">
   <h4>Address</h4>
-  {% if node.field_location_address %}
-    {{ content.field_location_address }}
+  {% if node.field_vacsite_location_address %}
+    {{ content.field_vacsite_location_address }}
   {% endif %}
 
-  {% if node.field_location_office_hours %}
-    {{ content.field_location_office_hours }}
+  {% if node.field_vacsite_office_hours %}
+    {{ content.field_vacsite_office_hours }}
   {% endif %}
 
-  {% if node.field_phone.value %}
-    <p><a href="tel:{{ node.field_phone.value }}">{{ node.field_phone.value }}</a></p>
+  {% if node.field_vacsite_phone.value %}
+    <p><a href="tel:{{ node.field_vacsite_phone.value }}">{{ node.field_vacsite_phone.value }}</a></p>
   {% endif %}
 
-  {% if node.field_location_address %}
+  {% if node.field_vacsite_location_address %}
     <p>
   {% endif %}
 
-  {% if node.field_website_link.uri %}
-    <a href="{{ node.field_website_link.uri }}" class="vaccination-site-sidebar__link"><span class="qh__icon">{% include ('@icons/globe.svg') %}</span> Visit website</a>
+  {% if node.field_vacsite_website_link.uri %}
+    <a href="{{ node.field_vacsite_website_link.uri }}" class="vaccination-site-sidebar__link"><span class="qh__icon">{% include ('@icons/globe.svg') %}</span> Visit website</a>
   {% endif %}
 
-  {% if node.field_ripta_trip_planner.uri %}
-    <a href="{{ node.field_ripta_trip_planner.uri }}" class="vaccination-site-sidebar__link"><span class="qh__icon">{% include ('@icons/bus.svg') %}</span> RIPTA Trip Planner</a>
+  {% if node.field_vacsite_ripta_trip_planner.uri %}
+    <a href="{{ node.field_vacsite_ripta_trip_planner.uri }}" class="vaccination-site-sidebar__link"><span class="qh__icon">{% include ('@icons/bus.svg') %}</span> RIPTA Trip Planner</a>
   {% endif %}
 
-  {% if node.field_location_address %}
-    <a href="https://www.google.com/maps/dir/?api=1&destination={{- content.field_location_address|render|striptags|trim -}}" class="vaccination-site-sidebar__link"><span class="qh__icon">{% include ('@icons/map.svg') %}</span> Google Maps</a>
+  {% if node.field_vacsite_location_address %}
+    <a href="https://www.google.com/maps/dir/?api=1&destination={{- content.field_vacsite_location_address|render|striptags|trim -}}" class="vaccination-site-sidebar__link"><span class="qh__icon">{% include ('@icons/map.svg') %}</span> Google Maps</a>
   {% endif %}
 
-  {% if node.field_location_address %}
+  {% if node.field_vacsite_location_address %}
     </p>
   {% endif %}
 
-  {% if node.field_geofield %}
-    {{ content.field_geofield }}
+  {% if node.field_vacsite_geofield %}
+    {{ content.field_vacsite_geofield }}
   {% endif %}
 </div>

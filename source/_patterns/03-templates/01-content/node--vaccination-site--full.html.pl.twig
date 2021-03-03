@@ -80,14 +80,14 @@
   <p><em>{{ type_in_out }}</em></p>
 
   <div class="vaccine-audience-aside qh__t__coffee-milk">
-    {{ content.field_vaccines_offered }}
+    {{ content.field_vacsite_vaccines_offered }}
 
-    {{ content.field_audiences_ }}
-  
-    <p><a href="{{ content.field_schedule_link.uri }}" class="qh__btn">Check scheduler site</a></p>
+    {{ content.field_vacsite_audiences }}
+
+    <p><a href="{{ content.field_vacsite_schedule_link.uri }}" class="qh__btn">Check scheduler site</a></p>
   </div>
 
-  {{ content.body }}
+  {{ content.field_vacsite_body }}
 
   {% if special_instructions %}
     <h3>{{ 'Special Instructions'|t }}</h3>
