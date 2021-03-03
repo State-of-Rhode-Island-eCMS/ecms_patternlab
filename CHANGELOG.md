@@ -14,6 +14,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIG-260: Theme speeches latest view.
 - RIG-260: Theme speeches listing view.
 - RIG-266: Theme google translator block and wire up global header region.
+- RIGA-38: Added theming for Vaccination site.
 
 ### Changed
 

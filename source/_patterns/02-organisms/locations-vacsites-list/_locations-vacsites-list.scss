@@ -1,0 +1,45 @@
+.qh__locations-vacsites-list {
+  padding: $general-v-spacing 0;
+
+  &__title {
+    margin: 0;
+    padding-bottom: $general-v-spacing;
+  }
+
+  &__list {
+    //margin: 0 #{- $general-h-spacing};
+
+  }
+
+  &__list > * {
+    padding: 0 $general-h-spacing;
+
+    + * {
+      border-top: solid 1px var(--c__quahog--light);
+      margin-top: $general-v-spacing;
+      padding-top: $general-v-spacing;
+    }
+
+    @media (min-width: $bp--medium) {
+      flex: 1 1 0;
+      display: flex;
+      flex-flow: column;
+
+      .qh__teaser-location-vacsite__cta {
+        margin-top: auto;
+      }
+    }
+  }
+}
+
+.qh__locations-vacsites-filters {
+  [data-drupal-selector="edit-field-vacsite-geofield-proximity"] {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  input[type="submit"].form-submit {
+    clear: both;
+  }
+}

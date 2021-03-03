@@ -1,0 +1,31 @@
+.publish-date {
+  font-style: italic;
+  font-variant-numeric: oldstyle-nums;
+}
+.node--type-vaccination-site {
+  .field__label {
+    @include qh__p;
+    --p-font-wght: 500;
+    margin-bottom: ($general-v-spacing/4);
+  }
+
+
+
+  .vaccine-audience-aside {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    @media (min-width: $bp--medium) {
+      float: right;
+      margin-left: 1rem;
+      max-width: 40vw;
+      width: 20em;
+    }
+    h3 {
+      margin-top: 0;
+    }
+    .qh__btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
