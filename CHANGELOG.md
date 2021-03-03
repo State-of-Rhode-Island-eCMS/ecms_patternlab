@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIG-260: Theme speech full display.
 - RIG-260: Theme speeches latest view.
 - RIG-260: Theme speeches listing view.
+- RIG-266: Theme google translator block and wire up global header region.
 
 ### Changed
 

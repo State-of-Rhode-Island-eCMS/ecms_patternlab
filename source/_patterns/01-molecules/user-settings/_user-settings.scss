@@ -4,6 +4,7 @@
   --text-opsz: 10;
   display: inline-block;
   position: relative;
+  margin-left: $general-h-spacing;
 
   .no-js & {
     display: none;
@@ -11,10 +12,18 @@
 
   &__icon {
     display: inline-block;
-    height: em(20);
-    margin: -0.125em 0.25em 0 0;
+    height: 1.25em;
+    margin: -0.125em .5em 0 0;
     vertical-align: middle;
-    width: em(20);
+    width: 1.25em;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+      position: relative;
+      top: -40%;
+      left: -50%;
+    }
   }
 
   // <button>
