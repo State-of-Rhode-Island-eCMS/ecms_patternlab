@@ -1,0 +1,20 @@
+{% if locations %}
+  <div class="qh__location-list">
+
+    {% if category_form %}
+
+      {% if form_title %}
+        <label class="qh__location-list__form_title">{{ form_title }}</label>
+      {% endif %}
+
+      {{ category_form }}
+    {% endif %}
+
+    {% if locations %}
+      <ul class="qh-u__list-reset qh__location-list__locations {{ node_link == '1' ? 'qh__location-list__locations--node_link' }}">
+        {{ locations}}
+      </ul>
+    {% endif %}
+
+  </div>
+{% endif %}

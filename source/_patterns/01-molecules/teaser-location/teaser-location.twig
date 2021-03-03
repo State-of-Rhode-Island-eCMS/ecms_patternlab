@@ -1,0 +1,28 @@
+<li class="qh__location-list__item">
+  <div class="qh__teaser-location">
+    <div class="qh__teaser-location__content">
+
+      {# The parent list class controls whether the anchor title displays or if just the standard title displays #}
+      {# Not a great solution but only one without JS or extensive preprocessing #}
+      <h3 class="qh__teaser-location__title qh__teaser-location__title--with-link">
+        <a class="qh__teaser-location__node-link" href="{{ url }}">{{ title }}</a>
+      </h3>
+
+      <h3 class="qh__teaser-location__title qh__teaser-location__title--no-link">{{ title }}</h3>
+
+      {% if location %}
+        {{ location }}
+      {% endif %}
+
+      {% if phone %}
+        <p class="qh__teaser-location__phone">
+          <a href="tel:1+{{ phone }}{{ extension ? 'p' ~ extension }}">{{ phone }}{{ extension ? ' ext. ' ~ extension}}</a>
+        </p>
+      {% endif %}
+
+      {% if website_url|default %}
+        <p class="qh__teaser-location__cta"><a class="qh__teaser-location__website-link" href="{{ website_url }}">{{ "View Website"|t }}</a></p>
+      {% endif %}
+    </div>
+  </div>
+</li>

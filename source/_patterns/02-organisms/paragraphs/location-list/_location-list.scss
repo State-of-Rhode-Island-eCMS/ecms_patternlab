@@ -1,0 +1,34 @@
+.qh__location-list {
+  &__item {
+    padding-top: ($text-spacer-fallback-value);
+    padding-bottom: ($text-spacer-fallback-value);
+    max-width: 100%;
+
+     @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+       padding-top: calc(var(--body-text-spacer));
+       padding-bottom: calc(var(--body-text-spacer));
+     }
+  }
+
+  &__item + &__item {
+    border-top: $border-xs solid var(--fc__default__border);
+  }
+
+  > form {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    margin-top: -0.5rem;
+
+    > .form-item {
+      float: left;
+      min-width: 66%;
+      margin-bottom: 0;
+    }
+
+    .form-submit {
+      max-height: rem(48);
+      margin-left: $general-v-spacing;
+    }
+  }
+}
