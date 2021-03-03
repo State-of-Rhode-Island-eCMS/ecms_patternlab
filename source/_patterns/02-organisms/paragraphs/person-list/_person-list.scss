@@ -1,0 +1,46 @@
+
+.qh__person-list {
+
+  &__header {
+    padding-bottom: ($text-spacer-fallback-value);
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      padding-bottom: calc(var(--body-text-spacer));
+    }
+  }
+
+  // <h1>
+  &__title {}
+
+  // <ul>
+  &__contact {
+
+    // <p>
+    &__label {}
+
+    // <span>
+    &__email {}
+
+    // <span>
+    &__phone {}
+  }
+
+  // <ul>
+  &__list {}
+
+  // <li>
+  &__item {
+   padding-top: ($text-spacer-fallback-value);
+   padding-bottom: ($text-spacer-fallback-value);
+   max-width: 100%;
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      padding-top: calc(var(--body-text-spacer));
+      padding-bottom: calc(var(--body-text-spacer));
+    }
+  }
+
+  &__item + &__item {
+    border-top: $border-xs solid var(--fc__default__border);
+  }
+}
