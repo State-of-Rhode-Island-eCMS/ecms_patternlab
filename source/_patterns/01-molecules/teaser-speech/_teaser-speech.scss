@@ -1,4 +1,4 @@
-.qh__teaser-article {
+.qh__teaser-speech {
   padding-bottom: $general-v-spacing;
 
   // <header>
@@ -15,8 +15,12 @@
     }
   }
 
-  &__published {
+  &__date {
     margin-top: ($general-v-spacing/4);
+
+    &::after {
+      width: 1.5em;
+    }
 
     time {
       font-size: 87.5%; // about 16px
@@ -25,7 +29,6 @@
     }
   }
 
-  // <div> wrapper
   &__content {
     padding-bottom: $general-v-spacing;
   }

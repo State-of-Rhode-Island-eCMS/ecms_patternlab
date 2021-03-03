@@ -1,0 +1,30 @@
+.qh__execorders {
+
+  // h1
+  &__title {}
+
+  // ul
+  &__list {
+    padding-top: $text-spacer-fallback-value;
+    padding-bottom: $text-spacer-fallback-value;
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      padding-top: var(--body-text-spacer);
+      padding-bottom: var(--body-text-spacer);
+    }
+  }
+
+  // li
+  &__item {}
+
+  &__item + &__item {
+    border-top: $border-xs solid var(--fc__default__border);
+    margin-top: ($text-spacer-fallback-value * 1.5);
+    padding-top: ($text-spacer-fallback-value * 1.5);
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      margin-top: calc(var(--body-text-spacer) * 1.5);
+      padding-top: calc(var(--body-text-spacer) * 1.5);
+    }
+  }
+}

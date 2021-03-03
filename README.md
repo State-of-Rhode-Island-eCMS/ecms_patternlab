@@ -6,6 +6,7 @@ From there we have made a quite a few modifications:
 * Converted the engine to use Twig rendering engine
 * Pulled in a custom source directory
 * Upgraded the gulp file to use Gulp 4
+* Added a HJSON file as the source for all colors and themes
 * Added custom JS and SASS compiling.
 
 ## Getting Started
@@ -25,14 +26,14 @@ npm ci
 ```bash
 gulp
 ```
-The `default` gulp command builds the JS, SCSS, and serves the Pattern Lab server. It also calls `gulp watch` which will detect any changes and re-build.
+The `default` gulp command builds the JSON, JS, SCSS, and serves the Pattern Lab server. It also calls `gulp watch` which will detect any changes and re-build. Any changes to the HJSON file requires the build to be stopped and restarted.
 
 
 ```bash
 gulp build
 ```
 
-Running `gulp build` builds all JS, SCSS, and patterns.
+Running `gulp build` builds all JS, SCSS, and patterns once.
 
 ```bash
 gulp build:no-patterns

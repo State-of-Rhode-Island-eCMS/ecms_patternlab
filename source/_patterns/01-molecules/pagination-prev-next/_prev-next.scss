@@ -1,0 +1,130 @@
+.qh__prevnext {
+  border-top: $border-xs solid var(--fc__default__border);
+  border-bottom: $border-xs solid var(--fc__default__border);
+  margin-top: ($text-spacer-fallback-value * 2);
+
+  @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+    margin-top: calc(var(--body-text-spacer) * 2);
+  }
+
+  &__list {
+    padding-top: $text-spacer-fallback-value;
+    padding-bottom: $text-spacer-fallback-value;
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      padding-top: var(--body-text-spacer);
+      padding-bottom: var(--body-text-spacer);
+    }
+
+    @include breakpoint-up($bp--small) {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      flex-flow: row nowrap;
+    }
+  }
+
+  &__item {
+    position: relative;
+
+    @include breakpoint-up($bp--small) {
+      flex: 0 1 48.5%;
+    }
+  }
+
+  &__item + &__item {
+
+    @include breakpoint-down($bp--small) {
+      padding-top: $text-spacer-fallback-value;
+
+      @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+        padding-top: var(--body-text-spacer);
+      }
+    }
+  }
+
+  &__prev:not(:empty),
+  &__next:not(:empty) {
+
+    // Create visual chevrons with CSS
+    @include breakpoint-up($bp--medium) {
+
+      &::before {
+        border-width: $border-sm;
+        border-style: solid;
+        content: '';
+        height: 1em;
+        width: 1em;
+        position: absolute;
+        top: 50%;
+        transform: rotate(45deg) translate(0,-50%);
+      }
+    }
+  }
+
+  &__prev:not(:empty) {
+
+    @include breakpoint-up($bp--medium) {
+      padding-left: 1.5em;
+
+      &::before {
+        border-color: transparent transparent var(--fc__default__border) var(--fc__default__border);
+        left: 0;
+        transition: left $transition-duration-base $transition-timing-base;
+      }
+
+      &:hover::before {
+        left: - em(3);
+      }
+    }
+  }
+
+  &__next:not(:empty) {
+    @include breakpoint-up($bp--medium) {
+      padding-right: 1.5em;
+
+      &::before {
+        border-color: var(--fc__default__border) var(--fc__default__border) transparent transparent;
+        right: em(12);
+        transition: right $transition-duration-base $transition-timing-base;
+      }
+
+      &:hover::before {
+        right: em(9);
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__link &__label {}
+
+  &__link &__title {
+    text-decoration: underline;
+  }
+
+  &__label {
+    color: var(--fc__default__text-accent);
+    letter-spacing: $kerning-base;
+    text-transform: uppercase;
+
+    .wf-inactive & {
+      font-weight: bold;
+    }
+
+    @supports (font-variation-settings: normal) {
+      html:not(.novf) & {
+        font-weight: 575;
+      }
+      html:not(.novf).wf-inactive & {
+        font-weight: normal;
+      }
+    }
+  }
+}

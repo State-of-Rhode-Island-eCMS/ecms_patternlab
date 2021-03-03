@@ -1,0 +1,39 @@
+<div class="qh__speeches">
+  <h1 class="qh__speeches__title">{{ title }}</h1>
+
+  {% if exposed %}
+    <div class="view-filters">
+      {{ exposed }}
+    </div>
+  {% endif %}
+
+  {% if rows %}
+    <ul class="qh-u__list-reset qh__speeches__list" role="list">
+      {% if rows_loop %}
+        {% for row in rows %}
+          <li class="qh__speeches__item">
+            {{- row.content -}}
+          </li>
+        {% endfor %}
+      {% else %}
+        <li class="qh__speeches__item">
+          {{ rows }}
+        </li>
+      {% endif %}
+    </ul>
+  {% endif %}
+
+  {% if pager %}
+    {{ pager }}
+  {% endif %}
+  {% if more %}
+    {{ more }}
+  {% endif %}
+  {% if feed_icons %}
+    <div class="feed-icons">
+      {{ feed_icons }}
+    </div>
+  {% endif %}
+
+  <!-- Pager? -->
+</div>

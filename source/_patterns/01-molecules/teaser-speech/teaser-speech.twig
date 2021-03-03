@@ -1,0 +1,23 @@
+<article class="qh__cta qh__teaser-speech">
+  <header class="qh__teaser-speech__header">
+    <!--
+      Went with an H2 because this does not seem like a list that will appear as part of a larger page
+      As in, the title of this page will be Speeches, and nothing else will appear
+      So it seemed like h2 is better than h3 in this case
+    -->
+    <h2 class="qh__h3 qh__no-decoration qh__teaser-speech__title">
+      <a class="qh__teaser-speech__link" href="{{ url }}">{{ title }}</a>
+    </h2>
+    <p class="qh__teaser-speech__date"><time datetime="{{ machine_date }}">{{ date }}</time></p>
+  </header>
+  <div class="qh__teaser-speech__excerpt">
+    <!-- truncation rules: 100 words, stop at the next period-space -->
+    <p>{{ excerpt }}</p>
+
+    {% include "@molecules/cta-read-more/cta-read-more.twig" with {
+        cta_read_text: "Read Speech",
+        cta_url: url
+      }
+    %}
+  </div>
+</article>

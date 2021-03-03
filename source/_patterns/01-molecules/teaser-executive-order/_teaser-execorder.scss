@@ -1,0 +1,52 @@
+.qh__teaser-execorder {
+
+  // <header>
+  &__header {
+    padding-bottom: ($general-v-spacing/2);
+  }
+
+  &__sequence {
+    letter-spacing: $kerning-base;
+    padding-bottom: ($general-v-spacing/4);
+    text-transform: uppercase;
+
+    .wf-inactive & {
+      font-weight: bold;
+    }
+
+    @supports (font-variation-settings: normal) {
+      html:not(.novf) & {
+        font-weight: 575;
+      }
+      html:not(.novf).wf-inactive & {
+        font-weight: normal;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+
+    a,
+    a:visited {
+      text-decoration: none;
+    }
+  }
+
+  &__date {
+    margin-top: ($general-v-spacing/4);
+
+    time {
+      font-size: 87.5%; // about 16px
+      font-style: italic;
+      font-variant-numeric: oldstyle-nums;
+    }
+  }
+
+  &__content {
+    padding-bottom: $general-v-spacing;
+  }
+
+  // <p>
+  &__excerpt {}
+}
