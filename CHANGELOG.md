@@ -21,7 +21,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
-## [0.5.0] - 2021-03-03
+## [0.5.0] - 2021-03-04
 ### Added
 - RIG-260: Theme speech full display.
 - RIG-260: Theme speeches latest view.
