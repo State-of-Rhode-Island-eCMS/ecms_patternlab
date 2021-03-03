@@ -1,0 +1,49 @@
+.qh__teaser-location {
+
+  &__title {
+    margin: 0;
+
+    a,
+    a:visited {
+      text-decoration: none;
+    }
+
+    // Hide node link by default.
+    // Parent list class can override this.
+    &--with-link {
+      display: none;
+    }
+  }
+
+  .qh__location-list__locations--node_link & {
+    .qh__teaser-location__title {
+      &--with-link {
+        display: block;
+      }
+
+      &--no-link {
+        display: none;
+      }
+    }
+  }
+
+  &__website-link,
+  .address {
+    // Matching the indent of the email and phone icons, which is
+    // a width of 0.875em and a margin right of 0.25em = 1.125em
+    margin-left: 1.125em;
+  }
+
+  // Spacing
+  &__title--no-link,
+  &__title--with-link,
+  .address,
+  &__phone,
+  &__website-link {
+    margin-bottom: ($text-spacer-fallback-value/2);
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      margin-bottom: calc(var(--body-text-spacer)/2);
+    }
+  }
+}
