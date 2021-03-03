@@ -10,15 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIG-260: Theme speech full display.
-- RIG-260: Theme speeches latest view.
-- RIG-260: Theme speeches listing view.
-- RIG-266: Theme google translator block and wire up global header region.
-- RIGA-38: Added theming for Vaccination site.
-- RIG-274: Theme person list view.
-- RIG-274: Theme person teaser.
-- RIGA-14: Theme location list view.
-- RIGA-14: Theme location teaser.
 
 ### Changed
 
@@ -29,6 +20,18 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.5.0] - 2021-03-03
+### Added
+- RIG-260: Theme speech full display.
+- RIG-260: Theme speeches latest view.
+- RIG-260: Theme speeches listing view.
+- RIG-266: Theme google translator block and wire up global header region.
+- RIGA-38: Added theming for Vaccination site.
+- RIG-274: Theme person list view.
+- RIG-274: Theme person teaser.
+- RIGA-14: Theme location list view.
+- RIGA-14: Theme location teaser.
 
 ## [0.4.9] - 2021-02-17
 ### Fixed
@@ -205,7 +208,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.9...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.0...HEAD
+[0.5.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.9...0.5.0
 [0.4.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.8...0.4.9
 [0.4.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.7...0.4.8
 [0.4.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.6...0.4.7
