@@ -17,6 +17,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-38: Added theming for Vaccination site.
 - RIG-274: Theme person list view.
 - RIG-274: Theme person teaser.
+- RIGA-14: Theme location list view.
+- RIGA-14: Theme location teaser.
 
 ### Changed
 
