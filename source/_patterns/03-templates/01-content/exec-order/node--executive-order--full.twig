@@ -1,0 +1,33 @@
+<article class="qh__execorder">
+  <header class="qh__execorder__header">
+    <p class="small-text qh__execorder__sequence">{{ title }}</p>
+    <h1 class="qh__h2 qh__execorder__title">{{ long_title }}</h1>
+    <p class="qh__emphasis qh__execorder__date"><time datetime="{{ datetime_date_format }}">{{ date }}</time></p>
+  </header>
+
+  {% if body|default %}
+    <div class="qh__execorder__content node">
+      {{ body }}
+    </div>
+  {% endif %}
+
+  <div class="qh__execorder__file-list qh__file-list">
+    <a href="{{ pdf_url }}" class="qh__file-list__link" download>
+      <div class="qh__file-list__item__icon">
+        <span class="qh__icon" aria-hidden="true">
+          {% include ('@icons/file-pdf.svg') %}
+        </span>
+      </div>
+      <div class="qh__file-list__item__filename">
+        <span class="qh__file-list__item__label">{{ title }}</span>
+        <span class="qh__file-list__item__filesize">PDF file</span>
+      </div>
+      <div class="qh__file-list__item__download">
+        <span class="qh__icon">
+          {% include ('@icons/download.svg') %}
+        </span>
+      </div>
+    </a>
+  </div>
+
+</article>

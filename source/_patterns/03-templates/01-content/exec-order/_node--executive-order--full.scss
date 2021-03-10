@@ -1,0 +1,63 @@
+.qh__execorder {
+
+  &__header {
+    margin-bottom: ($text-spacer-fallback-value * 1.5);
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      margin-bottom: calc(var(--body-text-spacer) * 1.5);
+    }
+  }
+
+  &__sequence {
+    letter-spacing: $kerning-base;
+    padding-bottom: ($general-v-spacing/4);
+    text-transform: uppercase;
+
+    .wf-inactive & {
+      font-weight: bold;
+    }
+
+    @supports (font-variation-settings: normal) {
+      html:not(.novf) & {
+        font-weight: 575;
+      }
+      html:not(.novf).wf-inactive & {
+        font-weight: normal;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: ($text-spacer-fallback-value * 1.5);
+
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      margin-bottom: calc(var(--body-text-spacer) * 1.5);
+    }
+  }
+
+  &__date {
+
+    &::after {
+      margin-top: ($text-spacer-fallback-value * 1.25);
+
+      @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+        margin-top: calc(var(--body-text-spacer) * 1.25);
+      }
+      width: 1.5em;
+    }
+
+    time {
+      font-style: italic;
+      font-variant-numeric: oldstyle-nums;
+    }
+  }
+
+  &__content {}
+
+  &__footer {}
+
+  &__file-list {
+    margin-top: $general-v-spacing * 2;
+  }
+}
