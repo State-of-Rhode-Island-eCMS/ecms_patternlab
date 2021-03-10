@@ -1,4 +1,4 @@
-.qh__single-execorder {
+.qh__execorder {
 
   &__header {
     margin-bottom: ($text-spacer-fallback-value * 1.5);
@@ -56,4 +56,8 @@
   &__content {}
 
   &__footer {}
+
+  &__file-list {
+    margin-top: $general-v-spacing * 2;
+  }
 }
