@@ -1,20 +1,22 @@
 <article class="qh__cta qh__teaser-execorder">
   <header class="qh__teaser-execorder__header">
-    <p class="small-text qh__teaser-execorder__sequence">{{ order_number }}</p>
+    <p class="small-text qh__teaser-execorder__sequence">{{ title }}</p>
     <!--
       Went with an H2 because this does not seem like a list that will appear as part of a larger page
       As in, the title of this page will be Speeches, and nothing else will appear
       So it seemed like h2 is better than h3 in this case
     -->
     <h2 class="qh__h3 qh__no-decoration qh__teaser-execorder__title">
-      <a class="qh__teaser-execorder__link" href="{{ url }}">{{ title }}</a>
+      <a class="qh__teaser-execorder__link" href="{{ url }}">{{ long_title }}</a>
     </h2>
   </header>
   <div class="qh__teaser-execorder__excerpt">
-    <p class="qh__teaser-execorder__date"><time datetime="{{ machine_date }}">{{ date }}</time></p>
+    <p class="qh__teaser-execorder__date"><time datetime="{{ datetime_date_format }}">{{ date }}</time></p>
+
     {% if summary | length > 0 %}
     <p>{{ summary }}</p>
     {% endif %}
+
     {% include "@molecules/cta-read-more/cta-read-more.twig" with {
         cta_read_text: "Read Full Order",
         cta_url: url
