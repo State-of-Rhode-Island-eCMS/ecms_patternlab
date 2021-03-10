@@ -7,7 +7,7 @@
 
   {% if body|default %}
     <div class="qh__execorder__content node">
-      {{ body }}
+      {{ body|raw }}
     </div>
   {% endif %}
 
