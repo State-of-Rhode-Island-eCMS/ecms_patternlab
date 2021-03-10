@@ -2,7 +2,7 @@
 
   {% if media_library_icon %}
     {{ icon }}
-  {% else %}
+  {% elseif icon|default %}
     {% include ('@icons/' ~ icon) %}
   {% endif %}
 
