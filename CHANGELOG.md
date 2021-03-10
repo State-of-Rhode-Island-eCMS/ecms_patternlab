@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-47: Drupalize existing executive order theme.
 
 ### Changed
 
