@@ -1,7 +1,11 @@
 <article class="qh__icon-card">
   <div class="qh__icon-card__icon">
     <span class="qh__icon" aria-hidden="true">
-      {{ content.field_icon }}
+      {% if media_library_icon %}
+        {{ icon }}
+      {% elseif icon|default %}
+        {% include ('@icons/' ~ icon) %}
+      {% endif %}
     </span>
   </div>
   <div class="qh__icon-card__content">
