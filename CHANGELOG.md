@@ -23,6 +23,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.5.1] - 2021-03-10
+### Added
+- RIGA-47: Drupalize existing executive order theme.
+- RIGA-8: Integrate icon library into icon card.
+
 ## [0.5.0] - 2021-03-04
 ### Added
 - RIG-260: Theme speech full display.
@@ -210,7 +215,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.0...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.1...HEAD
+[0.5.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.0...0.5.1
 [0.5.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.9...0.5.0
 [0.4.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.8...0.4.9
 [0.4.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.7...0.4.8
