@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Theme override to display a publication item.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ * - publication_icon: name of icon
+ * - publication_readable: readable publication type name
+ * - url: absolute link of publication
+ *
+ * @ingroup themeable
+ */
+#}
+<article class="qh__file-list__item">
+  <a href="{{ url }}" class="qh__file-list__link" {{ enable_download ? "download" }}>
+    <div class="qh__file-list__item__icon">
+      <span class="qh__icon" aria-hidden="true">
+        {% include ('@icons/' ~ publication_icon ~ '.svg') %}
+      </span>
+    </div>
+    <div class="qh__file-list__item__filename">
+      <span class="qh__file-list__item__label">{{ name }}</span>
+      <span class="qh__file-list__item__filesize">{{ publication_readable }}</span>
+    </div>
+    <div class="qh__file-list__item__download">
+      <span class="qh__icon">
+        {% if enable_download %}
+          {% include ('@icons/download.svg') %}
+        {% else %}
+          {% include ('@icons/link-external.svg') %}
+        {% endif %}
+      </span>
+    </div>
+  </a>
+</article>

@@ -1,0 +1,19 @@
+{% if breadcrumb %}
+  <nav class="qh__breadcrumb" aria-label="{{ 'Page Breadcrumb Trail'|t }}">
+    <div class="qh__breadcrumb__wrapper">
+
+      <ol class="qh__breadcrumb__list">
+      {% for item in breadcrumb %}
+        <li class="qh__breadcrumb__item {{ loop.index == 1 ? 'qh__breadcrumb__list--home' }}">
+          {% if item.url %}
+            <a class="qh__breadcrumb__page" href="{{ item.url }}">{{ item.text }}</a>
+          {% else %}
+            <span class="qh__breadcrumb__page">{{ item.text }}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+      </ol>
+
+    </div>
+  </nav>
+{% endif %}

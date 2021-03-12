@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * A blank template which returns field data without a wrapper.
+ *
+ * Available variables:
+ * - label: The label for the field.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item's content.
+ */
+#}
+
+<h3>{{ label }}</h3>
+<ul class="audiences-served__list">
+{% for item in items %}
+  <li>{{ item.content }}</li>
+{% endfor %}
+</ul>
+
+

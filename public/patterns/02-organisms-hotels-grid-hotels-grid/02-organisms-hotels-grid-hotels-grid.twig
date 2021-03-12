@@ -1,0 +1,17 @@
+{%
+  set classes = [
+    'qh__hotels-grid'
+  ]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2 class="qh__hotels-grid__title">{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+
+  <ul class="qh__hotels-grid__list">
+    {{ content }}
+  </ul>
+</div>

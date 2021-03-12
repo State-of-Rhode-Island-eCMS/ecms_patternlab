@@ -1,0 +1,99 @@
+{% import _self as menus %}
+{#
+  We call a macro which calls itself to render the full tree.
+  @see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0, front_page, 0, FALSE) }}
+
+{% macro menu_links(items, attributes, menu_level, front_page, generated_id, sub_menu_item, dropdown_item) %}
+  {% import _self as menus %}
+
+  {% if items %}
+
+    {# Main list wrapper only. Add nav wrapper. Add Home Link #}
+    {% if menu_level == 0 %}
+      <nav class="qh__nav-main" aria-label="Primary">
+        <div class="qh__nav-main__wrapper">
+          <a href="{{ front_page }}" class="qh__nav-main__link qh__nav-main__link--home" title="Back to Home" aria-hidden="true">
+            <span class="qh__icon">
+              {% include ('@icons/home.svg') %}
+              <span class="visually-hidden">{{ "Home"|t }}</span>
+            </span>
+          </a>
+          <button id="js__toggle-nav" class="qh__nav-main__toggle" type="button" aria-controls="js__primary-menu" aria-haspopup="true" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="qh__icon__menu">
+              <span></span>
+            </span>
+            <span class="qh__nav-main__toggle__label">{{ "Menu"|t }}</span>
+          </button>
+          <ul id="js__primary-menu" class="qh__nav-main__list qh__nav-main__list__outermost" role="list" aria-labelledby="js__toggle-nav">
+            <li class="qh__nav-main__item qh__nav-main__item--home">
+              <a href="{{ front_page }}" class="qh__nav-main__link qh__nav-main__link--home" title="Back to Home">
+                <span class="qh__icon">
+                  {% include ('@icons/home.svg') %}
+                  <span class="visually-hidden">{{ "Home"|t }}</span>
+                </span>
+              </a>
+            </li>
+    {% else %}
+      {# Subnavigation list wrapper #}
+      <ul class="qh__nav-main__list qh__nav-main__list__sub" aria-labelledby="menu-{{ generated_id }}">
+
+        {# Append an overview link to top of dropdown list. #}
+        <li class="qh__nav-main__item qh__nav-main__item__sub">
+          <a href="{{ dropdown_item.url }}" class="qh__nav-main__link qh__nav-main__link__sub {{ dropdown_item.in_active_trail ? qh__nav-main__link--current }}">{{ "Overview"|t }}</a>
+        </li>
+    {% endif %}
+
+    {% for item in items %}
+
+      {# Generate a random number to use as a unique id for link items #}
+      {% set link_id = random(10000) %}
+
+      {# List item classlist #}
+      {% set list_item_classes = "qh__nav-main__item" %}
+      {% if sub_menu_item %}
+        {% set list_item_classes = list_item_classes  ~ " qh__nav-main__item__sub" %}
+      {% endif %}
+      {% if item.below %}
+        {% set list_item_classes = list_item_classes  ~ " qh__nav-main__has-children" %}
+      {% endif %}
+
+      {# If there is a menu item below this level. Add dropdown icon and call the macro again. #}
+      {% if (item.is_expanded and item.below) %}
+        <li class="{{ list_item_classes }}">
+          <a href="{{ item.url }}" class="js__qh-dd-toggle qh__nav-main__link{{ item.in_active_trail ? ' qh__nav-main__link--current' }}" id="menu-{{ link_id }}" role="button" aria-haspopup="true" aria-expanded="false">
+            {{ item.title }}
+            <span class="qh__icon">
+              {% include ('@icons/chevron-down.svg') %}
+              <span class="visually-hidden">{{ "Toggle child menu "|t }}</span>
+            </span>
+          </a>
+          {% if item.below %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1, front_page, link_id, TRUE, item)  }}
+          {% endif %}
+        </li>
+      {% else %}
+        {# No child items. Render a standard link #}
+
+        {# Link classlist #}
+        {% set link_classes = "qh__nav-main__link" %}
+        {% if sub_menu_item %}
+          {% set link_classes = link_classes  ~ " qh__nav-main__link__sub" %}
+        {% endif %}
+        {% if item.in_active_trail %}
+          {% set link_classes = link_classes  ~ " qh__nav-main__link--current" %}
+        {% endif %}
+
+        <li class="{{ list_item_classes }}">
+          <a href="{{ item.url }}" class="{{ link_classes }}">{{ item.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+      </ul>
+    {% if menu_level == 0 %}
+      </nav>
+    </div>
+    {% endif %}
+  {% endif %}
+{% endmacro %}

@@ -1,0 +1,217 @@
+<style>
+  table th {
+    background-color: var(--fc__default__bg);
+    color: var(--fc__default__fg);
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+  table thead th span {
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+  }
+  table thead {
+    position: sticky;
+    top: 0;
+  }
+  table tbody th {
+    position: sticky;
+    left: 0;
+  }
+  table tbody td,
+  table tbody td div {
+    padding: 0.5rem;
+    text-align: center;
+  }
+  table tbody td small {
+    font-size: 0.875rem;
+  }
+  table tbody td small span {
+    border: 1px solid;
+  }
+  .light-text {
+    color: var(--c__white);
+  }
+  .dark-text {
+    color: var(--c__quahog--dark);
+  }
+</style>
+
+<script>
+  function round2places(number) {
+    return (Math.round(number * 100) / 100).toFixed(2);
+  }
+
+  function RGBAtoRGB(frontRGBA, backgroundRGB){
+    // Chroma.js is required
+
+    // Convert RGBA/RGB to single channels
+    frontRGBA = chroma(frontRGBA).rgba(false);
+    backgroundRGB = chroma(backgroundRGB).rgb(false);
+    var fr = frontRGBA[0];
+    var fg = frontRGBA[1];
+    var fb = frontRGBA[2];
+    var fa = frontRGBA[3];
+    var br = backgroundRGB[0];
+    var bg = backgroundRGB[1];
+    var bb = backgroundRGB[2];
+
+    //normalise the alpha channel across the foreground and background.
+    var r = ((1 - fa) * br) + (fa * fr);
+    var g = ((1 - fa) * bg) + (fa * fg);
+    var b = ((1 - fa) * bb) + (fa * fb);
+
+    //just check that we don't end up with a value greater than 255 for any channel.
+    r = (r > 255) ? 255 : r;
+    g = (g > 255) ? 255 : g;
+    b = (b > 255) ? 255 : b;
+
+    // Set all values to whole numbers
+    r = Math.round(r);
+    g = Math.round(g);
+    b = Math.round(b);
+
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
+  }
+
+  function setMessage(ccr) {
+    var message = '';
+    if (ccr > 7.0) {
+      message = '👑';
+    }
+    if (ccr > 4.5) {
+      message = message + '✅';
+    }
+    if (ccr < 4.5 && ccr > 3.0) {
+      message = '🟡';
+    }
+    if (ccr < 3.0) {
+      message = '🚫';
+    }
+    return message;
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+
+    document.querySelectorAll("#palette-color-contrast tbody td").forEach(function(col) {
+      var foreground = col.getAttribute('data-fore');
+      var background = col.getAttribute('data-back');
+      var div = col.querySelector('div');
+      var message = '';
+      var ccr = null;
+
+      // Skip transparent colors
+      if (
+        chroma.valid(foreground) &&
+        chroma.valid(background) &&
+        chroma(foreground).alpha() == 1 &&
+        chroma(background).alpha() == 1
+      ) {
+        var ccr = chroma.contrast(foreground, background);
+
+        if ( ccr !== null ) {
+          message = setMessage(ccr);
+
+          // Change the foreground color if this is a dark color
+          if ( chroma.contrast(foreground, '#000') < 4.5 ) {
+            col.setAttribute('class', 'light-text');
+          } else {
+            col.setAttribute('class', 'dark-text');
+          }
+          // Add the results to the column
+          div.innerHTML = message + '<br><small><b>' + round2places(ccr) + '</b></small>';
+        }
+      }
+      // Handle transparent colors
+      if (
+        chroma.valid(foreground) &&
+        chroma.valid(background) &&
+        (chroma(foreground).alpha() < 1 || chroma(background).alpha() < 1)
+      ) {
+        // Grab the color mode
+        var qh_html = document.getElementsByTagName('html')[0];
+        var lightmode = qh_html.classList.contains('light');
+        var originalFore = foreground;
+        var originalBack = background;
+
+        // Transparent colors will shift depending on the background they are on.
+        // Right now, dark mode uses quahog--dark #2e2e2e as the BG color
+
+        // Calculate the true color of the BG first against what is behind it
+        if ( chroma(background).alpha() < 1 && chroma(foreground).alpha() == 1 ) {
+          if (lightmode) {
+            //background = chroma.mix(background, '#fff', 0.5, 'lab').css();
+            background = RGBAtoRGB(background, '#fff');
+          } else {
+            //background = chroma.mix(background, '#2e2e2e', 0.5, 'lab').css();
+            background = RGBAtoRGB(background, '#2e2e2e');
+          }
+        }
+        // Calculate how the BG and FG mix together
+        if ( chroma(foreground).alpha() < 1 && chroma(background).alpha() == 1 ) {
+          //foreground = chroma.mix(foreground, background, 0.5, 'lab').css();
+          foreground = RGBAtoRGB(foreground, background);
+          //console.log(foreground);
+        }
+
+        // Now get the contrast
+        var ccr = chroma.contrast(foreground, background);
+
+        if ( ccr !== null ) {
+          message = setMessage(ccr);
+
+          // Change the foreground color if this is a dark color
+          if ( chroma.contrast(foreground, '#000') < 4.5 ) {
+            col.setAttribute('class', 'light-text');
+          } else {
+            col.setAttribute('class', 'dark-text');
+          }
+          // Add the results to the column
+          div.innerHTML = message + '<br><small><b>' + round2places(ccr) + '</b><br><span style="border-color:' + background + '; color:' + background + '; background-color:' + foreground + '"><b>composite</b></span></small>';
+          div.style.backgroundColor = chroma(originalFore).css();
+        }
+      }
+    });
+  });
+</script>
+
+<table id="palette-color-contrast">
+  <colgroup>
+    <col>
+  {% for key, color in colors|reverse %}
+    {% if key != 'transparent' %}
+    <col style="background-color: var(--c__{{ key }})">
+    {% endif %}
+  {% endfor %}
+  </colgroup>
+  <thead>
+    <tr>
+      <th></th>
+      {% for key, color in colors|reverse %}
+        {% if key != 'transparent' %}
+      <th scope="col"><span>{{ key }}</span></th>
+        {% endif %}
+      {% endfor %}
+    </tr>
+  </thead>
+  <tbody>
+    {% for key, color in colors|reverse %}
+      {% if key != 'transparent' %}
+      <tr>
+        {% for innerKey, innerColor in colors|reverse %}
+          {% if innerKey != 'transparent' %}
+            {% if loop.first %}
+        <th scope="row"><b>{{ key }}</b></th>
+            {% endif %}
+            {% if color.hsl == innerColor.hsl %}
+        <td scope="col" style="background-color: var(--fc__default__fg)"></td>
+            {% else %}
+        <td scope="col" data-fore="{{ color.hsl }}" data-fore-name="{{ key }}" data-back="{{ innerColor.hsl }}" data-back-name="{{ innerKey }}"> <div style="background-color: var(--c__{{ key }})"></div></td>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </tr>
+      {% endif %}
+    {% endfor %}
+    </tr>
+  </tbody>
+</table>

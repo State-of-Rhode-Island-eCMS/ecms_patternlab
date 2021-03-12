@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <head-placeholder token="">
+    <title></title>
+    <css-placeholder token="">
+    <js-placeholder token="">
+    <script>window.MSInputMethodContext && document.documentMode && document.write('<script src="/profiles/contrib/ecms_profile/ecms_base/themes/custom/ecms/ecms_patternlab/dist/vendor/ie11CustomProperties.min.js"><\/script>');</script>
+
+    <script type="text/javascript">
+  		(function() {
+  			document.documentElement.className += " wf-inactive"; 
+
+  			// Optimization for Notifications
+  			if(sessionStorage.getItem('siteNotificationsHidden')) {
+  				document.documentElement.classList.add("notifications-hidden");
+  			}
+
+
+				const cookies = document.cookie.split(';');
+
+				var lightSetting = false;
+
+				for (let i = 0; i < cookies.length; i++) {
+
+					// Check for Light Mode preference
+					if (cookies[i].includes('lightMode=dark')) {
+						// set a cookie to save the setting
+						document.cookie = "lightMode=dark;max-age=31536000;path=/;samesite=strict";
+						document.documentElement.className += " dark";
+						lightSetting = true;
+					} else if (cookies[i].includes('lightMode=light')) {
+						document.cookie = "lightMode=light;max-age=31536000;path=/;samesite=strict";
+						document.documentElement.className += " light";
+						lightSetting = true;
+
+					// Check for Font size preference
+					} else if (cookies[i].includes('fontSizeModifier')) {
+						let fontSizeCookieString = cookies[i];
+						// get the value
+						let fontSizeModifier = fontSizeCookieString.split('=');
+						let fontSizeModifierValue = fontSizeModifier[1];
+						document.cookie = "fontSizeModifier="+fontSizeModifierValue+";max-age=31536000;path=/;samesite=strict";
+						document.documentElement.style.setProperty(`--fontSizeModifier`, fontSizeModifierValue);
+
+					// Check for Line-height preference
+					} else if (cookies[i].includes('lineHeightModifier')) {
+						let lineHeightCookieString = cookies[i];
+						// get the value
+						let lineHeightModifier = lineHeightCookieString.split('=');
+						let lineHeightModifierValue = lineHeightModifier[1];
+						document.cookie = "lineHeightModifier="+lineHeightModifierValue+";max-age=31536000;path=/;samesite=strict";
+						document.documentElement.style.setProperty(`--lineHeightModifier`, lineHeightModifierValue);
+
+					// Check for word space preference
+					} else if (cookies[i].includes('wordSpaceModifier')) {
+						let wordSpaceCookieString = cookies[i];
+						// get the value
+						let wordSpaceModifier = wordSpaceCookieString.split('=');
+						let wordSpaceModifierValue = wordSpaceModifier[1];
+						document.cookie = "wordSpaceModifier="+wordSpaceModifierValue+";max-age=31536000;path=/;samesite=strict";
+						document.documentElement.style.setProperty(`--wordSpaceModifier`, wordSpaceModifierValue);
+					}
+					
+				} // end for
+				
+				if (lightSetting == false) {
+					document.cookie = "lightMode=auto;max-age=31536000;path=/;samesite=strict";
+				}
+
+        // set initial var for support of variable fonts
+        // starting with true since most browsers support them now
+        var vfSupport = true;
+        
+        // Check for browser support of variable fonts
+        var vfSupport = "CSS" in window && "supports" in CSS && CSS.supports("(font-variation-settings: normal)");
+        // should return true if the browser supports variable fonts
+				//console.log('vfSupport: '+vfSupport);
+        
+  			// Optimization for Repeat Views
+  			if( sessionStorage.foutFontsLoaded ) {
+  				document.documentElement.classList.remove("wf-inactive");
+  				document.documentElement.classList.add("wf-active");
+  				return;
+  			}
+        
+        if( vfSupport == true ) { // Check for variable fonts 
+					var fontA = new FontFaceObserver('Roboto Slab VF', {
+						weight: 400,
+						style: 'normal'
+					});
+					var fontB = new FontFaceObserver('Work Sans VF', {
+            weight: 400,
+            style: 'normal'
+          });
+					var fontC = new FontFaceObserver('Work Sans VF', {
+            weight: 400,
+            style: 'italic'
+          });
+			
+					Promise.all([fontA.load(), fontB.load(), fontC.load()]).then(function () {
+            document.documentElement.classList.remove("wf-inactive");
+            document.documentElement.classList.add("wf-active");
+          
+    				// Optimization for Repeat Views
+    				sessionStorage.foutFontsLoaded = true;
+  				});
+        } else { // Else check for static web fonts
+					var fontA = new FontFaceObserver('Roboto Slab', {
+							weight: 'normal',
+							style: 'normal'
+						});
+					var fontB = new FontFaceObserver('Roboto Slab', {
+							weight: 'bold',
+							style: 'normal'
+						});
+          var fontC = new FontFaceObserver('Work Sans', {
+							weight: 'normal',
+							style: 'normal'
+						});
+					var fontD = new FontFaceObserver('Work Sans', {
+							weight: 'bold',
+							style: 'normal'
+						});
+					var fontE = new FontFaceObserver('Work Sans', {
+							weight: 'normal',
+							style: 'italic'
+						});
+					var fontF = new FontFaceObserver('Work Sans', {
+							weight: 'bold',
+							style: 'italic'
+						});
+
+					Promise.all([fontA.load(), fontB.load(), fontC.load(), fontD.load(), fontE.load(), fontF.load()]).then(function () {
+            document.documentElement.classList.remove("wf-inactive");
+            document.documentElement.classList.add("wf-active");
+          
+    				// Optimization for Repeat Views
+    				sessionStorage.foutFontsLoaded = true;
+    			});
+        }
+  		})();
+  	</script>
+
+
+
+  </head>
+  <body>
+
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      
+    </a>
+    
+    
+    
+    <js-bottom-placeholder token="">
+  </body>
+</html>

@@ -1,0 +1,26 @@
+{% set background_class = 'qh__t__' ~ settings.background_color %}
+{%
+  set classes = [
+    'qh-layout-section',
+    'qh-layout-section--col-count-2',
+    settings.full_width.checkbox == 1 ? 'qh-layout-section--full-width',
+  ]
+%}
+
+<div class="{{ background_class }}">
+  <div{{ attributes.addClass(classes) }}>
+
+    {% if content.first %}
+      <div {{ region_attributes.first.addClass('qh-layout-section__col', 'qh-layout-section__col--first') }}>
+        {{ content.first }}
+      </div>
+    {% endif %}
+
+    {% if content.second %}
+      <div {{ region_attributes.second.addClass('qh-layout-section__col', 'qh-layout-section__col--second') }}>
+        {{ content.second }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+

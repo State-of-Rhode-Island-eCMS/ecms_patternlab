@@ -1,0 +1,27 @@
+<li>
+  <div class="qh__teaser-hotel">
+    <div class="qh__teaser-hotel__image-wrap">
+      <a href="{{ url }}">
+
+        <span class="qh__teaser-hotel__snipe">
+          {% if rate_unit == "dollars" %}
+            <sup>$</sup>{{ rate }}
+          {% endif %}
+
+          {% if rate_unit == "percent" %}
+            {{ rate }}<sup>%</sup> <br />
+            <p>{{ "off"|t }}</p>
+          {% endif %}
+        </span>
+
+        {{ img }}
+
+      </a>
+    </div>
+    <div class="qh__teaser-hotel__content">
+      <h3 class="qh__teaser-hotel__title">{{ title }}</h3>
+      <p class="qh__teaser-hotel__location">{{ location }}</p>
+      <p class="qh__teaser-hotel__cta"><a class="qh__teaser-hotel__link" href="{{ url }}">{{ "View Hotel"|t }}</a></p>
+    </div>
+  </div>
+</li>

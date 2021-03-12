@@ -1,0 +1,36 @@
+<div class="qh__articles-list">
+  <h1 class="qh__articles-list__title">{{ title }}</h1>
+
+  {% if exposed %}
+    <div class="view-filters">
+      {{ exposed }}
+    </div>
+  {% endif %}
+
+  {% if rows %}
+    <div class="qh__articles-list__list">
+
+      {% if rows_loop %}
+        {% for row in rows %}
+          {{- row.content -}}
+        {% endfor %}
+      {% else %}
+        {{ rows }}
+      {% endif %}
+
+    </div>
+  {% endif %}
+
+  {% if pager %}
+    {{ pager }}
+  {% endif %}
+  {% if more %}
+    {{ more }}
+  {% endif %}
+  {% if feed_icons %}
+    <div class="feed-icons">
+      {{ feed_icons }}
+    </div>
+  {% endif %}
+
+</div>

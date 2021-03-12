@@ -1,0 +1,70 @@
+<!-- BEGIN web font toggle -->
+        		<a href="#" id="toggle-fonts" class="toggle-fonts button on">Web Fonts</a>
+        		<a href="#" id="toggle-varfonts" class="toggle-varfonts button on">Variable Fonts</a>
+				<style>
+					.button {
+					  font-size: 14px;
+					  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+					  text-decoration: none;
+					  font-weight: bold;
+					  color: #383838;
+					  background-color: #fefafa;
+					  background-image: linear-gradient(#ffffff, #ede9e9);
+					  padding: 0.25em;
+					  border-radius: 0.5em;
+					  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+					}
+					.button:hover {
+					  background-color: #e4e1e1;
+					  background-image: linear-gradient(#fefafa, #cbc7c7);
+					}
+					[class*="toggle-"] {
+					  position: sticky; 
+            top: 0.5rem;
+            margin-top: 0;
+					  z-index: 999;
+					}
+					[class*="toggle-"].on:after {
+					  content: ": on";
+					}
+					[class*="toggle-"].off:after {
+					  content: ": off";
+					}
+				</style>
+				
+
+				<script>
+					if (!'classList' in document.createElement('span')) {
+  					document.getElementById('c-unsupported').classList.remove('hidden');
+            document.getElementById('execute').setAttribute('disabled', 'disabled');
+          } else {
+            document.getElementById('toggle-fonts').addEventListener('click', function(e) {
+              e.preventDefault();
+							document.getElementById('toggle-fonts').classList.toggle('on');
+							document.getElementById('toggle-fonts').classList.toggle('off');
+							document.getElementsByTagName("html")[0].classList.toggle('wf-active');
+							document.getElementsByTagName("html")[0].classList.toggle('wf-inactive');
+            });
+            document.getElementById('toggle-varfonts').addEventListener('click', function(e) {
+              e.preventDefault();
+              if (document.getElementById('toggle-varfonts').classList.contains('on')) {
+							  document.getElementById('toggle-varfonts').classList.remove('on');
+							  document.getElementById('toggle-varfonts').classList.add('off');
+							  document.getElementsByTagName("html")[0].classList.add('novf');
+              } else {
+							  document.getElementById('toggle-varfonts').classList.add('on');
+							  document.getElementById('toggle-varfonts').classList.remove('off');
+							  document.getElementsByTagName("html")[0].classList.remove('novf');
+              }
+            });
+         	}
+        </script>
+
+        		<!-- END web font toggle -->
+
+<h1>Heading Level 1</h1>
+<h2>Heading Level 2</h2>
+<h3>Heading Level 3</h3>  
+<h4>Heading Level 4</h4>
+<h5>Heading Level 5</h5> 
+<h6>Heading Level 6</h6>

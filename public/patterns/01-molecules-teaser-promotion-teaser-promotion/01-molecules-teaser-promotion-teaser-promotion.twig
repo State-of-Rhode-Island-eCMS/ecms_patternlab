@@ -1,0 +1,34 @@
+{% if url is not empty %}
+  <a href={{ url }} class="qh__teaser-promotion qh__teaser-promotion__link" title="{{ title }}">
+    <div class="qh__teaser-promotion__layout">
+{% else %}
+  <div class="qh__teaser-promotion qh__teaser-promotion__layout">
+{% endif %}
+
+    {% if img %}
+      <div class="qh__teaser-promotion__img-wrapper">
+        {{ img|raw }}
+      </div>
+    {% endif %}
+
+    <div class="qh__teaser-promotion__content">
+      {% if display_title %}
+        <h3 class="qh__teaser-promotion__title">
+          {{ title }}
+        </h3>
+      {% endif %}
+
+      {% if text is not empty %}
+        <div class="qh__teaser-promotion__text">
+          {{ text|raw }}
+        </div>
+      {% endif %}
+    </div>
+
+{% if url is not empty %}
+    </div>
+  </a>
+{% else %}
+  </div>
+{% endif %}
+

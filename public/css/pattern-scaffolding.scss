@@ -1,0 +1,100 @@
+/**
+ * This stylesheet is for styles you want to include only when displaying demo
+ * styles for grids, animations, color swatches, etc.
+ * These styles will not be your production CSS.
+ */
+
+// stylelint-disable selector-max-id
+#sg-patterns {
+  box-sizing: border-box !important;
+  max-width: 100%;
+  padding: 0 0.5em;
+}
+// stylelint-enable selector-max-id
+
+.demo-animate {
+  background: var(--c__quahog--light);
+  padding: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.sg-colors {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none;
+}
+
+.sg-colors li {
+  flex: auto;
+  padding: 0.3em;
+  margin: 0 0.5em 0.5em 0;
+  min-width: 5em;
+  max-width: 14em;
+  border: 1px solid var(--c__quahog--light);
+  border-radius: 8px;
+}
+
+.sg-swatch {
+  display: block;
+  height: 4em;
+  margin-bottom: 0.3em;
+  border-radius: 5px;
+
+  &.sg-palette {
+    height: 8em;
+  }
+}
+
+.sg-label {
+  display: block;
+  font-size: 90%;
+  line-height: 1;
+}
+
+.sg-code {
+  font-size: 75%;
+  line-height: 1;
+}
+
+.pl-c-pattern-info {
+  .h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  dd {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+h2.pl-c-category__title::after {
+  border: none;
+  margin: 0;
+}
+
+.pl-c-pattern {
+  img {
+    width: auto;
+  }
+
+  figure img {
+    width: 100%;
+  }
+}
+
+.pl-c-pattern__header {
+  button {
+    background-image: none;
+  }
+}

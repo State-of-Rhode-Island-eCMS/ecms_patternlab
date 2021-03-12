@@ -1,0 +1,14 @@
+{%
+  set classes = [
+    'qh__card',
+    bg_color_class
+  ]
+%}
+
+<div {{ attributes.addClass(classes) }}>
+  {% if title %}
+    <h3 class="qh__card__title">{{ title }}</h3>
+  {% endif %}
+
+  {{ rendered_components }}
+</div>

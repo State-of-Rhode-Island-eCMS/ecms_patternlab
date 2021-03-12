@@ -1,0 +1,13 @@
+<a href="{{ link_url}}" class="qh__btn qh__btn--icon {{ button_color_class }}">
+
+  {% if media_library_icon %}
+    {{ icon }}
+  {% elseif icon|default %}
+    {% include ('@icons/' ~ icon) %}
+  {% endif %}
+
+  <span>
+    {{ link_title }}
+  </span>
+
+</a>

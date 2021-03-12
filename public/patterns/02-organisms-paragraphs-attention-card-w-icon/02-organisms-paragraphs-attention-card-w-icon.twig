@@ -1,0 +1,18 @@
+<article class="qh__icon-card">
+  <div class="qh__icon-card__icon">
+    <span class="qh__icon" aria-hidden="true">
+      {% if media_library_icon %}
+        {{ icon }}
+      {% elseif icon|default %}
+        {% include ('@icons/' ~ icon) %}
+      {% endif %}
+    </span>
+  </div>
+  <div class="qh__icon-card__content">
+    <h3 class="qh__icon-card__title">
+      {# Can we be sure that a H3 here will always be appropriate? (JP: I think it's reasonable enough, and have moved it up to the element so we have one less wrapper) #}
+      {{ paragraph.field_list_title.value }}
+    </h3>
+    {{ content.field_text }}
+  </div>
+</article>

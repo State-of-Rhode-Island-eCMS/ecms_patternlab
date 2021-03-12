@@ -1,0 +1,102 @@
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, level_one_link, 0, 0, FALSE) }}
+
+{% macro menu_links(items, attributes, level_one_link, menu_level, generated_id, sub_menu_item, dropdown_item) %}
+  {% import _self as menus %}
+
+  {% if items %}
+
+    {# Main list wrapper only. Add nav wrapper. Add Level 1 Link #}
+    {% if menu_level == 0 %}
+      <nav id="js__minor-menu" class="qh__nav-minor" aria-label="Secondary">
+        <button id="js__minor-toggle" class="qh__nav-minor__toggle" type="button" aria-controls="js__minor-menu" aria-haspopup="true" aria-expanded="false" aria-label="Toggle section navigation">
+          {{ "Section Menu"|t }}
+        </button>
+        <ul class="qh__nav-minor__list qh__accordion js-qh-accordion" role="list" data-allow-multiple>
+          <li class="qh__nav-minor__item">
+            <a href="{{ level_one_link.url }}" class="qh__nav-minor__link {{ level_one_link.active ? 'qh__nav-minor__link--current' }}">{{ level_one_link.title }}</a>
+          </li>
+
+    {% else %}
+      {# Subnavigation wrapper #}
+      <div
+        id="details-unique-{{ generated_id }}"
+        role="region"
+        aria-labelledby="summary-unique-{{ generated_id }}"
+        class="qh__accordion__content js-qh-accordion-panel"
+      >
+        <div>
+          <ul class="qh__nav-minor__list qh__nav-minor__list__sub">
+    {% endif %}
+
+    {% for item in items %}
+
+      {# Generate a random number to use as a unique id for link items #}
+      {% set link_id = random(10000) %}
+
+      {# List item classlist #}
+      {% set list_item_classes = "qh__nav-minor__item" %}
+      {% if sub_menu_item %}
+        {% set list_item_classes = list_item_classes  ~ " qh__nav-minor__item__sub" %}
+      {% endif %}
+      {% if item.below %}
+        {% set list_item_classes = list_item_classes  ~ " qh__nav-minor__has-children" %}
+      {% endif %}
+
+      {% set aria_expanded_status = "false" %}
+      {% if item.in_active_trail %}
+        {% set aria_expanded_status = "true"  %}
+      {% endif %}
+
+      {# If there is a menu item below this level. Add accordion and call the macro again. #}
+      {% if (item.is_expanded and item.below) %}
+        <li class="{{ list_item_classes }}">
+          <a href="{{ item.url }}" class="qh__nav-minor__link {{ item.in_active_trail ? 'qh__nav-minor__link--current' }}">{{ item.title }}</a>
+          <button
+            aria-expanded="{{ aria_expanded_status }}"
+            class="qh__accordion__button js__expand-collapse"
+            aria-controls="details-unique-{{ link_id }}"
+            data-id="unique-{{ link_id }}"
+            id="summary-unique-{{ link_id }}"
+            >
+            <span class="qh__icon">
+              {% include ('@icons/plus-minus.svg') %}
+              <span class="visually-hidden">{{ "Toggle child menu "|t }}</span>
+            </span>
+          </button>
+
+          {# Call the macro again. #}
+          {{ menus.menu_links(item.below, attributes, null, menu_level + 1, link_id, TRUE, item)  }}
+        </li>
+      {% else %}
+        {# No child items. Render a standard link #}
+
+        {# Link classlist #}
+        {% set link_classes = "qh__nav-minor__link" %}
+        {% if sub_menu_item %}
+          {% set link_classes = link_classes  ~ " qh__nav-minor__link__sub" %}
+        {% endif %}
+        {% if item.in_active_trail %}
+          {% set link_classes = link_classes  ~ " qh__nav-minor__link--current" %}
+        {% endif %}
+
+        <li class="{{ list_item_classes }}">
+          <a href="{{ item.url }}" class="{{ link_classes }}">{{ item.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+    {% if menu_level == 0 %}
+        </ul>
+      </nav>
+    {% else %}
+          </ul>
+        </div>
+      </div>
+    {% endif %}
+  {% endif %}
+{% endmacro %}

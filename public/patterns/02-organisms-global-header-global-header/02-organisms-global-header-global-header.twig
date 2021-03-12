@@ -1,0 +1,19 @@
+<div class="qh__global-header">
+  <div class="qh__global-header__wrapper {{ header_global ? 'qh__global-header__wrapper--multiple-region' : '' }}">
+    <p class="qh__global-header__tagline">Official State of Rhode Island website</p>
+
+    <div class="qh__global-header__settings">
+
+      {% if header_global %}
+        <div class="qh__global-header__blocks">
+          {{ header_global }}
+        </div>
+      {% endif %}
+
+      {% include '@molecules/user-settings/user-settings.twig' with {
+        language_switcher: language_switcher,
+      }
+      %}
+    </div>
+  </div>
+</div>

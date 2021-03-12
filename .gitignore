@@ -6,7 +6,7 @@
 dependencyGraph.json
 node_modules/
 patternlab.json
-public
+#public
 Thumbs.db
 source/css/style.css
 source/css/.sass-cache/*

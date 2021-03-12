@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ * Theme override to display the site branding block.
+ *
+ * Available variables:
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ *
+ * Site name:
+ * - header_preprocess_values: Array of three text lines from the theme settings configuration with three values (only main_line is required)
+ *   - top_line
+ *   - main_line
+ *   - bottom_line
+ *
+ *
+ * @see template_preprocess_page()
+ */
+#}
+{% set logo_size = ' ' %}
+{% set default_logo = TRUE %}
+{% if (header_preprocess_values.site_logo != '/profiles/contrib/ecms_profile/ecms_base/themes/custom/ecms/logo.svg') %}
+  {% set default_logo = FALSE %}
+{% endif %}
+
+{% set logo_only = FALSE %}
+{% if header_preprocess_values.logo_only %}
+  {% set logo_only = TRUE %}
+  {% set logo_size = ' --wide' %}
+{% endif %}
+
+<div class="qh__site-branding">
+  <a href="{{ front_page }}" class="qh__site-branding__link" rel="home">
+    <span class="qh__site-branding__logo{{ logo_size }}">
+    {% if (default_logo == FALSE) %}
+      <img src="{{ header_preprocess_values.site_logo }}" alt="" />
+    {% else %}
+      {% include ('@icons/default-logo.svg') %}
+    {% endif %}
+    </span>
+  {% if logo_only == FALSE %}
+    <span class="qh__site-branding__name" role="text">
+    {% if (header_preprocess_values.top_line) %}
+      <span class="qh__site-branding__name__top-line">{{ header_preprocess_values.top_line }}<span class="visually-hidden">, </span></span>
+    {% endif %}
+      <span class="qh__site-branding__name__main-line">{{ header_preprocess_values.main_line }}</span>
+    {% if (header_preprocess_values.bottom_line) %}
+      <span class="qh__site-branding__name__bottom-line"><span class="visually-hidden">, </span>{{ header_preprocess_values.bottom_line }}</span>
+    {% endif %}
+    </span>
+  {% endif %}
+  </a>
+</div>

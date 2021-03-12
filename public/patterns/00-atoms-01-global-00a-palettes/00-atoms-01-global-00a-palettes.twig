@@ -1,0 +1,37 @@
+<ul class="sg-colors sg-palettes">
+	{% for slug, palette in palettes %}
+	  <li>
+      <div class="sg-swatch sg-palette"
+			  style="min-width: 254px; {% if slug ends with '--dark' %}background-color: var(--c__quahog--dark);{% endif %} background-image: linear-gradient(to right
+    {%- set num = 0 -%}
+    {# Loop through once just to get our total number #}
+    {%- for section, definitions in palette.values -%}
+      {%- if 'primary' not in section -%}
+        {%- for count, row in definitions -%}
+          {%- if 'bg' == row.fnName -%}
+            {%- set num = num + 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {# Loop through again with the correct percentage math #}
+    {%- set percent = 100 / num -%}
+    {%- set counter = 0 -%}
+    {%- for section, definitions in palette.values -%}
+      {%- if 'primary' not in section -%}
+        {%- for count, row in definitions -%}
+          {%- if 'bg' == row.fnName -%}
+, var(--c__{{ row.colorName }}) {{ percent * counter }}%
+{%- set counter = counter + 1 -%}
+, var(--c__{{ row.colorName }}) {{ percent * counter }}%
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endfor -%}); background-size: cover;">
+      </div>
+			<span class="sg-label"><b>{{ palette.humanName }}:</b></span>
+			<span class="sg-code"><code>.qh__t__{{ slug }}</code></span>
+    </li>
+	{% endfor %}
+</ul>
+

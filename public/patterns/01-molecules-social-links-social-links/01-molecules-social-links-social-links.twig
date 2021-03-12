@@ -1,0 +1,21 @@
+{% if items %}
+  {# Subnavigation list wrapper #}
+  <nav id="js__social-links" class="qh__social-links" aria-label="Social Media">
+    <ul class="qh__social-links__list qh__u__no-external">
+      {% for item in items %}
+        <li class="qh__social-links__item">
+          <a href="{{ item.url }}" class="qh__social-links__link" rel="external">
+            <span class="qh__icon">
+              {% if item.icon is empty or item.icon is same as("other") %}
+                {% include ('@icons/file-generic.svg') %}
+              {% else %}
+                {% include ('@icons/' ~ item.icon ~ '.svg') %}
+              {% endif %}
+            </span>
+             <span class="visually-hidden">{{ item.title }}</span>
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
+  </nav>
+{% endif %}

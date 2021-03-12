@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html class="pl light no-js">
+  <head>
+    <title>Quahog: the RI eCMS Design System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="../../css/style.css?1615556401656" media="all" />
+    <link rel="stylesheet" href="../../css/pattern-scaffolding.css?1615556401656" media="all" />
+    <link rel="stylesheet" href="../../vendor/tiny-slider/tiny-slider.css?1615556401656" media="all" />
+    <script src="../../vendor/fontfaceobserver.js"></script>
+    <script src="../../vendor/chroma.min.js"></script>
+    <script src="../../vendor/tiny-slider/tiny-slider.js"></script>
+    <script src="../../vendor/rrule/rrule.min.js?1615556401656" type="module"></script>
+    <script src="../../js/pattern-lab-compiled.js?1615556401656"></script>
+    <script>window.MSInputMethodContext && document.documentMode && document.write('<script src="../../vendor/ie11CustomProperties.min.js"><\/script>');</script>
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    
+    <!-- End Pattern Lab -->
+    <!--
+      Active color themes to test:
+      qh__t__scarborough
+      qh__t__federal-hill
+      qh__t__wickaboxet
+      qh__t__block-island
+      qh__t__blue-shutters
+
+      Switch "light" class for "dark" on the HTML tag
+    -->
+  </head>
+  <body class="body qh__t__scarborough"><ul class="sg-colors">
+			<li>
+			<span class="sg-swatch" style="background: hsl(0, 0%, 100%);"></span>
+			<span class="sg-label"><b>White:</b> hsl(0, 0%, 100%)</span>
+			<span class="sg-code"><code>var(--c__white)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsla(0, 0%, 100%, 0.33);"></span>
+			<span class="sg-label"><b>White 33% transparent:</b> hsla(0, 0%, 100%, 0.33)</span>
+			<span class="sg-code"><code>var(--c__white--trans33)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsla(0, 0%, 100%, 0.25);"></span>
+			<span class="sg-label"><b>White 25% transparent:</b> hsla(0, 0%, 100%, 0.25)</span>
+			<span class="sg-code"><code>var(--c__white--trans25)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsla(0, 0%, 100%, 0.15);"></span>
+			<span class="sg-label"><b>White 15% transparent:</b> hsla(0, 0%, 100%, 0.15)</span>
+			<span class="sg-code"><code>var(--c__white--trans15)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: transparent;"></span>
+			<span class="sg-label"><b>White 100% transparent:</b> transparent</span>
+			<span class="sg-code"><code>var(--c__transparent)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(0, 0%, 8%);"></span>
+			<span class="sg-label"><b>Quahog dark:</b> hsl(0, 0%, 8%)</span>
+			<span class="sg-code"><code>var(--c__quahog--darker)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsla(0, 0%, 8%, 0.33);"></span>
+			<span class="sg-label"><b>Quahog dark 33% transparent:</b> hsla(0, 0%, 8%, 0.33)</span>
+			<span class="sg-code"><code>var(--c__quahog--dark--trans33)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsla(0, 0%, 8%, 0.25);"></span>
+			<span class="sg-label"><b>Quahog dark 25% transparent:</b> hsla(0, 0%, 8%, 0.25)</span>
+			<span class="sg-code"><code>var(--c__quahog--dark--trans25)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsla(0, 0%, 8%, 0.15);"></span>
+			<span class="sg-label"><b>Quahog dark 15% transparent:</b> hsla(0, 0%, 8%, 0.15)</span>
+			<span class="sg-code"><code>var(--c__quahog--dark--trans15)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(0, 0%, 18%);"></span>
+			<span class="sg-label"><b>Quahog:</b> hsl(0, 0%, 18%)</span>
+			<span class="sg-code"><code>var(--c__quahog--dark)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(0, 0%, 25%);"></span>
+			<span class="sg-label"><b>Quahog:</b> hsl(0, 0%, 25%)</span>
+			<span class="sg-code"><code>var(--c__quahog)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(0, 0%, 43%);"></span>
+			<span class="sg-label"><b>Quahog medium:</b> hsl(0, 0%, 43%)</span>
+			<span class="sg-code"><code>var(--c__quahog--medium)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(0, 0%, 83%);"></span>
+			<span class="sg-label"><b>Quahog light:</b> hsl(0, 0%, 83%)</span>
+			<span class="sg-code"><code>var(--c__quahog--light)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(0, 0%, 95%);"></span>
+			<span class="sg-label"><b>Quahog lightest:</b> hsl(0, 0%, 95%)</span>
+			<span class="sg-code"><code>var(--c__quahog--lightest)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(224, 37%, 17%);"></span>
+			<span class="sg-label"><b>Navy dark:</b> hsl(224, 37%, 17%)</span>
+			<span class="sg-code"><code>var(--c__navy--dark)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(224, 36%, 25%);"></span>
+			<span class="sg-label"><b>Navy:</b> hsl(224, 36%, 25%)</span>
+			<span class="sg-code"><code>var(--c__navy)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsla(224, 36%, 25%, 0.5);"></span>
+			<span class="sg-label"><b>Navy 50% transparent:</b> hsla(224, 36%, 25%, 0.5)</span>
+			<span class="sg-code"><code>var(--c__navy--trans50)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(224, 54%, 73%);"></span>
+			<span class="sg-label"><b>Navy light:</b> hsl(224, 54%, 73%)</span>
+			<span class="sg-code"><code>var(--c__navy--light)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(224, 80%, 40%);"></span>
+			<span class="sg-label"><b>Navy saturated:</b> hsl(224, 80%, 40%)</span>
+			<span class="sg-code"><code>var(--c__navy--sat)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(224, 60%, 55%);"></span>
+			<span class="sg-label"><b>Navy saturated light:</b> hsl(224, 60%, 55%)</span>
+			<span class="sg-code"><code>var(--c__navy--sat-lgt)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(244, 45%, 54%);"></span>
+			<span class="sg-label"><b>Navy warm:</b> hsl(244, 45%, 54%)</span>
+			<span class="sg-code"><code>var(--c__navy--warm)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(254, 62%, 80%);"></span>
+			<span class="sg-label"><b>Navy warm light:</b> hsl(254, 62%, 80%)</span>
+			<span class="sg-code"><code>var(--c__navy--wrm-lgt)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(356, 47%, 38%);"></span>
+			<span class="sg-label"><b>Rhody Red dark:</b> hsl(356, 47%, 38%)</span>
+			<span class="sg-code"><code>var(--c__rhody-red--dark)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(360, 79%, 62%);"></span>
+			<span class="sg-label"><b>Rhody Red:</b> hsl(360, 79%, 62%)</span>
+			<span class="sg-code"><code>var(--c__rhody-red)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsla(360, 79%, 62%, 0.5);"></span>
+			<span class="sg-label"><b>Rhody Red 50% transparent:</b> hsla(360, 79%, 62%, 0.5)</span>
+			<span class="sg-code"><code>var(--c__rhody-red--trans50)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsla(360, 79%, 62%, 0.15);"></span>
+			<span class="sg-label"><b>Rhody Red 15% transparent:</b> hsla(360, 79%, 62%, 0.15)</span>
+			<span class="sg-code"><code>var(--c__rhody-red--trans15)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(23, 100%, 64%);"></span>
+			<span class="sg-label"><b>Calamari:</b> hsl(23, 100%, 64%)</span>
+			<span class="sg-code"><code>var(--c__calamari)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(46, 95%, 61%);"></span>
+			<span class="sg-label"><b>Hope Gold:</b> hsl(46, 95%, 61%)</span>
+			<span class="sg-code"><code>var(--c__hope-gold)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(110, 49%, 51%);"></span>
+			<span class="sg-label"><b>Green Animals:</b> hsl(110, 49%, 51%)</span>
+			<span class="sg-code"><code>var(--c__green-animals)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(110, 59%, 30%);"></span>
+			<span class="sg-label"><b>Green Animals dark:</b> hsl(110, 59%, 30%)</span>
+			<span class="sg-code"><code>var(--c__green-animals--dark)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsla(110, 49%, 51%, 0.14);"></span>
+			<span class="sg-label"><b>Green Animals 15% transparent:</b> hsla(110, 49%, 51%, 0.14)</span>
+			<span class="sg-code"><code>var(--c__green-animals--trans15)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(160, 75%, 30%);"></span>
+			<span class="sg-label"><b>Cliff Walk darkest:</b> hsl(160, 75%, 30%)</span>
+			<span class="sg-code"><code>var(--c__cliff-walk--darkest)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsla(160, 75%, 30%, 0.15);"></span>
+			<span class="sg-label"><b>Cliff Walk darkest 15% transparent:</b> hsla(160, 75%, 30%, 0.15)</span>
+			<span class="sg-code"><code>var(--c__cliff-walk--darkest--trans15)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(160, 85%, 60%);"></span>
+			<span class="sg-label"><b>Cliff Walk dark:</b> hsl(160, 85%, 60%)</span>
+			<span class="sg-code"><code>var(--c__cliff-walk--dark)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsla(160, 85%, 60%, 0.25);"></span>
+			<span class="sg-label"><b>Cliff Walk 33% transparent:</b> hsla(160, 85%, 60%, 0.25)</span>
+			<span class="sg-code"><code>var(--c__cliff-walk--dark--trans25)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(160, 100%, 74%);"></span>
+			<span class="sg-label"><b>Cliff Walk:</b> hsl(160, 100%, 74%)</span>
+			<span class="sg-code"><code>var(--c__cliff-walk)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(160, 75%, 88%);"></span>
+			<span class="sg-label"><b>Cliff Walk light:</b> hsl(160, 75%, 88%)</span>
+			<span class="sg-code"><code>var(--c__cliff-walk--light)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(208, 12%, 32%);"></span>
+			<span class="sg-label"><b>Ocean State dark:</b> hsl(208, 12%, 32%)</span>
+			<span class="sg-code"><code>var(--c__ocean--dark)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(208, 54%, 73%);"></span>
+			<span class="sg-label"><b>Ocean State:</b> hsl(208, 54%, 73%)</span>
+			<span class="sg-code"><code>var(--c__ocean)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(208, 58%, 92%);"></span>
+			<span class="sg-label"><b>Ocean State light:</b> hsl(208, 58%, 92%)</span>
+			<span class="sg-code"><code>var(--c__ocean--light)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsla(208, 54%, 73%, 0.25);"></span>
+			<span class="sg-label"><b>Ocean State 25% transparent:</b> hsla(208, 54%, 73%, 0.25)</span>
+			<span class="sg-code"><code>var(--c__ocean--trans25)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsla(208, 54%, 73%, 0.1);"></span>
+			<span class="sg-label"><b>Ocean State 10% transparent:</b> hsla(208, 54%, 73%, 0.1)</span>
+			<span class="sg-code"><code>var(--c__ocean--trans10)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(47, 26%, 76%);"></span>
+			<span class="sg-label"><b>Coffee Milk:</b> hsl(47, 26%, 76%)</span>
+			<span class="sg-code"><code>var(--c__coffee-milk)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsl(47, 27%, 92%);"></span>
+			<span class="sg-label"><b>Coffee Milk light:</b> hsl(47, 27%, 92%)</span>
+			<span class="sg-code"><code>var(--c__coffee-milk--light)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsla(47, 26%, 76%, 0.25);"></span>
+			<span class="sg-label"><b>Coffee Milk 25% transparent:</b> hsla(47, 26%, 76%, 0.25)</span>
+			<span class="sg-code"><code>var(--c__coffee-milk--trans25)</code></span>
+		</li>
+			<li>
+			<span class="sg-swatch" style="background: hsla(47, 26%, 76%, 0.1);"></span>
+			<span class="sg-label"><b>Coffee Milk 10% transparent:</b> hsla(47, 26%, 76%, 0.1)</span>
+			<span class="sg-code"><code>var(--c__coffee-milk--trans10)</code></span>
+		</li>
+	</ul><!--DO NOT REMOVE-->
+  <script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternType":"atoms","patternSubtype":"global"},"patternExtension":"twig","patternName":"00 B Colors","patternPartial":"atoms-00b-colors","patternState":"","patternEngineName":"twig-php","extraOutput":{}}
+</script>
+
+<script>
+  window.patternData = {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternType":"atoms","patternSubtype":"global"},"patternExtension":"twig","patternName":"00 B Colors","patternPartial":"atoms-00b-colors","patternState":"","patternEngineName":"twig-php","extraOutput":{}};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1615556401656">
+  (function() {
+    if (self != top) {
+      var cb = '1615556401656';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1615556401656" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on http://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+  
+  </body>
+</html>

@@ -1,0 +1,24 @@
+// Overide pattern lab styles affecting admin toolbar.
+.toolbar-tray {
+  ul {
+    max-width: initial;
+    font-size: initial;
+  }
+
+  a {
+    color: var(--c__quahog--medium);
+    font-size: 13px;
+  }
+
+  button {
+    background-color: transparent;
+    background-image: initial;
+  }
+}
+
+// Overide pattern lab styles affecting admin tabs.
+nav.tabs {
+  .tabs {
+    max-width: none;
+  }
+}

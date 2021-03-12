@@ -1,0 +1,27 @@
+<footer class="qh__site-footer" role="contentinfo">
+  <div class="qh__site-footer__inner">
+    <div class="qh__site-footer__content qh__site-footer__first">
+      {{ footer_preprocess_values.footer_left|raw }}
+    </div>
+    <div class="qh__site-footer__content qh__site-footer__second">
+      {{ footer_preprocess_values.footer_center|raw }}
+    </div>
+    <div class="qh__site-footer__content qh__site-footer__third">
+      {{ footer_preprocess_values.footer_right|raw }}
+    </div>
+    <div class="qh__site-footer__content qh__site-footer__fourth">
+      {{ footer_preprocess_values.state_info|raw }}
+    </div>
+  </div>
+  <div class="qh__site-footer__copyright">
+    <div class="qh__site-footer__inner">
+      <div class="qh__site-footer__copyright__content">
+        {% include ('@icons/ri-state-seal.svg') %}
+        <p>
+          © {{ "now"|date("Y") }}
+          RI.gov. This page last updated on {{ node.changed.value|date('F jS, Y') }}. <a href="https://www.ri.gov/policies/">Accessibility, data, and privacy policies</a> | <a href="#top">Top of page</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

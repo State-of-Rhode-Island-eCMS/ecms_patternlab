@@ -1,0 +1,12 @@
+<div class="qh__file-list">
+  <div class="qh__file-list__inner">
+
+    {% if list_title %}
+      <h3>{{ list_title }}</h3>
+    {% endif %}
+
+    <section class="qh__file-list__list" role="list">
+      {{ files|raw }}
+    </section>
+  </div>
+</div>

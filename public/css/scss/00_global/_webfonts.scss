@@ -1,0 +1,27 @@
+/* Roboto Slab */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-weight: 100 900; /* default 400 */
+  src: url('../fonts/robot-slab-vf/RobotoSlab.woff2') format('woff2 supports variations'),
+       url('../fonts/robot-slab-vf/RobotoSlab.woff2') format('woff2-variations');
+  font-display: swap;
+}
+
+/* Work Sans */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 100 900; /* default 400 */
+  src: url('../fonts/work-sans-vf/WorkSans-Roman-subset.woff2') format('woff2 supports variations'),
+       url('../fonts/work-sans-vf/WorkSans-Roman-subset.woff2') format('woff2-variations');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Work Sans';
+  font-style: italic;
+  font-weight: 100 900; /* default 400 */
+  src: url('../fonts/work-sans-vf/WorkSans-Italic-subset.woff2') format('woff2 supports variations'),
+       url('../fonts/work-sans-vf/WorkSans-Italic-subset.woff2') format('woff2-variations');
+  font-display: swap;
+}

@@ -1,0 +1,26 @@
+<div class="qh__accordion">
+  <button
+    aria-expanded="false"
+    class="qh__accordion__button js__expand-collapse"
+    aria-controls="details-{{pid}}"
+    data-id="{{pid}}"
+    id="summary-{{pid}}"
+    >
+    <span class="qh__accordion__button__summary">
+      <span class="qh__icon" aria-hidden="true">
+        {% include ('@icons/plus-minus.svg') %}
+      </span>
+      <strong>{{ paragraph.field_item_text.value }}</strong>
+    </span>
+  </button>
+  <div
+    id="details-{{pid}}"
+    role="region"
+    aria-labelledby="summary-{{pid}}"
+    class="qh__accordion__content js__qh-accordion-panel"
+    >
+    <div>
+      {{ content.field_item_flexible_text|raw }}
+    </div>
+  </div>
+</div>
