@@ -1138,7 +1138,7 @@
           #{ "fnName": "icon__fg--hover", "colorName": "navy" }
         ],
         "default": [
-          #{ "fnName": "fg", "colorName": "quahog" },
+          { "fnName": "fg", "colorName": "quahog" },
           { "fnName": "bg", "colorName": "white" },  # Only so it shows up in our PL palette
           #{ "fnName": "border", "colorName": "quahog--dark--trans15" },
           #{ "fnName": "link", "colorName": "navy--sat" },
