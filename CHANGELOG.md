@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-53: Added mobile and fax fields to person teaser.
 
 ### Changed
+- Reversed BG/FG colors on ::selection in html.scss.
 
 ### Deprecated
 

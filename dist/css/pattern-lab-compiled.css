@@ -1065,12 +1065,12 @@ body {
   padding: 0; }
 
 ::-moz-selection {
-  background-color: var(--fc__default__fg);
-  color: var(--fc__default__bg); }
+  background-color: var(--fc__default__bg);
+  color: var(--fc__default__fg); }
 
 ::selection {
-  background-color: var(--fc__default__fg);
-  color: var(--fc__default__bg); }
+  background-color: var(--fc__default__bg);
+  color: var(--fc__default__fg); }
 
 header,
 nav,
