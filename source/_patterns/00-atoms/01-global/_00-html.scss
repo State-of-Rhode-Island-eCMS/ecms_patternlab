@@ -17,8 +17,8 @@ body {
 }
 
 ::selection {
-  background-color: var(--fc__default__bg);
-  color: var(--fc__default__fg);
+  background-color: var(--fc__default__fg);
+  color: var(--fc__default__bg);
 }
 
 // IE 11 still needs this

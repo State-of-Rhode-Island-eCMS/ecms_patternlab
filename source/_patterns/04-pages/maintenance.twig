@@ -35,7 +35,7 @@
             let fontSizeModifier = fontSizeCookieString.split('=');
             let fontSizeModifierValue = fontSizeModifier[1];
             document.cookie = "fontSizeModifier="+fontSizeModifierValue+";max-age=31536000;path=/;samesite=strict";
-            document.documentElement.style.setProperty(`--fontSizeModifier`, fontSizeModifierValue);
+            document.documentElement.style.setProperty('--fontSizeModifier', fontSizeModifierValue);
           // Check for Line-height preference
           } else if (cookies[i].includes('lineHeightModifier')) {
             let lineHeightCookieString = cookies[i];
@@ -43,7 +43,7 @@
             let lineHeightModifier = lineHeightCookieString.split('=');
             let lineHeightModifierValue = lineHeightModifier[1];
             document.cookie = "lineHeightModifier="+lineHeightModifierValue+";max-age=31536000;path=/;samesite=strict";
-            document.documentElement.style.setProperty(`--lineHeightModifier`, lineHeightModifierValue);
+            document.documentElement.style.setProperty('--lineHeightModifier', lineHeightModifierValue);
           // Check for word space preference
           } else if (cookies[i].includes('wordSpaceModifier')) {
             let wordSpaceCookieString = cookies[i];
@@ -51,7 +51,7 @@
             let wordSpaceModifier = wordSpaceCookieString.split('=');
             let wordSpaceModifierValue = wordSpaceModifier[1];
             document.cookie = "wordSpaceModifier="+wordSpaceModifierValue+";max-age=31536000;path=/;samesite=strict";
-            document.documentElement.style.setProperty(`--wordSpaceModifier`, wordSpaceModifierValue);
+            document.documentElement.style.setProperty('--wordSpaceModifier', wordSpaceModifierValue);
           }
         } // end for
         if (lightSetting == false) {

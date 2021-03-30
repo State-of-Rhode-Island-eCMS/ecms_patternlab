@@ -7,10 +7,18 @@ window.onload = function(){
   	lineHeightSliderSet();
   	wordSpaceSliderSet();
   } else {
-    document.getElementById('qh-lightmode').style.display = 'none';
-    document.getElementById('qh-fontsize').style.display = 'none';
-    document.getElementById('qh-lineheight').style.display = 'none';
-    document.getElementById('qh-wordspace').style.display = 'none';
+    if (document.getElementById('qh-lightmode')) {
+      document.getElementById('qh-lightmode').style.display = 'none';
+    }
+    if (document.getElementById('qh-fontsize')) {
+      document.getElementById('qh-fontsize').style.display = 'none';
+    }
+    if (document.getElementById('qh-lineheight')) {
+      document.getElementById('qh-lineheight').style.display = 'none';
+    }
+    if (document.getElementById('qh-wordspace')) {
+      document.getElementById('qh-wordspace').style.display = 'none';
+    }
   }
 }
 
