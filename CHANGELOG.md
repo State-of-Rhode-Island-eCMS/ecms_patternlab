@@ -18,6 +18,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- RIGA-55: Update font size, site branding width, search form wrapping, navigation text size/wrapping
 
 ### Security
 
