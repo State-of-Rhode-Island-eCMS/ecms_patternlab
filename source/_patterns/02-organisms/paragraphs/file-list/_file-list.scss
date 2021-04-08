@@ -30,7 +30,11 @@
   }
 
   &__inner {
-    padding: $general-v-spacing $general-h-spacing;
+    padding: $general-v-spacing 0;
+
+    > h3 {
+      margin-top: 0;
+    }
   }
 
   // UL
@@ -53,7 +57,7 @@
     }
 
     &__filename {
-      padding: $general-v-spacing 0;
+      padding: (($general-v-spacing/3)*2) 0;
     }
 
     // span

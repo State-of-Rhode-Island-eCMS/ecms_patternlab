@@ -118,8 +118,8 @@
         line-height: $h1-lh-l;
       }
       @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-        --font-size-min: 1.75rem;
-        --font-size-max: 3rem;
+        --font-size-min: 1.5rem;
+        --font-size-max: 2rem;
         --font-size-scaler-value: var(--h2-scaler-value);
         font-size: var(--font-size);
 

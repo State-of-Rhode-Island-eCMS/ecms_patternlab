@@ -453,10 +453,11 @@ body {
       background-color: transparent;
       color: var(--fc__nav-main__link);
       display: block;
-      font-size: clamp(0.925rem, 1.5vw, 1rem);
+      font-size: clamp(0.875rem, 1.125vw, 1rem);
       font-weight: 450;
       line-height: clamp(1.2rem, 3vw, 1.3rem);
       text-decoration: none;
+      word-break: normal;
 
       @include breakpoint-up($bp__show__desktop-nav) {
         border-top: ($nav-a-v-spacing * 0.25) solid var(--fc__nav-main__bg);
