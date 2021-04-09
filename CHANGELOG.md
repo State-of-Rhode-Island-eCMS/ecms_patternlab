@@ -18,9 +18,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
-- RIGA-55: Update font size, site branding width, search form wrapping, navigation text size/wrapping, User Settings -> Settings & Language
 
 ### Security
+
+## [0.5.3] - 2021-04-09
+### Fixed
+- RIGA-55: Update font size, site branding width, search form wrapping, navigation text size/wrapping, User Settings -> Settings & Language
 
 ## [0.5.2] - 2021-03-19
 ### Added
@@ -221,7 +224,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.2...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.3...HEAD
+[0.5.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.2...0.5.3
 [0.5.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.1...0.5.2
 [0.5.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.0...0.5.1
 [0.5.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.4.9...0.5.0
