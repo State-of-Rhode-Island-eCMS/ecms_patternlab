@@ -604,6 +604,7 @@ html {
     --fc__nav-main__link: #293557;
     --fc__nav-main__link--hover: #141414;
     --fc__nav-main__link__sub--hover__bg: rgba(149, 189, 223, 0.1);
+    --fc__default__fg: #404040;
     --fc__default__bg: white;
     --fc__default__link--active: #eb5252;
     --fc__default__hx__fg: #476cd1;
@@ -3557,8 +3558,8 @@ table {
           line-height: 1.1; } }
       @supports (font-size: clamp(1rem, 2vw, 2rem)) {
         .qh__site-branding__name__main-line {
-          --font-size-min: 1.75rem;
-          --font-size-max: 3rem;
+          --font-size-min: 1.5rem;
+          --font-size-max: 2rem;
           --font-size-scaler-value: var(--h2-scaler-value);
           font-size: var(--font-size);
           --font-lh-min: 1.05;
@@ -3604,10 +3605,16 @@ table {
 
 .qh__site-search form {
   margin: 0; }
+  @media (min-width: 62em) {
+    .qh__site-search form {
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: auto 3rem;
+          grid-template-columns: auto 3rem; } }
 
 .qh__site-search__query {
   max-width: 12rem;
-  min-width: 0; }
+  min-width: 10rem; }
 
 .qh__site-search label + input[type="text"].qh__site-search__query {
   margin-top: 0; }
@@ -5149,19 +5156,20 @@ body {
     -webkit-transform: rotate(-0.5turn);
             transform: rotate(-0.5turn); }
   .qh__nav-main__link {
-    padding: 0.75rem 1rem 1rem; }
+    padding: 0.75rem 0.85rem 1rem; }
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       .qh__nav-main__link {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem; } }
+        padding-left: 0.425rem;
+        padding-right: 0.425rem; } }
     .qh__nav-main__link, .qh__nav-main__link:visited {
       background-color: transparent;
       color: var(--fc__nav-main__link);
       display: block;
-      font-size: clamp(0.925rem, 1.5vw, 1rem);
+      font-size: clamp(0.875rem, 1.125vw, 1rem);
       font-weight: 450;
       line-height: clamp(1.2rem, 3vw, 1.3rem);
-      text-decoration: none; }
+      text-decoration: none;
+      word-break: normal; }
       @media (min-width: 62em) {
         .qh__nav-main__link, .qh__nav-main__link:visited {
           border-top: 0.25rem solid var(--fc__nav-main__bg);
@@ -5193,12 +5201,12 @@ body {
           border-top: 0.25rem solid var(--fc__nav-main__link--hover__bg); } }
     .qh__nav-main__link__sub {
       border: 0;
-      padding: 0.625rem 1rem; }
+      padding: 0.625rem 0.85rem; }
       .qh__nav-main__link__sub:hover, .qh__nav-main__link__sub:focus {
         background-color: var(--fc__nav-main__link__sub--hover__bg); }
     .qh__nav-main__link__sub.qh__nav-main__link--current {
       background-color: var(--fc__nav-main__link__sub--hover__bg);
-      padding: 0.625rem 1rem; }
+      padding: 0.625rem 0.85rem; }
     @media (min-width: 62em) {
       .qh__nav-main__wrapper > .qh__nav-main__link--home {
         display: none;
@@ -5395,7 +5403,7 @@ body {
   .qh__nav-minor .qh__accordion__button:active, .qh__nav-minor__link:active {
     color: var(--fc__nav-main__link--active); }
   .qh__nav-minor__link {
-    padding: 1rem 1rem; }
+    padding: 1rem 0.85rem; }
     @supports (font-size: clamp(1rem, 2vw, 2rem)) {
       .qh__nav-minor__link {
         font-size: clamp(0.925rem, 1.5vw, 1rem);
@@ -5713,7 +5721,8 @@ body {
       .qh__page-header__wrapper .qh__site-branding {
         -webkit-box-flex: 1;
             -ms-flex: 1 1 auto;
-                flex: 1 1 auto; } }
+                flex: 1 1 auto;
+        max-width: 65%; } }
     .qh__page-header__wrapper a, .qh__page-header__wrapper a:visited {
       color: var(--fc__header__link); }
     .qh__page-header__wrapper a:hover, .qh__page-header__wrapper a:focus, .qh__page-header__wrapper a:active {
@@ -6137,7 +6146,9 @@ body {
   fill: var(--fc__icon__word); }
 
 .qh__file-list__inner {
-  padding: 1.5rem 1rem; }
+  padding: 1.5rem 0; }
+  .qh__file-list__inner > h3 {
+    margin-top: 0; }
 
 .qh__file-list__item + .qh__file-list__item {
   border-top: 0.0625rem solid var(--fc__default__border); }
@@ -6151,7 +6162,7 @@ body {
   padding-right: 0.5rem; }
 
 .qh__file-list__item__filename {
-  padding: 1.5rem 0; }
+  padding: 1rem 0; }
 
 .qh__file-list__item__label {
   font-family: "Work Sans", var(--font-sans-fallback);

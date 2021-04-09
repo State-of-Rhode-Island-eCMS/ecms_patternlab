@@ -353,6 +353,7 @@
   "t__block-island__nav-main__link": "hsl(224, 36%, 25%)",
   "t__block-island__nav-main__link--hover": "hsl(0, 0%, 8%)",
   "t__block-island__nav-main__link__sub--hover__bg": "hsla(208, 54%, 73%, 0.1)",
+  "t__block-island__default__fg": "hsl(0, 0%, 25%)",
   "t__block-island__default__bg": "hsl(0, 0%, 100%)",
   "t__block-island__default__link--active": "hsl(360, 79%, 62%)",
   "t__block-island__default__hx__fg": "hsl(224, 60%, 55%)",

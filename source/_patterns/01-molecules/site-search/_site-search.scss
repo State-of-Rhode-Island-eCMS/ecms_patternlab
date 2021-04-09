@@ -3,14 +3,18 @@
   // <from>
   form {
     margin: 0;
-  }
+    @include breakpoint-up($bp__show__desktop-nav) {
+      display: grid;
+      grid-template-columns: auto 3rem;
+    }
+}
 
   &__container {}
 
   // <input>
   &__query {
     max-width: 12rem;
-    min-width: 0;
+    min-width: 10rem;
   }
   // needed a bit more specificity for the site search form in the header
   label + input[type="text"].qh__site-search__query {

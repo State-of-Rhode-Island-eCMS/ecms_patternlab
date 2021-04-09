@@ -16,6 +16,7 @@
 
       @include breakpoint-up($bp--large) {
         flex: 1 1 auto;
+        max-width: 65%;
       }
     }
 
