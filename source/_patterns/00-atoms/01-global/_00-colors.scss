@@ -114,11 +114,11 @@ html {
           }
         }
       } @else {
-        $classString: '.qh__t__#{$key}';
+        $classString: '&.qh__t__#{$key}';
         // Remove the "--dark" modifier
         @if str-index($key, "--dark") {
           $newKey: str-slice($key, 0, -7);
-          $classString: '&.dark .qh__t__#{$newKey}';
+          $classString: '&.dark.qh__t__#{$newKey}';
         }
         #{$classString} {
           @each $block, $section in $values {
