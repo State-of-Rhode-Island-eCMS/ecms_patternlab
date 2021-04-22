@@ -21,10 +21,21 @@
           flex: 1 1 0px;
         }
 
-        // phone, email
-        > span {
+        // Phone, email
+        .qh__teaser-person__phone,
+        .qh__teaser-person__email {
           margin-top: 0;
           padding-left: $general-h-spacing;
+        }
+
+        // Hide email label
+        .qh__teaser-person__email > span {
+          display: none;
+        }
+
+
+        .qh__teaser-person__contact-label {
+          min-width: 4rem;
         }
 
         // Meta text sizing on larger screens
@@ -52,9 +63,8 @@
   }
 
   // <div>
-  &__job-details {
-    // Matching the indent of the email and phone icons, which is
-    // a width of 0.875em and a margin right of 0.25em = 1.125em
+  &__meta {
+    // Give meta a slight indent
     margin-left: 1.125em;
   }
 
@@ -72,6 +82,11 @@
   &__email {
     word-break: break-all;
     display: block;
+  }
+
+  &__contact-label {
+    display: inline-block;
+    min-width: 5rem
   }
 
   // Spacing
