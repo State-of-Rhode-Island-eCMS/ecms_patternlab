@@ -7,15 +7,20 @@ window.onload = function(){
   	lineHeightSliderSet();
   	wordSpaceSliderSet();
   } else {
-    document.getElementById('qh-lightmode').style.display = 'none';
-    document.getElementById('qh-fontsize').style.display = 'none';
-    document.getElementById('qh-lineheight').style.display = 'none';
-    document.getElementById('qh-wordspace').style.display = 'none';
+    if (document.getElementById('qh-fontsize')) {
+      document.getElementById('qh-fontsize').style.display = 'none';
+    }
+    if (document.getElementById('qh-lineheight')) {
+      document.getElementById('qh-lineheight').style.display = 'none';
+    }
+    if (document.getElementById('qh-wordspace')) {
+      document.getElementById('qh-wordspace').style.display = 'none';
+    }
   }
 }
 
 function handleFontSizeSliderUpdate(e) {
-  document.documentElement.style.setProperty(`--fontSizeModifier`, this.value);
+  document.documentElement.style.setProperty("--fontSizeModifier", this.value);
   document.cookie = "fontSizeModifier="+this.value+"; max-age=31536000; path=/; samesite=strict";
 }
 
@@ -28,7 +33,7 @@ function fontSizeSliderSet() {
 }
 
 function handleLineHeightSliderUpdate(e) {
-  document.documentElement.style.setProperty(`--lineHeightModifier`, this.value);
+  document.documentElement.style.setProperty("--lineHeightModifier", this.value);
   document.cookie = "lineHeightModifier="+this.value+"; max-age=31536000; path=/; samesite=strict";
 }
 
@@ -41,7 +46,7 @@ function lineHeightSliderSet() {
 }
 
 function handleWordSpaceSliderUpdate(e) {
-  document.documentElement.style.setProperty(`--wordSpaceModifier`, this.value);
+  document.documentElement.style.setProperty("--wordSpaceModifier", this.value);
   document.cookie = "wordSpaceModifier="+this.value+"; max-age=31536000; path=/; samesite=strict";
 }
 
