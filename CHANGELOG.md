@@ -19,7 +19,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
-- Removed backticks from html.html.pl.twig to avoid ie11 uncompiled, non-polyfilled JS errors.
+- RIGA-52: Removed backticks from html.html.pl.twig to avoid ie11 uncompiled, non-polyfilled JS errors.
+- RIGA-52: Move palette class to HTML rather than body.
 
 ### Security
 
