@@ -398,7 +398,7 @@ html {
     --fc__primary--light__bg: rgba(149, 189, 223, 0.25);
     --fc__primary--light__link: white;
     --fc__primary--light__link--hover: #face3d; }
-  html .qh__t__federal-hill {
+  html.qh__t__federal-hill {
     --fc__official__fg: #d4d4d4;
     --fc__official__bg: #141414;
     --fc__official__link: white;
@@ -457,7 +457,7 @@ html {
     --fc__primary--light__link--hover: #1440b8;
     --fc__primary--light__bg--dark: rgba(235, 82, 82, 0.15);
     --fc__primary--light__link--dark: #d2cbb2; }
-  html.dark .qh__t__federal-hill {
+  html.dark.qh__t__federal-hill {
     --fc__official__bg: #141414;
     --fc__header__bg: rgba(235, 82, 82, 0.15);
     --fc__header__social__link: #eb5252;
@@ -488,7 +488,7 @@ html {
     --fc__footer__bg: #2e2e2e;
     --fc__primary__bg: rgba(235, 82, 82, 0.5);
     --fc__primary--light__bg: rgba(235, 82, 82, 0.15); }
-  html .qh__t__wickaboxet {
+  html.qh__t__wickaboxet {
     --fc__official__fg: #f0eee5;
     --fc__official__bg: #141414;
     --fc__official__link: white;
@@ -543,7 +543,7 @@ html {
     --fc__primary--light__bg: rgba(89, 191, 69, 0.14);
     --fc__primary--light__link: #2e7a1f;
     --fc__primary--light__bg--dark: rgba(89, 191, 69, 0.14); }
-  html.dark .qh__t__wickaboxet {
+  html.dark.qh__t__wickaboxet {
     --fc__official__bg: #141414;
     --fc__header__fg: #f0eee5;
     --fc__header__bg: rgba(89, 191, 69, 0.14);
@@ -587,7 +587,7 @@ html {
     --fc__primary__bg: #2e7a1f;
     --fc__primary__link: white;
     --fc__primary--light__bg: rgba(89, 191, 69, 0.14); }
-  html .qh__t__block-island {
+  html.qh__t__block-island {
     --fc__official__fg: #d4d4d4;
     --fc__official__bg: #404040;
     --fc__official__link: white;
@@ -653,7 +653,7 @@ html {
     --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.1);
     --fc__primary--light__link--dark: white;
     --fc__primary--light__link--dark--hover: #face3d; }
-  html.dark .qh__t__block-island {
+  html.dark.qh__t__block-island {
     --fc__official__bg: #2e2e2e;
     --fc__header__fg: #d4d4d4;
     --fc__header__bg: rgba(149, 189, 223, 0.1);
@@ -700,7 +700,7 @@ html {
     --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.1);
     --fc__primary--light__link--dark: white;
     --fc__primary--light__link--dark--hover: #face3d; }
-  html .qh__t__blue-shutters {
+  html.qh__t__blue-shutters {
     --fc__official__fg: #404040;
     --fc__official__bg: rgba(255, 255, 255, 0.25);
     --fc__official__link: #404040;
@@ -769,7 +769,7 @@ html {
     --fc__primary--light__bg--dark: rgba(19, 134, 96, 0.15);
     --fc__primary--light__link--dark: white;
     --fc__primary--light__link--dark--hover: #face3d; }
-  html.dark .qh__t__blue-shutters {
+  html.dark.qh__t__blue-shutters {
     --fc__official__fg: white;
     --fc__official__bg: rgba(66, 240, 182, 0.25);
     --fc__official__link: white;
@@ -4077,9 +4077,14 @@ table {
       -webkit-box-flex: 1;
           -ms-flex: 1 1 0px;
               flex: 1 1 0px; }
-    .qh__person-list__list--full .qh__teaser-person__meta > span {
+    .qh__person-list__list--full .qh__teaser-person__meta .qh__teaser-person__phone,
+    .qh__person-list__list--full .qh__teaser-person__meta .qh__teaser-person__email {
       margin-top: 0;
       padding-left: 1rem; }
+    .qh__person-list__list--full .qh__teaser-person__meta .qh__teaser-person__email > span {
+      display: none; }
+    .qh__person-list__list--full .qh__teaser-person__meta .qh__teaser-person__contact-label {
+      min-width: 4rem; }
     .qh__person-list__list--full .qh__teaser-person__meta span,
     .qh__person-list__list--full .qh__teaser-person__meta a {
       font-size: 1rem; }
@@ -4095,7 +4100,7 @@ table {
   display: block;
   font-size: 112.5%; }
 
-.qh__teaser-person__job-details {
+.qh__teaser-person__meta {
   margin-left: 1.125em; }
 
 .qh__teaser-person__category {
@@ -4104,6 +4109,10 @@ table {
 .qh__teaser-person__phone, .qh__teaser-person__email {
   word-break: break-all;
   display: block; }
+
+.qh__teaser-person__contact-label {
+  display: inline-block;
+  min-width: 5rem; }
 
 .qh__teaser-person__name strong, .qh__teaser-person__title, .qh__teaser-person__job-details, .qh__teaser-person__phone, .qh__teaser-person__email {
   margin-bottom: 0.625rem; }

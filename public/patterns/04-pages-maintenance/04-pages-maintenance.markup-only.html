@@ -17,19 +17,20 @@
         document.documentElement.className += " wf-inactive";
         const cookies = document.cookie.split(';');
         var lightSetting = false;
+
         for (let i = 0; i < cookies.length; i++) {
           // Check for Light Mode preference
-          if (cookies[i].includes('lightMode=dark')) {
+          if (cookies[i].indexOf('lightMode=dark') !== -1) {
             // set a cookie to save the setting
             document.cookie = "lightMode=dark;max-age=31536000;path=/;samesite=strict";
             document.documentElement.className += " dark";
             lightSetting = true;
-          } else if (cookies[i].includes('lightMode=light')) {
+          } else if (cookies[i].indexOf('lightMode=light') !== -1) {
             document.cookie = "lightMode=light;max-age=31536000;path=/;samesite=strict";
             document.documentElement.className += " light";
             lightSetting = true;
           // Check for Font size preference
-          } else if (cookies[i].includes('fontSizeModifier')) {
+          } else if (cookies[i].indexOf('fontSizeModifier') !== -1) {
             let fontSizeCookieString = cookies[i];
             // get the value
             let fontSizeModifier = fontSizeCookieString.split('=');
@@ -37,7 +38,7 @@
             document.cookie = "fontSizeModifier="+fontSizeModifierValue+";max-age=31536000;path=/;samesite=strict";
             document.documentElement.style.setProperty('--fontSizeModifier', fontSizeModifierValue);
           // Check for Line-height preference
-          } else if (cookies[i].includes('lineHeightModifier')) {
+          } else if (cookies[i].indexOf('lineHeightModifier') !== -1) {
             let lineHeightCookieString = cookies[i];
             // get the value
             let lineHeightModifier = lineHeightCookieString.split('=');
@@ -45,7 +46,7 @@
             document.cookie = "lineHeightModifier="+lineHeightModifierValue+";max-age=31536000;path=/;samesite=strict";
             document.documentElement.style.setProperty('--lineHeightModifier', lineHeightModifierValue);
           // Check for word space preference
-          } else if (cookies[i].includes('wordSpaceModifier')) {
+          } else if (cookies[i].indexOf('wordSpaceModifier') !== -1) {
             let wordSpaceCookieString = cookies[i];
             // get the value
             let wordSpaceModifier = wordSpaceCookieString.split('=');

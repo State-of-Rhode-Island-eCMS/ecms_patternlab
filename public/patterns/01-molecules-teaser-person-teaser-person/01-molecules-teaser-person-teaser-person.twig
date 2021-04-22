@@ -11,14 +11,32 @@
         <span class="qh__teaser-person__category">{{ categories }}</span>
       </div>
 
-      {% if phone %}
-        <span class="qh__teaser-person__phone">
-          <a href="tel:1+{{ phone }}{{ extension ? 'p' ~ extension }}">{{ phone }}{{ extension ? ' ext. ' ~ extension}}</a>
-        </span>
-      {% endif %}
+      <div class="qh__teaser-person__phone-numbers">
+        {% if phone %}
+          <span class="qh__teaser-person__phone">
+            <span class="qh__teaser-person__contact-label">Phone: </span>
+            <a href="tel:1+{{ phone }}{{ extension ? 'p' ~ extension }}">{{ phone }}{{ extension ? ' ext. ' ~ extension}}</a>
+          </span>
+        {% endif %}
+
+        {% if mobile %}
+          <span class="qh__teaser-person__phone">
+            <span class="qh__teaser-person__contact-label">Mobile: </span>
+            <a href="tel:1+{{ mobile }}">{{ mobile }}</a>
+          </span>
+        {% endif %}
+
+        {% if fax %}
+          <span class="qh__teaser-person__phone">
+            <span class="qh__teaser-person__contact-label">Fax: </span>
+            <a href="tel:1+{{ fax }}">{{ fax }}</a>
+          </span>
+        {% endif %}
+      </div>
 
       {% if email %}
         <span class="qh__teaser-person__email">
+          <span class="qh__teaser-person__contact-label">Email: </span>
           <a href="mailto:{{ email }}">{{ email }}</a></span>
         </span>
       {% endif %}
