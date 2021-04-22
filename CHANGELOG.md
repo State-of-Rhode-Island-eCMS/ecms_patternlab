@@ -10,7 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-53: Added mobile and fax fields to person teaser.
 
 ### Changed
 
@@ -21,6 +20,14 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.5.4] - 2021-04-22
+### Added
+- RIGA-53: Added mobile and fax fields to person teaser.
+
+### Fixed
+- RIGA-52: Removed backticks from html.html.pl.twig to avoid ie11 uncompiled, non-polyfilled JS errors.
+- RIGA-52: Move palette class to HTML rather than body.
 
 ## [0.5.3] - 2021-04-09
 ### Fixed
@@ -225,7 +232,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.3...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.4...HEAD
+[0.5.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.3...0.5.4
 [0.5.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.2...0.5.3
 [0.5.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.1...0.5.2
 [0.5.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.0...0.5.1
