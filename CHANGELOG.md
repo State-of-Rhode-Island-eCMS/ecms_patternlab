@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+Added styles to address IE11 issues for height on single-block layout section columns, logo width on wide logos in the header, and the search button overlapping the search input
 
 ### Deprecated
 
