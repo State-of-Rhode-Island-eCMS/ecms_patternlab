@@ -301,6 +301,9 @@
       .qh-layout-section--col-size-100 &.block-ecms-promotions-global {
         flex-direction: row;
       }
+      &[iecp-needed="true"] {
+        display: block;
+      }
     }
 
     > * + * {
