@@ -12,17 +12,18 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-Added styles to address IE11 issues for height on single-block layout section columns, logo width on wide logos in the header, and the search button overlapping the search input
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
-- RIGA-52: Removed backticks from html.html.pl.twig to avoid ie11 uncompiled, non-polyfilled JS errors.
-- RIGA-52: Move palette class to HTML rather than body.
 
 ### Security
+
+## [0.5.5] - 2021-04-26
+### Changed
+- RIGA-60: Added styles to address IE11 issues for height on single-block layout section columns, logo width on wide logos in the header, and the search button overlapping the search input
 
 ## [0.5.4] - 2021-04-22
 ### Added
@@ -235,7 +236,8 @@ Added styles to address IE11 issues for height on single-block layout section co
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.4...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.5...HEAD
+[0.5.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.4...0.5.5
 [0.5.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.3...0.5.4
 [0.5.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.2...0.5.3
 [0.5.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.1...0.5.2
