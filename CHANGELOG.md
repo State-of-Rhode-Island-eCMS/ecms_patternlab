@@ -22,6 +22,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Security
 
 ## [0.5.5] - 2021-04-26
+### Changed
 - RIGA-60: Added styles to address IE11 issues for height on single-block layout section columns, logo width on wide logos in the header, and the search button overlapping the search input
 
 ## [0.5.4] - 2021-04-22
