@@ -12,4 +12,16 @@
   &__title {
     margin-top: 0;
   }
+
+  & + & {
+    clear: both;
+    figure:first-child.left,
+    figure:first-child.right {
+      margin-top: var(--body-text-spacer);
+
+      + p {
+        padding-top: var(--body-text-spacer);
+      }
+    }
+  }
 }
