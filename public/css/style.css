@@ -6120,6 +6120,15 @@ body {
 .qh__card__title {
   margin-top: 0; }
 
+.qh__card + .qh__card {
+  clear: both; }
+  .qh__card + .qh__card figure:first-child.left,
+  .qh__card + .qh__card figure:first-child.right {
+    margin-top: var(--body-text-spacer); }
+    .qh__card + .qh__card figure:first-child.left + p,
+    .qh__card + .qh__card figure:first-child.right + p {
+      padding-top: var(--body-text-spacer); }
+
 .qh__paragraph__column-container {
   display: -webkit-box;
   display: -ms-flexbox;
