@@ -19,7 +19,8 @@
     width: 5rem;
     min-height: 4.5rem;
 
-    &.--wide {
+    &.--wide,
+    &.ie-wide[iecp-needed="true"] {
       margin: 0 auto;
       max-width: em(420);
       width: auto;

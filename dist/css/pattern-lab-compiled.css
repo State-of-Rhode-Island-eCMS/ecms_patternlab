@@ -3475,7 +3475,7 @@ table {
     margin-right: 0.5rem;
     width: 5rem;
     min-height: 4.5rem; }
-    .qh__site-branding__logo.--wide {
+    .qh__site-branding__logo.--wide, .qh__site-branding__logo.ie-wide[iecp-needed="true"] {
       margin: 0 auto;
       max-width: 26.25em;
       width: auto; }
