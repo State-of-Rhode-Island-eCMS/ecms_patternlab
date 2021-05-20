@@ -18,9 +18,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
-- RIGA-63: Fixed frontend output for all day events.
 
 ### Security
+
+## [0.5.6] - 2021-05-20
+### Fixed
+- RIGA-63: Fixed frontend output for all day events.
 
 ## [0.5.5] - 2021-04-26
 ### Changed
@@ -237,7 +240,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.5...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.6...HEAD
+[0.5.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.5...0.5.6
 [0.5.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.4...0.5.5
 [0.5.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.3...0.5.4
 [0.5.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.2...0.5.3
