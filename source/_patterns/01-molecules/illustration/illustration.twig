@@ -1,0 +1,25 @@
+
+
+{% if illustration != 'none' %}
+
+  {% if illustration starts with 'random:' %}
+    {# Remove random prefix #}
+    {% set filenameList = illustration|slice(7) %}
+
+    {# Explode string #}
+    {% set filenameArray = filenameList|split(', ') %}
+
+    {% if filenameArray|length %}
+
+      {# Get random number #}
+      {% set randomKey = random(1, filenameArray|length) %}
+      {% set zeroBasedKey = randomKey - 1 %}
+
+      {# Print out SVG #}
+      {% include ('@illustrations/' ~ filenameArray[zeroBasedKey]) %}
+    {% endif %}
+  {% else %}
+    {% include ('@illustrations/' ~ filenameArray[zeroBasedKey]) %}
+  {% endif %}
+
+{% endif %}
