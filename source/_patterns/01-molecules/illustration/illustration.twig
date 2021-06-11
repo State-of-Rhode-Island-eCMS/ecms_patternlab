@@ -8,7 +8,6 @@
     {% set filenameArray = filenameList|split(', ') %}
 
     {% if filenameArray|length %}
-
       {# Get random number #}
       {% set randomKey = random(1, filenameArray|length) %}
       {% set zeroBasedKey = randomKey - 1 %}
