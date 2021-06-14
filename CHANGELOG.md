@@ -18,6 +18,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- RIGA-30: Fixed encoding in HTML title tag.
+- RIGA-30: Fixed encoding in press release teasers and add ellipsis to summary text.
 
 ### Security
 
