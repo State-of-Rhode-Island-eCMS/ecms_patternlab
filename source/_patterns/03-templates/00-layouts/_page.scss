@@ -38,6 +38,10 @@ $sidebar-row-gap: rem(36);
       grid-template-columns: minmax($sidebar-min, 22rem) minmax(0, 1fr);
     }
 
+    // Vertical spacing if both sidebar regions are present.
+    aside + aside {
+      margin-top: $general-v-spacing;
+    }
   }
 
   &__content {

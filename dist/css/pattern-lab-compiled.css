@@ -6994,6 +6994,8 @@ body {
     .qh-layout__grid {
       -ms-grid-columns: minmax(12.5rem, 22rem) minmax(0, 1fr);
           grid-template-columns: minmax(12.5rem, 22rem) minmax(0, 1fr); } }
+  .qh-layout__grid aside + aside {
+    margin-top: 1.5rem; }
 
 .qh-layout__content {
   -ms-grid-row: 2;
