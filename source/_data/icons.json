@@ -1,7 +1,13 @@
 {
   "icons": {
+    "Anchor": {
+      "filename": "anchor-small.svg"
+    },
     "Bell": {
       "filename": "alarm-bell.svg"
+    },
+    "Bus": {
+      "filename": "bus.svg"
     },
     "Chevron down": {
       "filename": "chevron-down.svg"
@@ -53,6 +59,12 @@
     },
     "Link external": {
       "filename": "link-external.svg"
+    },
+    "Map": {
+      "filename": "map.svg"
+    },
+    "Map marker": {
+      "filename": "map-marker.svg"
     },
     "Maple leaf": {
       "filename": "maple-leaf.svg"
