@@ -7467,6 +7467,9 @@ html #layout-builder-modal {
 #layout-builder-modal .media-library-item__remove.button {
   max-width: none; }
 
+#layout-builder-modal .qh__icon-library-preview svg {
+  width: 75px; }
+
 .toolbar-tray ul {
   max-width: initial;
   font-size: initial; }
