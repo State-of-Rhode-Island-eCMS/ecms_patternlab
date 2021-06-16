@@ -1483,12 +1483,14 @@ body {
 /* following element spacing selector, just inside node content */
 .node > * + *,
 .qh__accordion__content > div > * + *,
-.qh__numbered-step__content > * + * {
+.qh__numbered-step__content > * + *,
+.qh__single-event__content > * + * {
   margin-top: 1.25rem; }
   @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
     .node > * + *,
     .qh__accordion__content > div > * + *,
-    .qh__numbered-step__content > * + * {
+    .qh__numbered-step__content > * + *,
+    .qh__single-event__content > * + * {
       margin-top: var(--body-text-spacer); } }
 
 /* Any time paragraphs follow something else */
