@@ -11,6 +11,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 ### Added
 - RIGA-72: Added a few new icons to the icon data file.
+- RIGA-68: Added event list paragraph component.
 
 ### Changed
 
