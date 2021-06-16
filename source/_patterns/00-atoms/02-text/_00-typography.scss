@@ -8,7 +8,8 @@ body {
 /* following element spacing selector, just inside node content */
 .node,
 .qh__accordion__content > div,
-.qh__numbered-step__content
+.qh__numbered-step__content,
+.qh__single-event__content
  {
   > * + * {
     margin-top: $text-spacer-fallback-value;
