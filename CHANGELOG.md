@@ -10,8 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-72: Added a few new icons to the icon data file.
-- RIGA-68: Added event list paragraph component.
 
 ### Changed
 
@@ -20,12 +18,19 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+
+### Security
+
+## [0.5.7] - 2021-06-23
+### Added
+- RIGA-72: Added a few new icons to the icon data file.
+- RIGA-68: Added event list paragraph component.
+
+### Fixed
 - RIGA-30: Fixed encoding in HTML title tag.
 - RIGA-30: Fixed encoding in press release teasers and add ellipsis to summary text.
 - RIGA-48: Fixed vertical spacing in sidebar regions.
 - RIGA-72: Fixed SVG preview being too large in Layout Builder.
-
-### Security
 
 ## [0.5.6] - 2021-05-20
 ### Fixed
@@ -246,7 +251,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.6...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.7...HEAD
+[0.5.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.6...0.5.7
 [0.5.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.5...0.5.6
 [0.5.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.4...0.5.5
 [0.5.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.3...0.5.4
