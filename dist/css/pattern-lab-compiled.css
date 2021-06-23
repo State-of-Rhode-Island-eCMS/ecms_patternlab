@@ -7277,6 +7277,49 @@ body {
 .qh__execorder__file-list {
   margin-top: 3rem; }
 
+.qh__single-location__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.5rem; }
+  .qh__single-location__row > div {
+    width: 45%; }
+
+.qh__single-location__phone, .qh__single-location__website {
+  word-break: break-all;
+  display: block; }
+
+.qh__single-location__website .qh__icon {
+  width: 1.75rem;
+  height: 1.75rem; }
+
+.qh__single-location__icon-link {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: -0.5rem; }
+
+.qh__single-location__phone, .qh__single-location__website,
+.qh__single-location .address, .qh__single-location__map, .qh__single-location__icon-link {
+  margin-bottom: 1.5rem; }
+
+.qh__single-location .office-hours {
+  margin-top: 0; }
+  .qh__single-location .office-hours h4 {
+    margin-top: 0; }
+
 .qh__single-speech__header {
   margin-bottom: 1.875rem; }
   @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
