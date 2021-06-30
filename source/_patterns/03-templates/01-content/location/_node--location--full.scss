@@ -1,0 +1,51 @@
+.qh__single-location {
+
+  &__row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: $general-v-spacing;
+
+    > div {
+      width: 45%;
+    }
+  }
+
+  &__phone,
+  &__website {
+    word-break: break-all;
+    display: block;
+  }
+
+  &__website {
+    // Shrink icon size to match phone icon.
+    .qh__icon {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+  }
+
+  &__icon-link {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: -0.5rem;
+  }
+
+  // Spacing
+  &__phone,
+  &__website,
+  .address,
+  &__map,
+  &__icon-link {
+    margin-bottom: $general-v-spacing * 1;
+  }
+
+  .office-hours {
+    margin-top: 0;
+
+    h4 {
+      margin-top: 0;
+    }
+  }
+}
