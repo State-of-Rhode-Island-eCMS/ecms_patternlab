@@ -1,4 +1,4 @@
-{% if illustration or illustration == 'none' %}
+{% if illustration or illustration != 'none' %}
   <div class="footer-illustration">
   {% if illustration starts with 'random:' %}
     {# Remove random prefix #}
