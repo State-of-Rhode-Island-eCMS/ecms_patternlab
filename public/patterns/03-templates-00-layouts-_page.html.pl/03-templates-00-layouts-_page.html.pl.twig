@@ -88,6 +88,11 @@
       {% endif %}
     </div>
 
+    {% include '@molecules/illustration/illustration.twig' with {
+        illustration: illustration
+      }
+    %}
+
   </main>
 
   {% include '@organisms/page-footer/page-footer.twig' with {

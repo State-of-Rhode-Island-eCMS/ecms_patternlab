@@ -1,0 +1,14 @@
+{
+  "illustrations": {
+    "Quahog": {
+      "filename": "quahog.svg"
+    },
+    "Steamer": {
+      "filename": "steamer.svg"
+    },
+    "Oyster": {
+      "filename": "oyster.svg"
+    }
+
+  }
+}

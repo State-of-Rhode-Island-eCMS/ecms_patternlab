@@ -3048,6 +3048,20 @@ table {
         --font-lh-scaler-value: var(--h2-lh-scaler-value);
         line-height: var(--line-height); } }
 
+.footer-illustration {
+  position: absolute;
+  bottom: -0.5rem;
+  left: calc(((100vw - var(--content-max-width)) / 4) - 2.5vw);
+  height: Max(35vh, 25vw);
+  z-index: -1; }
+  html:not(.dark) .footer-illustration {
+    opacity: 0.25; }
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) .footer-illustration {
+      opacity: unset; } }
+  .footer-illustration svg {
+    height: Max(35vh, 25vw); }
+
 .language-switcher {
   line-height: 1.3;
   list-style: none;
@@ -4065,72 +4079,53 @@ table {
         --font-size-scaler-value: var(--p-scaler-value);
         font-size: var(--font-size); } }
 
-.qh__person-list__list--full .qh__teaser-person__meta .qh__teaser-person__category {
-  display: block;
-  font-weight: 500;
-  margin-top: 0.625rem; }
-
-@media (min-width: 62em) {
-  .qh__person-list__list--full .qh__teaser-person__meta {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline; }
-    .qh__person-list__list--full .qh__teaser-person__meta > * {
-      -webkit-box-flex: 1;
-          -ms-flex: 1 1 0px;
-              flex: 1 1 0px; }
-    .qh__person-list__list--full .qh__teaser-person__meta .qh__teaser-person__phone,
-    .qh__person-list__list--full .qh__teaser-person__meta .qh__teaser-person__email {
-      margin-top: 0;
-      padding-left: 1rem; }
-    .qh__person-list__list--full .qh__teaser-person__meta .qh__teaser-person__email > span {
-      display: none; }
-    .qh__person-list__list--full .qh__teaser-person__meta .qh__teaser-person__contact-label {
-      min-width: 4rem; }
-    .qh__person-list__list--full .qh__teaser-person__meta span,
-    .qh__person-list__list--full .qh__teaser-person__meta a {
-      font-size: 1rem; }
-      @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-        .qh__person-list__list--full .qh__teaser-person__meta span,
-        .qh__person-list__list--full .qh__teaser-person__meta a {
-          --font-size-min-value: 0.925;
-          --font-size-max-value: 1;
-          --font-size-scaler-value: var(--p-scaler-value);
-          font-size: var(--font-size); } } }
-
-.qh__teaser-person__name strong {
-  display: block;
-  font-size: 112.5%; }
-
-.qh__teaser-person__meta {
-  margin-left: 1.125em; }
-
-.qh__teaser-person__category {
-  display: none; }
-
-.qh__teaser-person__phone, .qh__teaser-person__email {
-  word-break: break-all;
-  display: block; }
-
-.qh__teaser-person__contact-label {
-  display: inline-block;
-  min-width: 5rem; }
-
-.qh__teaser-person__name strong, .qh__teaser-person__title, .qh__teaser-person__job-details, .qh__teaser-person__phone, .qh__teaser-person__email {
-  margin-bottom: 0.625rem; }
-  @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-    .qh__teaser-person__name strong, .qh__teaser-person__title, .qh__teaser-person__job-details, .qh__teaser-person__phone, .qh__teaser-person__email {
-      margin-bottom: calc(var(--body-text-spacer)/2); } }
+.qh__teaser-person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .qh__person-list__list--full .qh__teaser-person__meta .qh__teaser-person__category {
+    display: block;
+    margin-top: 0.625rem; }
+  .qh__teaser-person__photo {
+    display: none;
+    width: 25%;
+    margin-right: 1rem; }
+    .qh__person-list--contains-photo .qh__teaser-person__photo {
+      display: block; }
+  .qh__teaser-person__name strong {
+    display: block;
+    font-size: 112.5%; }
+  .qh__teaser-person__content {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+  .qh__teaser-person__meta {
+    margin-left: 1.125em; }
+    @media (min-width: 75em) {
+      .qh__teaser-person__meta {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .qh__teaser-person__meta > div {
+          width: 45%; } }
+  .qh__teaser-person__category {
+    display: none; }
+  .qh__teaser-person__phone, .qh__teaser-person__email {
+    word-break: break-all;
+    display: block; }
+  .qh__teaser-person__contact-label {
+    display: inline-block;
+    min-width: 5rem; }
+  .qh__teaser-person__additional-field-label {
+    display: block; }
+  .qh__teaser-person__name, .qh__teaser-person__title, .qh__teaser-person__job-details, .qh__teaser-person__phone, .qh__teaser-person__email, .qh__teaser-person__additional-field {
+    margin-bottom: 0.625rem; }
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      .qh__teaser-person__name, .qh__teaser-person__title, .qh__teaser-person__job-details, .qh__teaser-person__phone, .qh__teaser-person__email, .qh__teaser-person__additional-field {
+        margin-bottom: calc(var(--body-text-spacer)/2); } }
 
 .qh__teaser-promotion {
   background-color: var(--fc__default__bg);
@@ -6961,6 +6956,9 @@ body {
   background-color: var(--c__navy);
   color: var(--c__white); }
 
+main {
+  position: relative; }
+
 .qh-layout__grid {
   margin: 0 auto;
   max-width: 93vw;
@@ -6968,7 +6966,7 @@ body {
   display: grid;
       grid-template-areas: 'sidebar-top' 'content' 'sidebar-middle' 'sidebar-bottom';
   margin-top: 5rem;
-  margin-bottom: 5rem;
+  padding-bottom: 5rem;
   padding-left: 1rem; }
   @media (min-width: 86em) {
     .qh-layout__grid {

@@ -1,0 +1,21 @@
+$max-height: Max(35vh, 25vw);
+
+.footer-illustration {
+  position: absolute;
+  bottom: -0.5rem;
+  left: calc(((100vw - var(--content-max-width)) / 4) - 2.5vw);
+  height: $max-height;
+  z-index: -1;
+  html:not(.dark) & {
+    opacity: 0.25;
+  }
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) & {
+      opacity: unset;
+    }
+  }
+  svg {
+    height: $max-height;
+  }
+}
+
