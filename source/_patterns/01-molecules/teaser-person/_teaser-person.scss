@@ -1,55 +1,66 @@
 .qh__teaser-person {
+  display: flex;
+
   &__meta {
-    // For full listings we turn on flex and display person data in rows.
+    // For full listings we turn on category display
     .qh__person-list__list--full & {
 
       // Show category
       .qh__teaser-person__category {
         display: block;
-        font-weight: 500;
         margin-top: ($text-spacer-fallback-value/2);
       }
+//     @include breakpoint-up($bp--large) {
+//       display: flex;
+//       flex-flow: row nowrap;
+//       justify-content: space-between;
+//       align-items: baseline;
 
-      @include breakpoint-up($bp--large) {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: baseline;
+//       // Force equal width columns
+//       > * {
+//         flex: 1 1 0px;
+//       }
 
-        // Force equal width columns
-        > * {
-          flex: 1 1 0px;
-        }
+//       // Phone, email
+//       .qh__teaser-person__phone,
+//       .qh__teaser-person__email {
+//         margin-top: 0;
+//         padding-left: $general-h-spacing;
+//       }
 
-        // Phone, email
-        .qh__teaser-person__phone,
-        .qh__teaser-person__email {
-          margin-top: 0;
-          padding-left: $general-h-spacing;
-        }
-
-        // Hide email label
-        .qh__teaser-person__email > span {
-          display: none;
-        }
+//       // Hide email label
+//       .qh__teaser-person__email > span {
+//         display: none;
+//       }
 
 
-        .qh__teaser-person__contact-label {
-          min-width: 4rem;
-        }
+//       .qh__teaser-person__contact-label {
+//         min-width: 4rem;
+//       }
 
-        // Meta text sizing on larger screens
-        span,
-        a {
-          font-size: 1rem;
-          @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-            --font-size-min-value: 0.925;
-            --font-size-max-value: 1;
-            --font-size-scaler-value: var(--p-scaler-value);
-            font-size: var(--font-size);
-          }
-        }
-      }
+//       // Meta text sizing on larger screens
+//       span,
+//       a {
+//         font-size: 1rem;
+//         @supports (font-size: clamp(1rem, 2vw, 2rem)) {
+//           --font-size-min-value: 0.925;
+//           --font-size-max-value: 1;
+//           --font-size-scaler-value: var(--p-scaler-value);
+//           font-size: var(--font-size);
+//         }
+//       }
+//     }
+    }
+  }
+
+  &__photo {
+    display: none;
+    width: 25%;
+    margin-right: $general-h-spacing;
+
+    // Only show photos if at least one person has a image uploaded.
+    .qh__person-list--contains-photo & {
+      display: block;
     }
   }
 
@@ -62,10 +73,22 @@
     }
   }
 
-  // <div>
+  &__content {
+    flex-grow: 1;
+  }
+
   &__meta {
     // Give meta a slight indent
     margin-left: 1.125em;
+
+    @include breakpoint-up($bp--xlarge) {
+      display: flex;
+      justify-content: space-between;
+
+      > div {
+        width: 45%;
+      }
+    }
   }
 
   // Hide category unless in a full listing
@@ -73,9 +96,6 @@
   &__category {
     display: none;
   }
-
-  // <ul>
-  &__contact {}
 
   // <span>
   &__phone,
@@ -89,12 +109,17 @@
     min-width: 5rem
   }
 
+  &__additional-field-label {
+    display: block;
+  }
+
   // Spacing
-  &__name strong,
+  &__name,
   &__title,
   &__job-details,
   &__phone,
-  &__email {
+  &__email,
+  &__additional-field {
     margin-bottom: ($text-spacer-fallback-value/2);
 
     @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {

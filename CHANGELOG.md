@@ -13,6 +13,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-69: Add template and styling for location full display.
 
 ### Changed
+- RIGA-70: Changed teaser person display to include a photo.
+- RIGA-70: Changed person-list to indicate whether a photo exists.
 
 ### Deprecated
 
