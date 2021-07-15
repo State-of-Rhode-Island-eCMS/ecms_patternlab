@@ -21,6 +21,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.5.9] - 2021-07-15
+### Changed
+- RIGA-94: Updated illustration source files for oyster and steamer.
+
 ## [0.5.8] - 2021-06-30
 ### Added
 - RIGA-69: Add template and styling for location full display.
@@ -260,7 +264,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.8...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.9...HEAD
+[0.5.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.8...0.5.9
 [0.5.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.7...0.5.8
 [0.5.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.6...0.5.7
 [0.5.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.5...0.5.6
