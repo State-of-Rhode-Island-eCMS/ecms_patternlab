@@ -32,6 +32,10 @@
       {# TODO: Add translation #}
       <span class="qh__file-list__item__filesize">{{ file_type_readable }}, {{ file_size.amount }}<span aria-hidden="true">{{ file_size.short_format }}</span><span class="visually-hidden">{{ file_size.long_format }}</span></span>
     </div>
+    <div class="qh__file-list__item__description">
+      {# TODO: Add translation #}
+      {{ file_description }}
+    </div>
     <div class="qh__file-list__item__download">
       <span class="qh__icon">
         {% include ('@icons/download.svg') %}
