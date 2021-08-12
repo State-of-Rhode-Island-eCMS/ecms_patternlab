@@ -2033,21 +2033,22 @@ body {
 label,
 .small-text,
 figcaption,
+.qh__file-list__item__description,
 .qh__file-list__item__filesize {
   font-family: "Work Sans", var(--font-sans-fallback);
   font-size: 0.75rem;
   line-height: 1.1;
   font-style: normal; }
-  .wf-inactive label, .wf-inactive .small-text, .wf-inactive figcaption, .wf-inactive .qh__file-list__item__filesize {
+  .wf-inactive label, .wf-inactive .small-text, .wf-inactive figcaption, .wf-inactive .qh__file-list__item__description, .wf-inactive .qh__file-list__item__filesize {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-variant-numeric: lining-nums;
     font-weight: normal;
     letter-spacing: 0.035em; }
   @supports (font-variation-settings: normal) {
-    html:not(.novf) label, html:not(.novf) .small-text, html:not(.novf) figcaption, html:not(.novf) .qh__file-list__item__filesize {
+    html:not(.novf) label, html:not(.novf) .small-text, html:not(.novf) figcaption, html:not(.novf) .qh__file-list__item__description, html:not(.novf) .qh__file-list__item__filesize {
       font-family: var(--font-sans-vf);
       font-weight: var(--st-font-wght); }
-    html:not(.novf).wf-inactive label, html:not(.novf).wf-inactive .small-text, html:not(.novf).wf-inactive figcaption, html:not(.novf).wf-inactive .qh__file-list__item__filesize {
+    html:not(.novf).wf-inactive label, html:not(.novf).wf-inactive .small-text, html:not(.novf).wf-inactive figcaption, html:not(.novf).wf-inactive .qh__file-list__item__description, html:not(.novf).wf-inactive .qh__file-list__item__filesize {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-variant-numeric: lining-nums;
       font-weight: normal;
@@ -2056,6 +2057,7 @@ figcaption,
     label,
     .small-text,
     figcaption,
+    .qh__file-list__item__description,
     .qh__file-list__item__filesize {
       font-size: 0.8125rem;
       line-height: 1.2; } }
@@ -2063,6 +2065,7 @@ figcaption,
     label,
     .small-text,
     figcaption,
+    .qh__file-list__item__description,
     .qh__file-list__item__filesize {
       font-size: 0.875rem;
       line-height: 1.3; } }
@@ -2070,6 +2073,7 @@ figcaption,
     label,
     .small-text,
     figcaption,
+    .qh__file-list__item__description,
     .qh__file-list__item__filesize {
       --font-size-min-value: 0.75;
       --font-size-max-value: 0.875;
@@ -6234,6 +6238,12 @@ body {
       -webkit-hyphens: none;
           -ms-hyphens: none;
               hyphens: none; } }
+
+.qh__file-list__item__description {
+  color: var(--fc__default__fg);
+  display: block;
+  max-width: 40em;
+  margin: 0.25rem 0 0.5rem; }
 
 .qh__file-list__item__filesize {
   color: var(--fc__default__fg);
