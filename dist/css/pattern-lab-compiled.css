@@ -3139,6 +3139,10 @@ table {
     width: 100%;
     height: 100%; }
 
+.qh__media-item__audio audio {
+  width: 90%;
+  margin-bottom: 1.5rem; }
+
 .qh__media-item figcaption {
   background-color: var(--fc__primary--light__bg--dark);
   margin-top: 0;

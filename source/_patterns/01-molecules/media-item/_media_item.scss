@@ -57,6 +57,13 @@
     }
   }
 
+  &__audio {
+    audio {
+      width: 90%;
+      margin-bottom: 1.5rem;
+    }
+  }
+
   figcaption {
     background-color: var(--fc__primary--light__bg--dark);
     margin-top: 0;
