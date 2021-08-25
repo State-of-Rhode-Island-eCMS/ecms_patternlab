@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-112: Added audio option to media items.
 
 ### Changed
 
