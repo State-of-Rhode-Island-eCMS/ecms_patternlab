@@ -10,7 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-112: Added audio option to media items.
 
 ### Changed
 
@@ -21,6 +20,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.6.1] - 2021-08-26
+### Added
+- RIGA-112: Added audio option to media items.
 
 ## [0.6.0] - 2021-08-12
 ### Added
@@ -269,7 +272,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.0...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.1...HEAD
+[0.6.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.0...0.6.1
 [0.6.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.9...0.6.0
 [0.5.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.8...0.5.9
 [0.5.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.7...0.5.8
