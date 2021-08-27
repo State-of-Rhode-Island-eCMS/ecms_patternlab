@@ -1483,12 +1483,14 @@ body {
 /* following element spacing selector, just inside node content */
 .node > * + *,
 .qh__accordion__content > div > * + *,
-.qh__numbered-step__content > * + * {
+.qh__numbered-step__content > * + *,
+.qh__single-event__content > * + * {
   margin-top: 1.25rem; }
   @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
     .node > * + *,
     .qh__accordion__content > div > * + *,
-    .qh__numbered-step__content > * + * {
+    .qh__numbered-step__content > * + *,
+    .qh__single-event__content > * + * {
       margin-top: var(--body-text-spacer); } }
 
 /* Any time paragraphs follow something else */
@@ -1567,7 +1569,6 @@ h2 {
       font-weight: normal;
       letter-spacing: 0.035em; } }
 
-h2:first-of-type:not(.qh__no-decoration)::after,
 .qh__emphasis::after {
   content: ' ';
   display: block;
@@ -1576,7 +1577,6 @@ h2:first-of-type:not(.qh__no-decoration)::after,
   margin-bottom: 1.0625rem;
   width: 1.125em; }
   @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-    h2:first-of-type:not(.qh__no-decoration)::after,
     .qh__emphasis::after {
       margin-top: calc(var(--body-text-spacer) * 0.85);
       margin-bottom: calc(var(--body-text-spacer) * 0.85); } }
@@ -2031,21 +2031,22 @@ body {
 label,
 .small-text,
 figcaption,
+.qh__file-list__item__description,
 .qh__file-list__item__filesize {
   font-family: "Work Sans", var(--font-sans-fallback);
   font-size: 0.75rem;
   line-height: 1.1;
   font-style: normal; }
-  .wf-inactive label, .wf-inactive .small-text, .wf-inactive figcaption, .wf-inactive .qh__file-list__item__filesize {
+  .wf-inactive label, .wf-inactive .small-text, .wf-inactive figcaption, .wf-inactive .qh__file-list__item__description, .wf-inactive .qh__file-list__item__filesize {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-variant-numeric: lining-nums;
     font-weight: normal;
     letter-spacing: 0.035em; }
   @supports (font-variation-settings: normal) {
-    html:not(.novf) label, html:not(.novf) .small-text, html:not(.novf) figcaption, html:not(.novf) .qh__file-list__item__filesize {
+    html:not(.novf) label, html:not(.novf) .small-text, html:not(.novf) figcaption, html:not(.novf) .qh__file-list__item__description, html:not(.novf) .qh__file-list__item__filesize {
       font-family: var(--font-sans-vf);
       font-weight: var(--st-font-wght); }
-    html:not(.novf).wf-inactive label, html:not(.novf).wf-inactive .small-text, html:not(.novf).wf-inactive figcaption, html:not(.novf).wf-inactive .qh__file-list__item__filesize {
+    html:not(.novf).wf-inactive label, html:not(.novf).wf-inactive .small-text, html:not(.novf).wf-inactive figcaption, html:not(.novf).wf-inactive .qh__file-list__item__description, html:not(.novf).wf-inactive .qh__file-list__item__filesize {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-variant-numeric: lining-nums;
       font-weight: normal;
@@ -2054,6 +2055,7 @@ figcaption,
     label,
     .small-text,
     figcaption,
+    .qh__file-list__item__description,
     .qh__file-list__item__filesize {
       font-size: 0.8125rem;
       line-height: 1.2; } }
@@ -2061,6 +2063,7 @@ figcaption,
     label,
     .small-text,
     figcaption,
+    .qh__file-list__item__description,
     .qh__file-list__item__filesize {
       font-size: 0.875rem;
       line-height: 1.3; } }
@@ -2068,6 +2071,7 @@ figcaption,
     label,
     .small-text,
     figcaption,
+    .qh__file-list__item__description,
     .qh__file-list__item__filesize {
       --font-size-min-value: 0.75;
       --font-size-max-value: 0.875;
@@ -3133,6 +3137,10 @@ table {
     width: 100%;
     height: 100%; }
 
+.qh__media-item__audio audio {
+  width: 90%;
+  margin-bottom: 1.5rem; }
+
 .qh__media-item figcaption {
   background-color: var(--fc__primary--light__bg--dark);
   margin-top: 0;
@@ -4077,72 +4085,53 @@ table {
         --font-size-scaler-value: var(--p-scaler-value);
         font-size: var(--font-size); } }
 
-.qh__person-list__list--full .qh__teaser-person__meta .qh__teaser-person__category {
-  display: block;
-  font-weight: 500;
-  margin-top: 0.625rem; }
-
-@media (min-width: 62em) {
-  .qh__person-list__list--full .qh__teaser-person__meta {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline; }
-    .qh__person-list__list--full .qh__teaser-person__meta > * {
-      -webkit-box-flex: 1;
-          -ms-flex: 1 1 0px;
-              flex: 1 1 0px; }
-    .qh__person-list__list--full .qh__teaser-person__meta .qh__teaser-person__phone,
-    .qh__person-list__list--full .qh__teaser-person__meta .qh__teaser-person__email {
-      margin-top: 0;
-      padding-left: 1rem; }
-    .qh__person-list__list--full .qh__teaser-person__meta .qh__teaser-person__email > span {
-      display: none; }
-    .qh__person-list__list--full .qh__teaser-person__meta .qh__teaser-person__contact-label {
-      min-width: 4rem; }
-    .qh__person-list__list--full .qh__teaser-person__meta span,
-    .qh__person-list__list--full .qh__teaser-person__meta a {
-      font-size: 1rem; }
-      @supports (font-size: clamp(1rem, 2vw, 2rem)) {
-        .qh__person-list__list--full .qh__teaser-person__meta span,
-        .qh__person-list__list--full .qh__teaser-person__meta a {
-          --font-size-min-value: 0.925;
-          --font-size-max-value: 1;
-          --font-size-scaler-value: var(--p-scaler-value);
-          font-size: var(--font-size); } } }
-
-.qh__teaser-person__name strong {
-  display: block;
-  font-size: 112.5%; }
-
-.qh__teaser-person__meta {
-  margin-left: 1.125em; }
-
-.qh__teaser-person__category {
-  display: none; }
-
-.qh__teaser-person__phone, .qh__teaser-person__email {
-  word-break: break-all;
-  display: block; }
-
-.qh__teaser-person__contact-label {
-  display: inline-block;
-  min-width: 5rem; }
-
-.qh__teaser-person__name strong, .qh__teaser-person__title, .qh__teaser-person__job-details, .qh__teaser-person__phone, .qh__teaser-person__email {
-  margin-bottom: 0.625rem; }
-  @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-    .qh__teaser-person__name strong, .qh__teaser-person__title, .qh__teaser-person__job-details, .qh__teaser-person__phone, .qh__teaser-person__email {
-      margin-bottom: calc(var(--body-text-spacer)/2); } }
+.qh__teaser-person {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .qh__person-list__list--full .qh__teaser-person__meta .qh__teaser-person__category {
+    display: block;
+    margin-top: 0.625rem; }
+  .qh__teaser-person__photo {
+    display: none;
+    width: 25%;
+    margin-right: 1rem; }
+    .qh__person-list--contains-photo .qh__teaser-person__photo {
+      display: block; }
+  .qh__teaser-person__name strong {
+    display: block;
+    font-size: 112.5%; }
+  .qh__teaser-person__content {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+  .qh__teaser-person__meta {
+    margin-left: 1.125em; }
+    @media (min-width: 75em) {
+      .qh__teaser-person__meta {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .qh__teaser-person__meta > div {
+          width: 45%; } }
+  .qh__teaser-person__category {
+    display: none; }
+  .qh__teaser-person__phone, .qh__teaser-person__email {
+    word-break: break-all;
+    display: block; }
+  .qh__teaser-person__contact-label {
+    display: inline-block;
+    min-width: 5rem; }
+  .qh__teaser-person__additional-field-label {
+    display: block; }
+  .qh__teaser-person__name, .qh__teaser-person__title, .qh__teaser-person__job-details, .qh__teaser-person__phone, .qh__teaser-person__email, .qh__teaser-person__additional-field {
+    margin-bottom: 0.625rem; }
+    @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
+      .qh__teaser-person__name, .qh__teaser-person__title, .qh__teaser-person__job-details, .qh__teaser-person__phone, .qh__teaser-person__email, .qh__teaser-person__additional-field {
+        margin-bottom: calc(var(--body-text-spacer)/2); } }
 
 .qh__teaser-promotion {
   background-color: var(--fc__default__bg);
@@ -5395,7 +5384,8 @@ body {
       margin-left: auto;
       max-width: calc(100% - 2.75rem); }
     .qh__nav-minor__has-children .qh__nav-minor__list__sub .qh__nav-minor__link {
-      max-width: none; }
+      max-width: none;
+      padding-left: 1.5rem; }
     .qh__nav-minor__has-children .qh__accordion__button {
       display: block;
       -webkit-box-flex: 0;
@@ -6252,6 +6242,12 @@ body {
           -ms-hyphens: none;
               hyphens: none; } }
 
+.qh__file-list__item__description {
+  color: var(--fc__default__fg);
+  display: block;
+  max-width: 40em;
+  margin: 0.25rem 0 0.5rem; }
+
 .qh__file-list__item__filesize {
   color: var(--fc__default__fg);
   display: block; }
@@ -7011,6 +7007,8 @@ main {
     .qh-layout__grid {
       -ms-grid-columns: minmax(12.5rem, 22rem) minmax(0, 1fr);
           grid-template-columns: minmax(12.5rem, 22rem) minmax(0, 1fr); } }
+  .qh-layout__grid aside + aside {
+    margin-top: 1.5rem; }
 
 .qh-layout__content {
   -ms-grid-row: 2;
@@ -7290,6 +7288,49 @@ main {
 .qh__execorder__file-list {
   margin-top: 3rem; }
 
+.qh__single-location__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1.5rem; }
+  .qh__single-location__row > div {
+    width: 45%; }
+
+.qh__single-location__phone, .qh__single-location__website {
+  word-break: break-all;
+  display: block; }
+
+.qh__single-location__website .qh__icon {
+  width: 1.75rem;
+  height: 1.75rem; }
+
+.qh__single-location__icon-link {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-left: -0.5rem; }
+
+.qh__single-location__phone, .qh__single-location__website,
+.qh__single-location .address, .qh__single-location__map, .qh__single-location__icon-link {
+  margin-bottom: 1.5rem; }
+
+.qh__single-location .office-hours {
+  margin-top: 0; }
+  .qh__single-location .office-hours h4 {
+    margin-top: 0; }
+
 .qh__single-speech__header {
   margin-bottom: 1.875rem; }
   @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
@@ -7481,6 +7522,9 @@ html #layout-builder-modal {
 #layout-builder-modal .media-library-item__remove,
 #layout-builder-modal .media-library-item__remove.button {
   max-width: none; }
+
+#layout-builder-modal .qh__icon-library-preview svg {
+  width: 75px; }
 
 .toolbar-tray ul {
   max-width: initial;

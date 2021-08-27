@@ -1,4 +1,4 @@
-{% if illustration %}
+{% if illustration or illustration != 'none' %}
   <div class="footer-illustration">
   {% if illustration starts with 'random:' %}
     {# Remove random prefix #}
@@ -13,10 +13,10 @@
       {% set zeroBasedKey = randomKey - 1 %}
 
       {# Print out SVG #}
-      {% include ('@illustrations/' ~ filenameArray[zeroBasedKey]) %}
+      {% include ('@illustrations/' ~ filenameArray[zeroBasedKey]) ignore missing %}
     {% endif %}
   {% else %}
-    {% include ('@illustrations/' ~ illustration) %}
+    {% include ('@illustrations/' ~ illustration) ignore missing %}
   {% endif %}
   </div>
 {% endif %}
