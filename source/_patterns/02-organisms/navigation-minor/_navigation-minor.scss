@@ -122,7 +122,7 @@
 
     &__sub {
       background-color: var(--fc__nav-minor__sub__bg);
-      border-left: 0.5rem solid var(--fc__nav-minor__link--hover__bg);
+      border-left: 0.85rem solid var(--fc__nav-minor__link--hover__bg);
     }
   }
 
@@ -169,6 +169,7 @@
 
     .qh__nav-minor__list__sub .qh__nav-minor__link {
       max-width: none;
+      //padding-left: 1.5rem;
     }
 
     .qh__accordion__button {

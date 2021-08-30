@@ -1,46 +1,67 @@
 <li class="qh__person-list__item">
   <article class="qh__teaser-person">
 
-    <div class="qh__teaser-person__name">
-      <strong>{{ last_name }}, {{ first_name }}</strong>
-    </div>
-
-    <div class="qh__teaser-person__meta">
-      <div class="qh__teaser-person__job-details">
-        <span class="qh__teaser-person__title">{{ job_title }}</span>
-        <span class="qh__teaser-person__category">{{ categories }}</span>
-      </div>
-
-      <div class="qh__teaser-person__phone-numbers">
-        {% if phone %}
-          <span class="qh__teaser-person__phone">
-            <span class="qh__teaser-person__contact-label">Phone: </span>
-            <a href="tel:1+{{ phone }}{{ extension ? 'p' ~ extension }}">{{ phone }}{{ extension ? ' ext. ' ~ extension}}</a>
-          </span>
-        {% endif %}
-
-        {% if mobile %}
-          <span class="qh__teaser-person__phone">
-            <span class="qh__teaser-person__contact-label">Mobile: </span>
-            <a href="tel:1+{{ mobile }}">{{ mobile }}</a>
-          </span>
-        {% endif %}
-
-        {% if fax %}
-          <span class="qh__teaser-person__phone">
-            <span class="qh__teaser-person__contact-label">Fax: </span>
-            <a href="tel:1+{{ fax }}">{{ fax }}</a>
-          </span>
-        {% endif %}
-      </div>
-
-      {% if email %}
-        <span class="qh__teaser-person__email">
-          <span class="qh__teaser-person__contact-label">Email: </span>
-          <a href="mailto:{{ email }}">{{ email }}</a></span>
-        </span>
+    <div class="qh__teaser-person__photo">
+      {% if photo|default %}
+        {{ photo }}
+      {% elseif placeholder_path %}
+        <img src="{{ placeholder_path }}" alt="Placeholder person image" class="qh__teaser-person__placeholder">
       {% endif %}
     </div>
 
+    <div class="qh__teaser-person__content">
+      <p class="qh__teaser-person__name"><strong>{{ last_name }}, {{ first_name }}</strong></p>
+
+      <div class="qh__teaser-person__meta">
+        <div class="qh__teaser-person__contact">
+          <div class="qh__teaser-person__job-details">
+            <span class="qh__teaser-person__title">{{ job_title }}</span>
+            <span class="qh__teaser-person__category">{{ categories }}</span>
+          </div>
+
+          <div class="qh__teaser-person__phone-numbers">
+            {% if phone %}
+              <span class="qh__teaser-person__phone">
+                <span class="qh__teaser-person__contact-label">Phone: </span>
+                <a href="tel:1+{{ phone }}{{ extension ? 'p' ~ extension }}">{{ phone }}{{ extension ? ' ext. ' ~ extension}}</a>
+              </span>
+            {% endif %}
+
+            {% if mobile %}
+              <span class="qh__teaser-person__phone">
+                <span class="qh__teaser-person__contact-label">Mobile: </span>
+                <a href="tel:1+{{ mobile }}">{{ mobile }}</a>
+              </span>
+            {% endif %}
+
+            {% if fax %}
+              <span class="qh__teaser-person__phone">
+                <span class="qh__teaser-person__contact-label">Fax: </span>
+                <a href="tel:1+{{ fax }}">{{ fax }}</a>
+              </span>
+            {% endif %}
+          </div>
+
+          {% if email %}
+            <span class="qh__teaser-person__email">
+              <span class="qh__teaser-person__contact-label">Email: </span>
+              <a href="mailto:{{ email }}">{{ email }}</a></span>
+            </span>
+          {% endif %}
+        </div>
+
+         {% if additional_fields %}
+          <div class="qh__teaser-person__additional-fields">
+            {% for field_label, field_value in additional_fields %}
+              <div class="qh__teaser-person__additional-field">
+                <span class="qh__teaser-person__additional-field-label">{{ field_label }}: </span>
+                {{ field_value }}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+      </div>
+    </div>
   </article>
 </li>

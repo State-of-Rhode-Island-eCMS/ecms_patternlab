@@ -38,6 +38,12 @@
     {% endif %}
   {% elseif type == 'video' %}
     <div class="qh__media-item__video">{{ source|raw }}</div>
+  {% elseif type == 'audio' %}
+    <div class="qh__media-item__audio">
+      <audio controls>
+        <source src="{{ audio_url }}" type="{{ audio_mimetype }}">
+      </audio>
+    </div>
   {% endif %}
   {% if caption %}
     <figcaption>{{ caption }}</figcaption>

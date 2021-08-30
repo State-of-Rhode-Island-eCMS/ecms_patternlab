@@ -64,12 +64,17 @@
     </div>
   </header>
 
-  {% if description|default  %}
-    <div class="qh__single-event__content">
+  <div class="qh__single-event__content">
+    {% if description|default  %}
       <!-- Description -->
       {{ description }}
-    </div>
-  {% endif %}
+    {% endif %}
+
+    {% if content_components|default  %}
+      <!-- Paragraph content -->
+      {{ content_components }}
+    {% endif %}
+  </div>
 
   <!-- Only if Contact or Event Type has data -->
   {% if event_type|default or contact|default %}
