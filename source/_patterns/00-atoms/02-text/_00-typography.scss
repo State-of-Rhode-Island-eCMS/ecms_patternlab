@@ -174,7 +174,7 @@ h2 {
   @supports (font-variation-settings: normal) {
     html:not(.novf) & {
       font-family: var(--font-serif-vf);
-      font-weight: 425;
+      font-weight: 400;
     }
     html:not(.novf).wf-inactive & {
       font-family: $font-serif-fallback;

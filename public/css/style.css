@@ -31,11 +31,11 @@ body {
   --p-size-m: 1.125rem;
   --p-size-l: 1.25rem;
   --h1-size-s: 2rem;
-  --h1-size-m: 3rem;
-  --h1-size-l: 3.75rem;
+  --h1-size-m: 2.75rem;
+  --h1-size-l: 3.25rem;
   --h2-size-s: 1.5rem;
-  --h2-size-m: 2.25rem;
-  --h2-size-l: 2.75rem;
+  --h2-size-m: 2rem;
+  --h2-size-l: 2.5rem;
   --h3-size-s: 1.25rem;
   --h3-size-m: 1.5rem;
   --h3-size-l: 1.75rem;
@@ -1530,16 +1530,16 @@ h1 {
       letter-spacing: 0.035em; } }
   @media (min-width: 50em) {
     h1 {
-      font-size: 3rem;
+      font-size: 2.75rem;
       line-height: 1.075; } }
   @media (min-width: 62em) {
     h1 {
-      font-size: 3.75rem;
+      font-size: 3.25rem;
       line-height: 1.1; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     h1 {
       --font-size-min-value: 2;
-      --font-size-max-value: 3.75;
+      --font-size-max-value: 3.25;
       --font-size-scaler-value: var(--h1-scaler-value);
       font-size: var(--font-size);
       --font-lh-min-value: 1.05;
@@ -1562,7 +1562,7 @@ h2 {
   @supports (font-variation-settings: normal) {
     html:not(.novf) h2 {
       font-family: var(--font-serif-vf);
-      font-weight: 425; }
+      font-weight: 400; }
     html:not(.novf).wf-inactive h2 {
       font-family: Georgia, "Times New Roman", serif;
       font-variant-numeric: lining-nums;
@@ -1591,18 +1591,18 @@ h2,
   @media (min-width: 50em) {
     h2,
     .qh__h2 {
-      font-size: 2.25rem;
+      font-size: 2rem;
       line-height: 1.125; } }
   @media (min-width: 62em) {
     h2,
     .qh__h2 {
-      font-size: 2.75rem;
+      font-size: 2.5rem;
       line-height: 1.15; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     h2,
     .qh__h2 {
       --font-size-min-value: 1.5;
-      --font-size-max-value: 2.75;
+      --font-size-max-value: 2.5;
       --font-size-scaler-value: var(--h2-scaler-value);
       font-size: var(--font-size);
       --font-lh-min-value: 1.1;
@@ -5348,7 +5348,7 @@ body {
         overflow-y: scroll; } }
     .qh__nav-minor__list__sub {
       background-color: var(--fc__nav-minor__sub__bg);
-      border-left: 0.5rem solid var(--fc__nav-minor__link--hover__bg); }
+      border-left: 0.85rem solid var(--fc__nav-minor__link--hover__bg); }
   .qh__nav-minor__item {
     position: relative;
     overflow: visible; }
@@ -5384,8 +5384,7 @@ body {
       margin-left: auto;
       max-width: calc(100% - 2.75rem); }
     .qh__nav-minor__has-children .qh__nav-minor__list__sub .qh__nav-minor__link {
-      max-width: none;
-      padding-left: 1.5rem; }
+      max-width: none; }
     .qh__nav-minor__has-children .qh__accordion__button {
       display: block;
       -webkit-box-flex: 0;
