@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-126: Updated H1, H2 styles, added padding on nested links in sidebar nav object
 
 ### Deprecated
 
