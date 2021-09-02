@@ -12,7 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-126: Updated H1, H2 styles, added padding on nested links in sidebar nav object
 
 ### Deprecated
 
@@ -21,6 +20,11 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+
+## [0.6.2] - 2021-09-01
+### Changed
+- RIGA-126: Updated H1, H2 styles, added padding on nested links in sidebar nav object
 
 ## [0.6.1] - 2021-08-26
 ### Added
@@ -273,7 +277,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.1...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.2...HEAD
+[0.6.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.1...0.6.2
 [0.6.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.0...0.6.1
 [0.6.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.9...0.6.0
 [0.5.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.8...0.5.9
