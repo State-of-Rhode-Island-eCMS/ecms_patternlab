@@ -2697,6 +2697,8 @@ table {
   border-spacing: 0;
   margin-bottom: 1.5rem;
   width: 100%; }
+  table * {
+    --font-size-max-value: 1; }
   @media (max-width: 49.9375em) {
     table {
       display: block;
@@ -2730,13 +2732,18 @@ table {
   table td {
     padding: 0.5rem 0.75rem; }
   table th {
-    --p-font-wght: 550; }
-    table th + th {
+    --p-font-wght: 550;
+    border-bottom: 0.0625rem solid var(--fc__table__border__h); }
+    table th + th,
+    table th + td {
       border-left: 0.0625rem solid var(--fc__table__border__v); }
   table td {
     border-bottom: 0.0625rem solid var(--fc__table__border__h); }
     table td + td {
       border-left: 0.0625rem solid var(--fc__table__border__v); }
+  table .finance {
+    text-align: right;
+    font-variant-numeric: tabular-nums; }
 
 .google-visualization-table-table {
   font-family: "Work Sans", var(--font-sans-fallback) !important;

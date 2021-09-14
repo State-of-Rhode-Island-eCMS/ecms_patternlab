@@ -36,6 +36,11 @@ table {
   margin-bottom: $general-v-spacing;
   width: 100%;
 
+  // keep text from getting larger than 1rem
+  * {
+    --font-size-max-value: 1;
+  }
+
   @include breakpoint-down($bp--medium) {
     // Make small viewports allow horizontal scrolling
     display: block;
@@ -86,8 +91,10 @@ table {
 
   th {
     --p-font-wght: 550;
+    border-bottom: $border-xs solid var(--fc__table__border__h);
 
-    & + th {
+    & + th,
+    & + td {
       border-left: $border-xs solid var(--fc__table__border__v);
     }
   }
@@ -98,5 +105,11 @@ table {
     & + td {
       border-left: $border-xs solid var(--fc__table__border__v);
     }
+  }
+
+  // use a '.finance' class on a cell to align right and use tabular nums
+  .finance {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
   }
 }
