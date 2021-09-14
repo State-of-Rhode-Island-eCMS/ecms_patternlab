@@ -4115,7 +4115,7 @@ table {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between; }
-        .qh__teaser-person__meta > div {
+        .qh__teaser-person__meta.multicol > div {
           width: 45%; } }
   .qh__teaser-person__category {
     display: none; }
