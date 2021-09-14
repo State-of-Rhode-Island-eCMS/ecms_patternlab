@@ -28,11 +28,6 @@ button,
   user-select: none;
   vertical-align: middle;
 
-  // Small screens can break onto two lines… larger can not
-  @include breakpoint-up($bp--small) {
-    white-space: nowrap;
-  }
-
   // Primary color theme (highlight, more colorful)
   // :visited on a <button> is not a thing but most of the time these may be <a>s
   &,
