@@ -37,7 +37,8 @@ table {
   width: 100%;
 
   // keep text from getting larger than 1rem
-  * {
+  th,
+  td {
     --font-size-max-value: 1;
   }
 
@@ -51,6 +52,12 @@ table {
     height: 100%;
     width: 100%;
     z-index: 1;
+  }
+
+  caption {
+    max-width: unset;
+    padding-top: $table-cell-v-padding;
+    padding-bottom: $table-cell-v-padding;
   }
 
   thead th {
@@ -111,5 +118,8 @@ table {
   .finance {
     text-align: right;
     font-variant-numeric: tabular-nums;
+  }
+  .finance-header {
+    text-align: center;
   }
 }

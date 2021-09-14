@@ -1817,6 +1817,7 @@ p,
 address,
 button,
 time,
+caption,
 .qh__btn,
 .button,
 .skip-link {
@@ -1839,6 +1840,7 @@ time,
   address, .wf-inactive
   button, .wf-inactive
   time, .wf-inactive
+  caption, .wf-inactive
   .qh__btn, .wf-inactive
   .button, .wf-inactive
   .skip-link {
@@ -1855,6 +1857,7 @@ time,
     address, html:not(.novf)
     button, html:not(.novf)
     time, html:not(.novf)
+    caption, html:not(.novf)
     .qh__btn, html:not(.novf)
     .button, html:not(.novf)
     .skip-link {
@@ -1869,6 +1872,7 @@ time,
     address, html:not(.novf).wf-inactive
     button, html:not(.novf).wf-inactive
     time, html:not(.novf).wf-inactive
+    caption, html:not(.novf).wf-inactive
     .qh__btn, html:not(.novf).wf-inactive
     .button, html:not(.novf).wf-inactive
     .skip-link {
@@ -1885,6 +1889,7 @@ time,
       address, html:not(.light)
       button, html:not(.light)
       time, html:not(.light)
+      caption, html:not(.light)
       .qh__btn, html:not(.light)
       .button, html:not(.light)
       .skip-link {
@@ -1898,6 +1903,7 @@ time,
     address, .dark
     button, .dark
     time, .dark
+    caption, .dark
     .qh__btn, .dark
     .button, .dark
     .skip-link {
@@ -1912,6 +1918,7 @@ time,
     address,
     button,
     time,
+    caption,
     .qh__btn,
     .button,
     .skip-link {
@@ -1927,6 +1934,7 @@ time,
     address,
     button,
     time,
+    caption,
     .qh__btn,
     .button,
     .skip-link {
@@ -1942,6 +1950,7 @@ time,
     address,
     button,
     time,
+    caption,
     .qh__btn,
     .button,
     .skip-link {
@@ -1964,6 +1973,7 @@ time,
     address,
     button,
     time,
+    caption,
     .qh__btn,
     .button,
     .skip-link {
@@ -2697,7 +2707,8 @@ table {
   border-spacing: 0;
   margin-bottom: 1.5rem;
   width: 100%; }
-  table * {
+  table th,
+  table td {
     --font-size-max-value: 1; }
   @media (max-width: 49.9375em) {
     table {
@@ -2709,6 +2720,10 @@ table {
       height: 100%;
       width: 100%;
       z-index: 1; } }
+  table caption {
+    max-width: unset;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem; }
   table thead th {
     border-bottom: 0.125rem solid var(--fc__table__border__h);
     color: var(--fc__table__color-bright);
@@ -2744,6 +2759,8 @@ table {
   table .finance {
     text-align: right;
     font-variant-numeric: tabular-nums; }
+  table .finance-header {
+    text-align: center; }
 
 .google-visualization-table-table {
   font-family: "Work Sans", var(--font-sans-fallback) !important;
