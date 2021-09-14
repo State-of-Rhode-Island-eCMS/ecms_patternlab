@@ -3104,16 +3104,22 @@ table {
   margin-left: 2rem; }
 
 .qh__media-item.small {
-  width: 32%;
-  width: calc( (100% / 3) - 1rem); }
+  width: 100%; }
+  @media (min-width: 40em) {
+    .qh__media-item.small {
+      width: 32%;
+      width: calc( (100% / 3) - 1rem); } }
   @media print {
     .qh__media-item.small {
       width: 25%;
       width: calc( (100% / 4) - 1rem); } }
 
 .qh__media-item.medium {
-  width: 49%;
-  width: calc( (100% / 2) - 1rem); }
+  width: 100%; }
+  @media (min-width: 40em) {
+    .qh__media-item.medium {
+      width: 49%;
+      width: calc( (100% / 2) - 1rem); } }
   @media print {
     .qh__media-item.medium {
       width: 32%;
