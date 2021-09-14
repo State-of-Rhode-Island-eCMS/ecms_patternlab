@@ -7,7 +7,16 @@
   &__svg {}
 
   // Any path
-  &__path {
+  path {
     fill: currentColor;
+  }
+}
+
+// style for all icon button icons
+.qh__btn--icon {
+  svg {
+    path {
+      fill: currentColor;
+    }
   }
 }

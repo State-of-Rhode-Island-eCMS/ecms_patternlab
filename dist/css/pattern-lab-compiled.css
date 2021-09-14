@@ -2221,8 +2221,11 @@ img {
   height: 2.75rem;
   width: 2.75rem;
   pointer-events: none; }
-  .qh__icon__path {
+  .qh__icon path {
     fill: currentColor; }
+
+.qh__btn--icon svg path {
+  fill: currentColor; }
 
 form {
   margin-top: calc(var(--body-text-spacer) * 1);
@@ -2521,11 +2524,6 @@ button,
       -ms-user-select: none;
           user-select: none;
   vertical-align: middle; }
-  @media (min-width: 40em) {
-    button,
-    .qh__btn,
-    .button {
-      white-space: nowrap; } }
   button, button:visited,
   .qh__btn,
   .qh__btn:visited,
