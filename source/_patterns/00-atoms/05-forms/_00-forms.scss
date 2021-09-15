@@ -10,10 +10,9 @@ fieldset {
   > legend {
     display: block;
     font-family: $font-sans-static;
-    font-size: 1rem;
+    font-size: 1.125rem;
     font-weight: 575;
     letter-spacing: $kerning-base;
-    text-transform: uppercase;
 
     .wf-inactive & {
       font-family: $font-sans-fallback;
@@ -37,6 +36,11 @@ fieldset {
 
 // <label>
 // Handled in conjunction with .small-text in 00-atoms/02-text/00-typography
+// (increased max font size)
+
+label {
+  --font-size-max-value: 1;
+}
 
 input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
 textarea,
@@ -282,4 +286,39 @@ input[type="range"] {}
       }
     }
   }
+}
+
+// Webform module styles
+.description,
+.text-count-message {
+  @include qh__p;
+
+  small {
+    font-size: inherit
+  }
+
+}
+
+.description,
+.text-count-message {
+  --font-size-min-value: 0.75rem;
+  --font-size-max-value: 0.925rem;
+  font-size: var(--font-size);
+  margin-top: calc(var(--body-text-spacer) * 0.25);
+  margin-bottom: calc(var(--body-text-spacer) * 0.5);
+}
+
+.form-composite > legend {
+  font-size: 1.125rem;
+  font-weight: 575;
+}
+
+.form-composite > .fieldset-wrapper > .description, .form-item .description {
+  font-size: inherit;
+}
+
+
+// Spacing from label elements
+label + div {
+  margin-top: 0.25em;
 }
