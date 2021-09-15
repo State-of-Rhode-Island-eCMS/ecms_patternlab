@@ -2243,7 +2243,7 @@ form {
 
 fieldset {
   border: 0.0625rem solid var(--fc__default__border);
-  padding: 1.5rem 0 1.5rem 1rem; }
+  padding: 1.5rem 1rem 0.75rem 1rem; }
   fieldset > legend {
     display: block;
     font-family: "Work Sans", var(--font-sans-fallback);
@@ -2599,6 +2599,11 @@ select {
 
 .form-composite > .fieldset-wrapper > .description, .form-item .description {
   font-size: inherit; }
+
+.form-item,
+.form-actions {
+  margin-top: 1.25em;
+  margin-bottom: 1.75em; }
 
 label + div {
   margin-top: 0.25em; }

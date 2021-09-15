@@ -5,7 +5,7 @@ form {
 
 fieldset {
   border: $border-xs solid var(--fc__default__border);
-  padding: $general-v-spacing 0 $general-v-spacing $general-h-spacing;
+  padding: $general-v-spacing $general-h-spacing ($general-v-spacing / 2) $general-h-spacing;
 
   > legend {
     display: block;
@@ -317,6 +317,12 @@ input[type="range"] {}
   font-size: inherit;
 }
 
+// Spacing elements
+.form-item, 
+.form-actions {
+  margin-top: 1.25em;
+  margin-bottom: 1.75em;
+}
 
 // Spacing from label elements
 label + div {
