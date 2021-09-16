@@ -283,7 +283,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.2...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.3...HEAD
+[0.6.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.2...0.6.3
 [0.6.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.1...0.6.2
 [0.6.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.0...0.6.1
 [0.6.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.5.9...0.6.0
