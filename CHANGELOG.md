@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-134: Updated table styles, sm/med media widths, person teaser, exec order, icon button styles
 
 ### Deprecated
 

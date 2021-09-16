@@ -85,7 +85,7 @@
       display: flex;
       justify-content: space-between;
 
-      > div {
+      &.multicol > div {
         width: 45%;
       }
     }

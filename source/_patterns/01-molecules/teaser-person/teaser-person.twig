@@ -12,7 +12,7 @@
     <div class="qh__teaser-person__content">
       <p class="qh__teaser-person__name"><strong>{{ last_name }}, {{ first_name }}</strong></p>
 
-      <div class="qh__teaser-person__meta">
+      <div class="qh__teaser-person__meta{% if additional_fields %} multicol{% endif %}">
         <div class="qh__teaser-person__contact">
           <div class="qh__teaser-person__job-details">
             <span class="qh__teaser-person__title">{{ job_title }}</span>

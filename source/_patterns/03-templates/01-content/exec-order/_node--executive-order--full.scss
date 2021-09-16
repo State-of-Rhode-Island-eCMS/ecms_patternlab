@@ -53,7 +53,22 @@
     }
   }
 
-  &__content {}
+  &__content {
+    ol {
+
+      ol {
+        list-style-type: lower-alpha;
+
+        ol {
+          list-style-type: disc;
+        }
+      }
+
+      ul {
+        list-style-type: disc;
+      }
+    }
+  }
 
   &__footer {}
 
@@ -61,3 +76,4 @@
     margin-top: $general-v-spacing * 2;
   }
 }
+
