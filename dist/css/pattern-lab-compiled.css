@@ -6381,7 +6381,7 @@ body {
   padding-left: 0.5rem; }
 
 .qh__file-list__item__edit-link {
-  text-align: right;
+  display: block;
   margin: 1rem 0; }
 
 .qh__file-list__link {
