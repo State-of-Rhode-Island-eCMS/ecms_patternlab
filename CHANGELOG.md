@@ -10,10 +10,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-133: Added edit link for authenticated users to media: file.
 
 ### Changed
-- RIGA-134: Updated table styles, sm/med media widths, person teaser, exec order, icon button styles
 
 ### Deprecated
 
@@ -23,6 +21,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.6.3] - 2021-09-16
+### Added
+- RIGA-133: Added edit link for authenticated users to media: file.
+
+### Changed
+- RIGA-134: Updated table styles, sm/med media widths, person teaser, exec order, icon button styles
 
 ## [0.6.2] - 2021-09-01
 ### Changed
