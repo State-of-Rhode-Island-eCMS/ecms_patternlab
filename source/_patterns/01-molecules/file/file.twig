@@ -44,4 +44,9 @@
       </span>
     </div>
   </a>
+
+  {% if edit_permission %}
+    <a href="{{ edit_url }}" class="qh__file-list__item__edit-link">{{ "Edit file" }}</a>
+  {% endif %}
+
 </article>

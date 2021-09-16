@@ -86,6 +86,11 @@
       margin-left: auto;
       padding-left: ($general-h-spacing/2);
     }
+
+    &__edit-link {
+      display: block;
+      margin: 1rem 0;
+    }
   }
 
   // A
