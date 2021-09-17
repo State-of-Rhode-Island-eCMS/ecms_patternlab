@@ -21,6 +21,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.6.4] - 2021-09-17
+### Fixed
+- HOTFIX: SVG fill color fix.
+
 ## [0.6.3] - 2021-09-16
 ### Added
 - RIGA-133: Added edit link for authenticated users to media: file.
@@ -283,7 +287,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.3...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.4...HEAD
+[0.6.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.3...0.6.4
 [0.6.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.2...0.6.3
 [0.6.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.1...0.6.2
 [0.6.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.0...0.6.1
