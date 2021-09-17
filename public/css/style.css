@@ -2231,6 +2231,8 @@ img {
   height: 2.75rem;
   width: 2.75rem;
   pointer-events: none; }
+  .qh__icon__svg path {
+    fill: currentColor; }
   .qh__icon path {
     fill: currentColor; }
 
@@ -6379,6 +6381,10 @@ body {
 .qh__file-list__item__download {
   margin-left: auto;
   padding-left: 0.5rem; }
+
+.qh__file-list__item__edit-link {
+  display: block;
+  margin: 1rem 0; }
 
 .qh__file-list__link {
   display: -webkit-box;
