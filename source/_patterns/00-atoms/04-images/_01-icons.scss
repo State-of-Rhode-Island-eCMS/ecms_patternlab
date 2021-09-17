@@ -4,7 +4,9 @@
 
   //Generic classes should be available to every icon
   // Wrapper <svg>
-  &__svg {}
+  &__svg path {
+    fill: currentColor;
+  }
 
   // Any path
   path {
