@@ -2,15 +2,12 @@
 
   // align
   &.left {
-    border-left: none;
-    border-right: solid 1rem var(--fc__default__accent);
     clear: left;
     float: left;
     margin-right: 2rem;
   }
 
   &.right {
-    border-left: solid 1rem var(--fc__default__accent);
     clear: right;
     float: right;
     margin-left: 2rem;
