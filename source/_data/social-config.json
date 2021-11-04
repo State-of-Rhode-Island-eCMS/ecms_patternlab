@@ -20,6 +20,10 @@
       "link-title": "Follow us on LinkedIn",
       "icon": "social-linkedin"
     },
+    "blogger": {
+      "link-title": "View our Blog",
+      "icon": "social-blogger"
+    },
     "rss": {
       "link-title": "View our RSS feed",
       "icon": "feed"
