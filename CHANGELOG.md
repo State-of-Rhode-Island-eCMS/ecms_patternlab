@@ -16,6 +16,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Deprecated
 
 ### Removed
+- RIGA-117: Removed border from media items.
 
 ### Fixed
 
