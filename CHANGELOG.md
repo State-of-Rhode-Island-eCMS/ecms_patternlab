@@ -10,18 +10,23 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-152: Added blog icon to social config.
 
 ### Changed
 
 ### Deprecated
 
 ### Removed
-- RIGA-117: Removed border from media items.
 
 ### Fixed
 
 ### Security
+
+## [0.6.5] - 2021-11-04
+### Added
+- RIGA-152: Added blog icon to social config.
+
+### Removed
+- RIGA-117: Removed border from media items.
 
 ## [0.6.4] - 2021-09-17
 ### Fixed
@@ -289,7 +294,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.4...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.5...HEAD
+[0.6.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.4...0.6.5
 [0.6.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.3...0.6.4
 [0.6.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.2...0.6.3
 [0.6.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.1...0.6.2
