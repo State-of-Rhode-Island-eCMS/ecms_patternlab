@@ -3590,6 +3590,12 @@ table {
 .qh__pagination__ellipses {
   opacity: 0.67; }
 
+.qh__icon-card--search-state {
+  margin-bottom: 3rem; }
+  .qh__icon-card--search-state a {
+    margin-bottom: 1rem;
+    display: block; }
+
 .qh__site-branding {
   margin: 1.5rem 0; }
   .qh__site-branding__link {

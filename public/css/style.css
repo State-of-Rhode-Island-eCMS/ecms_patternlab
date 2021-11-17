@@ -3208,14 +3208,11 @@ table {
       content: "]"; }
 
 .qh__media-item.left {
-  border-left: none;
-  border-right: solid 1rem var(--fc__default__accent);
   clear: left;
   float: left;
   margin-right: 2rem; }
 
 .qh__media-item.right {
-  border-left: solid 1rem var(--fc__default__accent);
   clear: right;
   float: right;
   margin-left: 2rem; }
@@ -3592,6 +3589,12 @@ table {
 
 .qh__pagination__ellipses {
   opacity: 0.67; }
+
+.qh__icon-card--search-state {
+  margin-bottom: 3rem; }
+  .qh__icon-card--search-state a {
+    margin-bottom: 1rem;
+    display: block; }
 
 .qh__site-branding {
   margin: 1.5rem 0; }
