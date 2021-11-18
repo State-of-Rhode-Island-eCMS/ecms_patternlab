@@ -10,7 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-162: Added search state cta.
 
 ### Changed
 
@@ -21,6 +20,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.6.6] - 2021-11-18
+### Added
+- RIGA-162: Added search state cta.
 
 ## [0.6.5] - 2021-11-04
 ### Added
@@ -295,7 +298,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.5...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.6...HEAD
+[0.6.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.5...0.6.6
 [0.6.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.4...0.6.5
 [0.6.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.3...0.6.4
 [0.6.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.2...0.6.3
