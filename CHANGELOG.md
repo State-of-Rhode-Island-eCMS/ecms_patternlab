@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-184: Update notifications title to "Agency Announcements."
 
 ### Deprecated
 
