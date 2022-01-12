@@ -12,7 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-184: Update notifications title to "Agency Announcements."
 
 ### Deprecated
 
@@ -21,6 +20,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.6.7]
+### Changed
+- RIGA-184: Update notifications title to "Agency Announcements."
 
 ## [0.6.6] - 2021-11-18
 ### Added
@@ -299,7 +302,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.6...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.7...HEAD
+[0.6.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.6...0.6.7
 [0.6.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.5...0.6.6
 [0.6.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.4...0.6.5
 [0.6.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.3...0.6.4
