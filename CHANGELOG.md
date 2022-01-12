@@ -21,7 +21,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
-## [0.6.7]
+## [0.6.7] - 2022-01-12
 ### Changed
 - RIGA-184: Update notifications title to "Agency Announcements."
 
