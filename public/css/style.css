@@ -6514,7 +6514,7 @@ body {
       color: var(--c__white); }
       .qh__gallery__slider > figure figcaption a,
       .qh__gallery__slider > figure figcaption a:visited {
-        color: var(--c__ocean); }
+        color: var(--c__white); }
       .qh__gallery__slider > figure figcaption a:hover,
       .qh__gallery__slider > figure figcaption a:focus {
         color: var(--fc__default__accent); }
