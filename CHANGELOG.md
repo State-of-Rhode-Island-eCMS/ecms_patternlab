@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-191: Changed gallery caption link color to be more accessible.
 
 ### Deprecated
 
