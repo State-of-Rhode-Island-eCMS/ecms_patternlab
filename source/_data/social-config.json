@@ -20,6 +20,10 @@
       "link-title": "Follow us on LinkedIn",
       "icon": "social-linkedin"
     },
+    "flickr": {
+      "link-title": "Follow us on Flickr",
+      "icon": "social-flickr"
+    },
     "blogger": {
       "link-title": "View our Blog",
       "icon": "social-blogger"
