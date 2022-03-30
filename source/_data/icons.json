@@ -18,6 +18,9 @@
     "Chevron right": {
       "filename": "chevron-right.svg"
     },
+    "Close": {
+      "filename": "close-x.svg"
+    },
     "Cog": {
       "filename": "cog.svg"
     },
