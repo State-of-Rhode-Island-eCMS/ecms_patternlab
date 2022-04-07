@@ -1,4 +1,5 @@
 
+.qh__modal {
 
   .btn-trigger {
     margin: 0 0 300px;
@@ -7,7 +8,7 @@
   .modal {
     font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
     position: relative;
-    z-index: 100;
+    z-index: 1000;
   }
 
   .modal__overlay {
@@ -38,12 +39,16 @@
     align-items: center;
   }
 
+  .modal__footer {
+    text-align: center;
+  }
+
   .modal__title {
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: 600;
-    font-size: 1.25rem;
-    line-height: 1.25;
+    //font-weight: 600;
+    //font-size: 1.25rem;
+    //line-height: 1.25;
     color: #00449e;
     box-sizing: border-box;
   }
@@ -62,10 +67,6 @@
     color: rgba(0,0,0,.8);
   }
 
-
-
-
-
   /**************************\
     Demo Animation Style
   \**************************/
@@ -75,7 +76,7 @@
   }
 
   @keyframes mm-slideIn {
-    from { transform: translateY(35%); }
+    from { transform: translateY(15%); }
       to { transform: translateY(0); }
   }
 
@@ -95,4 +96,7 @@
   .modal[aria-hidden='true'] {
     display: none;
   }
+
+}
+
 
