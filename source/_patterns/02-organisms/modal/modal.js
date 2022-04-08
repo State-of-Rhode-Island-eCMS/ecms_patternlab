@@ -1,17 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
 
   MicroModal.init();
-  MicroModal.show('modal-1');
 
+  // Set cookie on close of modal
+  const modal = document.querySelector('#close');
+  modal.addEventListener('click', event => {
+    document. cookie = 'modal_accept = yes;'
+  });
 
+  // checks if cookie is present funtion
+  function getCookie(name) {
+    var cookies = '; ' + document.cookie;
+    var splitCookie = cookies.split('; ' + name + '=');
+    if (splitCookie.length == 2) return splitCookie.pop();
+  }
 
-  //if (condition) {
-    //  block of code to be executed if the condition is true
-  //} else {
-    //  block of code to be executed if the condition is false
-  //}
-
-
+  // Checks for cookie, displays modal if not present
+  if (getCookie('modal_accept'))
+      console.log("true");
+  else
+      MicroModal.show('modal-1');
+      console.log("false");
 
  });
-
