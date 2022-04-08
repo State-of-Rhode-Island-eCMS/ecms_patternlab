@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document. cookie = 'modal_accept = yes;'
   });
 
-  // checks if cookie is present funtion
+  // checks if cookie is present function
   function getCookie(name) {
     var cookies = '; ' + document.cookie;
     var splitCookie = cookies.split('; ' + name + '=');
