@@ -17,9 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Checks for cookie, displays modal if not present
   if (getCookie('modal_accept'))
-      console.log("true");
+      // just breeze on by
   else
       MicroModal.show('modal-1');
-      console.log("false");
 
  });
