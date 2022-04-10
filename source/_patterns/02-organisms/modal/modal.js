@@ -1,12 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-  MicroModal.init();
-
-  // Set cookie on close of modal
-  const modal = document.querySelector('#close');
-  modal.addEventListener('click', event => {
-    document. cookie = 'modal_accept = yes;'
-  });
+  //MicroModal.init();
 
   // checks if cookie is present function
   function getCookie(name) {
@@ -21,5 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
       ;
   else
       MicroModal.show('modal-1');
+
+      // Set cookie on close of modal
+      const modal = document.querySelector('#close');
+      modal.addEventListener('click', event => {
+        document. cookie = 'modal_accept = yes;'
+      });
 
  });
