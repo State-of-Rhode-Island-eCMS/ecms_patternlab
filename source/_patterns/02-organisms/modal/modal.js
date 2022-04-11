@@ -9,8 +9,17 @@ document.addEventListener("DOMContentLoaded", function() {
     if (splitCookie.length == 2) return splitCookie.pop();
   }
 
+  // Get Modal wrapper data attribute
+  var element = document.querySelector('.qh__modal');
+  var dataAttribute = element.getAttribute('data-nid');
+  //console.log(dataAttribute);
+
+  // Assemble modal name var to be used in if/esle
+  var modalName = 'modal_accept' + element.getAttribute('data-nid') ;
+
+
   // Checks for cookie, displays modal if not present
-  if (getCookie('modal_accept'))
+  if (getCookie(modalName))
       // just breeze on by
       ;
   else
@@ -19,7 +28,8 @@ document.addEventListener("DOMContentLoaded", function() {
       // Set cookie on close of modal
       const modal = document.querySelector('#close');
       modal.addEventListener('click', event => {
-        document. cookie = 'modal_accept = yes;'
+        document.cookie = (modalName) + ' = yes;'
+
       });
 
  });
