@@ -12,8 +12,15 @@
           </header>
           <div class="modal-content-content">
             <div class="modal__content">
-              {{ content.field_icon|raw }}
-              {{ content.body }}
+              <div class="qh__modal__icon">
+                {% if media_library_icon %}
+                  {{ icon }}
+                {% elseif icon|default %}
+                  {% include ('@icons/' ~ icon) %}
+                {% endif %}
+              </div>
+
+              {{ content.field_modal_body }}
             </div>
             <footer class="modal__footer">
               <button class="modal__btn" id="close" data-micromodal-close aria-label="Close this dialog window">{{ content.field_close_button_text.0 }}</button>

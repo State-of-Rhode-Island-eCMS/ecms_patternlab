@@ -5034,6 +5034,9 @@ table {
     margin-bottom: 2rem;
     line-height: 1.5;
     color: rgba(0, 0, 0, 0.8); }
+  .qh__modal__icon {
+    max-width: 100px;
+    margin: 0 auto 1rem; }
 
 @-webkit-keyframes mm-fadeIn {
   from {

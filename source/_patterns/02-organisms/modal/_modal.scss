@@ -1,6 +1,5 @@
 
 .qh__modal {
-
   .btn-trigger {
     margin: 0 0 300px;
   }
@@ -66,6 +65,12 @@
     line-height: 1.5;
     color: rgba(0,0,0,.8);
   }
+
+  &__icon {
+    max-width: 100px;
+    margin: 0 auto 1rem;
+  }
+
 
   /**************************\
     Demo Animation Style
