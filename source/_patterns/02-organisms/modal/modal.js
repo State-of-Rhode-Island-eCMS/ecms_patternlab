@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-
-  //MicroModal.init();
-
   // checks if cookie is present function
   function getCookie(name) {
     var cookies = '; ' + document.cookie;
@@ -9,27 +6,24 @@ document.addEventListener("DOMContentLoaded", function() {
     if (splitCookie.length == 2) return splitCookie.pop();
   }
 
-  // Get Modal wrapper data attribute
+  // Get Modal wrapper.
   var element = document.querySelector('.qh__modal');
-  var dataAttribute = element.getAttribute('data-nid');
-  //console.log(dataAttribute);
 
-  // Assemble modal name var to be used in if/esle
+  if(!element) {
+    return;
+  }
+
+  // Assemble modal name var to be used in if/else.
   var modalName = 'modal_accept' + element.getAttribute('data-nid') ;
 
+  // Checks for cookie, displays modal if not present.
+  if (!getCookie(modalName)) {
+    MicroModal.show('modal-1');
 
-  // Checks for cookie, displays modal if not present
-  if (getCookie(modalName))
-      // just breeze on by
-      ;
-  else
-      MicroModal.show('modal-1');
-
-      // Set cookie on close of modal
-      const modal = document.querySelector('#close');
-      modal.addEventListener('click', event => {
-        document.cookie = (modalName) + ' = yes;'
-
-      });
-
- });
+    // Set cookie on close of modal.
+    const modal = document.querySelector('#close');
+    modal.addEventListener('click', event => {
+      document.cookie = (modalName) + ' = yes;'
+    });
+  }
+});
