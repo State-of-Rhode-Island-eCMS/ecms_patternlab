@@ -4978,10 +4978,9 @@ table {
   .qh__modal .btn-trigger {
     margin: 0 0 300px; }
   .qh__modal .modal {
-    font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
     position: relative;
     z-index: 1000; }
-  .qh__modal .modal__overlay {
+  .qh__modal__overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -4997,43 +4996,39 @@ table {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-  .qh__modal .modal__container {
-    background-color: #fff;
-    padding: 30px;
+  .qh__modal__container {
+    background-color: var(--color--white);
     max-width: 500px;
     max-height: 100vh;
     border-radius: 4px;
     overflow-y: auto;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
-  .qh__modal .modal__header {
+            box-sizing: border-box;
+    margin: 6rem 4rem; }
+  .qh__modal__header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
-  .qh__modal .modal__footer {
-    text-align: center; }
-  .qh__modal .modal__title {
-    margin-top: 0;
-    margin-bottom: 0;
-    color: #00449e;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
-  .qh__modal .modal__close {
-    background: transparent;
-    border: 0; }
-  .qh__modal .modal__header .modal__close:before {
-    content: "\2715"; }
-  .qh__modal .modal__content {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    line-height: 1.5;
-    color: rgba(0, 0, 0, 0.8); }
+            align-items: center;
+    background-color: var(--fc__header__bg);
+    padding: 1.5rem 2rem; }
+    .qh__modal__header h2 {
+      margin: 0;
+      color: var(--fc__header__fg); }
+  .qh__modal__body {
+    background-color: var(--fc__default__bg);
+    color: var(--fc__default__fg);
+    padding: 3rem 2rem; }
+    .qh__modal__body > * {
+      text-align: center; }
+  .qh__modal__footer {
+    text-align: center;
+    margin-top: 1.5rem; }
   .qh__modal__icon {
     max-width: 100px;
     margin: 0 auto 1rem; }

@@ -1,31 +1,29 @@
 <!--<a data-micromodal-trigger="modal-1" href='javascript:void(0);'>Open Modal Dialog</a>-->
 <div class="qh__modal" data-nid="{{ node.id }}">
   <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
-    <div class="modal__overlay" tabindex="-1">
-      <div class="qh__moddal_container__wrap">
-        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
-          <header class="modal__header">
-            <h2 class="modal__title">
-              {{ node.label }}
-            </h2>
-            <!--<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>-->
-          </header>
-          <div class="modal-content-content">
-            <div class="modal__content">
-              <div class="qh__modal__icon">
-                {% if media_library_icon %}
-                  {{ icon }}
-                {% elseif icon|default %}
-                  {% include ('@icons/' ~ icon) %}
-                {% endif %}
-              </div>
-
-              {{ content.field_modal_body }}
+    <div class="qh__modal__overlay modal__overlay" tabindex="-1">
+      <div class="qh__modal__container modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <header class="qh__modal__header modal__header">
+          <h2 class="modal__title">
+            {{ node.label }}
+          </h2>
+          <!--<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>-->
+        </header>
+        <div class="qh__modal__body">
+          <div class="qh__modal__content modal__content">
+            <div class="qh__modal__icon">
+              {% if media_library_icon %}
+                {{ icon }}
+              {% elseif icon|default %}
+                {% include ('@icons/' ~ icon) %}
+              {% endif %}
             </div>
-            <footer class="modal__footer">
-              <button class="modal__btn" id="close" data-micromodal-close aria-label="Close this dialog window">{{ content.field_close_button_text.0 }}</button>
-            </footer>
+
+            {{ content.field_modal_body }}
           </div>
+          <footer class="qh__modal__footer modal__footer">
+            <button class="modal__btn" id="close" data-micromodal-close aria-label="Close this dialog window">{{ content.field_close_button_text.0 }}</button>
+          </footer>
         </div>
       </div>
     </div>

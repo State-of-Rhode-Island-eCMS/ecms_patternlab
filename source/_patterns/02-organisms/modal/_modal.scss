@@ -5,12 +5,11 @@
   }
 
   .modal {
-    font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
     position: relative;
     z-index: 1000;
   }
 
-  .modal__overlay {
+  &__overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -22,48 +21,42 @@
     align-items: center;
   }
 
-  .modal__container {
-    background-color: #fff;
-    padding: 30px;
+  &__container {
+    background-color: var(--color--white);
     max-width: 500px;
     max-height: 100vh;
     border-radius: 4px;
     overflow-y: auto;
     box-sizing: border-box;
+    margin: ($general-v-spacing * 4) ($general-h-spacing * 4);
   }
 
-  .modal__header {
+  &__header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    background-color: var(--fc__header__bg);
+    padding: $general-v-spacing ($general-h-spacing * 2);
+
+    h2 {
+      margin: 0;
+      color: var(--fc__header__fg);
+    }
   }
 
-  .modal__footer {
+  &__body {
+    background-color: var(--fc__default__bg);
+    color: var(--fc__default__fg);
+    padding: ($general-v-spacing * 2) ($general-h-spacing * 2);
+
+    > * {
+      text-align: center;
+    }
+  }
+
+  &__footer {
     text-align: center;
-  }
-
-  .modal__title {
-    margin-top: 0;
-    margin-bottom: 0;
-    //font-weight: 600;
-    //font-size: 1.25rem;
-    //line-height: 1.25;
-    color: #00449e;
-    box-sizing: border-box;
-  }
-
-  .modal__close {
-    background: transparent;
-    border: 0;
-  }
-
-  .modal__header .modal__close:before { content: "\2715"; }
-
-  .modal__content {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    line-height: 1.5;
-    color: rgba(0,0,0,.8);
+    margin-top: $general-v-spacing;
   }
 
   &__icon {
