@@ -5019,7 +5019,8 @@ table {
     padding: 1.5rem 2rem; }
     .qh__modal__header h2 {
       margin: 0;
-      color: var(--fc__header__fg); }
+      color: var(--fc__header__fg);
+      text-align: center; }
   .qh__modal__body {
     background-color: var(--fc__default__bg);
     color: var(--fc__default__fg);
