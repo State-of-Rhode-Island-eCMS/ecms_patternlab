@@ -65,6 +65,11 @@
     margin: 0 auto 1rem;
   }
 
+  &--disabled {
+    .qh__modal__container {
+      opacity: .7;
+    }
+  }
 
   /**************************\
     Demo Animation Style
@@ -99,3 +104,69 @@
 }
 
 
+.qh__modal-homescreen {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background-color: var(--fc__header__bg);
+  z-index: 1100;
+  padding: $general-v-spacing ($general-h-spacing * 2);
+
+  &--closed {
+    display: none;
+  }
+
+  &__content {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 24px;
+      fill: var(--fc__header__fg);
+    }
+
+    h5,
+    p {
+      color: var(--fc__header__fg);
+      margin-top: 0;
+    }
+  }
+
+  &__close-icon {
+    @include qh-button-reset();
+    display: block;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    position: relative;
+    background: transparent;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      background: transparent;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      left: 15px;
+      top: 0;
+      content: ' ';
+      height: 33px;
+      width: 2px;
+      background-color: var(--fc__header__fg);
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}

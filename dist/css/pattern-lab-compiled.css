@@ -5033,6 +5033,8 @@ table {
   .qh__modal__icon {
     max-width: 100px;
     margin: 0 auto 1rem; }
+  .qh__modal--disabled .qh__modal__container {
+    opacity: .7; }
 
 @-webkit-keyframes mm-fadeIn {
   from {
@@ -5072,6 +5074,64 @@ table {
     will-change: transform; }
   .qh__modal .modal[aria-hidden='true'] {
     display: none; }
+
+.qh__modal-homescreen {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background-color: var(--fc__header__bg);
+  z-index: 1100;
+  padding: 1.5rem 2rem; }
+  .qh__modal-homescreen--closed {
+    display: none; }
+  .qh__modal-homescreen__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 2rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .qh__modal-homescreen__content svg {
+      width: 24px;
+      fill: var(--fc__header__fg); }
+    .qh__modal-homescreen__content h5,
+    .qh__modal-homescreen__content p {
+      color: var(--fc__header__fg);
+      margin-top: 0; }
+  .qh__modal-homescreen__close-icon {
+    border: 0;
+    margin: 0;
+    -webkit-appearance: none;
+    display: block;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    position: relative;
+    background: transparent; }
+    .qh__modal-homescreen__close-icon::-moz-focus-inner {
+      border: 0; }
+    .qh__modal-homescreen__close-icon:hover, .qh__modal-homescreen__close-icon:focus {
+      opacity: 1;
+      background: transparent; }
+    .qh__modal-homescreen__close-icon:before, .qh__modal-homescreen__close-icon:after {
+      position: absolute;
+      left: 15px;
+      top: 0;
+      content: ' ';
+      height: 33px;
+      width: 2px;
+      background-color: var(--fc__header__fg); }
+    .qh__modal-homescreen__close-icon:before {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .qh__modal-homescreen__close-icon:after {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
 
 .dialog-off-canvas-main-canvas {
   position: relative; }
@@ -6170,7 +6230,8 @@ body {
       .qh__accordion__button {
         padding-left: 0; } }
   .qh__accordion__content {
-    background-color: var(--c__coffee-milk--trans10); }
+    background-color: var(--c__coffee-milk--trans10);
+    position: relative; }
     .qh__accordion__content::after {
       clear: both;
       content: "";
