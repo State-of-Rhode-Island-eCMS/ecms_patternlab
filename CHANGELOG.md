@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-256: Added modal theming - styles and JS.
 
 ### Changed
 
@@ -18,6 +19,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- RIGA-252: Fixed whitespace occuring when accordions had alot of content.
 
 ### Security
 

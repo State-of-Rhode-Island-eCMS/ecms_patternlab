@@ -1,0 +1,222 @@
+
+.qh__modal {
+  .btn-trigger {
+    margin: 0 0 300px;
+  }
+
+  .modal {
+    position: relative;
+    z-index: 1000;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__container {
+    background-color: var(--color--white);
+    max-width: 500px;
+    max-height: 100vh;
+    border-radius: 4px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    margin: ($general-v-spacing * 4) ($general-h-spacing * 4);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fc__header__bg);
+    padding: $general-v-spacing ($general-h-spacing * 2);
+
+    h2 {
+      margin: 0;
+      color: var(--fc__header__fg);
+      text-align: center;
+    }
+  }
+
+  &__body {
+    background-color: var(--fc__default__bg);
+    color: var(--fc__default__fg);
+    padding: ($general-v-spacing * 2) ($general-h-spacing * 2);
+
+    > * {
+      text-align: center;
+    }
+  }
+
+  &__footer {
+    text-align: center;
+    margin-top: $general-v-spacing;
+  }
+
+  &__icon {
+    max-width: 150px;
+    margin: 0 auto 1rem;
+
+    // This is not ideal however we're being asked to handle a wide array of SVGs.
+    // We dont want to override SVGs that have multi-path elements with different classes
+    //   as it can cause them to be all one color.
+    // We do want to overide any of our Quahog icons.
+    svg {
+      width: 100% !important;
+      height: auto !important;
+      overflow: visible;
+      color: var(--fc__default__fg);
+
+      *:not([class]) {
+        stroke: var(--fc__default__fg);
+        fill: var(--fc__default__fg);
+      }
+
+      *[class^="qh__icon"] {
+        stroke: var(--fc__default__fg);
+        fill: var(--fc__default__fg);
+      }
+    }
+  }
+
+  &--disabled {
+    .qh__modal__container {
+      opacity: .7;
+    }
+  }
+
+  /**************************\
+    Demo Animation Style
+  \**************************/
+  @keyframes mm-fadeIn {
+      from { opacity: 0; }
+        to { opacity: 1; }
+  }
+
+  @keyframes mm-slideIn {
+    from { transform: translateY(15%); }
+      to { transform: translateY(0); }
+  }
+
+  .micromodal-slide[aria-hidden="false"] .modal__overlay {
+    animation: mm-fadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+  }
+
+  .micromodal-slide[aria-hidden="false"] .modal__container {
+    animation: mm-slideIn .3s cubic-bezier(0, 0, .2, 1);
+  }
+
+  .micromodal-slide .modal__container,
+  .micromodal-slide .modal__overlay {
+    will-change: transform;
+  }
+
+  .modal[aria-hidden='true'] {
+    display: none;
+  }
+
+}
+
+
+.qh__modal-homescreen {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  background-color: var(--fc__header__bg);
+  z-index: 1100;
+  padding: $general-v-spacing ($general-h-spacing * 2);
+
+  &--closed {
+    display: none;
+  }
+
+  &__content {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+      width: 25px;
+
+      * {
+        fill: var(--fc__header__fg);
+        stroke: var(--fc__header__fg);
+      }
+    }
+
+    h5,
+    p {
+      color: var(--fc__header__fg);
+      margin-top: 0;
+    }
+  }
+
+  &__close-icon {
+    @include qh-button-reset();
+    display: block;
+    width: 32px;
+    height: 32px;
+    opacity: 0.7;
+    position: relative;
+    background: transparent;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+      background: transparent;
+    }
+
+    &:before,
+    &:after {
+      position: absolute;
+      left: 15px;
+      top: 0;
+      content: ' ';
+      height: 33px;
+      width: 2px;
+      background-color: var(--fc__header__fg);
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  // Special ovverides for block island
+  .qh__t__block-island & {
+    background-color: var(--fc__nav-main__fg);
+
+    .qh__modal-homescreen__close-icon {
+      &:before,
+      &:after {
+        background-color: var(--fc__nav-main__bg);
+      }
+    }
+
+    svg {
+      * {
+        fill: var(--fc__nav-main__bg);
+        stroke: var(--fc__nav-main__bg);
+      }
+    }
+
+    h5,
+    p {
+      color: var(--fc__nav-main__bg);
+      margin-top: 0;
+    }
+  }
+}

@@ -117,6 +117,7 @@
     // In case any content inside is floated, which might be possible
     @include clearfix();
     background-color: var(--c__coffee-milk--trans10);
+    position: relative;
 
     // Vertical rhythm inside an accordion is handled in 00-atoms/02-text/00-typography
 
