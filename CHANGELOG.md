@@ -10,7 +10,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
-- RIGA-256: Added modal theming - styles and JS.
 
 ### Changed
 
@@ -19,9 +18,15 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
-- RIGA-252: Fixed whitespace occuring when accordions had alot of content.
 
 ### Security
+
+## [0.6.9] - 2022-04-19
+### Added
+- RIGA-256: Added modal theming - styles and JS.
+
+### Fixed
+- RIGA-252: Fixed whitespace occuring when accordions had alot of content.
 
 ## [0.6.8] - 2022-02-10
 ### Changed
@@ -308,7 +313,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.8...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.9...HEAD
+[0.6.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.8...0.6.9
 [0.6.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.7...0.6.8
 [0.6.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.6...0.6.7
 [0.6.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.5...0.6.6
