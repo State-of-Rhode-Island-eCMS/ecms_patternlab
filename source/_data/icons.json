@@ -18,6 +18,9 @@
     "Chevron right": {
       "filename": "chevron-right.svg"
     },
+    "Close": {
+      "filename": "close-x.svg"
+    },
     "Cog": {
       "filename": "cog.svg"
     },
@@ -80,6 +83,9 @@
     },
     "Social Facebook": {
       "filename": "social-facebook.svg"
+    },
+    "Social Flickr": {
+      "filename": "social-flickr.svg"
     },
     "Social Instagram": {
       "filename": "social-instagram.svg"
