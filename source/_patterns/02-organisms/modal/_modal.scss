@@ -61,8 +61,29 @@
   }
 
   &__icon {
-    max-width: 100px;
+    max-width: 150px;
     margin: 0 auto 1rem;
+
+    // This is not ideal however we're being asked to handle a wide array of SVGs.
+    // We dont want to override SVGs that have multi-path elements with different classes
+    //   as it can cause them to be all one color.
+    // We do want to overide any of our Quahog icons.
+    svg {
+      width: 100% !important;
+      height: auto !important;
+      overflow: visible;
+      color: var(--fc__default__fg);
+
+      *:not([class]) {
+        stroke: var(--fc__default__fg);
+        fill: var(--fc__default__fg);
+      }
+
+      *[class^="qh__icon"] {
+        stroke: var(--fc__default__fg);
+        fill: var(--fc__default__fg);
+      }
+    }
   }
 
   &--disabled {
@@ -124,8 +145,12 @@
     align-items: center;
 
     svg {
-      width: 24px;
-      fill: var(--fc__header__fg);
+      width: 25px;
+
+      * {
+        fill: var(--fc__header__fg);
+        stroke: var(--fc__header__fg);
+      }
     }
 
     h5,
@@ -140,7 +165,7 @@
     display: block;
     width: 32px;
     height: 32px;
-    opacity: 0.3;
+    opacity: 0.7;
     position: relative;
     background: transparent;
 
@@ -167,6 +192,31 @@
 
     &:after {
       transform: rotate(-45deg);
+    }
+  }
+
+  // Special ovverides for block island
+  .qh__t__block-island & {
+    background-color: var(--fc__nav-main__fg);
+
+    .qh__modal-homescreen__close-icon {
+      &:before,
+      &:after {
+        background-color: var(--fc__nav-main__bg);
+      }
+    }
+
+    svg {
+      * {
+        fill: var(--fc__nav-main__bg);
+        stroke: var(--fc__nav-main__bg);
+      }
+    }
+
+    h5,
+    p {
+      color: var(--fc__nav-main__bg);
+      margin-top: 0;
     }
   }
 }
