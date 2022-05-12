@@ -1,6 +1,11 @@
 .qh__site-branding {
   margin: $general-v-spacing 0;
 
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
   &__link {
     display: flex;
     align-items: center;

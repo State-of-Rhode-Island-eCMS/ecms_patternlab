@@ -33,24 +33,27 @@
 {% endif %}
 
 <div class="qh__site-branding">
-  <a href="{{ front_page }}" class="qh__site-branding__link" rel="home">
-    <span class="qh__site-branding__logo{{ logo_size }}">
-    {% if (default_logo == FALSE) %}
-      <img src="{{ header_preprocess_values.site_logo }}" alt="" />
-    {% else %}
-      {% include ('@icons/default-logo.svg') %}
+  <div class="qh__site-branding__inner">
+    <a href="{{ front_page }}" class="qh__site-branding__link" rel="home">
+      <span class="qh__site-branding__logo{{ logo_size }}">
+      {% if (default_logo == FALSE) %}
+        <img src="{{ header_preprocess_values.site_logo }}" alt="" />
+      {% else %}
+        {% include ('@icons/default-logo.svg') %}
+      {% endif %}
+      </span>
+    </a>
+
+    {% if logo_only == FALSE %}
+      <span class="qh__site-branding__name" role="text">
+      {% if (header_preprocess_values.top_line) %}
+        <span class="qh__site-branding__name__top-line">{{ header_preprocess_values.top_line }}<span class="visually-hidden">, </span></span>
+      {% endif %}
+        <span class="qh__site-branding__name__main-line">{{ header_preprocess_values.main_line }}</span>
+      {% if (header_preprocess_values.bottom_line) %}
+        <span class="qh__site-branding__name__bottom-line"><span class="visually-hidden">, </span>{{ header_preprocess_values.bottom_line }}</span>
+      {% endif %}
+      </span>
     {% endif %}
-    </span>
-  {% if logo_only == FALSE %}
-    <span class="qh__site-branding__name" role="text">
-    {% if (header_preprocess_values.top_line) %}
-      <span class="qh__site-branding__name__top-line">{{ header_preprocess_values.top_line }}<span class="visually-hidden">, </span></span>
-    {% endif %}
-      <span class="qh__site-branding__name__main-line">{{ header_preprocess_values.main_line }}</span>
-    {% if (header_preprocess_values.bottom_line) %}
-      <span class="qh__site-branding__name__bottom-line"><span class="visually-hidden">, </span>{{ header_preprocess_values.bottom_line }}</span>
-    {% endif %}
-    </span>
-  {% endif %}
-  </a>
+  </div>
 </div>
