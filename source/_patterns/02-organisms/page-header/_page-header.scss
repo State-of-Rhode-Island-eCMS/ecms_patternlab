@@ -45,6 +45,7 @@
       // Handle the flash of content when it is there before JS debounces
       opacity: 0;
       visibility: hidden;
+      width: 0;
     }
 
     @include breakpoint-up($bp__show__desktop-nav) {

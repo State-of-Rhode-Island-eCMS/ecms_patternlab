@@ -3598,6 +3598,13 @@ table {
 
 .qh__site-branding {
   margin: 1.5rem 0; }
+  .qh__site-branding__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
   .qh__site-branding__link {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -5021,6 +5028,10 @@ table {
       margin: 0;
       color: var(--fc__header__fg);
       text-align: center; }
+    .qh__t__block-island .qh__modal__header {
+      background-color: var(--fc__nav-main__fg); }
+      .qh__t__block-island .qh__modal__header h2 {
+        color: var(--fc__nav-main__bg); }
   .qh__modal__body {
     background-color: var(--fc__default__bg);
     color: var(--fc__default__fg);
@@ -6074,7 +6085,8 @@ body {
     @media (max-width: 61.9375em) {
       .qh__page-header__inner {
         opacity: 0;
-        visibility: hidden; } }
+        visibility: hidden;
+        width: 0; } }
     @media (min-width: 62em) {
       .qh__page-header__inner {
         -webkit-box-flex: 1;
