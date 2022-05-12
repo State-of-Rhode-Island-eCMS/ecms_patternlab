@@ -43,6 +43,15 @@
       color: var(--fc__header__fg);
       text-align: center;
     }
+
+    // Special overrides for block island
+    .qh__t__block-island & {
+      background-color: var(--fc__nav-main__fg);
+
+      h2 {
+        color: var(--fc__nav-main__bg);
+      }
+    }
   }
 
   &__body {
@@ -195,7 +204,7 @@
     }
   }
 
-  // Special ovverides for block island
+  // Special overrides for block island
   .qh__t__block-island & {
     background-color: var(--fc__nav-main__fg);
 
