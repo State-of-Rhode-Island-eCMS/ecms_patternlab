@@ -21,6 +21,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.7.1] - 2022-06-09
+### Added
+- RIGA-259: Add Android support for touch icon.
+
 ## [0.7.0] - 2022-05-12
 ### Changed
 - RIGA-265: Remove anchor around sitename and slogan.
@@ -320,7 +324,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.0...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.1...HEAD
+[0.7.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.0...0.7.1
 [0.7.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.9...0.7.0
 [0.6.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.8...0.6.9
 [0.6.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.7...0.6.8
