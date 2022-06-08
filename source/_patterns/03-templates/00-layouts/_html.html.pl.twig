@@ -34,6 +34,8 @@
 
     {% if apple_touch_icon %}
       <link rel="apple-touch-icon" href="{{ apple_touch_icon }}">
+      {# Android #}
+      <link rel="icon" sizes="192x192" href="{{ apple_touch_icon }}">
     {% endif %}
 
     <css-placeholder token="{{ placeholder_token }}">
