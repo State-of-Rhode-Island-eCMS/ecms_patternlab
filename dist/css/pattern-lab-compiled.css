@@ -7287,6 +7287,13 @@ body {
     padding: 0; }
     .qh-layout-section--full-width > *:first-child:last-child {
       margin-bottom: 0; }
+  .qh-layout-section--tabs .tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.5rem; }
+    .qh-layout-section--tabs .tabs > li {
+      margin: 0; }
 
 .layout-container.layout-builder-page {
   max-width: 100%; }

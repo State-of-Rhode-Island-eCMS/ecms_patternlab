@@ -319,6 +319,18 @@
       margin-bottom: 0;
     }
   }
+
+  // Tabs
+  &--tabs {
+    .tabs {
+      display: flex;
+      gap: $general-v-spacing;
+
+      > li {
+        margin: 0;
+      }
+    }
+  }
 }
 
 // Temp styles
