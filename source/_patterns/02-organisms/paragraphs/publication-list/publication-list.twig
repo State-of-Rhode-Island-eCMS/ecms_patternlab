@@ -1,34 +1,35 @@
-{% if publications %}
-  <div class="qh__publications-list">
+<div class="qh__publications-list">
 
-    {% if list_title %}
-      <div class="qh__publications-list__title">
-        <h2>{{ list_title }}</h2>
-      </div>
-    {% endif %}
+  {% if list_title %}
+    <div class="qh__publications-list__title">
+      <h2>{{ list_title }}</h2>
+    </div>
+  {% endif %}
 
-    {% if audience_form %}
-      {{ audience_form }}
-    {% endif %}
+  {% if audience_form %}
+    {{ audience_form }}
+  {% endif %}
 
-    {% for publication in publications %}
-      {% for type, languages in publication %}
-        <h3>{{ type }}</h2>
+  {% for publication in publications %}
+    {% for type, languages in publication %}
+      <h3>{{ type }}</h2>
 
-        {% for language, nodes in languages %}
+      {% for language, nodes in languages %}
 
-          {% if lang_label %}
-            <h4>{{ language }}</h3>
-          {% endif %}
+        {% if lang_label %}
+          <h4>{{ language }}</h3>
+        {% endif %}
 
-          <div class="qh__file-list">
-            {{ nodes}}
-          </div>
+        <div class="qh__file-list">
+          {{ nodes}}
+        </div>
 
-        {% endfor %}
       {% endfor %}
     {% endfor %}
+  {% endfor %}
 
-  </div>
-{% endif %}
+  {% if publications is empty %}
+    There are no results for this search.
+  {% endif %}
 
+</div>

@@ -18,6 +18,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- RIGA-360: Fix disappearing dropdown selector on publications search.
 
 ### Security
 
