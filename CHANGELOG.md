@@ -12,16 +12,21 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-365: Update template to use variable character limit, not hard coded.
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
-- RIGA-360: Fix disappearing dropdown selector on publications search.
 
 ### Security
+
+## [0.7.3] - 2023-04-06
+### Changed
+- RIGA-365: Update template to use variable character limit, not hard coded.
+
+### Fixed
+- RIGA-360: Fix disappearing dropdown selector on publications search.
 
 ## [0.7.2] - 2022-10-20
 ### Added
@@ -330,7 +335,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.2...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.3...HEAD
+[0.7.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.2...0.7.3
 [0.7.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.1...0.7.2
 [0.7.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.0...0.7.1
 [0.7.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.6.9...0.7.0
