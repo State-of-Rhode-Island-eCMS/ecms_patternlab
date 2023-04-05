@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-365: Update template to use variable character limit, not hard coded.
 
 ### Deprecated
 
