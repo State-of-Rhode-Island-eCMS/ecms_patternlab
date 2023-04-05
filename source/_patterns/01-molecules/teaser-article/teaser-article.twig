@@ -6,9 +6,6 @@
     <p class="qh__teaser-article__published"><time datetime="{# Should be a machine date like 2020-10-08 #}">{{ date }}</time></p>
   </header>
   <div class="qh__teaser-article__content">
-
-    <p>Excerpt length ---> {{ character_limit }}</p>
-    
     {% if excerpt | length > 0 %}
       {% autoescape false %}
         <p class="qh__teaser-article__excerpt">{{ excerpt|length > character_limit ? excerpt|slice(0, character_limit) ~ '...' : excerpt }}</p>
