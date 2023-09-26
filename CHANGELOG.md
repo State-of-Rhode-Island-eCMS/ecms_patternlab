@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-322: Update Twig class names in 'alter-twig.php'.
 
 ### Deprecated
 

@@ -1,15 +1,15 @@
 <?php
 
 /**
- * @param Twig_Environment $env - The Twig Environment - https://twig.symfony.com/api/1.x/Twig_Environment.html
+ * @param Twig\Environment $env - The Twig Environment
  * @param $config - Config of `@basalt/twig-renderer`
  */
-function addCustomExtension(\Twig_Environment &$env, $config) {
+function addCustomExtension(\Twig\Environment &$env, $config) {
 
   /**
    * @example `<h1>Hello {{ customTwigFunctionThatSaysWorld() }}!</h1>` => `<h1>Hello Custom World</h1>`
    */
-//  $env->addFunction(new \Twig_SimpleFunction('customTwigFunctionThatSaysWorld', function () {
+//  $env->addFunction(new \Twig\TwigFunction('customTwigFunctionThatSaysWorld', function () {
 //    return 'Custom World';
 //  }));
 
@@ -18,7 +18,7 @@ function addCustomExtension(\Twig_Environment &$env, $config) {
    * @param string $theString
    * @example `<p>{{ reverse('abc') }}</p>` => `<p>cba</p>`
    */
-  // $env->addFunction(new \Twig_SimpleFunction('reverse', function ($theString) {
+  // $env->addFunction(new \Twig\TwigFunction('reverse', function ($theString) {
   //   return strrev($theString);
   // }));
 
@@ -29,18 +29,18 @@ function addCustomExtension(\Twig_Environment &$env, $config) {
 
   // Add drupal filters
   // |t
-  $env->addFilter(new \Twig_SimpleFilter('t', function ($theString) {
+  $env->addFilter(new \Twig\TwigFilter('t', function ($theString) {
     return $theString;
   }));
 
   // |render
-  $env->addFilter(new \Twig_SimpleFilter('render', function ($theArray) {
+  $env->addFilter(new \Twig\TwigFilter('render', function ($theArray) {
     return $theArray;
   }));
 
   // Add drupal functions.
   // link()
-  $env->addFunction(new \Twig_SimpleFunction('link', function ($title, $url, $attributes) {
+  $env->addFunction(new \Twig\TwigFunction('link', function ($title, $url, $attributes) {
     if (isset($attributes) && isset($attributes['class'])) {
       $classes = join(' ', $attributes['class']);
       return '<a href="' . $url . '" class="' . $classes . '">' . $title . '</a>';
@@ -50,6 +50,6 @@ function addCustomExtension(\Twig_Environment &$env, $config) {
   }));
 
   // Enable debug.
-  $env->addExtension(new \Twig_Extension_Debug());
+  $env->addExtension(new \Twig\Extension\DebugExtension());
 
 }
