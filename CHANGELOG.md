@@ -19,6 +19,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
+- RIGA-322: Fix conditional in 'user-settings.twig'.
 
 ### Security
 
