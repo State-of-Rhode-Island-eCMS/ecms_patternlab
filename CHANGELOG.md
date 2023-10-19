@@ -12,16 +12,22 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-322: Update Twig class names in 'alter-twig.php'.
 
 ### Deprecated
 
 ### Removed
 
 ### Fixed
-- RIGA-322: Fix conditional in 'user-settings.twig'.
 
 ### Security
+
+## [0.7.4] - 2023-10-19
+### Changed
+- RIGA-322: Update Twig class names in 'alter-twig.php'.
+- RIGA-421: Update SVG for Twitter social icon.
+
+### Fixed
+- RIGA-322: Fix conditional in 'user-settings.twig'.
 
 ## [0.7.3] - 2023-04-06
 ### Changed
@@ -337,7 +343,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.3...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.4...HEAD
+[0.7.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.3...0.7.4
 [0.7.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.2...0.7.3
 [0.7.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.1...0.7.2
 [0.7.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.0...0.7.1
