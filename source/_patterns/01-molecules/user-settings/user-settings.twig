@@ -5,7 +5,7 @@
     </span>{{ "Settings & Language"|t }}{# keep this on the same line to avoid an underlined space #}
   </button>
   <ul id="js__user-settings__list" class="qh-u__list-reset qh__settings-menu__list" aria-labelledby="js__user-settings__toggle">
-    {% if (language_switcher) %}
+    {% if language_switcher|render %}
     <li class="settings__language">
       <label class="qh__settings-menu__label">{{ "Display site in"|t }}:</label>
       {{ language_switcher }}
