@@ -11,6 +11,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 ### Added
 - RIGA-487: Add new line art illustrations to the theme options
+- RIGA-481: Add Misquamicut Beach (light and dark) theme
 
 ### Changed
 - RIGA-486: Update h1, h2, h3 font-size and margin-top
