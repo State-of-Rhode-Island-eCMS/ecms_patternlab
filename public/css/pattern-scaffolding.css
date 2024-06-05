@@ -4,8 +4,7 @@
  * These styles will not be your production CSS.
  */
 #sg-patterns {
-  -webkit-box-sizing: border-box !important;
-          box-sizing: border-box !important;
+  box-sizing: border-box !important;
   max-width: 100%;
   padding: 0 0.5em; }
 
@@ -18,20 +17,15 @@
   cursor: pointer; }
 
 .sg-colors {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   list-style: none !important;
   padding: 0 !important;
   margin: 0 !important;
   max-width: none; }
 
 .sg-colors li {
-  -webkit-box-flex: 1;
-      -ms-flex: auto;
-          flex: auto;
+  flex: auto;
   padding: 0.3em;
   margin: 0 0.5em 0.5em 0;
   min-width: 5em;
