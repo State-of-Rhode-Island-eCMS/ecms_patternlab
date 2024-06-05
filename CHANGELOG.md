@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-486: Update h1, h2, h3 font-size and margin-top
 
 ### Deprecated
 
