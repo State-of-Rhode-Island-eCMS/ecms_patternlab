@@ -4504,7 +4504,7 @@ table {
     word-spacing: 0;
     z-index: 500; }
     .qh__settings-menu__list::before {
-      background-color: var(--fc__header__bg);
+      background-color: var(--fc__official__bg);
       content: '';
       position: absolute;
       top: 0;
