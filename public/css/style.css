@@ -31,14 +31,14 @@ body {
   --p-size-m: 1.125rem;
   --p-size-l: 1.25rem;
   --h1-size-s: 2rem;
-  --h1-size-m: 2.75rem;
-  --h1-size-l: 3.25rem;
+  --h1-size-m: 2.25rem;
+  --h1-size-l: 2.4375rem;
   --h2-size-s: 1.5rem;
-  --h2-size-m: 2rem;
-  --h2-size-l: 2.5rem;
+  --h2-size-m: 1.625rem;
+  --h2-size-l: 1.75rem;
   --h3-size-s: 1.25rem;
-  --h3-size-m: 1.5rem;
-  --h3-size-l: 1.75rem;
+  --h3-size-m: 1.375rem;
+  --h3-size-l: 1.5rem;
   --h4-size-s: 1rem;
   --h4-size-m: 1.125rem;
   --h4-size-l: 1.25rem;
@@ -1530,16 +1530,16 @@ h1 {
       letter-spacing: 0.035em; } }
   @media (min-width: 50em) {
     h1 {
-      font-size: 2.75rem;
+      font-size: 2.25rem;
       line-height: 1.075; } }
   @media (min-width: 62em) {
     h1 {
-      font-size: 3.25rem;
+      font-size: 2.4375rem;
       line-height: 1.1; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     h1 {
       --font-size-min-value: 2;
-      --font-size-max-value: 3.25;
+      --font-size-max-value: 2.4375;
       --font-size-scaler-value: var(--h1-scaler-value);
       font-size: var(--font-size);
       --font-lh-min-value: 1.05;
@@ -1586,23 +1586,23 @@ h2,
   font-size: 1.5rem;
   line-height: 1.1;
   font-style: normal;
-  margin-top: 2.5rem;
+  margin-top: 0.625rem;
   margin-bottom: 0.625rem; }
   @media (min-width: 50em) {
     h2,
     .qh__h2 {
-      font-size: 2rem;
+      font-size: 1.625rem;
       line-height: 1.125; } }
   @media (min-width: 62em) {
     h2,
     .qh__h2 {
-      font-size: 2.5rem;
+      font-size: 1.75rem;
       line-height: 1.15; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     h2,
     .qh__h2 {
       --font-size-min-value: 1.5;
-      --font-size-max-value: 2.5;
+      --font-size-max-value: 1.75;
       --font-size-scaler-value: var(--h2-scaler-value);
       font-size: var(--font-size);
       --font-lh-min-value: 1.1;
@@ -1613,7 +1613,7 @@ h2,
   @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
     h2,
     .qh__h2 {
-      margin-top: calc(var(--body-text-spacer) * 2);
+      margin-top: calc(var(--body-text-spacer) * 0.5);
       margin-bottom: calc(var(--body-text-spacer) * 0.5); } }
 
 h3,
@@ -1623,7 +1623,7 @@ h3,
   font-size: 1.25rem;
   line-height: 1.1;
   font-style: normal;
-  margin-top: 1.875rem;
+  margin-top: 0.9375rem;
   margin-bottom: 0.9375rem; }
   .wf-inactive h3, .wf-inactive
   .qh__h3 {
@@ -1645,18 +1645,18 @@ h3,
   @media (min-width: 50em) {
     h3,
     .qh__h3 {
-      font-size: 1.5rem;
+      font-size: 1.375rem;
       line-height: 1.125; } }
   @media (min-width: 62em) {
     h3,
     .qh__h3 {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       line-height: 1.15; } }
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     h3,
     .qh__h3 {
       --font-size-min-value: 1.25;
-      --font-size-max-value: 1.75;
+      --font-size-max-value: 1.5;
       --font-size-scaler-value: var(--h3-scaler-value);
       font-size: var(--font-size);
       --font-lh-min-value: 1.1;
@@ -1667,7 +1667,7 @@ h3,
   @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
     h3,
     .qh__h3 {
-      margin-top: calc(var(--body-text-spacer) * 1.5);
+      margin-top: calc(var(--body-text-spacer) * 0.75);
       margin-bottom: calc(var(--body-text-spacer) * 0.75); } }
 
 h4 {
@@ -1676,7 +1676,7 @@ h4 {
   font-size: 1rem;
   line-height: 1.1;
   font-style: normal;
-  margin-top: 1.875rem;
+  margin-top: 0.625rem;
   margin-bottom: 0.625rem; }
   .wf-inactive h4 {
     font-family: Georgia, "Times New Roman", serif;
@@ -1713,7 +1713,7 @@ h4 {
       word-spacing: var(--word-spacing); } }
   @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
     h4 {
-      margin-top: calc(var(--body-text-spacer) * 1.5);
+      margin-top: calc(var(--body-text-spacer) * 0.5);
       margin-bottom: calc(var(--body-text-spacer) * 0.5); } }
 
 h5 {
@@ -1722,7 +1722,7 @@ h5 {
   font-size: 0.9375rem;
   line-height: 1.1;
   font-style: normal;
-  margin-top: 1.875rem;
+  margin-top: 0.625rem;
   margin-bottom: 0.625rem; }
   .wf-inactive h5 {
     font-family: Georgia, "Times New Roman", serif;
@@ -1759,7 +1759,7 @@ h5 {
       word-spacing: var(--word-spacing); } }
   @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
     h5 {
-      margin-top: calc(var(--body-text-spacer) * 1.5);
+      margin-top: calc(var(--body-text-spacer) * 0.5);
       margin-bottom: calc(var(--body-text-spacer) * 0.5); } }
 
 h6 {
@@ -1768,7 +1768,7 @@ h6 {
   font-size: 0.875rem;
   line-height: 1.1;
   font-style: normal;
-  margin-top: 1.875rem;
+  margin-top: 0.625rem;
   margin-bottom: 0.625rem; }
   .wf-inactive h6 {
     font-family: Georgia, "Times New Roman", serif;
@@ -1805,7 +1805,7 @@ h6 {
       word-spacing: var(--word-spacing); } }
   @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
     h6 {
-      margin-top: calc(var(--body-text-spacer) * 1.5);
+      margin-top: calc(var(--body-text-spacer) * 0.5);
       margin-bottom: calc(var(--body-text-spacer) * 0.5); } }
 
 li,
@@ -2713,7 +2713,7 @@ button,
   @supports (font-size: clamp(1rem, 2vw, 2rem)) {
     .qh__btn--icon {
       --font-size-min-value: 1.25;
-      --font-size-max-value: 1.75;
+      --font-size-max-value: 1.5;
       --font-size-scaler-value: var(--h3-scaler-value);
       font-size: var(--font-size);
       --font-lh-min-value: 1.1;
@@ -3876,7 +3876,7 @@ table {
       @supports (font-size: clamp(1rem, 2vw, 2rem)) {
         .qh__teaser-event__date > time time {
           --font-size-min-value: 1.25;
-          --font-size-max-value: 1.75;
+          --font-size-max-value: 1.5;
           --font-size-scaler-value: var(--h3-scaler-value);
           font-size: var(--font-size);
           --font-lh-min-value: 1.1;
