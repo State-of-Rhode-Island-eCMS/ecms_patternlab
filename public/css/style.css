@@ -1828,9 +1828,8 @@ caption,
   font-style: normal;
   margin: 0;
   max-width: 40em;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto; }
+  -ms-hyphens: auto;
+      hyphens: auto; }
   .wf-inactive li, .wf-inactive
   dt, .wf-inactive
   dd, .wf-inactive
@@ -1977,9 +1976,8 @@ caption,
     .qh__btn,
     .button,
     .skip-link {
-      -webkit-hyphens: none;
-          -ms-hyphens: none;
-              hyphens: none; } }
+      -ms-hyphens: none;
+          hyphens: none; } }
 
 p,
 li {
@@ -2225,6 +2223,8 @@ img {
   height: auto;
   max-width: 100%;
   width: 100%; }
+  .auto-width img, img.auto-width {
+    width: auto; }
 
 .qh__icon {
   display: block;
@@ -2393,9 +2393,8 @@ select {
   font-style: normal;
   margin: 0;
   max-width: 40em;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  -ms-hyphens: auto;
+      hyphens: auto;
   --p-font-wght: 400; }
   .wf-inactive .form__actions a {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2435,9 +2434,8 @@ select {
       word-spacing: var(--word-spacing); } }
   @media (min-width: 50em) {
     .form__actions a {
-      -webkit-hyphens: none;
-          -ms-hyphens: none;
-              hyphens: none; } }
+      -ms-hyphens: none;
+          hyphens: none; } }
 
 .qh__form__nowrap {
   display: -webkit-box;
@@ -2530,9 +2528,8 @@ select {
   font-style: normal;
   margin: 0;
   max-width: 40em;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto; }
+  -ms-hyphens: auto;
+      hyphens: auto; }
   .wf-inactive .description, .wf-inactive
   .text-count-message {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -2580,9 +2577,8 @@ select {
   @media (min-width: 50em) {
     .description,
     .text-count-message {
-      -webkit-hyphens: none;
-          -ms-hyphens: none;
-              hyphens: none; } }
+      -ms-hyphens: none;
+          hyphens: none; } }
   .description small,
   .text-count-message small {
     font-size: inherit; }
@@ -2759,9 +2755,8 @@ button,
 .qh__u__btn-as-text {
   border-radius: 0;
   display: inline;
-  -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+      hyphens: none;
   line-height: inherit;
   padding: 0;
   text-align: inherit;
@@ -5903,9 +5898,8 @@ body {
   .qh__site-footer p {
     font-size: 1rem;
     margin-top: 0;
-    -webkit-hyphens: auto !important;
-        -ms-hyphens: auto !important;
-            hyphens: auto !important; }
+    -ms-hyphens: auto !important;
+        hyphens: auto !important; }
     .qh__site-footer p + p {
       margin-top: var(--body-text-spacer); }
   .qh__site-footer p,
@@ -6159,9 +6153,8 @@ body {
     font-style: normal;
     margin: 0;
     max-width: 40em;
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
+    -ms-hyphens: auto;
+        hyphens: auto;
     background-color: var(--c__coffee-milk--trans25);
     background-image: none;
     border-radius: 0;
@@ -6216,9 +6209,8 @@ body {
         word-spacing: var(--word-spacing); } }
     @media (min-width: 50em) {
       .qh__accordion__button {
-        -webkit-hyphens: none;
-            -ms-hyphens: none;
-                hyphens: none; } }
+        -ms-hyphens: none;
+            hyphens: none; } }
     .qh__accordion__button:hover, .qh__accordion__button:focus {
       background-color: var(--c__coffee-milk--trans10);
       color: var(--fc__default__fg); }
@@ -6523,9 +6515,8 @@ body {
   font-style: normal;
   margin: 0;
   max-width: 40em;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  -ms-hyphens: auto;
+      hyphens: auto;
   --p-font-wght: 525;
   display: block; }
   .wf-inactive .qh__file-list__item__label {
@@ -6566,9 +6557,8 @@ body {
       word-spacing: var(--word-spacing); } }
   @media (min-width: 50em) {
     .qh__file-list__item__label {
-      -webkit-hyphens: none;
-          -ms-hyphens: none;
-              hyphens: none; } }
+      -ms-hyphens: none;
+          hyphens: none; } }
 
 .qh__file-list__item__description {
   color: var(--fc__default__fg);
@@ -7287,6 +7277,13 @@ body {
     padding: 0; }
     .qh-layout-section--full-width > *:first-child:last-child {
       margin-bottom: 0; }
+  .qh-layout-section--tabs .tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.5rem; }
+    .qh-layout-section--tabs .tabs > li {
+      margin: 0; }
 
 .layout-container.layout-builder-page {
   max-width: 100%; }
@@ -7496,9 +7493,8 @@ main {
   font-style: normal;
   margin: 0;
   max-width: 40em;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  -ms-hyphens: auto;
+      hyphens: auto;
   --p-font-wght: 500;
   margin-bottom: 0.375rem; }
   .wf-inactive .node--type-vaccination-site .field__label {
@@ -7539,9 +7535,8 @@ main {
       word-spacing: var(--word-spacing); } }
   @media (min-width: 50em) {
     .node--type-vaccination-site .field__label {
-      -webkit-hyphens: none;
-          -ms-hyphens: none;
-              hyphens: none; } }
+      -ms-hyphens: none;
+          hyphens: none; } }
 
 .node--type-vaccination-site .vaccine-audience-aside {
   margin-bottom: 1rem;
