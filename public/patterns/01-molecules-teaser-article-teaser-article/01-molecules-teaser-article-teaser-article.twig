@@ -8,7 +8,7 @@
   <div class="qh__teaser-article__content">
     {% if excerpt | length > 0 %}
       {% autoescape false %}
-        <p class="qh__teaser-article__excerpt">{{ excerpt|length > 190 ? excerpt|slice(0, 190) ~ '...' : excerpt }}</p>
+        <p class="qh__teaser-article__excerpt">{{ excerpt|length > character_limit ? excerpt|slice(0, character_limit) ~ '...' : excerpt }}</p>
       {% endautoescape %}
     {% endif %}
     {% include "@molecules/cta-read-more/cta-read-more.twig" with {

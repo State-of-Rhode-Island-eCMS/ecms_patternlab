@@ -1,11 +1,15 @@
-/* Settings */
-
+/* Settings & Language */
 .qh__settings-menu {
   --text-opsz: 10;
   display: inline-block;
   position: relative;
   margin-left: $general-h-spacing;
+}
 
+/* Settings Menu */
+/* Language Menu */
+.qh__settings-menu,
+.qh__language-menu {
   .no-js & {
     display: none;
   }
@@ -23,6 +27,17 @@
       position: relative;
       top: -40%;
       left: -50%;
+    }
+  }
+
+  &__text {
+    @include breakpoint-down($bp__show__desktop-nav) {
+      position: absolute;
+      clip: rect(1px, 1px, 1px, 1px);
+      overflow: hidden;
+      height: 1px;
+      width: 1px;
+      word-wrap: normal;
     }
   }
 

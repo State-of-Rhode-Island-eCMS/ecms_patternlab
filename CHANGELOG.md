@@ -13,6 +13,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Changed
 - RIGA-486: Update h1, h2, h3 font-size and margin-top
+- RIGA-483: Break the language selector out of the settings menu
 
 ### Deprecated
 

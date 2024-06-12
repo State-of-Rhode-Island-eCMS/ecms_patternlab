@@ -31,6 +31,13 @@
     {% autoescape false %}
       <title>{{ head_title }}</title>
     {% endautoescape %}
+
+    {% if apple_touch_icon %}
+      <link rel="apple-touch-icon" href="{{ apple_touch_icon }}">
+      {# Android #}
+      <link rel="icon" sizes="192x192" href="{{ apple_touch_icon }}">
+    {% endif %}
+
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
     <script>window.MSInputMethodContext && document.documentMode && document.write('<script src="/profiles/contrib/ecms_profile/ecms_base/themes/custom/ecms/ecms_patternlab/dist/vendor/ie11CustomProperties.min.js"><\/script>');</script>
