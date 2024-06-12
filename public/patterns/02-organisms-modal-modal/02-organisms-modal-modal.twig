@@ -1,0 +1,43 @@
+<div class="qh__modal" data-nid="{{ node.id }}">
+  <div class="modal micromodal-slide" id="modal-content" aria-hidden="true">
+    <div class="qh__modal__overlay modal__overlay" tabindex="-1">
+      <div class="qh__modal__container modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-content-title">
+        <header class="qh__modal__header modal__header">
+          <h2 class="modal__title">
+            {{ node.label }}
+          </h2>
+          <!--<button class="modal__close" aria-label="Close modal" data-micromodal-close></button>-->
+        </header>
+        <div class="qh__modal__body">
+          <div class="qh__modal__content modal__content">
+            <div class="qh__modal__icon">
+              {% if media_library_icon %}
+                {{ icon }}
+              {% elseif icon|default %}
+                {% include ('@icons/' ~ icon) %}
+              {% endif %}
+            </div>
+
+            {{ content.field_modal_body }}
+          </div>
+          <footer class="qh__modal__footer modal__footer">
+            <button class="modal__btn" id="close-modal-content" data-micromodal-close aria-label="Close this dialog window">{{ content.field_close_button_text.0 }}</button>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if home_screen %}
+  <div class="qh__modal-homescreen qh__modal-homescreen--closed" role="dialog" aria-modal="true" aria-labelledby="modal-homescreen-title">
+    <div class="qh__modal-homescreen__content">
+      <button class="qh__modal-homescreen__close-icon" aria-label="Close modal" data-micromodal-close></button>
+      <div class="qh__modal-homescreen__text">
+        <h5>Install on your phone</h5>
+        <p>Tap the <strong><i>Share</i></strong> button {% include ('@icons/icon-ios-share.svg') %} below and then <strong><i>Add to Home Screen</i></strong>
+    </div>
+  </div>
+{% endif %}
+
+
