@@ -15,6 +15,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-517: Changed Misquamicut Beach (light) footer text color for better contrast
 - RIGA-517: Changed Misquamicut Beach (light) main nav active link color for better contrast
 - RIGA-518: Change Notification Background Color and Container width for all themes
+- RIGA-483: Break the language selector out of the settings menu
 
 ### Deprecated
 

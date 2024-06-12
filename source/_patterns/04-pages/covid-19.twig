@@ -7,58 +7,65 @@
           <p class="qh__global-header__tagline">Official State of Rhode Island website. <a href="#">How to be sure</a></p>
           <div class="qh__global-header__settings">
             <div class="qh__settings-menu">
-              <button id="js__user-settings__toggle" class="qh__u__btn-as-text qh__settings-menu__toggle" aria-expanded="false" aria-controls="js__user-settings__list">
-                <span class="qh__settings-menu__icon" aria-hidden="true"><!--?xml version="1.0" encoding="utf-8"?--><svg class="qh__icon__svg qh__icon__cog" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path class="qh__icon__path qh__icon__cog__path" d="M17.3 10c0-.6-.1-1.3-.1-1.3l2.4-1.4s-.4-1.3-1-2.3-1.4-1.9-1.4-1.9l-2.4 1.4s-.7-.5-1.1-.8c-.4-.3-1.2-.6-1.2-.6V.3S11.3 0 10.1 0 7.6.3 7.6.3v2.8s-.8.3-1.2.6c-.5.2-1.2.7-1.2.7L2.8 3.1S2 4 1.4 5s-1 2.3-1 2.3l2.4 1.4s-.1.8-.1 1.3.1 1.3.1 1.3L.4 12.7s.4 1.3 1 2.3 1.4 1.9 1.4 1.9l2.4-1.4s.7.5 1.1.8c.4.3 1.2.6 1.2.6v2.8s1.2.3 2.4.3 2.4-.3 2.4-.3v-2.8s.8-.3 1.2-.6c.4-.3 1.1-.8 1.1-.8l2.4 1.4s.8-.9 1.4-1.9 1-2.3 1-2.3L17 11.3c.2 0 .3-.7.3-1.3zM10 14.5c-2.5 0-4.5-2-4.5-4.5s2-4.5 4.5-4.5 4.5 2 4.5 4.5-2 4.5-4.5 4.5z"></path></svg></span>User settings
-              </button>
-              <ul id="js__user-settings__list" class="qh-u__list-reset qh__settings-menu__list" aria-labelledby="js__user-settings__toggle">
-                <li class="settings__language">
-                  <label class="qh__settings-menu__label">Display site in:</label>
-                  <div class="language-switcher-language-session block block-language block-language-blocklanguage-interface" id="block-languageswitcher" role="navigation">
-                    <ul class="language-switcher settings-toggle"><li data-drupal-link-system-path="<front>" class="en is-active"><a href="/" class="language-link session-active is-active" data-drupal-link-system-path="<front>">English</a></li><li data-drupal-link-query="{&quot;language&quot;:&quot;es&quot;}" data-drupal-link-system-path="<front>" class="es"><a href="/?language=es" class="language-link" data-drupal-link-query="{&quot;language&quot;:&quot;es&quot;}" data-drupal-link-system-path="<front>">Spanish</a></li></ul>
-                  </div>
-                </li>
-                <li id="qh-lightmode" class="settings__lightmode">
-                  <label class="qh__settings-menu__label">Color scheme:</label>
-                  <span class="visually-hidden">Change the visual color theme between light or dark modes</span>
-                  <div class="qh__settings-menu__boolean">
-                    <button id="light_mode_switch" class="small-text qh__u__btn-as-text toggle-lightmode switch">Switch</button>
-                    <button id="light_mode_reset" class="small-text qh__u__btn-as-text toggle-lightmode auto">Use system preference</button>
-                  </div>
-                </li>
-                <li id="qh-fontsize" class="settings__fontsize">
-                  <label class="qh__settings-menu__label" for="font_size_modifier">Font size:</label>
-                  <span class="visually-hidden">Adjust the font size from the system default to a larger size</span>
-                  <div class="qh__settings-menu__slider">
-                    <div class="qh__form__input__range">
-                      <input type="range" min="1" max="3" value="1" step="0.1" name="size" id="font_size_modifier">
+              <div class="qh__settings-menu">
+                {# User Language Menu #}
+                {% if language_switcher|render %}
+                  <span class="qh__u__btn-as-text qh__language-menu__wrapper">
+                    <span class="qh__language-menu__icon" aria-hidden="true">
+                      {% include ('@icons/globe.svg') %}
+                    </span><span class="qh__language-menu__text js__text__hidden">{{ language_switcher }}</span>
+                  </span>
+                {% endif %}
+                {# User Settings Menu #}
+                <button id="js__user-settings__toggle" class="qh__u__btn-as-text qh__settings-menu__toggle" aria-expanded="false" aria-controls="js__user-settings__list">
+                  <span class="qh__settings-menu__icon" aria-hidden="true">
+                    {% include ('@icons/cog.svg') %}
+                  </span><span class="qh__settings-menu__text js__text__hidden">{{ "Settings"|t }}</span>{# keep this on the same line to avoid an underlined space #}
+                </button>
+                <ul id="js__user-settings__list" class="qh-u__list-reset qh__settings-menu__list" aria-labelledby="js__user-settings__toggle">
+                  <li id="qh-lightmode" class="settings__lightmode">
+                    <label class="qh__settings-menu__label">{{ "Color scheme"|t }}:</label>
+                    <span class="visually-hidden">Change the visual color theme between light or dark modes</span>
+                    <div class="qh__settings-menu__boolean">
+                      <button id="light_mode_switch" class="small-text qh__u__btn-as-text toggle-lightmode switch">{{ "Switch"|t }}</button>
+                      <button id="light_mode_reset" class="small-text qh__u__btn-as-text toggle-lightmode auto">{{ "Use system preference"|t }}</button>
                     </div>
-                    <div class="small-text settings__fontsize--value low" aria-hidden="true">Original</div>
-                    <div class="small-text settings__fontsize--value high" aria-hidden="true">Larger</div>
-                  </div>
-                </li>
-                <li id="qh-lineheight" class="settings__lineheight">
-                  <label class="qh__settings-menu__label" for="line_height_modifier">Line spacing:</label>
-                  <span class="visually-hidden">Adjust the space between lines of text from the system default to a larger size</span>
-                  <div class="qh__settings-menu__slider">
-                    <div class="qh__form__input__range">
-                      <input type="range" min="1" max="3" value="1" step="0.1" name="lineheight" id="line_height_modifier">
+                  </li>
+                  <li id="qh-fontsize" class="settings__fontsize">
+                    <label class="qh__settings-menu__label" for="font_size_modifier">{{ "Font size"|t }}:</label>
+                    <span class="visually-hidden">{{ "Adjust the font size from the system default to a larger size"|t }}</span>
+                    <div class="qh__settings-menu__slider">
+                      <div class="qh__form__input__range">
+                        <input type="range" min="1" max="3" value="1" step="0.1" name="size" id="font_size_modifier" />
+                      </div>
+                      <div class="small-text settings__fontsize--value low" aria-hidden="true">{{ "Original"|t }}</div>
+                      <div class="small-text settings__fontsize--value high" aria-hidden="true">{{ "Larger"|t }}</div>
                     </div>
-                    <div class="small-text settings__lineheight--value low" aria-hidden="true">Original</div>
-                    <div class="small-text settings__lineheight--value high" aria-hidden="true">More</div>
-                  </div>
-                </li>
-                <li id="qh-wordspace" class="settings__wordspace">
-                  <label class="qh__settings-menu__label" for="word_space_modifier">Word spacing:</label>
-                  <span class="visually-hidden">Adjust the space between words from the system default to a larger size</span>
-                  <div class="qh__settings-menu__slider">
-                    <div class="qh__form__input__range">
-                      <input type="range" min="0" max="2" value="0" step="0.1" name="wordspace" id="word_space_modifier">
+                  </li>
+                  <li id="qh-lineheight" class="settings__lineheight">
+                    <label class="qh__settings-menu__label" for="line_height_modifier">{{ "Line spacing"|t }}:</label>
+                    <span class="visually-hidden">{{ "Adjust the space between lines of text from the system default to a larger size"|t }}</span>
+                    <div class="qh__settings-menu__slider">
+                      <div class="qh__form__input__range">
+                        <input type="range" min="1" max="3" value="1" step="0.1" name="lineheight" id="line_height_modifier" />
+                      </div>
+                      <div class="small-text settings__lineheight--value low" aria-hidden="true">{{ "Original"|t }}</div>
+                      <div class="small-text settings__lineheight--value high" aria-hidden="true">{{ "More"|t }}</div>
                     </div>
-                    <div class="small-text settings__wordspace--value low" aria-hidden="true">Original</div>
-                    <div class="small-text settings__wordspace--value high" aria-hidden="true">More</div>
-                  </div>
-                </li>
-              </ul>
+                  </li>
+                  <li id="qh-wordspace" class="settings__wordspace">
+                    <label class="qh__settings-menu__label" for="word_space_modifier">{{ "Word spacing"|t }}:</label>
+                    <span class="visually-hidden">{{ "Adjust the space between words from the system default to a larger size"|t }}</span>
+                    <div class="qh__settings-menu__slider">
+                      <div class="qh__form__input__range">
+                        <input type="range" min="0" max="2" value="1" step="0.1" name="wordspace" id="word_space_modifier" />
+                      </div>
+                      <div class="small-text settings__wordspace--value low" aria-hidden="true">{{ "Original"|t }}</div>
+                      <div class="small-text settings__wordspace--value high" aria-hidden="true">{{ "More"|t }}</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
