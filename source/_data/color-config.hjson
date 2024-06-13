@@ -625,26 +625,26 @@
           { "fnName": "link--focus", "colorName": "rhody-red" }
         ],
         "header": [
-          #{ "fnName": "fg", "colorName": "white" },
+          { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "rhody-red--dark" },
-          #{ "fnName": "link", "colorName": "white" },
+          { "fnName": "link", "colorName": "white" },
           { "fnName": "link--hover", "colorName": "hope-gold" },
           { "fnName": "social__link", "colorName": "white" },
           # Hover should use the accent or violator color
-          #{ "fnName": "social__link--hover", "colorName": "hope-gold" }
+          { "fnName": "social__link--hover", "colorName": "hope-gold" }
         ],
         "nav-main": [
           { "fnName": "fg", "colorName": "quahog" },
           { "fnName": "bg", "colorName": "rhody-red" },
-          #{ "fnName": "link", "colorName": "quahog--darker" },
+          { "fnName": "link", "colorName": "quahog--darker" },
           { "fnName": "link--hover", "colorName": "rhody-red--dark" },
           # Hover bg used for bg of link AND for border top of current parent
           # Should be the same color as the Header BG to look like a notch
-          #{ "fnName": "link--hover__bg", "colorName": "white" },
+          { "fnName": "link--hover__bg", "colorName": "white" },
           { "fnName": "link--focus", "colorName": "quahog--darker" },
           { "fnName": "link--active", "colorName": "rhody-red" },
           { "fnName": "link__sub--hover__bg", "colorName": "rhody-red--trans15" },
-          #{ "fnName": "icon__bg", "colorName": "white" },
+          { "fnName": "icon__bg", "colorName": "white" },
           { "fnName": "icon__fg", "colorName": "quahog--darker" },
           { "fnName": "icon__bg--hover", "colorName": "rhody-red" },
           { "fnName": "icon__fg--hover", "colorName": "quahog--darker" }
@@ -687,7 +687,7 @@
           { "fnName": "link--hover__bg", "colorName": "rhody-red--trans15" },
           { "fnName": "link--focus", "colorName": "rhody-red" },
           { "fnName": "link--active", "colorName": "rhody-red" },
-          #{ "fnName": "sub__bg", "colorName": "white--trans25" }
+          { "fnName": "sub__bg", "colorName": "white--trans25" }
         ],
         "notification": [
           { "fnName": "fg", "colorName": "navy" },
@@ -713,9 +713,9 @@
         ],
         "footer": [
           { "fnName": "border-top", "colorName": "rhody-red" },
-          #{ "fnName": "fg", "colorName": "white" },
+          { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "quahog--dark" }, # Only so it shows up in our PL palette
-          #{ "fnName": "copyright__bg", "colorName": "quahog--darker" }
+          { "fnName": "copyright__bg", "colorName": "quahog--darker" }
         ],
         "primary": [
           { "fnName": "fg", "colorName": "coffee-milk" },
@@ -725,17 +725,17 @@
           { "fnName": "fg--dark", "colorName": "coffee-milk--light" },
           { "fnName": "bg--dark", "colorName": "rhody-red--trans50" },
           { "fnName": "link--dark", "colorName": "white" },
-          #{ "fnName": "link--dark--hover", "colorName": "hope-gold" }
+          { "fnName": "link--dark--hover", "colorName": "hope-gold" }
         ],
         "primary--light": [
           { "fnName": "fg", "colorName": "quahog" },
           { "fnName": "bg", "colorName": "rhody-red--trans15" },
           { "fnName": "link", "colorName": "quahog--dark" },
           { "fnName": "link--hover", "colorName": "navy--sat" },
-          #{ "fnName": "fg--dark", "colorName": "coffee-milk--light" },
+          { "fnName": "fg--dark", "colorName": "coffee-milk--light" },
           { "fnName": "bg--dark", "colorName": "rhody-red--trans15" },
           { "fnName": "link--dark", "colorName": "coffee-milk" },
-          #{ "fnName": "link--dark--hover", "colorName": "hope-gold" }
+          { "fnName": "link--dark--hover", "colorName": "hope-gold" }
         ]
       }
     },
@@ -751,20 +751,20 @@
       "humanName": "Federal Hill dark",
       "values": {
         "official": [
-          #{ "fnName": "fg", "colorName": "quahog--light" },
-          { "fnName": "bg", "colorName": "quahog--darker" }, # Only so it shows up in our PL palette
-          #{ "fnName": "link", "colorName": "white" },
-          #{ "fnName": "link--hover", "colorName": "rhody-red" },
-          #{ "fnName": "link--focus", "colorName": "rhody-red" }
+          { "fnName": "fg", "colorName": "quahog--light" },
+          { "fnName": "bg", "colorName": "quahog--darker" },
+          { "fnName": "link", "colorName": "white" },
+          { "fnName": "link--hover", "colorName": "rhody-red" },
+          { "fnName": "link--focus", "colorName": "rhody-red" }
         ],
         "header": [
-          #{ "fnName": "fg", "colorName": "white" },
+          { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "rhody-red--trans15" },
-          #{ "fnName": "link", "colorName": "white" },
-          #{ "fnName": "link--hover", "colorName": "hope-gold" },
+          { "fnName": "link", "colorName": "white" },
+          { "fnName": "link--hover", "colorName": "hope-gold" },
           { "fnName": "social__link", "colorName": "rhody-red" },
           # Hover should use the accent or violator color
-          #{ "fnName": "social__link--hover", "colorName": "hope-gold" }
+          { "fnName": "social__link--hover", "colorName": "hope-gold" }
         ],
         "nav-main": [
           #{ "fnName": "fg", "colorName": "quahog" },
@@ -798,7 +798,7 @@
           #{ "fnName": "button__bg", "colorName": "rhody-red" },
           #{ "fnName": "button__fg", "colorName": "quahog--dark" },
           #{ "fnName": "button--hover__bg", "colorName": "rhody-red--dark" },
-          #{ "fnName": "button--hover__fg", "colorName": "hope-gold" }
+          { "fnName": "button--hover__fg", "colorName": "hope-gold" }
         ],
         #"icon": [
           ##{ "fnName": "pdf", "colorName": "rhody-red" },
@@ -829,22 +829,22 @@
           { "fnName": "icon", "colorName": "coffee-milk--light" }
         ],
         "footer": [
-          #{ "fnName": "border-top", "colorName": "rhody-red" },
-          #{ "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "quahog--dark" }, # Only so it shows up in our PL palette
-          #{ "fnName": "copyright__bg", "colorName": "quahog--darker" }
+          { "fnName": "border-top", "colorName": "rhody-red" },
+          { "fnName": "fg", "colorName": "white" },
+          { "fnName": "bg", "colorName": "quahog" }, # Only so it shows up in our PL palette
+          { "fnName": "copyright__bg", "colorName": "quahog--darker" }
         ],
         "primary": [
           #{ "fnName": "fg", "colorName": "coffee-milk--light" },
           { "fnName": "bg", "colorName": "rhody-red--trans50" }, # Only so it shows up in our PL palette
           #{ "fnName": "link", "colorName": "white" },
-          #{ "fnName": "link--hover", "colorName": "hope-gold" }
+          { "fnName": "link--hover", "colorName": "hope-gold" }
         ],
         "primary--light": [
           #{ "fnName": "fg", "colorName": "coffee-milk--light" },
           { "fnName": "bg", "colorName": "rhody-red--trans15" }, # Only so it shows up in our PL palette
           #{ "fnName": "link", "colorName": "coffee-milk" },
-          #{ "fnName": "link--hover", "colorName": "hope-gold" }
+          { "fnName": "link--hover", "colorName": "hope-gold" }
         ]
       }
     },

@@ -21,6 +21,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Fixed
 - RIGA-496: Fixed image upscaling issue.
+- RIGA-474: Fixed Federal Hill dark mode
 
 ### Security
 
