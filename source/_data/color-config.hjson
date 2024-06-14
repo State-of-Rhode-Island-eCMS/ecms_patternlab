@@ -783,22 +783,22 @@
           { "fnName": "icon__fg--hover", "colorName": "quahog--dark" }
         ],
         "default": [
-          #{ "fnName": "fg", "colorName": "coffee-milk--light" },
-          { "fnName": "bg", "colorName": "quahog--dark" }, # Only so it shows up in our PL palette
-          #{ "fnName": "border", "colorName": "white--trans25" },
-          #{ "fnName": "link", "colorName": "ocean" },
-          #{ "fnName": "link--hover", "colorName": "hope-gold" },
-          #{ "fnName": "link--focus", "colorName": "ocean" },
-          #{ "fnName": "link--visited", "colorName": "navy--wrm-lgt" },
-          #{ "fnName": "link--active", "colorName": "calamari" },
-          #{ "fnName": "hx__fg", "colorName": "coffee-milk" },
-          #{ "fnName": "violator", "colorName": "calamari" },
-          #{ "fnName": "accent", "colorName": "hope-gold" },
-          #{ "fnName": "text-accent", "colorName": "quahog--dark" },
-          #{ "fnName": "button__bg", "colorName": "rhody-red" },
-          #{ "fnName": "button__fg", "colorName": "quahog--dark" },
-          #{ "fnName": "button--hover__bg", "colorName": "rhody-red--dark" },
-          #{ "fnName": "button--hover__fg", "colorName": "hope-gold" }
+          { "fnName": "fg", "colorName": "coffee-milk--light" },
+          { "fnName": "bg", "colorName": "quahog--dark" },
+          { "fnName": "border", "colorName": "white--trans25" },
+          { "fnName": "link", "colorName": "ocean" },
+          { "fnName": "link--hover", "colorName": "hope-gold" },
+          { "fnName": "link--focus", "colorName": "ocean" },
+          { "fnName": "link--visited", "colorName": "navy--wrm-lgt" },
+          { "fnName": "link--active", "colorName": "calamari" },
+          { "fnName": "hx__fg", "colorName": "coffee-milk" },
+          { "fnName": "violator", "colorName": "calamari" },
+          { "fnName": "accent", "colorName": "hope-gold" },
+          { "fnName": "text-accent", "colorName": "quahog--dark" },
+          { "fnName": "button__bg", "colorName": "rhody-red" },
+          { "fnName": "button__fg", "colorName": "quahog--dark" },
+          { "fnName": "button--hover__bg", "colorName": "rhody-red--dark" },
+          { "fnName": "button--hover__fg", "colorName": "hope-gold" }
         ],
         #"icon": [
           ##{ "fnName": "pdf", "colorName": "rhody-red" },
