@@ -17,12 +17,12 @@ To get up and running:
 
 ### Install Dependencies
 
-Make sure you are running `node 10` globally.
+Make sure you are running `node 12` globally.
 
 Using [Node Version Manager (nvm)][] makes switching node versions easy.
 
 ```bash
-nvm install 10
+nvm install 12
 ```
 
 ```bash

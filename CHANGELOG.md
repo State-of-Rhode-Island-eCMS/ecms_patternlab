@@ -18,6 +18,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-404: Update project to use Node 12
 - RIGA-404: Update project packages
 - RIGA-481: Change the settings dropdown BG to use `--fc__official__bg` instaead of `--fc__header__bg`
+- RIGA-404: Change node version to 12
 
 ### Deprecated
 

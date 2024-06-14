@@ -266,7 +266,7 @@
     "ocean--medium": {
       "name": "Ocean State dark",
       "hue": "medium blue",
-      "hsl": "hsl(208, 55%, 64%)",
+      "hsl": "hsl(210, 55%, 58%)",
       "needs": "dark-text"
     },
     "ocean": {
@@ -474,7 +474,6 @@
           { "fnName": "bg--dark", "colorName": "navy--trans50" },
           { "fnName": "link--dark", "colorName": "navy--light" },
           { "fnName": "link--dark--hover", "colorName": "hope-gold" }
-
         ],
         "primary--light": [
           { "fnName": "fg", "colorName": "navy" },
@@ -539,18 +538,19 @@
           { "fnName": "link--visited", "colorName": "navy--wrm-lgt" },
           { "fnName": "link--active", "colorName": "calamari" },
           { "fnName": "hx__fg", "colorName": "coffee-milk" },
-          #{ "fnName": "violator", "colorName": "calamari" },
-          #{ "fnName": "accent", "colorName": "hope-gold" },
+          { "fnName": "violator", "colorName": "calamari" },
+          # text-accent currently used for bullet mark color & the H2
+          { "fnName": "accent", "colorName": "hope-gold" },
           { "fnName": "text-accent", "colorName": "quahog--light" },
-          #{ "fnName": "button__bg", "colorName": "navy" },
-          #{ "fnName": "button__fg", "colorName": "hope-gold" },
-          #{ "fnName": "button--hover__bg", "colorName": "navy--dark" },
-          #{ "fnName": "button--hover__fg", "colorName": "ocean" }
+          { "fnName": "button__bg", "colorName": "navy" },
+          { "fnName": "button__fg", "colorName": "hope-gold" },
+          { "fnName": "button--hover__bg", "colorName": "navy--dark" },
+          { "fnName": "button--hover__fg", "colorName": "ocean" }
         ],
         "icon": [
-          #{ "fnName": "pdf", "colorName": "rhody-red" },
+          { "fnName": "pdf", "colorName": "rhody-red" },
           { "fnName": "word", "colorName": "ocean" },
-          #{ "fnName": "excel", "colorName": "green-animals" },
+          { "fnName": "excel", "colorName": "green-animals" },
           { "fnName": "generic", "colorName": "white--trans33" },
           { "fnName": "download", "colorName": "white--trans33" }
         ],
@@ -570,17 +570,17 @@
         # Notification colors usually fall back to the same palette as the Light theme
         #
         "notification": [
-          #{ "fnName": "fg", "colorName": "navy--dark" },
-          { "fnName": "bg", "colorName": "calamari" }, # Only so it shows up in our PL palette
-          #{ "fnName": "icon", "colorName": "navy" },
-          #{ "fnName": "link", "colorName": "navy--dark" },
-          #{ "fnName": "link--hover", "colorName": "navy--sat" },
-          #{ "fnName": "link--focus", "colorName": "navy--dark" },
-          #{ "fnName": "link--active", "colorName": "navy--sat-lgt" },
+          { "fnName": "fg", "colorName": "navy--dark" },
+          { "fnName": "bg", "colorName": "calamari" },
+          { "fnName": "icon", "colorName": "navy" },
+          { "fnName": "link", "colorName": "navy--dark" },
+          { "fnName": "link--hover", "colorName": "navy--sat" },
+          { "fnName": "link--focus", "colorName": "navy--dark" },
+          { "fnName": "link--active", "colorName": "navy--sat-lgt" },
           # Hover will always reverse these button colors
-          #{ "fnName": "button__fg", "colorName": "navy" },
-          #{ "fnName": "button__bg", "colorName": "white" },
-          #{ "fnName": "border", "colorName": "quahog--dark--trans33" }
+          { "fnName": "button__fg", "colorName": "navy" },
+          { "fnName": "button__bg", "colorName": "white" },
+          { "fnName": "border", "colorName": "quahog--dark--trans33" }
         ],
         "accordion": [
           { "fnName": "icon__fg", "colorName": "quahog--darker" },
@@ -605,13 +605,21 @@
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "navy--trans50" },
           { "fnName": "link", "colorName": "navy--light" },
-          { "fnName": "link--hover", "colorName": "hope-gold" }
+          { "fnName": "link--hover", "colorName": "hope-gold" },
+          { "fnName": "fg--dark", "colorName": "white" },
+          { "fnName": "bg--dark", "colorName": "navy--trans50" },
+          { "fnName": "link--dark", "colorName": "navy--light" },
+          { "fnName": "link--dark--hover", "colorName": "hope-gold" }
         ],
         "primary--light": [
           { "fnName": "fg", "colorName": "coffee-milk--light" },
           { "fnName": "bg", "colorName": "ocean--trans25" },
           { "fnName": "link", "colorName": "white" },
-          { "fnName": "link--hover", "colorName": "hope-gold" }
+          { "fnName": "link--hover", "colorName": "hope-gold" },
+          { "fnName": "fg--dark", "colorName": "coffee-milk--light" },
+          { "fnName": "bg--dark", "colorName": "ocean--trans25" },
+          { "fnName": "link--dark", "colorName": "white" },
+          { "fnName": "link--dark--hover", "colorName": "hope-gold" }
         ]
       }
     },
@@ -657,7 +665,7 @@
         ],
         "default": [
           #{ "fnName": "fg", "colorName": "quahog" },
-          { "fnName": "bg", "colorName": "white" }, # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "white" },
           #{ "fnName": "border", "colorName": "quahog--dark--trans15" },
           #{ "fnName": "link", "colorName": "navy--sat" },
           #{ "fnName": "link--hover", "colorName": "navy--sat-lgt" },
@@ -720,7 +728,7 @@
         "footer": [
           { "fnName": "border-top", "colorName": "rhody-red" },
           { "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "quahog--dark" }, # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "quahog--dark" },
           { "fnName": "copyright__bg", "colorName": "quahog--darker" }
         ],
         "primary": [
@@ -790,7 +798,7 @@
         ],
         "default": [
           #{ "fnName": "fg", "colorName": "coffee-milk--light" },
-          { "fnName": "bg", "colorName": "quahog--dark" }, # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "quahog--dark" },
           #{ "fnName": "border", "colorName": "white--trans25" },
           #{ "fnName": "link", "colorName": "ocean" },
           #{ "fnName": "link--hover", "colorName": "hope-gold" },
@@ -807,16 +815,16 @@
           { "fnName": "button--hover__fg", "colorName": "hope-gold" }
         ],
         #"icon": [
-          ##{ "fnName": "pdf", "colorName": "rhody-red" },
-          ##{ "fnName": "word", "colorName": "ocean" },
-          ##{ "fnName": "excel", "colorName": "green-animals" },
-          ##{ "fnName": "generic", "colorName": "white--trans33" },
-          ##{ "fnName": "download", "colorName": "quahog--light" }
+          #{ "fnName": "pdf", "colorName": "rhody-red" },
+          #{ "fnName": "word", "colorName": "ocean" },
+          #{ "fnName": "excel", "colorName": "green-animals" },
+          #{ "fnName": "generic", "colorName": "white--trans33" },
+          #{ "fnName": "download", "colorName": "quahog--light" }
         #],
         "nav-minor": [
           { "fnName": "border", "colorName": "rhody-red--dark" },
           { "fnName": "fg", "colorName": "quahog--light" },
-          { "fnName": "bg", "colorName": "rhody-red--trans15" }, # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "rhody-red--trans15" },
           { "fnName": "link", "colorName": "coffee-milk--light" },
           #{ "fnName": "link__bg", "colorName": "transparent" },
           { "fnName": "link--hover", "colorName": "white" },
@@ -837,20 +845,28 @@
         "footer": [
           { "fnName": "border-top", "colorName": "rhody-red" },
           { "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "quahog" }, # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "quahog" },
           { "fnName": "copyright__bg", "colorName": "quahog--darker" }
         ],
         "primary": [
           #{ "fnName": "fg", "colorName": "coffee-milk--light" },
-          { "fnName": "bg", "colorName": "rhody-red--trans50" }, # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "rhody-red--trans50" },
           #{ "fnName": "link", "colorName": "white" },
-          { "fnName": "link--hover", "colorName": "hope-gold" }
+          { "fnName": "link--hover", "colorName": "hope-gold" },
+          { "fnName": "fg--dark", "colorName": "coffee-milk--light" },
+          { "fnName": "bg--dark", "colorName": "rhody-red--trans50" },
+          { "fnName": "link--dark", "colorName": "white" },
+          { "fnName": "link--dark--hover", "colorName": "hope-gold" }
         ],
         "primary--light": [
           #{ "fnName": "fg", "colorName": "coffee-milk--light" },
-          { "fnName": "bg", "colorName": "rhody-red--trans15" }, # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "rhody-red--trans15" },
           #{ "fnName": "link", "colorName": "coffee-milk" },
-          { "fnName": "link--hover", "colorName": "hope-gold" }
+          { "fnName": "link--hover", "colorName": "hope-gold" },
+          { "fnName": "fg--dark", "colorName": "coffee-milk--light" },
+          { "fnName": "bg--dark", "colorName": "rhody-red--trans15" },
+          { "fnName": "link--dark", "colorName": "coffee-milk" },
+          { "fnName": "link--dark--hover", "colorName": "hope-gold" }
         ]
       }
     },
@@ -897,7 +913,7 @@
         ],
         "default": [
           #{ "fnName": "fg", "colorName": "quahog" },
-          { "fnName": "bg", "colorName": "white" },  # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "white" },
           #{ "fnName": "border", "colorName": "quahog--dark--trans15" },
           #{ "fnName": "link", "colorName": "navy--sat" },
           #{ "fnName": "link--hover", "colorName": "navy--sat-lgt" },
@@ -958,7 +974,7 @@
         "footer": [
           { "fnName": "border-top", "colorName": "green-animals" },
           #{ "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "quahog--dark" }, # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "quahog--dark" },
           #{ "fnName": "copyright__bg", "colorName": "quahog--darker" }
         ],
         "primary": [
@@ -993,7 +1009,7 @@
       "values": {
         "official": [
           #{ "fnName": "fg", "colorName": "coffee-milk--light" },
-          { "fnName": "bg", "colorName": "quahog--darker" }, # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "quahog--darker" },
           #{ "fnName": "link", "colorName": "white" },
           #{ "fnName": "link--hover", "colorName": "green-animals" },
           #{ "fnName": "link--focus", "colorName": "green-animals" }
@@ -1051,7 +1067,7 @@
         "nav-minor": [
           #{ "fnName": "border", "colorName": "green-animals" },
           { "fnName": "fg", "colorName": "coffee-milk" },
-          { "fnName": "bg", "colorName": "green-animals--trans15" }, # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "green-animals--trans15" },
           { "fnName": "link", "colorName": "coffee-milk--light" },
           #{ "fnName": "link__bg", "colorName": "transparent" },
           { "fnName": "link--hover", "colorName": "white" },
@@ -1062,7 +1078,7 @@
         ],
         "notification": [
           #{ "fnName": "fg", "colorName": "quahog--dark" },
-          { "fnName": "bg", "colorName": "hope-gold" }, # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "hope-gold" },
           #{ "fnName": "icon", "colorName": "quahog" },
           #{ "fnName": "link", "colorName": "quahog--dark" },
           #{ "fnName": "link--hover", "colorName": "navy--sat" },
@@ -1085,7 +1101,7 @@
         "footer": [
           #{ "fnName": "border-top", "colorName": "green-animals" },
           #{ "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "quahog--dark" }, # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "quahog--dark" },
           #{ "fnName": "copyright__bg", "colorName": "quahog--darker" }
         ],
         "primary": [
@@ -1096,7 +1112,7 @@
         ],
         "primary--light": [
           #{ "fnName": "fg", "colorName": "coffee-milk--light" },
-          { "fnName": "bg", "colorName": "green-animals--trans15" }, # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "green-animals--trans15" },
           #{ "fnName": "link", "colorName": "white" },
           #{ "fnName": "link--hover", "colorName": "hope-gold" }
         ]
@@ -1145,7 +1161,7 @@
         ],
         "default": [
           { "fnName": "fg", "colorName": "quahog" },
-          { "fnName": "bg", "colorName": "white" },  # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "white" },
           #{ "fnName": "border", "colorName": "quahog--dark--trans15" },
           #{ "fnName": "link", "colorName": "navy--sat" },
           #{ "fnName": "link--hover", "colorName": "navy--sat-lgt" },
@@ -1243,7 +1259,7 @@
       "values": {
         "official": [
           #{ "fnName": "fg", "colorName": "quahog--light" },
-          { "fnName": "bg", "colorName": "quahog--dark" },  # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "quahog--dark" },
           #{ "fnName": "link", "colorName": "white" },
           #{ "fnName": "link--hover", "colorName": "hope-gold" },
           #{ "fnName": "link--focus", "colorName": "hope-gold" }
@@ -1315,7 +1331,7 @@
         ],
         "notification": [
           #{ "fnName": "fg", "colorName": "navy" },
-          { "fnName": "bg", "colorName": "hope-gold" }, # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "hope-gold" },
           #{ "fnName": "icon", "colorName": "navy" },
           #{ "fnName": "link", "colorName": "navy--dark" },
           #{ "fnName": "link--hover", "colorName": "navy--sat" },
@@ -1594,14 +1610,14 @@
         ],
         "primary": [
           #{ "fnName": "fg", "colorName": "coffee-milk--light" },
-          { "fnName": "bg", "colorName": "cliff-walk--darkest" }, # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "cliff-walk--darkest" },
           #{ "fnName": "link", "colorName": "white" },
           #{ "fnName": "link--hover", "colorName": "hope-gold" }
 
         ],
         "primary--light": [
           #{ "fnName": "fg", "colorName": "ocean--light" },
-          { "fnName": "bg", "colorName": "cliff-walk--darkest--trans15" }, # Only so it shows up in our PL palette
+          { "fnName": "bg", "colorName": "cliff-walk--darkest--trans15" },
           #{ "fnName": "link", "colorName": "white" },
           #{ "fnName": "link--hover", "colorName": "hope-gold" }
         ]
@@ -1751,8 +1767,8 @@
           { "fnName": "link--dark--hover", "colorName": "ocean" }
         ],
         "primary--light": [
-          { "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "ocean--medium" },
+          { "fnName": "fg", "colorName": "navy" },
+          { "fnName": "bg", "colorName": "ocean" },
           { "fnName": "link", "colorName": "navy--dark" },
           { "fnName": "link--hover", "colorName": "quahog--darker" },
           { "fnName": "fg--dark", "colorName": "navy" },
@@ -1866,9 +1882,9 @@
           { "fnName": "icon", "colorName": "coffee-milk--light" }
         ],
         "footer": [
-          { "fnName": "border-top", "colorName": "ocean" },
+          { "fnName": "border-top", "colorName": "ocean--medium" },
           { "fnName": "fg", "colorName": "white" },
-          { "fnName": "bg", "colorName": "hope-gold" },
+          { "fnName": "bg", "colorName": "navy" },
           { "fnName": "copyright__bg", "colorName": "quahog--darker" }
         ],
         #
