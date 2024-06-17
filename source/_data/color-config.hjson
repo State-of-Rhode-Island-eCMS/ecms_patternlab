@@ -264,7 +264,7 @@
       "needs": "light-text"
     },
     "ocean--medium": {
-      "name": "Ocean State dark",
+      "name": "Ocean State medium",
       "hue": "medium blue",
       "hsl": "hsl(210, 55%, 58%)",
       "needs": "dark-text"
