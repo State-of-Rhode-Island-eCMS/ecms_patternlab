@@ -1748,7 +1748,7 @@
         #
         "footer": [
           { "fnName": "border-top", "colorName": "navy" },
-          { "fnName": "fg", "colorName": "navy" },
+          { "fnName": "fg", "colorName": "quahog--dark" },
           { "fnName": "bg", "colorName": "ocean" },
           { "fnName": "copyright__bg", "colorName": "ocean--medium" }
         ],
