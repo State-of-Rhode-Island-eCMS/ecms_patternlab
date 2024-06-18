@@ -256,9 +256,9 @@ html {
   --fc__header__link--hover: #95bddf;
   --fc__header__social__link: #95bddf;
   --fc__header__social__link--hover: #face3d;
-  --fc__nav-main__fg: white;
+  --fc__nav-main__fg: #2e2e2e;
   --fc__nav-main__bg: #95bddf;
-  --fc__nav-main__link: white;
+  --fc__nav-main__link: #2e2e2e;
   --fc__nav-main__link--hover: #293557;
   --fc__nav-main__link--hover__bg: white;
   --fc__nav-main__link--focus: #face3d;
