@@ -354,9 +354,9 @@
           # Search button uses default accent as the BG color and accent__fg as the FG
         ],
         "nav-main": [
-          { "fnName": "fg", "colorName": "white" },
+          { "fnName": "fg", "colorName": "quahog--dark" },
           { "fnName": "bg", "colorName": "ocean" },
-          { "fnName": "link", "colorName": "white" },
+          { "fnName": "link", "colorName": "quahog--dark" },
           { "fnName": "link--hover", "colorName": "navy" },
           # Hover bg used for bg of link AND for border top of current parent
           # Should be the same color as the Header BG to look like a notch
