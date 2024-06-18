@@ -11,13 +11,19 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ## [Unreleased]
 ### Added
 - RIGA-487: Add new line art illustrations to the theme options
+- RIGA-481: Add Misquamicut Beach (light and dark) theme
 
 ### Changed
 - RIGA-486: Update h1, h2, h3 font-size and margin-top
+- RIGA-404: Update project to use Node 12
+- RIGA-404: Update project packages
+- RIGA-481: Change the settings dropdown BG to use `--fc__official__bg` instaead of `--fc__header__bg`
+- RIGA-404: Change node version to 12
 
 ### Deprecated
 
 ### Removed
+- RIGA-404: Removed preinstall npm-force-resolutions for @basalt/twig-renderer
 
 ### Fixed
 - RIGA-496: Fixed image upscaling issue.
