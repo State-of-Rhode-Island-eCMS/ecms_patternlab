@@ -258,7 +258,7 @@ html {
   --fc__header__social__link--hover: #face3d;
   --fc__nav-main__fg: #2e2e2e;
   --fc__nav-main__bg: #95bddf;
-  --fc__nav-main__link: #2e2e2e;
+  --fc__nav-main__link: #141414;
   --fc__nav-main__link--hover: #293557;
   --fc__nav-main__link--hover__bg: white;
   --fc__nav-main__link--focus: #face3d;
@@ -367,16 +367,8 @@ html {
     --fc__default__link--visited: #bbacec;
     --fc__default__link--active: #ff8e47;
     --fc__default__hx__fg: #d2cbb2;
-    --fc__default__violator: #ff8e47;
-    --fc__default__accent: #face3d;
     --fc__default__text-accent: #d4d4d4;
-    --fc__default__button__bg: #293557;
-    --fc__default__button__fg: #face3d;
-    --fc__default__button--hover__bg: #1b243b;
-    --fc__default__button--hover__fg: #95bddf;
-    --fc__icon__pdf: #eb5252;
     --fc__icon__word: #95bddf;
-    --fc__icon__excel: #59bf45;
     --fc__icon__generic: rgba(255, 255, 255, 0.33);
     --fc__icon__download: rgba(255, 255, 255, 0.33);
     --fc__nav-minor__border: #293557;
@@ -389,16 +381,7 @@ html {
     --fc__nav-minor__link--focus: #face3d;
     --fc__nav-minor__link--active: #face3d;
     --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.33);
-    --fc__notification__fg: #1b243b;
     --fc__notification__bg: #ff8e47;
-    --fc__notification__icon: #293557;
-    --fc__notification__link: #1b243b;
-    --fc__notification__link--hover: #1440b8;
-    --fc__notification__link--focus: #1b243b;
-    --fc__notification__link--active: #476cd1;
-    --fc__notification__button__fg: #293557;
-    --fc__notification__button__bg: white;
-    --fc__notification__border: rgba(20, 20, 20, 0.33);
     --fc__accordion__icon__fg: #141414;
     --fc__accordion__icon__bg: #ff8e47;
     --fc__attention-card__fg: #f0eee5;
@@ -412,18 +395,10 @@ html {
     --fc__primary__bg: rgba(41, 53, 87, 0.5);
     --fc__primary__link: #95a9df;
     --fc__primary__link--hover: #face3d;
-    --fc__primary__fg--dark: white;
-    --fc__primary__bg--dark: rgba(41, 53, 87, 0.5);
-    --fc__primary__link--dark: #95a9df;
-    --fc__primary__link--dark--hover: #face3d;
     --fc__primary--light__fg: #f0eee5;
     --fc__primary--light__bg: rgba(149, 189, 223, 0.25);
     --fc__primary--light__link: white;
-    --fc__primary--light__link--hover: #face3d;
-    --fc__primary--light__fg--dark: #f0eee5;
-    --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.25);
-    --fc__primary--light__link--dark: white;
-    --fc__primary--light__link--dark--hover: #face3d; }
+    --fc__primary--light__link--hover: #face3d; }
   html.qh__t__federal-hill {
     --fc__official__fg: #d4d4d4;
     --fc__official__bg: #141414;
@@ -1080,16 +1055,8 @@ html {
       --fc__default__link--visited: #bbacec;
       --fc__default__link--active: #ff8e47;
       --fc__default__hx__fg: #d2cbb2;
-      --fc__default__violator: #ff8e47;
-      --fc__default__accent: #face3d;
       --fc__default__text-accent: #d4d4d4;
-      --fc__default__button__bg: #293557;
-      --fc__default__button__fg: #face3d;
-      --fc__default__button--hover__bg: #1b243b;
-      --fc__default__button--hover__fg: #95bddf;
-      --fc__icon__pdf: #eb5252;
       --fc__icon__word: #95bddf;
-      --fc__icon__excel: #59bf45;
       --fc__icon__generic: rgba(255, 255, 255, 0.33);
       --fc__icon__download: rgba(255, 255, 255, 0.33);
       --fc__nav-minor__border: #293557;
@@ -1102,16 +1069,7 @@ html {
       --fc__nav-minor__link--focus: #face3d;
       --fc__nav-minor__link--active: #face3d;
       --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.33);
-      --fc__notification__fg: #1b243b;
       --fc__notification__bg: #ff8e47;
-      --fc__notification__icon: #293557;
-      --fc__notification__link: #1b243b;
-      --fc__notification__link--hover: #1440b8;
-      --fc__notification__link--focus: #1b243b;
-      --fc__notification__link--active: #476cd1;
-      --fc__notification__button__fg: #293557;
-      --fc__notification__button__bg: white;
-      --fc__notification__border: rgba(20, 20, 20, 0.33);
       --fc__accordion__icon__fg: #141414;
       --fc__accordion__icon__bg: #ff8e47;
       --fc__attention-card__fg: #f0eee5;
@@ -1125,18 +1083,10 @@ html {
       --fc__primary__bg: rgba(41, 53, 87, 0.5);
       --fc__primary__link: #95a9df;
       --fc__primary__link--hover: #face3d;
-      --fc__primary__fg--dark: white;
-      --fc__primary__bg--dark: rgba(41, 53, 87, 0.5);
-      --fc__primary__link--dark: #95a9df;
-      --fc__primary__link--dark--hover: #face3d;
       --fc__primary--light__fg: #f0eee5;
       --fc__primary--light__bg: rgba(149, 189, 223, 0.25);
       --fc__primary--light__link: white;
-      --fc__primary--light__link--hover: #face3d;
-      --fc__primary--light__fg--dark: #f0eee5;
-      --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.25);
-      --fc__primary--light__link--dark: white;
-      --fc__primary--light__link--dark--hover: #face3d; }
+      --fc__primary--light__link--hover: #face3d; }
     html:not(.light) .qh__t__federal-hill {
       --fc__official__fg: #d4d4d4;
       --fc__official__bg: #141414;
