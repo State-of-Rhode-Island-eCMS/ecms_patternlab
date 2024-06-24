@@ -10,6 +10,19 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [0.7.5] - 2024-06-25
+### Added
 - RIGA-487: Add new line art illustrations to the theme options
 - RIGA-481: Add Misquamicut Beach (light and dark) theme
 
@@ -20,16 +33,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 - RIGA-481: Change the settings dropdown BG to use `--fc__official__bg` instaead of `--fc__header__bg`
 - RIGA-404: Change node version to 12
 
-### Deprecated
-
 ### Removed
 - RIGA-404: Removed preinstall npm-force-resolutions for @basalt/twig-renderer
 
 ### Fixed
 - RIGA-496: Fixed image upscaling issue.
 - RIGA-474: Fixed Federal Hill dark mode
-
-### Security
 
 ## [0.7.4] - 2023-10-19
 ### Changed
@@ -353,7 +362,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.4...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.5...HEAD
+[0.7.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.4...0.7.5
 [0.7.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.3...0.7.4
 [0.7.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.2...0.7.3
 [0.7.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.1...0.7.2
