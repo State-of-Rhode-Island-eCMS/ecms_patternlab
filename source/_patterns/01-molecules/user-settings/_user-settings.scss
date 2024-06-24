@@ -79,7 +79,7 @@
     z-index: z(drop-down-menu);
 
     &::before {
-      background-color: var(--fc__header__bg);
+      background-color: var(--fc__official__bg);
       content: '';
       position: absolute;
       @include qh-inset-supports(0);

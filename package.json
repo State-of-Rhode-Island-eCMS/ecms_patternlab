@@ -6,30 +6,29 @@
   "dependencies": {
     "@babel/core": "7.12.9",
     "@babel/preset-env": "7.12.7",
-    "@pattern-lab/cli": "5.13.2",
-    "@pattern-lab/core": "5.13.2",
-    "@pattern-lab/engine-twig-php": "5.13.2",
-    "@pattern-lab/uikit-workshop": "5.13.2",
+    "@pattern-lab/cli": "5.13.1",
+    "@pattern-lab/core": "5.13.1",
+    "@pattern-lab/engine-twig-php": "5.13.1",
+    "@pattern-lab/uikit-workshop": "5.13.1",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "8.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-eslint": "^4.0.2",
+    "gulp-eslint": "^4.0.0",
     "gulp-hjson": "2.4.3",
     "gulp-json-editor": "2.5.4",
     "gulp-minify": "3.1.0",
     "gulp-rename": "^1.2.3",
-    "gulp-sass": "^4.0.1",
+    "gulp-sass": "^4.0.0",
     "gulp-sass-glob": "^1.0.9",
     "gulp-sass-import-json": "1.0.2",
     "gulp-streamify": "1.0.2",
     "gulp-stylelint": "^8.0.0",
     "minimist": "1.2.5",
-    "node-sass": "^4.14.1",
     "prettier": "^1.14.2",
-    "stylelint": "^9.10.1",
-    "stylelint-config-sass-guidelines": "^5.4.0",
-    "stylelint-scss": "^3.6.0"
+    "stylelint": "^9.0.0",
+    "stylelint-config-sass-guidelines": "^5.0.0",
+    "stylelint-scss": "^3.0.0"
   },
   "babel": {
     "presets": [
@@ -48,11 +47,7 @@
   "author": "Brian Muenzenmeyer",
   "scripts": {
     "gulp": "gulp -- ",
-    "patternlab": "patternlab",
-    "preinstall": "npx npm-force-resolutions"
-  },
-  "resolutions": {
-    "@basalt/twig-renderer": "2.0.0"
+    "patternlab": "patternlab"
   },
   "license": "MIT",
   "engines": {

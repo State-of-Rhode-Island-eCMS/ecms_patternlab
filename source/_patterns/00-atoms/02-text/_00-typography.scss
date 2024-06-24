@@ -230,11 +230,11 @@ h2,
     word-spacing: var(--word-spacing);
   }
   font-style: normal;
-  margin-top: ($text-spacer-fallback-value * 2);
+  margin-top: ($text-spacer-fallback-value * 0.5);
   margin-bottom: ($text-spacer-fallback-value * 0.5);
 
   @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-    margin-top: calc(var(--body-text-spacer) * 2);
+    margin-top: calc(var(--body-text-spacer) * 0.5);
     margin-bottom: calc(var(--body-text-spacer) * 0.5);
   }
 }
@@ -288,11 +288,11 @@ h3,
     word-spacing: var(--word-spacing);
   }
   font-style: normal;
-  margin-top: ($text-spacer-fallback-value * 1.5);
+  margin-top: ($text-spacer-fallback-value * 0.75);
   margin-bottom: ($text-spacer-fallback-value * 0.75);
 
   @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-    margin-top: calc(var(--body-text-spacer) * 1.5);
+    margin-top: calc(var(--body-text-spacer) * 0.75);
     margin-bottom: calc(var(--body-text-spacer) * 0.75);
   }
 }
@@ -345,11 +345,11 @@ h4 {
     word-spacing: var(--word-spacing);
   }
   font-style: normal;
-  margin-top: ($text-spacer-fallback-value * 1.5);
+  margin-top: ($text-spacer-fallback-value * 0.5);
   margin-bottom: ($text-spacer-fallback-value * 0.5);
 
   @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-    margin-top: calc(var(--body-text-spacer) * 1.5);
+    margin-top: calc(var(--body-text-spacer) * 0.5);
     margin-bottom: calc(var(--body-text-spacer) * 0.5);
   }
 }
@@ -402,11 +402,11 @@ h5 {
     word-spacing: var(--word-spacing);
   }
   font-style: normal;
-  margin-top: ($text-spacer-fallback-value * 1.5);
+  margin-top: ($text-spacer-fallback-value * 0.5);
   margin-bottom: ($text-spacer-fallback-value * 0.5);
 
   @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-    margin-top: calc(var(--body-text-spacer) * 1.5);
+    margin-top: calc(var(--body-text-spacer) * 0.5);
     margin-bottom: calc(var(--body-text-spacer) * 0.5);
   }
 }
@@ -459,11 +459,11 @@ h6 {
     word-spacing: var(--word-spacing);
   }
   font-style: normal;
-  margin-top: ($text-spacer-fallback-value * 1.5);
+  margin-top: ($text-spacer-fallback-value * 0.5);
   margin-bottom: ($text-spacer-fallback-value * 0.5);
 
   @supports (margin-top: clamp(1rem, 2vw, 1.25rem)) {
-    margin-top: calc(var(--body-text-spacer) * 1.5);
+    margin-top: calc(var(--body-text-spacer) * 0.5);
     margin-bottom: calc(var(--body-text-spacer) * 0.5);
   }
 }
