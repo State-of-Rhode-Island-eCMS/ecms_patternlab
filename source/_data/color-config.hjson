@@ -50,6 +50,12 @@
     #
     # Quahog
     #
+    "quahog--black": {
+      "name": "Quahog dark",
+      "hue": "black",
+      "hsl": "hsl(0, 0%, 0%)",
+      "needs": "light-text"
+    },
     "quahog--darker": {
       "name": "Quahog dark",
       "hue": "black",
@@ -1740,7 +1746,7 @@
         #
         "footer": [
           { "fnName": "border-top", "colorName": "navy" },
-          { "fnName": "fg", "colorName": "quahog--dark" },
+          { "fnName": "fg", "colorName": "quahog--black" },
           { "fnName": "bg", "colorName": "ocean" },
           { "fnName": "copyright__bg", "colorName": "ocean--medium" }
         ],
