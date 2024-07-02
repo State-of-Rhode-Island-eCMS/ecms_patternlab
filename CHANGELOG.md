@@ -12,6 +12,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-517: Changed Misquamicut Beach (light) footer text color for better contrast
+- RIGA-517: Changed Misquamicut Beach (light) main nav active link color for better contrast
 
 ### Deprecated
 

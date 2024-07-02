@@ -203,6 +203,7 @@ html {
   --c__white--trans25: rgba(255, 255, 255, 0.25);
   --c__white--trans15: rgba(255, 255, 255, 0.15);
   --c__transparent: transparent;
+  --c__quahog--black: black;
   --c__quahog--darker: #141414;
   --c__quahog--dark--trans33: rgba(20, 20, 20, 0.33);
   --c__quahog--dark--trans25: rgba(20, 20, 20, 0.25);
@@ -861,7 +862,7 @@ html {
     --fc__header__link--hover: #293557;
     --fc__header__social__link: #293557;
     --fc__header__social__link--hover: white;
-    --fc__nav-main__fg: #2e2e2e;
+    --fc__nav-main__fg: #1b243b;
     --fc__nav-main__bg: #5994cf;
     --fc__nav-main__link: #1b243b;
     --fc__nav-main__link--hover: #1b243b;
@@ -921,7 +922,7 @@ html {
     --fc__attention-card__bar: #95bddf;
     --fc__attention-card__icon: #1b243b;
     --fc__footer__border-top: #293557;
-    --fc__footer__fg: #2e2e2e;
+    --fc__footer__fg: black;
     --fc__footer__bg: #95bddf;
     --fc__footer__copyright__bg: #5994cf;
     --fc__primary__fg: white;

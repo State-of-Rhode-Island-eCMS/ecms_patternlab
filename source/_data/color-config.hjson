@@ -50,6 +50,12 @@
     #
     # Quahog
     #
+    "quahog--black": {
+      "name": "Quahog dark",
+      "hue": "black",
+      "hsl": "hsl(0, 0%, 0%)",
+      "needs": "light-text"
+    },
     "quahog--darker": {
       "name": "Quahog dark",
       "hue": "black",
@@ -1637,7 +1643,7 @@
           # Search button uses default accent as the BG color and accent__fg as the FG
         ],
         "nav-main": [
-          { "fnName": "fg", "colorName": "quahog--dark" },
+          { "fnName": "fg", "colorName": "navy--dark" },
           { "fnName": "bg", "colorName": "ocean--medium" },
           { "fnName": "link", "colorName": "navy--dark" },
           { "fnName": "link--hover", "colorName": "navy--dark" },
@@ -1740,7 +1746,7 @@
         #
         "footer": [
           { "fnName": "border-top", "colorName": "navy" },
-          { "fnName": "fg", "colorName": "quahog--dark" },
+          { "fnName": "fg", "colorName": "quahog--black" },
           { "fnName": "bg", "colorName": "ocean" },
           { "fnName": "copyright__bg", "colorName": "ocean--medium" }
         ],
