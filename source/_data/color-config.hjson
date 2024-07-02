@@ -1643,7 +1643,7 @@
           # Search button uses default accent as the BG color and accent__fg as the FG
         ],
         "nav-main": [
-          { "fnName": "fg", "colorName": "quahog--dark" },
+          { "fnName": "fg", "colorName": "navy--dark" },
           { "fnName": "bg", "colorName": "ocean--medium" },
           { "fnName": "link", "colorName": "navy--dark" },
           { "fnName": "link--hover", "colorName": "navy--dark" },

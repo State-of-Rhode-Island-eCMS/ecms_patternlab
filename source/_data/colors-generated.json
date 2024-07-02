@@ -605,7 +605,7 @@
   "t__misquamicut__header__link--hover": "hsl(224, 36%, 25%)",
   "t__misquamicut__header__social__link": "hsl(224, 36%, 25%)",
   "t__misquamicut__header__social__link--hover": "hsl(0, 0%, 100%)",
-  "t__misquamicut__nav-main__fg": "hsl(0, 0%, 18%)",
+  "t__misquamicut__nav-main__fg": "hsl(224, 37%, 17%)",
   "t__misquamicut__nav-main__bg": "hsl(210, 55%, 58%)",
   "t__misquamicut__nav-main__link": "hsl(224, 37%, 17%)",
   "t__misquamicut__nav-main__link--hover": "hsl(224, 37%, 17%)",
