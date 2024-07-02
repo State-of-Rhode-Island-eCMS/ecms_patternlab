@@ -302,7 +302,7 @@ html {
   --fc__nav-minor__link--active: #ff8e47;
   --fc__nav-minor__sub__bg: rgba(255, 255, 255, 0.25);
   --fc__notification__fg: #1b243b;
-  --fc__notification__bg: #ff8e47;
+  --fc__notification__bg: #face3d;
   --fc__notification__icon: #293557;
   --fc__notification__link: #1b243b;
   --fc__notification__link--hover: #1440b8;
@@ -382,7 +382,7 @@ html {
     --fc__nav-minor__link--focus: #face3d;
     --fc__nav-minor__link--active: #face3d;
     --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.33);
-    --fc__notification__bg: #ff8e47;
+    --fc__notification__bg: #face3d;
     --fc__accordion__icon__fg: #141414;
     --fc__accordion__icon__bg: #ff8e47;
     --fc__attention-card__fg: #f0eee5;
@@ -441,7 +441,7 @@ html {
     --fc__nav-minor__link--active: #eb5252;
     --fc__nav-minor__sub__bg: rgba(255, 255, 255, 0.25);
     --fc__notification__fg: #293557;
-    --fc__notification__bg: #95bddf;
+    --fc__notification__bg: #face3d;
     --fc__notification__link--hover: #8e3339;
     --fc__notification__link--focus: #293557;
     --fc__notification__link--active: #ff8e47;
@@ -907,7 +907,7 @@ html {
     --fc__nav-minor__link--active: #1b243b;
     --fc__nav-minor__sub__bg: rgba(255, 255, 255, 0.25);
     --fc__notification__fg: #1b243b;
-    --fc__notification__bg: #ff8e47;
+    --fc__notification__bg: #face3d;
     --fc__notification__icon: #293557;
     --fc__notification__link: #1b243b;
     --fc__notification__link--hover: #1b243b;
@@ -997,7 +997,7 @@ html {
     --fc__nav-minor__link--active: #face3d;
     --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.33);
     --fc__notification__fg: #1b243b;
-    --fc__notification__bg: #ff8e47;
+    --fc__notification__bg: #face3d;
     --fc__notification__icon: #293557;
     --fc__notification__link: #1b243b;
     --fc__notification__link--hover: #1440b8;
@@ -1070,7 +1070,7 @@ html {
       --fc__nav-minor__link--focus: #face3d;
       --fc__nav-minor__link--active: #face3d;
       --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.33);
-      --fc__notification__bg: #ff8e47;
+      --fc__notification__bg: #face3d;
       --fc__accordion__icon__fg: #141414;
       --fc__accordion__icon__bg: #ff8e47;
       --fc__attention-card__fg: #f0eee5;
@@ -1333,7 +1333,7 @@ html {
       --fc__nav-minor__link--active: #face3d;
       --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.33);
       --fc__notification__fg: #1b243b;
-      --fc__notification__bg: #ff8e47;
+      --fc__notification__bg: #face3d;
       --fc__notification__icon: #293557;
       --fc__notification__link: #1b243b;
       --fc__notification__link--hover: #1440b8;
@@ -5681,7 +5681,7 @@ body {
       color: var(--fc__notification__fg);
       margin: 0 0 0.25rem; }
     .qh__notifications-block__content p {
-      max-width: 44em;
+      max-width: 100em;
       margin-left: auto;
       margin-right: auto; }
       .qh__notifications-block__content p + p {
