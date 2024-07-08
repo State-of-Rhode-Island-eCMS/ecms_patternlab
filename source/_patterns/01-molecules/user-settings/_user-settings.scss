@@ -1,9 +1,11 @@
 /* Settings & Language */
 .qh__settings-menu {
   --text-opsz: 10;
-  display: inline-block;
+  display: inline-flex;
   position: relative;
   margin-left: $general-h-spacing;
+  justify-content: space-between;
+  gap: 0.5em;
 }
 
 /* Settings Menu */
