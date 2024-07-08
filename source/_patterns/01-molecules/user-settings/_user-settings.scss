@@ -141,6 +141,10 @@
         outline-color: var(--fc__official__link);
       }
     }
+
+    .qh__language-menu__wrapper & {
+      padding: 0.5rem 1rem;
+    }
   } // end &___list
 
   &__label {

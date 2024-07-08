@@ -4626,6 +4626,9 @@ table {
   .qh__settings-menu__list .qh__u__btn-as-text:focus,
   .qh__language-menu__list .qh__u__btn-as-text:focus {
     outline-color: var(--fc__official__link); }
+  .qh__language-menu__wrapper .qh__settings-menu__list, .qh__language-menu__wrapper
+  .qh__language-menu__list {
+    padding: 0.5rem 1rem; }
 
 .qh__settings-menu__label,
 .qh__language-menu__label {
