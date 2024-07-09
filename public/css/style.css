@@ -4629,6 +4629,9 @@ table {
   .qh__language-menu__wrapper .qh__settings-menu__list, .qh__language-menu__wrapper
   .qh__language-menu__list {
     padding: 0.5rem 1rem; }
+  .qh__settings-menu__list #google_translator_element img.goog-te-gadget-icon,
+  .qh__language-menu__list #google_translator_element img.goog-te-gadget-icon {
+    display: none; }
 
 .qh__settings-menu__label,
 .qh__language-menu__label {

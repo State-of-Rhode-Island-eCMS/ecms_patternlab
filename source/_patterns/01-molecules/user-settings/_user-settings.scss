@@ -145,6 +145,12 @@
     .qh__language-menu__wrapper & {
       padding: 0.5rem 1rem;
     }
+
+    #google_translator_element {
+      img.goog-te-gadget-icon {
+        display: none;
+      }
+    }
   } // end &___list
 
   &__label {

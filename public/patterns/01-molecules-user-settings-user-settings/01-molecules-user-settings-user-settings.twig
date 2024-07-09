@@ -1,9 +1,9 @@
 <div class="qh__settings-menu">
   {# User Language Menu #}
   {% if language_switcher|render %}
-    <span class="qh__u__btn-as-text qh__language-menu__wrapper">
+    <div class="qh__u__btn-as-text qh__language-menu__wrapper">
       {{ language_switcher }}
-    </span>
+    </div>
   {% endif %}
   {# User Settings Menu #}
   <button id="js__user-settings__toggle" class="qh__u__btn-as-text qh__settings-menu__toggle" aria-expanded="false" aria-controls="js__user-settings__list">
