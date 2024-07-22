@@ -1,11 +1,17 @@
-/* Settings */
-
+/* Settings & Language */
 .qh__settings-menu {
   --text-opsz: 10;
-  display: inline-block;
+  display: inline-flex;
   position: relative;
   margin-left: $general-h-spacing;
+  justify-content: space-between;
+  gap: 0.5em;
+}
 
+/* Settings Menu */
+/* Language Menu */
+.qh__settings-menu,
+.qh__language-menu {
   .no-js & {
     display: none;
   }
@@ -23,6 +29,17 @@
       position: relative;
       top: -40%;
       left: -50%;
+    }
+  }
+
+  &__text {
+    @include breakpoint-down($bp__show__desktop-nav) {
+      position: absolute;
+      clip: rect(1px, 1px, 1px, 1px);
+      overflow: hidden;
+      height: 1px;
+      width: 1px;
+      word-wrap: normal;
     }
   }
 
@@ -122,6 +139,16 @@
 
       &:focus {
         outline-color: var(--fc__official__link);
+      }
+    }
+
+    .qh__language-menu__wrapper & {
+      padding: 0.5rem 1rem;
+    }
+
+    #google_translator_element {
+      img.goog-te-gadget-icon {
+        display: none;
       }
     }
   } // end &___list
