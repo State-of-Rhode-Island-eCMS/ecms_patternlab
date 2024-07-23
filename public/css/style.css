@@ -483,10 +483,12 @@ html {
     --fc__primary__link--dark--hover: #face3d;
     --fc__primary--light__fg: #404040;
     --fc__primary--light__bg: rgba(235, 82, 82, 0.15);
+    --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__primary--light__link: #2e2e2e;
     --fc__primary--light__link--hover: #1440b8;
     --fc__primary--light__fg--dark: #f0eee5;
     --fc__primary--light__bg--dark: rgba(235, 82, 82, 0.15);
+    --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75);
     --fc__primary--light__link--dark: #d2cbb2;
     --fc__primary--light__link--dark--hover: #face3d; }
   html.dark.qh__t__federal-hill {
@@ -532,15 +534,19 @@ html {
     --fc__footer__bg: #404040;
     --fc__footer__copyright__bg: #141414;
     --fc__primary__bg: rgba(235, 82, 82, 0.5);
+    --fc__primary__overlay__bg: rgba(235, 82, 82, 0.75);
     --fc__primary__link--hover: #face3d;
     --fc__primary__fg--dark: #f0eee5;
     --fc__primary__bg--dark: rgba(235, 82, 82, 0.5);
+    --fc__primary__overlay__bg--dark: rgba(142, 51, 57, 0.75);
     --fc__primary__link--dark: white;
     --fc__primary__link--dark--hover: #face3d;
     --fc__primary--light__bg: rgba(235, 82, 82, 0.15);
+    --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__primary--light__link--hover: #face3d;
     --fc__primary--light__fg--dark: #f0eee5;
     --fc__primary--light__bg--dark: rgba(235, 82, 82, 0.15);
+    --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75);
     --fc__primary--light__link--dark: #d2cbb2;
     --fc__primary--light__link--dark--hover: #face3d; }
   html.qh__t__wickaboxet {
@@ -599,8 +605,10 @@ html {
     --fc__primary__overlay__bg--dark: rgba(89, 191, 69, 0.75);
     --fc__primary__link--dark: white;
     --fc__primary--light__bg: rgba(89, 191, 69, 0.15);
+    --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__primary--light__link: #2e7a1f;
-    --fc__primary--light__bg--dark: rgba(89, 191, 69, 0.15); }
+    --fc__primary--light__bg--dark: rgba(89, 191, 69, 0.15);
+    --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75); }
   html.dark.qh__t__wickaboxet {
     --fc__official__bg: #141414;
     --fc__header__fg: #f0eee5;
@@ -709,10 +717,12 @@ html {
     --fc__primary__link--dark--hover: #face3d;
     --fc__primary--light__fg: #293557;
     --fc__primary--light__bg: rgba(149, 189, 223, 0.1);
+    --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__primary--light__link: #1440b8;
     --fc__primary--light__link--hover: #1b243b;
     --fc__primary--light__fg--dark: #d4d4d4;
     --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.1);
+    --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75);
     --fc__primary--light__link--dark: white;
     --fc__primary--light__link--dark--hover: #face3d; }
   html.dark.qh__t__block-island {
@@ -757,10 +767,14 @@ html {
     --fc__footer__copyright__bg: transparent;
     --fc__primary__fg--dark: #d4d4d4;
     --fc__primary__bg--dark: rgba(149, 189, 223, 0.25);
+    --fc__primary__overlay__bg: rgba(149, 189, 223, 0.75);
+    --fc__primary__overlay__bg--dark: rgba(41, 53, 87, 0.75);
     --fc__primary__link--dark: white;
     --fc__primary__link--dark--hover: #face3d;
     --fc__primary--light__fg--dark: #d4d4d4;
     --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.1);
+    --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
+    --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75);
     --fc__primary--light__link--dark: white;
     --fc__primary--light__link--dark--hover: #face3d; }
   html.qh__t__blue-shutters {
@@ -817,7 +831,7 @@ html {
     --fc__footer__fg: #48525b;
     --fc__footer__bg: #7affd3;
     --fc__footer__copyright__bg: transparent;
-    --fc__primary__fg: #d4d4d4;
+    --fc__primary__fg: #2e2e2e;
     --fc__primary__bg: #48525b;
     --fc__primary__overlay__bg: rgba(66, 240, 182, 0.75);
     --fc__primary__link: #c9f7e8;
@@ -829,10 +843,12 @@ html {
     --fc__primary__link--dark--hover: #face3d;
     --fc__primary--light__fg: #48525b;
     --fc__primary--light__bg: #c9f7e8;
+    --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__primary--light__link: #293557;
     --fc__primary--light__link--hover: #2e2e2e;
     --fc__primary--light__fg--dark: #dfebf6;
     --fc__primary--light__bg--dark: rgba(19, 134, 96, 0.15);
+    --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75);
     --fc__primary--light__link--dark: white;
     --fc__primary--light__link--dark--hover: #face3d; }
   html.dark.qh__t__blue-shutters {
@@ -880,7 +896,11 @@ html {
     --fc__footer__fg: white;
     --fc__footer__bg: rgba(19, 134, 96, 0.15);
     --fc__primary__bg: #138660;
-    --fc__primary--light__bg: rgba(19, 134, 96, 0.15); }
+    --fc__primary__overlay__bg: rgba(66, 240, 182, 0.75);
+    --fc__primary__overlay__bg: rgba(19, 134, 96, 0.75);
+    --fc__primary--light__bg: rgba(19, 134, 96, 0.15);
+    --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
+    --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75); }
   html.qh__t__misquamicut {
     --fc__official__fg: white;
     --fc__official__bg: #293557;
@@ -969,10 +989,12 @@ html {
     --fc__primary__link--dark--hover: #95bddf;
     --fc__primary--light__fg: #293557;
     --fc__primary--light__bg: #95bddf;
+    --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__primary--light__link: #1b243b;
     --fc__primary--light__link--hover: #141414;
     --fc__primary--light__fg--dark: #95bddf;
     --fc__primary--light__bg--dark: #293557;
+    --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75);
     --fc__primary--light__link--dark: white;
     --fc__primary--light__link--dark--hover: #95bddf; }
   html.dark.qh__t__misquamicut {
@@ -1169,15 +1191,19 @@ html {
       --fc__footer__bg: #404040;
       --fc__footer__copyright__bg: #141414;
       --fc__primary__bg: rgba(235, 82, 82, 0.5);
+      --fc__primary__overlay__bg: rgba(235, 82, 82, 0.75);
       --fc__primary__link--hover: #face3d;
       --fc__primary__fg--dark: #f0eee5;
       --fc__primary__bg--dark: rgba(235, 82, 82, 0.5);
+      --fc__primary__overlay__bg--dark: rgba(142, 51, 57, 0.75);
       --fc__primary__link--dark: white;
       --fc__primary__link--dark--hover: #face3d;
       --fc__primary--light__bg: rgba(235, 82, 82, 0.15);
+      --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
       --fc__primary--light__link--hover: #face3d;
       --fc__primary--light__fg--dark: #f0eee5;
       --fc__primary--light__bg--dark: rgba(235, 82, 82, 0.15);
+      --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75);
       --fc__primary--light__link--dark: #d2cbb2;
       --fc__primary--light__link--dark--hover: #face3d; }
     html:not(.light) .qh__t__wickaboxet {
@@ -1267,10 +1293,14 @@ html {
       --fc__footer__copyright__bg: transparent;
       --fc__primary__fg--dark: #d4d4d4;
       --fc__primary__bg--dark: rgba(149, 189, 223, 0.25);
+      --fc__primary__overlay__bg: rgba(149, 189, 223, 0.75);
+      --fc__primary__overlay__bg--dark: rgba(41, 53, 87, 0.75);
       --fc__primary__link--dark: white;
       --fc__primary__link--dark--hover: #face3d;
       --fc__primary--light__fg--dark: #d4d4d4;
       --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.1);
+      --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
+      --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75);
       --fc__primary--light__link--dark: white;
       --fc__primary--light__link--dark--hover: #face3d; }
     html:not(.light) .qh__t__blue-shutters {
@@ -1318,7 +1348,11 @@ html {
       --fc__footer__fg: white;
       --fc__footer__bg: rgba(19, 134, 96, 0.15);
       --fc__primary__bg: #138660;
-      --fc__primary--light__bg: rgba(19, 134, 96, 0.15); }
+      --fc__primary__overlay__bg: rgba(66, 240, 182, 0.75);
+      --fc__primary__overlay__bg: rgba(19, 134, 96, 0.75);
+      --fc__primary--light__bg: rgba(19, 134, 96, 0.15);
+      --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
+      --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75); }
     html:not(.light) .qh__t__misquamicut {
       --fc__official__fg: #d4d4d4;
       --fc__official__bg: #141414;
@@ -3346,14 +3380,16 @@ table {
     .qh__header-image-action__overlay--text-right {
       justify-content: flex-end; }
     .qh__header-image-action__overlay-inner {
-      color: var(--fc__default__fg);
-      background-color: var(--fc__default__overlay__bg);
       padding: 1.5rem 1rem;
       position: relative;
       z-index: 1; }
       .qh__header-image-action__overlay-inner.qh__tc__primary {
         color: var(--fc__primary__fg);
         background-color: var(--fc__primary__overlay__bg); }
+        @media (prefers-color-scheme: dark) {
+          html:not(.light) .qh__header-image-action__overlay-inner.qh__tc__primary {
+            color: var(--fc__primary__fg--dark);
+            background-color: var(--fc__primary__overlay__bg--dark); } }
         .qh__header-image-action__overlay-inner.qh__tc__primary .qh__btn,
         .qh__header-image-action__overlay-inner.qh__tc__primary .qh__btn:visited {
           background-color: var(--fc__default__button__fg);
@@ -3365,6 +3401,10 @@ table {
       .qh__header-image-action__overlay-inner.qh__tc__primary--light {
         color: var(--fc__primary--light__fg);
         background-color: var(--fc__primary--light__overlay__bg); }
+        @media (prefers-color-scheme: dark) {
+          html:not(.light) .qh__header-image-action__overlay-inner.qh__tc__primary--light {
+            color: var(--fc__primary--light__fg--dark);
+            background-color: var(--fc__primary--light__overlay__bg--dark); } }
       @media (min-width: 75em) {
         .qh__header-image-action__overlay-inner {
           max-width: 600px; } }
