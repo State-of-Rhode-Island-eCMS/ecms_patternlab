@@ -1571,7 +1571,7 @@
           { "fnName": "fg", "colorName": "quahog--light" },
           { "fnName": "bg", "colorName": "ocean--dark" },
           { "fnName": "overlay__bg", "colorName": "cliff-walk--dark--trans75" },
-          { "fnName": "link", "colorName": "cight" },
+          { "fnName": "link", "colorName": "cliff-walk--light" },
           { "fnName": "link--hover", "colorName": "white" },
           { "fnName": "fg--dark", "colorName": "coffee-milk--light" },
           { "fnName": "bg--dark", "colorName": "cliff-walk--darkest" },

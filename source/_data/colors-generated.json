@@ -556,6 +556,7 @@
   "t__blue-shutters__primary__fg": "hsl(0, 0%, 83%)",
   "t__blue-shutters__primary__bg": "hsl(208, 12%, 32%)",
   "t__blue-shutters__primary__overlay__bg": "hsla(160, 85%, 60%, 0.75)",
+  "t__blue-shutters__primary__link": "hsl(160, 75%, 88%)",
   "t__blue-shutters__primary__link--hover": "hsl(0, 0%, 100%)",
   "t__blue-shutters__primary__fg--dark": "hsl(47, 27%, 92%)",
   "t__blue-shutters__primary__bg--dark": "hsl(160, 75%, 30%)",
