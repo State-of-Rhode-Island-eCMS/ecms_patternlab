@@ -78,26 +78,16 @@ $hia-gutter--xxlarge: calc((100vw - #{$content-max-large-screen}) / 2);
 
     // Creates the box effect which inherits height from it's content.
     &-inner {
-      background-color: transparent;
+      color: var(--fc__default__fg);
+      background-color: var(--fc__default__overlay__bg);
       padding: $general-v-spacing $general-h-spacing;
       position: relative;
       z-index: 1;
 
-      &::before {
-        content: '';
-        position: absolute;
-        @include qh-inset-supports(0);
-        opacity: 0.75;
-        z-index: -1;
-      }
-
       // Themes
       &.qh__tc__primary {
         color: var(--fc__primary__fg);
-
-        &::before {
-          background-color: var(--fc__primary__bg);
-        }
+        background-color: var(--fc__primary__overlay__bg);
 
         // If a button is present, it will likely be primary color over primary color
         // Let's flip them
@@ -115,11 +105,8 @@ $hia-gutter--xxlarge: calc((100vw - #{$content-max-large-screen}) / 2);
       }
 
       &.qh__tc__primary--light {
-        color: var(--fc__default__fg);
-
-        &::before {
-          background-color: var(--fc__default__bg);
-        }
+        color: var(--fc__primary--light__fg);
+        background-color: var(--fc__primary--light__overlay__bg);
       }
 
       @include breakpoint-up($bp--xlarge) {

@@ -23,6 +23,12 @@
       "hsl": "hsl(0, 0%, 100%)",
       "needs": "dark-text"
     },
+    "white--trans75": {
+      "name": "White 75% transparent",
+      "hue": "white",
+      "hsl": "hsla(0, 0%, 100%, 0.75)",
+      "needs": "dark-text"
+    },
     "white--trans33": {
       "name": "White 33% transparent",
       "hue": "white",
@@ -61,6 +67,12 @@
       "hue": "black",
       "hsl": "hsl(0, 0%, 8%)",
       "needs": "light-text"
+    },
+    "quahog--dark--trans75": {
+      "name": "Quahog dark 75% transparent",
+      "hue": "black transparent",
+      "hsl": "hsla(0, 0%, 8%, 0.75)",
+      "needs": "dark-text"
     },
     "quahog--dark--trans33": {
       "name": "Quahog dark 33% transparent",
@@ -125,6 +137,12 @@
       "hsl": "hsl(224, 36%, 25%)",
       "needs": "light-text"
     },
+    "navy--trans75": {
+      "name": "Navy 75% transparent",
+      "hue": "blue",
+      "hsl": "hsla(224, 36%, 25%, 0.75)",
+      "needs": "light-text"
+    },
     "navy--trans50": {
       "name": "Navy 50% transparent",
       "hue": "blue",
@@ -170,6 +188,12 @@
       "hsl": "hsl(356, 47%, 38%)",
       "needs": "light-text"
     },
+    "rhody-red--dark--trans75": {
+      "name": "Rhody Red dark 75% transparent",
+      "hue": "maroon transparent",
+      "hsl": "hsla(356, 47%, 38%, 0.75)",
+      "needs": "light-text"
+    },
     "rhody-red": {
       "name": "Rhody Red",
       "hue": "red",
@@ -180,6 +204,12 @@
       "name": "Rhody Red 50% transparent",
       "hue": "red transparent",
       "hsl": "hsla(360, 79%, 62%, 0.5)",
+      "needs": "dark-text"
+    },
+    "rhody-red--trans75": {
+      "name": "Rhody Red 75% transparent",
+      "hue": "red transparent",
+      "hsl": "hsla(360, 79%, 62%, 0.75)",
       "needs": "dark-text"
     },
     "rhody-red--trans15": {
@@ -215,10 +245,16 @@
       "hsl": "hsl(110, 59%, 30%)",
       "needs": "light-text"
     },
+    "green-animals--trans75": {
+      "name": "Green Animals 75% transparent",
+      "hue": "green",
+      "hsl": "hsla(110, 49%, 51%, 0.75)",
+      "needs": "dark-text"
+    },
     "green-animals--trans15": {
       "name": "Green Animals 15% transparent",
       "hue": "green",
-      "hsl": "hsla(110, 49%, 51%, 0.14)",
+      "hsl": "hsla(110, 49%, 51%, 0.15)",
       "needs": "dark-text"
     },
     #
@@ -242,8 +278,14 @@
       "hsl": "hsl(160, 85%, 60%)",
       "needs": "dark-text"
     },
+    "cliff-walk--dark--trans75": {
+      "name": "Cliff Walk 75% transparent",
+      "hue": "blue green",
+      "hsl": "hsla(160, 85%, 60%, 0.75)",
+      "needs": "dark-text"
+    },
     "cliff-walk--dark--trans25": {
-      "name": "Cliff Walk 33% transparent",
+      "name": "Cliff Walk 25% transparent",
       "hue": "blue green",
       "hsl": "hsla(160, 85%, 60%, 0.25)",
       "needs": "dark-text"
@@ -285,6 +327,12 @@
       "name": "Ocean State light",
       "hue": "light blue",
       "hsl": "hsl(208, 58%, 92%)",
+      "needs": "dark-text"
+    },
+    "ocean--trans75": {
+      "name": "Ocean State 75% transparent",
+      "hue": "medium blue",
+      "hsl": "hsla(208, 54%, 73%, 0.75)",
       "needs": "dark-text"
     },
     "ocean--trans25": {
@@ -378,6 +426,7 @@
         "default": [
           { "fnName": "fg", "colorName": "quahog" },
           { "fnName": "bg", "colorName": "white" },
+          { "fnName": "overlay__bg", "colorName": "white--trans75" },
           { "fnName": "border", "colorName": "quahog--dark--trans15" },
           { "fnName": "link", "colorName": "navy--sat" },
           { "fnName": "link--hover", "colorName": "navy--sat-lgt" },
@@ -474,6 +523,7 @@
         "primary": [
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "navy" },
+          { "fnName": "overlay__bg", "colorName": "navy--trans75" },
           { "fnName": "link", "colorName": "navy--light" },
           { "fnName": "link--hover", "colorName": "hope-gold" },
           { "fnName": "fg--dark", "colorName": "white" },
@@ -484,6 +534,7 @@
         "primary--light": [
           { "fnName": "fg", "colorName": "navy" },
           { "fnName": "bg", "colorName": "ocean--trans25" },
+          { "fnName": "overlay__bg", "colorName": "ocean--trans75" },
           { "fnName": "link", "colorName": "navy--dark" },
           { "fnName": "link--hover", "colorName": "quahog--darker" },
           { "fnName": "fg--dark", "colorName": "coffee-milk--light" },
@@ -537,6 +588,7 @@
         "default": [
           { "fnName": "fg", "colorName": "coffee-milk--light" },
           { "fnName": "bg", "colorName": "quahog--dark" },
+          { "fnName": "overlay__bg", "colorName": "quahog--dark--trans75" },
           { "fnName": "border", "colorName": "white--trans25" },
           { "fnName": "link", "colorName": "ocean" },
           { "fnName": "link--hover", "colorName": "hope-gold" },
@@ -610,12 +662,14 @@
         "primary": [
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "navy--trans50" },
+          { "fnName": "overlay__bg", "colorName": "navy--trans75" },
           { "fnName": "link", "colorName": "navy--light" },
           { "fnName": "link--hover", "colorName": "hope-gold" }
         ],
         "primary--light": [
           { "fnName": "fg", "colorName": "coffee-milk--light" },
           { "fnName": "bg", "colorName": "ocean--trans25" },
+          { "fnName": "overlay__bg", "colorName": "ocean--trans75" },
           { "fnName": "link", "colorName": "white" },
           { "fnName": "link--hover", "colorName": "hope-gold" }
         ]
@@ -664,6 +718,7 @@
         "default": [
           #{ "fnName": "fg", "colorName": "quahog" },
           { "fnName": "bg", "colorName": "white" },
+          { "fnName": "overlay__bg", "colorName": "white--trans75" },
           #{ "fnName": "border", "colorName": "quahog--dark--trans15" },
           #{ "fnName": "link", "colorName": "navy--sat" },
           #{ "fnName": "link--hover", "colorName": "navy--sat-lgt" },
@@ -732,6 +787,7 @@
         "primary": [
           { "fnName": "fg", "colorName": "coffee-milk" },
           { "fnName": "bg", "colorName": "rhody-red--dark" },
+          { "fnName": "overlay__bg", "colorName": "rhody-red--dark--trans75" },
           { "fnName": "link", "colorName": "coffee-milk--light" },
           { "fnName": "link--hover", "colorName": "hope-gold" },
           { "fnName": "fg--dark", "colorName": "coffee-milk--light" },
@@ -742,6 +798,7 @@
         "primary--light": [
           { "fnName": "fg", "colorName": "quahog" },
           { "fnName": "bg", "colorName": "rhody-red--trans15" },
+          { "fnName": "overlay__bg", "colorName": "rhody-red--trans75" },
           { "fnName": "link", "colorName": "quahog--dark" },
           { "fnName": "link--hover", "colorName": "navy--sat" },
           { "fnName": "fg--dark", "colorName": "coffee-milk--light" },
@@ -797,6 +854,7 @@
         "default": [
           #{ "fnName": "fg", "colorName": "coffee-milk--light" },
           { "fnName": "bg", "colorName": "quahog--dark" },
+          { "fnName": "overlay__bg", "colorName": "quahog--dark--trans75" },
           #{ "fnName": "border", "colorName": "white--trans25" },
           #{ "fnName": "link", "colorName": "ocean" },
           #{ "fnName": "link--hover", "colorName": "hope-gold" },
@@ -849,6 +907,7 @@
         "primary": [
           #{ "fnName": "fg", "colorName": "coffee-milk--light" },
           { "fnName": "bg", "colorName": "rhody-red--trans50" },
+          { "fnName": "overlay__bg", "colorName": "rhody-red--trans75" },
           #{ "fnName": "link", "colorName": "white" },
           { "fnName": "link--hover", "colorName": "hope-gold" },
           { "fnName": "fg--dark", "colorName": "coffee-milk--light" },
@@ -859,6 +918,7 @@
         "primary--light": [
           #{ "fnName": "fg", "colorName": "coffee-milk--light" },
           { "fnName": "bg", "colorName": "rhody-red--trans15" },
+          { "fnName": "overlay__bg", "colorName": "rhody-red--trans75" },
           #{ "fnName": "link", "colorName": "coffee-milk" },
           { "fnName": "link--hover", "colorName": "hope-gold" },
           { "fnName": "fg--dark", "colorName": "coffee-milk--light" },
@@ -912,6 +972,7 @@
         "default": [
           #{ "fnName": "fg", "colorName": "quahog" },
           { "fnName": "bg", "colorName": "white" },
+          { "fnName": "overlay__bg", "colorName": "white--trans75" },
           #{ "fnName": "border", "colorName": "quahog--dark--trans15" },
           #{ "fnName": "link", "colorName": "navy--sat" },
           #{ "fnName": "link--hover", "colorName": "navy--sat-lgt" },
@@ -977,7 +1038,8 @@
         ],
         "primary": [
           { "fnName": "fg", "colorName": "quahog--dark" },
-          { "fnName": "bg", "colorName": "green-animals" }
+          { "fnName": "bg", "colorName": "green-animals" },
+          { "fnName": "overlay__bg", "colorName": "green-animals--trans75" },
           { "fnName": "link", "colorName": "navy--dark" },
           { "fnName": "link--hover", "colorName": "quahog--darker" },
           { "fnName": "fg--dark", "colorName": "coffee-milk--light" },
@@ -988,6 +1050,7 @@
         "primary--light": [
           #{ "fnName": "fg", "colorName": "navy" },
           { "fnName": "bg", "colorName": "green-animals--trans15" }
+          { "fnName": "overlay__bg", "colorName": "green-animals--trans75" },
           { "fnName": "link", "colorName": "green-animals--dark" },
           #{ "fnName": "link--hover", "colorName": "quahog--darker" },
           #{ "fnName": "fg--dark", "colorName": "coffee-milk--light" },
@@ -1039,6 +1102,7 @@
         "default": [
           { "fnName": "fg", "colorName": "coffee-milk--light" },
           { "fnName": "bg", "colorName": "quahog--dark" },
+          { "fnName": "overlay__bg", "colorName": "quahog--dark--trans75" },
           { "fnName": "border", "colorName": "white--trans25" },
           { "fnName": "link", "colorName": "ocean" },
           { "fnName": "link--hover", "colorName": "hope-gold" },
@@ -1105,12 +1169,14 @@
         "primary": [
           { "fnName": "fg", "colorName": "coffee-milk--light" },
           { "fnName": "bg", "colorName": "green-animals--dark" },
+          { "fnName": "overlay__bg", "colorName": "green-animals--trans75" },
           { "fnName": "link", "colorName": "white" },
           #{ "fnName": "link--hover", "colorName": "hope-gold" }
         ],
         "primary--light": [
           #{ "fnName": "fg", "colorName": "coffee-milk--light" },
           { "fnName": "bg", "colorName": "green-animals--trans15" },
+          { "fnName": "overlay__bg", "colorName": "green-animals--trans75" },
           #{ "fnName": "link", "colorName": "white" },
           #{ "fnName": "link--hover", "colorName": "hope-gold" }
         ]
@@ -1160,6 +1226,7 @@
         "default": [
           { "fnName": "fg", "colorName": "quahog" },
           { "fnName": "bg", "colorName": "white" },
+          { "fnName": "overlay__bg", "colorName": "white--trans75" },
           #{ "fnName": "border", "colorName": "quahog--dark--trans15" },
           #{ "fnName": "link", "colorName": "navy--sat" },
           #{ "fnName": "link--hover", "colorName": "navy--sat-lgt" },
@@ -1228,6 +1295,7 @@
         "primary": [
           { "fnName": "fg", "colorName": "navy" },
           { "fnName": "bg", "colorName": "ocean--trans25" }, # equivalent to #e5eff7
+          { "fnName": "overlay__bg", "colorName": "ocean--trans75" },
           { "fnName": "link", "colorName": "navy--sat" },
           { "fnName": "link--hover", "colorName": "navy--dark" },
           { "fnName": "fg--dark", "colorName": "quahog--light" },
@@ -1238,6 +1306,7 @@
         "primary--light": [
           { "fnName": "fg", "colorName": "navy" },
           { "fnName": "bg", "colorName": "ocean--trans10" },
+          { "fnName": "overlay__bg", "colorName": "ocean--trans75" },
           { "fnName": "link", "colorName": "navy--sat" },
           { "fnName": "link--hover", "colorName": "navy--dark" },
           { "fnName": "fg--dark", "colorName": "quahog--light" },
@@ -1290,6 +1359,7 @@
         "default": [
           { "fnName": "fg", "colorName": "coffee-milk--light" },
           { "fnName": "bg", "colorName": "quahog--dark" },
+          { "fnName": "overlay__bg", "colorName": "quahog--dark--trans75" },
           { "fnName": "border", "colorName": "white--trans25" },
           { "fnName": "link", "colorName": "ocean" },
           { "fnName": "link--hover", "colorName": "hope-gold" },
@@ -1358,12 +1428,14 @@
         "primary": [
           { "fnName": "fg--dark", "colorName": "quahog--light" },
           { "fnName": "bg--dark", "colorName": "ocean--trans25" },
+          { "fnName": "overlay__bg", "colorName": "ocean--trans75" },
           { "fnName": "link--dark", "colorName": "white" },
           { "fnName": "link--dark--hover", "colorName": "hope-gold" }
         ],
         "primary--light": [
           { "fnName": "fg--dark", "colorName": "quahog--light" },
           { "fnName": "bg--dark", "colorName": "ocean--trans10" },
+          { "fnName": "overlay__bg", "colorName": "ocean--trans75" },
           { "fnName": "link--dark", "colorName": "white" },
           { "fnName": "link--dark--hover", "colorName": "hope-gold" }
         ]
@@ -1411,6 +1483,7 @@
         "default": [
           #{ "fnName": "fg", "colorName": "quahog" },
           #{ "fnName": "bg", "colorName": "white" },
+          { "fnName": "overlay__bg", "colorName": "white--trans75" },
           #{ "fnName": "border", "colorName": "quahog--dark--trans15" },
           #{ "fnName": "link", "colorName": "navy--sat" },
           #{ "fnName": "link--hover", "colorName": "navy--sat-lgt" },
@@ -1479,17 +1552,18 @@
         "primary": [
           { "fnName": "fg", "colorName": "quahog--light" },
           { "fnName": "bg", "colorName": "ocean--dark" },
+          { "fnName": "overlay__bg", "colorName": "ocean--trans75" },
           { "fnName": "link", "colorName": "cliff-walk--light" },
           { "fnName": "link--hover", "colorName": "white" },
           { "fnName": "fg--dark", "colorName": "coffee-milk--light" },
           { "fnName": "bg--dark", "colorName": "cliff-walk--darkest" },
           { "fnName": "link--dark", "colorName": "white" },
           { "fnName": "link--dark--hover", "colorName": "hope-gold" }
-
         ],
         "primary--light": [
           { "fnName": "fg", "colorName": "ocean--dark" },
           { "fnName": "bg", "colorName": "cliff-walk--light" },
+          { "fnName": "overlay__bg", "colorName": "cliff-walk--dark--trans75" },
           { "fnName": "link", "colorName": "navy" },
           { "fnName": "link--hover", "colorName": "quahog--dark" },
           { "fnName": "fg--dark", "colorName": "ocean--light" },
@@ -1541,6 +1615,7 @@
         "default": [
           { "fnName": "fg", "colorName": "coffee-milk--light" },
           { "fnName": "bg", "colorName": "quahog--dark" },
+          { "fnName": "overlay__bg", "colorName": "quahog--dark--trans75" },
           { "fnName": "border", "colorName": "white--trans25" },
           { "fnName": "link", "colorName": "ocean" },
           { "fnName": "link--hover", "colorName": "hope-gold" },
@@ -1609,13 +1684,14 @@
         "primary": [
           #{ "fnName": "fg", "colorName": "coffee-milk--light" },
           { "fnName": "bg", "colorName": "cliff-walk--darkest" },
+          { "fnName": "overlay__bg", "colorName": "cliff-walk--dark--trans75" },
           #{ "fnName": "link", "colorName": "white" },
           #{ "fnName": "link--hover", "colorName": "hope-gold" }
-
         ],
         "primary--light": [
           #{ "fnName": "fg", "colorName": "ocean--light" },
           { "fnName": "bg", "colorName": "cliff-walk--darkest--trans15" },
+          { "fnName": "overlay__bg", "colorName": "cliff-walk--dark--trans75" },
           #{ "fnName": "link", "colorName": "white" },
           #{ "fnName": "link--hover", "colorName": "hope-gold" }
         ]
@@ -1661,6 +1737,7 @@
         "default": [
           { "fnName": "fg", "colorName": "quahog" },
           { "fnName": "bg", "colorName": "white" },
+          { "fnName": "overlay__bg", "colorName": "white--trans75" },
           { "fnName": "border", "colorName": "quahog--dark--trans15" },
           { "fnName": "link", "colorName": "navy--sat" },
           { "fnName": "link--hover", "colorName": "navy--sat-lgt" },
@@ -1757,6 +1834,7 @@
         "primary": [
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "navy" },
+          { "fnName": "overlay__bg", "colorName": "navy--trans75" },
           { "fnName": "link", "colorName": "ocean" },
           { "fnName": "link--hover", "colorName": "ocean" },
           { "fnName": "fg--dark", "colorName": "white" },
@@ -1767,6 +1845,7 @@
         "primary--light": [
           { "fnName": "fg", "colorName": "navy" },
           { "fnName": "bg", "colorName": "ocean" },
+          { "fnName": "overlay__bg", "colorName": "ocean--trans75" },
           { "fnName": "link", "colorName": "navy--dark" },
           { "fnName": "link--hover", "colorName": "quahog--darker" },
           { "fnName": "fg--dark", "colorName": "navy" },
@@ -1820,6 +1899,7 @@
         "default": [
           { "fnName": "fg", "colorName": "coffee-milk--light" },
           { "fnName": "bg", "colorName": "quahog--dark" },
+          { "fnName": "overlay__bg", "colorName": "quahog--dark--trans75" },
           { "fnName": "border", "colorName": "white--trans25" },
           { "fnName": "link", "colorName": "ocean" },
           { "fnName": "link--hover", "colorName": "hope-gold" },
@@ -1892,12 +1972,14 @@
         "primary": [
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "navy--trans50" },
+          { "fnName": "overlay__bg", "colorName": "navy--trans75" },
           { "fnName": "link", "colorName": "navy--light" },
           { "fnName": "link--hover", "colorName": "hope-gold" }
         ],
         "primary--light": [
           { "fnName": "fg", "colorName": "coffee-milk--light" },
           { "fnName": "bg", "colorName": "ocean--trans25" },
+          { "fnName": "overlay__bg", "colorName": "ocean--trans75" },
           { "fnName": "link", "colorName": "white" },
           { "fnName": "link--hover", "colorName": "hope-gold" }
         ]
