@@ -10,6 +10,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-517: Add default, primary, and primary--light overlay__bg variables for all themes
 
 ### Changed
 - RIGA-517: Changed Misquamicut Beach (light) footer text color for better contrast
