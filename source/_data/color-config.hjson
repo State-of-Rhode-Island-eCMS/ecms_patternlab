@@ -1054,11 +1054,11 @@
           { "fnName": "overlay__bg", "colorName": "green-animals--trans75" },
           { "fnName": "link", "colorName": "navy--dark" },
           { "fnName": "link--hover", "colorName": "quahog--darker" },
-          { "fnName": "fg--dark", "colorName": "coffee-milk--light" },
+          { "fnName": "fg--dark", "colorName": "quahog--dark" },
           { "fnName": "bg--dark", "colorName": "green-animals--dark" },
           { "fnName": "overlay__bg--dark", "colorName": "green-animals--trans75" },
-          { "fnName": "link--dark", "colorName": "white" }
-          #{ "fnName": "link--dark--hover", "colorName": "hope-gold" }
+          { "fnName": "link--dark", "colorName": "navy--dark" },
+          { "fnName": "link--dark--hover", "colorName": "quahog--darker" },
         ],
         "primary--light": [
           #{ "fnName": "fg", "colorName": "navy" },

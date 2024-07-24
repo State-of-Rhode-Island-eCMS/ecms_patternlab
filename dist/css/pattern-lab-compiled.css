@@ -600,10 +600,11 @@ html {
     --fc__primary__overlay__bg: rgba(89, 191, 69, 0.75);
     --fc__primary__link: #1b243b;
     --fc__primary__link--hover: #141414;
-    --fc__primary__fg--dark: #f0eee5;
+    --fc__primary__fg--dark: #2e2e2e;
     --fc__primary__bg--dark: #2e7a1f;
     --fc__primary__overlay__bg--dark: rgba(89, 191, 69, 0.75);
-    --fc__primary__link--dark: white;
+    --fc__primary__link--dark: #1b243b;
+    --fc__primary__link--dark--hover: #141414;
     --fc__primary--light__bg: rgba(89, 191, 69, 0.15);
     --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__primary--light__link: #2e7a1f;
