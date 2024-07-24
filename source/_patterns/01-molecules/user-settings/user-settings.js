@@ -80,6 +80,26 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
+  var qh_userlanguage_btn = document.getElementById('js__user-language__toggle');
+  //console.log('qh_userlanguage_btn: ' + qh_userlanguage_btn);
+  if (qh_userlanguage_btn !== null && qh_userlanguage_btn !== undefined) {
+    //console.log('qh_userlanguage_btn is not null or undefined');
+    qh_userlanguage_btn.addEventListener('click', function(event) {
+      // a11yClick function restricts keypress to spacebar or enter
+      if (a11yClick(event) === true) {
+        var expanded = qh_userlanguage_btn.getAttribute('aria-expanded');
+        if (expanded == 'true') {
+          qh_userlanguage_btn.setAttribute('aria-expanded', 'false');
+          deactivatePageOverlay();
+        } else {
+          allMenuCloser();
+          qh_userlanguage_btn.setAttribute('aria-expanded', 'true');
+          activatePageOverlay();
+        }
+      }
+    });
+  }
+
 
   // Light mode settings
   const lightModeToggle = document.getElementById('light_mode_switch');

@@ -199,11 +199,14 @@ body {
 
 html {
   --c__white: white;
+  --c__white--trans75: rgba(255, 255, 255, 0.75);
   --c__white--trans33: rgba(255, 255, 255, 0.33);
   --c__white--trans25: rgba(255, 255, 255, 0.25);
   --c__white--trans15: rgba(255, 255, 255, 0.15);
   --c__transparent: transparent;
+  --c__quahog--black: black;
   --c__quahog--darker: #141414;
+  --c__quahog--dark--trans75: rgba(20, 20, 20, 0.75);
   --c__quahog--dark--trans33: rgba(20, 20, 20, 0.33);
   --c__quahog--dark--trans25: rgba(20, 20, 20, 0.25);
   --c__quahog--dark--trans15: rgba(20, 20, 20, 0.15);
@@ -214,6 +217,7 @@ html {
   --c__quahog--lightest: #f2f2f2;
   --c__navy--dark: #1b243b;
   --c__navy: #293557;
+  --c__navy--trans75: rgba(41, 53, 87, 0.75);
   --c__navy--trans50: rgba(41, 53, 87, 0.5);
   --c__navy--light: #95a9df;
   --c__navy--sat: #1440b8;
@@ -221,17 +225,22 @@ html {
   --c__navy--warm: #5c55be;
   --c__navy--wrm-lgt: #bbacec;
   --c__rhody-red--dark: #8e3339;
+  --c__rhody-red--dark--trans75: rgba(142, 51, 57, 0.75);
   --c__rhody-red: #eb5252;
   --c__rhody-red--trans50: rgba(235, 82, 82, 0.5);
+  --c__rhody-red--trans75: rgba(235, 82, 82, 0.75);
   --c__rhody-red--trans15: rgba(235, 82, 82, 0.15);
   --c__calamari: #ff8e47;
   --c__hope-gold: #face3d;
   --c__green-animals: #59bf45;
   --c__green-animals--dark: #2e7a1f;
-  --c__green-animals--trans15: rgba(89, 191, 69, 0.14);
+  --c__green-animals--trans75: rgba(89, 191, 69, 0.75);
+  --c__green-animals--trans15: rgba(89, 191, 69, 0.15);
   --c__cliff-walk--darkest: #138660;
+  --c__cliff-walk--darkest--trans75: rgba(19, 134, 96, 0.75);
   --c__cliff-walk--darkest--trans15: rgba(19, 134, 96, 0.15);
   --c__cliff-walk--dark: #42f0b6;
+  --c__cliff-walk--dark--trans75: rgba(66, 240, 182, 0.75);
   --c__cliff-walk--dark--trans25: rgba(66, 240, 182, 0.25);
   --c__cliff-walk: #7affd3;
   --c__cliff-walk--light: #c9f7e8;
@@ -239,6 +248,7 @@ html {
   --c__ocean--medium: #5994cf;
   --c__ocean: #95bddf;
   --c__ocean--light: #dfebf6;
+  --c__ocean--trans75: rgba(149, 189, 223, 0.75);
   --c__ocean--trans25: rgba(149, 189, 223, 0.25);
   --c__ocean--trans10: rgba(149, 189, 223, 0.1);
   --c__coffee-milk: #d2cbb2;
@@ -270,6 +280,7 @@ html {
   --fc__nav-main__icon__fg--hover: #293557;
   --fc__default__fg: #404040;
   --fc__default__bg: white;
+  --fc__default__overlay__bg: rgba(255, 255, 255, 0.75);
   --fc__default__border: rgba(20, 20, 20, 0.15);
   --fc__default__link: #1440b8;
   --fc__default__link--hover: #476cd1;
@@ -301,7 +312,7 @@ html {
   --fc__nav-minor__link--active: #ff8e47;
   --fc__nav-minor__sub__bg: rgba(255, 255, 255, 0.25);
   --fc__notification__fg: #1b243b;
-  --fc__notification__bg: #ff8e47;
+  --fc__notification__bg: #face3d;
   --fc__notification__icon: #293557;
   --fc__notification__link: #1b243b;
   --fc__notification__link--hover: #1440b8;
@@ -321,18 +332,22 @@ html {
   --fc__footer__copyright__bg: #141414;
   --fc__primary__fg: white;
   --fc__primary__bg: #293557;
+  --fc__primary__overlay__bg: rgba(41, 53, 87, 0.75);
   --fc__primary__link: #95a9df;
   --fc__primary__link--hover: #face3d;
   --fc__primary__fg--dark: white;
   --fc__primary__bg--dark: rgba(41, 53, 87, 0.5);
+  --fc__primary__overlay__bg--dark: rgba(41, 53, 87, 0.75);
   --fc__primary__link--dark: #95a9df;
   --fc__primary__link--dark--hover: #face3d;
   --fc__primary--light__fg: #293557;
   --fc__primary--light__bg: rgba(149, 189, 223, 0.25);
+  --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
   --fc__primary--light__link: #1b243b;
   --fc__primary--light__link--hover: #141414;
   --fc__primary--light__fg--dark: #f0eee5;
   --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.25);
+  --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75);
   --fc__primary--light__link--dark: white;
   --fc__primary--light__link--dark--hover: #face3d; }
   html.dark {
@@ -360,6 +375,7 @@ html {
     --fc__nav-main__icon__fg--hover: #1b243b;
     --fc__default__fg: #f0eee5;
     --fc__default__bg: #2e2e2e;
+    --fc__default__overlay__bg: rgba(20, 20, 20, 0.75);
     --fc__default__border: rgba(255, 255, 255, 0.25);
     --fc__default__link: #95bddf;
     --fc__default__link--hover: #face3d;
@@ -381,7 +397,7 @@ html {
     --fc__nav-minor__link--focus: #face3d;
     --fc__nav-minor__link--active: #face3d;
     --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.33);
-    --fc__notification__bg: #ff8e47;
+    --fc__notification__bg: #face3d;
     --fc__accordion__icon__fg: #141414;
     --fc__accordion__icon__bg: #ff8e47;
     --fc__attention-card__fg: #f0eee5;
@@ -424,6 +440,7 @@ html {
     --fc__nav-main__icon__bg--hover: #eb5252;
     --fc__nav-main__icon__fg--hover: #141414;
     --fc__default__bg: white;
+    --fc__default__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__default__violator: #ff8e47;
     --fc__default__accent: #face3d;
     --fc__default__accent__fg: #2e2e2e;
@@ -440,7 +457,7 @@ html {
     --fc__nav-minor__link--active: #eb5252;
     --fc__nav-minor__sub__bg: rgba(255, 255, 255, 0.25);
     --fc__notification__fg: #293557;
-    --fc__notification__bg: #95bddf;
+    --fc__notification__bg: #face3d;
     --fc__notification__link--hover: #8e3339;
     --fc__notification__link--focus: #293557;
     --fc__notification__link--active: #ff8e47;
@@ -456,18 +473,22 @@ html {
     --fc__footer__copyright__bg: #141414;
     --fc__primary__fg: #d2cbb2;
     --fc__primary__bg: #8e3339;
+    --fc__primary__overlay__bg: rgba(235, 82, 82, 0.75);
     --fc__primary__link: #f0eee5;
     --fc__primary__link--hover: #face3d;
     --fc__primary__fg--dark: #f0eee5;
     --fc__primary__bg--dark: rgba(235, 82, 82, 0.5);
+    --fc__primary__overlay__bg--dark: rgba(142, 51, 57, 0.75);
     --fc__primary__link--dark: white;
     --fc__primary__link--dark--hover: #face3d;
     --fc__primary--light__fg: #404040;
     --fc__primary--light__bg: rgba(235, 82, 82, 0.15);
+    --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__primary--light__link: #2e2e2e;
     --fc__primary--light__link--hover: #1440b8;
     --fc__primary--light__fg--dark: #f0eee5;
     --fc__primary--light__bg--dark: rgba(235, 82, 82, 0.15);
+    --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75);
     --fc__primary--light__link--dark: #d2cbb2;
     --fc__primary--light__link--dark--hover: #face3d; }
   html.dark.qh__t__federal-hill {
@@ -494,6 +515,7 @@ html {
     --fc__nav-main__icon__bg--hover: #eb5252;
     --fc__nav-main__icon__fg--hover: #2e2e2e;
     --fc__default__bg: #2e2e2e;
+    --fc__default__overlay__bg: rgba(20, 20, 20, 0.75);
     --fc__default__button--hover__fg: #face3d;
     --fc__nav-minor__border: #8e3339;
     --fc__nav-minor__fg: #d4d4d4;
@@ -512,15 +534,19 @@ html {
     --fc__footer__bg: #404040;
     --fc__footer__copyright__bg: #141414;
     --fc__primary__bg: rgba(235, 82, 82, 0.5);
+    --fc__primary__overlay__bg: rgba(235, 82, 82, 0.75);
     --fc__primary__link--hover: #face3d;
     --fc__primary__fg--dark: #f0eee5;
     --fc__primary__bg--dark: rgba(235, 82, 82, 0.5);
+    --fc__primary__overlay__bg--dark: rgba(142, 51, 57, 0.75);
     --fc__primary__link--dark: white;
     --fc__primary__link--dark--hover: #face3d;
     --fc__primary--light__bg: rgba(235, 82, 82, 0.15);
+    --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__primary--light__link--hover: #face3d;
     --fc__primary--light__fg--dark: #f0eee5;
     --fc__primary--light__bg--dark: rgba(235, 82, 82, 0.15);
+    --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75);
     --fc__primary--light__link--dark: #d2cbb2;
     --fc__primary--light__link--dark--hover: #face3d; }
   html.qh__t__wickaboxet {
@@ -537,11 +563,12 @@ html {
     --fc__nav-main__link--hover: #2e7a1f;
     --fc__nav-main__link--focus: #141414;
     --fc__nav-main__link--active: #1440b8;
-    --fc__nav-main__link__sub--hover__bg: rgba(89, 191, 69, 0.14);
+    --fc__nav-main__link__sub--hover__bg: rgba(89, 191, 69, 0.15);
     --fc__nav-main__icon__fg: #141414;
     --fc__nav-main__icon__bg--hover: #2e7a1f;
     --fc__nav-main__icon__fg--hover: white;
     --fc__default__bg: white;
+    --fc__default__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__default__link--active: #59bf45;
     --fc__default__hx__fg: #2e7a1f;
     --fc__default__violator: #ff8e47;
@@ -551,9 +578,9 @@ html {
     --fc__default__button--hover__bg: #2e7a1f;
     --fc__default__button--hover__fg: white;
     --fc__nav-minor__border: #59bf45;
-    --fc__nav-minor__bg: rgba(89, 191, 69, 0.14);
+    --fc__nav-minor__bg: rgba(89, 191, 69, 0.15);
     --fc__nav-minor__link--hover: #1440b8;
-    --fc__nav-minor__link--hover__bg: rgba(89, 191, 69, 0.14);
+    --fc__nav-minor__link--hover__bg: rgba(89, 191, 69, 0.15);
     --fc__nav-minor__link--focus: #face3d;
     --fc__notification__fg: #2e2e2e;
     --fc__notification__bg: #face3d;
@@ -570,18 +597,23 @@ html {
     --fc__footer__bg: #2e2e2e;
     --fc__primary__fg: #2e2e2e;
     --fc__primary__bg: #59bf45;
+    --fc__primary__overlay__bg: rgba(89, 191, 69, 0.75);
     --fc__primary__link: #1b243b;
     --fc__primary__link--hover: #141414;
-    --fc__primary__fg--dark: #f0eee5;
+    --fc__primary__fg--dark: #2e2e2e;
     --fc__primary__bg--dark: #2e7a1f;
-    --fc__primary__link--dark: white;
-    --fc__primary--light__bg: rgba(89, 191, 69, 0.14);
+    --fc__primary__overlay__bg--dark: rgba(89, 191, 69, 0.75);
+    --fc__primary__link--dark: #1b243b;
+    --fc__primary__link--dark--hover: #141414;
+    --fc__primary--light__bg: rgba(89, 191, 69, 0.15);
+    --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__primary--light__link: #2e7a1f;
-    --fc__primary--light__bg--dark: rgba(89, 191, 69, 0.14); }
+    --fc__primary--light__bg--dark: rgba(89, 191, 69, 0.15);
+    --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75); }
   html.dark.qh__t__wickaboxet {
     --fc__official__bg: #141414;
     --fc__header__fg: #f0eee5;
-    --fc__header__bg: rgba(89, 191, 69, 0.14);
+    --fc__header__bg: rgba(89, 191, 69, 0.15);
     --fc__header__link: #f0eee5;
     --fc__header__link--hover: white;
     --fc__header__social__link: #59bf45;
@@ -599,6 +631,7 @@ html {
     --fc__nav-main__icon__fg--hover: #141414;
     --fc__default__fg: #f0eee5;
     --fc__default__bg: #2e2e2e;
+    --fc__default__overlay__bg: rgba(20, 20, 20, 0.75);
     --fc__default__border: rgba(255, 255, 255, 0.25);
     --fc__default__link: #95bddf;
     --fc__default__link--hover: #face3d;
@@ -608,7 +641,7 @@ html {
     --fc__default__hx__fg: #59bf45;
     --fc__default__text-accent: white;
     --fc__nav-minor__fg: #d2cbb2;
-    --fc__nav-minor__bg: rgba(89, 191, 69, 0.14);
+    --fc__nav-minor__bg: rgba(89, 191, 69, 0.15);
     --fc__nav-minor__link: #f0eee5;
     --fc__nav-minor__link--hover: white;
     --fc__nav-minor__link--active: #face3d;
@@ -621,7 +654,7 @@ html {
     --fc__primary__fg: #f0eee5;
     --fc__primary__bg: #2e7a1f;
     --fc__primary__link: white;
-    --fc__primary--light__bg: rgba(89, 191, 69, 0.14); }
+    --fc__primary--light__bg: rgba(89, 191, 69, 0.15); }
   html.qh__t__block-island {
     --fc__official__fg: #d4d4d4;
     --fc__official__bg: #404040;
@@ -641,6 +674,7 @@ html {
     --fc__nav-main__link__sub--hover__bg: rgba(149, 189, 223, 0.1);
     --fc__default__fg: #404040;
     --fc__default__bg: white;
+    --fc__default__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__default__link--active: #eb5252;
     --fc__default__hx__fg: #476cd1;
     --fc__default__violator: #eb5252;
@@ -674,18 +708,22 @@ html {
     --fc__footer__copyright__bg: #dfebf6;
     --fc__primary__fg: #293557;
     --fc__primary__bg: rgba(149, 189, 223, 0.25);
+    --fc__primary__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__primary__link: #1440b8;
     --fc__primary__link--hover: #1b243b;
     --fc__primary__fg--dark: #d4d4d4;
     --fc__primary__bg--dark: rgba(149, 189, 223, 0.25);
+    --fc__primary__overlay__bg--dark: rgba(41, 53, 87, 0.75);
     --fc__primary__link--dark: white;
     --fc__primary__link--dark--hover: #face3d;
     --fc__primary--light__fg: #293557;
     --fc__primary--light__bg: rgba(149, 189, 223, 0.1);
+    --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__primary--light__link: #1440b8;
     --fc__primary--light__link--hover: #1b243b;
     --fc__primary--light__fg--dark: #d4d4d4;
     --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.1);
+    --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75);
     --fc__primary--light__link--dark: white;
     --fc__primary--light__link--dark--hover: #face3d; }
   html.dark.qh__t__block-island {
@@ -706,6 +744,7 @@ html {
     --fc__nav-main__icon__fg--hover: #293557;
     --fc__default__fg: #f0eee5;
     --fc__default__bg: #2e2e2e;
+    --fc__default__overlay__bg: rgba(20, 20, 20, 0.75);
     --fc__default__border: rgba(255, 255, 255, 0.25);
     --fc__default__link: #95bddf;
     --fc__default__link--hover: #face3d;
@@ -729,10 +768,14 @@ html {
     --fc__footer__copyright__bg: transparent;
     --fc__primary__fg--dark: #d4d4d4;
     --fc__primary__bg--dark: rgba(149, 189, 223, 0.25);
+    --fc__primary__overlay__bg: rgba(149, 189, 223, 0.75);
+    --fc__primary__overlay__bg--dark: rgba(41, 53, 87, 0.75);
     --fc__primary__link--dark: white;
     --fc__primary__link--dark--hover: #face3d;
     --fc__primary--light__fg--dark: #d4d4d4;
     --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.1);
+    --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
+    --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75);
     --fc__primary--light__link--dark: white;
     --fc__primary--light__link--dark--hover: #face3d; }
   html.qh__t__blue-shutters {
@@ -759,6 +802,7 @@ html {
     --fc__nav-main__icon__fg: #2e2e2e;
     --fc__nav-main__icon__bg--hover: white;
     --fc__nav-main__icon__fg--hover: #2e2e2e;
+    --fc__default__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__default__violator: #ff8e47;
     --fc__default__accent: #face3d;
     --fc__default__accent__fg: #293557;
@@ -788,20 +832,24 @@ html {
     --fc__footer__fg: #48525b;
     --fc__footer__bg: #7affd3;
     --fc__footer__copyright__bg: transparent;
-    --fc__primary__fg: #d4d4d4;
+    --fc__primary__fg: #2e2e2e;
     --fc__primary__bg: #48525b;
+    --fc__primary__overlay__bg: rgba(66, 240, 182, 0.75);
     --fc__primary__link: #c9f7e8;
     --fc__primary__link--hover: white;
     --fc__primary__fg--dark: #f0eee5;
     --fc__primary__bg--dark: #138660;
+    --fc__primary__overlay__bg--dark: rgba(19, 134, 96, 0.75);
     --fc__primary__link--dark: white;
     --fc__primary__link--dark--hover: #face3d;
     --fc__primary--light__fg: #48525b;
     --fc__primary--light__bg: #c9f7e8;
+    --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__primary--light__link: #293557;
     --fc__primary--light__link--hover: #2e2e2e;
     --fc__primary--light__fg--dark: #dfebf6;
     --fc__primary--light__bg--dark: rgba(19, 134, 96, 0.15);
+    --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75);
     --fc__primary--light__link--dark: white;
     --fc__primary--light__link--dark--hover: #face3d; }
   html.dark.qh__t__blue-shutters {
@@ -819,6 +867,7 @@ html {
     --fc__nav-main__bg: #42f0b6;
     --fc__default__fg: #f0eee5;
     --fc__default__bg: #2e2e2e;
+    --fc__default__overlay__bg: rgba(20, 20, 20, 0.75);
     --fc__default__border: rgba(255, 255, 255, 0.25);
     --fc__default__link: #95bddf;
     --fc__default__link--hover: #face3d;
@@ -848,7 +897,11 @@ html {
     --fc__footer__fg: white;
     --fc__footer__bg: rgba(19, 134, 96, 0.15);
     --fc__primary__bg: #138660;
-    --fc__primary--light__bg: rgba(19, 134, 96, 0.15); }
+    --fc__primary__overlay__bg: rgba(66, 240, 182, 0.75);
+    --fc__primary__overlay__bg: rgba(19, 134, 96, 0.75);
+    --fc__primary--light__bg: rgba(19, 134, 96, 0.15);
+    --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
+    --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75); }
   html.qh__t__misquamicut {
     --fc__official__fg: white;
     --fc__official__bg: #293557;
@@ -861,7 +914,7 @@ html {
     --fc__header__link--hover: #293557;
     --fc__header__social__link: #293557;
     --fc__header__social__link--hover: white;
-    --fc__nav-main__fg: #2e2e2e;
+    --fc__nav-main__fg: #1b243b;
     --fc__nav-main__bg: #5994cf;
     --fc__nav-main__link: #1b243b;
     --fc__nav-main__link--hover: #1b243b;
@@ -875,6 +928,7 @@ html {
     --fc__nav-main__icon__fg--hover: #293557;
     --fc__default__fg: #404040;
     --fc__default__bg: white;
+    --fc__default__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__default__border: rgba(20, 20, 20, 0.15);
     --fc__default__link: #1440b8;
     --fc__default__link--hover: #476cd1;
@@ -906,7 +960,7 @@ html {
     --fc__nav-minor__link--active: #1b243b;
     --fc__nav-minor__sub__bg: rgba(255, 255, 255, 0.25);
     --fc__notification__fg: #1b243b;
-    --fc__notification__bg: #ff8e47;
+    --fc__notification__bg: #face3d;
     --fc__notification__icon: #293557;
     --fc__notification__link: #1b243b;
     --fc__notification__link--hover: #1b243b;
@@ -921,25 +975,29 @@ html {
     --fc__attention-card__bar: #95bddf;
     --fc__attention-card__icon: #1b243b;
     --fc__footer__border-top: #293557;
-    --fc__footer__fg: #2e2e2e;
+    --fc__footer__fg: black;
     --fc__footer__bg: #95bddf;
     --fc__footer__copyright__bg: #5994cf;
     --fc__primary__fg: white;
     --fc__primary__bg: #293557;
+    --fc__primary__overlay__bg: rgba(41, 53, 87, 0.75);
     --fc__primary__link: #95bddf;
     --fc__primary__link--hover: #95bddf;
     --fc__primary__fg--dark: white;
     --fc__primary__bg--dark: #293557;
+    --fc__primary__overlay__bg--dark: rgba(41, 53, 87, 0.75);
     --fc__primary__link--dark: #95bddf;
     --fc__primary__link--dark--hover: #95bddf;
     --fc__primary--light__fg: #293557;
     --fc__primary--light__bg: #95bddf;
+    --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
     --fc__primary--light__link: #1b243b;
     --fc__primary--light__link--hover: #141414;
-    --fc__primary--light__fg--dark: #293557;
-    --fc__primary--light__bg--dark: #95bddf;
+    --fc__primary--light__fg--dark: #95bddf;
+    --fc__primary--light__bg--dark: #293557;
+    --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75);
     --fc__primary--light__link--dark: white;
-    --fc__primary--light__link--dark--hover: #293557; }
+    --fc__primary--light__link--dark--hover: #95bddf; }
   html.dark.qh__t__misquamicut {
     --fc__official__fg: #d4d4d4;
     --fc__official__bg: #141414;
@@ -966,6 +1024,7 @@ html {
     --fc__nav-main__icon__fg--hover: #1b243b;
     --fc__default__fg: #f0eee5;
     --fc__default__bg: #2e2e2e;
+    --fc__default__overlay__bg: rgba(20, 20, 20, 0.75);
     --fc__default__border: rgba(255, 255, 255, 0.25);
     --fc__default__link: #95bddf;
     --fc__default__link--hover: #face3d;
@@ -996,7 +1055,7 @@ html {
     --fc__nav-minor__link--active: #face3d;
     --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.33);
     --fc__notification__fg: #1b243b;
-    --fc__notification__bg: #ff8e47;
+    --fc__notification__bg: #face3d;
     --fc__notification__icon: #293557;
     --fc__notification__link: #1b243b;
     --fc__notification__link--hover: #1440b8;
@@ -1016,10 +1075,12 @@ html {
     --fc__footer__copyright__bg: #141414;
     --fc__primary__fg: white;
     --fc__primary__bg: rgba(41, 53, 87, 0.5);
+    --fc__primary__overlay__bg: rgba(41, 53, 87, 0.75);
     --fc__primary__link: #95a9df;
     --fc__primary__link--hover: #face3d;
     --fc__primary--light__fg: #f0eee5;
     --fc__primary--light__bg: rgba(149, 189, 223, 0.25);
+    --fc__primary--light__overlay__bg: rgba(149, 189, 223, 0.75);
     --fc__primary--light__link: white;
     --fc__primary--light__link--hover: #face3d; }
   @media (prefers-color-scheme: dark) {
@@ -1048,6 +1109,7 @@ html {
       --fc__nav-main__icon__fg--hover: #1b243b;
       --fc__default__fg: #f0eee5;
       --fc__default__bg: #2e2e2e;
+      --fc__default__overlay__bg: rgba(20, 20, 20, 0.75);
       --fc__default__border: rgba(255, 255, 255, 0.25);
       --fc__default__link: #95bddf;
       --fc__default__link--hover: #face3d;
@@ -1069,7 +1131,7 @@ html {
       --fc__nav-minor__link--focus: #face3d;
       --fc__nav-minor__link--active: #face3d;
       --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.33);
-      --fc__notification__bg: #ff8e47;
+      --fc__notification__bg: #face3d;
       --fc__accordion__icon__fg: #141414;
       --fc__accordion__icon__bg: #ff8e47;
       --fc__attention-card__fg: #f0eee5;
@@ -1111,6 +1173,7 @@ html {
       --fc__nav-main__icon__bg--hover: #eb5252;
       --fc__nav-main__icon__fg--hover: #2e2e2e;
       --fc__default__bg: #2e2e2e;
+      --fc__default__overlay__bg: rgba(20, 20, 20, 0.75);
       --fc__default__button--hover__fg: #face3d;
       --fc__nav-minor__border: #8e3339;
       --fc__nav-minor__fg: #d4d4d4;
@@ -1129,21 +1192,25 @@ html {
       --fc__footer__bg: #404040;
       --fc__footer__copyright__bg: #141414;
       --fc__primary__bg: rgba(235, 82, 82, 0.5);
+      --fc__primary__overlay__bg: rgba(235, 82, 82, 0.75);
       --fc__primary__link--hover: #face3d;
       --fc__primary__fg--dark: #f0eee5;
       --fc__primary__bg--dark: rgba(235, 82, 82, 0.5);
+      --fc__primary__overlay__bg--dark: rgba(142, 51, 57, 0.75);
       --fc__primary__link--dark: white;
       --fc__primary__link--dark--hover: #face3d;
       --fc__primary--light__bg: rgba(235, 82, 82, 0.15);
+      --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
       --fc__primary--light__link--hover: #face3d;
       --fc__primary--light__fg--dark: #f0eee5;
       --fc__primary--light__bg--dark: rgba(235, 82, 82, 0.15);
+      --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75);
       --fc__primary--light__link--dark: #d2cbb2;
       --fc__primary--light__link--dark--hover: #face3d; }
     html:not(.light) .qh__t__wickaboxet {
       --fc__official__bg: #141414;
       --fc__header__fg: #f0eee5;
-      --fc__header__bg: rgba(89, 191, 69, 0.14);
+      --fc__header__bg: rgba(89, 191, 69, 0.15);
       --fc__header__link: #f0eee5;
       --fc__header__link--hover: white;
       --fc__header__social__link: #59bf45;
@@ -1161,6 +1228,7 @@ html {
       --fc__nav-main__icon__fg--hover: #141414;
       --fc__default__fg: #f0eee5;
       --fc__default__bg: #2e2e2e;
+      --fc__default__overlay__bg: rgba(20, 20, 20, 0.75);
       --fc__default__border: rgba(255, 255, 255, 0.25);
       --fc__default__link: #95bddf;
       --fc__default__link--hover: #face3d;
@@ -1170,7 +1238,7 @@ html {
       --fc__default__hx__fg: #59bf45;
       --fc__default__text-accent: white;
       --fc__nav-minor__fg: #d2cbb2;
-      --fc__nav-minor__bg: rgba(89, 191, 69, 0.14);
+      --fc__nav-minor__bg: rgba(89, 191, 69, 0.15);
       --fc__nav-minor__link: #f0eee5;
       --fc__nav-minor__link--hover: white;
       --fc__nav-minor__link--active: #face3d;
@@ -1183,7 +1251,7 @@ html {
       --fc__primary__fg: #f0eee5;
       --fc__primary__bg: #2e7a1f;
       --fc__primary__link: white;
-      --fc__primary--light__bg: rgba(89, 191, 69, 0.14); }
+      --fc__primary--light__bg: rgba(89, 191, 69, 0.15); }
     html:not(.light) .qh__t__block-island {
       --fc__official__bg: #2e2e2e;
       --fc__header__fg: #d4d4d4;
@@ -1202,6 +1270,7 @@ html {
       --fc__nav-main__icon__fg--hover: #293557;
       --fc__default__fg: #f0eee5;
       --fc__default__bg: #2e2e2e;
+      --fc__default__overlay__bg: rgba(20, 20, 20, 0.75);
       --fc__default__border: rgba(255, 255, 255, 0.25);
       --fc__default__link: #95bddf;
       --fc__default__link--hover: #face3d;
@@ -1225,10 +1294,14 @@ html {
       --fc__footer__copyright__bg: transparent;
       --fc__primary__fg--dark: #d4d4d4;
       --fc__primary__bg--dark: rgba(149, 189, 223, 0.25);
+      --fc__primary__overlay__bg: rgba(149, 189, 223, 0.75);
+      --fc__primary__overlay__bg--dark: rgba(41, 53, 87, 0.75);
       --fc__primary__link--dark: white;
       --fc__primary__link--dark--hover: #face3d;
       --fc__primary--light__fg--dark: #d4d4d4;
       --fc__primary--light__bg--dark: rgba(149, 189, 223, 0.1);
+      --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
+      --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75);
       --fc__primary--light__link--dark: white;
       --fc__primary--light__link--dark--hover: #face3d; }
     html:not(.light) .qh__t__blue-shutters {
@@ -1246,6 +1319,7 @@ html {
       --fc__nav-main__bg: #42f0b6;
       --fc__default__fg: #f0eee5;
       --fc__default__bg: #2e2e2e;
+      --fc__default__overlay__bg: rgba(20, 20, 20, 0.75);
       --fc__default__border: rgba(255, 255, 255, 0.25);
       --fc__default__link: #95bddf;
       --fc__default__link--hover: #face3d;
@@ -1275,7 +1349,11 @@ html {
       --fc__footer__fg: white;
       --fc__footer__bg: rgba(19, 134, 96, 0.15);
       --fc__primary__bg: #138660;
-      --fc__primary--light__bg: rgba(19, 134, 96, 0.15); }
+      --fc__primary__overlay__bg: rgba(66, 240, 182, 0.75);
+      --fc__primary__overlay__bg: rgba(19, 134, 96, 0.75);
+      --fc__primary--light__bg: rgba(19, 134, 96, 0.15);
+      --fc__primary--light__overlay__bg: rgba(255, 255, 255, 0.75);
+      --fc__primary--light__overlay__bg--dark: rgba(20, 20, 20, 0.75); }
     html:not(.light) .qh__t__misquamicut {
       --fc__official__fg: #d4d4d4;
       --fc__official__bg: #141414;
@@ -1302,6 +1380,7 @@ html {
       --fc__nav-main__icon__fg--hover: #1b243b;
       --fc__default__fg: #f0eee5;
       --fc__default__bg: #2e2e2e;
+      --fc__default__overlay__bg: rgba(20, 20, 20, 0.75);
       --fc__default__border: rgba(255, 255, 255, 0.25);
       --fc__default__link: #95bddf;
       --fc__default__link--hover: #face3d;
@@ -1332,7 +1411,7 @@ html {
       --fc__nav-minor__link--active: #face3d;
       --fc__nav-minor__sub__bg: rgba(20, 20, 20, 0.33);
       --fc__notification__fg: #1b243b;
-      --fc__notification__bg: #ff8e47;
+      --fc__notification__bg: #face3d;
       --fc__notification__icon: #293557;
       --fc__notification__link: #1b243b;
       --fc__notification__link--hover: #1440b8;
@@ -1352,10 +1431,12 @@ html {
       --fc__footer__copyright__bg: #141414;
       --fc__primary__fg: white;
       --fc__primary__bg: rgba(41, 53, 87, 0.5);
+      --fc__primary__overlay__bg: rgba(41, 53, 87, 0.75);
       --fc__primary__link: #95a9df;
       --fc__primary__link--hover: #face3d;
       --fc__primary--light__fg: #f0eee5;
       --fc__primary--light__bg: rgba(149, 189, 223, 0.25);
+      --fc__primary--light__overlay__bg: rgba(149, 189, 223, 0.75);
       --fc__primary--light__link: white;
       --fc__primary--light__link--hover: #face3d; } }
 
@@ -3300,26 +3381,16 @@ table {
     .qh__header-image-action__overlay--text-right {
       justify-content: flex-end; }
     .qh__header-image-action__overlay-inner {
-      background-color: transparent;
       padding: 1.5rem 1rem;
       position: relative;
       z-index: 1; }
-      .qh__header-image-action__overlay-inner::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        opacity: 0.75;
-        z-index: -1; }
-        @supports (inset: 0) {
-          .qh__header-image-action__overlay-inner::before {
-            inset: 0; } }
       .qh__header-image-action__overlay-inner.qh__tc__primary {
-        color: var(--fc__primary__fg); }
-        .qh__header-image-action__overlay-inner.qh__tc__primary::before {
-          background-color: var(--fc__primary__bg); }
+        color: var(--fc__primary__fg);
+        background-color: var(--fc__primary__overlay__bg); }
+        @media (prefers-color-scheme: dark) {
+          html:not(.light) .qh__header-image-action__overlay-inner.qh__tc__primary {
+            color: var(--fc__primary__fg--dark);
+            background-color: var(--fc__primary__overlay__bg--dark); } }
         .qh__header-image-action__overlay-inner.qh__tc__primary .qh__btn,
         .qh__header-image-action__overlay-inner.qh__tc__primary .qh__btn:visited {
           background-color: var(--fc__default__button__fg);
@@ -3329,9 +3400,12 @@ table {
           background-color: var(--fc__default__button--hover__fg);
           color: var(--fc__default__button--hover__bg); }
       .qh__header-image-action__overlay-inner.qh__tc__primary--light {
-        color: var(--fc__default__fg); }
-        .qh__header-image-action__overlay-inner.qh__tc__primary--light::before {
-          background-color: var(--fc__default__bg); }
+        color: var(--fc__primary--light__fg);
+        background-color: var(--fc__primary--light__overlay__bg); }
+        @media (prefers-color-scheme: dark) {
+          html:not(.light) .qh__header-image-action__overlay-inner.qh__tc__primary--light {
+            color: var(--fc__primary--light__fg--dark);
+            background-color: var(--fc__primary--light__overlay__bg--dark); } }
       @media (min-width: 75em) {
         .qh__header-image-action__overlay-inner {
           max-width: 600px; } }
@@ -4500,125 +4574,187 @@ table {
     border-right: 0;
     padding-right: 0; } }
 
-/* Settings */
+/* Settings & Language */
 .qh__settings-menu {
   --text-opsz: 10;
-  display: inline-block;
+  display: inline-flex;
   position: relative;
-  margin-left: 1rem; }
-  .no-js .qh__settings-menu {
-    display: none; }
-  .qh__settings-menu__icon {
-    display: inline-block;
-    height: 1.25em;
-    margin: -0.125em .5em 0 0;
-    vertical-align: middle;
-    width: 1.25em; }
-    .qh__settings-menu__icon svg {
-      width: 2rem;
-      height: 2rem;
-      position: relative;
-      top: -40%;
-      left: -50%; }
-  .qh__settings-menu__toggle {
-    display: inline-block;
-    padding: 0.15rem 0.25rem;
+  margin-left: 1rem;
+  justify-content: space-between;
+  gap: 0.5em; }
+
+/* Settings Menu */
+/* Language Menu */
+.no-js .qh__settings-menu, .no-js
+.qh__language-menu {
+  display: none; }
+
+.qh__settings-menu__icon,
+.qh__language-menu__icon {
+  display: inline-block;
+  height: 1.25em;
+  margin: -0.125em .5em 0 0;
+  vertical-align: middle;
+  width: 1.25em; }
+  .qh__settings-menu__icon svg,
+  .qh__language-menu__icon svg {
+    width: 2rem;
+    height: 2rem;
     position: relative;
-    text-align: right;
-    z-index: 451; }
-    .qh__settings-menu__toggle, .qh__settings-menu__toggle:visited {
-      text-decoration: none; }
-    .qh__settings-menu__toggle:hover, .qh__settings-menu__toggle:focus {
-      text-decoration: underline; }
-    .qh__settings-menu__toggle:active {
-      text-decoration: underline; }
-    @media (pointer: coarse) {
-      .qh__settings-menu__toggle:hover {
-        text-decoration: unset; } }
-  .qh__settings-menu__list {
-    background-color: var(--fc__official__bg);
-    color: var(--fc__official__fg);
-    line-height: 1.3;
-    opacity: 0;
-    max-height: 80vh;
-    min-height: 50vh;
-    max-width: 30rem;
-    min-width: 18rem;
-    width: 50vw;
-    overflow-y: scroll;
-    padding: 0.5rem 0;
+    top: -40%;
+    left: -50%; }
+
+@media (max-width: 61.9375em) {
+  .qh__settings-menu__text,
+  .qh__language-menu__text {
     position: absolute;
-    top: 100%;
-    right: -0.75rem;
-    text-align: left;
-    transition: opacity 250ms ease 0ms, visibility 0ms linear 0ms;
-    visibility: hidden;
-    word-spacing: 0;
-    z-index: 500; }
-    .qh__settings-menu__list::before {
-      background-color: var(--fc__official__bg);
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1; }
-      @supports (inset: 0) {
-        .qh__settings-menu__list::before {
-          inset: 0; } }
-    [aria-expanded="true"] + .qh__settings-menu__list {
-      opacity: 1;
-      transition: opacity 250ms ease 0ms, visibility 0ms linear 250ms;
-      visibility: visible; }
-    .qh__settings-menu__list li {
-      border-bottom: 0.125rem solid rgba(0, 0, 0, 0.25);
-      margin-bottom: 1rem;
-      padding: 0.5rem 1rem; }
-      .qh__settings-menu__list li:last-child {
-        border-bottom: none; }
-      .qh__settings-menu__list li.active {
-        padding: 0.5em 0.15em; }
-    .qh__settings-menu__list .qh__u__btn-as-text, .qh__settings-menu__list .qh__u__btn-as-text:visited {
-      color: var(--fc__official__link); }
-    .qh__settings-menu__list .qh__u__btn-as-text:hover, .qh__settings-menu__list .qh__u__btn-as-text:focus {
-      color: var(--fc__official__link--hover); }
-    .qh__settings-menu__list .qh__u__btn-as-text:focus {
-      outline-color: var(--fc__official__link); }
-  .qh__settings-menu__label {
-    display: inline-block;
-    font-weight: 500;
-    line-height: 1.3;
-    padding-bottom: 0.25rem;
-    word-spacing: 0; }
-  .qh__settings-menu__boolean {
-    display: grid;
-    grid-template-columns: 4fr 5fr;
-    padding: 0.5rem 1.5vw; }
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      .qh__settings-menu__boolean button:first-child {
-        grid-column: 1; }
-      .qh__settings-menu__boolean button:last-child {
-        grid-column: 2; } }
-  .qh__settings-menu button.toggle-lightmode {
-    line-height: 1.2; }
-    .dark .qh__settings-menu button.toggle-lightmode.switch:after {
-      content: ' to light'; }
-    html:not(.dark) .qh__settings-menu button.toggle-lightmode.switch:after {
-      content: ' to dark'; }
-    @media (prefers-color-scheme: dark) {
-      html:not(.light) .qh__settings-menu button.toggle-lightmode.switch:after {
-        content: ' to light'; } }
-    .light .qh__settings-menu button.toggle-lightmode.switch:after {
-      content: ' to dark'; }
-  .qh__settings-menu__slider {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 1.5vw; }
-    .qh__settings-menu__slider .qh__form__input__range {
-      grid-column: 1 / 3; }
-    .qh__settings-menu__slider .high {
-      text-align: right; }
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    word-wrap: normal; } }
+
+.qh__settings-menu__toggle,
+.qh__language-menu__toggle {
+  display: inline-block;
+  padding: 0.15rem 0.25rem;
+  position: relative;
+  text-align: right;
+  z-index: 451; }
+  .qh__settings-menu__toggle, .qh__settings-menu__toggle:visited,
+  .qh__language-menu__toggle,
+  .qh__language-menu__toggle:visited {
+    text-decoration: none; }
+  .qh__settings-menu__toggle:hover, .qh__settings-menu__toggle:focus,
+  .qh__language-menu__toggle:hover,
+  .qh__language-menu__toggle:focus {
+    text-decoration: underline; }
+  .qh__settings-menu__toggle:active,
+  .qh__language-menu__toggle:active {
+    text-decoration: underline; }
+  @media (pointer: coarse) {
+    .qh__settings-menu__toggle:hover,
+    .qh__language-menu__toggle:hover {
+      text-decoration: unset; } }
+
+.qh__settings-menu__list,
+.qh__language-menu__list {
+  background-color: var(--fc__official__bg);
+  color: var(--fc__official__fg);
+  line-height: 1.3;
+  opacity: 0;
+  max-height: 80vh;
+  min-height: 50vh;
+  max-width: 30rem;
+  min-width: 18rem;
+  width: 50vw;
+  overflow-y: scroll;
+  padding: 0.5rem 0;
+  position: absolute;
+  top: 100%;
+  right: -0.75rem;
+  text-align: left;
+  transition: opacity 250ms ease 0ms, visibility 0ms linear 0ms;
+  visibility: hidden;
+  word-spacing: 0;
+  z-index: 500; }
+  .qh__settings-menu__list::before,
+  .qh__language-menu__list::before {
+    background-color: var(--fc__official__bg);
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1; }
+    @supports (inset: 0) {
+      .qh__settings-menu__list::before,
+      .qh__language-menu__list::before {
+        inset: 0; } }
+  [aria-expanded="true"] + .qh__settings-menu__list, [aria-expanded="true"] +
+  .qh__language-menu__list {
+    opacity: 1;
+    transition: opacity 250ms ease 0ms, visibility 0ms linear 250ms;
+    visibility: visible; }
+  .qh__settings-menu__list li,
+  .qh__language-menu__list li {
+    border-bottom: 0.125rem solid rgba(0, 0, 0, 0.25);
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem; }
+    .qh__settings-menu__list li:last-child,
+    .qh__language-menu__list li:last-child {
+      border-bottom: none; }
+    .qh__settings-menu__list li.active,
+    .qh__language-menu__list li.active {
+      padding: 0.5em 0.15em; }
+  .qh__settings-menu__list .qh__u__btn-as-text, .qh__settings-menu__list .qh__u__btn-as-text:visited,
+  .qh__language-menu__list .qh__u__btn-as-text,
+  .qh__language-menu__list .qh__u__btn-as-text:visited {
+    color: var(--fc__official__link); }
+  .qh__settings-menu__list .qh__u__btn-as-text:hover, .qh__settings-menu__list .qh__u__btn-as-text:focus,
+  .qh__language-menu__list .qh__u__btn-as-text:hover,
+  .qh__language-menu__list .qh__u__btn-as-text:focus {
+    color: var(--fc__official__link--hover); }
+  .qh__settings-menu__list .qh__u__btn-as-text:focus,
+  .qh__language-menu__list .qh__u__btn-as-text:focus {
+    outline-color: var(--fc__official__link); }
+  .qh__language-menu__wrapper .qh__settings-menu__list, .qh__language-menu__wrapper
+  .qh__language-menu__list {
+    padding: 0.5rem 1rem; }
+  .qh__settings-menu__list #google_translator_element img.goog-te-gadget-icon,
+  .qh__language-menu__list #google_translator_element img.goog-te-gadget-icon {
+    display: none; }
+
+.qh__settings-menu__label,
+.qh__language-menu__label {
+  display: inline-block;
+  font-weight: 500;
+  line-height: 1.3;
+  padding-bottom: 0.25rem;
+  word-spacing: 0; }
+
+.qh__settings-menu__boolean,
+.qh__language-menu__boolean {
+  display: grid;
+  grid-template-columns: 4fr 5fr;
+  padding: 0.5rem 1.5vw; }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .qh__settings-menu__boolean button:first-child,
+    .qh__language-menu__boolean button:first-child {
+      grid-column: 1; }
+    .qh__settings-menu__boolean button:last-child,
+    .qh__language-menu__boolean button:last-child {
+      grid-column: 2; } }
+
+.qh__settings-menu button.toggle-lightmode,
+.qh__language-menu button.toggle-lightmode {
+  line-height: 1.2; }
+  .dark .qh__settings-menu button.toggle-lightmode.switch:after, .dark
+  .qh__language-menu button.toggle-lightmode.switch:after {
+    content: ' to light'; }
+  html:not(.dark) .qh__settings-menu button.toggle-lightmode.switch:after, html:not(.dark)
+  .qh__language-menu button.toggle-lightmode.switch:after {
+    content: ' to dark'; }
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) .qh__settings-menu button.toggle-lightmode.switch:after, html:not(.light)
+    .qh__language-menu button.toggle-lightmode.switch:after {
+      content: ' to light'; } }
+  .light .qh__settings-menu button.toggle-lightmode.switch:after, .light
+  .qh__language-menu button.toggle-lightmode.switch:after {
+    content: ' to dark'; }
+
+.qh__settings-menu__slider,
+.qh__language-menu__slider {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 1.5vw; }
+  .qh__settings-menu__slider .qh__form__input__range,
+  .qh__language-menu__slider .qh__form__input__range {
+    grid-column: 1 / 3; }
+  .qh__settings-menu__slider .high,
+  .qh__language-menu__slider .high {
+    text-align: right; }
 
 .qh__articles-latest {
   padding: 1.5rem 0; }
@@ -4800,30 +4936,39 @@ table {
     display: flex;
     flex-flow: row nowrap; }
   .qh__global-header a,
-  .qh__global-header .qh__settings-menu__toggle {
+  .qh__global-header .qh__settings-menu__toggle,
+  .qh__global-header .qh__language-menu__toggle {
     text-decoration: none; }
     .qh__global-header a, .qh__global-header a:visited,
     .qh__global-header .qh__settings-menu__toggle,
-    .qh__global-header .qh__settings-menu__toggle:visited {
+    .qh__global-header .qh__settings-menu__toggle:visited,
+    .qh__global-header .qh__language-menu__toggle,
+    .qh__global-header .qh__language-menu__toggle:visited {
       color: var(--fc__official__link); }
     .qh__global-header a:hover, .qh__global-header a:focus,
     .qh__global-header .qh__settings-menu__toggle:hover,
-    .qh__global-header .qh__settings-menu__toggle:focus {
+    .qh__global-header .qh__settings-menu__toggle:focus,
+    .qh__global-header .qh__language-menu__toggle:hover,
+    .qh__global-header .qh__language-menu__toggle:focus {
       color: var(--fc__official__link--hover);
       text-decoration: underline; }
     .qh__global-header a:focus,
-    .qh__global-header .qh__settings-menu__toggle:focus {
+    .qh__global-header .qh__settings-menu__toggle:focus,
+    .qh__global-header .qh__language-menu__toggle:focus {
       outline-color: var(--fc__official__link--focus); }
     .qh__global-header a:active,
-    .qh__global-header .qh__settings-menu__toggle:active {
+    .qh__global-header .qh__settings-menu__toggle:active,
+    .qh__global-header .qh__language-menu__toggle:active {
       color: var(--fc__official__link--active); }
   .qh__global-header p,
   .qh__global-header .qh__settings-menu__toggle,
+  .qh__global-header .qh__language-menu__toggle,
   .qh__global-header .google-translator-switch {
     font-size: 87.5%;
     font-weight: 375; }
     .qh__global-header p + p,
     .qh__global-header .qh__settings-menu__toggle + p,
+    .qh__global-header .qh__language-menu__toggle + p,
     .qh__global-header .google-translator-switch + p {
       margin-top: 0; }
 
@@ -5680,7 +5825,7 @@ body {
       color: var(--fc__notification__fg);
       margin: 0 0 0.25rem; }
     .qh__notifications-block__content p {
-      max-width: 44em;
+      max-width: 100em;
       margin-left: auto;
       margin-right: auto; }
       .qh__notifications-block__content p + p {

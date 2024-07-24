@@ -78,25 +78,20 @@ $hia-gutter--xxlarge: calc((100vw - #{$content-max-large-screen}) / 2);
 
     // Creates the box effect which inherits height from it's content.
     &-inner {
-      background-color: transparent;
       padding: $general-v-spacing $general-h-spacing;
       position: relative;
       z-index: 1;
 
-      &::before {
-        content: '';
-        position: absolute;
-        @include qh-inset-supports(0);
-        opacity: 0.75;
-        z-index: -1;
-      }
-
       // Themes
       &.qh__tc__primary {
         color: var(--fc__primary__fg);
+        background-color: var(--fc__primary__overlay__bg);
 
-        &::before {
-          background-color: var(--fc__primary__bg);
+        @media (prefers-color-scheme: dark) {
+          html:not(.light) & {
+            color: var(--fc__primary__fg--dark);
+            background-color: var(--fc__primary__overlay__bg--dark);
+          }
         }
 
         // If a button is present, it will likely be primary color over primary color
@@ -115,10 +110,14 @@ $hia-gutter--xxlarge: calc((100vw - #{$content-max-large-screen}) / 2);
       }
 
       &.qh__tc__primary--light {
-        color: var(--fc__default__fg);
+        color: var(--fc__primary--light__fg);
+        background-color: var(--fc__primary--light__overlay__bg);
 
-        &::before {
-          background-color: var(--fc__default__bg);
+        @media (prefers-color-scheme: dark) {
+          html:not(.light) & {
+            color: var(--fc__primary--light__fg--dark);
+            background-color: var(--fc__primary--light__overlay__bg--dark);
+          }
         }
       }
 

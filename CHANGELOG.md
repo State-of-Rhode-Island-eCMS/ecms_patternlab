@@ -21,6 +21,17 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.7.6] - 2024-07-25
+### Added
+- RIGA-517: Add default, primary, and primary--light overlay__bg variables for all themes
+
+### Changed
+- RIGA-517: Changed Misquamicut Beach (light) footer text color for better contrast
+- RIGA-517: Changed Misquamicut Beach (light) main nav active link color for better contrast
+- RIGA-517: Changed Misquamicut Beach (light) low contrast on text box overlay text.
+- RIGA-518: Change Notification Background Color and Container width for all themes
+- RIGA-483: Break the language selector out of the settings menu
+
 ## [0.7.5] - 2024-06-25
 ### Added
 - RIGA-487: Add new line art illustrations to the theme options
@@ -362,7 +373,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.5...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.6...HEAD
+[0.7.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.5...0.7.6
 [0.7.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.4...0.7.5
 [0.7.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.3...0.7.4
 [0.7.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.2...0.7.3
