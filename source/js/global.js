@@ -41,12 +41,6 @@ function allMenuCloser() {
   if (qh_usersettings_btn !== null) {
     qh_usersettings_btn.setAttribute('aria-expanded', 'false');
   }
-
-  // Close language nav
-  var qh_userlanguage_btn = document.getElementById('js__user-language__toggle');
-  if (qh_userlanguage_btn !== null) {
-    qh_userlanguage_btn.setAttribute('aria-expanded', 'false');
-  }
 }
 
 // Add screen overlay
