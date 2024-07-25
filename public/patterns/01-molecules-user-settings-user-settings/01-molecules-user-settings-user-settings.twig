@@ -1,17 +1,16 @@
 <div class="qh__settings-menu">
-  {# User Language Menu #}
-  {% if language_switcher|render %}
-    <div class="qh__u__btn-as-text qh__language-menu__wrapper">
-      {{ language_switcher }}
-    </div>
-  {% endif %}
-  {# User Settings Menu #}
   <button id="js__user-settings__toggle" class="qh__u__btn-as-text qh__settings-menu__toggle" aria-expanded="false" aria-controls="js__user-settings__list">
     <span class="qh__settings-menu__icon" aria-hidden="true">
       {% include ('@icons/cog.svg') %}
-    </span><span class="qh__settings-menu__text js__text__hidden">{{ "Settings"|t }}</span>{# keep this on the same line to avoid an underlined space #}
+    </span>{{ "Settings & Language"|t }}{# keep this on the same line to avoid an underlined space #}
   </button>
   <ul id="js__user-settings__list" class="qh-u__list-reset qh__settings-menu__list" aria-labelledby="js__user-settings__toggle">
+    {% if language_switcher|render %}
+    <li class="settings__language">
+      <label class="qh__settings-menu__label">{{ "Display site in"|t }}:</label>
+      {{ language_switcher }}
+    </li>
+    {% endif %}
     <li id="qh-lightmode" class="settings__lightmode">
       <label class="qh__settings-menu__label">{{ "Color scheme"|t }}:</label>
       <span class="visually-hidden">Change the visual color theme between light or dark modes</span>
