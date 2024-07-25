@@ -16,11 +16,14 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Deprecated
 
 ### Removed
-- RIGA-483: Reverted language selector to settings menu.
 
 ### Fixed
 
 ### Security
+
+## [0.7.7] - 2024-07-25
+### Removed
+- RIGA-483: Reverted language selector to settings menu.
 
 ## [0.7.6] - 2024-07-25
 ### Added
@@ -374,7 +377,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.6...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.7...HEAD
+[0.7.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.6...0.7.7
 [0.7.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.5...0.7.6
 [0.7.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.4...0.7.5
 [0.7.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.3...0.7.4
