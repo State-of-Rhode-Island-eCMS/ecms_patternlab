@@ -18,9 +18,12 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Removed
 
 ### Fixed
--RIGA-483: compile after revert
 
 ### Security
+
+## [0.7.8] - 2024-07-25
+### Fixed
+-RIGA-483: compile after revert
 
 ## [0.7.7] - 2024-07-25
 ### Removed
@@ -378,7 +381,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.7...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.8...HEAD
+[0.7.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.7...0.7.8
 [0.7.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.6...0.7.7
 [0.7.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.5...0.7.6
 [0.7.5]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.4...0.7.5
