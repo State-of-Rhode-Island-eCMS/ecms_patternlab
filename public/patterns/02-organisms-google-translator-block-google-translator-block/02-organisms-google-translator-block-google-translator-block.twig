@@ -1,7 +1,10 @@
 <div class="qh__google-translator">
-  <span class="qh__google-translator__icon" aria-hidden="true">
-    {% include ('@icons/globe.svg') %}
-  </span>
-
-  {{ content }}
+  <button id="js__user-language__toggle" class="qh__u__btn-as-text qh__language-menu__toggle" aria-expanded="false" aria-controls="js__user-language__list">
+    <span class="qh__language-menu__icon" aria-hidden="true">
+      {% include ('@icons/globe.svg') %}
+    </span><span class="qh__language-menu__text js__text__hidden">{{ "Language"|t }}</span>{# keep this on the same line to avoid an underlined space #}
+  </button>
+  <div id="js__user-language__list" class="qh-u__list-reset qh__language-menu__list" aria-labelledby="js__user-language__toggle">
+    {{ content }}
+  </div>
 </div>
