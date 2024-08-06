@@ -36,7 +36,8 @@
   }
 
   a,
-  .qh__settings-menu__toggle {
+  .qh__settings-menu__toggle,
+  .qh__language-menu__toggle {
     text-decoration: none;
 
     &,
@@ -61,6 +62,7 @@
 
   p,
   .qh__settings-menu__toggle,
+  .qh__language-menu__toggle,
   .google-translator-switch {
     font-size: 87.5%;
     font-weight: 375;
