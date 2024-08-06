@@ -4574,91 +4574,14 @@ table {
     border-right: 0;
     padding-right: 0; } }
 
-/* Settings */
+/* Settings & Language */
 .qh__settings-menu {
   --text-opsz: 10;
-  display: inline-block;
+  display: inline-flex;
   position: relative;
-  margin-left: 1rem; }
-  .no-js .qh__settings-menu {
-    display: none; }
-  .qh__settings-menu__icon {
-    display: inline-block;
-    height: 1.25em;
-    margin: -0.125em .5em 0 0;
-    vertical-align: middle;
-    width: 1.25em; }
-    .qh__settings-menu__icon svg {
-      width: 2rem;
-      height: 2rem;
-      position: relative;
-      top: -40%;
-      left: -50%; }
-  .qh__settings-menu__toggle {
-    display: inline-block;
-    padding: 0.15rem 0.25rem;
-    position: relative;
-    text-align: right;
-    z-index: 451; }
-    .qh__settings-menu__toggle, .qh__settings-menu__toggle:visited {
-      text-decoration: none; }
-    .qh__settings-menu__toggle:hover, .qh__settings-menu__toggle:focus {
-      text-decoration: underline; }
-    .qh__settings-menu__toggle:active {
-      text-decoration: underline; }
-    @media (pointer: coarse) {
-      .qh__settings-menu__toggle:hover {
-        text-decoration: unset; } }
-  .qh__settings-menu__list {
-    background-color: var(--fc__official__bg);
-    color: var(--fc__official__fg);
-    line-height: 1.3;
-    opacity: 0;
-    max-height: 80vh;
-    min-height: 50vh;
-    max-width: 30rem;
-    min-width: 18rem;
-    width: 50vw;
-    overflow-y: scroll;
-    padding: 0.5rem 0;
-    position: absolute;
-    top: 100%;
-    right: -0.75rem;
-    text-align: left;
-    transition: opacity 250ms ease 0ms, visibility 0ms linear 0ms;
-    visibility: hidden;
-    word-spacing: 0;
-    z-index: 500; }
-    .qh__settings-menu__list::before {
-      background-color: var(--fc__official__bg);
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: -1; }
-      @supports (inset: 0) {
-        .qh__settings-menu__list::before {
-          inset: 0; } }
-    [aria-expanded="true"] + .qh__settings-menu__list {
-      opacity: 1;
-      transition: opacity 250ms ease 0ms, visibility 0ms linear 250ms;
-      visibility: visible; }
-    .qh__settings-menu__list li {
-      border-bottom: 0.125rem solid rgba(0, 0, 0, 0.25);
-      margin-bottom: 1rem;
-      padding: 0.5rem 1rem; }
-      .qh__settings-menu__list li:last-child {
-        border-bottom: none; }
-      .qh__settings-menu__list li.active {
-        padding: 0.5em 0.15em; }
-    .qh__settings-menu__list .qh__u__btn-as-text, .qh__settings-menu__list .qh__u__btn-as-text:visited {
-      color: var(--fc__official__link); }
-    .qh__settings-menu__list .qh__u__btn-as-text:hover, .qh__settings-menu__list .qh__u__btn-as-text:focus {
-      color: var(--fc__official__link--hover); }
-    .qh__settings-menu__list .qh__u__btn-as-text:focus {
-      outline-color: var(--fc__official__link); }
+  margin-left: 1rem;
+  justify-content: space-between;
+  gap: 0.5em; }
   .qh__settings-menu__label {
     display: inline-block;
     font-weight: 500;
@@ -4693,6 +4616,124 @@ table {
       grid-column: 1 / 3; }
     .qh__settings-menu__slider .high {
       text-align: right; }
+
+.no-js .qh__settings-menu, .no-js
+.qh__language-menu {
+  display: none; }
+
+.qh__settings-menu__icon,
+.qh__language-menu__icon {
+  display: inline-block;
+  height: 1.25em;
+  margin: -0.125em .5em 0 0;
+  vertical-align: middle;
+  width: 1.25em; }
+  .qh__settings-menu__icon svg,
+  .qh__language-menu__icon svg {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    top: -40%;
+    left: -50%; }
+
+@media (max-width: 61.9375em) {
+  .qh__settings-menu__text,
+  .qh__language-menu__text {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    word-wrap: normal; } }
+
+.qh__settings-menu__toggle,
+.qh__language-menu__toggle {
+  display: inline-block;
+  padding: 0.15rem 0.25rem;
+  position: relative;
+  text-align: right;
+  z-index: 451; }
+  .qh__settings-menu__toggle, .qh__settings-menu__toggle:visited,
+  .qh__language-menu__toggle,
+  .qh__language-menu__toggle:visited {
+    text-decoration: none; }
+  .qh__settings-menu__toggle:hover, .qh__settings-menu__toggle:focus,
+  .qh__language-menu__toggle:hover,
+  .qh__language-menu__toggle:focus {
+    text-decoration: underline; }
+  .qh__settings-menu__toggle:active,
+  .qh__language-menu__toggle:active {
+    text-decoration: underline; }
+  @media (pointer: coarse) {
+    .qh__settings-menu__toggle:hover,
+    .qh__language-menu__toggle:hover {
+      text-decoration: unset; } }
+
+.qh__settings-menu__list,
+.qh__language-menu__list {
+  background-color: var(--fc__official__bg);
+  color: var(--fc__official__fg);
+  line-height: 1.3;
+  opacity: 0;
+  max-height: 80vh;
+  min-height: 50vh;
+  max-width: 30rem;
+  min-width: 18rem;
+  width: 50vw;
+  overflow-y: scroll;
+  padding: 0.5rem 0;
+  position: absolute;
+  top: 100%;
+  right: -0.75rem;
+  text-align: left;
+  transition: opacity 250ms ease 0ms, visibility 0ms linear 0ms;
+  visibility: hidden;
+  word-spacing: 0;
+  z-index: 500; }
+  .qh__settings-menu__list::before,
+  .qh__language-menu__list::before {
+    background-color: var(--fc__official__bg);
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1; }
+    @supports (inset: 0) {
+      .qh__settings-menu__list::before,
+      .qh__language-menu__list::before {
+        inset: 0; } }
+  [aria-expanded="true"] + .qh__settings-menu__list, [aria-expanded="true"] +
+  .qh__language-menu__list {
+    opacity: 1;
+    transition: opacity 250ms ease 0ms, visibility 0ms linear 250ms;
+    visibility: visible; }
+  .qh__settings-menu__list li,
+  .qh__language-menu__list li {
+    border-bottom: 0.125rem solid rgba(0, 0, 0, 0.25);
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem; }
+    .qh__settings-menu__list li:last-child,
+    .qh__language-menu__list li:last-child {
+      border-bottom: none; }
+    .qh__settings-menu__list li.active,
+    .qh__language-menu__list li.active {
+      padding: 0.5em 0.15em; }
+  .qh__settings-menu__list .qh__u__btn-as-text, .qh__settings-menu__list .qh__u__btn-as-text:visited,
+  .qh__language-menu__list .qh__u__btn-as-text,
+  .qh__language-menu__list .qh__u__btn-as-text:visited {
+    color: var(--fc__official__link); }
+  .qh__settings-menu__list .qh__u__btn-as-text:hover, .qh__settings-menu__list .qh__u__btn-as-text:focus,
+  .qh__language-menu__list .qh__u__btn-as-text:hover,
+  .qh__language-menu__list .qh__u__btn-as-text:focus {
+    color: var(--fc__official__link--hover); }
+  .qh__settings-menu__list .qh__u__btn-as-text:focus,
+  .qh__language-menu__list .qh__u__btn-as-text:focus {
+    outline-color: var(--fc__official__link); }
+  .qh__language-menu__wrapper .qh__settings-menu__list, .qh__language-menu__wrapper
+  .qh__language-menu__list {
+    padding: 0.5rem 1rem; }
 
 .qh__articles-latest {
   padding: 1.5rem 0; }
@@ -4874,30 +4915,39 @@ table {
     display: flex;
     flex-flow: row nowrap; }
   .qh__global-header a,
-  .qh__global-header .qh__settings-menu__toggle {
+  .qh__global-header .qh__settings-menu__toggle,
+  .qh__global-header .qh__language-menu__toggle {
     text-decoration: none; }
     .qh__global-header a, .qh__global-header a:visited,
     .qh__global-header .qh__settings-menu__toggle,
-    .qh__global-header .qh__settings-menu__toggle:visited {
+    .qh__global-header .qh__settings-menu__toggle:visited,
+    .qh__global-header .qh__language-menu__toggle,
+    .qh__global-header .qh__language-menu__toggle:visited {
       color: var(--fc__official__link); }
     .qh__global-header a:hover, .qh__global-header a:focus,
     .qh__global-header .qh__settings-menu__toggle:hover,
-    .qh__global-header .qh__settings-menu__toggle:focus {
+    .qh__global-header .qh__settings-menu__toggle:focus,
+    .qh__global-header .qh__language-menu__toggle:hover,
+    .qh__global-header .qh__language-menu__toggle:focus {
       color: var(--fc__official__link--hover);
       text-decoration: underline; }
     .qh__global-header a:focus,
-    .qh__global-header .qh__settings-menu__toggle:focus {
+    .qh__global-header .qh__settings-menu__toggle:focus,
+    .qh__global-header .qh__language-menu__toggle:focus {
       outline-color: var(--fc__official__link--focus); }
     .qh__global-header a:active,
-    .qh__global-header .qh__settings-menu__toggle:active {
+    .qh__global-header .qh__settings-menu__toggle:active,
+    .qh__global-header .qh__language-menu__toggle:active {
       color: var(--fc__official__link--active); }
   .qh__global-header p,
   .qh__global-header .qh__settings-menu__toggle,
+  .qh__global-header .qh__language-menu__toggle,
   .qh__global-header .google-translator-switch {
     font-size: 87.5%;
     font-weight: 375; }
     .qh__global-header p + p,
     .qh__global-header .qh__settings-menu__toggle + p,
+    .qh__global-header .qh__language-menu__toggle + p,
     .qh__global-header .google-translator-switch + p {
       margin-top: 0; }
 
