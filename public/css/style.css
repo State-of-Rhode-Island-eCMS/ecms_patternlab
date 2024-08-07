@@ -4733,7 +4733,8 @@ table {
     outline-color: var(--fc__official__link); }
   .qh__language-menu__wrapper .qh__settings-menu__list, .qh__language-menu__wrapper
   .qh__language-menu__list {
-    padding: 0.5rem 1rem; }
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem; }
 
 .qh__articles-latest {
   padding: 1.5rem 0; }
@@ -4988,7 +4989,8 @@ table {
 [id='google_translator_element'] a,
 [id='google_translator_element'] span,
 [id='google_translator_element'] div {
-  color: var(--fc__official__link) !important; }
+  color: var(--fc__official__link) !important;
+  font-size: 1.25rem; }
   [id='google_translator_element'] a:hover, [id='google_translator_element'] a:focus,
   [id='google_translator_element'] span:hover,
   [id='google_translator_element'] span:focus,
