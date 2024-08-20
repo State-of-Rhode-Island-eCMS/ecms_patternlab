@@ -1,11 +1,82 @@
-/* Settings */
+/* Settings & Language */
 
 .qh__settings-menu {
   --text-opsz: 10;
-  display: inline-block;
+  display: inline-flex;
   position: relative;
   margin-left: $general-h-spacing;
+  justify-content: space-between;
+  gap: 0.5em;
 
+  &__label {
+    display: inline-block;
+    font-weight: 500;
+    line-height: 1.3;
+    padding-bottom: 0.25rem;
+    word-spacing: 0;
+  }
+
+  &__boolean {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    padding: 0.5rem 1.5vw;
+
+    @include onlyIE() {
+      button:first-child {
+        grid-column: 1;
+      }
+      button:last-child {
+        grid-column: 2;
+      }
+    }
+  }
+
+  button.toggle-lightmode {
+    line-height: 1.2;
+
+    .dark & {
+      &.switch:after {
+        content: ' to light';
+      }
+    }
+    html:not(.dark) & {
+      &.switch:after {
+        content: ' to dark';
+      }
+    }
+    @media (prefers-color-scheme:dark) {
+      html:not(.light) & {
+        &.switch:after {
+          content: ' to light';
+        }
+      }
+    }
+    .light & {
+      &.switch:after {
+        content: ' to dark';
+      }
+    }
+  }
+
+  &__slider {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 1.5vw;
+
+    .qh__form__input__range {
+      grid-column: 1 / 3;
+    }
+
+    .low {}
+
+    .high {
+      text-align: right;
+    }
+  }
+}
+
+.qh__settings-menu,
+.qh__language-menu {
   .no-js & {
     display: none;
   }
@@ -23,6 +94,17 @@
       position: relative;
       top: -40%;
       left: -50%;
+    }
+  }
+
+  &__text {
+    @include breakpoint-down($bp__show__desktop-nav) {
+      position: absolute;
+      clip: rect(1px, 1px, 1px, 1px);
+      overflow: hidden;
+      height: 1px;
+      width: 1px;
+      word-wrap: normal;
     }
   }
 
@@ -124,71 +206,11 @@
         outline-color: var(--fc__official__link);
       }
     }
+
+    // specifically the langauge menu <ul>
+    .qh__language-menu__wrapper & {
+      padding: 0.5rem 1rem;
+      font-size: 1.25rem;
+    }
   } // end &___list
-
-  &__label {
-    display: inline-block;
-    font-weight: 500;
-    line-height: 1.3;
-    padding-bottom: 0.25rem;
-    word-spacing: 0;
-  }
-
-  &__boolean {
-    display: grid;
-    grid-template-columns: 4fr 5fr;
-    padding: 0.5rem 1.5vw;
-
-    @include onlyIE() {
-      button:first-child {
-        grid-column: 1;
-      }
-      button:last-child {
-        grid-column: 2;
-      }
-    }
-  }
-
-  button.toggle-lightmode {
-    line-height: 1.2;
-
-    .dark & {
-      &.switch:after {
-        content: ' to light';
-      }
-    }
-    html:not(.dark) & {
-      &.switch:after {
-        content: ' to dark';
-      }
-    }
-    @media (prefers-color-scheme:dark) {
-      html:not(.light) & {
-        &.switch:after {
-          content: ' to light';
-        }
-      }
-    }
-    .light & {
-      &.switch:after {
-        content: ' to dark';
-      }
-    }
-  }
-
-  &__slider {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 1.5vw;
-
-    .qh__form__input__range {
-      grid-column: 1 / 3;
-    }
-
-    .low {}
-
-    .high {
-      text-align: right;
-    }
-  }
 }

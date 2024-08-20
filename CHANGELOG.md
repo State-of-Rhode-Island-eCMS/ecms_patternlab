@@ -10,12 +10,17 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+- RIGA-483: Enable google_translator module
+- RIGA-483: Add google_translator block and template
+- RIGA-483: Add styles and JS for a separate language dropdown
 
 ### Changed
+- RIGA-483: Update configuration for google_translator module
 
 ### Deprecated
 
 ### Removed
+- RIGA-483: Disable languageswitcher block
 
 ### Fixed
 
