@@ -29,6 +29,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Changed
 - RIGA-483: Update configuration for google_translator module
+- RIGA-483: Update package version control
 
 ### Removed
 - RIGA-483: Disable languageswitcher block
