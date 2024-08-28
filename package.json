@@ -1,6 +1,6 @@
 {
   "name": "ecms_patternlab",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Pattern Lab node with Twig PHP Engine",
   "main": "gulpfile.js",
   "dependencies": {
