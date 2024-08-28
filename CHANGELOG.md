@@ -10,6 +10,19 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ## [Unreleased]
 ### Added
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [0.7.9] - 2024-08-29
+### Added
 - RIGA-483: Enable google_translator module
 - RIGA-483: Add google_translator block and template
 - RIGA-483: Add styles and JS for a separate language dropdown
@@ -17,14 +30,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Changed
 - RIGA-483: Update configuration for google_translator module
 
-### Deprecated
-
 ### Removed
 - RIGA-483: Disable languageswitcher block
-
-### Fixed
-
-### Security
 
 ## [0.7.8] - 2024-07-25
 ### Fixed
@@ -386,7 +393,8 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.8...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.9...HEAD
+[0.7.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.8...0.7.9
 [0.7.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.7...0.7.8
 [0.7.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.6...0.7.7
 [0.7.6]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.5...0.7.6
