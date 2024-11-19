@@ -12,6 +12,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
+- RIGA-555: Change Misquamicut theme official link color.
 
 ### Deprecated
 
