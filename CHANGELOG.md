@@ -12,7 +12,6 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 
 ### Changed
-- RIGA-555: Change Misquamicut theme official link color.
 
 ### Deprecated
 
@@ -21,6 +20,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Fixed
 
 ### Security
+
+## [0.8.0] - 2024-11-19
+### Changed
+- RIGA-555: Change Misquamicut theme official link color.
 
 ## [0.7.9] - 2024-08-29
 ### Added
