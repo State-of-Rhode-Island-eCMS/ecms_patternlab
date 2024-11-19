@@ -1726,9 +1726,9 @@
         "official": [
           { "fnName": "fg", "colorName": "white" },
           { "fnName": "bg", "colorName": "navy" },
-          { "fnName": "link", "colorName": "ocean" },
-          { "fnName": "link--hover", "colorName": "white" },
-          { "fnName": "link--focus", "colorName": "white" }
+          { "fnName": "link", "colorName": "white" },
+          { "fnName": "link--hover", "colorName": "ocean" },
+          { "fnName": "link--focus", "colorName": "ocean" }
         ],
         "header": [
           { "fnName": "fg", "colorName": "navy" },
