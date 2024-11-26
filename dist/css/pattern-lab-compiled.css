@@ -5001,6 +5001,9 @@ table {
   [id='google_translator_element'] div:focus {
     color: var(--fc__official__link--hover) !important; }
 
+[id='google_translator_element'] a {
+  font-size: 87.5%; }
+
 [id='google_translator_element'] span:first-child {
   vertical-align: top; }
 
