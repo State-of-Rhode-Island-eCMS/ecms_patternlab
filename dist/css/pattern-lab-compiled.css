@@ -4981,7 +4981,7 @@ table {
       margin-right: 1rem; }
 
 [id='google_translator_element'] .goog-te-gadget-icon {
-  display: none; }
+  background-image: url("../source/images/icons/google-translate.svg") !important; }
 
 [id='google_translator_element'] .goog-te-gadget-simple {
   background-color: transparent;
@@ -5005,7 +5005,7 @@ table {
   display: none !important; }
 
 [id='google_translator_element'] a span:first-child {
-  display: inline; }
+  display: inline !important; }
 
 [id='google_translator_element'] .goog-te-menu-value {
   white-space: nowrap; }

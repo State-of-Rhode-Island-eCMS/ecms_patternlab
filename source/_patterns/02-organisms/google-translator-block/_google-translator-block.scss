@@ -46,7 +46,7 @@
 [id='google_translator_element'] {
 
   .goog-te-gadget-icon {
-    display: none;
+    background-image: url('../source/images/icons/google-translate.svg') !important;
   }
 
   .goog-te-gadget-simple {
@@ -73,7 +73,7 @@
   }
 
   a span:first-child {
-    display: inline;
+    display: inline !important;
   }
 
   .goog-te-menu-value {
