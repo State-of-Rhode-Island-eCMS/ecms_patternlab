@@ -4981,7 +4981,7 @@ table {
       margin-right: 1rem; }
 
 [id='google_translator_element'] .goog-te-gadget-icon {
-  background-image: url("../source/images/icons/google-translate.svg") !important; }
+  display: none !important; }
 
 [id='google_translator_element'] .goog-te-gadget-simple {
   background-color: transparent;
