@@ -67,6 +67,9 @@
       color: var(--fc__official__link--hover) !important;
     }
   }
+  span:first-child {
+    vertical-align: top;
+  }
 
   a span {
     display: none !important;
