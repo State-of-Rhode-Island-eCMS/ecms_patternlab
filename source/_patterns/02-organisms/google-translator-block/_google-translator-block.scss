@@ -57,7 +57,7 @@
   span,
   div {
     color: var(--fc__official__link) !important;
-    font-size: 1.25rem;
+    font-size: inherit;
 
     &:hover,
     &:focus {
@@ -79,9 +79,10 @@
 
   // override default img styles
   img {
-    display: inherit;
-    height: inherit;
-    max-width: inherit;
-    width: inherit;
+    display: none;
+    //display: inherit;
+    //height: inherit;
+    //max-width: inherit;
+    //width: inherit;
   }
 }
