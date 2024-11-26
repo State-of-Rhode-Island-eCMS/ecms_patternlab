@@ -90,10 +90,6 @@
 
   // override default img styles
   img {
-    display: none;
-    //display: inherit;
-    //height: inherit;
-    //max-width: inherit;
-    //width: inherit;
+    display: none !important;
   }
 }

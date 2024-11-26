@@ -5017,7 +5017,7 @@ table {
     word-wrap: break-word; }
 
 [id='google_translator_element'] img {
-  display: none; }
+  display: none !important; }
 
 .qh__hotels-grid__title {
   font-size: 1.125rem; }
