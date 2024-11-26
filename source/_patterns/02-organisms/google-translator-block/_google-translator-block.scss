@@ -31,6 +31,14 @@
   #google_translator_element > span {
     vertical-align: top;
   }
+
+  #google_translator_element > a span {
+    display: none !important;
+  }
+  #google_translator_element > a span:first-child {
+    display: inline !important;
+  }
+
 }
 
 
