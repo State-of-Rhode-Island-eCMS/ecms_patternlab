@@ -1,29 +1,35 @@
 .qh__google-translator {
   font-family: var(--font-sans-vf);
   color: var(--fc__official__link);
+  display: flex;
 
   &__icon {
     display: inline-block;
     height: 1.25em;
-    margin: -0.125em .25em 0 0;
-    vertical-align: middle;
     width: 1.25em;
 
     svg {
       width: 2rem;
       height: 2rem;
       position: relative;
-      top: -30%;
+      top: -18%;
+      left: -50%;
     }
   }
 
   > a {
     display: inline-block;
     padding: 0.15rem 0.25rem;
+    font-size: 87.5%;
+    font-weight: 375;
   }
 
   #google_translator_element img {
     display: none;
+  }
+
+  #google_translator_element > span {
+    vertical-align: top;
   }
 }
 
@@ -61,12 +67,21 @@
   span,
   div {
     color: var(--fc__official__link) !important;
-    font-size: inherit;
+    font-size: var(--font-size-min);
+    font-family: var(--font-sans-vf);
 
     &:hover,
     &:focus {
       color: var(--fc__official__link--hover) !important;
     }
+  }
+
+  a span {
+    display: none;
+  }
+
+  a span:first-child {
+    display: inline;
   }
 
   .goog-te-menu-value {
