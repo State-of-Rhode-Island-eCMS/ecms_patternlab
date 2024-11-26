@@ -4971,14 +4971,6 @@ table {
     padding: 0.15rem 0.25rem;
     font-size: 87.5%;
     font-weight: 375; }
-  .qh__google-translator #google_translator_element img {
-    display: none; }
-  .qh__google-translator #google_translator_element > span {
-    vertical-align: top; }
-  .qh__google-translator #google_translator_element > a span {
-    display: none !important; }
-  .qh__google-translator #google_translator_element > a span:first-child {
-    display: inline !important; }
 
 #__dimScreen .message {
   background-color: var(--fc__default__bg);
@@ -5010,7 +5002,7 @@ table {
     color: var(--fc__official__link--hover) !important; }
 
 [id='google_translator_element'] a span {
-  display: none; }
+  display: none !important; }
 
 [id='google_translator_element'] a span:first-child {
   display: inline; }

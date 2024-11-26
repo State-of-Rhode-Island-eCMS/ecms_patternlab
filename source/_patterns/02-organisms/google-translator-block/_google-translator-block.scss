@@ -23,22 +23,6 @@
     font-size: 87.5%;
     font-weight: 375;
   }
-
-  #google_translator_element img {
-    display: none;
-  }
-
-  #google_translator_element > span {
-    vertical-align: top;
-  }
-
-  #google_translator_element > a span {
-    display: none !important;
-  }
-  #google_translator_element > a span:first-child {
-    display: inline !important;
-  }
-
 }
 
 
@@ -85,7 +69,7 @@
   }
 
   a span {
-    display: none;
+    display: none !important;
   }
 
   a span:first-child {
