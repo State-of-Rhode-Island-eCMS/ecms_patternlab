@@ -70,10 +70,14 @@
 
   a {
     font-size: 87.5%;
+    display: inline-flex;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: center;
 
     &:before {
-      display: inline-block;
-      mask: url('../images/icons/globe.svg');
+      display: block;
+      mask: url('../../images/icons/globe.svg');
       background-color: var(--fc__official__link);
       height: 2rem;
       width: 2rem;
@@ -93,7 +97,7 @@
     display: none !important;
 
     @include breakpoint-up($bp--large) {
-      display: inline !important;
+      display: block !important;
     }
   }
 

@@ -5002,10 +5002,14 @@ table {
     color: var(--fc__official__link--hover) !important; }
 
 [id='google_translator_element'] a {
-  font-size: 87.5%; }
+  font-size: 87.5%;
+  display: inline-flex;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: center; }
   [id='google_translator_element'] a:before {
-    display: inline-block;
-    mask: url("../images/icons/globe.svg");
+    display: block;
+    mask: url("../../images/icons/globe.svg");
     background-color: var(--fc__official__link);
     height: 2rem;
     width: 2rem;
@@ -5021,7 +5025,7 @@ table {
   display: none !important; }
   @media (min-width: 62em) {
     [id='google_translator_element'] a span:first-child {
-      display: inline !important; } }
+      display: block !important; } }
 
 [id='google_translator_element'] .goog-te-menu-value {
   white-space: nowrap; }
