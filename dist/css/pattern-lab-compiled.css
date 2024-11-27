@@ -5003,7 +5003,7 @@ table {
 
 [id='google_translator_element'] a {
   font-size: 87.5%;
-  display: inline-flex;
+  display: inline-flex !important;
   flex-direction: row;
   align-content: space-around;
   justify-content: center; }
