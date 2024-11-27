@@ -70,6 +70,15 @@
 
   a {
     font-size: 87.5%;
+
+    &:before {
+      display: inline-block;
+      mask: url('../images/icons/globe.svg');
+      background-color: var(--fc__official__link);
+      height: 2rem;
+      width: 2rem;
+      content: '';
+    }
   }
 
   span:first-child {
@@ -81,8 +90,20 @@
   }
 
   a span:first-child {
-    display: inline !important;
+    display: none !important;
+
+    @include breakpoint-up($bp--large) {
+      display: inline !important;
+    }
   }
+
+  //a::before {
+  //  content: ' ▼';
+  //  background-image: url('../../images/icons/icon-globe.svg');
+  //  background-size: contain;
+  //  height: 20px;
+  //  width: 20px;
+  //}
 
   .goog-te-menu-value {
     white-space: nowrap;

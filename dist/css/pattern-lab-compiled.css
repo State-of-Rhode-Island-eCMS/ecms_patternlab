@@ -5003,6 +5003,13 @@ table {
 
 [id='google_translator_element'] a {
   font-size: 87.5%; }
+  [id='google_translator_element'] a:before {
+    display: inline-block;
+    mask: url("../images/icons/globe.svg");
+    background-color: var(--fc__official__link);
+    height: 2rem;
+    width: 2rem;
+    content: ''; }
 
 [id='google_translator_element'] span:first-child {
   vertical-align: top; }
@@ -5011,7 +5018,10 @@ table {
   display: none !important; }
 
 [id='google_translator_element'] a span:first-child {
-  display: inline !important; }
+  display: none !important; }
+  @media (min-width: 62em) {
+    [id='google_translator_element'] a span:first-child {
+      display: inline !important; } }
 
 [id='google_translator_element'] .goog-te-menu-value {
   white-space: nowrap; }
