@@ -4973,11 +4973,14 @@ table {
     font-size: 87.5%;
     font-weight: 375; }
   .qh__google-translator a.google-translator-switch {
-    font-size: 87.5%;
     display: inline-flex !important;
     flex-direction: row;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    font-size: 0; }
+    @media (min-width: 62em) {
+      .qh__google-translator a.google-translator-switch {
+        font-size: 87.5%; } }
     .qh__google-translator a.google-translator-switch:before {
       display: block;
       mask: url("../../source/images/icons/globe.svg");
@@ -4985,11 +4988,6 @@ table {
       height: 2rem;
       width: 2rem;
       content: ''; }
-    .qh__google-translator a.google-translator-switch:last-child {
-      display: none !important; }
-      @media (min-width: 62em) {
-        .qh__google-translator a.google-translator-switch:last-child {
-          display: block !important; } }
 
 #__dimScreen .message {
   background-color: var(--fc__default__bg);

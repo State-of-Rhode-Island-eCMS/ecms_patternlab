@@ -26,11 +26,15 @@
   }
 
   a.google-translator-switch {
-    font-size: 87.5%;
     display: inline-flex !important;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    font-size: 0;
+
+    @include breakpoint-up($bp--large) {
+      font-size: 87.5%;
+    }
 
     &:before {
       display: block;
@@ -39,14 +43,6 @@
       height: 2rem;
       width: 2rem;
       content: '';
-    }
-
-    &:last-child {
-      display: none !important;
-
-      @include breakpoint-up($bp--large) {
-        display: block !important;
-      }
     }
   }
 }
