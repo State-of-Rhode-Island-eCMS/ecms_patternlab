@@ -4972,6 +4972,13 @@ table {
     padding: 0.15rem 0.25rem;
     font-size: 87.5%;
     font-weight: 375; }
+  .qh__google-translator a.google-translator-switch:before {
+    display: block;
+    mask: url("../../source/images/icons/globe.svg");
+    background-color: var(--fc__official__link);
+    height: 2rem;
+    width: 2rem;
+    content: ''; }
 
 #__dimScreen .message {
   background-color: var(--fc__default__bg);
