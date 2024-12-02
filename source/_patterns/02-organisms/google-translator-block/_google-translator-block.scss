@@ -25,13 +25,21 @@
     font-weight: 375;
   }
 
-  a.google-translator-switch:before {
-    display: block;
-    mask: url('../../source/images/icons/globe.svg');
-    background-color: var(--fc__official__link);
-    height: 2rem;
-    width: 2rem;
-    content: '';
+  a.google-translator-switch {
+    font-size: 87.5%;
+    display: inline-flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+      display: block;
+      mask: url('../../source/images/icons/globe.svg');
+      background-color: var(--fc__official__link);
+      height: 2rem;
+      width: 2rem;
+      content: '';
+    }
   }
 }
 
