@@ -40,6 +40,14 @@
       width: 2rem;
       content: '';
     }
+
+    &:last-child {
+      display: none !important;
+
+      @include breakpoint-up($bp--large) {
+        display: block !important;
+      }
+    }
   }
 }
 

@@ -4985,6 +4985,11 @@ table {
       height: 2rem;
       width: 2rem;
       content: ''; }
+    .qh__google-translator a.google-translator-switch:last-child {
+      display: none !important; }
+      @media (min-width: 62em) {
+        .qh__google-translator a.google-translator-switch:last-child {
+          display: block !important; } }
 
 #__dimScreen .message {
   background-color: var(--fc__default__bg);
