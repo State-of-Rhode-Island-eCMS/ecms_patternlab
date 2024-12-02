@@ -4955,7 +4955,8 @@ table {
 .qh__google-translator {
   font-family: var(--font-sans-vf);
   color: var(--fc__official__link);
-  display: flex; }
+  display: flex;
+  padding-top: 1px; }
   .qh__google-translator__icon {
     display: inline-block;
     height: 1.25em;

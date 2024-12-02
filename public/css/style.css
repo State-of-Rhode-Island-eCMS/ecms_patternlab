@@ -4954,21 +4954,24 @@ table {
 
 .qh__google-translator {
   font-family: var(--font-sans-vf);
-  color: var(--fc__official__link); }
+  color: var(--fc__official__link);
+  display: flex;
+  padding-top: 1px; }
   .qh__google-translator__icon {
     display: inline-block;
     height: 1.25em;
-    margin: -0.125em .25em 0 0;
-    vertical-align: middle;
     width: 1.25em; }
     .qh__google-translator__icon svg {
       width: 2rem;
       height: 2rem;
       position: relative;
-      top: -30%; }
+      top: -18%;
+      left: -50%; }
   .qh__google-translator > a {
     display: inline-block;
-    padding: 0.15rem 0.25rem; }
+    padding: 0.15rem 0.25rem;
+    font-size: 87.5%;
+    font-weight: 375; }
 
 #__dimScreen .message {
   background-color: var(--fc__default__bg);
@@ -4979,7 +4982,7 @@ table {
       margin-right: 1rem; }
 
 [id='google_translator_element'] .goog-te-gadget-icon {
-  display: none; }
+  display: none !important; }
 
 [id='google_translator_element'] .goog-te-gadget-simple {
   background-color: transparent;
@@ -4990,13 +4993,40 @@ table {
 [id='google_translator_element'] span,
 [id='google_translator_element'] div {
   color: var(--fc__official__link) !important;
-  font-size: 1.25rem; }
+  font-size: var(--font-size-min);
+  font-family: var(--font-sans-vf); }
   [id='google_translator_element'] a:hover, [id='google_translator_element'] a:focus,
   [id='google_translator_element'] span:hover,
   [id='google_translator_element'] span:focus,
   [id='google_translator_element'] div:hover,
   [id='google_translator_element'] div:focus {
     color: var(--fc__official__link--hover) !important; }
+
+[id='google_translator_element'] a {
+  font-size: 87.5%;
+  display: inline-flex !important;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; }
+  [id='google_translator_element'] a:before {
+    display: block;
+    mask: url("../../source/images/icons/globe.svg");
+    background-color: var(--fc__official__link);
+    height: 2rem;
+    width: 2rem;
+    content: ''; }
+
+[id='google_translator_element'] span:first-child {
+  vertical-align: top; }
+
+[id='google_translator_element'] a span {
+  display: none !important; }
+
+[id='google_translator_element'] a span:first-child {
+  display: none !important; }
+  @media (min-width: 62em) {
+    [id='google_translator_element'] a span:first-child {
+      display: block !important; } }
 
 [id='google_translator_element'] .goog-te-menu-value {
   white-space: nowrap; }
@@ -5008,10 +5038,7 @@ table {
     word-wrap: break-word; }
 
 [id='google_translator_element'] img {
-  display: inherit;
-  height: inherit;
-  max-width: inherit;
-  width: inherit; }
+  display: none !important; }
 
 .qh__hotels-grid__title {
   font-size: 1.125rem; }
