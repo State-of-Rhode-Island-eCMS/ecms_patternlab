@@ -4956,7 +4956,7 @@ table {
   font-family: var(--font-sans-vf);
   color: var(--fc__official__link);
   display: flex;
-  padding-top: 1px; }
+  padding-top: 3.5px; }
   .qh__google-translator__icon {
     display: inline-block;
     height: 1.25em;
