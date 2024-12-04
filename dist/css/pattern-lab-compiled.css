@@ -5024,7 +5024,8 @@ table {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  vertical-align: middle; }
+  vertical-align: middle;
+  margin-top: -1px; }
   [id='google_translator_element'] a:before {
     display: block;
     mask: url("../../source/images/icons/globe.svg");
