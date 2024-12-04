@@ -5023,7 +5023,8 @@ table {
   display: inline-flex !important;
   flex-direction: row;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  vertical-align: middle; }
   [id='google_translator_element'] a:before {
     display: block;
     mask: url("../../source/images/icons/globe.svg");
