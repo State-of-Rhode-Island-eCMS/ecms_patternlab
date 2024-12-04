@@ -5033,6 +5033,8 @@ table {
     height: 2rem;
     width: 2rem;
     content: ''; }
+    [id='google_translator_element'] a:before:hover, [id='google_translator_element'] a:before:focus {
+      background-color: var(--fc__official__link--hover); }
 
 [id='google_translator_element'] span:first-child {
   vertical-align: top; }
