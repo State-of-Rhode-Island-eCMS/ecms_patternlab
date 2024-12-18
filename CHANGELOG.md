@@ -21,6 +21,10 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 
 ### Security
 
+## [0.8.1] - 2024-12-18
+### Changed
+- RIGA-572: Changed the Google Translate block/styles
+
 ## [0.8.0] - 2024-11-19
 ### Changed
 - RIGA-555: Change Misquamicut theme official link color.
@@ -398,7 +402,9 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.9...HEAD
+[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.8.1...HEAD
+[0.8.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.8.0...0.8.1
+[0.8.0]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.9...0.8.0
 [0.7.9]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.8...0.7.9
 [0.7.8]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.7...0.7.8
 [0.7.7]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.7.6...0.7.7
