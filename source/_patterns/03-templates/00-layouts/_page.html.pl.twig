@@ -27,6 +27,7 @@
  *   comment/reply/12345).
  *
  * Regions:
+ * - page.emergency_notification: Items for the emergency notification region.
  * - page.header: Items for the header region.
  * - page.primary_menu: Items for the primary menu region.
  * - page.secondary_menu: Items for the secondary menu region.
@@ -43,6 +44,8 @@
  */
 #}
 <div class="qh-layout qh-layout--sidebar">
+
+  {{ page.emergency_notification }}
 
   {% include '@organisms/page-header/page-header.twig' with {
       header_preprocess_values: header_preprocess_values,
