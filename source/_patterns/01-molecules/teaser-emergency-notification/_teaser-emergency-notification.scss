@@ -1,10 +1,11 @@
 .qh__teaser-emergency-notification {
-  padding: ($general-v-spacing / 2) 0;
+  padding: $general-h-spacing 0;
 
   &__content {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap ($general-h-spacing / 4);
     max-width: var(--content-max-width);
     margin: 0 auto;
   }
@@ -19,7 +20,11 @@
     }
   }
 
-  &__text {}
+  &__text {
+    p {
+      max-width: unset;
+    }
+  }
 }
 
 .rhody-red--bright {
