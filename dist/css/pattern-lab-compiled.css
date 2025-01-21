@@ -4078,10 +4078,44 @@ table {
     max-width: unset; }
 
 .rhody-red--bright {
-  background-color: var(--c__rhody-red--bright); }
+  background-color: var(--c__rhody-red--bright);
+  color: var(--c__white); }
+  .rhody-red--bright h1, .rhody-red--bright .h1, .rhody-red--bright h2, .rhody-red--bright .h2, .rhody-red--bright h3, .rhody-red--bright .h3, .rhody-red--bright h4, .rhody-red--bright .h4, .rhody-red--bright h5, .rhody-red--bright .h5, .rhody-red--bright h6, .rhody-red--bright .h6 {
+    color: currentColor; }
+  .rhody-red--bright a:not(.qh__btn),
+  .rhody-red--bright a:not(.qh__btn):visited,
+  .rhody-red--bright a:not(.qh__btn):hover,
+  .rhody-red--bright a:not(.qh__btn):focus,
+  .rhody-red--bright a:not(.qh__btn):active {
+    color: currentColor;
+    font-weight: bold; }
+  .dark .rhody-red--bright {
+    background-color: var(--c__rhody-red--bright);
+    color: var(--c__white); }
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) .rhody-red--bright {
+      background-color: var(--c__rhody-red--bright);
+      color: var(--c__white); } }
 
 .hope-gold--bright {
-  background-color: var(--c__hope-gold--bright); }
+  background-color: var(--c__hope-gold--bright);
+  color: var(--c__quahog--dark); }
+  .hope-gold--bright h1, .hope-gold--bright .h1, .hope-gold--bright h2, .hope-gold--bright .h2, .hope-gold--bright h3, .hope-gold--bright .h3, .hope-gold--bright h4, .hope-gold--bright .h4, .hope-gold--bright h5, .hope-gold--bright .h5, .hope-gold--bright h6, .hope-gold--bright .h6 {
+    color: currentColor; }
+  .hope-gold--bright a:not(.qh__btn),
+  .hope-gold--bright a:not(.qh__btn):visited,
+  .hope-gold--bright a:not(.qh__btn):hover,
+  .hope-gold--bright a:not(.qh__btn):focus,
+  .hope-gold--bright a:not(.qh__btn):active {
+    color: currentColor;
+    font-weight: bold; }
+  .dark .hope-gold--bright {
+    background-color: var(--c__hope-gold--bright);
+    color: var(--c__quahog--dark); }
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) .hope-gold--bright {
+      background-color: var(--c__hope-gold--bright);
+      color: var(--c__quahog--dark); } }
 
 .qh__teaser-event {
   display: flex;

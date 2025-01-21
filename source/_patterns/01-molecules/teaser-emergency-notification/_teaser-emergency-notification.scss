@@ -29,8 +29,64 @@
 
 .rhody-red--bright {
   background-color: var(--c__rhody-red--bright);
+  color: var(--c__white);
+  
+  #{$all-headers} {
+    color: currentColor;
+  }
+
+  a:not(.qh__btn),
+  a:not(.qh__btn):visited,
+  a:not(.qh__btn):hover,
+  a:not(.qh__btn):focus,
+  a:not(.qh__btn):active {
+    color: currentColor;
+    font-weight: bold;
+  }
+
+  // dark mode class
+  .dark & {
+    background-color: var(--c__rhody-red--bright);
+    color: var(--c__white);
+  }
+
+  // dark mode with prefers-color-scheme 
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) & {
+      background-color: var(--c__rhody-red--bright);
+      color: var(--c__white);
+    }
+  }
 }
 
 .hope-gold--bright {
   background-color: var(--c__hope-gold--bright);
+  color: var(--c__quahog--dark);
+
+  #{$all-headers} {
+    color: currentColor;
+  }
+  
+  a:not(.qh__btn),
+  a:not(.qh__btn):visited,
+  a:not(.qh__btn):hover,
+  a:not(.qh__btn):focus,
+  a:not(.qh__btn):active {
+    color: currentColor;
+    font-weight: bold;
+  }
+
+  // dark mode class
+  .dark & {
+    background-color: var(--c__hope-gold--bright);
+    color: var(--c__quahog--dark);
+  }
+
+  // dark mode with prefers-color-scheme 
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) & {
+      background-color: var(--c__hope-gold--bright);
+      color: var(--c__quahog--dark);
+    }
+  }
 }
