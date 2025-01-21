@@ -4065,6 +4065,7 @@ table {
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 0.25rem;
     max-width: var(--content-max-width);
     margin: 0 auto; }
   .qh__teaser-emergency-notification__icon {
