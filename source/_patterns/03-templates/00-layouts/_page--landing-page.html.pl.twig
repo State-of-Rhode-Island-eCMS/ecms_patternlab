@@ -45,7 +45,11 @@
 #}
 <div class="layout-container">
 
-  {{ page.emergency_notification }}
+  {% if page.emergency_notification %}
+    <div class="qh-layout__emergency-notification">
+      {{ page.emergency_notification }}
+    </div>
+  {% endif %}
 
   {% include '@organisms/page-header/page-header.twig' with {
       header_preprocess_values: header_preprocess_values,
