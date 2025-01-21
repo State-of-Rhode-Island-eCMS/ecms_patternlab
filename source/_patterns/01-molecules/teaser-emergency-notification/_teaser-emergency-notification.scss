@@ -1,3 +1,21 @@
 .qh__teaser-emergency-notification {
   padding: ($general-v-spacing / 2) 0;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__icon {}
+
+  &__text {}
+}
+
+.rhody-red--bright {
+  background-color: var(--c__rhody-red--bright);
+}
+
+.hope-gold--bright {
+  background-color: var(--c__hope-gold--bright);
 }

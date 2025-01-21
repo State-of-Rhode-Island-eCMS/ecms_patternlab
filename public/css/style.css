@@ -4061,6 +4061,16 @@ table {
 
 .qh__teaser-emergency-notification {
   padding: 0.75rem 0; }
+  .qh__teaser-emergency-notification__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center; }
+
+.rhody-red--bright {
+  background-color: var(--c__rhody-red--bright); }
+
+.hope-gold--bright {
+  background-color: var(--c__hope-gold--bright); }
 
 .qh__teaser-event {
   display: flex;
