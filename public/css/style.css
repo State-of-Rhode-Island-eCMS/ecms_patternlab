@@ -4064,7 +4064,15 @@ table {
   .qh__teaser-emergency-notification__content {
     display: flex;
     flex-direction: row;
-    align-items: center; }
+    align-items: center;
+    max-width: var(--content-max-width);
+    margin: 0 auto; }
+  .qh__teaser-emergency-notification__icon {
+    display: flex; }
+    .qh__teaser-emergency-notification__icon svg {
+      width: 100%;
+      height: 50%;
+      align-self: center; }
 
 .rhody-red--bright {
   background-color: var(--c__rhody-red--bright); }
