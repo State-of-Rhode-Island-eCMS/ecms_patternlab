@@ -4089,6 +4089,10 @@ table {
   .rhody-red--bright a:not(.qh__btn):active {
     color: currentColor;
     font-weight: bold; }
+  .rhody-red--bright a:not(.qh__btn):hover,
+  .rhody-red--bright a:not(.qh__btn):focus,
+  .rhody-red--bright a:not(.qh__btn):active {
+    text-underline-offset: 0.2em; }
   .dark .rhody-red--bright {
     background-color: var(--c__rhody-red--bright);
     color: var(--c__white); }
@@ -4109,6 +4113,10 @@ table {
   .hope-gold--bright a:not(.qh__btn):active {
     color: currentColor;
     font-weight: bold; }
+  .hope-gold--bright a:not(.qh__btn):hover,
+  .hope-gold--bright a:not(.qh__btn):focus,
+  .hope-gold--bright a:not(.qh__btn):active {
+    text-underline-offset: 0.2em; }
   .dark .hope-gold--bright {
     background-color: var(--c__hope-gold--bright);
     color: var(--c__quahog--dark); }

@@ -43,6 +43,12 @@
     color: currentColor;
     font-weight: bold;
   }
+  
+  a:not(.qh__btn):hover,
+  a:not(.qh__btn):focus,
+  a:not(.qh__btn):active {
+    text-underline-offset: 0.2em;
+  }
 
   // dark mode class
   .dark & {
@@ -74,6 +80,12 @@
   a:not(.qh__btn):active {
     color: currentColor;
     font-weight: bold;
+  }
+  
+  a:not(.qh__btn):hover,
+  a:not(.qh__btn):focus,
+  a:not(.qh__btn):active {
+    text-underline-offset: 0.2em;
   }
 
   // dark mode class
