@@ -11,6 +11,8 @@
         <p class="qh__teaser-article__excerpt">{{ excerpt|length > character_limit ? excerpt|slice(0, character_limit) ~ '...' : excerpt }}</p>
       {% endautoescape %}
     {% endif %}
+    TEST!!
+    {{ cta }}
     {% if cta|default('true') %}
       {% include "@molecules/cta-read-more/cta-read-more.twig" with {
         cta_read_text: alt_read_text,
