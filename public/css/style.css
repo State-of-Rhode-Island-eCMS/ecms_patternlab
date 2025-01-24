@@ -233,7 +233,7 @@ html {
   --c__rhody-red--bright: #620b0b;
   --c__calamari: #ff8e47;
   --c__hope-gold: #face3d;
-  --c__hope-gold--bright: #cfc037;
+  --c__hope-gold--bright: #face3d;
   --c__green-animals: #59bf45;
   --c__green-animals--dark: #2e7a1f;
   --c__green-animals--trans75: rgba(89, 191, 69, 0.75);
@@ -4060,22 +4060,37 @@ table {
     padding-bottom: 1.5rem; }
 
 .qh__teaser-emergency-notification {
-  padding: 1rem 0; }
+  font-family: "Work Sans", var(--font-sans-fallback); }
+  .qh__teaser-emergency-notification .views-element-container {
+    padding-bottom: 0; }
   .qh__teaser-emergency-notification__content {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 1rem; }
+  .qh__teaser-emergency-notification__header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 0.25rem;
-    max-width: var(--content-max-width);
-    margin: 0 auto; }
+    gap: 0.5rem; }
   .qh__teaser-emergency-notification__icon {
-    display: flex; }
+    display: flex;
+    width: 16px;
+    height: 16px;
+    margin-bottom: 1rem; }
     .qh__teaser-emergency-notification__icon svg {
-      width: 100%;
-      height: 50%;
-      align-self: center; }
+      height: 16px;
+      width: 16px; }
+  .qh__teaser-emergency-notification__label {
+    margin-bottom: 1rem; }
+    .qh__teaser-emergency-notification__label p {
+      font-size: 15px; }
   .qh__teaser-emergency-notification__text p {
     max-width: unset; }
+  .qh__teaser-emergency-notification__text * {
+    font-size: 16px;
+    font-weight: 300; }
 
 .rhody-red--bright {
   background-color: var(--c__rhody-red--bright);

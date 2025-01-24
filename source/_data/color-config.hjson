@@ -242,7 +242,7 @@
     "hope-gold--bright": {
       "name": "Hope Gold bright",
       "hue": "yellow",
-      "hsl": "hsl(54.08, 61.29%, 51.37%)",
+      "hsl": "hsl(46.03, 94.97%, 60.98%)",
       "needs": "dark-text"
     },
     "green-animals": {
