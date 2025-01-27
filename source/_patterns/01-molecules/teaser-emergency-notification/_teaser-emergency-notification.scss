@@ -1,10 +1,12 @@
-.qh__teaser-emergency-notification {
-  font-family: $font-sans-static;
-
+.qh-layout__emergency-notification {
   .views-element-container {
     padding-bottom: 0;
   }
+}
 
+.qh__teaser-emergency-notification {
+  font-family: $font-sans-static;
+  
   &__content {
     display: flex;
     flex-direction: column;
