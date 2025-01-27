@@ -4059,10 +4059,11 @@ table {
   .qh__teaser-article__content {
     padding-bottom: 1.5rem; }
 
+.qh-layout__emergency-notification .views-element-container {
+  padding-bottom: 0; }
+
 .qh__teaser-emergency-notification {
   font-family: "Work Sans", var(--font-sans-fallback); }
-  .qh__teaser-emergency-notification .views-element-container {
-    padding-bottom: 0; }
   .qh__teaser-emergency-notification__content {
     display: flex;
     flex-direction: column;
