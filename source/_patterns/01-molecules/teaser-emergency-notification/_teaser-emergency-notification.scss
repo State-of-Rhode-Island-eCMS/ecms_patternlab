@@ -1,0 +1,132 @@
+.qh-layout__emergency-notification {
+  .views-element-container {
+    padding-bottom: 0;
+  }
+}
+
+.qh__teaser-emergency-notification {
+  font-family: $font-sans-static;
+  
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: $general-h-spacing;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: ($general-h-spacing / 2);
+  }
+
+  &__icon {
+    display: flex;
+    width: 16px;
+    height: 16px;
+    margin-bottom: 1rem;
+
+
+    svg {
+      height: 16px;
+      width: 16px;
+    }
+  }
+
+  &__label {
+    margin-bottom: 1rem;
+
+    p {
+      font-size: 15px;
+    }
+  }
+
+  &__text {
+    p {
+      max-width: unset;
+    }
+
+    * {
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+}
+
+.rhody-red--bright {
+  background-color: var(--c__rhody-red--bright);
+  color: var(--c__white);
+  
+  #{$all-headers} {
+    color: currentColor;
+  }
+
+  a:not(.qh__btn),
+  a:not(.qh__btn):visited,
+  a:not(.qh__btn):hover,
+  a:not(.qh__btn):focus,
+  a:not(.qh__btn):active {
+    color: currentColor;
+    font-weight: bold;
+  }
+  
+  a:not(.qh__btn):hover,
+  a:not(.qh__btn):focus,
+  a:not(.qh__btn):active {
+    text-underline-offset: 0.2em;
+  }
+
+  // dark mode class
+  .dark & {
+    background-color: var(--c__rhody-red--bright);
+    color: var(--c__white);
+  }
+
+  // dark mode with prefers-color-scheme 
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) & {
+      background-color: var(--c__rhody-red--bright);
+      color: var(--c__white);
+    }
+  }
+}
+
+.hope-gold--bright {
+  background-color: var(--c__hope-gold--bright);
+  color: var(--c__quahog--dark);
+
+  #{$all-headers} {
+    color: currentColor;
+  }
+  
+  a:not(.qh__btn),
+  a:not(.qh__btn):visited,
+  a:not(.qh__btn):hover,
+  a:not(.qh__btn):focus,
+  a:not(.qh__btn):active {
+    color: currentColor;
+    font-weight: bold;
+  }
+  
+  a:not(.qh__btn):hover,
+  a:not(.qh__btn):focus,
+  a:not(.qh__btn):active {
+    text-underline-offset: 0.2em;
+  }
+
+  // dark mode class
+  .dark & {
+    background-color: var(--c__hope-gold--bright);
+    color: var(--c__quahog--dark);
+  }
+
+  // dark mode with prefers-color-scheme 
+  @media (prefers-color-scheme: dark) {
+    html:not(.light) & {
+      background-color: var(--c__hope-gold--bright);
+      color: var(--c__quahog--dark);
+    }
+  }
+}

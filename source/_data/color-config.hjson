@@ -218,6 +218,12 @@
       "hsl": "hsla(360, 79%, 62%, 0.15)",
       "needs": "dark-text"
     },
+    "rhody-red--bright": {
+      "name": "Rhody Red bright",
+      "hue": "red",
+      "hsl": "hsl(0, 79%, 21.37%)",
+      "needs": "light-text"
+    },
     #
     # Accents
     #
@@ -231,6 +237,12 @@
       "name": "Hope Gold",
       "hue": "yellow",
       "hsl": "hsl(46, 95%, 61%)",
+      "needs": "dark-text"
+    },
+    "hope-gold--bright": {
+      "name": "Hope Gold bright",
+      "hue": "yellow",
+      "hsl": "hsl(46.03, 94.97%, 60.98%)",
       "needs": "dark-text"
     },
     "green-animals": {
