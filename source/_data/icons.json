@@ -98,6 +98,9 @@
     },
     "Social YouTube": {
       "filename": "social-youtube.svg"
+    },
+    "Social BluSky": {
+      "filename": "social-blusky.svg"
     }
   }
 }
