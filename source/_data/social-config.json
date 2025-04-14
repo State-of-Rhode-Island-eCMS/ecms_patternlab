@@ -16,6 +16,10 @@
       "link-title": "Follow us on Instagram",
       "icon": "social-instagram"
     },
+    "blusky": {
+      "link-title": "Follow us on BluSky",
+      "icon": "social-blusky"
+    },
     "linkedin": {
       "link-title": "Follow us on LinkedIn",
       "icon": "social-linkedin"
@@ -34,5 +38,3 @@
     }
   }
 }
-
-
