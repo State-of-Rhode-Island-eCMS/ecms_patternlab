@@ -14,7 +14,13 @@
               {% if media_library_icon %}
                 {{ icon }}
               {% elseif icon|default %}
-                {% include ('@icons/' ~ icon) %}
+                {% if icon is iterable %}
+                  {% for item in icon %}
+                    {% include ('@icons/' ~ item) %}
+                  {% endfor %}
+                {% else %}
+                  {% include ('@icons/' ~ icon) %}
+                {% endif %}
               {% endif %}
             </div>
 
