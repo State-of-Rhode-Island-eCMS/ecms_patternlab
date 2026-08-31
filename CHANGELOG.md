@@ -8,24 +8,27 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 [Keep a Changelog]: http://keepachangelog.com/
 [CONTRIBUTING]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/README.md
 
-## [Unreleased]
-### Added
+> **This project was archived on 2026-08-31 and receives no further releases.** 0.8.4 is the
+> final release. Component work continues as SDC in the `ecms` theme in `ecms_profile`; see the
+> README for details.
 
-
-### Changed
-
-### Deprecated
-
-### Removed
-
+## [0.8.4] - 2025-06-30
 ### Fixed
 - RIGA-554: Fixed Modal icon twig error
-
-### Security
 
 ## [0.8.3] - 2025-04-23
 ### Added
 - RIGA-636: Add BluSky social icon
+
+## [0.8.2] - 2025-01-29
+### Added
+- RIGA-571: Allow the CTA to be disabled
+
+### Changed
+- RIGA-485: Style the emergency notification bar
+
+### Fixed
+- RIGA-596: Fixed W3C validation errors from mismatched tags
 
 ## [0.8.1] - 2024-12-18
 ### Changed
@@ -408,7 +411,7 @@ modified Semantic Versioning scheme. See the "Versioning scheme" section of the
 ### Added
 - Added the changelog for the initial 0.1.0 release.
 
-[Unreleased]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.8.3...HEAD
+[0.8.4]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.8.3...0.8.4
 [0.8.3]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.8.2...0.8.3
 [0.8.2]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.8.1...0.8.2
 [0.8.1]: https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/compare/0.8.0...0.8.1
