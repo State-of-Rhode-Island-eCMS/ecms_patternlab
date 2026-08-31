@@ -1,5 +1,50 @@
 
 # Pattern Lab — RI Gov
+
+> ## ⚠️ Archived — 2026-08-31
+>
+> **This repository is no longer maintained and no longer used by any build.**
+>
+> The component library was superseded by Single Directory Components (SDC) inside the
+> `ecms` theme in [ecms_profile](https://github.com/State-of-Rhode-Island-eCMS/ecms_profile),
+> at `ecms_base/themes/custom/ecms/components`. The move was made in **RIGA-652 (component
+> audit)**, `ecms_profile` commit `fcc87414`, merged 2025-08-27, which also relocated the
+> `package.json`/gulp build into the theme and dropped the Composer dependency on this
+> package. All new component work belongs there.
+>
+> **Final release:** [0.8.4](https://github.com/State-of-Rhode-Island-eCMS/ecms_patternlab/releases/tag/0.8.4)
+> (2025-06-30). The final compiled CSS/JS/fonts are committed here under `dist/` and `public/`,
+> so the shipped output is preserved without needing to rebuild.
+>
+> **Please do not delete this repository, or prune its branches and tags.** Historic
+> `ecms_profile` releases resolve this package by git reference — the constraint immediately
+> before removal was `dev-master || dev-rc/0.8.4 || ^0.8.2` — so `master` and the release tags
+> must keep existing for those older versions to install.
+>
+> ### Notes for anyone reviving this code
+>
+> * The build requires **Node 12** (EOL April 2022) with Gulp 4 and node-sass. `npm ci` will
+>   not succeed on a modern Node without first rebuilding the toolchain.
+> * `.npmrc` sets `package-lock=false`, but `package-lock.json` **is** committed. The lock file
+>   is the accurate record — `npm ci` was the documented install.
+> * The `version` field in `package.json` (`1.0.1`) was never maintained and does not match the
+>   release history. **Git tags are the source of truth** for versions.
+> * `composer.json` declares `GPL-2.0-or-later` while `LICENSE` and `package.json` declare MIT.
+>   This inconsistency predates the archive and was never resolved.
+> * `package.json` still carries upstream Pattern Lab `author`/`repository`/`bugs` metadata
+>   inherited from `edition-node-gulp`; it does not describe this project.
+>
+> ### Unmerged work frozen at archive time
+>
+> | Branch | State | Contents |
+> | --- | --- | --- |
+> | `dev` | 15 ahead / 4 behind `master` | **The only branch with unshipped work:** emergency notification region, dark/light mode color styles, `rhody-red--bright` and `hope-gold--bright`, `information.svg`. |
+> | `RIGA-74/illustrations` | 12 ahead / 224 behind | Illustration module plus quahog, steamer and oyster SVGs. Long stale. |
+> | `RIGA-636/blue-sky-icon` | 8 ahead / 8 behind | Already shipped in 0.8.3 via #195. |
+> | `RIGA-483/hot-fix`, `RIGA-483/language-dropdown`, `RIGA-483/revert` | stale | Already shipped in 0.7.9. |
+> | `rc/0.8.5` | identical to `master` | Cut but never tagged or released. |
+> | `test` | 7 behind, nothing ahead | Stale. |
+
 This is the decoupled pattern lab library for RI.gov. The foundation for this respository was built using: Pattern Lab Node - Gulp Edition | The Gulp wrapper around [Pattern Lab Node Core](https://github.com/pattern-lab/patternlab-node/tree/master/packages/core).
 
 From there we have made a quite a few modifications:
